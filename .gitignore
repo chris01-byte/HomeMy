@@ -1,0 +1,40 @@
+# ROS 2 build output
+build/
+install/
+log/
+.colcon/
+
+# Python and test output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Real-home data and hardware recordings
+local_data/
+private_data/
+maps/private/
+camera/private/
+rosbags/
+*.bag
+*.db3
+*.mcap
+
+# Local editor and operating-system files
+.vscode/*.code-workspace
+.DS_Store
+Thumbs.db
