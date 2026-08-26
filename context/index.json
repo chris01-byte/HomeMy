@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "default_files": [
+    "AGENTS.md",
+    "CURRENT_STATE.md"
+  ],
+  "max_bundle_characters": 18000,
+  "areas": {
+    "architecture": {
+      "when": "package boundaries, system design, or ownership",
+      "files": [
+        "README.md",
+        "contracts/README.md",
+        "docs/README.md"
+      ]
+    },
+    "transfers": {
+      "when": "moving a capability from roboter_ws",
+      "files": [
+        "integration/roboter_ws/TRANSFER_MANIFEST.md",
+        "docs/transfers/roboter_ws/README.md",
+        "contracts/README.md"
+      ]
+    },
+    "runtime": {
+      "when": "ROS 2 packages, launch, simulation, or test setup",
+      "files": [
+        "src/README.md",
+        "simulation/README.md",
+        "contracts/README.md"
+      ]
+    },
+    "decisions": {
+      "when": "a design choice needs evidence or a rollback path",
+      "files": [
+        "docs/decisions/README.md",
+        "CURRENT_STATE.md"
+      ]
+    }
+  }
+}
