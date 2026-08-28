@@ -2,10 +2,16 @@
 
 Contracts define boundaries before package code is accepted. They are the compatibility layer between HomeMy subsystems and between HomeMy and imported capabilities.
 
-## Planned Areas
+## Active Contracts
 
-- ros/: topics, services, actions, messages, parameters, QoS, and failure behavior.
-- hardware/: device capabilities, frame assumptions, limits, interlocks, and safe defaults.
+- [System lifecycle](ros/system-lifecycle.md): developer and customer modes, systemd supervision, states, fault reporting, and shutdown.
+- [Customer power-on](hardware/customer-power-on.md): physical startup, controlled shutdown, and the independent safety boundary before Linux.
+- [External AI health](api/ai-server-health.md): bounded remote health checks, READY_LIMITED behavior, and customer-visible AI outage handling.
+
+## Contract Areas
+
+- ros/: topics, services, actions, messages, parameters, QoS, lifecycle, and failure behavior.
+- hardware/: device capabilities, frame assumptions, power, limits, interlocks, and safe defaults.
 - api/: application and external service boundaries.
 - data/: durable schemas, ownership, retention, and privacy constraints.
 
