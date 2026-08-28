@@ -8,7 +8,8 @@ Contracts define boundaries before package code is accepted. They are the compat
 - [Customer power-on](hardware/customer-power-on.md): physical startup, controlled shutdown, and the independent safety boundary before Linux.
 - [ESS23-RS drivebase commissioning](hardware/drivebase-commissioning.md): non-moving startup, chassis measurement, and H0-H5 drivebase evidence.
 - [STL-27L LiDAR commissioning](hardware/lidar-commissioning.md): sensor-only startup, new mount validation, scan normalization, and L0-L6 evidence.
-- [Navigation geometry and safety commissioning](hardware/navigation-commissioning.md): HomeMy footprint, replacement obstacle protection, movement gate, and N0-N5 navigation evidence without VL53.
+- [Obstacle protection](hardware/obstacle-protection.md): STL-27L primary 2D coverage, local OAK 4D depth complement, fail-closed behavior, and O0-O5 evidence without external AI.
+- [Navigation geometry and safety commissioning](hardware/navigation-commissioning.md): HomeMy footprint, movement gate, and N0-N5 navigation evidence without VL53.
 - [External AI health](api/ai-server-health.md): bounded remote health checks, READY_LIMITED behavior, and customer-visible AI outage handling.
 
 ## Contract Areas
