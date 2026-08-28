@@ -30,6 +30,14 @@
         "contracts/README.md"
       ]
     },
+    "appliance": {
+      "when": "systemd, customer boot, developer mode, status display, power-on, or external AI health",
+      "files": [
+        "contracts/ros/system-lifecycle.md",
+        "contracts/hardware/customer-power-on.md",
+        "contracts/api/ai-server-health.md"
+      ]
+    },
     "decisions": {
       "when": "a design choice needs evidence or a rollback path",
       "files": [
