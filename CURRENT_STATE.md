@@ -2,7 +2,7 @@
 
 ## Phase
 
-Architecture foundation. The on-board Linux appliance lifecycle and customer-visible fault behavior are defined. No runtime package, systemd unit, display hardware, power hardware, or transferred robot code is implemented yet.
+Architecture and hardware-transfer foundation. The on-board Linux appliance lifecycle and customer-visible fault behavior are defined. ESS23-RS drivebase, STL-27L LiDAR, and local OAK camera foundation are recorded as proposed source candidates. No HomeMy runtime package, systemd unit, real-hardware configuration, or source code has been copied.
 
 ## Goal
 
@@ -18,32 +18,44 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - The external AI server remains remote and optional. Its failure maps to READY_LIMITED only after local mandatory checks pass.
 - Power-on, restart, and ready state never authorize motion automatically.
 
+## Active Transfer Scope
+
+- ESS23-RS drivebase behavior may be adapted from roboter_ws only through the non-moving HomeMy commissioning contract. All HomeMy vehicle measurements remain open.
+- STL-27L driver, scan normalization, and diagnostics may be adapted after new LiDAR frame and mount commissioning.
+- The local OAK hardware foundation is a later candidate. A future OAK 4D upgrade requires its own contract.
+- The external AI server, network transport, remote relay, inference backend, LLM planner, and deployment are explicitly deferred and must not be modified.
+
 ## Current Safe State
 
-- The repository is currently public; it contains no secrets, home data, maps, camera data, or deployment configuration.
+- The repository is public; it contains no secrets, home data, maps, camera data, or deployment configuration.
 - The default execution mode is simulation or motorless validation.
 - No systemd unit, actuator, sensor, map, home data, or deployment configuration is tracked here.
-- No capability is transferred from roboter_ws by this initial architecture work.
+- No capability from roboter_ws has been copied into HomeMy code.
+- The proposed transfer baseline is roboter_ws main commit 05439c7a13d7a92e69b9eb4663e3a2a1b44626a1.
 - The future customer mode is not enabled as a default boot target.
 
 ## Next Safe Step
 
-1. Implement the lifecycle state machine in simulation with synthetic service and AI-health results.
-2. Define the status-display event schema and synthetic customer fault scenarios.
-3. Select and contract the physical power, independent safety, and customer-display hardware.
-4. After a first local end-to-end simulation path, add minimal systemd units and test customer-mode cold boot early.
+1. Design and test a hardware-independent HomeMy drivebase core using the commissioning contract and synthetic fixtures.
+2. Design and test LiDAR scan normalization and health behavior with synthetic variable-beam inputs.
+3. Measure the completed HomeMy chassis, drivebase, LiDAR mount, and safety topology before accepting any real-motion or navigation configuration.
+4. Create a separate local OAK contract before porting camera bring-up; do not touch the external AI server or network path.
 
 ## Context Entry Points
 
 1. AGENTS.md for safety and work rules.
 2. context/index.json for task-specific files.
-3. contracts/ros/system-lifecycle.md for appliance behavior.
-4. integration/roboter_ws/TRANSFER_MANIFEST.md for incoming transfers.
+3. contracts/hardware/drivebase-commissioning.md for ESS23-RS adaptation.
+4. contracts/hardware/lidar-commissioning.md for STL-27L adaptation.
+5. contracts/ros/system-lifecycle.md for appliance behavior.
+6. integration/roboter_ws/TRANSFER_MANIFEST.md for incoming transfers.
 
 ## Open Decisions
 
 - On-board Linux computer specification and operating-system image.
 - Physical power controller, safety controller, and customer status display.
 - Motion-gate and emergency-stop hardware contract.
+- Exact HomeMy chassis, wheel, drive-train, LiDAR-frame, and sensor-mount measurements.
 - External AI health endpoint, authentication storage, and capability protocol.
+- Whether HomeMy includes the VL53 near-field system, robot interfaces, safety/missions gates, navigation, semantic maps, or app functions from roboter_ws.
 - Disk encryption, TPM recovery path, update strategy, and service access model.
