@@ -19,24 +19,28 @@
       "files": [
         "integration/roboter_ws/TRANSFER_MANIFEST.md",
         "docs/transfers/roboter_ws/README.md",
-        "docs/transfers/roboter_ws/2026-08-28-hardware-foundation-candidates.md",
-        "contracts/README.md"
+        "docs/transfers/roboter_ws/2026-08-28-hardware-foundation-candidates.md"
       ]
     },
     "drivebase": {
       "when": "ESS23-RS drivebase, Modbus, encoder odometry, chassis measurements, or drive commissioning",
       "files": [
         "contracts/hardware/drivebase-commissioning.md",
-        "integration/roboter_ws/TRANSFER_MANIFEST.md",
-        "docs/transfers/roboter_ws/2026-08-28-hardware-foundation-candidates.md"
+        "integration/roboter_ws/TRANSFER_MANIFEST.md"
       ]
     },
     "lidar": {
       "when": "STL-27L LiDAR, scan normalization, LiDAR frames, masks, or LiDAR commissioning",
       "files": [
         "contracts/hardware/lidar-commissioning.md",
-        "integration/roboter_ws/TRANSFER_MANIFEST.md",
-        "docs/transfers/roboter_ws/2026-08-28-hardware-foundation-candidates.md"
+        "integration/roboter_ws/TRANSFER_MANIFEST.md"
+      ]
+    },
+    "navigation": {
+      "when": "Nav2, robot_navigation, footprint, costmaps, localization, obstacle protection, or navigation commissioning",
+      "files": [
+        "contracts/hardware/navigation-commissioning.md",
+        "integration/roboter_ws/TRANSFER_MANIFEST.md"
       ]
     },
     "runtime": {
