@@ -8,7 +8,7 @@ Do not copy whole packages, local deployment files, home data, maps, bags, crede
 
 ## Current Status
 
-Four user-approved candidates are recorded for staged adaptation. No HomeMy runtime code, real-hardware configuration, or deployment file has been copied.
+Four user-approved candidates are recorded for staged adaptation. The local OAK 4D obstacle-protection boundary is documented, but no HomeMy runtime code, real-hardware configuration, or deployment file has been copied.
 
 Source baseline: chris01-byte/Roboter_ws main at commit 05439c7a13d7a92e69b9eb4663e3a2a1b44626a1.
 
@@ -18,7 +18,7 @@ Source baseline: chris01-byte/Roboter_ws main at commit 05439c7a13d7a92e69b9eb46
 | --- | --- | --- | --- |
 | ESS23-RS drive-base foundation | src/base_hardware/ | src/homemy_drivebase/ | proposed; user-approved for staged adaptation after HomeMy chassis commissioning |
 | STL-27L LiDAR foundation | src/amadeus_lidar_bringup/ and pinned vendor manifest | src/homemy_lidar_bringup/ | proposed; user-approved for staged adaptation after new mount validation |
-| Local OAK camera foundation | local bring-up portions of src/robot_bringup/ | future src/homemy_oak_bringup/ | proposed; no server, relay, inference, or network work |
+| Local OAK 4D depth obstacle-protection foundation | local bring-up portions of src/robot_bringup/ | future src/homemy_oak_bringup/ | proposed; local 3D complement to STL-27L under the HomeMy obstacle-protection contract; no server, relay, inference, or network work |
 | Navigation algorithms and dry-run foundation | src/robot_navigation/ | future src/homemy_navigation/ | proposed; user-approved for simulation and algorithm adaptation after HomeMy geometry and safety commissioning |
 
 Detailed constraints, excluded scope, and deferred candidates are in docs/transfers/roboter_ws/2026-08-28-hardware-foundation-candidates.md.
