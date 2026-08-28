@@ -4,10 +4,22 @@ This directory will contain HomeMy-owned ROS 2 packages. It starts deliberately 
 
 ## Intended Roles
 
-- `homemy_interfaces`: stable messages, services, and actions.
-- `homemy_bringup`: launch composition, profiles, and safe defaults.
-- `homemy_core`: hardware-independent mission and state logic.
-- `homemy_<capability>`: one bounded sensor, actuator, perception, or integration capability per package.
+- homemy_interfaces: stable messages, services, and actions.
+- homemy_bringup: launch composition, profiles, and safe defaults.
+- homemy_core: hardware-independent mission and state logic.
+- homemy_<capability>: one bounded sensor, actuator, perception, or integration capability per package.
+
+## Appliance Roles Planned
+
+- homemy_boot_manager: lifecycle state machine, bounded health checks, and customer-mode readiness decision.
+- homemy_status_display: customer-visible state, error code, message, and next action.
+- homemy_bringup: local stack composition for developer and customer profiles; it must begin in a safe state.
+
+ROS packages expose explicit startup, readiness, failure, and shutdown behavior. They must not require a desktop session, shell startup file, open terminal, or interactive input.
+
+## Deployment Boundary
+
+systemd unit and target templates belong in deployment/systemd. Package code remains independently testable in simulation; it must not use a desktop autologin or an interactive terminal as its production supervisor.
 
 ## Package Admission
 
