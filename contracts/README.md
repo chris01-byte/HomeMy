@@ -6,6 +6,8 @@ Contracts define boundaries before package code is accepted. They are the compat
 
 - [System lifecycle](ros/system-lifecycle.md): developer and customer modes, systemd supervision, states, fault reporting, and shutdown.
 - [Customer power-on](hardware/customer-power-on.md): physical startup, controlled shutdown, and the independent safety boundary before Linux.
+- [ESS23-RS drivebase commissioning](hardware/drivebase-commissioning.md): non-moving startup, chassis measurement, and H0-H5 drivebase evidence.
+- [STL-27L LiDAR commissioning](hardware/lidar-commissioning.md): sensor-only startup, new mount validation, scan normalization, and L0-L6 evidence.
 - [External AI health](api/ai-server-health.md): bounded remote health checks, READY_LIMITED behavior, and customer-visible AI outage handling.
 
 ## Contract Areas
