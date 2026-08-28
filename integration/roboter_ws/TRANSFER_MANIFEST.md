@@ -8,7 +8,23 @@ Do not copy whole packages, local deployment files, home data, maps, bags, crede
 
 ## Current Status
 
-No transfer has been accepted yet.
+Three user-approved hardware-foundation candidates are recorded for staged adaptation. No HomeMy runtime code, real-hardware configuration, or deployment file has been copied.
+
+Source baseline: chris01-byte/Roboter_ws main at commit 05439c7a13d7a92e69b9eb4663e3a2a1b44626a1.
+
+## Active Candidate Entries
+
+| Capability | Source | Planned destination | Status |
+| --- | --- | --- | --- |
+| ESS23-RS drive-base foundation | src/base_hardware/ | src/homemy_drivebase/ | proposed; user-approved for staged adaptation after HomeMy chassis commissioning |
+| STL-27L LiDAR foundation | src/amadeus_lidar_bringup/ and pinned vendor manifest | src/homemy_lidar_bringup/ | proposed; user-approved for staged adaptation after new mount validation |
+| Local OAK camera foundation | local bring-up portions of src/robot_bringup/ | future src/homemy_oak_bringup/ | proposed; no server, relay, inference, or network work |
+
+Detailed constraints, excluded scope, and other candidates are in docs/transfers/roboter_ws/2026-08-28-hardware-foundation-candidates.md.
+
+## Explicitly Deferred
+
+The external AI server, network transport, CycloneDDS peer configuration, remote image relay, semantic-perception backend, LLM planner, and off-board inference are not to be copied or modified. The user is actively changing that work elsewhere.
 
 ## Required Entry
 
