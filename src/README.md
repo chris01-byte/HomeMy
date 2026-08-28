@@ -7,7 +7,7 @@ This directory will contain HomeMy-owned ROS 2 packages. It starts deliberately 
 - homemy_interfaces: stable messages, services, and actions.
 - homemy_bringup: launch composition, profiles, and safe defaults.
 - homemy_core: hardware-independent mission and state logic.
-- homemy_<capability>: one bounded sensor, actuator, perception, or integration capability per package.
+- homemy_capability_name: one bounded sensor, actuator, perception, or integration capability per package.
 
 ## Appliance Roles Planned
 
