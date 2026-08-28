@@ -18,7 +18,12 @@
       "when": "moving a capability from roboter_ws",
       "files": [
         "integration/roboter_ws/TRANSFER_MANIFEST.md",
-        "docs/transfers/roboter_ws/README.md",
+        "docs/transfers/roboter_ws/README.md"
+      ]
+    },
+    "transfer-record": {
+      "when": "a source candidate, historical transfer record, or detailed transfer constraints need review",
+      "files": [
         "docs/transfers/roboter_ws/2026-08-28-hardware-foundation-candidates.md"
       ]
     },
@@ -37,10 +42,16 @@
       ]
     },
     "navigation": {
-      "when": "Nav2, robot_navigation, footprint, costmaps, localization, obstacle protection, or navigation commissioning",
+      "when": "Nav2, robot_navigation, footprint, costmaps, localization, or navigation commissioning",
       "files": [
         "contracts/hardware/navigation-commissioning.md",
         "integration/roboter_ws/TRANSFER_MANIFEST.md"
+      ]
+    },
+    "obstacle-protection": {
+      "when": "STL-27L obstacle protection, OAK 4D depth, protection volumes, local safe stop, or OAK commissioning",
+      "files": [
+        "contracts/hardware/obstacle-protection.md"
       ]
     },
     "runtime": {
