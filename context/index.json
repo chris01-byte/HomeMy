@@ -54,6 +54,12 @@
         "contracts/hardware/obstacle-protection.md"
       ]
     },
+    "semantic-perception": {
+      "when": "YOLO, Grounding DINO, SAM2, RGB-D object segmentation, grasp candidates, or manipulation perception",
+      "files": [
+        "docs/decisions/2026-08-31-semantic-perception-and-grasping.md"
+      ]
+    },
     "runtime": {
       "when": "ROS 2 packages, launch, simulation, or test setup",
       "files": [
@@ -63,10 +69,15 @@
       ]
     },
     "appliance": {
-      "when": "systemd, customer boot, developer mode, status display, power-on, or external AI health",
+      "when": "systemd, customer boot, developer mode, status display, or power-on",
       "files": [
         "contracts/ros/system-lifecycle.md",
-        "contracts/hardware/customer-power-on.md",
+        "contracts/hardware/customer-power-on.md"
+      ]
+    },
+    "ai-health": {
+      "when": "external AI health, remote AI availability, READY_LIMITED, or external AI outage handling",
+      "files": [
         "contracts/api/ai-server-health.md"
       ]
     },
