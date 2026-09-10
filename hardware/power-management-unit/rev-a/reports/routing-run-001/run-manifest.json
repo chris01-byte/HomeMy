@@ -1,0 +1,115 @@
+{
+  "rev_a_engineering_prototype": true,
+  "rev_b_production": false,
+  "state": "engineering_routing_candidate_not_order_release",
+  "date_utc": "2026-09-10T17:18:40.577089+00:00",
+  "compile_command": [
+    "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\tools-local\\java21\\jdk-21.0.12.1+1-jre\\bin\\java.exe",
+    "-jar",
+    "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\tools-local\\ecj-3.38.0.jar",
+    "-21",
+    "-cp",
+    "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\tools-local\\freerouting-2.1.0.jar",
+    "-d",
+    "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\reports\\routing-run-001\\classes",
+    "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\scripts\\routing\\CheckpointRouter.java"
+  ],
+  "command": [
+    "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\tools-local\\java21\\jdk-21.0.12.1+1-jre\\bin\\java.exe",
+    "-Djava.awt.headless=true",
+    "-Xmx4g",
+    "-cp",
+    "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\reports\\routing-run-001\\classes;C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\tools-local\\freerouting-2.1.0.jar",
+    "CheckpointRouter",
+    "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\reports\\HomeMy_PMU_RevA.dsn",
+    "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\reports\\routing-run-001",
+    "200",
+    "1200",
+    ""
+  ],
+  "exit_code": 0,
+  "external_timeout_kill": false,
+  "engine_exception_log_occurrences": {
+    "NullPointerException": 4,
+    "ArrayIndexOutOfBoundsException": 4,
+    "OutOfMemoryError": 0
+  },
+  "inputs": [
+    {
+      "path": "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\scripts\\routing\\CheckpointRouter.java",
+      "sha256": "9735958ee116295d89a3e8c8fc38f9a5849c78d35e352bc421c84ac827abf313"
+    },
+    {
+      "path": "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\reports\\HomeMy_PMU_RevA.dsn",
+      "sha256": "f37234f4479817c94b6c7db5015422d53edf86a3d75d2e851a1208d085dd5c34"
+    },
+    {
+      "path": "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\tools-local\\freerouting-2.1.0.jar",
+      "sha256": "2c07d58f75dac03782664081e7a58b41c25400d871a9fcf166a2ea6fe60d5def"
+    },
+    {
+      "path": "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\tools-local\\ecj-3.38.0.jar",
+      "sha256": "97c566b120009c203a2fc8b291f4a9adbc171cf1ccb70f06f6b4e1828c00ce8e"
+    }
+  ],
+  "changed_inputs": [],
+  "native_pcb_modified": false,
+  "native_kicad_drc_performed": false,
+  "outputs": [
+    {
+      "path": "best-incomplete-count-statistics.json",
+      "sha256": "303fdf16523b7af624265b16be2ac105ed7215cf77b21705fd9676b5b5af754d",
+      "bytes": 1391
+    },
+    {
+      "path": "best-incomplete-count.dsn",
+      "sha256": "3d044cae12a89937a845a7ec8e85fd521fe5d0e61a2a0a0504d6f570ffe51293",
+      "bytes": 1297116
+    },
+    {
+      "path": "best-incomplete-count.ses",
+      "sha256": "1511a4449b1f51283a120ec5b38d8cd41315a343b90799566c770cc09b6d242e",
+      "bytes": 424523
+    },
+    {
+      "path": "compile.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "console.log",
+      "sha256": "291890e46dc118b6fd51111e2048566357af5b4f7922b755eee2881652787e2e",
+      "bytes": 27628
+    },
+    {
+      "path": "freerouting.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "latest-statistics.json",
+      "sha256": "303fdf16523b7af624265b16be2ac105ed7215cf77b21705fd9676b5b5af754d",
+      "bytes": 1391
+    },
+    {
+      "path": "latest.dsn",
+      "sha256": "3d044cae12a89937a845a7ec8e85fd521fe5d0e61a2a0a0504d6f570ffe51293",
+      "bytes": 1297116
+    },
+    {
+      "path": "latest.ses",
+      "sha256": "1511a4449b1f51283a120ec5b38d8cd41315a343b90799566c770cc09b6d242e",
+      "bytes": 424523
+    },
+    {
+      "path": "run-result.json",
+      "sha256": "761041dccc407ec99142296c542b6d61300654a1bf72105f299f1fbbb163a12f",
+      "bytes": 771
+    }
+  ],
+  "immutable_input_snapshot": {
+    "path": "input.kicad.dsn",
+    "sha256": "f37234f4479817c94b6c7db5015422d53edf86a3d75d2e851a1208d085dd5c34",
+    "note": "Archived after the run and verified against the original recorded input hash before the shared export path was reused."
+  }
+}

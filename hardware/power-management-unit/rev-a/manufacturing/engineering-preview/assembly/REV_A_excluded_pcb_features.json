@@ -1,0 +1,423 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "state": "engineering_review_not_order_release"
+  },
+  "features": [
+    {
+      "reference": "BC1",
+      "value": "BB1 copper clamp contact",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "BC2",
+      "value": "BB1 copper clamp contact",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "BC3",
+      "value": "BB2 copper clamp contact",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "BC4",
+      "value": "BB2 copper clamp contact",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "BC5",
+      "value": "BB3 copper clamp contact",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "BC6",
+      "value": "BB3 copper clamp contact",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "BC7",
+      "value": "BB4 copper clamp contact",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "BC8",
+      "value": "BB4 copper clamp contact",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "BC9",
+      "value": "BB5 copper clamp contact",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "BC10",
+      "value": "BB5 copper clamp contact",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "BC11",
+      "value": "BB6 copper clamp contact",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "BC12",
+      "value": "BB6 copper clamp contact",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "BC13",
+      "value": "BB6 copper clamp contact",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "BC14",
+      "value": "BB6 copper clamp contact",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "BC15",
+      "value": "BB7 copper clamp contact",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "H1",
+      "value": "MountingHole_3.2mm_M3",
+      "footprint": "MountingHole_3.2mm_M3",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "H2",
+      "value": "MountingHole_3.2mm_M3",
+      "footprint": "MountingHole_3.2mm_M3",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "H3",
+      "value": "MountingHole_3.2mm_M3",
+      "footprint": "MountingHole_3.2mm_M3",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "H4",
+      "value": "MountingHole_3.2mm_M3",
+      "footprint": "MountingHole_3.2mm_M3",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "NT1",
+      "value": "ARM_L_N to BATT_N at star",
+      "footprint": "PMU_RevA:NetTie_Power_2",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "NT2",
+      "value": "ARM_R_N to BATT_N at star",
+      "footprint": "PMU_RevA:NetTie_Power_2",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "NT3",
+      "value": "DRIVE_N to BATT_N at star",
+      "footprint": "PMU_RevA:NetTie_Power_2",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "NT4",
+      "value": "LIFT_N to BATT_N at star",
+      "footprint": "PMU_RevA:NetTie_Power_2",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "NT5",
+      "value": "PC_N to BATT_N at star",
+      "footprint": "PMU_RevA:NetTie_Power_2",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "NT6",
+      "value": "LOGIC_BUCK_N to BATT_N at star",
+      "footprint": "PMU_RevA:NetTie_Power_2",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "NT7",
+      "value": "CHOPPER_N to BATT_N at star",
+      "footprint": "PMU_RevA:NetTie_Power_2",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "NT8",
+      "value": "LOGIC_5V_N to BATT_N at star",
+      "footprint": "PMU_RevA:NetTie_Power_2",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "NT9",
+      "value": "LOGIC_GND to BATT_N at star",
+      "footprint": "PMU_RevA:NetTie_Logic_2",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "NT10",
+      "value": "Chopper local analog reference",
+      "footprint": "PMU_RevA:NetTie_Logic_2",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP1",
+      "value": "BATT_FUSED_P",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP2",
+      "value": "BATT_SENSED_P",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP3",
+      "value": "MAIN_KELVIN_P",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP4",
+      "value": "MAIN_KELVIN_N",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP5",
+      "value": "MAIN_COMMON",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP6",
+      "value": "SYS_BUS_P",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP7",
+      "value": "MOTION_KELVIN_P",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP8",
+      "value": "MOTION_KELVIN_N",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP9",
+      "value": "MOTION_COMMON",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP10",
+      "value": "MOTION_BUS_P",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP11",
+      "value": "PC_BUCK_IN_P",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP12",
+      "value": "LOGIC_BUCK_IN_P",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP13",
+      "value": "V5V",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP14",
+      "value": "V3V3",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP15",
+      "value": "BATT_N",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP16",
+      "value": "LOGIC_GND",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP17",
+      "value": "AON_3V3",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP18",
+      "value": "AON_WAKE_EN",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP19",
+      "value": "MAIN_FAULT_N",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP20",
+      "value": "MAIN_TMR",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP21",
+      "value": "MOTION_GATE_EN",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP22",
+      "value": "MOTION_FLT_N",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP23",
+      "value": "MOTION_TEMP_FLT_N",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP24",
+      "value": "MOTION_TMR",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP25",
+      "value": "MOTION_IMON_INPUT",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP26",
+      "value": "CHOP_GATE",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP27",
+      "value": "CHOP_10V",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP28",
+      "value": "CHOP_REF2V5",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP29",
+      "value": "CHOP_FAULT_N",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP30",
+      "value": "CHOP_ACTIVE_N",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP31",
+      "value": "CAN_TX",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP32",
+      "value": "CAN_RX",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP33",
+      "value": "ESP_MAIN_HOLD",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP34",
+      "value": "ESP_MOTION_RESET",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP35",
+      "value": "LIFT_24V_SAMPLE",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP36",
+      "value": "LIFT_24V_N",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP37",
+      "value": "PC_EFUSE_FAULT_N",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP38",
+      "value": "PC_EFUSE_PGOOD",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP39",
+      "value": "LOGIC_EFUSE_FAULT_N",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    },
+    {
+      "reference": "TP40",
+      "value": "LOGIC_EFUSE_PGOOD",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "reason": "PCB feature / mechanical hole"
+    }
+  ]
+}

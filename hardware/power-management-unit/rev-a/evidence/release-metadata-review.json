@@ -1,0 +1,183 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false
+  },
+  "updated_outputs": [
+    {
+      "path": "design/chopper-calculations.json",
+      "before_sha256": "8a349734f0fdaab4cf1b30d8f9c789e7e800832e30519371b60bf5fe4a626f6f",
+      "after_sha256": "8bab51d8ad97a36790eb4676c1f4136c07a3fad8f68df678b62bc1faeba9a0bb",
+      "non_release_payload_identical": true,
+      "non_release_payload_sha256": "96ae629a1efb806f64a9717ccf4ef9597b270729c659eb7061e63c1d23fa8675"
+    },
+    {
+      "path": "design/chopper-footprint-specs.json",
+      "before_sha256": "d87fc271f5faf56db664d7b026439fa46baf1148d3d36b0c628c66cccb0a3d69",
+      "after_sha256": "4cfd6bdce00206efe0a47e328218f922c5dd97f3782e66e6d3e60b09f9d2803d",
+      "non_release_payload_identical": true,
+      "non_release_payload_sha256": "1a826b461da487051fff93e164ac3f58fbd245330c4de331a575ca271458fcac"
+    },
+    {
+      "path": "evidence/chopper-placement-courtyard-check.json",
+      "before_sha256": "9e9c43cd95b1c161d2e0167d881d2bde289a4751e3ab186ccb07a645c4d35114",
+      "after_sha256": "cd02899fe1e12c6d3ce0362668af70cc6254533d506ffb8f25ffa879c2f1cde2",
+      "non_release_payload_identical": true,
+      "non_release_payload_sha256": "e2395ceb5488c60155b29746136eafdedf651a6a09d24971e88deb35638e1ab4"
+    },
+    {
+      "path": "evidence/filled-power-copper-review.json",
+      "before_sha256": "7471142b1a18285f9a46397340ef564f773cefce6c7152739e87bd95a6157cb8",
+      "after_sha256": "3b9f0f207329fe3a1708fe9ce1c429f07295aab44b1ca9faf749d690fcd86014",
+      "non_release_payload_identical": true,
+      "non_release_payload_sha256": "cc6aec90c6baee90375d9f04a25f843478ec5f791520c19b2dd81ad70c5ab425"
+    },
+    {
+      "path": "evidence/reviewed-rule-configuration.json",
+      "before_sha256": "861c18b6a0d459432dde0bc3bdf48cf2ad56800809150b5b158cd373d75cacd2",
+      "after_sha256": "6d270523a7cb0fea42d4a55f5935d0a300f8c08ed0b3b4594906535bbb734266",
+      "non_release_payload_identical": true,
+      "non_release_payload_sha256": "8423eda95e575a2b93028f1b9c74736287af6befbb439eececa3f22398b88e85"
+    },
+    {
+      "path": "evidence/wake-placement-bypass-check.json",
+      "before_sha256": "9f86ae2c767ee02929063821b4269286145dd153f85fffbe5fa4cd24808f3819",
+      "after_sha256": "60c0c17cb757d7377347dd340293052f074976c3c3a4b9d888036a932451608d",
+      "non_release_payload_identical": true,
+      "non_release_payload_sha256": "4f74ea7c10a51919e87d156f8509309aab2b94012082042af851347269a9fa87"
+    },
+    {
+      "path": "evidence/wake-placement-courtyard-check.json",
+      "before_sha256": "3c1c2f274d84d681738fe71e23f022c7c58c26a93a9a2728b47111044272784c",
+      "after_sha256": "48eb1d7e1cff9251dbdc0edb57b4497ba2a974cf6e8083871e695cd5b2bdb6c2",
+      "non_release_payload_identical": true,
+      "non_release_payload_sha256": "136ecee98cf2d5fd60b3139e20997bd38bb36e52bb24270305a16861c1eeaddb"
+    },
+    {
+      "path": "evidence/power/calculated.json",
+      "before_sha256": "7bd5a07132d7d8094087506c44d72acfc4a10687e623c63e8db8aaf0e6a58d85",
+      "after_sha256": "851170b6491afc4058b85cd4b169ed8f8e8fbb6c3e3fe9716afa6287a21e3ae0",
+      "non_release_payload_identical": true,
+      "non_release_payload_sha256": "64dcb4afa54ebb573994d7c465a647931ed1383e403e7c6cc02d67c29ca84e5c"
+    },
+    {
+      "path": "evidence/power/sources.json",
+      "before_sha256": "1247c589a393815afefa934df2b225a2ddb0456452b8304d28bf90d936514c0e",
+      "after_sha256": "89e84396d293724dcb6c4fb79bdf3a0bbd6caf62e01bec110b3c7ed2ae437d17",
+      "non_release_payload_identical": true,
+      "non_release_payload_sha256": "ac98c85d0badf31b2ba1028928ae5446a3bc7a8333746e4a7e83ef1a2a0a88bc"
+    },
+    {
+      "path": "manufacturing/assembly-orientation.json",
+      "before_sha256": "58d2a74dc83477252c140e9e51b547ca3240da38bf8f6249e39380340d846fd3",
+      "after_sha256": "10e7513f1f7eeba60aeaf92423ad8694ba1d0cc222fe844c80dd585a1b836cb5",
+      "non_release_payload_identical": true,
+      "non_release_payload_sha256": "823f45079a8993377e1d5304e6f4fd9cd644f77c675f04861439a7a253b617a2"
+    },
+    {
+      "path": "manufacturing/busbar-calculations.json",
+      "before_sha256": "9525d245608bcfcfa25c1283a838287306dce551a0785bc385bb5cea154b433e",
+      "after_sha256": "0bc245b8a81c2475965f75390ed22d647bb8414e54f11de1ba54391a3264625d",
+      "non_release_payload_identical": true,
+      "non_release_payload_sha256": "8378aadb4b3ba2b0af7ea5538c039c698742525b96521f7bc495209ac65bc3a0"
+    }
+  ],
+  "updated_generators": [
+    {
+      "path": "design/power_calculations.py",
+      "sha256": "c75d533a311ba58b693dd372b935d6a3d518ee45826a2401091d1220a8207762",
+      "python_ast_parses": true
+    },
+    {
+      "path": "design/calculate_chopper.py",
+      "sha256": "ec57a2b65f02506c83d25dc98b35a7a96421ef280a6c469c22a3128d3217d580",
+      "python_ast_parses": true
+    },
+    {
+      "path": "manufacturing/build_mechanical.py",
+      "sha256": "1735d07a2ff29523aff7a7a6e99e242d39d81957e32aef5bf928871a29284a4c",
+      "python_ast_parses": true
+    },
+    {
+      "path": "manufacturing/review_assembly_orientation.py",
+      "sha256": "1c2fee3bd41174a782e3502b8baaa649eddd26b52f8b429bbd147aa1417e6d95",
+      "python_ast_parses": true
+    },
+    {
+      "path": "evidence/review_filled_power.py",
+      "sha256": "1858b8f5a8bcb019313f4227b99d39406754bf9eafdca265643afd1d832fab1d",
+      "python_ast_parses": true
+    },
+    {
+      "path": "evidence/write_power_review.py",
+      "sha256": "07b1b7b751890d64242e4393e25ff5fad1bb4375385331526197f86b99d5fa34",
+      "python_ast_parses": true
+    },
+    {
+      "path": "evidence/audit_rule_configuration.py",
+      "sha256": "f939e220d4024ca907a0f475caffb6d962c24e55ced722aa75b77cf66436dfa0",
+      "python_ast_parses": true
+    },
+    {
+      "path": "evidence/chopper-placement-courtyards.py",
+      "sha256": "fbf43889105c602a8f542323ff7e99669bc62159658a7dd94a2b45131e77eb5e",
+      "python_ast_parses": true
+    },
+    {
+      "path": "evidence/wake-placement-courtyards.py",
+      "sha256": "95cecd6890115d208e617ba2350fc1aab3f6b104fa710ed1a9913f348f939a2e",
+      "python_ast_parses": true
+    },
+    {
+      "path": "evidence/wake-placement-build.py",
+      "sha256": "04cc3e600670064fe64b2f61b9de33cce5664bd573fc428f7f31e7633e7e8ed6",
+      "python_ast_parses": true
+    }
+  ],
+  "dependent_bom_refresh": {
+    "updates": [
+      {
+        "path": "manufacturing/REV_A_BOM.json",
+        "before_sha256": "36db118a6f39f72118309f1e089b20edcd6c08238fdcbee2ae2a27f94064fa47",
+        "after_sha256": "67042e301d8ab93fdcee2807ee57af13a0b5a1be626fbc06367458d481574e1b"
+      },
+      {
+        "path": "manufacturing/REV_A_BOM_MANIFEST.json",
+        "before_sha256": "8daa42536b3702630b90b713f3988ecef75e31868b3dba8800abef3d6d301e71",
+        "after_sha256": "900529200db278c139dd766ef6c40d9491d26d7db15db6458f27bb11c6da1a58"
+      }
+    ],
+    "only_bom_payload_change": "Q40 retrieved primary-source evidence record and its hash; manifest input/output hashes refreshed.",
+    "all_bom_identity_quantity_and_calculation_fields_identical": true
+  },
+  "reproducibility_refresh": {
+    "report": "evidence/generator-reproducibility-review.json",
+    "sha256": "9eff516723d95fbad99c127f85b1adcd37458f81a9cf826bb2da27e5b99afabe",
+    "generators_tested": 7,
+    "outputs_tested": 14,
+    "generators_exited_zero": true,
+    "all_outputs_byte_exact": true,
+    "main_outputs_unchanged": true,
+    "stale_generator_findings": [],
+    "source_code_fixes_required_after_metadata_synchronization": false,
+    "supplemental_library_generator": {
+      "all_48_footprints_semantically_identical": true,
+      "byte_identical_count": 44,
+      "formatting_only_differences": [
+        "kicad/libraries/PMU.pretty/Wurth_7461103.kicad_mod",
+        "kicad/libraries/PMU_RevA.pretty/CCPAK1212_SOT8000A.kicad_mod",
+        "kicad/libraries/PMU_RevA.pretty/CSS4J_4026_Kelvin.kicad_mod",
+        "kicad/libraries/PMU_RevA.pretty/VQFN_RGE24_4x4_P0.5_EP_FLOAT.kicad_mod"
+      ]
+    }
+  },
+  "native_review_generators_rerun_for_metadata_only": false,
+  "schema_inheritance": "Native tool output, keyed mappings, geometry arrays, and non-JSON formats inherit prototype flags from release.json; their schemas are not changed.",
+  "final_release_binding": {
+    "release_json_sha256": "aeffab8fc513734016e588c2bab3c76a2d8b11c1c1ccdccc1fbaa60d6b19184e",
+    "pcb_sha256": "70bb8eb588f2fc7200f718df0e11659aad3c40c7e9d5652228eb7a58d232065f",
+    "mechanical_interface_sha256": "d31d4c18e7cd00ed6910ec9a7c48d871783a5d9ed8ae269eeda9561b7d63acb1",
+    "bom_manifest_sha256": "9d366b78dd644e64c99c234f8df062fc2bfab96deddddd2d2624d9746611bc77"
+  },
+  "historical_edit_scope": "The metadata-only before/after payload proofs record that edit phase. Later authorized final routing/geometry report refreshes use their own current snapshot hashes."
+}

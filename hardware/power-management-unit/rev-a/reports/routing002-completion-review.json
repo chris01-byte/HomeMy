@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "state": "isolated_native_completion_review_not_order_release",
+    "main_pcb_written": false,
+    "checked_at_utc": "2026-09-10T18:15:37.218891+00:00"
+  },
+  "frozen_session_sha256": "30ff3126f797f816506923bb6c97da340ea58be75bee15d42c2b8535435c311a",
+  "plan_sha256": "a8c8206a3e7624346a86672e821cd71b2bef7bda32d59801714e735927dadf24",
+  "helper_sha256": "9ba9e90ea0f4bebe110b86ee14657cf9063129129e8698512fead9dcc75fc835",
+  "candidate_board_sha256": "78b3ae83345bfd54a33e3d284111bc9cbb337780addad4c59af498a6473ca7ac",
+  "native_drc": {
+    "report": "reports/routing002-completion-test-drc.json",
+    "sha256": "31a0dd313fa6e8740aefa7b869886bdf5d0a01367655219cc4ff211028282785",
+    "violations": 0,
+    "unconnected_items": 0,
+    "report_generation_completed": true,
+    "successful_process_exit": false,
+    "process_note": "The portable native CLI emitted HKCU registry access errors; zero-count JSON was written before wrapper timeout cleanup. This does not claim a clean process exit."
+  },
+  "source_parity_passed": true,
+  "exact_nc_identity_required": true,
+  "critical_paths_missing": [],
+  "locked_analog_collisions": [],
+  "preserved_existing_locked_items": 1959,
+  "removed_unlocked_segments": 31,
+  "added_locked_items": 38,
+  "next_step": "Import the same frozen SES into the main project, apply_final_routing_repairs(board), rebuild connectivity/refill/save, and independently repeat native DRC/parity on that actual saved board."
+}

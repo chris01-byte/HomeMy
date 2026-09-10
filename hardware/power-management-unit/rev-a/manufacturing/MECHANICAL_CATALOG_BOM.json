@@ -1,0 +1,68 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "source_check_date": "2026-09-10",
+    "availability": "Exact catalogue identities verified; stock, lead time and lifecycle not verified. Purchase has not been performed.",
+    "quantity_basis": "15 BC clamps plus16 NT clamp screws; coupon/test spares additional",
+    "custom_items": "BB1..7, NB1..8,23 Cu contact shims and8 separate Cu branch backing washers are manufactured to the companion drawings, not unselected COTS parts."
+  },
+  "items": [
+    {
+      "manufacturer": "Accu",
+      "mpn": "SSCF-M3-12-A2-P80",
+      "quantity": 31,
+      "description": "M3x12 full-thread stainlessA2 socket screw, DIN912/ISO4762, precote80 locking coating",
+      "dimensions": {"thread_pitch_mm":0.5,"underhead_length_mm":12,"head_diameter_mm":5.5,"head_height_mm":3},
+      "source_url":"https://www.accu.co.uk/metric-cap-head-screws/659714-SSCF-M3-12-A2-P80",
+      "notes":"Single-use locking coating; replace after removal. Locking-coating torque is not used to infer clamp force. No washer under head atNT screws; washer under head atBC screws."
+    },
+    {
+      "manufacturer":"Accu",
+      "mpn":"HPN-M3-A2",
+      "quantity":31,
+      "description":"M3 stainlessA2 hex nut, DIN934",
+      "dimensions":{"thread_pitch_mm":0.5,"thickness_mm":2.4,"across_flats_mm":5.5},
+      "source_url":"https://www.accu.co.uk/hexagon-nuts/7888-HPN-M3-A2"
+    },
+    {
+      "manufacturer":"Accu",
+      "mpn":"HDTW-M3-A4-BL",
+      "quantity":46,
+      "description":"M3 DIN7349 heavy flat washer, stainlessA4 black finish;15topBC+31bottomspringseats",
+      "dimensions":{"outer_diameter_mm":9,"inner_diameter_mm":3.2,"thickness_mm":1,"thickness_tolerance_mm":0.2},
+      "source_url":"https://www.accu.co.uk/metric-flat-washers/173323-HDTW-M3-A4-BL",
+      "notes":"Supports8mm disc spring; steel washer is not credited as current path. No teeth againstPCB."
+    },
+    {
+      "manufacturer":"SPIROL",
+      "mpn":"660001",
+      "quantity":93,
+      "description":"Disc spring DSC8x3.2x0.3BR; three nested same-direction springs per clamp",
+      "dimensions":{"outer_diameter_mm":8,"inner_diameter_mm":3.2,"material_thickness_mm":0.3,"free_height_mm":0.55,"cone_height_mm":0.25},
+      "source_url":"https://shop.spirol.com/item/disc-springs/disc-springs-to-din-en-16983/660001",
+      "manufacturer_single_spring_force_N_at_75pct_cone":104,
+      "engineering_stack":{"spring_count_parallel":3,"deflection_mm":0.1875,"nominal_free_stack_mm":1.15,"nominal_compressed_stack_mm":0.9625,"nominal_force_N":312},
+      "notes":"High-carbon steel, phosphate/oil. Nested-stack friction, load spread, coating and copper/FR4 creep require coupon confirmation. Do not equate catalogue nominal312N to measuredforce."
+    },
+    {
+      "manufacturer":"Goodfellow",
+      "mpn":"IM30-FM-000200",
+      "order_code":"312-663-72",
+      "quantity":1,
+      "description":"KaptonHN polyimide film50um,500x500mm sheet;cut four continuous layers perbar",
+      "dimensions":{"sheet_mm":[500,500],"nominal_thickness_mm":0.05,"published_thickness_tolerance_percent":20},
+      "source_url":"https://www.goodfellow-japan.jp/en/product/polyimide-film-IM30-FM-000200.htm",
+      "notes":"Incoming four-layer stack must be<=0.22mm to maintain contact shim protrusion. This is a stricter assembly acceptance than catalogue nominal; oversizefilm is rejected, not silently compensated by torque. One500mmsheet supplies thecutpieces; no within-bar seams."
+    }
+  ],
+  "coupon_release":{
+    "samples_min":3,
+    "temperature_cycle_C":[20,100],
+    "cycles":10,
+    "force_N_acceptance":[200,400],
+    "joint_resistance_uohm_at20C_max":100,
+    "resistance_drift_percent_max":25,
+    "instructions":"Use samePCBthickness/finish,Cushim,film,bar,screw,springs,andnut asassembly. Measure actualstackforce at0.1875mm compression; verify noPCBindentation/cracks or film cutting after10cycles. Cool, checkforce and fourwireresistance. Prototypeenergization requires acceptedcoupons; no testhasbeenperformed."
+  }
+}

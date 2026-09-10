@@ -41,7 +41,7 @@ assert set(place)==set(byref),(set(byref)-set(place),set(place)-set(byref))
 assert all(0<x<360 and 0<y<300 for x,y,a in place.values())
 assert all(c['upper_bound_copper_edge_distance_mm']<2 for c in cap_evidence)
 (root/'design/placement-wake.json').write_text(json.dumps(place,indent=2)+'\n')
-(root/'evidence/wake-placement-bypass-check.json').write_text(json.dumps({'scope':'Initial placement; not a routed-board DRC or thermal validation','all_168_refs_placed':len(place),'bypasses':cap_evidence},indent=2)+'\n')
+(root/'evidence/wake-placement-bypass-check.json').write_text(json.dumps({'metadata':{'rev_a_engineering_prototype':True,'rev_b_production':False},'scope':'Initial placement; not a routed-board DRC or thermal validation','all_168_refs_placed':len(place),'bypasses':cap_evidence},indent=2)+'\n')
 print(json.dumps({'placed':len(place),'bypasses':len(cap_evidence),'max_supply_copper_edge_distance_mm':max(c['upper_bound_copper_edge_distance_mm'] for c in cap_evidence)}),flush=True)
 import os
 os._exit(0)

@@ -1,0 +1,113 @@
+[
+  {
+    "path": "reports/erc-final.json",
+    "date": "2026-09-10T20:15:28",
+    "sha256": "b67682255bcbad2657097f54b81eb9213bf22e84cde43384e837a7a66faf11dd",
+    "version": "10.0.6",
+    "count": 0,
+    "by_type": {},
+    "by_severity": {},
+    "ignored": [
+      "four_way_junction",
+      "simulation_model_issue",
+      "footprint_filter"
+    ]
+  },
+  {
+    "path": "reports/drc-final.json",
+    "date": "2026-09-10T20:15:43",
+    "sha256": "47e6f417dffc642f963677115169a3e8a9aa61b2465ca48b8aff4c284a52e4e1",
+    "version": "10.0.6",
+    "count": 0,
+    "by_type": {},
+    "by_severity": {},
+    "ignored": [
+      "track_not_centered_on_via",
+      "tuning_profile_track_geometries",
+      "footprint_filters_mismatch"
+    ]
+  },
+  {
+    "path": "evidence/erc-after-schematic-readability.json",
+    "date": "2026-09-10T18:47:39",
+    "sha256": "bbca4f743fec154a502940aa3bf86b59a061d7c7662b63cbc66f3039a17fe740",
+    "version": "10.0.6",
+    "count": 0,
+    "by_type": {},
+    "by_severity": {},
+    "ignored": [
+      "single_global_label",
+      "four_way_junction",
+      "simulation_model_issue",
+      "footprint_filter"
+    ]
+  },
+  {
+    "path": "reports/drc-initial.json",
+    "date": "2026-09-10T18:29:01",
+    "sha256": "772c1f76181604b54a62cd67e4c7aa9ba23209cf8eb4d90ca711b65ea74d53f5",
+    "version": "10.0.6",
+    "count": 689,
+    "by_type": {
+      "items_not_allowed": 1,
+      "clearance": 112,
+      "courtyards_overlap": 1,
+      "drill_out_of_range": 18,
+      "isolated_copper": 2,
+      "silk_overlap": 31,
+      "silk_over_copper": 25,
+      "unconnected_items": 499
+    },
+    "by_severity": {
+      "error": 631,
+      "warning": 58
+    },
+    "ignored": [
+      "missing_courtyard",
+      "track_not_centered_on_via",
+      "tuning_profile_track_geometries",
+      "footprint_filters_mismatch",
+      "footprint_type_mismatch"
+    ]
+  },
+  {
+    "path": "reports/drc-placement.json",
+    "date": "2026-09-10T18:40:25",
+    "sha256": "5add22ebf2bf59d458c6aaf5edd329a78e5ac14810a89b870a4eb8b8345798c8",
+    "version": "10.0.6",
+    "count": 499,
+    "by_type": {
+      "unconnected_items": 499
+    },
+    "by_severity": {
+      "error": 499
+    },
+    "ignored": [
+      "missing_courtyard",
+      "track_not_centered_on_via",
+      "tuning_profile_track_geometries",
+      "footprint_filters_mismatch",
+      "footprint_type_mismatch"
+    ]
+  },
+  {
+    "path": "reports/drc-upper-power.json",
+    "date": "2026-09-10T18:56:24",
+    "sha256": "c1ead9de6c0cc5d0f75bd62606712f5abac31aa090e8d0c5f8b869a6aa60f2cd",
+    "version": "10.0.6",
+    "count": 499,
+    "by_type": {
+      "unconnected_items": 499
+    },
+    "by_severity": {
+      "error": 499
+    },
+    "ignored": [
+      "missing_courtyard",
+      "track_not_centered_on_via",
+      "tuning_profile_track_geometries",
+      "footprint_filters_mismatch",
+      "footprint_type_mismatch"
+    ]
+  }
+]

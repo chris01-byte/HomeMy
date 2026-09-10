@@ -1,0 +1,851 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false
+  },
+  "authority": "release.json",
+  "scope": "All JSON artifacts under rev-a; native tool, upstream, array and keyed schemas inherit release scope without changing their payload.",
+  "non_json_scope": "KiCad native CAD/project files, Gerber/drill, CSV, SVG/PNG and manufacturer PDFs retain their own formats and inherit project release status; manufacturer documents are evidence, not project production approvals.",
+  "files": [
+    {
+      "path": "design/assembled-parts.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "19f61dad0690e63a5b034964c4729a18d664ec3d7118e665c821b3fee7e2a8bf"
+    },
+    {
+      "path": "design/chopper-calculations.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "8bab51d8ad97a36790eb4676c1f4136c07a3fad8f68df678b62bc1faeba9a0bb"
+    },
+    {
+      "path": "design/chopper-footprint-specs.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "4cfd6bdce00206efe0a47e328218f922c5dd97f3782e66e6d3e60b09f9d2803d"
+    },
+    {
+      "path": "design/chopper-parts.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "c64938d23db964524f4d0e46eee4e79d61b19141231ec5e5d4690373fb805e52"
+    },
+    {
+      "path": "design/critical-alternatives.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "ec12824640ee0eb8ae3bfc13da6fc45b993f96ccf2670e68da3c428a7a17ef49"
+    },
+    {
+      "path": "design/FINAL_ROUTING_REPAIRS.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "a8c8206a3e7624346a86672e821cd71b2bef7bda32d59801714e735927dadf24"
+    },
+    {
+      "path": "design/footprint-pin-audit.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "e3a44c326d04154cf9bff325bc29f3d88f40dd93f4aaeb4202ec07ad8b6a25ae"
+    },
+    {
+      "path": "design/integration-parts.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "4ed1c18cd120f13efbcdbe18b74458d758511598e864bd0caa71c50f2887765d"
+    },
+    {
+      "path": "design/lower-power-routing.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "51c8af36d81c0ed6711c37c4ce82fab8418bcf2336d092b345342d978c04015b"
+    },
+    {
+      "path": "design/placement-audit.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "53d03b49fee0c726096d9df024930a5c4bd664e42a99927937b0f1c4a2d5bd8b"
+    },
+    {
+      "path": "design/placement-busbar.json",
+      "coverage": "inherited",
+      "reason": "Reference-to-placement mapping consumed by PCB builders",
+      "release_scope": "release.json",
+      "sha256": "f210c5ee04f10dc1c29044088db68caae8060cf8c3f499196e793d0c168ee08d"
+    },
+    {
+      "path": "design/placement-chopper.json",
+      "coverage": "inherited",
+      "reason": "Reference-to-placement mapping consumed by PCB builders",
+      "release_scope": "release.json",
+      "sha256": "caca9cc39cc6ea73e0616daaaef2630e7f362af095ffb4132f4bb0ad80a3be76"
+    },
+    {
+      "path": "design/placement-power.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "6ccd8a7c69282861c2ecf4f55b147952ac17e55cda976a508562e3c832d8bd4d"
+    },
+    {
+      "path": "design/placement-wake.json",
+      "coverage": "inherited",
+      "reason": "Reference-to-placement mapping consumed by PCB builders",
+      "release_scope": "release.json",
+      "sha256": "4b085cccd915d8ffd361646a7fbfbb4d6f811c00e573a75af1f5bdc390d182b0"
+    },
+    {
+      "path": "design/power-parts.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "05bd625b801b49ede98912c5122b94acd8e537164fbd9623d2da31b6748472e6"
+    },
+    {
+      "path": "design/via-field-counts.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "ffa12f0ab206b72678047ead8ae1c413af7f9baeaf1714755a745069b29b0599"
+    },
+    {
+      "path": "design/wake-io-parts.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "08c08665c6eafed23d6a4687534c049f9a2a8410a6238e6ec0a9f408ddc19692"
+    },
+    {
+      "path": "erc-initial.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "0ca34a9353405b1f5ec37438d7379ac17884836fe95619466b06890d155d3691"
+    },
+    {
+      "path": "erc-integrated.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "323cb37bee9b2302105e7adb4ba2429e7a448a54a497043a48fd2be9e6211452"
+    },
+    {
+      "path": "evidence/assembly-annotation-drc.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "bb68183a4f8a113d3d0e1108fa46b0c696b6eb710eb8d55dfb9f33782d9d6495"
+    },
+    {
+      "path": "evidence/assembly-annotation-review.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "c2d628af3d513b620a1018ae8391abd13bac53e74a912c9b56d7ab398a395e85"
+    },
+    {
+      "path": "evidence/chopper/cross-review-sources.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "49e764c0a8d28114d4f2e0ae551dc708aceaeb7b39b371b0f2296665c8af4671"
+    },
+    {
+      "path": "evidence/chopper/ipt015n10n5-primary-source.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "35f98e6cd53415b25c1d7092e7f8f7360577020bbdbe18ace152338ae62a8965"
+    },
+    {
+      "path": "evidence/chopper/source_manifest.json",
+      "coverage": "explicit",
+      "reason": "Release flags on every authored manifest entry",
+      "release_scope": "release.json",
+      "sha256": "c5fb69bb3b5738a6aa9fb1a48c2551a3025adbec0370e94c3c67ebcfc2bc8047"
+    },
+    {
+      "path": "evidence/chopper-placement-courtyard-check.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "cd02899fe1e12c6d3ce0362668af70cc6254533d506ffb8f25ffa879c2f1cde2"
+    },
+    {
+      "path": "evidence/erc-after-schematic-readability.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "bbca4f743fec154a502940aa3bf86b59a061d7c7662b63cbc66f3039a17fe740"
+    },
+    {
+      "path": "evidence/filled-power-copper-review.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "2b444335ccbb10d991e4ae1baf8bc4dfa95a3ee488483e44ecbb2ff9048abb6e"
+    },
+    {
+      "path": "evidence/filled-power-polygons.json",
+      "coverage": "inherited",
+      "reason": "Filled polygon array used by rendering tools",
+      "release_scope": "release.json",
+      "sha256": "8e64dc8b13abe22a52daf2812aebe6f1dfaf6596131d4e61e10cb493c2289b8c"
+    },
+    {
+      "path": "evidence/final-electrical-review.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "4effddb4aa2220ab24e18952ca6ece0e7159807654aa31bca8bfd00a8445f11e"
+    },
+    {
+      "path": "evidence/final-mechanical-regeneration-review.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "c8cad075a0ea138d5a10761d34150b04719a9d10d9088746cc8fc265c4510e01"
+    },
+    {
+      "path": "evidence/FINAL_REVIEW.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "05872dd80acac48e81b4373a0212e154e5d7163b5de19e27958b0eafb534e50b"
+    },
+    {
+      "path": "evidence/generator-reproducibility-review.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "9eff516723d95fbad99c127f85b1adcd37458f81a9cf826bb2da27e5b99afabe"
+    },
+    {
+      "path": "evidence/placement-access-review-interim.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "ec957fb5cd8e1572f0214bea0fe58fa1759600b0fa38e3a462405fd639533e75"
+    },
+    {
+      "path": "evidence/placement-access-review.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "71dc9ab56d6a6e67c62f8e525da02d3bbc08e3f2d4a7cf5eb3538a007c667c12"
+    },
+    {
+      "path": "evidence/power/calculated.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "851170b6491afc4058b85cd4b169ed8f8e8fbb6c3e3fe9716afa6287a21e3ae0"
+    },
+    {
+      "path": "evidence/power/sources.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "89e84396d293724dcb6c4fb79bdf3a0bbd6caf62e01bec110b3c7ed2ae437d17"
+    },
+    {
+      "path": "evidence/release-metadata-review.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "df1adb9eda5a2a4ad1dbdae1b095597a5140840293ce42c8df3a9d08ed234c33"
+    },
+    {
+      "path": "evidence/reviewed-rule-configuration.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "52dd55076ea3b3a961df08a92a8a679a294249180564aa9a97947a84159c1f0f"
+    },
+    {
+      "path": "evidence/rule-review-report-snapshot.json",
+      "coverage": "inherited",
+      "reason": "Report-hash snapshot array",
+      "release_scope": "release.json",
+      "sha256": "7ed334b481c9744d84411ac57619f5039d7f80c760a3199647f317cce0ab232f"
+    },
+    {
+      "path": "evidence/schematic-readability-review.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "1bc596f38445ba1dc5641d022560ae2b8c7038055f8f05b8416b1eae72760ea0"
+    },
+    {
+      "path": "evidence/wake-io-calculations-and-checks.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "db2dc25e3a88d38e368b1111f09de92d33d0f95d05685640a43842c42b329292"
+    },
+    {
+      "path": "evidence/wake-io-sources.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "f7c6a31b5da56eff0d057416a4c469ba657eb62e482790f1f324cf08911b4ac9"
+    },
+    {
+      "path": "evidence/wake-placement-bypass-check.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "60c0c17cb757d7377347dd340293052f074976c3c3a4b9d888036a932451608d"
+    },
+    {
+      "path": "evidence/wake-placement-courtyard-check.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "48eb1d7e1cff9251dbdc0edb57b4497ba2a974cf6e8083871e695cd5b2bdb6c2"
+    },
+    {
+      "path": "manufacturing/assembly-orientation.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "e49a1370163ad4b808445eae03ec781085d1f2b9af0d928b2fc6e2800b62708a"
+    },
+    {
+      "path": "manufacturing/busbar-calculations.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "0bc245b8a81c2475965f75390ed22d647bb8414e54f11de1ba54391a3264625d"
+    },
+    {
+      "path": "manufacturing/busbar-pcb-interface.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "d31d4c18e7cd00ed6910ec9a7c48d871783a5d9ed8ae269eeda9561b7d63acb1"
+    },
+    {
+      "path": "manufacturing/engineering-preview/assembly/REV_A_excluded_pcb_features.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "2abf0d571cf5845b695a4cee34d7cf023dfc1ee55af77ddd8ddf5f54e3067d55"
+    },
+    {
+      "path": "manufacturing/engineering-preview/bom/REV_A_BOM.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "67042e301d8ab93fdcee2807ee57af13a0b5a1be626fbc06367458d481574e1b"
+    },
+    {
+      "path": "manufacturing/engineering-preview/bom/REV_A_BOM_MANIFEST.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "9d366b78dd644e64c99c234f8df062fc2bfab96deddddd2d2624d9746611bc77"
+    },
+    {
+      "path": "manufacturing/engineering-preview/bom/REV_A_EXTERNAL_BOM.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "5508478287ee0903ac6b3250f0d340b7eda2201ff3c28e596c52af05dfdb47d8"
+    },
+    {
+      "path": "manufacturing/engineering-preview/EXPORT_MANIFEST.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "e29992a90babc735d3c9d3a1bddd7ca8d4c530d70a9cd40c98d2053c85661b39"
+    },
+    {
+      "path": "manufacturing/MECHANICAL_CATALOG_BOM.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "f16fa2c81319009f8d2ac8fb37753ba294b622156ee063934a12bd4ffaf1aa30"
+    },
+    {
+      "path": "manufacturing/REV_A_BOM.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "67042e301d8ab93fdcee2807ee57af13a0b5a1be626fbc06367458d481574e1b"
+    },
+    {
+      "path": "manufacturing/REV_A_BOM_MANIFEST.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "9d366b78dd644e64c99c234f8df062fc2bfab96deddddd2d2624d9746611bc77"
+    },
+    {
+      "path": "manufacturing/REV_A_EXTERNAL_BOM.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "5508478287ee0903ac6b3250f0d340b7eda2201ff3c28e596c52af05dfdb47d8"
+    },
+    {
+      "path": "manufacturing/source-pad-geometry.json",
+      "coverage": "inherited",
+      "reason": "Frozen native footprint/pad geometry array",
+      "release_scope": "release.json",
+      "sha256": "e56088f7f81a151e0be56292ac7b2d7f472b2bd84d24191c9d5bd11648d8b845"
+    },
+    {
+      "path": "release.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "aeffab8fc513734016e588c2bab3c76a2d8b11c1c1ccdccc1fbaa60d6b19184e"
+    },
+    {
+      "path": "reports/analog-routing-corrections.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "052e2ab4e626eedffd7ea2aa797c011dc711fda92e50850c00c55f3e7ef53361"
+    },
+    {
+      "path": "reports/analog-routing-integration.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "730253ebd78147d240a4310ac61458d3372d948e01ac482eb0b1e19fb98fe483"
+    },
+    {
+      "path": "reports/analog-routing-test-drc.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "897515bcd707987b26871a4e98f54f9104710def98f8f48d915fce8b2b93f30c"
+    },
+    {
+      "path": "reports/assembly-annotation-application.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "9fe6b2843ffd808715e4b1b323945ca229e5ce82b1883f86c2a2f1ab50dae90e"
+    },
+    {
+      "path": "reports/board-pad-geometry.json",
+      "coverage": "inherited",
+      "reason": "Native footprint/pad geometry array",
+      "release_scope": "release.json",
+      "sha256": "c90c0252c9a09f0e6f2d69644b970aece073b7a8eec144761803a87ebe28ede9"
+    },
+    {
+      "path": "reports/connection-diagnostics.json",
+      "coverage": "inherited",
+      "reason": "Net-keyed connection diagnostics",
+      "release_scope": "release.json",
+      "sha256": "e8cbd436136dd23372a5fe5fe2cd17f72d4c16764983c10e40cd04783d9fb6f6"
+    },
+    {
+      "path": "reports/critical-routing-after-overlay.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "594015d1265202641eb06a64ff87378f620317944fa6e3d59e5a0c3752196191"
+    },
+    {
+      "path": "reports/critical-routing-completed-candidate.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "f78170d6759e6b8fbbf67b18a3a3634b1ea19794ba8707b3f5c469903b8e5db7"
+    },
+    {
+      "path": "reports/critical-routing-geometry.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "d3c05928bc8011290ed8f57b717807b397cdea7c2239756d4e2e7da3c9e2f554"
+    },
+    {
+      "path": "reports/critical-routing-integrated-interim.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "16fc2db88d1dfff483ddda5221cf12137d22c844669aa7eb8cbc7db8d84d94dc"
+    },
+    {
+      "path": "reports/drc-final.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "47e6f417dffc642f963677115169a3e8a9aa61b2465ca48b8aff4c284a52e4e1"
+    },
+    {
+      "path": "reports/drc-initial.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "772c1f76181604b54a62cd67e4c7aa9ba23209cf8eb4d90ca711b65ea74d53f5"
+    },
+    {
+      "path": "reports/drc-placement.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "5add22ebf2bf59d458c6aaf5edd329a78e5ac14810a89b870a4eb8b8345798c8"
+    },
+    {
+      "path": "reports/drc-power-prepared.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "00134dd461a686c640ab76af6357018500c4c36bcdef16ad4a1c79bbfa9ed99e"
+    },
+    {
+      "path": "reports/drc-upper-power.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "c1ead9de6c0cc5d0f75bd62606712f5abac31aa090e8d0c5f8b869a6aa60f2cd"
+    },
+    {
+      "path": "reports/electrical-parity-audit.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "30663f134d19e72d8421cad952ffa07bed7bcb3bdc8bab30086f72fa7ed1f838"
+    },
+    {
+      "path": "reports/electrical-parity-completed-candidate.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "fa0962b0be7011027137f3885f135818554893c0503890083a31c15cc549219d"
+    },
+    {
+      "path": "reports/erc-final.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "b67682255bcbad2657097f54b81eb9213bf22e84cde43384e837a7a66faf11dd"
+    },
+    {
+      "path": "reports/final-power-geometry-corrections.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "ae9080b4ddc87696ffd144294fb0695d0c31431d6d86fc61dee6471febb81987"
+    },
+    {
+      "path": "reports/final-routing-integration.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "95e1f641a9f58ca4c80670aabf6594d78b4297e0f5538de523bcd556f3149189"
+    },
+    {
+      "path": "reports/native-checks-both.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "ffd1840d2a9d3368eaf7f90e31341f81cb8d8b2f9706ba80fa5f8eff90822b6a"
+    },
+    {
+      "path": "reports/native-checks-drc.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "bdbfc8ce8bfd997308b6e27c3830e9b0c53f8ab5f4797106ee07991a22239272"
+    },
+    {
+      "path": "reports/nc-net-sync-plan.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "ba3356e6b1da02e663a814cc2407abf73f0e602286cc49d369d130140181bbcb"
+    },
+    {
+      "path": "reports/nc-net-synchronization.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "65ab5fcee8744dec3631b5c19d85031d1035e743cc93eff4cfdec763fdcce196"
+    },
+    {
+      "path": "reports/postroute-repair-001.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "a1d5275e94c2667527a4b76f75d61c20811a889aee937c247f39a3d770ba531d"
+    },
+    {
+      "path": "reports/postroute-repair.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "da29aa9bfccb019d0b35fb4e7d198f798440880eb494d703b1fcba354e6baa0e"
+    },
+    {
+      "path": "reports/rendered-review-manifest.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "2b1f035c7dbfc7687b00b348b89877ea0538fd6cda8e88f3efd1db56721a1a7a"
+    },
+    {
+      "path": "reports/routing-run-001/best-incomplete-count-statistics.json",
+      "coverage": "inherited",
+      "reason": "Native autorouter statistics schema",
+      "release_scope": "release.json",
+      "sha256": "303fdf16523b7af624265b16be2ac105ed7215cf77b21705fd9676b5b5af754d"
+    },
+    {
+      "path": "reports/routing-run-001/latest-statistics.json",
+      "coverage": "inherited",
+      "reason": "Native autorouter statistics schema",
+      "release_scope": "release.json",
+      "sha256": "303fdf16523b7af624265b16be2ac105ed7215cf77b21705fd9676b5b5af754d"
+    },
+    {
+      "path": "reports/routing-run-001/run-manifest.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "03a89dd3174bb2c0eee3e11c7d48ed4e862d26c17879fe359110e09f9eb77736"
+    },
+    {
+      "path": "reports/routing-run-001/run-result.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "761041dccc407ec99142296c542b6d61300654a1bf72105f299f1fbbb163a12f"
+    },
+    {
+      "path": "reports/routing-run-002/best-incomplete-count-statistics.json",
+      "coverage": "inherited",
+      "reason": "Native autorouter statistics schema",
+      "release_scope": "release.json",
+      "sha256": "560d79f740bbead0a4570a119d94f8b335e3ac4c0e1686addfc693ecccd64de1"
+    },
+    {
+      "path": "reports/routing-run-002/latest-statistics.json",
+      "coverage": "inherited",
+      "reason": "Native autorouter statistics schema",
+      "release_scope": "release.json",
+      "sha256": "eddfb1d73cd028324e6b24eb5be765edc120b774031a6aa4e35d365eb65399ea"
+    },
+    {
+      "path": "reports/routing-run-002/run-manifest.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "751b1b2cd09811cdcf8ab33af791dc10d47ec4989cd5a3778b338f22fd0cd6b3"
+    },
+    {
+      "path": "reports/routing-run-002/run-result.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "fb730d3bb49110327401cd46e7ded28378e8f507b30e862a028fb3d37f198b76"
+    },
+    {
+      "path": "reports/routing-tool-diagnostics.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "7b15c8982be607701ee48c741929c350b4cf8d5fb832b59eedf2088ccbc75e4c"
+    },
+    {
+      "path": "reports/routing002-completion-review.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "c7d27019bced78f2b7e30f1d8e970d3ea79fe097d660ddc67e341646b9401771"
+    },
+    {
+      "path": "reports/routing002-completion-test-drc.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "31a0dd313fa6e8740aefa7b869886bdf5d0a01367655219cc4ff211028282785"
+    },
+    {
+      "path": "scripts/routing/runs/bom-preview/REV_A_BOM.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "36db118a6f39f72118309f1e089b20edcd6c08238fdcbee2ae2a27f94064fa47"
+    },
+    {
+      "path": "scripts/routing/runs/bom-preview/REV_A_BOM_MANIFEST.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "8daa42536b3702630b90b713f3988ecef75e31868b3dba8800abef3d6d301e71"
+    },
+    {
+      "path": "scripts/routing/runs/bom-preview/REV_A_EXTERNAL_BOM.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "5508478287ee0903ac6b3250f0d340b7eda2201ff3c28e596c52af05dfdb47d8"
+    },
+    {
+      "path": "scripts/routing/runs/bounded-pass/freerouting.json",
+      "coverage": "inherited",
+      "reason": "Autorouter configuration schema",
+      "release_scope": "release.json",
+      "sha256": "6cc8c186c0c4ca6ccb01b6f4bbef2ecc695155c7fa17673eb26141e2aedf893e"
+    },
+    {
+      "path": "scripts/routing/runs/checkpoint-test/best-incomplete-count-statistics.json",
+      "coverage": "inherited",
+      "reason": "Native autorouter statistics schema",
+      "release_scope": "release.json",
+      "sha256": "71e734e477590db115c89d0190e210f9fdc1c54263e03223808fbcab00c5b01f"
+    },
+    {
+      "path": "scripts/routing/runs/checkpoint-test/latest-statistics.json",
+      "coverage": "inherited",
+      "reason": "Native autorouter statistics schema",
+      "release_scope": "release.json",
+      "sha256": "71e734e477590db115c89d0190e210f9fdc1c54263e03223808fbcab00c5b01f"
+    },
+    {
+      "path": "scripts/routing/runs/checkpoint-test/run-result.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "9ef3e8b5a6964dd80450549cb7efea57f22272e10fd385d8cfc1eca25e714100"
+    },
+    {
+      "path": "scripts/routing/runs/inspection002-a/drc.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "fb0764f3cd30a44d053f40c1d3c62034fbfede50f26d2fc14040554c91d60d7a"
+    },
+    {
+      "path": "scripts/routing/runs/inspection002-a/geometry.json",
+      "coverage": "inherited",
+      "reason": "Native pad/track geometry debug snapshot consumed by routing tools",
+      "release_scope": "release.json",
+      "sha256": "e0262e1c0d5fb542d4cab29eb9cbf475d99f1b55d43063f663eb66385e659578"
+    },
+    {
+      "path": "scripts/routing/runs/inspection002-a/inspection-manifest.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "1ddbe9c57d78a51d356d4daa24a8ee3d6f268205a86cf7c928ce06572bb85deb"
+    },
+    {
+      "path": "scripts/routing/runs/inspection002-b/drc.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "0155b12d5a2fad403ebdf5cfe969b2491aab2f6ad5f5181427de3c8068064460"
+    },
+    {
+      "path": "scripts/routing/runs/inspection002-b/repair-manifest.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "9723aecdcf1ae5fca9f50615638c09781dfc5409bde94eaaa245a9e45f5b4720"
+    },
+    {
+      "path": "scripts/routing/runs/inspection002-c/drc.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "3175a8a09b8c462310948b5ad50890a5427cc640370f2b1a8f94c23f22020a39"
+    },
+    {
+      "path": "scripts/routing/runs/inspection002-c/repair-manifest.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "1ecdd73ea67fa2a6cd1ea598fa12b36d84df8972c21bd3dfb76eb31690e9e2b3"
+    },
+    {
+      "path": "scripts/routing/runs/inspection002-d/drc.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "31a0dd313fa6e8740aefa7b869886bdf5d0a01367655219cc4ff211028282785"
+    },
+    {
+      "path": "scripts/routing/runs/inspection002-d/repair-manifest.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "bfad2b468a3e964969879e994baad85e91290a8259eb3fc1f4f9f474903184d6"
+    },
+    {
+      "path": "scripts/routing/runs/one-pass/freerouting.json",
+      "coverage": "inherited",
+      "reason": "Autorouter configuration schema",
+      "release_scope": "release.json",
+      "sha256": "01011fd6bdd73b2945994d69562cf3074c461b3125cd5f3a7dfc440c67498bce"
+    },
+    {
+      "path": "scripts/routing/runs/parity-negative-test/audit.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "9795bd028d16651fea8c34051c11757b0de9877139996f918c186108212fec2f"
+    },
+    {
+      "path": "scripts/routing/runs/resume-bounded-test/best-incomplete-count-statistics.json",
+      "coverage": "inherited",
+      "reason": "Native autorouter statistics schema",
+      "release_scope": "release.json",
+      "sha256": "4df07c2384d698a76c28c06f00c964196172fed99b76b1cf2e3a0554cbede43d"
+    },
+    {
+      "path": "scripts/routing/runs/resume-bounded-test/latest-statistics.json",
+      "coverage": "inherited",
+      "reason": "Native autorouter statistics schema",
+      "release_scope": "release.json",
+      "sha256": "4df07c2384d698a76c28c06f00c964196172fed99b76b1cf2e3a0554cbede43d"
+    },
+    {
+      "path": "scripts/routing/runs/resume-bounded-test/run-manifest.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "809c2aa3b5e63520e5a4fd4a76e2bc3c6c191a53d2100f23a00c5b737d180602"
+    },
+    {
+      "path": "scripts/routing/runs/resume-bounded-test/run-result.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "73e95a65e9d1d5be9d17ff8461624ad125106daf5f97ed1a027c1aea3f4fad64"
+    },
+    {
+      "path": "scripts/routing/upstream-source/sources.json",
+      "coverage": "inherited",
+      "reason": "Upstream tool/source provenance, preserved as supplied",
+      "release_scope": "release.json",
+      "sha256": "8251aaf57dd263bdcd5111a3e4a7eafc23e2e83d6ce3c38e4c94d105d82cc94b"
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "counts": {
+    "explicit": 83,
+    "inherited": 36,
+    "missing": 0
+  }
+}

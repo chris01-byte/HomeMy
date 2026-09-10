@@ -1,4 +1,8 @@
 {
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false
+  },
   "scope": "Engineering calculations, not physical test results or a fabrication/energization approval",
   "shunt": {
     "r_nominal_ohm": 0.0005,

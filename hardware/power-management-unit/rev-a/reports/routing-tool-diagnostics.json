@@ -1,0 +1,47 @@
+{
+  "rev_a_engineering_prototype": true,
+  "rev_b_production": false,
+  "state": "engineering_diagnostics_not_release",
+  "cli_actual_stop_pass_option": "--router.stop_pass_no=1",
+  "stock_cli_one_pass": {
+    "duration_seconds": 225.94,
+    "ses_bytes": 382125,
+    "router_incomplete_count": 189
+  },
+  "checkpoint_one_pass": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "state": "engineering_routing_candidate_not_order_release",
+    "input": "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\reports\\HomeMy_PMU_RevA.dsn",
+    "input_sha256": "952baee904cebcda678861739fa8f33d00bf67e74a05b34f385269d3fe5f6348",
+    "max_passes": 1,
+    "actual_stop_pass_no": 1,
+    "elapsed_seconds": 133.9175249,
+    "deadline_reached": false,
+    "worker_stopped": true,
+    "checkpoints": 15,
+    "best_router_incomplete_count": 146,
+    "uncaught_exception": null,
+    "native_kicad_drc_performed": false,
+    "warning": "Router internal errors remain in console log. SES/DSN checkpoints are candidates; native KiCad import and DRC are mandatory."
+  },
+  "bounded_resume": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "state": "engineering_routing_candidate_not_order_release",
+    "input": "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\scripts\\routing\\runs\\checkpoint-test\\latest.dsn",
+    "input_sha256": "1790ff014cb29b8c38b732fb853816f1c1618e87629df36055014cb08c33d739",
+    "max_passes": 200,
+    "actual_stop_pass_no": 200,
+    "elapsed_seconds": 20.3630343,
+    "deadline_reached": true,
+    "worker_stopped": true,
+    "checkpoints": 3,
+    "best_router_incomplete_count": 131,
+    "uncaught_exception": null,
+    "native_kicad_drc_performed": false,
+    "warning": "Router internal errors remain in console log. SES/DSN checkpoints are candidates; native KiCad import and DRC are mandatory."
+  },
+  "resume_caveat": "FreeroutingDSNreloadwarned clearanceclasskicad_defaultnotfound; preferSESimportplusnativeKiCadreexport forcontinuation.",
+  "native_kicad_drc_performed": false
+}

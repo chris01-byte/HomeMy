@@ -1,0 +1,1009 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "date": "2026-09-10",
+    "applied_to_final_main_pcb": true,
+    "current_review_modified_pcb_or_libraries": false
+  },
+  "input_board_sha256": "01b4a0b3e7fbf1f3009282d3a80fb32059b1c74542ccee60357fb14825b451fe",
+  "annotated_board_sha256": "70bb8eb588f2fc7200f718df0e11659aad3c40c7e9d5652228eb7a58d232065f",
+  "non_fab_semantic_sha256": "87c0b27e50a56f0171599535c4a5582a2e50ade04831511e5b6ff7428d8c5806",
+  "preservation": {
+    "non_fab_data_preserved": true,
+    "all_existing_uuids_preserved": true,
+    "initial_uuid_count": 15138,
+    "total_added_uuid_count": 130,
+    "idempotent_repeat_changed": false,
+    "idempotent_repeat_added_uuid_count": 0
+  },
+  "footprints": [
+    {
+      "footprint": "PMU_RevA:VQFN_RGE24_4x4_P0.5_EP_FLOAT",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "U1"
+    },
+    {
+      "footprint": "PMU:Wurth_7461103",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "J3"
+    },
+    {
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "Q7"
+    },
+    {
+      "footprint": "PMU:Wurth_7461103",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "J4"
+    },
+    {
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "Q8"
+    },
+    {
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "Q3"
+    },
+    {
+      "footprint": "PMU:Wurth_7461103",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "J6"
+    },
+    {
+      "footprint": "PMU_RevA:CSS4J_4026_Kelvin",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "RSH2"
+    },
+    {
+      "footprint": "PMU_RevA:CSS4J_4026_Kelvin",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "RSH1"
+    },
+    {
+      "footprint": "PMU:Wurth_7461103",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "J1"
+    },
+    {
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "Q10"
+    },
+    {
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "Q4"
+    },
+    {
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "Q6"
+    },
+    {
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "Q9"
+    },
+    {
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "Q5"
+    },
+    {
+      "footprint": "PMU:Wurth_7461103",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "J5"
+    },
+    {
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "Q1"
+    },
+    {
+      "footprint": "PMU:Wurth_7461103",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "J2"
+    },
+    {
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "reference": "Q2"
+    }
+  ],
+  "m5_face_directions": {
+    "J1": -1,
+    "J2": -1,
+    "J3": -1,
+    "J4": 1,
+    "J5": -1,
+    "J6": 1
+  },
+  "generic_local_body_bounds_mm": {
+    "CCPAK1212_SOT8000A": [
+      -6,
+      -4.7,
+      6,
+      4.7
+    ],
+    "VQFN_RGE24_4x4_P0.5_EP_FLOAT": [
+      -2,
+      -2,
+      2,
+      2
+    ]
+  },
+  "generic_local_graphic_specs": {
+    "CCPAK1212_SOT8000A": [
+      [
+        "fp_circle",
+        [
+          "center",
+          "-5.3",
+          "4.05"
+        ],
+        [
+          "end",
+          "-5",
+          "4.05"
+        ],
+        [
+          "stroke",
+          [
+            "width",
+            "0.15"
+          ],
+          [
+            "type",
+            "default"
+          ]
+        ],
+        [
+          "fill",
+          "none"
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "uuid",
+          "\"ce922ac6-3efa-55d1-85c1-19a893527fac\""
+        ]
+      ],
+      [
+        "fp_text",
+        "user",
+        "\"1 G\"",
+        [
+          "at",
+          "-3.9",
+          "4.05",
+          "0"
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "effects",
+          [
+            "font",
+            [
+              "size",
+              "0.65",
+              "0.65"
+            ],
+            [
+              "thickness",
+              "0.1"
+            ]
+          ]
+        ],
+        [
+          "uuid",
+          "\"24a2e7d6-6dd8-5c94-aa09-384ed8051a75\""
+        ]
+      ],
+      [
+        "fp_text",
+        "user",
+        "\"S 2-6\"",
+        [
+          "at",
+          "1.4",
+          "4.05",
+          "0"
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "effects",
+          [
+            "font",
+            [
+              "size",
+              "0.65",
+              "0.65"
+            ],
+            [
+              "thickness",
+              "0.1"
+            ]
+          ]
+        ],
+        [
+          "uuid",
+          "\"fc5b0b80-d3cc-5265-9790-a6b0f401538d\""
+        ]
+      ],
+      [
+        "fp_text",
+        "user",
+        "\"D 7-12 / 13\"",
+        [
+          "at",
+          "0",
+          "-3.8",
+          "0"
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "effects",
+          [
+            "font",
+            [
+              "size",
+              "0.65",
+              "0.65"
+            ],
+            [
+              "thickness",
+              "0.1"
+            ]
+          ]
+        ],
+        [
+          "uuid",
+          "\"3af013ac-616e-55fe-9e47-096293bb085d\""
+        ]
+      ]
+    ],
+    "VQFN_RGE24_4x4_P0.5_EP_FLOAT": [
+      [
+        "fp_line",
+        [
+          "start",
+          "-1.95",
+          "-1.2"
+        ],
+        [
+          "end",
+          "-1.2",
+          "-1.95"
+        ],
+        [
+          "stroke",
+          [
+            "width",
+            "0.15"
+          ],
+          [
+            "type",
+            "default"
+          ]
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "uuid",
+          "\"0078bcb5-2638-54ed-a930-3f68bedf74ba\""
+        ]
+      ],
+      [
+        "fp_text",
+        "user",
+        "\"1\"",
+        [
+          "at",
+          "-1.4",
+          "-1.25",
+          "0"
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "effects",
+          [
+            "font",
+            [
+              "size",
+              "0.45",
+              "0.45"
+            ],
+            [
+              "thickness",
+              "0.1"
+            ]
+          ]
+        ],
+        [
+          "uuid",
+          "\"de6e3013-5ea8-58f8-81db-6c278be88d03\""
+        ]
+      ],
+      [
+        "fp_text",
+        "user",
+        "\"EP25 FLOAT\"",
+        [
+          "at",
+          "0",
+          "-0.4",
+          "0"
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "effects",
+          [
+            "font",
+            [
+              "size",
+              "0.42",
+              "0.42"
+            ],
+            [
+              "thickness",
+              "0.1"
+            ]
+          ]
+        ],
+        [
+          "uuid",
+          "\"f824aa11-fa16-5d49-ac28-24669d2766aa\""
+        ]
+      ],
+      [
+        "fp_text",
+        "user",
+        "\"NO VIA\"",
+        [
+          "at",
+          "0",
+          "0.4",
+          "0"
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "effects",
+          [
+            "font",
+            [
+              "size",
+              "0.42",
+              "0.42"
+            ],
+            [
+              "thickness",
+              "0.1"
+            ]
+          ]
+        ],
+        [
+          "uuid",
+          "\"f06aacf8-7b40-5c56-9e80-3522ce1cfdf2\""
+        ]
+      ]
+    ],
+    "CSS4J_4026_Kelvin": [
+      [
+        "fp_text",
+        "user",
+        "\"SENSE 2 / 3\"",
+        [
+          "at",
+          "0",
+          "-1.2",
+          "0"
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "effects",
+          [
+            "font",
+            [
+              "size",
+              "0.65",
+              "0.65"
+            ],
+            [
+              "thickness",
+              "0.1"
+            ]
+          ]
+        ],
+        [
+          "uuid",
+          "\"ef50b020-042e-50ae-a168-ed17acfa399b\""
+        ]
+      ],
+      [
+        "fp_line",
+        [
+          "start",
+          "-5.3",
+          "-2.6"
+        ],
+        [
+          "end",
+          "-2.75",
+          "-2.6"
+        ],
+        [
+          "stroke",
+          [
+            "width",
+            "0.15"
+          ],
+          [
+            "type",
+            "default"
+          ]
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "uuid",
+          "\"ba9e87e9-88e3-55d0-8b65-ae47bd632676\""
+        ]
+      ],
+      [
+        "fp_line",
+        [
+          "start",
+          "-2.75",
+          "-3.6"
+        ],
+        [
+          "end",
+          "-2.75",
+          "-1.9"
+        ],
+        [
+          "stroke",
+          [
+            "width",
+            "0.15"
+          ],
+          [
+            "type",
+            "default"
+          ]
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "uuid",
+          "\"5241dbbe-6863-552c-8b5d-20355b06d75f\""
+        ]
+      ],
+      [
+        "fp_line",
+        [
+          "start",
+          "2.75",
+          "-2.6"
+        ],
+        [
+          "end",
+          "5.3",
+          "-2.6"
+        ],
+        [
+          "stroke",
+          [
+            "width",
+            "0.15"
+          ],
+          [
+            "type",
+            "default"
+          ]
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "uuid",
+          "\"e26cf474-b48f-5498-bfbc-75b3f6c00ce3\""
+        ]
+      ],
+      [
+        "fp_line",
+        [
+          "start",
+          "2.75",
+          "-3.6"
+        ],
+        [
+          "end",
+          "2.75",
+          "-1.9"
+        ],
+        [
+          "stroke",
+          [
+            "width",
+            "0.15"
+          ],
+          [
+            "type",
+            "default"
+          ]
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "uuid",
+          "\"00e93afc-861a-5a0e-8bd9-f59cac7f633c\""
+        ]
+      ],
+      [
+        "fp_text",
+        "user",
+        "\"1 FORCE\"",
+        [
+          "at",
+          "-3",
+          "1",
+          "0"
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "effects",
+          [
+            "font",
+            [
+              "size",
+              "0.65",
+              "0.65"
+            ],
+            [
+              "thickness",
+              "0.1"
+            ]
+          ]
+        ],
+        [
+          "uuid",
+          "\"0d43944f-21f3-5936-a530-ec6f028bc2d5\""
+        ]
+      ],
+      [
+        "fp_text",
+        "user",
+        "\"4 FORCE\"",
+        [
+          "at",
+          "3",
+          "1",
+          "0"
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "effects",
+          [
+            "font",
+            [
+              "size",
+              "0.65",
+              "0.65"
+            ],
+            [
+              "thickness",
+              "0.1"
+            ]
+          ]
+        ],
+        [
+          "uuid",
+          "\"b1609f24-959f-5ac1-8f99-77e9ea312b63\""
+        ]
+      ]
+    ],
+    "Wurth_7461103": [
+      [
+        "fp_line",
+        [
+          "start",
+          "0",
+          "-4.3"
+        ],
+        [
+          "end",
+          "0",
+          "-0.7"
+        ],
+        [
+          "stroke",
+          [
+            "width",
+            "0.15"
+          ],
+          [
+            "type",
+            "default"
+          ]
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "uuid",
+          "\"cf663f23-9c14-57b1-bb70-36159ad0b2ec\""
+        ]
+      ],
+      [
+        "fp_line",
+        [
+          "start",
+          "0",
+          "0.7"
+        ],
+        [
+          "end",
+          "0",
+          "4.3"
+        ],
+        [
+          "stroke",
+          [
+            "width",
+            "0.15"
+          ],
+          [
+            "type",
+            "default"
+          ]
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "uuid",
+          "\"d096e67c-7b1f-5ae8-922a-abda6e0ea626\""
+        ]
+      ],
+      [
+        "fp_line",
+        [
+          "start",
+          "0",
+          "-4.3"
+        ],
+        [
+          "end",
+          "-0.7",
+          "-3.4"
+        ],
+        [
+          "stroke",
+          [
+            "width",
+            "0.15"
+          ],
+          [
+            "type",
+            "default"
+          ]
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "uuid",
+          "\"1b6c1ef2-51f0-570a-8cf6-d66d5c1e3841\""
+        ]
+      ],
+      [
+        "fp_line",
+        [
+          "start",
+          "0",
+          "-4.3"
+        ],
+        [
+          "end",
+          "0.7",
+          "-3.4"
+        ],
+        [
+          "stroke",
+          [
+            "width",
+            "0.15"
+          ],
+          [
+            "type",
+            "default"
+          ]
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "uuid",
+          "\"bde540f9-482c-55f4-b652-d9d69d030039\""
+        ]
+      ],
+      [
+        "fp_line",
+        [
+          "start",
+          "0",
+          "4.3"
+        ],
+        [
+          "end",
+          "-0.7",
+          "3.4"
+        ],
+        [
+          "stroke",
+          [
+            "width",
+            "0.15"
+          ],
+          [
+            "type",
+            "default"
+          ]
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "uuid",
+          "\"27d7408e-ca26-5845-9965-e358455bdf31\""
+        ]
+      ],
+      [
+        "fp_line",
+        [
+          "start",
+          "0",
+          "4.3"
+        ],
+        [
+          "end",
+          "0.7",
+          "3.4"
+        ],
+        [
+          "stroke",
+          [
+            "width",
+            "0.15"
+          ],
+          [
+            "type",
+            "default"
+          ]
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "uuid",
+          "\"98c2aba2-eaf5-5617-bf77-74123b128940\""
+        ]
+      ],
+      [
+        "fp_text",
+        "user",
+        "\"M5 AXIS\"",
+        [
+          "at",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "layer",
+          "\"F.Fab\""
+        ],
+        [
+          "effects",
+          [
+            "font",
+            [
+              "size",
+              "0.65",
+              "0.65"
+            ],
+            [
+              "thickness",
+              "0.1"
+            ]
+          ]
+        ],
+        [
+          "uuid",
+          "\"1a86e44c-0fea-542f-9739-8df15785eaed\""
+        ]
+      ]
+    ]
+  },
+  "generator_reproducibility": {
+    "generator_exit": 0,
+    "stdout": "421 footprints audited; 0 unresolved mappings.\n",
+    "stderr": "",
+    "test_basis": "Fresh copies of the four authoritative unannotated libraries, annotated by final helper before generator comparison.",
+    "footprints": [
+      {
+        "name": "CCPAK1212_SOT8000A.kicad_mod",
+        "semantic_identical_to_annotation": true
+      },
+      {
+        "name": "VQFN_RGE24_4x4_P0.5_EP_FLOAT.kicad_mod",
+        "semantic_identical_to_annotation": true
+      },
+      {
+        "name": "CSS4J_4026_Kelvin.kicad_mod",
+        "semantic_identical_to_annotation": true
+      },
+      {
+        "name": "Wurth_7461103.kicad_mod",
+        "semantic_identical_to_annotation": true
+      }
+    ]
+  },
+  "visual_review": {
+    "native_fab_svg_sha256": "5d681a1adbb5c7ea088d9cb6ef5fd28e4975c5924afe01b11a6ded8769031c37",
+    "crop_sha256": "8e21150bae83c11748db17797d1b1f544ecc417003c7f18b54f82e68b94d27f2",
+    "reviewed": [
+      "CCPAK rotated pin1/gate marker and labels inside accurate body",
+      "U1 corner index and readable floating EP note",
+      "Shunt sense label clear of split guides, force labels inside body",
+      "M5 generic screw axis and board-specific -Y face arrow"
+    ],
+    "scope": "Native development crop showing the identical marker design; final main-board marker/spec presence independently verified read-only. This crop is not a new full-board export."
+  },
+  "source_hashes": {
+    "scripts\\annotate_assembly.py": "d6c70a5206a1cd4692929c21e88ad9e6368ca516fcbc296cf1ad24703e46073d",
+    "scripts\\build_footprints.py": "1f31763bb496960d345c9e339fe50ae257eaed33b870c82a790df890de8bf50a"
+  },
+  "temporary_test_root": "C:\\Users\\chrba\\AppData\\Local\\Temp\\pmu-assembly-annotation-5kxgr3y4",
+  "limits": [
+    "Fab graphics only; no copper or placement authorization implied.",
+    "Board-specific M5 arrows require annotation CLI after building a new board.",
+    "The 325 temporary snapshot unconnected items are not a passed final connectivity state.",
+    "Physical screw/tool clearance and assembly qualification remain separate gates."
+  ],
+  "temporary_development_snapshot": {
+    "input_board_sha256": "bc006b41f415a20aa9412b334fb4027861b08900985e67b9a2d2db8188b97be6",
+    "annotated_board_sha256": "530e6a742bc5e2485c8e12ce3455ff7547b3a7dd078ce54f3904faa1c70dfb07",
+    "non_fab_semantic_sha256": "f3d83bbbeb4526e9395780bf139d293246933a11935784c5cc41783fa9274ac9",
+    "preservation": {
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "initial_uuid_count": 13398,
+      "total_added_uuid_count": 130,
+      "idempotent_repeat_changed": false,
+      "idempotent_repeat_added_uuid_count": 0
+    },
+    "native_drc": {
+      "kicad_version": "10.0.6",
+      "violations": 0,
+      "unconnected_items": 325,
+      "schematic_parity": 0,
+      "report_sha256": "bb68183a4f8a113d3d0e1108fa46b0c696b6eb710eb8d55dfb9f33782d9d6495",
+      "cli_status_note": "Exit1 after Windows HKCU registry denial; native report and SVG were produced. Snapshot contains in-progress routing, not final connection approval."
+    },
+    "visual_review": {
+      "native_fab_svg_sha256": "5d681a1adbb5c7ea088d9cb6ef5fd28e4975c5924afe01b11a6ded8769031c37",
+      "crop_sha256": "8e21150bae83c11748db17797d1b1f544ecc417003c7f18b54f82e68b94d27f2",
+      "reviewed": [
+        "CCPAK rotated pin1/gate marker and labels inside accurate body",
+        "U1 corner index and readable floating EP note",
+        "Shunt sense label clear of split guides, force labels inside body",
+        "M5 generic screw axis and board-specific -Y face arrow"
+      ],
+      "scope": "Native development crop showing the identical marker design; final main-board marker/spec presence independently verified read-only. This crop is not a new full-board export."
+    }
+  },
+  "final_application": {
+    "report": "reports/assembly-annotation-application.json",
+    "report_sha256": "9fe6b2843ffd808715e4b1b323945ca229e5ce82b1883f86c2a2f1ab50dae90e",
+    "current_pcb_matches_application_output": true,
+    "current_main_pcb_sha256": "70bb8eb588f2fc7200f718df0e11659aad3c40c7e9d5652228eb7a58d232065f",
+    "current_pcb_stable_during_review": true,
+    "main_board_reapplication_would_change": false,
+    "main_board_non_fab_hash_matches_application": true,
+    "libraries": [
+      {
+        "path": "kicad/libraries/PMU_RevA.pretty/CCPAK1212_SOT8000A.kicad_mod",
+        "sha256": "034426872512282c75202e6af788ed87be7a15f0a473d676f6b7a5477fb1e7b4",
+        "already_matches_annotation_spec": true
+      },
+      {
+        "path": "kicad/libraries/PMU_RevA.pretty/VQFN_RGE24_4x4_P0.5_EP_FLOAT.kicad_mod",
+        "sha256": "9496a9a0222bc36886cf9259e3e4a6a4e517be4a3ed21ec9e617914f4bb750a4",
+        "already_matches_annotation_spec": true
+      },
+      {
+        "path": "kicad/libraries/PMU_RevA.pretty/CSS4J_4026_Kelvin.kicad_mod",
+        "sha256": "20fc0b8c00c42dfcf819a9fed38acf35f2966bb09cc0c6f510425325b57480ea",
+        "already_matches_annotation_spec": true
+      },
+      {
+        "path": "kicad/libraries/PMU.pretty/Wurth_7461103.kicad_mod",
+        "sha256": "65f1af4707017249431a4d336cc416aa7a4d6baf1b1bdcfc5f67e6c644eaf2d5",
+        "already_matches_annotation_spec": true
+      }
+    ],
+    "placement_review": "evidence/placement-access-review.json",
+    "placement_review_sha256": "71dc9ab56d6a6e67c62f8e525da02d3bbc08e3f2d4a7cf5eb3538a007c667c12",
+    "placement_review_uses_same_final_board": true,
+    "annotation_script_sha256": "d6c70a5206a1cd4692929c21e88ad9e6368ca516fcbc296cf1ad24703e46073d"
+  }
+}

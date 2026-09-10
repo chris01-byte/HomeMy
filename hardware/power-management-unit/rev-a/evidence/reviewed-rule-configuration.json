@@ -1,0 +1,512 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false
+  },
+  "status": "Independent read-only configuration review; report hashes identify snapshots and do not imply hardware qualification",
+  "source_files": {
+    "kicad/HomeMy_PMU_RevA.kicad_pro": "90f481f3da3348596761d55fe1f943ce01f5e07652ab6a87084ea2416e879b17",
+    "kicad/HomeMy_PMU_RevA.kicad_dru": "bfef7c871a474537c37a94ec42227550a2ffb15f57120e22efe87e2d5924775b",
+    "kicad/HomeMy_PMU_RevA.kicad_pcb": "70bb8eb588f2fc7200f718df0e11659aad3c40c7e9d5652228eb7a58d232065f"
+  },
+  "drc_rule_severities": {
+    "annular_width": "error",
+    "clearance": "error",
+    "connection_width": "warning",
+    "copper_edge_clearance": "error",
+    "copper_sliver": "warning",
+    "courtyards_overlap": "error",
+    "creepage": "error",
+    "diff_pair_gap_out_of_range": "error",
+    "diff_pair_uncoupled_length_too_long": "error",
+    "drill_out_of_range": "error",
+    "duplicate_footprints": "warning",
+    "extra_footprint": "warning",
+    "footprint": "error",
+    "footprint_filters_mismatch": "ignore",
+    "footprint_symbol_field_mismatch": "warning",
+    "footprint_symbol_mismatch": "warning",
+    "footprint_type_mismatch": "warning",
+    "hole_clearance": "error",
+    "hole_to_hole": "warning",
+    "holes_co_located": "warning",
+    "invalid_outline": "error",
+    "isolated_copper": "warning",
+    "item_on_disabled_layer": "error",
+    "items_not_allowed": "error",
+    "length_out_of_range": "error",
+    "lib_footprint_issues": "warning",
+    "lib_footprint_mismatch": "warning",
+    "malformed_courtyard": "error",
+    "microvia_drill_out_of_range": "error",
+    "mirrored_text_on_front_layer": "warning",
+    "missing_courtyard": "warning",
+    "missing_footprint": "warning",
+    "missing_tuning_profile": "warning",
+    "net_conflict": "warning",
+    "nonmirrored_text_on_back_layer": "warning",
+    "npth_inside_courtyard": "error",
+    "padstack": "warning",
+    "pth_inside_courtyard": "error",
+    "shorting_items": "error",
+    "silk_edge_clearance": "warning",
+    "silk_over_copper": "warning",
+    "silk_overlap": "warning",
+    "skew_out_of_range": "error",
+    "solder_mask_bridge": "error",
+    "starved_thermal": "error",
+    "text_height": "warning",
+    "text_on_edge_cuts": "error",
+    "text_thickness": "warning",
+    "through_hole_pad_without_hole": "error",
+    "too_many_vias": "error",
+    "track_angle": "error",
+    "track_dangling": "warning",
+    "track_not_centered_on_via": "ignore",
+    "track_on_post_machined_layer": "error",
+    "track_segment_length": "error",
+    "track_width": "error",
+    "tracks_crossing": "error",
+    "tuning_profile_track_geometries": "ignore",
+    "unconnected_items": "error",
+    "unresolved_variable": "error",
+    "via_dangling": "warning",
+    "zones_intersect": "error"
+  },
+  "drc_exclusions": [],
+  "board_rules": {
+    "max_error": 0.005,
+    "min_clearance": 0.15,
+    "min_connection": 0.0,
+    "min_copper_edge_clearance": 0.5,
+    "min_groove_width": 0.0,
+    "min_hole_clearance": 0.25,
+    "min_hole_to_hole": 0.25,
+    "min_microvia_diameter": 0.2,
+    "min_microvia_drill": 0.1,
+    "min_resolved_spokes": 2,
+    "min_silk_clearance": 0.0,
+    "min_text_height": 0.8,
+    "min_text_thickness": 0.08,
+    "min_through_hole_diameter": 0.2,
+    "min_track_width": 0.2,
+    "min_via_annular_width": 0.1,
+    "min_via_diameter": 0.5,
+    "solder_mask_to_copper_clearance": 0.0,
+    "use_height_for_length_calcs": true
+  },
+  "erc_settings": {
+    "rule_severities": {
+      "single_global_label": "warning"
+    }
+  },
+  "netclasses": [
+    {
+      "bus_width": 12,
+      "clearance": 0.2,
+      "diff_pair_gap": 0.25,
+      "diff_pair_via_gap": 0.25,
+      "diff_pair_width": 0.2,
+      "line_style": 0,
+      "microvia_diameter": 0.3,
+      "microvia_drill": 0.1,
+      "name": "Default",
+      "pcb_color": "rgba(0, 0, 0, 0.000)",
+      "priority": 2147483647,
+      "schematic_color": "rgba(0, 0, 0, 0.000)",
+      "track_width": 0.2,
+      "tuning_profile": "",
+      "via_diameter": 0.6,
+      "via_drill": 0.3,
+      "wire_width": 6
+    }
+  ],
+  "same_package_clearance_rule_count": 47,
+  "native_footprints_without_courtyard_screen": [],
+  "native_footprint_mixed_type_screen": [
+    {
+      "ref": "U30",
+      "attributes": [
+        "attr",
+        "smd"
+      ],
+      "pad_types": [
+        "smd",
+        "thru_hole"
+      ]
+    },
+    {
+      "ref": "U10",
+      "attributes": [
+        "attr",
+        "smd"
+      ],
+      "pad_types": [
+        "smd",
+        "thru_hole"
+      ]
+    }
+  ],
+  "screen_limitation": "Simple attribute/presence screen does not check polygon courtyard validity or implement the native DRC type checker.",
+  "reports": [
+    {
+      "path": "reports/erc-final.json",
+      "sha256": "b67682255bcbad2657097f54b81eb9213bf22e84cde43384e837a7a66faf11dd",
+      "date": "2026-09-10T20:15:28",
+      "kicad_version": "10.0.6",
+      "counts_by_type": {},
+      "counts_by_severity": {},
+      "ignored_checks": [
+        "four_way_junction",
+        "simulation_model_issue",
+        "footprint_filter"
+      ]
+    },
+    {
+      "path": "reports/drc-final.json",
+      "sha256": "47e6f417dffc642f963677115169a3e8a9aa61b2465ca48b8aff4c284a52e4e1",
+      "date": "2026-09-10T20:15:43",
+      "kicad_version": "10.0.6",
+      "counts_by_type": {},
+      "counts_by_severity": {},
+      "ignored_checks": [
+        "track_not_centered_on_via",
+        "tuning_profile_track_geometries",
+        "footprint_filters_mismatch"
+      ]
+    },
+    {
+      "path": "evidence/erc-after-schematic-readability.json",
+      "sha256": "bbca4f743fec154a502940aa3bf86b59a061d7c7662b63cbc66f3039a17fe740",
+      "date": "2026-09-10T18:47:39",
+      "kicad_version": "10.0.6",
+      "counts_by_type": {},
+      "counts_by_severity": {},
+      "ignored_checks": [
+        "single_global_label",
+        "four_way_junction",
+        "simulation_model_issue",
+        "footprint_filter"
+      ]
+    },
+    {
+      "path": "reports/drc-initial.json",
+      "sha256": "772c1f76181604b54a62cd67e4c7aa9ba23209cf8eb4d90ca711b65ea74d53f5",
+      "date": "2026-09-10T18:29:01",
+      "kicad_version": "10.0.6",
+      "counts_by_type": {
+        "items_not_allowed": 1,
+        "clearance": 112,
+        "courtyards_overlap": 1,
+        "drill_out_of_range": 18,
+        "isolated_copper": 2,
+        "silk_overlap": 31,
+        "silk_over_copper": 25,
+        "unconnected_items": 499
+      },
+      "counts_by_severity": {
+        "error": 631,
+        "warning": 58
+      },
+      "ignored_checks": [
+        "missing_courtyard",
+        "track_not_centered_on_via",
+        "tuning_profile_track_geometries",
+        "footprint_filters_mismatch",
+        "footprint_type_mismatch"
+      ]
+    },
+    {
+      "path": "reports/drc-placement.json",
+      "sha256": "5add22ebf2bf59d458c6aaf5edd329a78e5ac14810a89b870a4eb8b8345798c8",
+      "date": "2026-09-10T18:40:25",
+      "kicad_version": "10.0.6",
+      "counts_by_type": {
+        "unconnected_items": 499
+      },
+      "counts_by_severity": {
+        "error": 499
+      },
+      "ignored_checks": [
+        "missing_courtyard",
+        "track_not_centered_on_via",
+        "tuning_profile_track_geometries",
+        "footprint_filters_mismatch",
+        "footprint_type_mismatch"
+      ]
+    },
+    {
+      "path": "reports/drc-upper-power.json",
+      "sha256": "c1ead9de6c0cc5d0f75bd62606712f5abac31aa090e8d0c5f8b869a6aa60f2cd",
+      "date": "2026-09-10T18:56:24",
+      "kicad_version": "10.0.6",
+      "counts_by_type": {
+        "unconnected_items": 499
+      },
+      "counts_by_severity": {
+        "error": 499
+      },
+      "ignored_checks": [
+        "missing_courtyard",
+        "track_not_centered_on_via",
+        "tuning_profile_track_geometries",
+        "footprint_filters_mismatch",
+        "footprint_type_mismatch"
+      ]
+    }
+  ],
+  "process_manifests": {
+    "native-checks-both.json": {
+      "rev_a_engineering_prototype": true,
+      "rev_b_production": false,
+      "started_at_utc": "2026-09-10T18:15:27.414579+00:00",
+      "checks": {
+        "erc": {
+          "command": [
+            "C:\\Users\\chrba\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\scripts\\run_tool.py",
+            "--kicad-root",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\tools-local\\kicad",
+            "--timeout",
+            "15",
+            "kicad-cli",
+            "sch",
+            "erc",
+            "--format",
+            "json",
+            "--severity-all",
+            "--output",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\reports\\erc-pending.json",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\kicad\\HomeMy_PMU_RevA.kicad_sch"
+          ],
+          "process_exit_code": 124,
+          "process_passed": false,
+          "wall_seconds": 15.083,
+          "report_complete": true,
+          "report_path": "reports\\erc-final.json",
+          "report_sha256": "b67682255bcbad2657097f54b81eb9213bf22e84cde43384e837a7a66faf11dd",
+          "violations": 0,
+          "unconnected_items": 0,
+          "schematic_parity_issues": 0,
+          "ignored_checks": [
+            {
+              "description": "Four connection points are joined together",
+              "key": "four_way_junction"
+            },
+            {
+              "description": "SPICE model issue",
+              "key": "simulation_model_issue"
+            },
+            {
+              "description": "Assigned footprint doesn't match footprint filters",
+              "key": "footprint_filter"
+            }
+          ],
+          "report_has_zero_findings": true
+        },
+        "drc": {
+          "command": [
+            "C:\\Users\\chrba\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\scripts\\run_tool.py",
+            "--kicad-root",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\tools-local\\kicad",
+            "--timeout",
+            "15",
+            "kicad-cli",
+            "pcb",
+            "drc",
+            "--format",
+            "json",
+            "--severity-all",
+            "--output",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\reports\\drc-pending.json",
+            "--all-track-errors",
+            "--schematic-parity",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\kicad\\HomeMy_PMU_RevA.kicad_pcb"
+          ],
+          "process_exit_code": 124,
+          "process_passed": false,
+          "wall_seconds": 15.117,
+          "report_complete": true,
+          "report_path": "reports\\drc-final.json",
+          "report_sha256": "47e6f417dffc642f963677115169a3e8a9aa61b2465ca48b8aff4c284a52e4e1",
+          "violations": 0,
+          "unconnected_items": 0,
+          "schematic_parity_issues": 0,
+          "ignored_checks": [
+            {
+              "description": "Track endpoint not centered on via",
+              "key": "track_not_centered_on_via"
+            },
+            {
+              "description": "Tuning profile track geometries",
+              "key": "tuning_profile_track_geometries"
+            },
+            {
+              "description": "Footprint doesn't match symbol's footprint filters",
+              "key": "footprint_filters_mismatch"
+            }
+          ],
+          "report_has_zero_findings": true
+        }
+      },
+      "input_hashes_sha256": {
+        "kicad\\02_main_switch_lm74930.kicad_sch": "aefdd9b10322325e7fc008b73356a2d4f5ab63433f790f268769a34f268a7029",
+        "kicad\\03_motion_gate_tps48110.kicad_sch": "50198345df2eb709337314f99294049e4cd63a0e222e73da5f23e999ed7c7ac7",
+        "kicad\\04_brake_chopper_p1.kicad_sch": "6ca55df7ed2829432d62c64d6acf19f2227eacc8b756422da00a95824e0d0d6d",
+        "kicad\\04_brake_chopper_p2.kicad_sch": "07222024367bb4ee4535b6988d870e9a27178b9e4acb8e4ccaaebc5b2ba07eef",
+        "kicad\\05_pc_and_5v_efuses.kicad_sch": "bcaef0a1a665440d0ab87cd80bd4b5a2dfcaa22ef658e85a1bbe474d22f968ba",
+        "kicad\\06a_aon_wake_p1.kicad_sch": "56718f5c6706d253993671709b3bb5517ef08d6acb09a3303b5b64743082b051",
+        "kicad\\06a_aon_wake_p2.kicad_sch": "63c7e61a19c738e67fc14d6e8f57089d28f23775ab1afa6205b0da3b62b051cd",
+        "kicad\\06b_motion_latches.kicad_sch": "b5075f0e006495d0d97b7c41d26da66f8afe1e129a2061a20872a736e85059f7",
+        "kicad\\06c_esp32_p1.kicad_sch": "6febb4f2961958e00fa790a3ab92c2f6be02e23e530d565e6bf637adf0813166",
+        "kicad\\06c_esp32_p2.kicad_sch": "bbe96aa49cfcd9bfa627e2c21fecd31e4ec04e3d0672f35fb229b3ea4b85984e",
+        "kicad\\07_ina228_analog.kicad_sch": "38543233a997c9078e04639a2bfee188bdffb9770f0a0b3df4ff4e48134a6fbb",
+        "kicad\\08_can_led_io.kicad_sch": "a3b8a81522233e7d06a867c77c0607d83fbcd06e27a2db6bb1e1dd129f010c41",
+        "kicad\\09_connectors_testpoints.kicad_sch": "7fbcab7c7c61a47d3f9b490dfc9010c5fc1bee4063d2d924aca036078a51b170",
+        "kicad\\09b_star_and_measurements_p1.kicad_sch": "ad043af264ea4e127dde5efd248a340e8fbf4eb8a0c3e5635d8ec476bd1e6042",
+        "kicad\\09b_star_and_measurements_p2.kicad_sch": "e63e4724e7ba2497be521a490685de8a891ea6945cdda24f4dd3f3ecca97eb97",
+        "kicad\\fp-lib-table": "1300fed211bc1681dc04d247ac52e3d21d9c3002ea118127a25971b538260597",
+        "kicad\\HomeMy_PMU_RevA.kicad_dru": "bfef7c871a474537c37a94ec42227550a2ffb15f57120e22efe87e2d5924775b",
+        "kicad\\HomeMy_PMU_RevA.kicad_pcb": "70bb8eb588f2fc7200f718df0e11659aad3c40c7e9d5652228eb7a58d232065f",
+        "kicad\\HomeMy_PMU_RevA.kicad_pro": "90f481f3da3348596761d55fe1f943ce01f5e07652ab6a87084ea2416e879b17",
+        "kicad\\HomeMy_PMU_RevA.kicad_sch": "570566d114f90b7c7d99d73b5a05d8b8a16080164f9ef050a9e1e7602525c363",
+        "kicad\\libraries\\Capacitor_SMD.pretty\\C_0603_1608Metric.kicad_mod": "d45eebd5cb9faace255d4ec95a0f9484efde898359507b02e2ba9bbb3ef6d857",
+        "kicad\\libraries\\Capacitor_SMD.pretty\\C_0805_2012Metric.kicad_mod": "e890bdf55fa18fc6df6878eb1b5251a991e1b93985509175eb269d3d002880b4",
+        "kicad\\libraries\\Capacitor_SMD.pretty\\C_1206_3216Metric.kicad_mod": "420c3ac494743fbc47653b6e7d0107d51620e25c77eaf73f083e799807fd1381",
+        "kicad\\libraries\\Capacitor_SMD.pretty\\C_1210_3225Metric.kicad_mod": "c0c3dbbbe623e957a8ee6c0a36f432e06b10ff8bd79fc785bd13dea723a1f20c",
+        "kicad\\libraries\\Capacitor_THT.pretty\\CP_Radial_D10.0mm_P5.00mm.kicad_mod": "6a3ad8c69a63ac1ffb450801de034f982235108a98f621f7f514fdcff68c3e75",
+        "kicad\\libraries\\Capacitor_THT.pretty\\CP_Radial_D12.5mm_P5.00mm.kicad_mod": "fabe0170c7df31ec4bf449f52ccd541fa7154ae616bab98c99076a4fa95a3511",
+        "kicad\\libraries\\Connector_JST.pretty\\JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical.kicad_mod": "eba7b52cb0e3e2c812e079c3736734b3720b61b45f7a72b43888f0eb56b32ef9",
+        "kicad\\libraries\\Connector_Phoenix_MSTB.pretty\\PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange.kicad_mod": "945e880e3b63af393a98bb3347177ea79058b0a25834753d72b42a81cd4bf67f",
+        "kicad\\libraries\\Connector_Phoenix_MSTB.pretty\\PhoenixContact_MSTB_2,5_3-GF-5,08_1x03_P5.08mm_Horizontal_ThreadedFlange.kicad_mod": "3f0e79b94463670bd739b577e00cfb789ff78eba15f60a03ebb1f2bdb531198f",
+        "kicad\\libraries\\Connector_PinHeader_2.54mm.pretty\\PinHeader_1x02_P2.54mm_Vertical.kicad_mod": "e5c0d699660a4479fa2414cc5be1835c6f52a38630dd85a2d18aab4dcd3ff8e5",
+        "kicad\\libraries\\Connector_PinHeader_2.54mm.pretty\\PinHeader_1x03_P2.54mm_Vertical.kicad_mod": "6a7dba97d6e733fd9d5f12d2d57f2cde29e8393e15b08d8b3e41bf2b430d83ed",
+        "kicad\\libraries\\Connector_PinHeader_2.54mm.pretty\\PinHeader_1x05_P2.54mm_Vertical.kicad_mod": "a9beaa5e3bf9f73f4667fd503d8ddc47f81aec7999b51211890c919363099acf",
+        "kicad\\libraries\\Diode_SMD.pretty\\D_SMC.kicad_mod": "2c0239221d8f29ae09ba6ab1b5d6b6d70d9017a152de5696dbab6218d35dc7fc",
+        "kicad\\libraries\\Diode_SMD.pretty\\D_SOD-123F.kicad_mod": "bd07ed6c51644ac1addb8e72be12163812e6c0eb6df342efd7a0b842845a4236",
+        "kicad\\libraries\\Diode_SMD.pretty\\D_SOD-323.kicad_mod": "77ac02f4955d3dc824de14f5874874e0e5b095afdda5aab7c6558c1f6b83297e",
+        "kicad\\libraries\\MountingHole.pretty\\MountingHole_3.2mm_M3.kicad_mod": "3853c52bba27d3e3e3e18db44a20dfb296eb9e6cd16ebf26fe4a96a2ee8add3b",
+        "kicad\\libraries\\Package_DFN_QFN.pretty\\Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm.kicad_mod": "08a136edd6068106307086b3704fc14c075a09ed81b46f87617bebbc813d7106",
+        "kicad\\libraries\\Package_SO.pretty\\MSOP-10_3x3mm_P0.5mm.kicad_mod": "58ac9b376faa5c5f6aa3f01271756228330de4931d48610c9d14ba9cc70c258d",
+        "kicad\\libraries\\Package_SO.pretty\\SOIC-8_3.9x4.9mm_P1.27mm.kicad_mod": "3c9b63198dd4dbf5e6c28c84702c29fad46a35103b821a19306c4ac888ad8e76",
+        "kicad\\libraries\\Package_SO.pretty\\SSOP-4_4.4x2.6mm_P1.27mm.kicad_mod": "fe81e75b3f6454d07e1b4c2daea25ed18e9f7d22f54d1216861cf1517dc0cec4",
+        "kicad\\libraries\\Package_SO.pretty\\Texas_DGN0008B_VSSOP-8-1EP_3x3mm_P0.65mm_EP2x3mm_Mask1.88x1.98mm_ThermalVias.kicad_mod": "5838a3fa49820014e57c2a0dec866c815e7d5ab83958b541a3a1cf7c4481755d",
+        "kicad\\libraries\\Package_SO.pretty\\TSSOP-14_4.4x5mm_P0.65mm.kicad_mod": "8da4c0cda07ca9aadbeb33cd860d9bc90a2b382263b25be3609543a6da4a7258",
+        "kicad\\libraries\\Package_SO.pretty\\VSSOP-8_2.3x2mm_P0.5mm.kicad_mod": "86c45430902f81c684c44234069616fc5b91e77178e928437c9a103bd4bcaf35",
+        "kicad\\libraries\\Package_TO_SOT_SMD.pretty\\Infineon_PG-HSOF-8-1.kicad_mod": "c72cf22e551207bfb9fbdde9cdb30c426bad94fdd678be25784e6ab39b90fe69",
+        "kicad\\libraries\\Package_TO_SOT_SMD.pretty\\SOT-223-3_TabPin2.kicad_mod": "b6babdabd232a3e3170a86a17e8ed042377c2bb1854965c489d82c0e98179444",
+        "kicad\\libraries\\Package_TO_SOT_SMD.pretty\\SOT-23-5.kicad_mod": "684a94089f59798a46492dac8dd0242edfa4d915e76a210abdca369e4faa4f9b",
+        "kicad\\libraries\\Package_TO_SOT_SMD.pretty\\SOT-23-6.kicad_mod": "ea29040bed73e5dfa455e36f2c9324b0de7782c5a6cf79040b7d885ff766fdb4",
+        "kicad\\libraries\\Package_TO_SOT_SMD.pretty\\SOT-23.kicad_mod": "7fb2859c6463f3a37966a1a20c31d8bfe7d4e8459d00bb165d5a7488270816c5",
+        "kicad\\libraries\\Package_TO_SOT_SMD.pretty\\TSOT-23-6.kicad_mod": "06b16e157385f8d7fbca5e0c323669c3aa880358789d44a456e62290be2400e3",
+        "kicad\\libraries\\Package_TO_SOT_SMD.pretty\\TSOT-23-8.kicad_mod": "16e5e01fefc067a09326481d05ab472e4d00f4a9a3a2829043cd9a53f8fca4d8",
+        "kicad\\libraries\\Package_TO_SOT_THT.pretty\\TO-220-2_Vertical.kicad_mod": "32d10eb7c8a7b856b0c61e5e8ff80668e07e53e91575b5ac70aeadc30bdc2ff5",
+        "kicad\\libraries\\PMU.pretty\\TI_DRB0008A_3x3mm_EP1.5x1.75.kicad_mod": "1d9893d405d12c15d344ce2b9f23e8324fcf87615dab0a21b40cc7146c9cb455",
+        "kicad\\libraries\\PMU.pretty\\Wurth_7461103.kicad_mod": "65f1af4707017249431a4d336cc416aa7a4d6baf1b1bdcfc5f67e6c644eaf2d5",
+        "kicad\\libraries\\PMU_RevA.pretty\\Busbar_Contact_M3_D8.kicad_mod": "4d466542baecce0d5e596da07ddbac875bc44ed1cfc15a1a304b3c5d30d7e05b",
+        "kicad\\libraries\\PMU_RevA.pretty\\C_Rect_L31.5mm_W13mm_P27.5mm.kicad_mod": "1f1b6274feea69a6f4623543572eac2e4af706e55ddc5b0d959de1081dfec11c",
+        "kicad\\libraries\\PMU_RevA.pretty\\CCPAK1212_SOT8000A.kicad_mod": "034426872512282c75202e6af788ed87be7a15f0a473d676f6b7a5477fb1e7b4",
+        "kicad\\libraries\\PMU_RevA.pretty\\CSS4J_4026_Kelvin.kicad_mod": "20fc0b8c00c42dfcf819a9fed38acf35f2966bb09cc0c6f510425325b57480ea",
+        "kicad\\libraries\\PMU_RevA.pretty\\NetTie_Logic_2.kicad_mod": "51e43af71f18914e0d54c2d7ed6093a833623ea42d04359f50a89990d499e7d7",
+        "kicad\\libraries\\PMU_RevA.pretty\\NetTie_Power_2.kicad_mod": "dec3c3cd8d6b9e6e0551bd8b96ab9df14ed2f5c3ea6ae3387fe933e2f792491b",
+        "kicad\\libraries\\PMU_RevA.pretty\\PTVS1_DFN8x6.kicad_mod": "30aae5fa515b2dadbfc37b20af0f48dcb618d1fd5765e988c91ef772fefddb3f",
+        "kicad\\libraries\\PMU_RevA.pretty\\VQFN_RGE24_4x4_P0.5_EP_FLOAT.kicad_mod": "9496a9a0222bc36886cf9259e3e4a6a4e517be4a3ed21ec9e617914f4bb750a4",
+        "kicad\\libraries\\PMU_RevA.pretty\\VSSOP_DGX19_3x5.1_P0.5_Missing16.kicad_mod": "445af5fd00b6832ac066f8db45d7f9d2ef154c9f94611d1711e7af917d8be7ac",
+        "kicad\\libraries\\Resistor_SMD.pretty\\R_0603_1608Metric.kicad_mod": "03fc7902b2661df01b4d828fdb6eab9eddf974e7130ed2b98892607387a50c4b",
+        "kicad\\libraries\\Resistor_SMD.pretty\\R_0805_2012Metric.kicad_mod": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c",
+        "kicad\\libraries\\Resistor_SMD.pretty\\R_1206_3216Metric.kicad_mod": "f45a0f7c60b15463e1126a75a9ff484349ecd1861de62f1cbff41574e03b7643",
+        "kicad\\libraries\\Resistor_SMD.pretty\\R_2010_5025Metric.kicad_mod": "6bde9214570db97950366b7b000158b1915628a1c201365b3a6a01507144c265",
+        "kicad\\libraries\\RF_Module.pretty\\ESP32-S3-WROOM-1.kicad_mod": "04f2cf7af80a4ac5538c4f5e21cdb97dad4932e432a9f9c7938e50467d22cf4b",
+        "kicad\\libraries\\TestPoint.pretty\\TestPoint_Pad_D2.0mm.kicad_mod": "075c8efad44dc51dedc947dbb0c586ddfdca34600187cc8ae1a8385e02c6a155",
+        "kicad\\PMU_RevA.kicad_sym": "0eb2433e600aae49eb7f0017020a39c6ed7ec632c288b5503ef5f814ded1b969",
+        "kicad\\sym-lib-table": "26bf02e22922ac940db6ab67b20d5e823c07355939ce776efc74d1399960f8ce"
+      },
+      "interpretation": "Report acceptance and process exit are separate. Hardware validation is not performed.",
+      "changed_inputs": [],
+      "reports_have_zero_findings": true,
+      "all_processes_passed": false
+    },
+    "native-checks-drc.json": {
+      "rev_a_engineering_prototype": true,
+      "rev_b_production": false,
+      "started_at_utc": "2026-09-10T17:46:26.649911+00:00",
+      "checks": {
+        "drc": {
+          "command": [
+            "C:\\Users\\chrba\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\scripts\\run_tool.py",
+            "--kicad-root",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\tools-local\\kicad",
+            "--timeout",
+            "12",
+            "kicad-cli",
+            "pcb",
+            "drc",
+            "--format",
+            "json",
+            "--severity-all",
+            "--output",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\reports\\drc-pending.json",
+            "--all-track-errors",
+            "--schematic-parity",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\kicad\\HomeMy_PMU_RevA.kicad_pcb"
+          ],
+          "process_exit_code": 124,
+          "process_passed": false,
+          "wall_seconds": 12.103,
+          "report_complete": true,
+          "report_path": "reports\\drc-final.json",
+          "report_sha256": "0c4b4d01988a31f37eccf82cdc91be3c2b49207792d48b6a2ce04da8b899812d",
+          "violations": 0,
+          "unconnected_items": 325,
+          "schematic_parity_issues": 0,
+          "ignored_checks": [
+            {
+              "description": "Track endpoint not centered on via",
+              "key": "track_not_centered_on_via"
+            },
+            {
+              "description": "Tuning profile track geometries",
+              "key": "tuning_profile_track_geometries"
+            },
+            {
+              "description": "Footprint doesn't match symbol's footprint filters",
+              "key": "footprint_filters_mismatch"
+            }
+          ],
+          "report_has_zero_findings": false
+        }
+      },
+      "input_hashes_sha256": {
+        "kicad\\02_main_switch_lm74930.kicad_sch": "aefdd9b10322325e7fc008b73356a2d4f5ab63433f790f268769a34f268a7029",
+        "kicad\\03_motion_gate_tps48110.kicad_sch": "50198345df2eb709337314f99294049e4cd63a0e222e73da5f23e999ed7c7ac7",
+        "kicad\\04_brake_chopper_p1.kicad_sch": "6ca55df7ed2829432d62c64d6acf19f2227eacc8b756422da00a95824e0d0d6d",
+        "kicad\\04_brake_chopper_p2.kicad_sch": "07222024367bb4ee4535b6988d870e9a27178b9e4acb8e4ccaaebc5b2ba07eef",
+        "kicad\\05_pc_and_5v_efuses.kicad_sch": "bcaef0a1a665440d0ab87cd80bd4b5a2dfcaa22ef658e85a1bbe474d22f968ba",
+        "kicad\\06a_aon_wake_p1.kicad_sch": "56718f5c6706d253993671709b3bb5517ef08d6acb09a3303b5b64743082b051",
+        "kicad\\06a_aon_wake_p2.kicad_sch": "63c7e61a19c738e67fc14d6e8f57089d28f23775ab1afa6205b0da3b62b051cd",
+        "kicad\\06b_motion_latches.kicad_sch": "b5075f0e006495d0d97b7c41d26da66f8afe1e129a2061a20872a736e85059f7",
+        "kicad\\06c_esp32_p1.kicad_sch": "6febb4f2961958e00fa790a3ab92c2f6be02e23e530d565e6bf637adf0813166",
+        "kicad\\06c_esp32_p2.kicad_sch": "bbe96aa49cfcd9bfa627e2c21fecd31e4ec04e3d0672f35fb229b3ea4b85984e",
+        "kicad\\07_ina228_analog.kicad_sch": "38543233a997c9078e04639a2bfee188bdffb9770f0a0b3df4ff4e48134a6fbb",
+        "kicad\\08_can_led_io.kicad_sch": "a3b8a81522233e7d06a867c77c0607d83fbcd06e27a2db6bb1e1dd129f010c41",
+        "kicad\\09_connectors_testpoints.kicad_sch": "7fbcab7c7c61a47d3f9b490dfc9010c5fc1bee4063d2d924aca036078a51b170",
+        "kicad\\09b_star_and_measurements_p1.kicad_sch": "ad043af264ea4e127dde5efd248a340e8fbf4eb8a0c3e5635d8ec476bd1e6042",
+        "kicad\\09b_star_and_measurements_p2.kicad_sch": "e63e4724e7ba2497be521a490685de8a891ea6945cdda24f4dd3f3ecca97eb97",
+        "kicad\\HomeMy_PMU_RevA.kicad_dru": "bfef7c871a474537c37a94ec42227550a2ffb15f57120e22efe87e2d5924775b",
+        "kicad\\HomeMy_PMU_RevA.kicad_pcb": "bc006b41f415a20aa9412b334fb4027861b08900985e67b9a2d2db8188b97be6",
+        "kicad\\HomeMy_PMU_RevA.kicad_pro": "90f481f3da3348596761d55fe1f943ce01f5e07652ab6a87084ea2416e879b17",
+        "kicad\\HomeMy_PMU_RevA.kicad_sch": "570566d114f90b7c7d99d73b5a05d8b8a16080164f9ef050a9e1e7602525c363"
+      },
+      "interpretation": "Report acceptance and process exit are separate. Hardware validation is not performed.",
+      "changed_inputs": [],
+      "reports_have_zero_findings": false,
+      "all_processes_passed": false
+    }
+  },
+  "upstream_default_sources": [
+    "https://raw.githubusercontent.com/KiCad/kicad/10.0/pcbnew/board_design_settings.cpp",
+    "https://raw.githubusercontent.com/KiCad/kicad/10.0/eeschema/erc/erc_settings.cpp"
+  ]
+}

@@ -1,0 +1,262 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "scope": "F.Fab orientation graphics only; no fabrication or bench release"
+  },
+  "input_board": "hardware\\power-management-unit\\rev-a\\kicad\\HomeMy_PMU_RevA.kicad_pcb",
+  "output_board": "hardware\\power-management-unit\\rev-a\\kicad\\HomeMy_PMU_RevA.kicad_pcb",
+  "input_sha256": "01b4a0b3e7fbf1f3009282d3a80fb32059b1c74542ccee60357fb14825b451fe",
+  "output_sha256": "70bb8eb588f2fc7200f718df0e11659aad3c40c7e9d5652228eb7a58d232065f",
+  "idempotent": true,
+  "board": {
+    "footprints": [
+      {
+        "footprint": "PMU_RevA:VQFN_RGE24_4x4_P0.5_EP_FLOAT",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "c5a60c6693b5e7603eb88fe9dade5abc01d98c47c09e980c9f137701f1b24883",
+        "existing_uuid_count": 36,
+        "added_uuid_count": 4,
+        "reference": "U1"
+      },
+      {
+        "footprint": "PMU:Wurth_7461103",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "1f5db19ca475c3864ab7164dec6b3073257138a8eae3669f0b8126f193b5fe07",
+        "existing_uuid_count": 19,
+        "added_uuid_count": 7,
+        "reference": "J3"
+      },
+      {
+        "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "53145d38c304d575f98177435b9316c0b815bd5bbadb7c415019b73f856fab2d",
+        "existing_uuid_count": 24,
+        "added_uuid_count": 4,
+        "reference": "Q7"
+      },
+      {
+        "footprint": "PMU:Wurth_7461103",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "224eb462dcd56e166c5f2c4cd90681f9a2d4d5b7cbd1e44bafc12d1552c89f7d",
+        "existing_uuid_count": 19,
+        "added_uuid_count": 7,
+        "reference": "J4"
+      },
+      {
+        "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "e71478e89415c4a24bacc01a25f6a681b7544b9590acf1ebbef41c357e818401",
+        "existing_uuid_count": 24,
+        "added_uuid_count": 4,
+        "reference": "Q8"
+      },
+      {
+        "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "fd9c3be9bc8ff596fc03b672bb741ad40e46304784b77010e8b8e6da84cb50a9",
+        "existing_uuid_count": 24,
+        "added_uuid_count": 4,
+        "reference": "Q3"
+      },
+      {
+        "footprint": "PMU:Wurth_7461103",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "d170fd0e22c5df1b7b44db8b42bb850d1a2bbba5df439f280822caa2bbaa96c1",
+        "existing_uuid_count": 19,
+        "added_uuid_count": 7,
+        "reference": "J6"
+      },
+      {
+        "footprint": "PMU_RevA:CSS4J_4026_Kelvin",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "b1d25df4ddb5f07e2afb75b32bd10f29fa71c8b033368ce49a90121b3aef19eb",
+        "existing_uuid_count": 15,
+        "added_uuid_count": 7,
+        "reference": "RSH2"
+      },
+      {
+        "footprint": "PMU_RevA:CSS4J_4026_Kelvin",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "fbf561a89f357ff29c63eea72cd0f1ac1b78ed217e9ba079cbd67edf75b94a78",
+        "existing_uuid_count": 15,
+        "added_uuid_count": 7,
+        "reference": "RSH1"
+      },
+      {
+        "footprint": "PMU:Wurth_7461103",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "22505ae0c0957e6603842ceca379ede8dabafd30e30ca60663aec994bd7f4484",
+        "existing_uuid_count": 19,
+        "added_uuid_count": 7,
+        "reference": "J1"
+      },
+      {
+        "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "e5b02b7e46e4306d2f252a26d876cdf4f52a2950c981b1ba530e857254e187c6",
+        "existing_uuid_count": 24,
+        "added_uuid_count": 4,
+        "reference": "Q10"
+      },
+      {
+        "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "ec054b8b1982787aa4824c5bad93f278c565ae40e3081e9cbb063982b0265421",
+        "existing_uuid_count": 24,
+        "added_uuid_count": 4,
+        "reference": "Q4"
+      },
+      {
+        "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "d064ab24498c1659b79c9cdb426e778ac85c7301203b47136cfd755f7e39b86f",
+        "existing_uuid_count": 24,
+        "added_uuid_count": 4,
+        "reference": "Q6"
+      },
+      {
+        "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "6e2506bc0ecdac3e90575d8c0fe91d2b9d655b16a8924cd3285fdc61593c172a",
+        "existing_uuid_count": 24,
+        "added_uuid_count": 4,
+        "reference": "Q9"
+      },
+      {
+        "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "4e7fd2ffc175e539267796a7bba6863e73a77868278a1c861d1f549ceb71b190",
+        "existing_uuid_count": 24,
+        "added_uuid_count": 4,
+        "reference": "Q5"
+      },
+      {
+        "footprint": "PMU:Wurth_7461103",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "7bdf014c5cba8d287b26b5f16112a06f48e5f2a1807779a8c57b7d9086a38a6e",
+        "existing_uuid_count": 19,
+        "added_uuid_count": 7,
+        "reference": "J5"
+      },
+      {
+        "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "31bc79f11bb0f06ee7cb8aa973d4e3957426e37c4b1fdf8c7933d64f316b32a9",
+        "existing_uuid_count": 24,
+        "added_uuid_count": 4,
+        "reference": "Q1"
+      },
+      {
+        "footprint": "PMU:Wurth_7461103",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "af5f6f795696fef541ea20de2cd50c63623543b03405198240445ee06388f107",
+        "existing_uuid_count": 19,
+        "added_uuid_count": 7,
+        "reference": "J2"
+      },
+      {
+        "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+        "changed": true,
+        "non_fab_data_preserved": true,
+        "all_existing_uuids_preserved": true,
+        "non_fab_semantic_sha256": "4de11e3a64f53e5916d739081a02792a18d68b1da04676e9957901d641713cc5",
+        "existing_uuid_count": 24,
+        "added_uuid_count": 4,
+        "reference": "Q2"
+      }
+    ],
+    "m5_face_directions": {
+      "J1": -1,
+      "J2": -1,
+      "J3": -1,
+      "J4": 1,
+      "J5": -1,
+      "J6": 1
+    },
+    "changed": true,
+    "non_fab_data_preserved": true,
+    "all_existing_uuids_preserved": true,
+    "non_fab_semantic_sha256": "87c0b27e50a56f0171599535c4a5582a2e50ade04831511e5b6ff7428d8c5806",
+    "existing_uuid_count": 15138,
+    "added_uuid_count": 130
+  },
+  "libraries": [
+    {
+      "path": "hardware\\power-management-unit\\rev-a\\kicad\\libraries\\PMU_RevA.pretty\\CCPAK1212_SOT8000A.kicad_mod",
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "changed": true,
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "non_fab_semantic_sha256": "35baae73b6addf1caaf4d4a2b059c962056d4f4df22ffdefef4b1ff970b5eb0e",
+      "existing_uuid_count": 0,
+      "added_uuid_count": 4
+    },
+    {
+      "path": "hardware\\power-management-unit\\rev-a\\kicad\\libraries\\PMU_RevA.pretty\\VQFN_RGE24_4x4_P0.5_EP_FLOAT.kicad_mod",
+      "footprint": "PMU_RevA:VQFN_RGE24_4x4_P0.5_EP_FLOAT",
+      "changed": true,
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "non_fab_semantic_sha256": "30c099d1904ea3d4b8f00e4937a25aa338664269a45058e3d2964405e73d584b",
+      "existing_uuid_count": 0,
+      "added_uuid_count": 4
+    },
+    {
+      "path": "hardware\\power-management-unit\\rev-a\\kicad\\libraries\\PMU_RevA.pretty\\CSS4J_4026_Kelvin.kicad_mod",
+      "footprint": "PMU_RevA:CSS4J_4026_Kelvin",
+      "changed": true,
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "non_fab_semantic_sha256": "65994a7bdd897259df4947757888838a133d5cf8f206c025c97cc9db304b0f1a",
+      "existing_uuid_count": 0,
+      "added_uuid_count": 7
+    },
+    {
+      "path": "hardware\\power-management-unit\\rev-a\\kicad\\libraries\\PMU.pretty\\Wurth_7461103.kicad_mod",
+      "footprint": "PMU:Wurth_7461103",
+      "changed": true,
+      "non_fab_data_preserved": true,
+      "all_existing_uuids_preserved": true,
+      "non_fab_semantic_sha256": "1d06a97e26680db79c22a2ffc918b70fd5dc239b5cc8eb1bc1bfa84a9469d173",
+      "existing_uuid_count": 0,
+      "added_uuid_count": 7
+    }
+  ]
+}

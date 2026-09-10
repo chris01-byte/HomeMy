@@ -1,0 +1,17 @@
+{
+  "rev_a_engineering_prototype": true,
+  "rev_b_production": false,
+  "state": "engineering_routing_candidate_not_order_release",
+  "input": "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\reports\\HomeMy_PMU_RevA.dsn",
+  "input_sha256": "f37234f4479817c94b6c7db5015422d53edf86a3d75d2e851a1208d085dd5c34",
+  "max_passes": 200,
+  "actual_stop_pass_no": 200,
+  "elapsed_seconds": 343.7232541,
+  "deadline_reached": false,
+  "worker_stopped": true,
+  "checkpoints": 30,
+  "best_router_incomplete_count": 0,
+  "uncaught_exception": null,
+  "native_kicad_drc_performed": false,
+  "warning": "Router internal errors remain in console log. SES/DSN checkpoints are candidates; native KiCad import and DRC are mandatory."
+}

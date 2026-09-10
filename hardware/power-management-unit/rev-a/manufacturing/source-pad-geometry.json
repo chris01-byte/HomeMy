@@ -1,0 +1,4140 @@
+[
+  {
+    "ref": "Q4",
+    "x": 85.0,
+    "y": 25.0,
+    "rot": -90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "Q4_G",
+        "x": 79.35,
+        "y": 20.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "2",
+        "net": "MAIN_COMMON",
+        "x": 79.35,
+        "y": 22.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "3",
+        "net": "MAIN_COMMON",
+        "x": 79.35,
+        "y": 24.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "4",
+        "net": "MAIN_COMMON",
+        "x": 79.35,
+        "y": 26.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "5",
+        "net": "MAIN_COMMON",
+        "x": 79.35,
+        "y": 28.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "6",
+        "net": "MAIN_COMMON",
+        "x": 79.35,
+        "y": 30.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "7",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 30.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "8",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 28.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "9",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 26.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "10",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 24.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "11",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 22.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "12",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 20.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "13",
+        "net": "SYS_BUS_P",
+        "x": 85.0,
+        "y": 25.0,
+        "size": [
+          10.8,
+          7.25
+        ],
+        "local_rotation": 270.0
+      }
+    ]
+  },
+  {
+    "ref": "J7",
+    "x": 349.0,
+    "y": 63.0,
+    "rot": 90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "MOTION_BUS_P",
+        "x": 349.0,
+        "y": 63.0,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "2",
+        "net": "DRIVE_N",
+        "x": 349.0,
+        "y": 57.92,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 90.0
+      }
+    ]
+  },
+  {
+    "ref": "RSH1",
+    "x": 30.0,
+    "y": 45.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "BATT_FUSED_P",
+        "x": 25.975,
+        "y": 45.85,
+        "size": [
+          2.55,
+          5.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "MAIN_KELVIN_P",
+        "x": 25.975,
+        "y": 41.75,
+        "size": [
+          2.55,
+          0.8
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "MAIN_KELVIN_N",
+        "x": 34.025,
+        "y": 41.75,
+        "size": [
+          2.55,
+          0.8
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "4",
+        "net": "BATT_SENSED_P",
+        "x": 34.025,
+        "y": 45.85,
+        "size": [
+          2.55,
+          5.6
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "Q3",
+    "x": 55.0,
+    "y": 75.0,
+    "rot": 90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "Q3_G",
+        "x": 60.65,
+        "y": 80.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "2",
+        "net": "MAIN_COMMON",
+        "x": 60.65,
+        "y": 78.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "3",
+        "net": "MAIN_COMMON",
+        "x": 60.65,
+        "y": 76.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "4",
+        "net": "MAIN_COMMON",
+        "x": 60.65,
+        "y": 74.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "5",
+        "net": "MAIN_COMMON",
+        "x": 60.65,
+        "y": 72.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "6",
+        "net": "MAIN_COMMON",
+        "x": 60.65,
+        "y": 70.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "7",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 70.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "8",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 72.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "9",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 74.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "10",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 76.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "11",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 78.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "12",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 80.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "13",
+        "net": "BATT_SENSED_P",
+        "x": 55.0,
+        "y": 75.0,
+        "size": [
+          10.8,
+          7.25
+        ],
+        "local_rotation": 90.0
+      }
+    ]
+  },
+  {
+    "ref": "J2",
+    "x": 15.0,
+    "y": 115.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "BATT_N",
+        "x": 11.19,
+        "y": 111.19,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "BATT_N",
+        "x": 11.19,
+        "y": 113.73,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "BATT_N",
+        "x": 11.19,
+        "y": 116.27,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "4",
+        "net": "BATT_N",
+        "x": 11.19,
+        "y": 118.81,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "5",
+        "net": "BATT_N",
+        "x": 18.81,
+        "y": 111.19,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "6",
+        "net": "BATT_N",
+        "x": 18.81,
+        "y": 113.73,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "7",
+        "net": "BATT_N",
+        "x": 18.81,
+        "y": 116.27,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "8",
+        "net": "BATT_N",
+        "x": 18.81,
+        "y": 118.81,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "NT9",
+    "x": 120.0,
+    "y": 128.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "LOGIC_GND",
+        "x": 119.5,
+        "y": 128.0,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "BATT_N",
+        "x": 120.5,
+        "y": 128.0,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "J8",
+    "x": 349.0,
+    "y": 91.0,
+    "rot": 90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "MOTION_BUS_P",
+        "x": 349.0,
+        "y": 91.0,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "2",
+        "net": "LIFT_N",
+        "x": 349.0,
+        "y": 85.92,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 90.0
+      }
+    ]
+  },
+  {
+    "ref": "H3",
+    "x": 352.0,
+    "y": 292.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "",
+        "net": "",
+        "x": 352.0,
+        "y": 292.0,
+        "size": [
+          3.2,
+          3.2
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "J6",
+    "x": 250.0,
+    "y": 115.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "ARM_R_N",
+        "x": 246.19,
+        "y": 111.19,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "ARM_R_N",
+        "x": 246.19,
+        "y": 113.73,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "ARM_R_N",
+        "x": 246.19,
+        "y": 116.27,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "4",
+        "net": "ARM_R_N",
+        "x": 246.19,
+        "y": 118.81,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "5",
+        "net": "ARM_R_N",
+        "x": 253.81,
+        "y": 111.19,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "6",
+        "net": "ARM_R_N",
+        "x": 253.81,
+        "y": 113.73,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "7",
+        "net": "ARM_R_N",
+        "x": 253.81,
+        "y": 116.27,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "8",
+        "net": "ARM_R_N",
+        "x": 253.81,
+        "y": 118.81,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "NT6",
+    "x": 65.0,
+    "y": 122.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "LOGIC_BUCK_N",
+        "x": 60.0,
+        "y": 122.0,
+        "size": [
+          10.0,
+          10.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "BATT_N",
+        "x": 70.0,
+        "y": 122.0,
+        "size": [
+          10.0,
+          10.0
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "Q7",
+    "x": 150.0,
+    "y": 30.0,
+    "rot": 90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "Q7_G",
+        "x": 155.65,
+        "y": 35.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "2",
+        "net": "MOTION_COMMON",
+        "x": 155.65,
+        "y": 33.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "3",
+        "net": "MOTION_COMMON",
+        "x": 155.65,
+        "y": 31.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "4",
+        "net": "MOTION_COMMON",
+        "x": 155.65,
+        "y": 29.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "5",
+        "net": "MOTION_COMMON",
+        "x": 155.65,
+        "y": 27.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "6",
+        "net": "MOTION_COMMON",
+        "x": 155.65,
+        "y": 25.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "7",
+        "net": "MOTION_SENSED_P",
+        "x": 144.35,
+        "y": 25.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "8",
+        "net": "MOTION_SENSED_P",
+        "x": 144.35,
+        "y": 27.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "9",
+        "net": "MOTION_SENSED_P",
+        "x": 144.35,
+        "y": 29.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "10",
+        "net": "MOTION_SENSED_P",
+        "x": 144.35,
+        "y": 31.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "11",
+        "net": "MOTION_SENSED_P",
+        "x": 144.35,
+        "y": 33.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "12",
+        "net": "MOTION_SENSED_P",
+        "x": 144.35,
+        "y": 35.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "13",
+        "net": "MOTION_SENSED_P",
+        "x": 150.0,
+        "y": 30.0,
+        "size": [
+          10.8,
+          7.25
+        ],
+        "local_rotation": 90.0
+      }
+    ]
+  },
+  {
+    "ref": "Q42",
+    "x": 266.0,
+    "y": 87.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "CHOP_GATE",
+        "x": 265.062,
+        "y": 86.05,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "CHOP_GND",
+        "x": 265.062,
+        "y": 87.95,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "CHOP_ACTIVE_LED_K",
+        "x": 266.938,
+        "y": 87.0,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "Q8",
+    "x": 150.0,
+    "y": 65.0,
+    "rot": 90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "Q8_G",
+        "x": 155.65,
+        "y": 70.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "2",
+        "net": "MOTION_COMMON",
+        "x": 155.65,
+        "y": 68.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "3",
+        "net": "MOTION_COMMON",
+        "x": 155.65,
+        "y": 66.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "4",
+        "net": "MOTION_COMMON",
+        "x": 155.65,
+        "y": 64.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "5",
+        "net": "MOTION_COMMON",
+        "x": 155.65,
+        "y": 62.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "6",
+        "net": "MOTION_COMMON",
+        "x": 155.65,
+        "y": 60.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "7",
+        "net": "MOTION_SENSED_P",
+        "x": 144.35,
+        "y": 60.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "8",
+        "net": "MOTION_SENSED_P",
+        "x": 144.35,
+        "y": 62.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "9",
+        "net": "MOTION_SENSED_P",
+        "x": 144.35,
+        "y": 64.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "10",
+        "net": "MOTION_SENSED_P",
+        "x": 144.35,
+        "y": 66.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "11",
+        "net": "MOTION_SENSED_P",
+        "x": 144.35,
+        "y": 68.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "12",
+        "net": "MOTION_SENSED_P",
+        "x": 144.35,
+        "y": 70.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "13",
+        "net": "MOTION_SENSED_P",
+        "x": 150.0,
+        "y": 65.0,
+        "size": [
+          10.8,
+          7.25
+        ],
+        "local_rotation": 90.0
+      }
+    ]
+  },
+  {
+    "ref": "NT2",
+    "x": 245.0,
+    "y": 122.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "ARM_R_N",
+        "x": 240.0,
+        "y": 122.0,
+        "size": [
+          10.0,
+          10.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "BATT_N",
+        "x": 250.0,
+        "y": 122.0,
+        "size": [
+          10.0,
+          10.0
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "NT1",
+    "x": 215.0,
+    "y": 122.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "ARM_L_N",
+        "x": 210.0,
+        "y": 122.0,
+        "size": [
+          10.0,
+          10.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "BATT_N",
+        "x": 220.0,
+        "y": 122.0,
+        "size": [
+          10.0,
+          10.0
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "Q9",
+    "x": 180.0,
+    "y": 30.0,
+    "rot": -90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "Q9_G",
+        "x": 174.35,
+        "y": 25.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "2",
+        "net": "MOTION_COMMON",
+        "x": 174.35,
+        "y": 27.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "3",
+        "net": "MOTION_COMMON",
+        "x": 174.35,
+        "y": 29.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "4",
+        "net": "MOTION_COMMON",
+        "x": 174.35,
+        "y": 31.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "5",
+        "net": "MOTION_COMMON",
+        "x": 174.35,
+        "y": 33.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "6",
+        "net": "MOTION_COMMON",
+        "x": 174.35,
+        "y": 35.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "7",
+        "net": "MOTION_BUS_P",
+        "x": 185.65,
+        "y": 35.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "8",
+        "net": "MOTION_BUS_P",
+        "x": 185.65,
+        "y": 33.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "9",
+        "net": "MOTION_BUS_P",
+        "x": 185.65,
+        "y": 31.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "10",
+        "net": "MOTION_BUS_P",
+        "x": 185.65,
+        "y": 29.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "11",
+        "net": "MOTION_BUS_P",
+        "x": 185.65,
+        "y": 27.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "12",
+        "net": "MOTION_BUS_P",
+        "x": 185.65,
+        "y": 25.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "13",
+        "net": "MOTION_BUS_P",
+        "x": 180.0,
+        "y": 30.0,
+        "size": [
+          10.8,
+          7.25
+        ],
+        "local_rotation": 270.0
+      }
+    ]
+  },
+  {
+    "ref": "RSH2",
+    "x": 120.0,
+    "y": 45.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "SYS_BUS_P",
+        "x": 115.975,
+        "y": 45.85,
+        "size": [
+          2.55,
+          5.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "MOTION_KELVIN_P",
+        "x": 115.975,
+        "y": 41.75,
+        "size": [
+          2.55,
+          0.8
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "MOTION_KELVIN_N",
+        "x": 124.025,
+        "y": 41.75,
+        "size": [
+          2.55,
+          0.8
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "4",
+        "net": "MOTION_SENSED_P",
+        "x": 124.025,
+        "y": 45.85,
+        "size": [
+          2.55,
+          5.6
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "J23",
+    "x": 133.0,
+    "y": 278.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "I2C_SDA",
+        "x": 133.0,
+        "y": 278.0,
+        "size": [
+          1.7,
+          1.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "I2C_SCL",
+        "x": 133.0,
+        "y": 280.54,
+        "size": [
+          1.7,
+          1.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "LOGIC_GND",
+        "x": 133.0,
+        "y": 283.08,
+        "size": [
+          1.7,
+          1.7
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "J1",
+    "x": 15.0,
+    "y": 45.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "BATT_FUSED_P",
+        "x": 11.19,
+        "y": 41.19,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "BATT_FUSED_P",
+        "x": 11.19,
+        "y": 43.73,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "BATT_FUSED_P",
+        "x": 11.19,
+        "y": 46.27,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "4",
+        "net": "BATT_FUSED_P",
+        "x": 11.19,
+        "y": 48.81,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "5",
+        "net": "BATT_FUSED_P",
+        "x": 18.81,
+        "y": 41.19,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "6",
+        "net": "BATT_FUSED_P",
+        "x": 18.81,
+        "y": 43.73,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "7",
+        "net": "BATT_FUSED_P",
+        "x": 18.81,
+        "y": 46.27,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "8",
+        "net": "BATT_FUSED_P",
+        "x": 18.81,
+        "y": 48.81,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "J9",
+    "x": 11.0,
+    "y": 160.0,
+    "rot": -90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "PC_BUCK_IN_P",
+        "x": 11.0,
+        "y": 160.0,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "2",
+        "net": "PC_N",
+        "x": 11.0,
+        "y": 165.08,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 270.0
+      }
+    ]
+  },
+  {
+    "ref": "Q5",
+    "x": 85.0,
+    "y": 50.0,
+    "rot": -90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "Q5_G",
+        "x": 79.35,
+        "y": 45.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "2",
+        "net": "MAIN_COMMON",
+        "x": 79.35,
+        "y": 47.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "3",
+        "net": "MAIN_COMMON",
+        "x": 79.35,
+        "y": 49.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "4",
+        "net": "MAIN_COMMON",
+        "x": 79.35,
+        "y": 51.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "5",
+        "net": "MAIN_COMMON",
+        "x": 79.35,
+        "y": 53.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "6",
+        "net": "MAIN_COMMON",
+        "x": 79.35,
+        "y": 55.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "7",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 55.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "8",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 53.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "9",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 51.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "10",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 49.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "11",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 47.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "12",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 45.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "13",
+        "net": "SYS_BUS_P",
+        "x": 85.0,
+        "y": 50.0,
+        "size": [
+          10.8,
+          7.25
+        ],
+        "local_rotation": 270.0
+      }
+    ]
+  },
+  {
+    "ref": "Q40",
+    "x": 302.0,
+    "y": 35.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "",
+        "net": "",
+        "x": 296.75,
+        "y": 30.8,
+        "size": [
+          2.6,
+          0.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 296.75,
+        "y": 32.0,
+        "size": [
+          2.6,
+          0.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 296.75,
+        "y": 33.2,
+        "size": [
+          2.6,
+          0.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 296.75,
+        "y": 34.4,
+        "size": [
+          2.6,
+          0.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 296.75,
+        "y": 35.6,
+        "size": [
+          2.6,
+          0.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 296.75,
+        "y": 36.8,
+        "size": [
+          2.6,
+          0.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 296.75,
+        "y": 38.0,
+        "size": [
+          2.6,
+          0.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 296.75,
+        "y": 39.2,
+        "size": [
+          2.6,
+          0.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 301.93,
+        "y": 30.8,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 301.93,
+        "y": 32.0,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 301.93,
+        "y": 33.2,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 301.93,
+        "y": 34.4,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 301.93,
+        "y": 35.6,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 301.93,
+        "y": 36.8,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 301.93,
+        "y": 38.0,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 301.93,
+        "y": 39.2,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 303.13,
+        "y": 30.8,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 303.13,
+        "y": 32.0,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 303.13,
+        "y": 33.2,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 303.13,
+        "y": 34.4,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 303.13,
+        "y": 35.6,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 303.13,
+        "y": 36.8,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 303.13,
+        "y": 38.0,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 303.13,
+        "y": 39.2,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 304.33,
+        "y": 32.0,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 304.33,
+        "y": 33.2,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 304.33,
+        "y": 34.4,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 304.33,
+        "y": 35.6,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 304.33,
+        "y": 36.8,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 304.33,
+        "y": 38.0,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 305.53,
+        "y": 32.0,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 305.53,
+        "y": 33.2,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 305.53,
+        "y": 34.4,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 305.53,
+        "y": 35.6,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 305.53,
+        "y": 36.8,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 305.53,
+        "y": 38.0,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 306.73,
+        "y": 32.0,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 306.73,
+        "y": 33.2,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 306.73,
+        "y": 34.4,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 306.73,
+        "y": 35.6,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 306.73,
+        "y": 36.8,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 306.73,
+        "y": 38.0,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 307.93,
+        "y": 30.8,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 307.93,
+        "y": 32.0,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 307.93,
+        "y": 33.2,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 307.93,
+        "y": 34.4,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 307.93,
+        "y": 35.6,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 307.93,
+        "y": 36.8,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 307.93,
+        "y": 38.0,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "",
+        "net": "",
+        "x": 307.93,
+        "y": 39.2,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "1",
+        "net": "CHOP_GATE",
+        "x": 296.75,
+        "y": 30.8,
+        "size": [
+          2.8,
+          0.8
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "CHOPPER_N",
+        "x": 297.75,
+        "y": 35.6,
+        "size": [
+          0.8,
+          8.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "CHOP_DRAIN",
+        "x": 305.8,
+        "y": 35.0,
+        "size": [
+          2.9,
+          8.7
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "J13",
+    "x": 11.0,
+    "y": 244.0,
+    "rot": -90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "LIFT_24V_SAMPLE",
+        "x": 11.0,
+        "y": 244.0,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "2",
+        "net": "LIFT_24V_N",
+        "x": 11.0,
+        "y": 249.08,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 270.0
+      }
+    ]
+  },
+  {
+    "ref": "Q21",
+    "x": 90.0,
+    "y": 276.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "SW_RESET_N",
+        "x": 89.062,
+        "y": 275.05,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "LOGIC_GND",
+        "x": 89.062,
+        "y": 276.95,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "LED_OE_N",
+        "x": 90.938,
+        "y": 276.0,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "H1",
+    "x": 8.0,
+    "y": 8.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "",
+        "net": "",
+        "x": 8.0,
+        "y": 8.0,
+        "size": [
+          3.2,
+          3.2
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "J14",
+    "x": 349.0,
+    "y": 141.0,
+    "rot": 90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "CHOP_NTC",
+        "x": 349.0,
+        "y": 141.0,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "2",
+        "net": "CHOP_GND",
+        "x": 349.0,
+        "y": 135.92,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 90.0
+      }
+    ]
+  },
+  {
+    "ref": "NT7",
+    "x": 345.0,
+    "y": 122.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "CHOPPER_N",
+        "x": 340.0,
+        "y": 122.0,
+        "size": [
+          10.0,
+          10.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "BATT_N",
+        "x": 350.0,
+        "y": 122.0,
+        "size": [
+          10.0,
+          10.0
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "Q44",
+    "x": 310.0,
+    "y": 104.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "CHOP_QUALIFY_BASE",
+        "x": 309.062,
+        "y": 103.05,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "CHOP_GND",
+        "x": 309.062,
+        "y": 104.95,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "CHOP_QUALIFY_N",
+        "x": 310.938,
+        "y": 104.0,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "C312",
+    "x": 304.0,
+    "y": 17.0,
+    "rot": 180.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "MOTION_BUS_P",
+        "x": 304.0,
+        "y": 17.0,
+        "size": [
+          2.4,
+          2.4
+        ],
+        "local_rotation": 180.0
+      },
+      {
+        "p": "2",
+        "net": "CHOPPER_N",
+        "x": 299.0,
+        "y": 17.0,
+        "size": [
+          2.4,
+          2.4
+        ],
+        "local_rotation": 180.0
+      }
+    ]
+  },
+  {
+    "ref": "Q6",
+    "x": 85.0,
+    "y": 75.0,
+    "rot": -90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "Q6_G",
+        "x": 79.35,
+        "y": 70.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "2",
+        "net": "MAIN_COMMON",
+        "x": 79.35,
+        "y": 72.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "3",
+        "net": "MAIN_COMMON",
+        "x": 79.35,
+        "y": 74.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "4",
+        "net": "MAIN_COMMON",
+        "x": 79.35,
+        "y": 76.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "5",
+        "net": "MAIN_COMMON",
+        "x": 79.35,
+        "y": 78.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "6",
+        "net": "MAIN_COMMON",
+        "x": 79.35,
+        "y": 80.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "7",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 80.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "8",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 78.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "9",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 76.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "10",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 74.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "11",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 72.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "12",
+        "net": "SYS_BUS_P",
+        "x": 90.65,
+        "y": 70.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "13",
+        "net": "SYS_BUS_P",
+        "x": 85.0,
+        "y": 75.0,
+        "size": [
+          10.8,
+          7.25
+        ],
+        "local_rotation": 270.0
+      }
+    ]
+  },
+  {
+    "ref": "H4",
+    "x": 8.0,
+    "y": 292.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "",
+        "net": "",
+        "x": 8.0,
+        "y": 292.0,
+        "size": [
+          3.2,
+          3.2
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "Q10",
+    "x": 180.0,
+    "y": 65.0,
+    "rot": -90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "Q10_G",
+        "x": 174.35,
+        "y": 60.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "2",
+        "net": "MOTION_COMMON",
+        "x": 174.35,
+        "y": 62.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "3",
+        "net": "MOTION_COMMON",
+        "x": 174.35,
+        "y": 64.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "4",
+        "net": "MOTION_COMMON",
+        "x": 174.35,
+        "y": 66.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "5",
+        "net": "MOTION_COMMON",
+        "x": 174.35,
+        "y": 68.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "6",
+        "net": "MOTION_COMMON",
+        "x": 174.35,
+        "y": 70.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "7",
+        "net": "MOTION_BUS_P",
+        "x": 185.65,
+        "y": 70.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "8",
+        "net": "MOTION_BUS_P",
+        "x": 185.65,
+        "y": 68.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "9",
+        "net": "MOTION_BUS_P",
+        "x": 185.65,
+        "y": 66.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "10",
+        "net": "MOTION_BUS_P",
+        "x": 185.65,
+        "y": 64.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "11",
+        "net": "MOTION_BUS_P",
+        "x": 185.65,
+        "y": 62.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "12",
+        "net": "MOTION_BUS_P",
+        "x": 185.65,
+        "y": 60.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "13",
+        "net": "MOTION_BUS_P",
+        "x": 180.0,
+        "y": 65.0,
+        "size": [
+          10.8,
+          7.25
+        ],
+        "local_rotation": 270.0
+      }
+    ]
+  },
+  {
+    "ref": "J22",
+    "x": 257.0,
+    "y": 234.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "V3V3",
+        "x": 257.0,
+        "y": 234.0,
+        "size": [
+          1.7,
+          1.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "MOTION_PERMIT_CONNECTOR",
+        "x": 257.0,
+        "y": 236.54,
+        "size": [
+          1.7,
+          1.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "LOGIC_GND",
+        "x": 257.0,
+        "y": 239.08,
+        "size": [
+          1.7,
+          1.7
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "NT4",
+    "x": 315.0,
+    "y": 122.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "LIFT_N",
+        "x": 310.0,
+        "y": 122.0,
+        "size": [
+          10.0,
+          10.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "BATT_N",
+        "x": 320.0,
+        "y": 122.0,
+        "size": [
+          10.0,
+          10.0
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "Q43",
+    "x": 267.0,
+    "y": 103.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "CHOP_QUALIFY_N",
+        "x": 266.062,
+        "y": 102.05,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "CHOP_10V",
+        "x": 266.062,
+        "y": 103.95,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "CHOP_FAULT_PWR",
+        "x": 267.938,
+        "y": 103.0,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "NT8",
+    "x": 95.0,
+    "y": 122.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "LOGIC_5V_N",
+        "x": 90.0,
+        "y": 122.0,
+        "size": [
+          10.0,
+          10.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "BATT_N",
+        "x": 100.0,
+        "y": 122.0,
+        "size": [
+          10.0,
+          10.0
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "J20",
+    "x": 16.0,
+    "y": 246.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "PB_CONNECTOR",
+        "x": 16.0,
+        "y": 246.0,
+        "size": [
+          1.7,
+          1.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "LOGIC_GND",
+        "x": 16.0,
+        "y": 248.54,
+        "size": [
+          1.7,
+          1.7
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "H2",
+    "x": 352.0,
+    "y": 8.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "",
+        "net": "",
+        "x": 352.0,
+        "y": 8.0,
+        "size": [
+          3.2,
+          3.2
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "Q11",
+    "x": 170.0,
+    "y": 71.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "MOTION_TEMP_DIODE",
+        "x": 169.062,
+        "y": 70.05,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "BATT_N",
+        "x": 169.062,
+        "y": 71.95,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "MOTION_TEMP_DIODE",
+        "x": 170.938,
+        "y": 71.0,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "J15",
+    "x": 349.0,
+    "y": 169.0,
+    "rot": 90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "CHOP_TEMP_ADC",
+        "x": 349.0,
+        "y": 169.0,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "2",
+        "net": "LOGIC_GND",
+        "x": 349.0,
+        "y": 163.92,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 90.0
+      }
+    ]
+  },
+  {
+    "ref": "Q2",
+    "x": 55.0,
+    "y": 50.0,
+    "rot": 90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "Q2_G",
+        "x": 60.65,
+        "y": 55.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "2",
+        "net": "MAIN_COMMON",
+        "x": 60.65,
+        "y": 53.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "3",
+        "net": "MAIN_COMMON",
+        "x": 60.65,
+        "y": 51.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "4",
+        "net": "MAIN_COMMON",
+        "x": 60.65,
+        "y": 49.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "5",
+        "net": "MAIN_COMMON",
+        "x": 60.65,
+        "y": 47.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "6",
+        "net": "MAIN_COMMON",
+        "x": 60.65,
+        "y": 45.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "7",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 45.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "8",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 47.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "9",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 49.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "10",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 51.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "11",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 53.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "12",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 55.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "13",
+        "net": "BATT_SENSED_P",
+        "x": 55.0,
+        "y": 50.0,
+        "size": [
+          10.8,
+          7.25
+        ],
+        "local_rotation": 90.0
+      }
+    ]
+  },
+  {
+    "ref": "NT3",
+    "x": 285.0,
+    "y": 122.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "DRIVE_N",
+        "x": 280.0,
+        "y": 122.0,
+        "size": [
+          10.0,
+          10.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "BATT_N",
+        "x": 290.0,
+        "y": 122.0,
+        "size": [
+          10.0,
+          10.0
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "J4",
+    "x": 220.0,
+    "y": 115.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "ARM_L_N",
+        "x": 216.19,
+        "y": 111.19,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "ARM_L_N",
+        "x": 216.19,
+        "y": 113.73,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "ARM_L_N",
+        "x": 216.19,
+        "y": 116.27,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "4",
+        "net": "ARM_L_N",
+        "x": 216.19,
+        "y": 118.81,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "5",
+        "net": "ARM_L_N",
+        "x": 223.81,
+        "y": 111.19,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "6",
+        "net": "ARM_L_N",
+        "x": 223.81,
+        "y": 113.73,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "7",
+        "net": "ARM_L_N",
+        "x": 223.81,
+        "y": 116.27,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "8",
+        "net": "ARM_L_N",
+        "x": 223.81,
+        "y": 118.81,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "J11",
+    "x": 11.0,
+    "y": 216.0,
+    "rot": -90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "V5V",
+        "x": 11.0,
+        "y": 216.0,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "2",
+        "net": "LOGIC_5V_N",
+        "x": 11.0,
+        "y": 221.08,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 270.0
+      }
+    ]
+  },
+  {
+    "ref": "NT5",
+    "x": 35.0,
+    "y": 122.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "PC_N",
+        "x": 30.0,
+        "y": 122.0,
+        "size": [
+          10.0,
+          10.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "BATT_N",
+        "x": 40.0,
+        "y": 122.0,
+        "size": [
+          10.0,
+          10.0
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "Q1",
+    "x": 55.0,
+    "y": 25.0,
+    "rot": 90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "Q1_G",
+        "x": 60.65,
+        "y": 30.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "2",
+        "net": "MAIN_COMMON",
+        "x": 60.65,
+        "y": 28.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "3",
+        "net": "MAIN_COMMON",
+        "x": 60.65,
+        "y": 26.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "4",
+        "net": "MAIN_COMMON",
+        "x": 60.65,
+        "y": 24.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "5",
+        "net": "MAIN_COMMON",
+        "x": 60.65,
+        "y": 22.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "6",
+        "net": "MAIN_COMMON",
+        "x": 60.65,
+        "y": 20.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "7",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 20.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "8",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 22.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "9",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 24.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "10",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 26.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "11",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 28.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "12",
+        "net": "BATT_SENSED_P",
+        "x": 49.35,
+        "y": 30.0,
+        "size": [
+          1.2,
+          1.9
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "13",
+        "net": "BATT_SENSED_P",
+        "x": 55.0,
+        "y": 25.0,
+        "size": [
+          10.8,
+          7.25
+        ],
+        "local_rotation": 90.0
+      }
+    ]
+  },
+  {
+    "ref": "NT10",
+    "x": 295.0,
+    "y": 75.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "CHOP_GND",
+        "x": 294.5,
+        "y": 75.0,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "CHOPPER_N",
+        "x": 295.5,
+        "y": 75.0,
+        "size": [
+          1.0,
+          1.0
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "Q41",
+    "x": 283.0,
+    "y": 39.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "CHOP_THERMAL_OK",
+        "x": 282.062,
+        "y": 38.05,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "CHOP_QUALIFY_N",
+        "x": 282.062,
+        "y": 39.95,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "CHOP_DISABLE",
+        "x": 283.938,
+        "y": 39.0,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "J21",
+    "x": 274.0,
+    "y": 267.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "LOGIC_GND",
+        "x": 274.0,
+        "y": 267.0,
+        "size": [
+          1.7,
+          1.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "UART_RX_CONNECTOR",
+        "x": 274.0,
+        "y": 269.54,
+        "size": [
+          1.7,
+          1.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "UART_TX_CONNECTOR",
+        "x": 274.0,
+        "y": 272.08,
+        "size": [
+          1.7,
+          1.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "4",
+        "net": "ESP_BOOT_N",
+        "x": 274.0,
+        "y": 274.62,
+        "size": [
+          1.7,
+          1.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "5",
+        "net": "ESP_CHIP_EN",
+        "x": 274.0,
+        "y": 277.16,
+        "size": [
+          1.7,
+          1.7
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "J5",
+    "x": 250.0,
+    "y": 20.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "MOTION_BUS_P",
+        "x": 246.19,
+        "y": 16.19,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "MOTION_BUS_P",
+        "x": 246.19,
+        "y": 18.73,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "MOTION_BUS_P",
+        "x": 246.19,
+        "y": 21.27,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "4",
+        "net": "MOTION_BUS_P",
+        "x": 246.19,
+        "y": 23.81,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "5",
+        "net": "MOTION_BUS_P",
+        "x": 253.81,
+        "y": 16.19,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "6",
+        "net": "MOTION_BUS_P",
+        "x": 253.81,
+        "y": 18.73,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "7",
+        "net": "MOTION_BUS_P",
+        "x": 253.81,
+        "y": 21.27,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "8",
+        "net": "MOTION_BUS_P",
+        "x": 253.81,
+        "y": 23.81,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "J10",
+    "x": 11.0,
+    "y": 188.0,
+    "rot": -90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "LOGIC_BUCK_IN_P",
+        "x": 11.0,
+        "y": 188.0,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 270.0
+      },
+      {
+        "p": "2",
+        "net": "LOGIC_BUCK_N",
+        "x": 11.0,
+        "y": 193.08,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 270.0
+      }
+    ]
+  },
+  {
+    "ref": "Q20",
+    "x": 140.0,
+    "y": 231.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "MAIN_FAULT_LATCHED",
+        "x": 139.062,
+        "y": 230.05,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "LOGIC_GND",
+        "x": 139.062,
+        "y": 231.95,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "WAKE_KILL",
+        "x": 140.938,
+        "y": 231.0,
+        "size": [
+          1.475,
+          0.6
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "J3",
+    "x": 220.0,
+    "y": 20.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "MOTION_BUS_P",
+        "x": 216.19,
+        "y": 16.19,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "MOTION_BUS_P",
+        "x": 216.19,
+        "y": 18.73,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "MOTION_BUS_P",
+        "x": 216.19,
+        "y": 21.27,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "4",
+        "net": "MOTION_BUS_P",
+        "x": 216.19,
+        "y": 23.81,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "5",
+        "net": "MOTION_BUS_P",
+        "x": 223.81,
+        "y": 16.19,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "6",
+        "net": "MOTION_BUS_P",
+        "x": 223.81,
+        "y": 18.73,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "7",
+        "net": "MOTION_BUS_P",
+        "x": 223.81,
+        "y": 21.27,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "8",
+        "net": "MOTION_BUS_P",
+        "x": 223.81,
+        "y": 23.81,
+        "size": [
+          2.1,
+          2.1
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "J16",
+    "x": 30.0,
+    "y": 285.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "CAN_H",
+        "x": 28.125,
+        "y": 286.95,
+        "size": [
+          0.6,
+          1.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "CAN_L",
+        "x": 29.375,
+        "y": 286.95,
+        "size": [
+          0.6,
+          1.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "LOGIC_GND",
+        "x": 30.625,
+        "y": 286.95,
+        "size": [
+          0.6,
+          1.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "4",
+        "net": "CHASSIS",
+        "x": 31.875,
+        "y": 286.95,
+        "size": [
+          0.6,
+          1.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "MP",
+        "net": "",
+        "x": 26.275,
+        "y": 283.6,
+        "size": [
+          1.0,
+          2.8
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "MP",
+        "net": "",
+        "x": 33.725,
+        "y": 283.6,
+        "size": [
+          1.0,
+          2.8
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "J12",
+    "x": 349.0,
+    "y": 35.0,
+    "rot": 90.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "MOTION_BUS_P",
+        "x": 349.0,
+        "y": 35.0,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 90.0
+      },
+      {
+        "p": "2",
+        "net": "CHOP_DRAIN",
+        "x": 349.0,
+        "y": 29.92,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 90.0
+      }
+    ]
+  },
+  {
+    "ref": "J18",
+    "x": 110.0,
+    "y": 285.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "V5V",
+        "x": 110.0,
+        "y": 285.0,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "LED_DATA_OUT",
+        "x": 115.08,
+        "y": 285.0,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "LOGIC_GND",
+        "x": 120.16,
+        "y": 285.0,
+        "size": [
+          2.08,
+          3.6
+        ],
+        "local_rotation": 0
+      }
+    ]
+  },
+  {
+    "ref": "C313",
+    "x": 321.0,
+    "y": 17.0,
+    "rot": 180.0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "MOTION_BUS_P",
+        "x": 321.0,
+        "y": 17.0,
+        "size": [
+          2.4,
+          2.4
+        ],
+        "local_rotation": 180.0
+      },
+      {
+        "p": "2",
+        "net": "CHOPPER_N",
+        "x": 316.0,
+        "y": 17.0,
+        "size": [
+          2.4,
+          2.4
+        ],
+        "local_rotation": 180.0
+      }
+    ]
+  },
+  {
+    "ref": "J17",
+    "x": 45.0,
+    "y": 285.0,
+    "rot": 0,
+    "pads": [
+      {
+        "p": "1",
+        "net": "CAN_H",
+        "x": 43.125,
+        "y": 286.95,
+        "size": [
+          0.6,
+          1.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "2",
+        "net": "CAN_L",
+        "x": 44.375,
+        "y": 286.95,
+        "size": [
+          0.6,
+          1.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "3",
+        "net": "LOGIC_GND",
+        "x": 45.625,
+        "y": 286.95,
+        "size": [
+          0.6,
+          1.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "4",
+        "net": "CHASSIS",
+        "x": 46.875,
+        "y": 286.95,
+        "size": [
+          0.6,
+          1.7
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "MP",
+        "net": "",
+        "x": 41.275,
+        "y": 283.6,
+        "size": [
+          1.0,
+          2.8
+        ],
+        "local_rotation": 0
+      },
+      {
+        "p": "MP",
+        "net": "",
+        "x": 48.725,
+        "y": 283.6,
+        "size": [
+          1.0,
+          2.8
+        ],
+        "local_rotation": 0
+      }
+    ]
+  }
+]

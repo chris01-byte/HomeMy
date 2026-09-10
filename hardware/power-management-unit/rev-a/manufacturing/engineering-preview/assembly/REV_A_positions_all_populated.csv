@@ -1,0 +1,353 @@
+﻿reference,value,mpn,manufacturer,footprint,x_mm,y_mm,kicad_rotation_deg,side,mounting,dnp,state,x_right_y_down_board_origin,footprint_anchor_not_centroid,board_excluded_from_position
+C1,100nF100V X7R,GRM21BR72A104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,72.000000,92.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C2,1uF25V X7R,C1206C105K3RACTU,KEMET (YAGEO Group),Capacitor_SMD:C_1206_3216Metric,67.000000,90.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C3,33uF63V10% PET film,MKS4C053306D00KSSD,WIMA,PMU_RevA:C_Rect_L31.5mm_W13mm_P27.5mm,52.000000,141.000000,0.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+C4,1nF50V5% C0G,C0805C102J5GACTU,KEMET (YAGEO Group),Capacitor_SMD:C_0805_2012Metric,66.000000,93.900000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C5,1nF50V5% C0G,C0805C102J5GACTU,KEMET (YAGEO Group),Capacitor_SMD:C_0805_2012Metric,69.200000,94.900000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C6,1nF50V5% C0G,C0805C102J5GACTU,KEMET (YAGEO Group),Capacitor_SMD:C_0805_2012Metric,59.000000,97.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C7,1nF50V5% C0G,C0805C102J5GACTU,KEMET (YAGEO Group),Capacitor_SMD:C_0805_2012Metric,55.000000,97.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C8,100nF100V X7R,GRM21BR72A104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,169.000000,87.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C9,4.7uF25V X7R,C1206C475K3RACTU,KEMET (YAGEO Group),Capacitor_SMD:C_1206_3216Metric,174.000000,97.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C10,33uF63V10% PET film,MKS4C053306D00KSSD,WIMA,PMU_RevA:C_Rect_L31.5mm_W13mm_P27.5mm,164.000000,141.000000,0.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+C11,1nF50V5% C0G,C0805C102J5GACTU,KEMET (YAGEO Group),Capacitor_SMD:C_0805_2012Metric,169.000000,93.500000,-90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C12,1nF50V5% C0G,C0805C102J5GACTU,KEMET (YAGEO Group),Capacitor_SMD:C_0805_2012Metric,170.000000,90.200000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C13,1nF50V5% C0G,C0805C102J5GACTU,KEMET (YAGEO Group),Capacitor_SMD:C_0805_2012Metric,161.000000,103.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C20,22nF50V5% C0G,C0805C223J5GACTU,KEMET (YAGEO Group),Capacitor_SMD:C_0805_2012Metric,34.000000,179.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C21,100nF100V X7R,GRM21BR72A104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,35.000000,169.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C22,1uF100V X7R,C1210C105K1RACTU,KEMET (YAGEO Group),Capacitor_SMD:C_1210_3225Metric,46.000000,171.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C25,22nF50V5% C0G,C0805C223J5GACTU,KEMET (YAGEO Group),Capacitor_SMD:C_0805_2012Metric,84.000000,179.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C26,100nF100V X7R,GRM21BR72A104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,85.000000,169.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C27,1uF100V X7R,C1210C105K1RACTU,KEMET (YAGEO Group),Capacitor_SMD:C_1210_3225Metric,96.000000,171.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C28,10nF50V5% C0G,C0805C103J5GACTU,KEMET (YAGEO Group),Capacitor_SMD:C_0805_2012Metric,141.000000,99.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C29,4.7uF25V X7R,C1206C475K3RACTU,KEMET (YAGEO Group),Capacitor_SMD:C_1206_3216Metric,174.000000,101.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C30,100nF100V X7R,GRM21BR72A104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,192.000000,88.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C31,1nF50V5% C0G,C0805C102J5GACTU,KEMET (YAGEO Group),Capacitor_SMD:C_0805_2012Metric,187.000000,95.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C200,100n,GRM21BR72A104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,23.000000,209.000000,180.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C201,1u,GRM21BR71C105KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,35.800000,212.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C202,10n,GRM21BR71H103KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,24.000000,232.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C203,22n,GRM21B5C1H223JA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,62.000000,238.000000,180.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C204,1u,GRM21BR71C105KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,71.000000,231.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C205,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,336.650000,283.990000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C206,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,30.000000,76.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C207,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,281.800000,244.300000,180.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C208,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,48.475000,277.905000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C209,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,102.037500,275.050000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C210,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,32.037500,209.050000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C211,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,61.962500,233.025000,180.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C212,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,46.837500,210.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C213,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,47.300000,223.250000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C214,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,58.300000,223.250000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C215,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,29.037500,235.050000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C216,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,92.037500,246.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C217,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,107.037500,233.050000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C218,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,134.300000,230.250000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C219,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,122.300000,217.250000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C220,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,144.037500,244.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C221,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,307.837500,245.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C222,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,212.300000,194.250000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C223,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,169.037500,190.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C224,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,191.037500,218.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C225,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,194.037500,195.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C226,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,220.700000,223.025000,180.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C227,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,133.037500,209.050000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C228,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,229.037500,183.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C229,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,114.300000,247.250000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C230,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,128.037500,247.050000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C231,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,137.037500,248.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C232,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,134.037500,219.050000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C233,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,38.037500,235.050000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C234,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,297.762500,194.050000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C235,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,273.037500,242.050000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C236,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,37.525000,276.635000,180.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C237,10u,GRM21BR61A106KE19L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,280.000000,250.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C238,10u,GRM21BR61A106KE19L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,295.000000,242.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C239,10u,GRM21BR61A106KE19L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,341.000000,282.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C240,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,340.000000,274.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C241,100n,GRM21BR72A104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,30.000000,73.200000,-90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C242,10n,GRM21BR72A103KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,32.000000,79.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C243,10n,GRM21BR71H103KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,265.000000,241.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C245,1n,GRM31A5C3A102JW01D,Murata Manufacturing,Capacitor_SMD:C_1206_3216Metric,21.000000,289.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C246,1000u 10V,EEU-FR1A102,Panasonic,Capacitor_THT:CP_Radial_D10.0mm_P5.00mm,132.000000,270.000000,0.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+C247,1n,GRM21B5C1H102JA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,280.000000,190.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C248,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,286.000000,191.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C249,1n,GRM21B5C1H102JA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,280.000000,199.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C250,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,288.000000,202.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C251,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,300.000000,198.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C252,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,69.000000,57.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C253,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,166.000000,79.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C254,1u,GRM21BR71C105KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,84.000000,220.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C255,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,93.037500,217.050000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C256,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,109.037500,218.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C257,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,83.037500,233.050000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C258,100n,GRM21BR71C104KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,294.762500,269.050000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C300,1uF 100V,C3216X7R2A105K160AB,TDK,Capacitor_SMD:C_1206_3216Metric,327.000000,62.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C301,10uF 25V,GRM32ER71E106KA12L,Murata Manufacturing,Capacitor_SMD:C_1210_3225Metric,315.000000,61.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C302,100nF 50V,GRM188R71H104KA93D,Murata Manufacturing,Capacitor_SMD:C_0603_1608Metric,307.000000,68.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C303,1uF 25V,GRM21BR71E105KA99L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,308.000000,73.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C304,100nF 50V,GRM188R71H104KA93D,Murata Manufacturing,Capacitor_SMD:C_0603_1608Metric,278.000000,79.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C305,100pF 50V C0G,GRM1885C1H101JA01D,Murata Manufacturing,Capacitor_SMD:C_0603_1608Metric,279.000000,68.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C306,100pF 50V C0G,GRM1885C1H101JA01D,Murata Manufacturing,Capacitor_SMD:C_0603_1608Metric,269.000000,79.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C307,100nF 50V,GRM188R71H104KA93D,Murata Manufacturing,Capacitor_SMD:C_0603_1608Metric,303.000000,95.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C308,100nF 50V,GRM188R71H104KA93D,Murata Manufacturing,Capacitor_SMD:C_0603_1608Metric,285.000000,27.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C309,1uF 25V,GRM21BR71E105KA99L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,285.000000,24.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C310,100nF 50V,GRM188R71H104KA93D,Murata Manufacturing,Capacitor_SMD:C_0603_1608Metric,335.000000,163.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C311,100nF 50V,GRM188R71H104KA93D,Murata Manufacturing,Capacitor_SMD:C_0603_1608Metric,311.000000,86.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+C312,470uF 100V20% high-ripple MOTION bulk,EKYC101ELL471MK35S,Nippon Chemi-Con,Capacitor_THT:CP_Radial_D12.5mm_P5.00mm,304.000000,17.000000,180.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+C313,470uF 100V20% high-ripple MOTION bulk,EKYC101ELL471MK35S,Nippon Chemi-Con,Capacitor_THT:CP_Radial_D12.5mm_P5.00mm,321.000000,17.000000,180.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+D1,43V bidirectional low-clamp TVS,PTVS1-043C-H,Bourns,PMU_RevA:PTVS1_DFN8x6,30.000000,65.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+D2,43V bidirectional low-clamp TVS,PTVS1-043C-H,Bourns,PMU_RevA:PTVS1_DFN8x6,103.000000,80.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+D40,ESD2CAN24DBZRQ1,ESD2CAN24DBZRQ1,Texas Instruments,Package_TO_SOT_SMD:SOT-23,25.000000,276.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+D60,43V standoff TVS 1500W,SMCJ43A,Littelfuse,Diode_SMD:D_SMC,338.000000,17.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+D61,43V drain spike clamp,SMCJ43A,Littelfuse,Diode_SMD:D_SMC,315.000000,47.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+D62,15V gate clamp,"BZT52H-C15,115",Nexperia,Diode_SMD:D_SOD-123F,300.000000,26.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+D63,100V 10A resistor cable freewheel,MBR10100-M3/4W,Vishay,Package_TO_SOT_THT:TO-220-2_Vertical,331.000000,42.000000,180.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+D64,LDO reverse discharge path,1N4148WS-E3-08,Vishay,Diode_SMD:D_SOD-323,321.000000,56.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+D65,Analog fault OR,1N4148WS-E3-08,Vishay,Diode_SMD:D_SOD-323,265.000000,97.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+D66,Analog fault OR,1N4148WS-E3-08,Vishay,Diode_SMD:D_SOD-323,269.000000,97.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+J1,Battery M5 160A class,7461103,Wurth Elektronik,PMU:Wurth_7461103,15.000000,45.000000,0.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J2,Battery M5 160A class,7461103,Wurth Elektronik,PMU:Wurth_7461103,15.000000,115.000000,0.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J3,Left arm + M5 160A class,7461103,Wurth Elektronik,PMU:Wurth_7461103,220.000000,20.000000,0.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J4,Left arm return M5 160A class,7461103,Wurth Elektronik,PMU:Wurth_7461103,220.000000,115.000000,0.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J5,Right arm + M5 160A class,7461103,Wurth Elektronik,PMU:Wurth_7461103,250.000000,20.000000,0.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J6,Right arm return M5 160A class,7461103,Wurth Elektronik,PMU:Wurth_7461103,250.000000,115.000000,0.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J7,Drive 8A peak,1776508,Phoenix Contact,"Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",349.000000,63.000000,90.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J8,24V lift-buck INPUT,1776508,Phoenix Contact,"Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",349.000000,91.000000,90.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J9,12V PC-buck INPUT,1776508,Phoenix Contact,"Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",11.000000,160.000000,-90.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J10,5V logic-buck INPUT,1776508,Phoenix Contact,"Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",11.000000,188.000000,-90.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J11,5V converter OUTPUT return,1776508,Phoenix Contact,"Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",11.000000,216.000000,-90.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J12,External resistor bank,1776508,Phoenix Contact,"Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",349.000000,35.000000,90.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J14,Analog bank NTC,1776508,Phoenix Contact,"Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",349.000000,141.000000,90.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J15,Telemetry bank NTC,1776508,Phoenix Contact,"Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",349.000000,169.000000,90.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J16,CAN backbone IN,BM04B-GHS-TBT(LF)(SN),JST,Connector_JST:JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical,30.000000,285.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+J17,CAN backbone OUT,BM04B-GHS-TBT(LF)(SN),JST,Connector_JST:JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical,45.000000,285.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+J18,5V LED strip 5A,1776511,Phoenix Contact,"Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_3-GF-5,08_1x03_P5.08mm_Horizontal_ThreadedFlange",110.000000,285.000000,0.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J20,TSW-102-07-G-S,TSW-102-07-G-S,Samtec,Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical,16.000000,246.000000,0.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J21,TSW-105-07-G-S,TSW-105-07-G-S,Samtec,Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical,274.000000,267.000000,0.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J22,TSW-103-07-G-S,TSW-103-07-G-S,Samtec,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,257.000000,234.000000,0.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+J23,TSW-103-07-G-S,TSW-103-07-G-S,Samtec,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,133.000000,278.000000,0.000000,top,through_hole_manual,False,engineering_review_not_order_release,True,True,False
+Q1,100V N-MOS .99mR@25C/2.3mR@175C 10V,PSMN1R0-100ASFJ,Nexperia,PMU_RevA:CCPAK1212_SOT8000A,55.000000,25.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+Q2,100V N-MOS .99mR@25C/2.3mR@175C 10V,PSMN1R0-100ASFJ,Nexperia,PMU_RevA:CCPAK1212_SOT8000A,55.000000,50.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+Q3,100V N-MOS .99mR@25C/2.3mR@175C 10V,PSMN1R0-100ASFJ,Nexperia,PMU_RevA:CCPAK1212_SOT8000A,55.000000,75.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+Q4,100V N-MOS .99mR@25C/2.3mR@175C 10V,PSMN1R0-100ASFJ,Nexperia,PMU_RevA:CCPAK1212_SOT8000A,85.000000,25.000000,-90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+Q5,100V N-MOS .99mR@25C/2.3mR@175C 10V,PSMN1R0-100ASFJ,Nexperia,PMU_RevA:CCPAK1212_SOT8000A,85.000000,50.000000,-90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+Q6,100V N-MOS .99mR@25C/2.3mR@175C 10V,PSMN1R0-100ASFJ,Nexperia,PMU_RevA:CCPAK1212_SOT8000A,85.000000,75.000000,-90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+Q7,100V N-MOS .99mR@25C/2.3mR@175C 10V,PSMN1R0-100ASFJ,Nexperia,PMU_RevA:CCPAK1212_SOT8000A,150.000000,30.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+Q8,100V N-MOS .99mR@25C/2.3mR@175C 10V,PSMN1R0-100ASFJ,Nexperia,PMU_RevA:CCPAK1212_SOT8000A,150.000000,65.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+Q9,100V N-MOS .99mR@25C/2.3mR@175C 10V,PSMN1R0-100ASFJ,Nexperia,PMU_RevA:CCPAK1212_SOT8000A,180.000000,30.000000,-90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+Q10,100V N-MOS .99mR@25C/2.3mR@175C 10V,PSMN1R0-100ASFJ,Nexperia,PMU_RevA:CCPAK1212_SOT8000A,180.000000,65.000000,-90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+Q11,Remote temperature diode,"MMBT3904,215",Nexperia,Package_TO_SOT_SMD:SOT-23,170.000000,71.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+Q20,"BSS138BK,215","BSS138BK,215",Nexperia,Package_TO_SOT_SMD:SOT-23,140.000000,231.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+Q21,"BSS138BK,215","BSS138BK,215",Nexperia,Package_TO_SOT_SMD:SOT-23,90.000000,276.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+Q40,100V chopper NMOS,IPT015N10N5ATMA1,Infineon Technologies,Package_TO_SOT_SMD:Infineon_PG-HSOF-8-1,302.000000,35.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+Q41,NTC healthy enables driver,"2N7002,215",Nexperia,Package_TO_SOT_SMD:SOT-23,283.000000,39.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+Q42,Chopper gate status isolation driver,"2N7002,215",Nexperia,Package_TO_SOT_SMD:SOT-23,266.000000,87.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+Q43,Qualified fault LED power,"BSS84,215",Nexperia,Package_TO_SOT_SMD:SOT-23,267.000000,103.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+Q44,Qualified local enable,"MMBT3904,215",Nexperia,Package_TO_SOT_SMD:SOT-23,310.000000,104.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R1,10R 1%,RC0805FR-0710RL,YAGEO,Resistor_SMD:R_0805_2012Metric,61.650000,33.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R2,10R 1%,RC0805FR-0710RL,YAGEO,Resistor_SMD:R_0805_2012Metric,61.650000,58.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R3,10R 1%,RC0805FR-0710RL,YAGEO,Resistor_SMD:R_0805_2012Metric,61.650000,83.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R4,10R 1%,RC0805FR-0710RL,YAGEO,Resistor_SMD:R_0805_2012Metric,78.350000,16.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R5,10R 1%,RC0805FR-0710RL,YAGEO,Resistor_SMD:R_0805_2012Metric,78.350000,41.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R6,10R 1%,RC0805FR-0710RL,YAGEO,Resistor_SMD:R_0805_2012Metric,78.350000,66.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R7,10R 1%,RC0805FR-0710RL,YAGEO,Resistor_SMD:R_0805_2012Metric,156.650000,38.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R8,10R 1%,RC0805FR-0710RL,YAGEO,Resistor_SMD:R_0805_2012Metric,156.650000,73.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R9,10R 1%,RC0805FR-0710RL,YAGEO,Resistor_SMD:R_0805_2012Metric,173.350000,21.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R10,10R 1%,RC0805FR-0710RL,YAGEO,Resistor_SMD:R_0805_2012Metric,173.350000,56.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R11,10M 1%,RC0805FR-0710ML,YAGEO,Resistor_SMD:R_0805_2012Metric,65.150000,33.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R12,10M 1%,RC0805FR-0710ML,YAGEO,Resistor_SMD:R_0805_2012Metric,65.150000,58.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R13,10M 1%,RC0805FR-0710ML,YAGEO,Resistor_SMD:R_0805_2012Metric,65.150000,83.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R14,10M 1%,RC0805FR-0710ML,YAGEO,Resistor_SMD:R_0805_2012Metric,74.850000,16.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R15,10M 1%,RC0805FR-0710ML,YAGEO,Resistor_SMD:R_0805_2012Metric,74.850000,41.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R16,10M 1%,RC0805FR-0710ML,YAGEO,Resistor_SMD:R_0805_2012Metric,74.850000,66.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R17,10M 1%,RC0805FR-0710ML,YAGEO,Resistor_SMD:R_0805_2012Metric,160.150000,38.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R18,10M 1%,RC0805FR-0710ML,YAGEO,Resistor_SMD:R_0805_2012Metric,160.150000,73.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R19,10M 1%,RC0805FR-0710ML,YAGEO,Resistor_SMD:R_0805_2012Metric,169.850000,21.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R20,10M 1%,RC0805FR-0710ML,YAGEO,Resistor_SMD:R_0805_2012Metric,169.850000,56.500000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R21,49R9 0.1% 25ppm/K,RT0805BRD0749R9L,YAGEO,Resistor_SMD:R_0805_2012Metric,62.700000,92.500000,-90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R22,18K2 0.1% 25ppm/K,RT0805BRD0718K2L,YAGEO,Resistor_SMD:R_0805_2012Metric,57.000000,104.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R23,3K65 0.1% 25ppm/K,RT0805BRD073K65L,YAGEO,Resistor_SMD:R_0805_2012Metric,72.000000,97.000000,-90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R24,100K 0.1% 25ppm/K,RT0805BRD07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,63.000000,105.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R25,523K 0.1% 25ppm/K,RT0805BRD07523KL,YAGEO,Resistor_SMD:R_0805_2012Metric,54.000000,91.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R26,10K1 0.1% 25ppm/K,RT0805BRD0710K1L,YAGEO,Resistor_SMD:R_0805_2012Metric,58.000000,92.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R27,732K 0.1% 25ppm/K,RT0805BRD07732KL,YAGEO,Resistor_SMD:R_0805_2012Metric,48.000000,91.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R28,10K 0.1% 25ppm/K,RT0805BRD0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,52.000000,97.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R29,1M 1%,RC0805FR-071ML,YAGEO,Resistor_SMD:R_0805_2012Metric,60.000000,101.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R30,100R 0.1% 25ppm/K,RT0805BRD07100RL,YAGEO,Resistor_SMD:R_0805_2012Metric,174.000000,94.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R31,39K7 0.1% 25ppm/K,RT0805BRD0739K7L,YAGEO,Resistor_SMD:R_0805_2012Metric,157.000000,98.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R32,2K74 0.1% 25ppm/K,RT0805BRD072K74L,YAGEO,Resistor_SMD:R_0805_2012Metric,174.000000,88.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R33,100K 0.1% 25ppm/K,RT0805BRD07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,157.000000,103.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R34,180K 1%,RC0805FR-07180KL,YAGEO,Resistor_SMD:R_0805_2012Metric,172.000000,105.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R35,226K 0.1% 25ppm/K,RT0805BRD07226KL,YAGEO,Resistor_SMD:R_0805_2012Metric,150.000000,87.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R36,10K 0.1% 25ppm/K,RT0805BRD0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,156.000000,87.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R39,100K 1%,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,156.000000,92.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R40,6K04 0.1% 25ppm/K,RT0805BRD076K04L,YAGEO,Resistor_SMD:R_0805_2012Metric,36.000000,183.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R41,191K 0.1% 25ppm/K,RT0805BRD07191KL,YAGEO,Resistor_SMD:R_0805_2012Metric,27.000000,171.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R42,10K 0.1% 25ppm/K,RT0805BRD0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,31.000000,175.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R43,374K 0.1% 25ppm/K,RT0805BRD07374KL,YAGEO,Resistor_SMD:R_0805_2012Metric,23.000000,171.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R44,10K 0.1% 25ppm/K,RT0805BRD0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,27.000000,178.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R45,1M 1%,RC0805FR-071ML,YAGEO,Resistor_SMD:R_0805_2012Metric,24.000000,185.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R46,68K 1%,RC0805FR-0768KL,YAGEO,Resistor_SMD:R_0805_2012Metric,28.000000,185.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R47,191K 0.1% 25ppm/K,RT0805BRD07191KL,YAGEO,Resistor_SMD:R_0805_2012Metric,50.000000,171.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R48,10K 0.1% 25ppm/K,RT0805BRD0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,50.000000,176.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R50,9K09 0.1% 25ppm/K,RT0805BRD079K09L,YAGEO,Resistor_SMD:R_0805_2012Metric,86.000000,183.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R51,191K 0.1% 25ppm/K,RT0805BRD07191KL,YAGEO,Resistor_SMD:R_0805_2012Metric,77.000000,171.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R52,10K 0.1% 25ppm/K,RT0805BRD0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,81.000000,175.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R53,374K 0.1% 25ppm/K,RT0805BRD07374KL,YAGEO,Resistor_SMD:R_0805_2012Metric,73.000000,171.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R54,10K 0.1% 25ppm/K,RT0805BRD0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,77.000000,178.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R55,1M 1%,RC0805FR-071ML,YAGEO,Resistor_SMD:R_0805_2012Metric,74.000000,185.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R56,68K 1%,RC0805FR-0768KL,YAGEO,Resistor_SMD:R_0805_2012Metric,78.000000,185.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R57,191K 0.1% 25ppm/K,RT0805BRD07191KL,YAGEO,Resistor_SMD:R_0805_2012Metric,100.000000,171.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R58,10K 0.1% 25ppm/K,RT0805BRD0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,100.000000,176.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R59,10K 0.1% 25ppm/K,RT0805BRD0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,150.000000,99.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R60,20K 0.1% 25ppm/K,RT0805BRD0720KL,YAGEO,Resistor_SMD:R_0805_2012Metric,147.000000,99.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R61,10K 0.1% 25ppm/K,RT0805BRD0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,144.000000,99.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R62,226K 0.1% 25ppm/K,RT0805BRD07226KL,YAGEO,Resistor_SMD:R_0805_2012Metric,198.000000,91.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R63,10K 0.1% 25ppm/K,RT0805BRD0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,198.000000,96.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R64,200R 0.1% 25ppm/K,RT0805BRD07200RL,YAGEO,Resistor_SMD:R_0805_2012Metric,52.000000,104.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R200,4.99k,RC2010FK-074K99L,YAGEO,Resistor_SMD:R_2010_5025Metric,17.000000,207.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R201,4.99k,RC2010FK-074K99L,YAGEO,Resistor_SMD:R_2010_5025Metric,17.000000,216.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R202,174k,RC0805FR-07174KL,YAGEO,Resistor_SMD:R_0805_2012Metric,32.000000,215.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R203,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,28.000000,219.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R204,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,20.000000,230.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R205,1k,RC0805FR-071KL,YAGEO,Resistor_SMD:R_0805_2012Metric,20.000000,236.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R206,47k,RC0805FR-0747KL,YAGEO,Resistor_SMD:R_0805_2012Metric,72.000000,239.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R207,1M,RC0805FR-071ML,YAGEO,Resistor_SMD:R_0805_2012Metric,79.000000,239.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R208,120k,RC0805FR-07120KL,YAGEO,Resistor_SMD:R_0805_2012Metric,84.000000,250.000000,180.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R209,1M,RC0805FR-071ML,YAGEO,Resistor_SMD:R_0805_2012Metric,93.000000,242.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R210,887k,RC0805FR-07887KL,YAGEO,Resistor_SMD:R_0805_2012Metric,94.000000,250.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R211,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,95.000000,231.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R212,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,98.000000,234.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R213,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,111.000000,237.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R214,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,116.000000,235.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R215,47k,RC0805FR-0747KL,YAGEO,Resistor_SMD:R_0805_2012Metric,124.000000,207.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R216,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,140.000000,251.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R217,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,299.000000,245.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R218,1k,RC0805FR-071KL,YAGEO,Resistor_SMD:R_0805_2012Metric,309.000000,249.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R219,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,338.000000,278.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R220,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,312.000000,269.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R221,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,322.000000,263.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R222,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,320.000000,258.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R223,10,RC0805FR-0710RL,YAGEO,Resistor_SMD:R_0805_2012Metric,33.000000,71.500000,-90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R224,10,RC0805FR-0710RL,YAGEO,Resistor_SMD:R_0805_2012Metric,37.000000,72.900000,-90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R225,10,RC0805FR-0710RL,YAGEO,Resistor_SMD:R_0805_2012Metric,36.000000,76.000000,180.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R226,4.7k,RC0805FR-074K7L,YAGEO,Resistor_SMD:R_0805_2012Metric,314.000000,263.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R227,4.7k,RC0805FR-074K7L,YAGEO,Resistor_SMD:R_0805_2012Metric,316.700000,263.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R228,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,23.000000,81.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R229,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,159.000000,186.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R230,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,159.000000,190.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R231,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,166.000000,184.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R232,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,170.000000,184.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R233,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,230.000000,221.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R234,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,222.000000,177.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R235,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,203.000000,191.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R236,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,230.000000,226.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R237,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,229.000000,189.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R238,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,263.000000,245.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R239,1k,RC0805FR-071KL,YAGEO,Resistor_SMD:R_0805_2012Metric,262.000000,239.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R240,1k,RC0805FR-071KL,YAGEO,Resistor_SMD:R_0805_2012Metric,212.000000,200.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R241,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,37.000000,273.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R242,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,49.000000,270.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R245,1M,RC0805FR-071ML,YAGEO,Resistor_SMD:R_0805_2012Metric,21.000000,285.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R246,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,95.000000,272.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R247,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,93.000000,280.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R248,330,RC0805FR-07330RL,YAGEO,Resistor_SMD:R_0805_2012Metric,103.000000,278.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R249,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,111.000000,279.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R250,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,272.000000,180.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R251,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,272.000000,185.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R252,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,276.000000,188.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R253,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,285.000000,194.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R254,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,272.000000,204.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R255,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,272.000000,199.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R256,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,276.000000,197.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R257,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,284.000000,200.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R258,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,300.000000,202.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R259,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,301.000000,189.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R260,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,69.000000,54.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R261,10k,RC0805FR-0710KL,YAGEO,Resistor_SMD:R_0805_2012Metric,164.000000,75.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R262,4.7k,RC0805FR-074K7L,YAGEO,Resistor_SMD:R_0805_2012Metric,83.000000,215.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R263,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,283.000000,266.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R264,100k,RC0805FR-07100KL,YAGEO,Resistor_SMD:R_0805_2012Metric,283.000000,274.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R300,75.0k 0.1%,TNPW080575K0BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,316.000000,68.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R301,10.0k 0.1%,TNPW080510K0BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,316.000000,72.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R302,160k 0.1%,TNPW0805160KBEEA,Vishay,Resistor_SMD:R_0805_2012Metric,289.000000,63.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R303,1.40k 0.1%,TNPW08051K40BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,285.000000,68.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R304,10.0k 0.1%,TNPW080510K0BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,280.000000,65.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R305,1.00M 0.1%,TNPW08051M00BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,290.000000,42.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R306,1.00M 0.1%,TNPW08051M00BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,288.000000,50.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R307,10.0k 0.1%,TNPW080510K0BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,272.000000,67.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R308,174k 0.1%,TNPW0805174KBEEA,Vishay,Resistor_SMD:R_0805_2012Metric,268.000000,73.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R309,10.0k 0.1%,TNPW080510K0BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,273.000000,77.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R310,10.0k 0.1%,TNPW080510K0BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,268.000000,68.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R311,10.0k 0.1%,TNPW080510K0BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,303.000000,90.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R312,90.9k 0.1%,TNPW080590K9BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,286.000000,82.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R313,10.0k 0.1%,TNPW080510K0BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,280.000000,84.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R314,1.00k 0.1%,TNPW08051K00BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,293.000000,83.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R315,100k 0.1%,TNPW0805100KBEEA,Vishay,Resistor_SMD:R_0805_2012Metric,293.000000,88.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R316,10.0k 0.1%,TNPW080510K0BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,272.000000,84.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R317,100k 0.1%,TNPW0805100KBEEA,Vishay,Resistor_SMD:R_0805_2012Metric,272.000000,88.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R318,10.0k 0.1%,TNPW080510K0BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,289.000000,36.500000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R319,10.0 0.1%,TNPW080510R0BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,292.500000,29.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R320,2.20 1%,TNPW08052R20FEEA,Vishay,Resistor_SMD:R_0805_2012Metric,292.500000,31.600000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R321,47.0k 0.1%,TNPW080547K0BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,296.000000,26.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R322,4.70k 0.1%,TNPW08054K70BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,263.000000,103.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R323,4.70k 0.1%,TNPW08054K70BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,263.000000,83.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R324,10.0k 0.1%,TNPW080510K0BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,339.000000,160.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R325,117k 0.1%,TNPW0805117KBEEA,Vishay,Resistor_SMD:R_0805_2012Metric,316.000000,87.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R326,24.9k 0.1%,TNPW080524K9BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,316.000000,91.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R327,10.0k 0.1%,TNPW080510K0BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,307.000000,96.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R328,1.00k 0.1%,TNPW08051K00BEEA,Vishay,Resistor_SMD:R_0805_2012Metric,309.000000,100.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R329,100k 0.1%,TNPW0805100KBEEA,Vishay,Resistor_SMD:R_0805_2012Metric,314.000000,103.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R330,100k 0.1%,TNPW0805100KBEEA,Vishay,Resistor_SMD:R_0805_2012Metric,300.000000,102.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R331,690k 0.1%,TNPW0805690KBEEA,Vishay,Resistor_SMD:R_0805_2012Metric,285.000000,58.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+R332,22.0k1% motion-bulk discharge,TNPW120622K0FEEA,Vishay,Resistor_SMD:R_1206_3216Metric,338.000000,49.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+RSH1,0.5mR 1% four-terminal10W@70C terminal,CSS4J-4026R-L500F,Bourns,PMU_RevA:CSS4J_4026_Kelvin,30.000000,45.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+RSH2,0.5mR 1% four-terminal10W@70C terminal,CSS4J-4026R-L500F,Bourns,PMU_RevA:CSS4J_4026_Kelvin,120.000000,45.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+TH20,10k NTC B3380 1%,NCP18XH103F03RB,Murata Manufacturing,Resistor_SMD:R_0603_1608Metric,68.000000,50.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+TH21,10k NTC B3380 1%,NCP18XH103F03RB,Murata Manufacturing,Resistor_SMD:R_0603_1608Metric,164.000000,65.000000,90.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U1,LM74930-Q1,LM74930QRGERQ1,Texas Instruments,PMU_RevA:VQFN_RGE24_4x4_P0.5_EP_FLOAT,65.000000,98.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U2,TPS48110-Q1,TPS48110AQDGXRQ1,Texas Instruments,PMU_RevA:VSSOP_DGX19_3x5.1_P0.5_Missing16,164.000000,94.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U3,TPS26631 eFuse latch-off,TPS26631RGER,Texas Instruments,Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm,40.000000,176.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U4,TPS26631 eFuse latch-off,TPS26631RGER,Texas Instruments,Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm,90.000000,176.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U5,Latched motion SYS undervoltage detector,TLV3011BIDBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-6,192.000000,94.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U10,ESP32-S3-WROOM-1-N8,ESP32-S3-WROOM-1-N8,Espressif Systems,RF_Module:ESP32-S3-WROOM-1,325.000000,280.000000,180.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U11,INA228AIDGSR,INA228AIDGSR,Texas Instruments,Package_SO:MSOP-10_3x3mm_P0.5mm,25.000000,75.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U12,TLV1117LV33DCYR,TLV1117LV33DCYR,Texas Instruments,Package_TO_SOT_SMD:SOT-223-3_TabPin2,288.000000,242.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U13,TCAN1042HGVDRQ1,TCAN1042HGVDRQ1,Texas Instruments,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,43.000000,276.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U14,SN74AHCT1G125DBVR,SN74AHCT1G125DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-5,98.000000,276.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U15,LT3014BIS5#TRPBF,LT3014BIS5#TRPBF,Analog Devices,Package_TO_SOT_SMD:SOT-23-5,28.000000,210.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U16,LTC2954ITS8-1#TRPBF,LTC2954ITS8-1#TRPBF,Analog Devices,Package_TO_SOT_SMD:TSOT-23-8,66.000000,234.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U17,TPS3839G33DBZR,TPS3839G33DBZR,Texas Instruments,Package_TO_SOT_SMD:SOT-23,43.000000,210.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U18,SN74LVC1G74DCUR,SN74LVC1G74DCUR,Texas Instruments,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,43.000000,224.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U19,SN74LVC2G00DCUR,SN74LVC2G00DCUR,Texas Instruments,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,54.000000,224.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U20,SN74LVC1G14DBVR,SN74LVC1G14DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-5,25.000000,236.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U21,LTC6993IS6-1#TRPBF,LTC6993IS6-1#TRPBF,Analog Devices,Package_TO_SOT_SMD:TSOT-23-6,88.000000,246.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U22,SN74LVC1G32DBVR,SN74LVC1G32DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-5,103.000000,234.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U23,SN74LVC1G74DCUR,SN74LVC1G74DCUR,Texas Instruments,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,130.000000,231.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U24,SN74LVC2G00DCUR,SN74LVC2G00DCUR,Texas Instruments,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,118.000000,218.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U25,SN74LVC1G11DBVR,SN74LVC1G11DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-6,140.000000,244.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U26,TPS3839G33DBZR,TPS3839G33DBZR,Texas Instruments,Package_TO_SOT_SMD:SOT-23,304.000000,245.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U27,SN74LVC1G74DCUR,SN74LVC1G74DCUR,Texas Instruments,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,208.000000,195.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U28,SN74LVC1G11DBVR,SN74LVC1G11DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-6,165.000000,190.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U29,SN74LVC1G11DBVR,SN74LVC1G11DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-6,187.000000,218.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U30,"100V LDO, nominal 10V",TPS7A4001DGNR,Texas Instruments,Package_SO:Texas_DGN0008B_VSSOP-8-1EP_3x3mm_P0.65mm_EP2x3mm_Mask1.88x1.98mm_ThermalVias,321.000000,67.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U31,2.5V high-grade reference,REF5025IDR,Texas Instruments,Package_SO:SOIC-8_3.9x4.9mm_P1.27mm,302.000000,73.000000,180.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U32,Independent analog chopper/OV/NTC window,LM339BIPWR,Texas Instruments,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,278.000000,73.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U33,4A source/8A sink driver,UCC27511DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-6,288.000000,31.000000,180.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U34,Isolated analog fault,VOS618A-3T,Vishay,Package_SO:SSOP-4_4.4x2.6mm_P1.27mm,257.000000,99.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U35,Isolated chopper active,VOS618A-3T,Vishay,Package_SO:SSOP-4_4.4x2.6mm_P1.27mm,257.000000,87.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U36,Reference qualification 12..28ms,TPS3808G01DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-6,311.000000,91.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U50,SN74LVC1G11DBVR,SN74LVC1G11DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-6,190.000000,195.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U51,TPS3431SDRBR,TPS3431SDRBR,Texas Instruments,PMU:TI_DRB0008A_3x3mm_EP1.5x1.75,225.000000,224.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U53,SN74LVC1G14DBVR,SN74LVC1G14DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-5,129.000000,210.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U54,SN74LVC1G11DBVR,SN74LVC1G11DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-6,225.000000,183.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U55,SN74LVC1G74DCUR,SN74LVC1G74DCUR,Texas Instruments,Package_SO:VSSOP-8_2.3x2mm_P0.5mm,110.000000,248.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U56,SN74LVC1G14DBVR,SN74LVC1G14DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-5,124.000000,248.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U57,SN74LVC1G11DBVR,SN74LVC1G11DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-6,133.000000,248.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U58,SN74LVC1G32DBVR,SN74LVC1G32DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-5,130.000000,220.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U59,SN74LVC1G14DBVR,SN74LVC1G14DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-5,34.000000,236.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U60,TMUX1511PWR,TMUX1511PWR,Texas Instruments,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,292.000000,196.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U61,SN74LVC1G17DBVR,SN74LVC1G17DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-5,269.000000,243.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U62,SN74LVC1G17DBVR,SN74LVC1G17DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-5,89.000000,218.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U63,SN74LVC1G11DBVR,SN74LVC1G11DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-6,105.000000,218.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U64,SN74LVC1G17DBVR,SN74LVC1G17DBVR,Texas Instruments,Package_TO_SOT_SMD:SOT-23-5,79.000000,234.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False
+U65,TMUX1511PWR,TMUX1511PWR,Texas Instruments,Package_SO:TSSOP-14_4.4x5mm_P0.65mm,289.000000,271.000000,0.000000,top,smd,False,engineering_review_not_order_release,True,True,False

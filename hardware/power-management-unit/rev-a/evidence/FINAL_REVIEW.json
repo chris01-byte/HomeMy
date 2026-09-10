@@ -1,0 +1,1107 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "checked_at_utc": "2026-09-10T18:23:23.137240+00:00",
+    "scope": "Current artifact identity and recorded CAD findings; no new native DRC or physical tests",
+    "cad_package_checks_passed": true,
+    "hardware_tests_performed": false,
+    "fabrication_release": false,
+    "assembly_release": false
+  },
+  "board_sha256": "70bb8eb588f2fc7200f718df0e11659aad3c40c7e9d5652228eb7a58d232065f",
+  "counts": {
+    "source_components": 430,
+    "assembled_components": 430,
+    "xml_components": 421,
+    "omitted_virtual_power_flags": 9,
+    "xml_pin_nodes": 1277,
+    "intentional_nc_pins": 63,
+    "connected_named_nets": 194,
+    "native_footprints": 425,
+    "mechanical_mounting_holes": 4,
+    "physical_pad_instances": 1373,
+    "purchased_pcb_positions": 356,
+    "populated_pcb_positions": 352,
+    "external_bom_rows": 31,
+    "numbered_requirements": 55
+  },
+  "board_state": {
+    "footprints": 425,
+    "copper_layers": 4,
+    "track_and_via_items": 5682,
+    "zones": 48,
+    "unconnected_ratsnest_edges": 0,
+    "pth_drilled_pads": 143,
+    "npth_drilled_pads": 4,
+    "through_vias": 2232,
+    "other_vias": 0,
+    "populated_purchased_positions": 352,
+    "dnp_purchased_positions": 4,
+    "excluded_pcb_features": 69,
+    "source_release": {
+      "project": "HomeMy PMU",
+      "revision": "A",
+      "rev_a_engineering_prototype": true,
+      "rev_b_production": false,
+      "baseline_commit": "1a70bec1de092db8a2d101e67e9e882622992003",
+      "design_state": "cad_complete_engineering_prototype",
+      "schematic_complete": true,
+      "pcb_routed": true,
+      "native_erc_report_complete": true,
+      "native_erc_report_has_zero_findings": true,
+      "native_drc_report_complete": true,
+      "native_drc_report_has_zero_findings": true,
+      "native_drc_unconnected_items": 0,
+      "native_schematic_parity_issues": 0,
+      "native_check_processes_passed": false,
+      "native_check_process_exit_codes": {
+        "erc": 124,
+        "drc": 124
+      },
+      "native_check_process_limitation": "Both complete fresh reports were saved before the portable KiCad processes hung while closing denied Windows registry settings. Timeout 124 is a failed process exit, recorded separately from the zero-finding reports.",
+      "native_check_evidence": "reports/native-checks-both.json",
+      "review_summary": "evidence/FINAL_REVIEW.md",
+      "engineering_outputs": "manufacturing/engineering-preview/EXPORT_MANIFEST.json",
+      "metadata_inheritance_scope": "evidence/release-metadata-scope.json",
+      "prototype_order_review": "not_performed",
+      "fabrication_release": false,
+      "assembly_release": false,
+      "hardware_tests_performed": false,
+      "firmware_implemented": false,
+      "energization_gate_document": "../DESIGN_REVIEW_AND_BRINGUP.md",
+      "production_validation_document": "../REV_B_VALIDATION.md",
+      "battery_energization_gates": [
+        "BAT-004: identify installed external 60 A fuse and verify DC rating and time-current curve",
+        "Complete current-limited motorless bring-up before connecting battery",
+        "Provide reachable service disconnect before actuator testing"
+      ]
+    }
+  },
+  "native_report_findings": {
+    "erc": {
+      "report_complete": true,
+      "violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity_issues": 0,
+      "report_has_zero_findings": true,
+      "process_passed": false,
+      "process_exit_code": 124
+    },
+    "drc": {
+      "report_complete": true,
+      "violations": 0,
+      "unconnected_items": 0,
+      "schematic_parity_issues": 0,
+      "report_has_zero_findings": true,
+      "process_passed": false,
+      "process_exit_code": 124
+    }
+  },
+  "native_check_processes_passed": false,
+  "native_process_limitation": "Both complete fresh reports were saved before the portable KiCad processes hung while closing denied Windows registry settings. Timeout 124 is a failed process exit, recorded separately from the zero-finding reports.",
+  "reviewed_power_paths": 18,
+  "chopper_connected_drain_area_mm2": 689.2196885426985,
+  "errors": [],
+  "verified_hashes": [
+    {
+      "path": "kicad\\02_main_switch_lm74930.kicad_sch",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\03_motion_gate_tps48110.kicad_sch",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\04_brake_chopper_p1.kicad_sch",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\04_brake_chopper_p2.kicad_sch",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\05_pc_and_5v_efuses.kicad_sch",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\06a_aon_wake_p1.kicad_sch",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\06a_aon_wake_p2.kicad_sch",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\06b_motion_latches.kicad_sch",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\06c_esp32_p1.kicad_sch",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\06c_esp32_p2.kicad_sch",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\07_ina228_analog.kicad_sch",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\08_can_led_io.kicad_sch",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\09_connectors_testpoints.kicad_sch",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\09b_star_and_measurements_p1.kicad_sch",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\09b_star_and_measurements_p2.kicad_sch",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\fp-lib-table",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\HomeMy_PMU_RevA.kicad_dru",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\HomeMy_PMU_RevA.kicad_pcb",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\HomeMy_PMU_RevA.kicad_pro",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\HomeMy_PMU_RevA.kicad_sch",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Capacitor_SMD.pretty\\C_0603_1608Metric.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Capacitor_SMD.pretty\\C_0805_2012Metric.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Capacitor_SMD.pretty\\C_1206_3216Metric.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Capacitor_SMD.pretty\\C_1210_3225Metric.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Capacitor_THT.pretty\\CP_Radial_D10.0mm_P5.00mm.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Capacitor_THT.pretty\\CP_Radial_D12.5mm_P5.00mm.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Connector_JST.pretty\\JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Connector_Phoenix_MSTB.pretty\\PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Connector_Phoenix_MSTB.pretty\\PhoenixContact_MSTB_2,5_3-GF-5,08_1x03_P5.08mm_Horizontal_ThreadedFlange.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Connector_PinHeader_2.54mm.pretty\\PinHeader_1x02_P2.54mm_Vertical.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Connector_PinHeader_2.54mm.pretty\\PinHeader_1x03_P2.54mm_Vertical.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Connector_PinHeader_2.54mm.pretty\\PinHeader_1x05_P2.54mm_Vertical.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Diode_SMD.pretty\\D_SMC.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Diode_SMD.pretty\\D_SOD-123F.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Diode_SMD.pretty\\D_SOD-323.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\MountingHole.pretty\\MountingHole_3.2mm_M3.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Package_DFN_QFN.pretty\\Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Package_SO.pretty\\MSOP-10_3x3mm_P0.5mm.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Package_SO.pretty\\SOIC-8_3.9x4.9mm_P1.27mm.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Package_SO.pretty\\SSOP-4_4.4x2.6mm_P1.27mm.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Package_SO.pretty\\Texas_DGN0008B_VSSOP-8-1EP_3x3mm_P0.65mm_EP2x3mm_Mask1.88x1.98mm_ThermalVias.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Package_SO.pretty\\TSSOP-14_4.4x5mm_P0.65mm.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Package_SO.pretty\\VSSOP-8_2.3x2mm_P0.5mm.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Package_TO_SOT_SMD.pretty\\Infineon_PG-HSOF-8-1.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Package_TO_SOT_SMD.pretty\\SOT-223-3_TabPin2.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Package_TO_SOT_SMD.pretty\\SOT-23-5.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Package_TO_SOT_SMD.pretty\\SOT-23-6.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Package_TO_SOT_SMD.pretty\\SOT-23.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Package_TO_SOT_SMD.pretty\\TSOT-23-6.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Package_TO_SOT_SMD.pretty\\TSOT-23-8.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Package_TO_SOT_THT.pretty\\TO-220-2_Vertical.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\PMU.pretty\\TI_DRB0008A_3x3mm_EP1.5x1.75.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\PMU.pretty\\Wurth_7461103.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\PMU_RevA.pretty\\Busbar_Contact_M3_D8.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\PMU_RevA.pretty\\C_Rect_L31.5mm_W13mm_P27.5mm.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\PMU_RevA.pretty\\CCPAK1212_SOT8000A.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\PMU_RevA.pretty\\CSS4J_4026_Kelvin.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\PMU_RevA.pretty\\NetTie_Logic_2.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\PMU_RevA.pretty\\NetTie_Power_2.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\PMU_RevA.pretty\\PTVS1_DFN8x6.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\PMU_RevA.pretty\\VQFN_RGE24_4x4_P0.5_EP_FLOAT.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\PMU_RevA.pretty\\VSSOP_DGX19_3x5.1_P0.5_Missing16.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Resistor_SMD.pretty\\R_0603_1608Metric.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Resistor_SMD.pretty\\R_0805_2012Metric.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Resistor_SMD.pretty\\R_1206_3216Metric.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\Resistor_SMD.pretty\\R_2010_5025Metric.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\RF_Module.pretty\\ESP32-S3-WROOM-1.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\libraries\\TestPoint.pretty\\TestPoint_Pad_D2.0mm.kicad_mod",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\PMU_RevA.kicad_sym",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\sym-lib-table",
+      "context": "native check input",
+      "matches": true
+    },
+    {
+      "path": "reports\\erc-final.json",
+      "context": "erc native report",
+      "matches": true
+    },
+    {
+      "path": "reports\\drc-final.json",
+      "context": "drc native report",
+      "matches": true
+    },
+    {
+      "path": "..\\REQUIREMENTS_TRACEABILITY.md",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "..\\requirements.yaml",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "design\\assembled-parts.json",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "design\\chopper-parts.json",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "design\\critical-alternatives.json",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "design\\integration-parts.json",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "design\\power-parts.json",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "design\\wake-io-parts.json",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "evidence\\chopper\\cross-review-sources.json",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "evidence\\chopper\\source_manifest.json",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "evidence\\netlist-after-schematic-readability.xml",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "evidence\\power\\sources.json",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "evidence\\wake-io-sources.json",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\HomeMy_PMU_RevA.kicad_pcb",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\MECHANICAL_CATALOG_BOM.json",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\REV_A_BOM.csv",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\REV_A_BOM.json",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\REV_A_BOM_MANIFEST.json",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\REV_A_EXTERNAL_BOM.csv",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\REV_A_EXTERNAL_BOM.json",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\busbar-pcb-interface.json",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "release.json",
+      "context": "electrical parity input",
+      "matches": true
+    },
+    {
+      "path": "design\\assembled-parts.json",
+      "context": "BOM input",
+      "matches": true
+    },
+    {
+      "path": "design\\chopper-parts.json",
+      "context": "BOM input",
+      "matches": true
+    },
+    {
+      "path": "design\\critical-alternatives.json",
+      "context": "BOM input",
+      "matches": true
+    },
+    {
+      "path": "design\\integration-parts.json",
+      "context": "BOM input",
+      "matches": true
+    },
+    {
+      "path": "design\\power-parts.json",
+      "context": "BOM input",
+      "matches": true
+    },
+    {
+      "path": "design\\wake-io-parts.json",
+      "context": "BOM input",
+      "matches": true
+    },
+    {
+      "path": "evidence\\chopper\\cross-review-sources.json",
+      "context": "BOM input",
+      "matches": true
+    },
+    {
+      "path": "evidence\\chopper\\source_manifest.json",
+      "context": "BOM input",
+      "matches": true
+    },
+    {
+      "path": "evidence\\power\\sources.json",
+      "context": "BOM input",
+      "matches": true
+    },
+    {
+      "path": "evidence\\wake-io-sources.json",
+      "context": "BOM input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\MECHANICAL_CATALOG_BOM.json",
+      "context": "BOM input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\busbar-pcb-interface.json",
+      "context": "BOM input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\REV_A_BOM.csv",
+      "context": "BOM output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\REV_A_BOM.json",
+      "context": "BOM output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\REV_A_EXTERNAL_BOM.csv",
+      "context": "BOM output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\REV_A_EXTERNAL_BOM.json",
+      "context": "BOM output",
+      "matches": true
+    },
+    {
+      "path": "design\\assembled-parts.json",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "design\\chopper-parts.json",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "design\\critical-alternatives.json",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "design\\integration-parts.json",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "design\\power-parts.json",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "design\\wake-io-parts.json",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "evidence\\chopper\\cross-review-sources.json",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "evidence\\chopper\\source_manifest.json",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "evidence\\power\\sources.json",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "evidence\\wake-io-sources.json",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "kicad\\HomeMy_PMU_RevA.kicad_pcb",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\MECHANICAL_CATALOG_BOM.json",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\REV_A_BOM.csv",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\REV_A_BOM.json",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\REV_A_BOM_MANIFEST.json",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\REV_A_EXTERNAL_BOM.csv",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\REV_A_EXTERNAL_BOM.json",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\busbar-pcb-interface.json",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "release.json",
+      "context": "manufacturing input",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\bom\\REV_A_BOM.csv",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\bom\\REV_A_BOM.json",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\bom\\REV_A_EXTERNAL_BOM.csv",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\bom\\REV_A_EXTERNAL_BOM.json",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\bom\\REV_A_BOM_MANIFEST.json",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\gerbers\\HomeMy_PMU_RevA-F_Cu.gbr",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\gerbers\\HomeMy_PMU_RevA-In1_Cu.gbr",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\gerbers\\HomeMy_PMU_RevA-In2_Cu.gbr",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\gerbers\\HomeMy_PMU_RevA-B_Cu.gbr",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\gerbers\\HomeMy_PMU_RevA-F_Mask.gbr",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\gerbers\\HomeMy_PMU_RevA-B_Mask.gbr",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\gerbers\\HomeMy_PMU_RevA-F_SilkS.gbr",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\gerbers\\HomeMy_PMU_RevA-B_SilkS.gbr",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\gerbers\\HomeMy_PMU_RevA-F_Paste.gbr",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\gerbers\\HomeMy_PMU_RevA-B_Paste.gbr",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\gerbers\\HomeMy_PMU_RevA-Edge_Cuts.gbr",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\gerbers\\HomeMy_PMU_RevA.gbrjob",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\drill\\HomeMy_PMU_RevA-drill-report.txt",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\drill\\HomeMy_PMU_RevA-PTH.drl",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\drill\\HomeMy_PMU_RevA-PTH-drl_map.svg",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\drill\\HomeMy_PMU_RevA-NPTH.drl",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\drill\\HomeMy_PMU_RevA-NPTH-drl_map.svg",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\assembly\\HomeMy_PMU_RevA-assembly-front.svg",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\assembly\\HomeMy_PMU_RevA-assembly-back.svg",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\assembly\\REV_A_positions_all_populated.csv",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\assembly\\REV_A_positions_smd_populated.csv",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\assembly\\REV_A_positions_manual_populated.csv",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\assembly\\REV_A_positions_dnp_review.csv",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\assembly\\REV_A_excluded_pcb_features.json",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\README.md",
+      "context": "manufacturing output",
+      "matches": true
+    },
+    {
+      "path": "scripts\\export_manufacturing.py",
+      "context": "manufacturing exporter",
+      "matches": true
+    },
+    {
+      "path": "assembly\\schematic\\HomeMy_PMU_RevA-02_main_switch_lm74930.svg",
+      "context": "rendered source",
+      "matches": true
+    },
+    {
+      "path": "assembly\\main-schematic-review.png",
+      "context": "rendered image",
+      "matches": true
+    },
+    {
+      "path": "reports\\HomeMy_PMU_RevA-top-copper.svg",
+      "context": "rendered source",
+      "matches": true
+    },
+    {
+      "path": "reports\\top-copper-review.png",
+      "context": "rendered image",
+      "matches": true
+    },
+    {
+      "path": "reports\\HomeMy_PMU_RevA-inner1-copper.svg",
+      "context": "rendered source",
+      "matches": true
+    },
+    {
+      "path": "reports\\inner1-copper-review.png",
+      "context": "rendered image",
+      "matches": true
+    },
+    {
+      "path": "reports\\HomeMy_PMU_RevA-inner2-copper.svg",
+      "context": "rendered source",
+      "matches": true
+    },
+    {
+      "path": "reports\\inner2-copper-review.png",
+      "context": "rendered image",
+      "matches": true
+    },
+    {
+      "path": "reports\\HomeMy_PMU_RevA-bottom-copper.svg",
+      "context": "rendered source",
+      "matches": true
+    },
+    {
+      "path": "reports\\bottom-copper-review.png",
+      "context": "rendered image",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\assembly\\HomeMy_PMU_RevA-assembly-front.svg",
+      "context": "rendered source",
+      "matches": true
+    },
+    {
+      "path": "reports\\assembly-front-review.png",
+      "context": "rendered image",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\assembly\\HomeMy_PMU_RevA-assembly-back.svg",
+      "context": "rendered source",
+      "matches": true
+    },
+    {
+      "path": "reports\\assembly-back-review.png",
+      "context": "rendered image",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\drill\\HomeMy_PMU_RevA-PTH-drl_map.svg",
+      "context": "rendered source",
+      "matches": true
+    },
+    {
+      "path": "reports\\drill-PTH-review.png",
+      "context": "rendered image",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\engineering-preview\\drill\\HomeMy_PMU_RevA-NPTH-drl_map.svg",
+      "context": "rendered source",
+      "matches": true
+    },
+    {
+      "path": "reports\\drill-NPTH-review.png",
+      "context": "rendered image",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\BUSBAR_TOP_VIEW_1to1.svg",
+      "context": "rendered source",
+      "matches": true
+    },
+    {
+      "path": "reports\\busbar-mechanical-review.png",
+      "context": "rendered image",
+      "matches": true
+    },
+    {
+      "path": "manufacturing\\ASSEMBLY_ORIENTATION.svg",
+      "context": "rendered source",
+      "matches": true
+    },
+    {
+      "path": "reports\\assembly-orientation-review.png",
+      "context": "rendered image",
+      "matches": true
+    },
+    {
+      "path": "reports\\erc-final.json",
+      "context": "reviewed rule/report snapshot",
+      "matches": true
+    },
+    {
+      "path": "reports\\drc-final.json",
+      "context": "reviewed rule/report snapshot",
+      "matches": true
+    },
+    {
+      "path": "evidence\\erc-after-schematic-readability.json",
+      "context": "reviewed rule/report snapshot",
+      "matches": true
+    },
+    {
+      "path": "reports\\drc-initial.json",
+      "context": "reviewed rule/report snapshot",
+      "matches": true
+    },
+    {
+      "path": "reports\\drc-placement.json",
+      "context": "reviewed rule/report snapshot",
+      "matches": true
+    },
+    {
+      "path": "reports\\drc-upper-power.json",
+      "context": "reviewed rule/report snapshot",
+      "matches": true
+    },
+    {
+      "path": "kicad\\HomeMy_PMU_RevA.kicad_pcb",
+      "context": "final unchanged board",
+      "matches": true
+    }
+  ],
+  "inputs": [
+    {
+      "path": "evidence/filled-power-copper-review.json",
+      "sha256": "2b444335ccbb10d991e4ae1baf8bc4dfa95a3ee488483e44ecbb2ff9048abb6e"
+    },
+    {
+      "path": "evidence/placement-access-review.json",
+      "sha256": "71dc9ab56d6a6e67c62f8e525da02d3bbc08e3f2d4a7cf5eb3538a007c667c12"
+    },
+    {
+      "path": "evidence/reviewed-rule-configuration.json",
+      "sha256": "52dd55076ea3b3a961df08a92a8a679a294249180564aa9a97947a84159c1f0f"
+    },
+    {
+      "path": "evidence/rule-review-report-snapshot.json",
+      "sha256": "7ed334b481c9744d84411ac57619f5039d7f80c760a3199647f317cce0ab232f"
+    },
+    {
+      "path": "manufacturing/REV_A_BOM_MANIFEST.json",
+      "sha256": "9d366b78dd644e64c99c234f8df062fc2bfab96deddddd2d2624d9746611bc77"
+    },
+    {
+      "path": "manufacturing/engineering-preview/EXPORT_MANIFEST.json",
+      "sha256": "e29992a90babc735d3c9d3a1bddd7ca8d4c530d70a9cd40c98d2053c85661b39"
+    },
+    {
+      "path": "release.json",
+      "sha256": "aeffab8fc513734016e588c2bab3c76a2d8b11c1c1ccdccc1fbaa60d6b19184e"
+    },
+    {
+      "path": "reports/assembly-annotation-application.json",
+      "sha256": "9fe6b2843ffd808715e4b1b323945ca229e5ce82b1883f86c2a2f1ab50dae90e"
+    },
+    {
+      "path": "reports/critical-routing-geometry.json",
+      "sha256": "d3c05928bc8011290ed8f57b717807b397cdea7c2239756d4e2e7da3c9e2f554"
+    },
+    {
+      "path": "reports/electrical-parity-audit.json",
+      "sha256": "30663f134d19e72d8421cad952ffa07bed7bcb3bdc8bab30086f72fa7ed1f838"
+    },
+    {
+      "path": "reports/native-checks-both.json",
+      "sha256": "ffd1840d2a9d3368eaf7f90e31341f81cb8d8b2f9706ba80fa5f8eff90822b6a"
+    },
+    {
+      "path": "reports/rendered-review-manifest.json",
+      "sha256": "2b1f035c7dbfc7687b00b348b89877ea0538fd6cda8e88f3efd1db56721a1a7a"
+    }
+  ],
+  "auditor": {
+    "path": "scripts/audit_final_package.py",
+    "sha256": "f93c7b0a36b75f74ce7fccf915618c591fbd15cff6342de193f77b5d054ca375"
+  }
+}

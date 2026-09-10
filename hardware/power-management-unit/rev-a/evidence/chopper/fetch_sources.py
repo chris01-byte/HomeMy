@@ -1,8 +1,9 @@
 """Retrieve public manufacturer evidence and preserve a hash manifest."""
 from pathlib import Path
-import concurrent.futures, hashlib, json, urllib.request
+import argparse, concurrent.futures, hashlib, json, urllib.request
 
 ROOT = Path(__file__).parent
+PROTOTYPE = {'rev_a_engineering_prototype': True, 'rev_b_production': False}
 SOURCES = {
     'kyc.pdf': 'https://www.chemi-con.co.jp/products/relatedfiles/capacitor/catalog/KYCLL-e.PDF',
     'tnpw_e3.pdf': 'https://www.vishay.com/docs/28758/tnpw_e3.pdf',
@@ -29,12 +30,27 @@ def fetch(item):
         if not body.startswith(b'%PDF'):
             raise ValueError('Not a PDF response')
         (ROOT / name).write_bytes(body)
-        return {'file': name, 'url': url, 'sha256': hashlib.sha256(body).hexdigest(), 'status': 'retrieved', 'retrieved': '2026-09-10'}
+        return {**PROTOTYPE, 'file': name, 'url': url, 'sha256': hashlib.sha256(body).hexdigest(), 'status': 'retrieved', 'retrieved': '2026-09-10'}
     except Exception as exc:
-        return {'file': name, 'url': url, 'status': 'failed', 'error': str(exc)}
+        return {**PROTOTYPE, 'file': name, 'url': url, 'status': 'failed', 'error': str(exc)}
 
 if __name__ == '__main__':
-    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
-        results = list(pool.map(fetch, SOURCES.items()))
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--manifest-only', action='store_true', help='Normalize authored metadata without network retrieval.')
+    args=parser.parse_args()
+    manifest=ROOT/'source_manifest.json'
+    previous=json.loads(manifest.read_text(encoding='utf-8')) if manifest.exists() else []
+    if args.manifest_only:
+        results=previous
+    else:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+            results = list(pool.map(fetch, SOURCES.items()))
+        # Preserve independently captured primary-source records that are not
+        # PDF downloads in this script's source table.
+        results.extend(row for row in previous if row.get('file') not in SOURCES)
+    for row in results:
+        row.update(PROTOTYPE)
+        if row.get('status')=='retrieved_primary_text_capture' and (ROOT/row['file']).exists():
+            row['sha256']=hashlib.sha256((ROOT/row['file']).read_bytes()).hexdigest()
     (ROOT / 'source_manifest.json').write_text(json.dumps(results, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(results, indent=2))

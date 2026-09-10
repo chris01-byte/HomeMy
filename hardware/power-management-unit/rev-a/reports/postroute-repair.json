@@ -1,0 +1,116 @@
+{
+  "rev_a_engineering_prototype": true,
+  "rev_b_production": false,
+  "board_sha256_before": "2b0b536c4ca8584d6b3c897d1839890b47bfda9848bba923a7e468b455220790",
+  "board_sha256_after": "23942d5aeb676c09ae204b41b27cd00d62afc5ee061476f4f3248ab24c2d3b59",
+  "added_locked_segments": [
+    {
+      "net": "LIFT_N",
+      "start": [
+        349,
+        85.92
+      ],
+      "end": [
+        341.5,
+        85.92
+      ],
+      "width_mm": 3,
+      "layer": "In1.Cu"
+    },
+    {
+      "net": "LIFT_N",
+      "start": [
+        341.5,
+        85.92
+      ],
+      "end": [
+        341.5,
+        112
+      ],
+      "width_mm": 8,
+      "layer": "In1.Cu"
+    },
+    {
+      "net": "LIFT_N",
+      "start": [
+        341.5,
+        112
+      ],
+      "end": [
+        310,
+        112
+      ],
+      "width_mm": 8,
+      "layer": "In1.Cu"
+    },
+    {
+      "net": "LIFT_N",
+      "start": [
+        310,
+        112
+      ],
+      "end": [
+        310,
+        122
+      ],
+      "width_mm": 8,
+      "layer": "In1.Cu"
+    },
+    {
+      "net": "LIFT_N",
+      "start": [
+        349,
+        85.92
+      ],
+      "end": [
+        341.5,
+        85.92
+      ],
+      "width_mm": 3,
+      "layer": "In2.Cu"
+    },
+    {
+      "net": "LIFT_N",
+      "start": [
+        341.5,
+        85.92
+      ],
+      "end": [
+        341.5,
+        112
+      ],
+      "width_mm": 8,
+      "layer": "In2.Cu"
+    },
+    {
+      "net": "LIFT_N",
+      "start": [
+        341.5,
+        112
+      ],
+      "end": [
+        310,
+        112
+      ],
+      "width_mm": 8,
+      "layer": "In2.Cu"
+    },
+    {
+      "net": "LIFT_N",
+      "start": [
+        310,
+        112
+      ],
+      "end": [
+        310,
+        122
+      ],
+      "width_mm": 8,
+      "layer": "In2.Cu"
+    }
+  ],
+  "removed_router_dead_stubs": [],
+  "removed_signal_items_by_net": {},
+  "collision_basis": [],
+  "required_next_step": "Native DRC, fresh native DSN routing, import/refill and final native DRC."
+}

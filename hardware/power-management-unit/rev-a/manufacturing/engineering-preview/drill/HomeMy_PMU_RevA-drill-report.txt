@@ -1,0 +1,33 @@
+Drill report for HomeMy_PMU_RevA.kicad_pcb
+Created on 2026-09-10T20:17:36
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  In1.Cu                    in1
+    L3 :  In2.Cu                    in2
+    L4 :  B.Cu                      back
+
+
+Drill file 'HomeMy_PMU_RevA-PTH.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0.200mm  0.0079"  (18 holes))
+    T2  0.300mm  0.0118"  (554 holes))
+    T3  0.400mm  0.0157"  (1678 holes))
+    T4  1.000mm  0.0394"  (15 holes))
+    T5  1.100mm  0.0433"  (6 holes))
+    T6  1.200mm  0.0472"  (4 holes))
+    T7  1.400mm  0.0551"  (21 holes))
+    T8  1.475mm  0.0581"  (48 holes))
+    T9  3.200mm  0.1260"  (31 holes))
+
+    Total plated holes count 2375
+
+
+Drill file 'HomeMy_PMU_RevA-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+    T1  3.200mm  0.1260"  (4 holes))
+
+    Total unplated holes count 4

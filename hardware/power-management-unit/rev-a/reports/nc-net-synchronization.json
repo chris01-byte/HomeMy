@@ -1,0 +1,522 @@
+{
+  "rev_a_engineering_prototype": true,
+  "rev_b_production": false,
+  "state": "engineering_singleton_nc_net_identity_sync",
+  "dry_run": false,
+  "netlist_path": "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\evidence\\netlist-after-schematic-readability.xml",
+  "netlist_sha256": "ed92da72b1e56aa502f73fc0ac95be6822976902f3fa1c9e9def09e952de039a",
+  "source_null_pin_count": 63,
+  "singleton_nc_net_count": 63,
+  "physical_pad_instances": 63,
+  "pads_requiring_assignment": 63,
+  "nets_added": [
+    "unconnected-(U1-EP_FLOAT-Pad25)",
+    "unconnected-(U1-IMON-Pad10)",
+    "unconnected-(U1-NC-Pad17)",
+    "unconnected-(U1-NC-Pad21)",
+    "unconnected-(U1-NC-Pad8)",
+    "unconnected-(U1-SW-Pad3)",
+    "unconnected-(U10-IO15-Pad8)",
+    "unconnected-(U10-IO19_USB_DN-Pad13)",
+    "unconnected-(U10-IO20_USB_DP-Pad14)",
+    "unconnected-(U10-IO3_STRAP-Pad15)",
+    "unconnected-(U10-IO45_STRAP-Pad26)",
+    "unconnected-(U10-IO46_STRAP-Pad16)",
+    "unconnected-(U10-IO47-Pad24)",
+    "unconnected-(U10-IO48-Pad25)",
+    "unconnected-(U10-IO8-Pad12)",
+    "unconnected-(U15-NC-Pad3)",
+    "unconnected-(U18-Q_N-Pad3)",
+    "unconnected-(U2-NC-Pad11)",
+    "unconnected-(U20-NC-Pad1)",
+    "unconnected-(U24-2Y-Pad3)",
+    "unconnected-(U27-Q_N-Pad3)",
+    "unconnected-(U3-B_GATE-Pad3)",
+    "unconnected-(U3-DRV-Pad4)",
+    "unconnected-(U3-IMON-Pad13)",
+    "unconnected-(U3-MODE-Pad11)",
+    "unconnected-(U3-NC-Pad19)",
+    "unconnected-(U3-NC-Pad20)",
+    "unconnected-(U3-NC-Pad21)",
+    "unconnected-(U3-NC-Pad22)",
+    "unconnected-(U3-NC-Pad23)",
+    "unconnected-(U3-NC-Pad24)",
+    "unconnected-(U30-NC-Pad3)",
+    "unconnected-(U30-NC-Pad6)",
+    "unconnected-(U30-NC-Pad7)",
+    "unconnected-(U31-DNC-Pad1)",
+    "unconnected-(U31-DNC-Pad8)",
+    "unconnected-(U31-NC-Pad7)",
+    "unconnected-(U31-TEMP-Pad3)",
+    "unconnected-(U31-TRIM_NR-Pad5)",
+    "unconnected-(U36-CT-Pad4)",
+    "unconnected-(U4-B_GATE-Pad3)",
+    "unconnected-(U4-DRV-Pad4)",
+    "unconnected-(U4-IMON-Pad13)",
+    "unconnected-(U4-MODE-Pad11)",
+    "unconnected-(U4-NC-Pad19)",
+    "unconnected-(U4-NC-Pad20)",
+    "unconnected-(U4-NC-Pad21)",
+    "unconnected-(U4-NC-Pad22)",
+    "unconnected-(U4-NC-Pad23)",
+    "unconnected-(U4-NC-Pad24)",
+    "unconnected-(U51-CWD-Pad2)",
+    "unconnected-(U51-ENOUT-Pad8)",
+    "unconnected-(U53-NC-Pad1)",
+    "unconnected-(U55-Q_N-Pad3)",
+    "unconnected-(U56-NC-Pad1)",
+    "unconnected-(U59-NC-Pad1)",
+    "unconnected-(U61-NC-Pad1)",
+    "unconnected-(U62-NC-Pad1)",
+    "unconnected-(U64-NC-Pad1)",
+    "unconnected-(U65-D3-Pad8)",
+    "unconnected-(U65-D4-Pad11)",
+    "unconnected-(U65-S3-Pad9)",
+    "unconnected-(U65-S4-Pad12)"
+  ],
+  "assignments": [
+    {
+      "ref": "U1",
+      "pin": "10",
+      "from_net": "",
+      "to_net": "unconnected-(U1-IMON-Pad10)",
+      "changed": true
+    },
+    {
+      "ref": "U1",
+      "pin": "17",
+      "from_net": "",
+      "to_net": "unconnected-(U1-NC-Pad17)",
+      "changed": true
+    },
+    {
+      "ref": "U1",
+      "pin": "21",
+      "from_net": "",
+      "to_net": "unconnected-(U1-NC-Pad21)",
+      "changed": true
+    },
+    {
+      "ref": "U1",
+      "pin": "25",
+      "from_net": "",
+      "to_net": "unconnected-(U1-EP_FLOAT-Pad25)",
+      "changed": true
+    },
+    {
+      "ref": "U1",
+      "pin": "3",
+      "from_net": "",
+      "to_net": "unconnected-(U1-SW-Pad3)",
+      "changed": true
+    },
+    {
+      "ref": "U1",
+      "pin": "8",
+      "from_net": "",
+      "to_net": "unconnected-(U1-NC-Pad8)",
+      "changed": true
+    },
+    {
+      "ref": "U10",
+      "pin": "12",
+      "from_net": "",
+      "to_net": "unconnected-(U10-IO8-Pad12)",
+      "changed": true
+    },
+    {
+      "ref": "U10",
+      "pin": "13",
+      "from_net": "",
+      "to_net": "unconnected-(U10-IO19_USB_DN-Pad13)",
+      "changed": true
+    },
+    {
+      "ref": "U10",
+      "pin": "14",
+      "from_net": "",
+      "to_net": "unconnected-(U10-IO20_USB_DP-Pad14)",
+      "changed": true
+    },
+    {
+      "ref": "U10",
+      "pin": "15",
+      "from_net": "",
+      "to_net": "unconnected-(U10-IO3_STRAP-Pad15)",
+      "changed": true
+    },
+    {
+      "ref": "U10",
+      "pin": "16",
+      "from_net": "",
+      "to_net": "unconnected-(U10-IO46_STRAP-Pad16)",
+      "changed": true
+    },
+    {
+      "ref": "U10",
+      "pin": "24",
+      "from_net": "",
+      "to_net": "unconnected-(U10-IO47-Pad24)",
+      "changed": true
+    },
+    {
+      "ref": "U10",
+      "pin": "25",
+      "from_net": "",
+      "to_net": "unconnected-(U10-IO48-Pad25)",
+      "changed": true
+    },
+    {
+      "ref": "U10",
+      "pin": "26",
+      "from_net": "",
+      "to_net": "unconnected-(U10-IO45_STRAP-Pad26)",
+      "changed": true
+    },
+    {
+      "ref": "U10",
+      "pin": "8",
+      "from_net": "",
+      "to_net": "unconnected-(U10-IO15-Pad8)",
+      "changed": true
+    },
+    {
+      "ref": "U15",
+      "pin": "3",
+      "from_net": "",
+      "to_net": "unconnected-(U15-NC-Pad3)",
+      "changed": true
+    },
+    {
+      "ref": "U18",
+      "pin": "3",
+      "from_net": "",
+      "to_net": "unconnected-(U18-Q_N-Pad3)",
+      "changed": true
+    },
+    {
+      "ref": "U2",
+      "pin": "11",
+      "from_net": "",
+      "to_net": "unconnected-(U2-NC-Pad11)",
+      "changed": true
+    },
+    {
+      "ref": "U20",
+      "pin": "1",
+      "from_net": "",
+      "to_net": "unconnected-(U20-NC-Pad1)",
+      "changed": true
+    },
+    {
+      "ref": "U24",
+      "pin": "3",
+      "from_net": "",
+      "to_net": "unconnected-(U24-2Y-Pad3)",
+      "changed": true
+    },
+    {
+      "ref": "U27",
+      "pin": "3",
+      "from_net": "",
+      "to_net": "unconnected-(U27-Q_N-Pad3)",
+      "changed": true
+    },
+    {
+      "ref": "U3",
+      "pin": "11",
+      "from_net": "",
+      "to_net": "unconnected-(U3-MODE-Pad11)",
+      "changed": true
+    },
+    {
+      "ref": "U3",
+      "pin": "13",
+      "from_net": "",
+      "to_net": "unconnected-(U3-IMON-Pad13)",
+      "changed": true
+    },
+    {
+      "ref": "U3",
+      "pin": "19",
+      "from_net": "",
+      "to_net": "unconnected-(U3-NC-Pad19)",
+      "changed": true
+    },
+    {
+      "ref": "U3",
+      "pin": "20",
+      "from_net": "",
+      "to_net": "unconnected-(U3-NC-Pad20)",
+      "changed": true
+    },
+    {
+      "ref": "U3",
+      "pin": "21",
+      "from_net": "",
+      "to_net": "unconnected-(U3-NC-Pad21)",
+      "changed": true
+    },
+    {
+      "ref": "U3",
+      "pin": "22",
+      "from_net": "",
+      "to_net": "unconnected-(U3-NC-Pad22)",
+      "changed": true
+    },
+    {
+      "ref": "U3",
+      "pin": "23",
+      "from_net": "",
+      "to_net": "unconnected-(U3-NC-Pad23)",
+      "changed": true
+    },
+    {
+      "ref": "U3",
+      "pin": "24",
+      "from_net": "",
+      "to_net": "unconnected-(U3-NC-Pad24)",
+      "changed": true
+    },
+    {
+      "ref": "U3",
+      "pin": "3",
+      "from_net": "",
+      "to_net": "unconnected-(U3-B_GATE-Pad3)",
+      "changed": true
+    },
+    {
+      "ref": "U3",
+      "pin": "4",
+      "from_net": "",
+      "to_net": "unconnected-(U3-DRV-Pad4)",
+      "changed": true
+    },
+    {
+      "ref": "U30",
+      "pin": "3",
+      "from_net": "",
+      "to_net": "unconnected-(U30-NC-Pad3)",
+      "changed": true
+    },
+    {
+      "ref": "U30",
+      "pin": "6",
+      "from_net": "",
+      "to_net": "unconnected-(U30-NC-Pad6)",
+      "changed": true
+    },
+    {
+      "ref": "U30",
+      "pin": "7",
+      "from_net": "",
+      "to_net": "unconnected-(U30-NC-Pad7)",
+      "changed": true
+    },
+    {
+      "ref": "U31",
+      "pin": "1",
+      "from_net": "",
+      "to_net": "unconnected-(U31-DNC-Pad1)",
+      "changed": true
+    },
+    {
+      "ref": "U31",
+      "pin": "3",
+      "from_net": "",
+      "to_net": "unconnected-(U31-TEMP-Pad3)",
+      "changed": true
+    },
+    {
+      "ref": "U31",
+      "pin": "5",
+      "from_net": "",
+      "to_net": "unconnected-(U31-TRIM_NR-Pad5)",
+      "changed": true
+    },
+    {
+      "ref": "U31",
+      "pin": "7",
+      "from_net": "",
+      "to_net": "unconnected-(U31-NC-Pad7)",
+      "changed": true
+    },
+    {
+      "ref": "U31",
+      "pin": "8",
+      "from_net": "",
+      "to_net": "unconnected-(U31-DNC-Pad8)",
+      "changed": true
+    },
+    {
+      "ref": "U36",
+      "pin": "4",
+      "from_net": "",
+      "to_net": "unconnected-(U36-CT-Pad4)",
+      "changed": true
+    },
+    {
+      "ref": "U4",
+      "pin": "11",
+      "from_net": "",
+      "to_net": "unconnected-(U4-MODE-Pad11)",
+      "changed": true
+    },
+    {
+      "ref": "U4",
+      "pin": "13",
+      "from_net": "",
+      "to_net": "unconnected-(U4-IMON-Pad13)",
+      "changed": true
+    },
+    {
+      "ref": "U4",
+      "pin": "19",
+      "from_net": "",
+      "to_net": "unconnected-(U4-NC-Pad19)",
+      "changed": true
+    },
+    {
+      "ref": "U4",
+      "pin": "20",
+      "from_net": "",
+      "to_net": "unconnected-(U4-NC-Pad20)",
+      "changed": true
+    },
+    {
+      "ref": "U4",
+      "pin": "21",
+      "from_net": "",
+      "to_net": "unconnected-(U4-NC-Pad21)",
+      "changed": true
+    },
+    {
+      "ref": "U4",
+      "pin": "22",
+      "from_net": "",
+      "to_net": "unconnected-(U4-NC-Pad22)",
+      "changed": true
+    },
+    {
+      "ref": "U4",
+      "pin": "23",
+      "from_net": "",
+      "to_net": "unconnected-(U4-NC-Pad23)",
+      "changed": true
+    },
+    {
+      "ref": "U4",
+      "pin": "24",
+      "from_net": "",
+      "to_net": "unconnected-(U4-NC-Pad24)",
+      "changed": true
+    },
+    {
+      "ref": "U4",
+      "pin": "3",
+      "from_net": "",
+      "to_net": "unconnected-(U4-B_GATE-Pad3)",
+      "changed": true
+    },
+    {
+      "ref": "U4",
+      "pin": "4",
+      "from_net": "",
+      "to_net": "unconnected-(U4-DRV-Pad4)",
+      "changed": true
+    },
+    {
+      "ref": "U51",
+      "pin": "2",
+      "from_net": "",
+      "to_net": "unconnected-(U51-CWD-Pad2)",
+      "changed": true
+    },
+    {
+      "ref": "U51",
+      "pin": "8",
+      "from_net": "",
+      "to_net": "unconnected-(U51-ENOUT-Pad8)",
+      "changed": true
+    },
+    {
+      "ref": "U53",
+      "pin": "1",
+      "from_net": "",
+      "to_net": "unconnected-(U53-NC-Pad1)",
+      "changed": true
+    },
+    {
+      "ref": "U55",
+      "pin": "3",
+      "from_net": "",
+      "to_net": "unconnected-(U55-Q_N-Pad3)",
+      "changed": true
+    },
+    {
+      "ref": "U56",
+      "pin": "1",
+      "from_net": "",
+      "to_net": "unconnected-(U56-NC-Pad1)",
+      "changed": true
+    },
+    {
+      "ref": "U59",
+      "pin": "1",
+      "from_net": "",
+      "to_net": "unconnected-(U59-NC-Pad1)",
+      "changed": true
+    },
+    {
+      "ref": "U61",
+      "pin": "1",
+      "from_net": "",
+      "to_net": "unconnected-(U61-NC-Pad1)",
+      "changed": true
+    },
+    {
+      "ref": "U62",
+      "pin": "1",
+      "from_net": "",
+      "to_net": "unconnected-(U62-NC-Pad1)",
+      "changed": true
+    },
+    {
+      "ref": "U64",
+      "pin": "1",
+      "from_net": "",
+      "to_net": "unconnected-(U64-NC-Pad1)",
+      "changed": true
+    },
+    {
+      "ref": "U65",
+      "pin": "11",
+      "from_net": "",
+      "to_net": "unconnected-(U65-D4-Pad11)",
+      "changed": true
+    },
+    {
+      "ref": "U65",
+      "pin": "12",
+      "from_net": "",
+      "to_net": "unconnected-(U65-S4-Pad12)",
+      "changed": true
+    },
+    {
+      "ref": "U65",
+      "pin": "8",
+      "from_net": "",
+      "to_net": "unconnected-(U65-D3-Pad8)",
+      "changed": true
+    },
+    {
+      "ref": "U65",
+      "pin": "9",
+      "from_net": "",
+      "to_net": "unconnected-(U65-S3-Pad9)",
+      "changed": true
+    }
+  ],
+  "validation": "Each XML net has exactly one node, source pin is null, physical pad exists, and no other pad/route/zone uses the target net",
+  "erc_or_drc_claim": false
+}

@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false
+  },
+  "rho100_ohm_m": 2.2660256e-08,
+  "models": [
+    {
+      "item": "BB1",
+      "length_mm": 72,
+      "width_mm": 12,
+      "thickness_mm": 2,
+      "section_mm2": 24,
+      "R_100C_ohm": 6.7980768e-05,
+      "loss_W": {
+        "25": 0.04248798,
+        "50": 0.16995192,
+        "60": 0.2447307648,
+        "150": 1.5295672800000002
+      },
+      "adiabatic_150A_3s_delta_K": 0.7697990346706866
+    },
+    {
+      "item": "BB2",
+      "length_mm": 72,
+      "width_mm": 10,
+      "thickness_mm": 2,
+      "section_mm2": 20,
+      "R_100C_ohm": 8.15769216e-05,
+      "loss_W": {
+        "25": 0.050985576000000005,
+        "50": 0.20394230400000002,
+        "60": 0.29367691776,
+        "150": 1.835480736
+      },
+      "adiabatic_150A_3s_delta_K": 1.1085106099257884
+    },
+    {
+      "item": "BB3",
+      "length_mm": 60,
+      "width_mm": 12,
+      "thickness_mm": 2,
+      "section_mm2": 24,
+      "R_100C_ohm": 5.6650640000000006e-05,
+      "loss_W": {
+        "25": 0.035406650000000005,
+        "50": 0.14162660000000002,
+        "60": 0.20394230400000002,
+        "150": 1.2746394
+      },
+      "adiabatic_150A_3s_delta_K": 0.7697990346706866
+    },
+    {
+      "item": "BB4",
+      "length_mm": 60,
+      "width_mm": 12,
+      "thickness_mm": 2,
+      "section_mm2": 24,
+      "R_100C_ohm": 5.6650640000000006e-05,
+      "loss_W": {
+        "25": 0.035406650000000005,
+        "50": 0.14162660000000002,
+        "60": 0.20394230400000002,
+        "150": 1.2746394
+      },
+      "adiabatic_150A_3s_delta_K": 0.7697990346706866
+    },
+    {
+      "item": "BB5",
+      "length_mm": 60,
+      "width_mm": 10,
+      "thickness_mm": 2,
+      "section_mm2": 20,
+      "R_100C_ohm": 6.7980768e-05,
+      "loss_W": {
+        "25": 0.04248798,
+        "50": 0.16995192,
+        "60": 0.2447307648,
+        "150": 1.5295672800000002
+      },
+      "adiabatic_150A_3s_delta_K": 1.1085106099257886
+    },
+    {
+      "item": "BB6 bounding path",
+      "length_mm": 160,
+      "width_mm": 12,
+      "thickness_mm": 2,
+      "section_mm2": 24,
+      "R_100C_ohm": 0.00015106837333333335,
+      "loss_W": {
+        "25": 0.09441773333333334,
+        "50": 0.37767093333333335,
+        "60": 0.5438461440000001,
+        "150": 3.3990384000000002
+      },
+      "adiabatic_150A_3s_delta_K": 0.7697990346706864
+    },
+    {
+      "item": "BB7 conservative neck",
+      "length_mm": 348,
+      "width_mm": 16,
+      "thickness_mm": 2,
+      "section_mm2": 32,
+      "R_100C_ohm": 0.000246430284,
+      "loss_W": {
+        "25": 0.1540189275,
+        "50": 0.61607571,
+        "60": 0.8871490224,
+        "150": 5.54468139
+      },
+      "adiabatic_150A_3s_delta_K": 0.4330119570022611
+    },
+    {
+      "item": "NB1..8",
+      "length_mm": 10,
+      "width_mm": 10,
+      "thickness_mm": 2,
+      "section_mm2": 20,
+      "R_100C_ohm": 1.1330128e-05,
+      "loss_W": {
+        "25": 0.00708133,
+        "50": 0.02832532,
+        "60": 0.0407884608,
+        "150": 0.25492788
+      },
+      "adiabatic_150A_3s_delta_K": 1.1085106099257884
+    },
+    {
+      "item": "PCB local force neck one layer",
+      "length_mm": 6,
+      "width_mm": 5.6,
+      "thickness_mm": 0.07,
+      "section_mm2": 0.392,
+      "R_100C_ohm": 0.0003468406530612245,
+      "loss_W": {
+        "25": 0.21677540816326532,
+        "50": 0.8671016326530613,
+        "60": 1.2486263510204083,
+        "150": 7.803914693877552
+      },
+      "adiabatic_150A_3s_delta_K": 2885.544069985913
+    },
+    {
+      "item": "PCB local force neck two layers ideal",
+      "length_mm": 6,
+      "width_mm": 5.6,
+      "thickness_mm": 0.14,
+      "section_mm2": 0.784,
+      "R_100C_ohm": 0.00017342032653061226,
+      "loss_W": {
+        "25": 0.10838770408163266,
+        "50": 0.43355081632653064,
+        "60": 0.6243131755102042,
+        "150": 3.901957346938776
+      },
+      "adiabatic_150A_3s_delta_K": 721.3860174964783
+    },
+    {
+      "item": "PCB20mm dual outer",
+      "length_mm": 100,
+      "width_mm": 20,
+      "thickness_mm": 0.14,
+      "section_mm2": 2.8000000000000003,
+      "R_100C_ohm": 0.0008092948571428571,
+      "loss_W": {
+        "25": 0.5058092857142857,
+        "50": 2.023237142857143,
+        "60": 2.9134614857142855,
+        "150": 18.209134285714285
+      },
+      "adiabatic_150A_3s_delta_K": 56.55666377172389
+    },
+    {
+      "item": "160 plated holes diameter0.4mm,25um,1.7mm PCB",
+      "R_100C_ohm": 7.663794977521532e-06,
+      "loss_W": {
+        "25": 0.0047898718609509575,
+        "50": 0.01915948744380383,
+        "60": 0.027589661919077513,
+        "150": 0.17243538699423447
+      },
+      "assumption": "Uniform current sharing; excludes constriction resistance and annular-pad spreading."
+    },
+    {
+      "item": "154 plated holes diameter0.4mm,25um,1.7mm PCB",
+      "R_100C_ohm": 7.962384392230163e-06,
+      "loss_W": {
+        "25": 0.0049764902451438515,
+        "50": 0.019905960980575406,
+        "60": 0.028664583812028587,
+        "150": 0.17915364882517867
+      },
+      "assumption": "Uniform current sharing; excludes constriction resistance and annular-pad spreading."
+    },
+    {
+      "item": "1 plated holes diameter3.2mm,25um,1.7mm PCB",
+      "R_100C_ohm": 0.00015327589955043062,
+      "loss_W": {
+        "25": 0.09579743721901914,
+        "50": 0.38318974887607654,
+        "60": 0.5517932383815503,
+        "150": 3.448707739884689
+      },
+      "assumption": "Uniform current sharing; excludes constriction resistance and annular-pad spreading."
+    }
+  ],
+  "thermal_note": "Convection and radiation not included in adiabatic estimate. Steady-state hot-spot limits require measured thermal resistance; losses alone are not ampacity."
+}

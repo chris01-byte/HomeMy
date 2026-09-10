@@ -1,0 +1,42 @@
+{
+  "rev_a_engineering_prototype": true,
+  "rev_b_production": false,
+  "part": "IPT015N10N5ATMA1",
+  "retrieved_date": "2026-09-10",
+  "capture_kind": "Factual text extraction from primary manufacturer sources viewed through the web reader; not original PDF or HTML bytes",
+  "transport": "Web reader; no TLS verification bypass",
+  "datasheet": {
+    "source_url": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-ipt015n10n5-datasheet-en.pdf",
+    "title": "Datasheet IPT015N10N5",
+    "revision": "2.4",
+    "revision_date": "2023-05-04",
+    "page_count": 11,
+    "source_pdf_sha256": null,
+    "pin_quote_page_1": "Drain Tab Gate Pin 1 Source Pin 2-8",
+    "physical_pin_map": {"1": "gate", "2-8": "source", "tab": "drain"},
+    "package": "PG-HSOF-8 / TOLL",
+    "package_marking": "015N10N5",
+    "VDS_V": 100,
+    "RDS_on_max_milliohm": 1.5,
+    "RDS_conditions": {"page": 4, "VGS_V": 10, "ID_A": 150, "Tj_C": 25},
+    "Qg_nC": {"typical": 169, "maximum": 211, "page": 4, "VDD_V": 50, "ID_A": 100, "VGS_start_V": 0, "VGS_end_V": 10, "qualification": "Defined by design; not production tested"},
+    "thermal_test": {"page": 3, "RthJA_max_K_per_W": 40, "drain_copper_area_cm2": 6, "copper_layers": 1, "copper_um": 70, "PCB_mm": [40, 40, 1.5], "material": "epoxy FR4", "orientation": "vertical", "air": "still"},
+    "minimum_footprint_RthJA_max_K_per_W": 62
+  },
+  "product_page": {
+    "source_url": "https://www.infineon.com/part/IPT015N10N5",
+    "OPN": "IPT015N10N5ATMA1",
+    "observed_status": "active and preferred",
+    "package": "TOLL / PG-HSOF-8",
+    "packing_size": 2000,
+    "packing_type": "tape and reel",
+    "stock_quantity_verified": false
+  },
+  "package_page": {"source_url": "https://www.infineon.com/package/PG-HSOF-8-1", "manufacturer_product_page_links_to_this_package": true},
+  "engineering_limits": [
+    "The source confirms physical pin mapping independently of the KiCad footprint.",
+    "KiCad groups physical source leads into logical pad 2 and the drain tab into logical pad 3.",
+    "The PMU board/enclosure is not the manufacturer's thermal test fixture; 6 cm2 alone does not establish its thermal resistance.",
+    "Earlier local PDF-download TLS failure remains recorded; this capture does not claim archived original PDF bytes."
+  ]
+}

@@ -1,0 +1,442 @@
+2026-09-10T17:49:10.804743600Z CHECKPOINT input pass=1 incomplete=546 router_clearance_violations=0 bytes=265901
+2026-09-10T17:49:10.884285100Z STATE STARTED pass=0
+2026-09-10T17:49:10.900284900Z STATE RUNNING pass=1
+2026-09-10T17:49:20.944145200Z CHECKPOINT route_step pass=1 incomplete=452 router_clearance_violations=0 bytes=293153
+2026-09-10T17:49:32.741435300Z CHECKPOINT route_step pass=1 incomplete=440 router_clearance_violations=0 bytes=295469
+2026-09-10T17:49:42.807373900Z CHECKPOINT route_step pass=1 incomplete=395 router_clearance_violations=0 bytes=302931
+2026-09-10T17:49:52.872290600Z CHECKPOINT route_step pass=1 incomplete=363 router_clearance_violations=0 bytes=309913
+2026-09-10T17:50:02.926728900Z CHECKPOINT route_step pass=1 incomplete=339 router_clearance_violations=0 bytes=314736
+2026-09-10T17:50:12.983166100Z CHECKPOINT route_step pass=1 incomplete=318 router_clearance_violations=0 bytes=319478
+2026-09-10 19:50:17.170 INFO   [6722B7\AA7443] Auto-router pass #1 on board '12e87fc49c9533f968039b669b1ebe00' was completed in 1 minute 6,04 seconds with the score of 913,93 (311 unrouted).
+2026-09-10T17:50:17.178369600Z STATE RUNNING pass=2
+2026-09-10T17:50:23.024850400Z CHECKPOINT route_step pass=2 incomplete=288 router_clearance_violations=0 bytes=231654
+2026-09-10T17:50:33.016746900Z CHECKPOINT route_step pass=2 incomplete=269 router_clearance_violations=0 bytes=238033
+2026-09-10T17:50:43.050793100Z CHECKPOINT route_step pass=2 incomplete=265 router_clearance_violations=0 bytes=239490
+2026-09-10 19:50:44.198 INFO   [6722B7\AA7443] Auto-router pass #2 on board '8e9e542884d1c1961ed8b3546f43d2cf' was completed in 26,89 seconds with the score of 925,73 (263 unrouted).
+2026-09-10T17:50:44.205528400Z STATE RUNNING pass=3
+2026-09-10T17:50:53.079249Z CHECKPOINT route_step pass=3 incomplete=261 router_clearance_violations=0 bytes=238856
+2026-09-10T17:51:03.130259500Z CHECKPOINT route_step pass=3 incomplete=260 router_clearance_violations=0 bytes=237849
+2026-09-10 19:51:05.799 INFO   [6722B7\AA7443] Auto-router pass #3 on board 'b87a8806893a02a0f900c8bcbf2d10ab' was completed in 21,47 seconds with the score of 926,53 (259 unrouted).
+2026-09-10T17:51:05.811695200Z STATE RUNNING pass=4
+2026-09-10T17:51:30.178817700Z CHECKPOINT route_step pass=4 incomplete=247 router_clearance_violations=0 bytes=240840
+2026-09-10T17:51:40.249436100Z CHECKPOINT route_step pass=4 incomplete=243 router_clearance_violations=0 bytes=242205
+2026-09-10T17:51:50.281416100Z CHECKPOINT route_step pass=4 incomplete=238 router_clearance_violations=0 bytes=243242
+2026-09-10 19:51:51.540 INFO   [6722B7\AA7443] Auto-router pass #4 on board 'b67ffe3d477c836f8b751595e4113017' was completed in 45,60 seconds with the score of 932,33 (237 unrouted).
+2026-09-10T17:51:51.546354600Z STATE RUNNING pass=5
+2026-09-10T17:52:00.319473700Z CHECKPOINT route_step pass=5 incomplete=234 router_clearance_violations=0 bytes=244709
+2026-09-10T17:52:10.311716400Z CHECKPOINT route_step pass=5 incomplete=235 router_clearance_violations=0 bytes=245282
+2026-09-10 19:52:11.001 INFO   [6722B7\AA7443] Auto-router pass #5 on board 'e916827802879ef54819ac73f03ee751' was completed in 19,34 seconds with the score of 932,96 (234 unrouted).
+2026-09-10T17:52:11.008038700Z STATE RUNNING pass=6
+2026-09-10T17:52:20.351501Z CHECKPOINT route_step pass=6 incomplete=234 router_clearance_violations=0 bytes=242827
+2026-09-10 19:52:22.275 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:22.275 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:22.276 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:22.276 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:29.543 INFO   [6722B7\AA7443] Auto-router pass #6 on board 'd8ff423d45daf354602543706c165c76' was completed in 18,42 seconds with the score of 932,98 (233 unrouted).
+2026-09-10T17:52:29.549719Z STATE RUNNING pass=7
+2026-09-10T17:52:30.352093400Z CHECKPOINT route_step pass=7 incomplete=233 router_clearance_violations=0 bytes=242043
+2026-09-10 19:52:31.781 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:31.781 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:31.782 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:31.782 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:31.782 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:31.782 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:31.782 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:31.782 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:31.782 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:31.783 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:31.783 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:31.783 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:31.783 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:31.783 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:31.783 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:31.783 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:31.784 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10 19:52:31.784 WARN   Polyline.corner_approx: p_no must be less than arr.length - 1
+2026-09-10T17:52:40.418520900Z CHECKPOINT route_step pass=7 incomplete=234 router_clearance_violations=0 bytes=241561
+2026-09-10 19:52:48.336 INFO   [6722B7\AA7443] Auto-router pass #7 on board '21b52a6f9a37d4ff2a428871a2571f67' was completed in 18,68 seconds with the score of 932,65 (234 unrouted).
+2026-09-10T17:52:48.342803900Z STATE RUNNING pass=8
+2026-09-10T17:52:50.463164600Z CHECKPOINT route_step pass=8 incomplete=234 router_clearance_violations=0 bytes=240742
+2026-09-10T17:53:00.510298800Z CHECKPOINT route_step pass=8 incomplete=234 router_clearance_violations=0 bytes=241417
+2026-09-10 19:53:07.268 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 932,98 (233 unrouted).
+2026-09-10 19:53:07.268 INFO   [6722B7\AA7443] Auto-router pass #8 on board 'd53cedd315f92df2f2bd2ea6dde08dc8' was completed in 18,82 seconds with the score of 932,65 (234 unrouted).
+2026-09-10T17:53:07.274484600Z STATE RUNNING pass=9
+2026-09-10T17:53:10.619538700Z CHECKPOINT route_step pass=9 incomplete=216 router_clearance_violations=0 bytes=247799
+2026-09-10T17:53:20.645909800Z CHECKPOINT route_step pass=9 incomplete=163 router_clearance_violations=0 bytes=271601
+2026-09-10T17:53:30.871334100Z CHECKPOINT route_step pass=9 incomplete=121 router_clearance_violations=0 bytes=279848
+2026-09-10T17:53:41.407613200Z CHECKPOINT route_step pass=9 incomplete=89 router_clearance_violations=0 bytes=293463
+2026-09-10T17:53:53.063662200Z CHECKPOINT route_step pass=9 incomplete=69 router_clearance_violations=0 bytes=301010
+2026-09-10T17:54:03.607406800Z CHECKPOINT route_step pass=9 incomplete=50 router_clearance_violations=0 bytes=309420
+2026-09-10 19:54:12.886 INFO   [6722B7\AA7443] Auto-router pass #9 on board '21b52a6f9a37d4ff2a428871a2571f67' was completed in 1 minute 5,57 seconds with the score of 978,12 (37 unrouted).
+2026-09-10T17:54:12.902420Z STATE RUNNING pass=10
+2026-09-10T17:54:15.025684500Z CHECKPOINT route_step pass=10 incomplete=37 router_clearance_violations=0 bytes=317364
+2026-09-10T17:54:25.571656900Z CHECKPOINT route_step pass=10 incomplete=31 router_clearance_violations=0 bytes=313390
+2026-09-10 19:54:32.604 INFO   [6722B7\AA7443] Auto-router pass #10 on board '26c8b049c6aa01f9c11bad4494fd439a' was completed in 19,55 seconds with the score of 980,28 (26 unrouted).
+2026-09-10T17:54:32.611210Z STATE RUNNING pass=11
+2026-09-10T17:54:36.149909900Z CHECKPOINT route_step pass=11 incomplete=27 router_clearance_violations=0 bytes=336550
+2026-09-10 19:54:39.779 INFO   [6722B7\AA7443] Auto-router pass #11 on board '1c0e64c192bcb7873773f7f11723d24d' was completed in 7,04 seconds with the score of 980,40 (25 unrouted).
+2026-09-10T17:54:39.787300500Z STATE RUNNING pass=12
+2026-09-10T17:54:51.770942600Z CHECKPOINT route_step pass=12 incomplete=21 router_clearance_violations=0 bytes=328301
+2026-09-10 19:54:59.435 INFO   [6722B7\AA7443] Auto-router pass #12 on board 'e695c71c91ca7dd683b7f031ba0de963' was completed in 19,52 seconds with the score of 981,57 (18 unrouted).
+2026-09-10T17:54:59.443509200Z STATE RUNNING pass=13
+2026-09-10T17:55:01.820031Z CHECKPOINT route_step pass=13 incomplete=18 router_clearance_violations=0 bytes=318575
+2026-09-10 19:55:04.560 INFO   [6722B7\AA7443] Auto-router pass #13 on board '7f4d307a6dc279218ced924f00c65d65' was completed in 4,99 seconds with the score of 981,27 (21 unrouted).
+2026-09-10T17:55:04.569951Z STATE RUNNING pass=14
+2026-09-10 19:55:08.398 INFO   [6722B7\AA7443] Auto-router pass #14 on board 'dd8293a06fa7e781572f3b240ce9caf0' was completed in 3,68 seconds with the score of 981,26 (21 unrouted).
+2026-09-10T17:55:08.405458200Z STATE RUNNING pass=15
+2026-09-10T17:55:11.992154800Z CHECKPOINT route_step pass=15 incomplete=21 router_clearance_violations=0 bytes=314413
+2026-09-10 19:55:16.738 INFO   [6722B7\AA7443] Auto-router pass #15 on board '247ce3f492b078200205f59c480cf794' was completed in 8,21 seconds with the score of 981,80 (18 unrouted).
+2026-09-10T17:55:16.755379100Z STATE RUNNING pass=16
+2026-09-10T17:55:23.091962800Z CHECKPOINT route_step pass=16 incomplete=19 router_clearance_violations=0 bytes=315500
+2026-09-10 19:55:23.729 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,80 (18 unrouted).
+2026-09-10 19:55:23.729 INFO   [6722B7\AA7443] Auto-router pass #16 on board '1bd9264997f9c6b4a1666d88a0af17f9' was completed in 6,82 seconds with the score of 981,76 (18 unrouted).
+2026-09-10T17:55:23.738454600Z STATE RUNNING pass=17
+2026-09-10 19:55:27.075 INFO   [6722B7\AA7443] Auto-router pass #17 on board '1bd9264997f9c6b4a1666d88a0af17f9' was completed in 3,28 seconds with the score of 981,13 (20 unrouted).
+2026-09-10T17:55:27.090020800Z STATE RUNNING pass=18
+2026-09-10T17:55:33.171156Z CHECKPOINT route_step pass=18 incomplete=20 router_clearance_violations=0 bytes=316438
+2026-09-10 19:55:37.932 INFO   [6722B7\AA7443] Auto-router pass #18 on board '5f3d02e7d55b111175c1f95f0fb9936e' was completed in 10,70 seconds with the score of 981,06 (19 unrouted).
+2026-09-10T17:55:37.939490400Z STATE RUNNING pass=19
+2026-09-10 19:55:43.136 INFO   [6722B7\AA7443] Auto-router pass #19 on board '2a81b1caae092b503a0c12c2f6f29835' was completed in 5,08 seconds with the score of 981,28 (18 unrouted).
+2026-09-10T17:55:43.143041100Z STATE RUNNING pass=20
+2026-09-10T17:55:43.557413200Z CHECKPOINT route_step pass=20 incomplete=18 router_clearance_violations=0 bytes=316036
+2026-09-10 19:55:51.390 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,80 (18 unrouted).
+2026-09-10 19:55:51.391 INFO   [6722B7\AA7443] Auto-router pass #20 on board 'f9aca3b21f850d81465a2faf8645c6cc' was completed in 8,13 seconds with the score of 981,30 (18 unrouted).
+2026-09-10T17:55:51.397742900Z STATE RUNNING pass=21
+2026-09-10T17:55:53.559935500Z CHECKPOINT route_step pass=21 incomplete=19 router_clearance_violations=0 bytes=324628
+2026-09-10 19:55:54.786 INFO   [6722B7\AA7443] Auto-router pass #21 on board '1bd9264997f9c6b4a1666d88a0af17f9' was completed in 3,34 seconds with the score of 981,16 (20 unrouted).
+2026-09-10T17:55:54.792656500Z STATE RUNNING pass=22
+2026-09-10T17:56:03.606862300Z CHECKPOINT route_step pass=22 incomplete=19 router_clearance_violations=0 bytes=314544
+2026-09-10 19:56:04.505 INFO   [6722B7\AA7443] Auto-router pass #22 on board '5e77b18be4f3695e2430e1d4ae3abc34' was completed in 9,58 seconds with the score of 980,87 (20 unrouted).
+2026-09-10T17:56:04.511689300Z STATE RUNNING pass=23
+2026-09-10 19:56:14.273 INFO   [6722B7\AA7443] Auto-router pass #23 on board '7d2076276923974675b916bc271cb506' was completed in 9,64 seconds with the score of 981,25 (18 unrouted).
+2026-09-10T17:56:14.280053700Z STATE RUNNING pass=24
+2026-09-10T17:56:14.674848400Z CHECKPOINT route_step pass=24 incomplete=18 router_clearance_violations=0 bytes=315338
+2026-09-10T17:56:38.257997500Z CHECKPOINT route_step pass=24 incomplete=18 router_clearance_violations=0 bytes=315338
+2026-09-10 19:56:41.988 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,80 (18 unrouted).
+2026-09-10 19:56:41.988 INFO   [6722B7\AA7443] Auto-router pass #24 on board 'f5882dab993f1c09e692f859f8f9ef15' was completed in 27,59 seconds with the score of 981,26 (18 unrouted).
+2026-09-10T17:56:41.994998Z STATE RUNNING pass=25
+2026-09-10T17:56:48.277012500Z CHECKPOINT route_step pass=25 incomplete=19 router_clearance_violations=0 bytes=326370
+2026-09-10 19:56:49.435 INFO   [6722B7\AA7443] Auto-router pass #25 on board '1bd9264997f9c6b4a1666d88a0af17f9' was completed in 7,39 seconds with the score of 981,40 (20 unrouted).
+2026-09-10T17:56:49.443471800Z STATE RUNNING pass=26
+2026-09-10 19:56:57.512 INFO   [6722B7\AA7443] Auto-router pass #26 on board 'c07f560030cd5095dac87e9b9861fa98' was completed in 7,94 seconds with the score of 981,39 (19 unrouted).
+2026-09-10T17:56:57.519458900Z STATE RUNNING pass=27
+2026-09-10T17:56:58.321693Z CHECKPOINT route_step pass=27 incomplete=19 router_clearance_violations=0 bytes=326303
+2026-09-10 19:57:01.202 INFO   [6722B7\AA7443] Auto-router pass #27 on board 'ae3c72eead6bb2bd0e4e8137b09ffe3f' was completed in 3,56 seconds with the score of 981,13 (19 unrouted).
+2026-09-10T17:57:01.208550100Z STATE RUNNING pass=28
+2026-09-10T17:57:11.363057400Z CHECKPOINT route_step pass=28 incomplete=19 router_clearance_violations=0 bytes=323596
+2026-09-10 19:57:16.156 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,80 (18 unrouted).
+2026-09-10 19:57:16.156 INFO   [6722B7\AA7443] Auto-router pass #28 on board '7d852c9545aa57ff9ef7e2d2e81dafb7' was completed in 14,82 seconds with the score of 981,42 (19 unrouted).
+2026-09-10T17:57:16.162085200Z STATE RUNNING pass=29
+2026-09-10 19:57:19.431 INFO   [6722B7\AA7443] Auto-router pass #29 on board '1bd9264997f9c6b4a1666d88a0af17f9' was completed in 3,22 seconds with the score of 980,98 (21 unrouted).
+2026-09-10T17:57:19.446772200Z STATE RUNNING pass=30
+2026-09-10T17:57:22.853973200Z CHECKPOINT route_step pass=30 incomplete=21 router_clearance_violations=0 bytes=317984
+2026-09-10 19:57:30.789 INFO   [6722B7\AA7443] Auto-router pass #30 on board '4532e27d46e0b4f9140ba61361882018' was completed in 11,20 seconds with the score of 981,26 (18 unrouted).
+2026-09-10T17:57:30.796286400Z STATE RUNNING pass=31
+2026-09-10T17:57:33.318175500Z CHECKPOINT route_step pass=31 incomplete=19 router_clearance_violations=0 bytes=315988
+2026-09-10 19:57:34.555 INFO   [6722B7\AA7443] Auto-router pass #31 on board '2b1e49bcd5caf9c7f696d6776df88af2' was completed in 3,64 seconds with the score of 981,62 (19 unrouted).
+2026-09-10T17:57:34.570759400Z STATE RUNNING pass=32
+2026-09-10 19:57:43.238 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,62 (19 unrouted).
+2026-09-10 19:57:43.239 INFO   [6722B7\AA7443] Auto-router pass #32 on board '71ed610bcb22fa541fd5e0fdb7dbbab7' was completed in 8,51 seconds with the score of 981,28 (18 unrouted).
+2026-09-10T17:57:43.247196100Z STATE RUNNING pass=33
+2026-09-10T17:57:43.747878100Z CHECKPOINT route_step pass=33 incomplete=19 router_clearance_violations=0 bytes=335108
+2026-09-10 19:57:47.172 INFO   [6722B7\AA7443] Auto-router pass #33 on board '71ed610bcb22fa541fd5e0fdb7dbbab7' was completed in 3,87 seconds with the score of 981,28 (18 unrouted).
+2026-09-10T17:57:47.190334900Z STATE RUNNING pass=34
+2026-09-10 19:57:50.500 INFO   [6722B7\AA7443] Auto-router pass #34 on board '75ac469649fd276dcfc434b31570480a' was completed in 3,16 seconds with the score of 981,70 (17 unrouted).
+2026-09-10T17:57:50.514849300Z STATE RUNNING pass=35
+2026-09-10 19:57:53.335 INFO   [6722B7\AA7443] Auto-router pass #35 on board '32b47d6b7a55e8c04d1ef463e8b33a07' was completed in 2,67 seconds with the score of 981,59 (18 unrouted).
+2026-09-10T17:57:53.342956100Z STATE RUNNING pass=36
+2026-09-10T17:57:53.751989100Z CHECKPOINT route_step pass=36 incomplete=18 router_clearance_violations=0 bytes=328762
+2026-09-10 19:58:00.904 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,70 (17 unrouted).
+2026-09-10 19:58:00.904 INFO   [6722B7\AA7443] Auto-router pass #36 on board '50dd2c45e7c44f908d889dd54c86dbf1' was completed in 7,44 seconds with the score of 981,54 (18 unrouted).
+2026-09-10T17:58:00.911024300Z STATE RUNNING pass=37
+2026-09-10T17:58:04.356310Z CHECKPOINT route_step pass=37 incomplete=17 router_clearance_violations=0 bytes=326722
+2026-09-10 19:58:06.870 INFO   [6722B7\AA7443] Auto-router pass #37 on board '32b47d6b7a55e8c04d1ef463e8b33a07' was completed in 5,91 seconds with the score of 981,52 (18 unrouted).
+2026-09-10T17:58:06.881534600Z STATE RUNNING pass=38
+2026-09-10 19:58:12.113 INFO   [6722B7\AA7443] Auto-router pass #38 on board '5700e229269ad88364df6bbb99b10e3e' was completed in 5,07 seconds with the score of 981,63 (17 unrouted).
+2026-09-10T17:58:12.127790700Z STATE RUNNING pass=39
+2026-09-10T17:58:14.519436300Z CHECKPOINT route_step pass=39 incomplete=17 router_clearance_violations=0 bytes=322289
+2026-09-10 19:58:16.937 INFO   [6722B7\AA7443] Auto-router pass #39 on board '314cdd11f74e0e47dd53e3613a64c2e9' was completed in 4,66 seconds with the score of 981,23 (18 unrouted).
+2026-09-10T17:58:16.943588200Z STATE RUNNING pass=40
+2026-09-10T17:58:39.642067600Z CHECKPOINT route_step pass=40 incomplete=17 router_clearance_violations=0 bytes=316611
+2026-09-10 19:58:41.654 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,70 (17 unrouted).
+2026-09-10 19:58:41.655 INFO   [6722B7\AA7443] Auto-router pass #40 on board '2a2abb066d8f4a8f7e9ccb312d943826' was completed in 24,59 seconds with the score of 981,41 (17 unrouted).
+2026-09-10T17:58:41.661839100Z STATE RUNNING pass=41
+2026-09-10 19:58:44.456 INFO   [6722B7\AA7443] Auto-router pass #41 on board '32b47d6b7a55e8c04d1ef463e8b33a07' was completed in 2,75 seconds with the score of 981,49 (18 unrouted).
+2026-09-10T17:58:44.472664800Z STATE RUNNING pass=42
+2026-09-10 19:58:47.977 INFO   [6722B7\AA7443] Auto-router pass #42 on board 'f34afc4d3da07f2c8099edc8ae83a43d' was completed in 3,35 seconds with the score of 981,70 (17 unrouted).
+2026-09-10T17:58:47.991771700Z STATE RUNNING pass=43
+2026-09-10T17:58:49.909914900Z CHECKPOINT route_step pass=43 incomplete=18 router_clearance_violations=0 bytes=329980
+2026-09-10 19:58:52.860 INFO   [6722B7\AA7443] Auto-router pass #43 on board '94b4fab38ead9ac3e96fa696f0d6846b' was completed in 4,70 seconds with the score of 981,22 (18 unrouted).
+2026-09-10T17:58:52.867502800Z STATE RUNNING pass=44
+2026-09-10T17:59:00.491179800Z CHECKPOINT route_step pass=44 incomplete=17 router_clearance_violations=0 bytes=317557
+2026-09-10 19:59:00.939 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,70 (17 unrouted).
+2026-09-10 19:59:00.939 INFO   [6722B7\AA7443] Auto-router pass #44 on board 'f5a40b2bf975268fcb4fd983152f3ac2' was completed in 7,95 seconds with the score of 981,73 (17 unrouted).
+2026-09-10T17:59:00.947572800Z STATE RUNNING pass=45
+2026-09-10 19:59:07.836 INFO   [6722B7\AA7443] Auto-router pass #45 on board '32b47d6b7a55e8c04d1ef463e8b33a07' was completed in 6,83 seconds with the score of 981,47 (18 unrouted).
+2026-09-10T17:59:07.846882700Z STATE RUNNING pass=46
+2026-09-10T17:59:10.766776500Z CHECKPOINT route_step pass=46 incomplete=18 router_clearance_violations=0 bytes=315597
+2026-09-10 19:59:13.310 INFO   [6722B7\AA7443] Auto-router pass #46 on board 'd500c826082eb61e029affd8bec523c5' was completed in 5,30 seconds with the score of 981,52 (18 unrouted).
+2026-09-10T17:59:13.317932400Z STATE RUNNING pass=47
+2026-09-10 19:59:17.436 INFO   [6722B7\AA7443] Auto-router pass #47 on board 'b2fd0f2c40cec362719e179d0b567904' was completed in 3,99 seconds with the score of 981,50 (18 unrouted).
+2026-09-10T17:59:17.452090100Z STATE RUNNING pass=48
+2026-09-10T17:59:44.429176700Z CHECKPOINT route_step pass=48 incomplete=18 router_clearance_violations=0 bytes=316172
+2026-09-10 19:59:46.554 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,70 (17 unrouted).
+2026-09-10 19:59:46.554 INFO   [6722B7\AA7443] Auto-router pass #48 on board 'b3ac55506820aab0291185e72eed62a5' was completed in 28,90 seconds with the score of 981,22 (18 unrouted).
+2026-09-10T17:59:46.562233900Z STATE RUNNING pass=49
+2026-09-10 19:59:51.050 INFO   [6722B7\AA7443] Auto-router pass #49 on board '32b47d6b7a55e8c04d1ef463e8b33a07' was completed in 4,44 seconds with the score of 981,24 (18 unrouted).
+2026-09-10T17:59:51.056186500Z STATE RUNNING pass=50
+2026-09-10T17:59:54.465282500Z CHECKPOINT route_step pass=50 incomplete=18 router_clearance_violations=0 bytes=320022
+2026-09-10 19:59:54.789 INFO   [6722B7\AA7443] Auto-router pass #50 on board '5c21820eb4eb3620eb2a4c69ae1c8c0d' was completed in 3,62 seconds with the score of 981,53 (18 unrouted).
+2026-09-10T17:59:54.796884Z STATE RUNNING pass=51
+2026-09-10 19:59:58.724 INFO   [6722B7\AA7443] Auto-router pass #51 on board '0b0220f203265a55ffb7a4f448fc3291' was completed in 3,81 seconds with the score of 981,67 (17 unrouted).
+2026-09-10T17:59:58.731032800Z STATE RUNNING pass=52
+2026-09-10 20:00:02.410 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,70 (17 unrouted).
+2026-09-10 20:00:02.411 INFO   [6722B7\AA7443] Auto-router pass #52 on board 'a0cfabf35cf40fe1e45e09be0442ccc7' was completed in 3,56 seconds with the score of 981,24 (18 unrouted).
+2026-09-10T18:00:02.418603600Z STATE RUNNING pass=53
+2026-09-10T18:00:16.783460800Z CHECKPOINT route_step pass=53 incomplete=17 router_clearance_violations=0 bytes=326527
+2026-09-10 20:00:19.490 INFO   [6722B7\AA7443] Auto-router pass #53 on board '94b4fab38ead9ac3e96fa696f0d6846b' was completed in 17,01 seconds with the score of 981,87 (16 unrouted).
+2026-09-10T18:00:19.497848700Z STATE RUNNING pass=54
+2026-09-10 20:00:22.057 INFO   [6722B7\AA7443] Auto-router pass #54 on board '72ae65cd20e4200325ae395b2d8e78f3' was completed in 2,43 seconds with the score of 981,75 (16 unrouted).
+2026-09-10T18:00:22.068660Z STATE RUNNING pass=55
+2026-09-10 20:00:24.633 INFO   [6722B7\AA7443] Auto-router pass #55 on board 'e6ee7dba507cb81d5ae384667eb78ab5' was completed in 2,39 seconds with the score of 981,75 (16 unrouted).
+2026-09-10T18:00:24.640536200Z STATE RUNNING pass=56
+2026-09-10T18:00:30.340190800Z CHECKPOINT route_step pass=56 incomplete=16 router_clearance_violations=0 bytes=319075
+2026-09-10 20:00:31.603 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,87 (16 unrouted).
+2026-09-10 20:00:31.603 INFO   [6722B7\AA7443] Auto-router pass #56 on board 'b39f40c3912f120358c235fd995d9596' was completed in 6,84 seconds with the score of 981,73 (16 unrouted).
+2026-09-10T18:00:31.617530800Z STATE RUNNING pass=57
+2026-09-10T18:00:47.945144500Z CHECKPOINT route_step pass=57 incomplete=17 router_clearance_violations=0 bytes=325596
+2026-09-10 20:00:49.812 INFO   [6722B7\AA7443] Auto-router pass #57 on board '72ae65cd20e4200325ae395b2d8e78f3' was completed in 18,13 seconds with the score of 981,58 (17 unrouted).
+2026-09-10T18:00:49.825576200Z STATE RUNNING pass=58
+2026-09-10 20:00:52.552 INFO   [6722B7\AA7443] Auto-router pass #58 on board '4aee84da41d98285e0b19e8d80419063' was completed in 2,52 seconds with the score of 981,57 (17 unrouted).
+2026-09-10T18:00:52.560943700Z STATE RUNNING pass=59
+2026-09-10 20:00:55.180 INFO   [6722B7\AA7443] Auto-router pass #59 on board '4a0ddfb3727f4a08caa1fabeb6a93748' was completed in 2,49 seconds with the score of 981,57 (17 unrouted).
+2026-09-10T18:00:55.187229700Z STATE RUNNING pass=60
+2026-09-10T18:00:57.924030300Z CHECKPOINT route_step pass=60 incomplete=19 router_clearance_violations=0 bytes=323191
+2026-09-10 20:00:58.931 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,87 (16 unrouted).
+2026-09-10 20:00:58.931 INFO   [6722B7\AA7443] Auto-router pass #60 on board 'c1148e6fd486c88d8b78520b9e01b10d' was completed in 3,62 seconds with the score of 981,60 (18 unrouted).
+2026-09-10T18:00:58.939565400Z STATE RUNNING pass=61
+2026-09-10 20:01:06.466 INFO   [6722B7\AA7443] Auto-router pass #61 on board '72ae65cd20e4200325ae395b2d8e78f3' was completed in 7,44 seconds with the score of 981,77 (17 unrouted).
+2026-09-10T18:01:06.473013100Z STATE RUNNING pass=62
+2026-09-10T18:01:08.038820300Z CHECKPOINT route_step pass=62 incomplete=16 router_clearance_violations=0 bytes=328029
+2026-09-10 20:01:09.415 INFO   [6722B7\AA7443] Auto-router pass #62 on board '57db62ab8447ef970669538ca0c83963' was completed in 2,82 seconds with the score of 981,70 (17 unrouted).
+2026-09-10T18:01:09.422727600Z STATE RUNNING pass=63
+2026-09-10 20:01:14.015 INFO   [6722B7\AA7443] Auto-router pass #63 on board 'bac43cc6073a191d5b1c9366e74369a3' was completed in 4,38 seconds with the score of 981,69 (17 unrouted).
+2026-09-10T18:01:14.022712400Z STATE RUNNING pass=64
+2026-09-10T18:01:21.511233700Z CHECKPOINT route_step pass=64 incomplete=17 router_clearance_violations=0 bytes=328909
+2026-09-10 20:01:22.511 INFO   [6722B7\AA7443] Auto-router pass #64 on board '52ce69e84c5854069edb294fca2e9170' was completed in 8,37 seconds with the score of 981,92 (16 unrouted).
+2026-09-10T18:01:22.518160900Z STATE RUNNING pass=65
+2026-09-10 20:01:26.845 INFO   [6722B7\AA7443] Auto-router pass #65 on board 'd3d82c7c0a07a2b7390ecd242b747e71' was completed in 4,20 seconds with the score of 981,94 (16 unrouted).
+2026-09-10T18:01:26.869452800Z STATE RUNNING pass=66
+2026-09-10T18:01:31.508124800Z CHECKPOINT route_step pass=66 incomplete=18 router_clearance_violations=0 bytes=324461
+2026-09-10 20:01:31.560 INFO   [6722B7\AA7443] Auto-router pass #66 on board 'f06f3b2d27ace1dcb275f3e83808cbdb' was completed in 4,49 seconds with the score of 981,72 (17 unrouted).
+2026-09-10T18:01:31.568637Z STATE RUNNING pass=67
+2026-09-10 20:01:36.064 INFO   [6722B7\AA7443] Auto-router pass #67 on board '3ab478b277c0caba88ec80d3978a7e2a' was completed in 4,37 seconds with the score of 981,90 (16 unrouted).
+2026-09-10T18:01:36.072992200Z STATE RUNNING pass=68
+2026-09-10T18:01:41.665927800Z CHECKPOINT route_step pass=68 incomplete=16 router_clearance_violations=0 bytes=323740
+2026-09-10 20:01:42.956 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,94 (16 unrouted).
+2026-09-10 20:01:42.956 INFO   [6722B7\AA7443] Auto-router pass #68 on board '6c84f0c70716269ff133d2791160a082' was completed in 6,66 seconds with the score of 981,90 (16 unrouted).
+2026-09-10T18:01:42.963819100Z STATE RUNNING pass=69
+2026-09-10T18:01:59.366654600Z CHECKPOINT route_step pass=69 incomplete=16 router_clearance_violations=0 bytes=325214
+2026-09-10 20:02:00.815 INFO   [6722B7\AA7443] Auto-router pass #69 on board 'f06f3b2d27ace1dcb275f3e83808cbdb' was completed in 17,81 seconds with the score of 981,93 (16 unrouted).
+2026-09-10T18:02:00.827558600Z STATE RUNNING pass=70
+2026-09-10 20:02:03.342 INFO   [6722B7\AA7443] Auto-router pass #70 on board 'cda80628c0ebe8d898a0a387a5f2ac5b' was completed in 2,31 seconds with the score of 981,73 (17 unrouted).
+2026-09-10T18:02:03.356718100Z STATE RUNNING pass=71
+2026-09-10 20:02:05.838 INFO   [6722B7\AA7443] Auto-router pass #71 on board '85f2f34854ff9a45023d9c7618060493' was completed in 2,28 seconds with the score of 981,92 (16 unrouted).
+2026-09-10T18:02:05.856638400Z STATE RUNNING pass=72
+2026-09-10T18:02:10.410670500Z CHECKPOINT route_step pass=72 incomplete=16 router_clearance_violations=0 bytes=324040
+2026-09-10T18:02:25.167691500Z CHECKPOINT route_step pass=72 incomplete=16 router_clearance_violations=0 bytes=324456
+2026-09-10 20:02:26.052 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,94 (16 unrouted).
+2026-09-10 20:02:26.053 INFO   [6722B7\AA7443] Auto-router pass #72 on board '93bf43c5006a54dc4c4f00d3a2f03708' was completed in 19,98 seconds with the score of 981,81 (17 unrouted).
+2026-09-10T18:02:26.059337Z STATE RUNNING pass=73
+2026-09-10 20:02:28.411 INFO   [6722B7\AA7443] Auto-router pass #73 on board 'f06f3b2d27ace1dcb275f3e83808cbdb' was completed in 2,31 seconds with the score of 981,93 (16 unrouted).
+2026-09-10T18:02:28.418396300Z STATE RUNNING pass=74
+2026-09-10T18:02:37.080412100Z CHECKPOINT route_step pass=74 incomplete=16 router_clearance_violations=0 bytes=325832
+2026-09-10 20:02:38.300 INFO   [6722B7\AA7443] Auto-router pass #74 on board '93ac125b0b74860c2183bf502b311439' was completed in 9,76 seconds with the score of 981,72 (17 unrouted).
+2026-09-10T18:02:38.320459100Z STATE RUNNING pass=75
+2026-09-10 20:02:42.304 INFO   [6722B7\AA7443] Auto-router pass #75 on board 'e88b0605974635901109b322df606701' was completed in 3,80 seconds with the score of 981,92 (16 unrouted).
+2026-09-10T18:02:42.312835200Z STATE RUNNING pass=76
+2026-09-10 20:02:45.232 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,94 (16 unrouted).
+2026-09-10 20:02:45.232 INFO   [6722B7\AA7443] Auto-router pass #76 on board '27c1258f2c6ea30c7e401d4eda2e2a72' was completed in 2,80 seconds with the score of 981,88 (17 unrouted).
+2026-09-10T18:02:45.242041200Z STATE RUNNING pass=77
+2026-09-10T18:02:48.806308200Z CHECKPOINT route_step pass=77 incomplete=16 router_clearance_violations=0 bytes=325339
+2026-09-10 20:02:50.789 INFO   [6722B7\AA7443] Auto-router pass #77 on board 'f06f3b2d27ace1dcb275f3e83808cbdb' was completed in 5,49 seconds with the score of 981,94 (16 unrouted).
+2026-09-10T18:02:50.796285200Z STATE RUNNING pass=78
+2026-09-10 20:02:54.733 INFO   [6722B7\AA7443] Auto-router pass #78 on board 'fd065096fc63677237013d802c9fdb87' was completed in 3,81 seconds with the score of 981,72 (17 unrouted).
+2026-09-10T18:02:54.739974500Z STATE RUNNING pass=79
+2026-09-10 20:02:57.873 INFO   [6722B7\AA7443] Auto-router pass #79 on board 'cc5daa84d83146b1f2258e5895446cc1' was completed in 3,01 seconds with the score of 981,62 (16 unrouted).
+2026-09-10T18:02:57.880880100Z STATE RUNNING pass=80
+2026-09-10T18:03:23.772786400Z CHECKPOINT route_step pass=80 incomplete=17 router_clearance_violations=0 bytes=316766
+2026-09-10 20:03:29.081 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,94 (16 unrouted).
+2026-09-10 20:03:29.081 INFO   [6722B7\AA7443] Auto-router pass #80 on board 'f77290d1f5139e4d0753c21513d9d7bf' was completed in 31,08 seconds with the score of 981,62 (16 unrouted).
+2026-09-10T18:03:29.088299100Z STATE RUNNING pass=81
+2026-09-10T18:03:33.687753500Z CHECKPOINT route_step pass=81 incomplete=18 router_clearance_violations=0 bytes=324772
+2026-09-10 20:03:34.463 INFO   [6722B7\AA7443] Auto-router pass #81 on board 'fd065096fc63677237013d802c9fdb87' was completed in 5,31 seconds with the score of 981,93 (16 unrouted).
+2026-09-10T18:03:34.487562900Z STATE RUNNING pass=82
+2026-09-10 20:03:37.874 INFO   [6722B7\AA7443] Auto-router pass #82 on board '746764a21802408cdc1f8ad7f8dcef86' was completed in 3,17 seconds with the score of 981,61 (16 unrouted).
+2026-09-10T18:03:37.881757Z STATE RUNNING pass=83
+2026-09-10 20:03:41.908 INFO   [6722B7\AA7443] Auto-router pass #83 on board '867981066a6b14c87d0aca8e8b06cd21' was completed in 3,86 seconds with the score of 981,45 (17 unrouted).
+2026-09-10T18:03:41.914895500Z STATE RUNNING pass=84
+2026-09-10T18:03:43.771414400Z CHECKPOINT route_step pass=84 incomplete=16 router_clearance_violations=0 bytes=317708
+2026-09-10 20:03:48.856 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,94 (16 unrouted).
+2026-09-10 20:03:48.857 INFO   [6722B7\AA7443] Auto-router pass #84 on board '7842b7d82e0eda1ca3e69a6900507a0f' was completed in 6,82 seconds with the score of 981,63 (16 unrouted).
+2026-09-10T18:03:48.863071400Z STATE RUNNING pass=85
+2026-09-10T18:03:57.641245700Z CHECKPOINT route_step pass=85 incomplete=17 router_clearance_violations=0 bytes=325177
+2026-09-10 20:03:59.328 INFO   [6722B7\AA7443] Auto-router pass #85 on board 'fd065096fc63677237013d802c9fdb87' was completed in 10,42 seconds with the score of 981,54 (16 unrouted).
+2026-09-10T18:03:59.335560400Z STATE RUNNING pass=86
+2026-09-10T18:04:08.883745200Z CHECKPOINT route_step pass=86 incomplete=16 router_clearance_violations=0 bytes=316275
+2026-09-10 20:04:10.975 INFO   [6722B7\AA7443] Auto-router pass #86 on board '7904470d37da69bb7b3f445bdf24b9c8' was completed in 11,52 seconds with the score of 981,60 (16 unrouted).
+2026-09-10T18:04:10.982073600Z STATE RUNNING pass=87
+2026-09-10 20:04:13.635 INFO   [6722B7\AA7443] Auto-router pass #87 on board 'ebbf254eaabf76dfc90fe5ec4ab06989' was completed in 2,52 seconds with the score of 981,68 (16 unrouted).
+2026-09-10T18:04:13.642196500Z STATE RUNNING pass=88
+2026-09-10T18:04:19.004857800Z CHECKPOINT route_step pass=88 incomplete=16 router_clearance_violations=0 bytes=318155
+2026-09-10 20:04:22.125 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,94 (16 unrouted).
+2026-09-10 20:04:22.126 INFO   [6722B7\AA7443] Auto-router pass #88 on board '8e47a0326f84432ca1fe1ef543fa382b' was completed in 8,36 seconds with the score of 981,75 (16 unrouted).
+2026-09-10T18:04:22.140550700Z STATE RUNNING pass=89
+2026-09-10 20:04:24.648 INFO   [6722B7\AA7443] Auto-router pass #89 on board 'fd065096fc63677237013d802c9fdb87' was completed in 2,42 seconds with the score of 981,92 (16 unrouted).
+2026-09-10T18:04:24.674861400Z STATE RUNNING pass=90
+2026-09-10 20:04:27.164 INFO   [6722B7\AA7443] Auto-router pass #90 on board 'cf0af734128e48d596815a2a99cc3493' was completed in 2,30 seconds with the score of 981,91 (16 unrouted).
+2026-09-10T18:04:27.188823500Z STATE RUNNING pass=91
+2026-09-10T18:04:28.953017200Z CHECKPOINT route_step pass=91 incomplete=18 router_clearance_violations=0 bytes=324581
+2026-09-10 20:04:29.744 INFO   [6722B7\AA7443] Auto-router pass #91 on board '08e49fcade5be81f678c874c3c0a5fea' was completed in 2,34 seconds with the score of 981,72 (17 unrouted).
+2026-09-10T18:04:29.764339100Z STATE RUNNING pass=92
+2026-09-10T18:04:55.507532700Z CHECKPOINT route_step pass=92 incomplete=17 router_clearance_violations=0 bytes=323153
+2026-09-10 20:04:57.835 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,94 (16 unrouted).
+2026-09-10 20:04:57.835 INFO   [6722B7\AA7443] Auto-router pass #92 on board '6f2961932489f30a644253ffd5d1a62a' was completed in 27,86 seconds with the score of 981,90 (16 unrouted).
+2026-09-10T18:04:57.842637300Z STATE RUNNING pass=93
+2026-09-10T18:05:13.837014700Z CHECKPOINT route_step pass=93 incomplete=17 router_clearance_violations=0 bytes=324425
+2026-09-10 20:05:16.585 INFO   [6722B7\AA7443] Auto-router pass #93 on board 'fd065096fc63677237013d802c9fdb87' was completed in 18,70 seconds with the score of 981,41 (17 unrouted).
+2026-09-10T18:05:16.601454200Z STATE RUNNING pass=94
+2026-09-10 20:05:20.955 INFO   [6722B7\AA7443] Auto-router pass #94 on board 'e5856cc26ab46a6b2fe4eefae56fc1ba' was completed in 4,14 seconds with the score of 981,71 (16 unrouted).
+2026-09-10T18:05:20.962334700Z STATE RUNNING pass=95
+2026-09-10T18:05:23.939676Z CHECKPOINT route_step pass=95 incomplete=17 router_clearance_violations=0 bytes=318745
+2026-09-10 20:05:25.305 INFO   [6722B7\AA7443] Auto-router pass #95 on board 'a5f9b7752c1d7885aceb12cb4964108f' was completed in 4,22 seconds with the score of 981,68 (16 unrouted).
+2026-09-10T18:05:25.311564400Z STATE RUNNING pass=96
+2026-09-10 20:05:28.600 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,94 (16 unrouted).
+2026-09-10 20:05:28.601 INFO   [6722B7\AA7443] Auto-router pass #96 on board '5ba8802f8df169b68d702dce957b6bed' was completed in 3,15 seconds with the score of 981,69 (16 unrouted).
+2026-09-10T18:05:28.607965900Z STATE RUNNING pass=97
+2026-09-10T18:05:33.871780Z CHECKPOINT route_step pass=97 incomplete=16 router_clearance_violations=0 bytes=325711
+2026-09-10 20:05:35.645 INFO   [6722B7\AA7443] Auto-router pass #97 on board 'f06f3b2d27ace1dcb275f3e83808cbdb' was completed in 6,99 seconds with the score of 981,94 (16 unrouted).
+2026-09-10T18:05:35.652921400Z STATE RUNNING pass=98
+2026-09-10 20:05:39.604 INFO   [6722B7\AA7443] Auto-router pass #98 on board 'e641602f2ffc0b8945775c89b9d9b6b6' was completed in 3,81 seconds with the score of 981,72 (17 unrouted).
+2026-09-10T18:05:39.611212800Z STATE RUNNING pass=99
+2026-09-10 20:05:43.540 INFO   [6722B7\AA7443] Auto-router pass #99 on board '36efd260eb25a181402451ca93fc3c8b' was completed in 3,80 seconds with the score of 981,91 (16 unrouted).
+2026-09-10T18:05:43.548922900Z STATE RUNNING pass=100
+2026-09-10T18:05:43.986979100Z CHECKPOINT route_step pass=100 incomplete=16 router_clearance_violations=0 bytes=323897
+2026-09-10T18:06:09.827147200Z CHECKPOINT route_step pass=100 incomplete=17 router_clearance_violations=0 bytes=323521
+2026-09-10 20:06:12.366 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 981,94 (16 unrouted).
+2026-09-10 20:06:12.366 INFO   [6722B7\AA7443] Auto-router pass #100 on board '55b08c05449ab7cf3c442f51bf35b46b' was completed in 28,69 seconds with the score of 981,92 (16 unrouted).
+2026-09-10T18:06:12.376399Z STATE RUNNING pass=101
+2026-09-10T18:06:23.476811600Z CHECKPOINT route_step pass=101 incomplete=18 router_clearance_violations=0 bytes=318228
+2026-09-10 20:06:25.099 INFO   [6722B7\AA7443] Auto-router pass #101 on board 'e641602f2ffc0b8945775c89b9d9b6b6' was completed in 12,66 seconds with the score of 981,62 (16 unrouted).
+2026-09-10T18:06:25.123430700Z STATE RUNNING pass=102
+2026-09-10T18:06:34.487698200Z CHECKPOINT route_step pass=102 incomplete=17 router_clearance_violations=0 bytes=316519
+2026-09-10 20:06:35.936 INFO   [6722B7\AA7443] Auto-router pass #102 on board '4c2877c000954911f2313bcaf153fc45' was completed in 10,63 seconds with the score of 981,34 (17 unrouted).
+2026-09-10T18:06:35.943980100Z STATE RUNNING pass=103
+2026-09-10 20:06:40.406 INFO   [6722B7\AA7443] Auto-router pass #103 on board 'fae469e8fc7975004170655b0f43bda3' was completed in 4,33 seconds with the score of 981,35 (17 unrouted).
+2026-09-10T18:06:40.413492100Z STATE RUNNING pass=104
+2026-09-10T18:06:47.974768Z CHECKPOINT route_step pass=104 incomplete=16 router_clearance_violations=0 bytes=322039
+2026-09-10 20:06:49.615 INFO   [6722B7\AA7443] Auto-router pass #104 on board 'ff21574251c36ba3c322595cd9c0e979' was completed in 9,08 seconds with the score of 982,05 (15 unrouted).
+2026-09-10T18:06:49.622024900Z STATE RUNNING pass=105
+2026-09-10 20:06:52.647 INFO   [6722B7\AA7443] Auto-router pass #105 on board '11fbd019bfc93bd17ff6420e97ff5af6' was completed in 2,90 seconds with the score of 981,61 (16 unrouted).
+2026-09-10T18:06:52.654972100Z STATE RUNNING pass=106
+2026-09-10 20:06:55.475 INFO   [6722B7\AA7443] Auto-router pass #106 on board '8d0f4aa19c2096a6c3e67ce1d757f779' was completed in 2,70 seconds with the score of 981,81 (15 unrouted).
+2026-09-10T18:06:55.487681500Z STATE RUNNING pass=107
+2026-09-10T18:06:57.862670500Z CHECKPOINT route_step pass=107 incomplete=16 router_clearance_violations=0 bytes=316313
+2026-09-10 20:06:58.110 INFO   [6722B7\AA7443] Auto-router pass #107 on board '14724b22d590d1aa0e792a915c5dfc63' was completed in 2,44 seconds with the score of 981,61 (16 unrouted).
+2026-09-10T18:06:58.134545700Z STATE RUNNING pass=108
+2026-09-10 20:07:01.341 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 982,05 (15 unrouted).
+2026-09-10 20:07:01.341 INFO   [6722B7\AA7443] Auto-router pass #108 on board '160dc52e9967558035c85e8c53fd7ef3' was completed in 3,00 seconds with the score of 981,80 (15 unrouted).
+2026-09-10T18:07:01.349677Z STATE RUNNING pass=109
+2026-09-10 20:07:04.095 INFO   [6722B7\AA7443] Auto-router pass #109 on board '11fbd019bfc93bd17ff6420e97ff5af6' was completed in 2,70 seconds with the score of 981,59 (16 unrouted).
+2026-09-10T18:07:04.103439500Z STATE RUNNING pass=110
+2026-09-10T18:07:07.929203100Z CHECKPOINT route_step pass=110 incomplete=16 router_clearance_violations=0 bytes=318768
+2026-09-10 20:07:08.074 INFO   [6722B7\AA7443] Auto-router pass #110 on board 'a3e3bf42c5c72cc68b26b8f24c12cdf5' was completed in 3,83 seconds with the score of 981,83 (15 unrouted).
+2026-09-10T18:07:08.081264600Z STATE RUNNING pass=111
+2026-09-10 20:07:11.630 INFO   [6722B7\AA7443] Auto-router pass #111 on board '9884ac6f7798fef1a8a9b4f7cebb96c6' was completed in 3,42 seconds with the score of 981,63 (16 unrouted).
+2026-09-10T18:07:11.659075200Z STATE RUNNING pass=112
+2026-09-10 20:07:14.494 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 982,05 (15 unrouted).
+2026-09-10 20:07:14.494 INFO   [6722B7\AA7443] Auto-router pass #112 on board '4c23617ddba40fe0d9c6b526f178fc4f' was completed in 2,61 seconds with the score of 981,82 (15 unrouted).
+2026-09-10T18:07:14.502028700Z STATE RUNNING pass=113
+2026-09-10T18:07:30.544122100Z CHECKPOINT route_step pass=113 incomplete=16 router_clearance_violations=0 bytes=324213
+2026-09-10 20:07:31.851 INFO   [6722B7\AA7443] Auto-router pass #113 on board '11fbd019bfc93bd17ff6420e97ff5af6' was completed in 17,26 seconds with the score of 981,79 (16 unrouted).
+2026-09-10T18:07:31.868208800Z STATE RUNNING pass=114
+2026-09-10 20:07:34.418 INFO   [6722B7\AA7443] Auto-router pass #114 on board '2f52b2b0ee836aaddac161390159b5bf' was completed in 2,34 seconds with the score of 981,79 (16 unrouted).
+2026-09-10T18:07:34.434250200Z STATE RUNNING pass=115
+2026-09-10 20:07:37.073 INFO   [6722B7\AA7443] Auto-router pass #115 on board '2b8acb69de48bc65817e710ae20d3c8a' was completed in 2,42 seconds with the score of 981,79 (16 unrouted).
+2026-09-10T18:07:37.080970300Z STATE RUNNING pass=116
+2026-09-10T18:07:45.751011300Z CHECKPOINT route_step pass=116 incomplete=15 router_clearance_violations=0 bytes=321709
+2026-09-10 20:07:47.016 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 982,05 (15 unrouted).
+2026-09-10 20:07:47.016 INFO   [6722B7\AA7443] Auto-router pass #116 on board 'ca95e7a03ffb910f935d05a8e1077bc1' was completed in 9,74 seconds with the score of 981,98 (15 unrouted).
+2026-09-10T18:07:47.022622100Z STATE RUNNING pass=117
+2026-09-10 20:07:53.932 INFO   [6722B7\AA7443] Auto-router pass #117 on board '11fbd019bfc93bd17ff6420e97ff5af6' was completed in 6,86 seconds with the score of 981,83 (16 unrouted).
+2026-09-10T18:07:53.959539500Z STATE RUNNING pass=118
+2026-09-10T18:07:55.801208300Z CHECKPOINT route_step pass=118 incomplete=16 router_clearance_violations=0 bytes=322181
+2026-09-10 20:07:58.107 INFO   [6722B7\AA7443] Auto-router pass #118 on board 'b3d62f004d6eb67085419970b61eb64e' was completed in 3,96 seconds with the score of 982,01 (15 unrouted).
+2026-09-10T18:07:58.127311800Z STATE RUNNING pass=119
+2026-09-10 20:08:02.102 INFO   [6722B7\AA7443] Auto-router pass #119 on board '7d84b97d775322bce8d9795b8f334d82' was completed in 3,75 seconds with the score of 981,82 (16 unrouted).
+2026-09-10T18:08:02.122106300Z STATE RUNNING pass=120
+2026-09-10 20:08:05.306 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 982,05 (15 unrouted).
+2026-09-10 20:08:05.306 INFO   [6722B7\AA7443] Auto-router pass #120 on board '13aaa41b1ac121a40440055cdbb83abe' was completed in 2,97 seconds with the score of 981,82 (16 unrouted).
+2026-09-10T18:08:05.315894Z STATE RUNNING pass=121
+2026-09-10T18:08:05.976632400Z CHECKPOINT route_step pass=121 incomplete=15 router_clearance_violations=0 bytes=324364
+2026-09-10 20:08:12.085 INFO   [6722B7\AA7443] Auto-router pass #121 on board '11fbd019bfc93bd17ff6420e97ff5af6' was completed in 6,68 seconds with the score of 981,82 (16 unrouted).
+2026-09-10T18:08:12.093642400Z STATE RUNNING pass=122
+2026-09-10T18:08:15.936106900Z CHECKPOINT route_step pass=122 incomplete=17 router_clearance_violations=0 bytes=321968
+2026-09-10 20:08:16.481 INFO   [6722B7\AA7443] Auto-router pass #122 on board 'f58e5554ca78be8723fa47c5e04e730c' was completed in 4,26 seconds with the score of 981,81 (16 unrouted).
+2026-09-10T18:08:16.488485900Z STATE RUNNING pass=123
+2026-09-10 20:08:19.052 INFO   [6722B7\AA7443] Auto-router pass #123 on board 'a2ddaa02a6054de4bdec7d83caefd4a0' was completed in 2,44 seconds with the score of 981,82 (16 unrouted).
+2026-09-10T18:08:19.060943500Z STATE RUNNING pass=124
+2026-09-10T18:08:27.358228400Z CHECKPOINT route_step pass=124 incomplete=15 router_clearance_violations=0 bytes=322360
+2026-09-10 20:08:28.994 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 982,01 (15 unrouted).
+2026-09-10 20:08:28.994 INFO   [6722B7\AA7443] Auto-router pass #124 on board 'c70cb64e69a858232b93825a6aed18d5' was completed in 9,72 seconds with the score of 981,82 (16 unrouted).
+2026-09-10T18:08:29.001035200Z STATE RUNNING pass=125
+2026-09-10 20:08:32.010 INFO   [6722B7\AA7443] Auto-router pass #125 on board '7d84b97d775322bce8d9795b8f334d82' was completed in 2,96 seconds with the score of 981,59 (16 unrouted).
+2026-09-10T18:08:32.017847900Z STATE RUNNING pass=126
+2026-09-10 20:08:34.868 INFO   [6722B7\AA7443] Auto-router pass #126 on board '381907e32d69b76a32b5782577fcdb12' was completed in 2,73 seconds with the score of 981,79 (15 unrouted).
+2026-09-10T18:08:34.889134700Z STATE RUNNING pass=127
+2026-09-10T18:08:37.528825700Z CHECKPOINT route_step pass=127 incomplete=15 router_clearance_violations=0 bytes=316218
+2026-09-10 20:08:38.915 INFO   [6722B7\AA7443] Auto-router pass #127 on board 'aa45cad3bab82f8b0aed258ec5b7ad3d' was completed in 3,88 seconds with the score of 981,58 (16 unrouted).
+2026-09-10T18:08:38.950017700Z STATE RUNNING pass=128
+2026-09-10 20:08:42.224 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 982,01 (15 unrouted).
+2026-09-10 20:08:42.224 INFO   [6722B7\AA7443] Auto-router pass #128 on board '2fef2a44f453ba615fc73c57b14abf07' was completed in 3,07 seconds with the score of 981,79 (15 unrouted).
+2026-09-10T18:08:42.241514600Z STATE RUNNING pass=129
+2026-09-10 20:08:45.590 INFO   [6722B7\AA7443] Auto-router pass #129 on board '7d84b97d775322bce8d9795b8f334d82' was completed in 3,28 seconds with the score of 981,59 (16 unrouted).
+2026-09-10T18:08:45.609992600Z STATE RUNNING pass=130
+2026-09-10T18:08:47.522445900Z CHECKPOINT route_step pass=130 incomplete=16 router_clearance_violations=0 bytes=316414
+2026-09-10 20:08:48.708 INFO   [6722B7\AA7443] Auto-router pass #130 on board '1ee3a219789aefd8bbf9ad7e66d99d5d' was completed in 2,93 seconds with the score of 981,79 (15 unrouted).
+2026-09-10T18:08:48.727291700Z STATE RUNNING pass=131
+2026-09-10 20:08:52.809 INFO   [6722B7\AA7443] Auto-router pass #131 on board '8e6bfdc0f604b761ab8cdeaf55a385f4' was completed in 3,87 seconds with the score of 981,58 (16 unrouted).
+2026-09-10T18:08:52.836551600Z STATE RUNNING pass=132
+2026-09-10 20:08:55.884 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 982,01 (15 unrouted).
+2026-09-10 20:08:55.884 INFO   [6722B7\AA7443] Auto-router pass #132 on board '827869c630861badf48747148cde640d' was completed in 2,85 seconds with the score of 981,89 (15 unrouted).
+2026-09-10T18:08:55.893811800Z STATE RUNNING pass=133
+2026-09-10T18:08:59.391348500Z CHECKPOINT route_step pass=133 incomplete=16 router_clearance_violations=0 bytes=321580
+2026-09-10 20:09:00.289 INFO   [6722B7\AA7443] Auto-router pass #133 on board '7d84b97d775322bce8d9795b8f334d82' was completed in 4,34 seconds with the score of 981,80 (16 unrouted).
+2026-09-10T18:09:00.317494100Z STATE RUNNING pass=134
+2026-09-10 20:09:03.317 INFO   [6722B7\AA7443] Auto-router pass #134 on board '16cccc8beb93d0bdbf90ad1e5ff298b0' was completed in 2,81 seconds with the score of 981,61 (16 unrouted).
+2026-09-10T18:09:03.339817900Z STATE RUNNING pass=135
+2026-09-10 20:09:07.314 INFO   [6722B7\AA7443] Auto-router pass #135 on board '276501979e5018cf0ad9b2792c4fc3ce' was completed in 3,82 seconds with the score of 981,79 (15 unrouted).
+2026-09-10T18:09:07.346652100Z STATE RUNNING pass=136
+2026-09-10T18:09:09.427499600Z CHECKPOINT route_step pass=136 incomplete=16 router_clearance_violations=0 bytes=323135
+2026-09-10T18:09:10.555750300Z STOP requested at explicit time bound; waiting 45 seconds for current route to stop.
+2026-09-10 20:09:10.822 INFO   [6722B7\AA7443] Restoring an earlier board that has the score of 982,01 (15 unrouted).
+2026-09-10 20:09:10.822 INFO   [6722B7\AA7443] Auto-router pass #136 on board '14604d27eee2590b2e65c8a0e37e7fc7' was completed in 3,27 seconds with the score of 981,69 (16 unrouted).
+2026-09-10T18:09:10.834673300Z STATE CANCELLED pass=136
+2026-09-10T18:09:11.223339800Z CHECKPOINT routing_loop_returned pass=136 incomplete=15 router_clearance_violations=0 bytes=321453
+{
+  "rev_a_engineering_prototype": true,
+  "rev_b_production": false,
+  "state": "engineering_routing_candidate_not_order_release",
+  "input": "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\reports\\routing-run-002\\input.kicad.dsn",
+  "input_sha256": "a1dd7290fbcbfca820ef2330e080b0151f6c0b4d178706a5bab84081ab0be1da",
+  "max_passes": 200,
+  "actual_stop_pass_no": 200,
+  "elapsed_seconds": 1200.6712957,
+  "deadline_reached": true,
+  "worker_stopped": true,
+  "checkpoints": 98,
+  "best_router_incomplete_count": 15,
+  "uncaught_exception": null,
+  "native_kicad_drc_performed": false,
+  "warning": "Router internal errors remain in console log. SES/DSN checkpoints are candidates; native KiCad import and DRC are mandatory."
+}

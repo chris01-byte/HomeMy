@@ -4,3 +4,11 @@ __pycache__/
 *-backups/
 *.lck
 ~*.lck
+# Router recovery history and compiled helper classes are local working data.
+# Each retained run contains its best/latest sessions, metrics, log and manifest.
+reports/routing-run-*/classes/
+reports/routing-run-*/snapshots/
+# Isolated analog-overlay native test copy; its JSON diagnostics are retained.
+reports/analog-routing-test.kicad_pcb
+reports/analog-routing-test.kicad_pro
+reports/analog-routing-test.kicad_dru

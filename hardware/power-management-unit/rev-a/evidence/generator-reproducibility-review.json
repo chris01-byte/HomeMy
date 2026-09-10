@@ -1,0 +1,1032 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "no_main_design_or_pcb_regenerated": true,
+    "date": "2026-09-10",
+    "scope": "Source design/calculation/manufacturing generators only; excludes end-to-end native CAD/autorouting reproduction",
+    "runtime": "3.11.5 (main, Jan 23 2026, 07:39:48) [MSC v.1944 64 bit (AMD64)]",
+    "test_method": "Every job executed with subprocess in an isolated rev-a copy. Before each job all copied files were restored to the authoritative snapshot; generated outputs were compared byte-for-byte and JSON recursively. Main data and PCB were never regeneration targets.",
+    "refresh_reason": "Final run after stable annotated PCB, final geometry-provenance/mechanical regeneration, final BOM, release state and manufacturing exports."
+  },
+  "snapshot": "C:\\Users\\chrba\\AppData\\Local\\Temp\\pmu-generator-audit-fp8e4g0v\\rev-a",
+  "jobs": [
+    {
+      "name": "power parts",
+      "script": "design/build_power_parts.py",
+      "exit_code": 0,
+      "stderr": "",
+      "outputs": [
+        {
+          "path": "design/power-parts.json",
+          "exists": true,
+          "changed_from_original": false,
+          "current_sha256": "05bd625b801b49ede98912c5122b94acd8e537164fbd9623d2da31b6748472e6",
+          "regenerated_sha256": "05bd625b801b49ede98912c5122b94acd8e537164fbd9623d2da31b6748472e6",
+          "differences": [],
+          "main_output_still_matches_snapshot": true,
+          "byte_exact_match": true
+        }
+      ],
+      "generator_sha256": "d86d4e7c14466bf76903a5b0d3745a5c90865f437a93b4cfee90e0071c4dca17",
+      "command": [
+        "python",
+        "design/build_power_parts.py"
+      ],
+      "stdout_summary": [
+        "Wrote 104 components"
+      ]
+    },
+    {
+      "name": "chopper parts",
+      "script": "design/build_chopper_parts.py",
+      "exit_code": 0,
+      "stderr": "",
+      "outputs": [
+        {
+          "path": "design/chopper-parts.json",
+          "exists": true,
+          "changed_from_original": false,
+          "current_sha256": "c64938d23db964524f4d0e46eee4e79d61b19141231ec5e5d4690373fb805e52",
+          "regenerated_sha256": "c64938d23db964524f4d0e46eee4e79d61b19141231ec5e5d4690373fb805e52",
+          "differences": [],
+          "main_output_still_matches_snapshot": true,
+          "byte_exact_match": true
+        }
+      ],
+      "generator_sha256": "96db1193b4f8234f9225ab89e73d6d99e0a6beb0bec0611036e21c032b8e204b",
+      "command": [
+        "python",
+        "design/build_chopper_parts.py"
+      ],
+      "stdout_summary": [
+        "84 parts written"
+      ]
+    },
+    {
+      "name": "power placement",
+      "script": "design/build_power_placement.py",
+      "exit_code": 0,
+      "stderr": "",
+      "outputs": [
+        {
+          "path": "design/placement-power.json",
+          "exists": true,
+          "changed_from_original": false,
+          "current_sha256": "6ccd8a7c69282861c2ecf4f55b147952ac17e55cda976a508562e3c832d8bd4d",
+          "regenerated_sha256": "6ccd8a7c69282861c2ecf4f55b147952ac17e55cda976a508562e3c832d8bd4d",
+          "differences": [],
+          "main_output_still_matches_snapshot": true,
+          "byte_exact_match": true
+        }
+      ],
+      "generator_sha256": "756655bdaad461f86f20f3c3420bb4d68efae7a6ff01666c0f56fff289515640",
+      "command": [
+        "python",
+        "design/build_power_placement.py"
+      ],
+      "stdout_summary": [
+        "Placed 104 power components"
+      ]
+    },
+    {
+      "name": "power calculations",
+      "script": "design/power_calculations.py",
+      "exit_code": 0,
+      "stderr": "",
+      "outputs": [
+        {
+          "path": "evidence/power/calculated.json",
+          "exists": true,
+          "changed_from_original": false,
+          "current_sha256": "851170b6491afc4058b85cd4b169ed8f8e8fbb6c3e3fe9716afa6287a21e3ae0",
+          "regenerated_sha256": "851170b6491afc4058b85cd4b169ed8f8e8fbb6c3e3fe9716afa6287a21e3ae0",
+          "differences": [],
+          "main_output_still_matches_snapshot": true,
+          "byte_exact_match": true
+        }
+      ],
+      "generator_sha256": "c75d533a311ba58b693dd372b935d6a3d518ee45826a2401091d1220a8207762",
+      "command": [
+        "python",
+        "design/power_calculations.py"
+      ],
+      "stdout_summary": [
+        "Calculation or geometry JSON printed; generated artifacts independently compared."
+      ]
+    },
+    {
+      "name": "chopper calculations",
+      "script": "design/calculate_chopper.py",
+      "exit_code": 0,
+      "stderr": "",
+      "outputs": [
+        {
+          "path": "design/chopper-calculations.json",
+          "exists": true,
+          "changed_from_original": false,
+          "current_sha256": "8bab51d8ad97a36790eb4676c1f4136c07a3fad8f68df678b62bc1faeba9a0bb",
+          "regenerated_sha256": "8bab51d8ad97a36790eb4676c1f4136c07a3fad8f68df678b62bc1faeba9a0bb",
+          "differences": [],
+          "main_output_still_matches_snapshot": true,
+          "byte_exact_match": true
+        }
+      ],
+      "generator_sha256": "ec57a2b65f02506c83d25dc98b35a7a96421ef280a6c469c22a3128d3217d580",
+      "command": [
+        "python",
+        "design/calculate_chopper.py"
+      ],
+      "stdout_summary": [
+        "Calculation or geometry JSON printed; generated artifacts independently compared."
+      ]
+    },
+    {
+      "name": "mechanical proposal",
+      "script": "manufacturing/build_mechanical.py",
+      "exit_code": 0,
+      "stderr": "",
+      "outputs": [
+        {
+          "path": "manufacturing/busbar-pcb-interface.json",
+          "exists": true,
+          "changed_from_original": false,
+          "current_sha256": "d31d4c18e7cd00ed6910ec9a7c48d871783a5d9ed8ae269eeda9561b7d63acb1",
+          "regenerated_sha256": "d31d4c18e7cd00ed6910ec9a7c48d871783a5d9ed8ae269eeda9561b7d63acb1",
+          "differences": [],
+          "main_output_still_matches_snapshot": true,
+          "byte_exact_match": true
+        },
+        {
+          "path": "manufacturing/busbar-calculations.json",
+          "exists": true,
+          "changed_from_original": false,
+          "current_sha256": "0bc245b8a81c2475965f75390ed22d647bb8414e54f11de1ba54391a3264625d",
+          "regenerated_sha256": "0bc245b8a81c2475965f75390ed22d647bb8414e54f11de1ba54391a3264625d",
+          "differences": [],
+          "main_output_still_matches_snapshot": true,
+          "byte_exact_match": true
+        },
+        {
+          "path": "manufacturing/BUSBAR_TOP_VIEW_1to1.svg",
+          "exists": true,
+          "changed_from_original": false,
+          "current_sha256": "69dba0f18fd1bc07d22c42dcd2fc9fc375b4cb9f4a4299673d3fab055b31d00a",
+          "regenerated_sha256": "69dba0f18fd1bc07d22c42dcd2fc9fc375b4cb9f4a4299673d3fab055b31d00a",
+          "main_output_still_matches_snapshot": true,
+          "byte_exact_match": true
+        },
+        {
+          "path": "manufacturing/BUSBAR_PREVIEW.png",
+          "exists": true,
+          "changed_from_original": false,
+          "current_sha256": "1b3dcf7042ba32d6698d0df01dfc6cfee67fbb84173c819d0799820a9e3fecdb",
+          "regenerated_sha256": "1b3dcf7042ba32d6698d0df01dfc6cfee67fbb84173c819d0799820a9e3fecdb",
+          "main_output_still_matches_snapshot": true,
+          "byte_exact_match": true
+        }
+      ],
+      "generator_sha256": "1735d07a2ff29523aff7a7a6e99e242d39d81957e32aef5bf928871a29284a4c",
+      "command": [
+        "python",
+        "manufacturing/build_mechanical.py"
+      ],
+      "stdout_summary": [
+        "Calculation or geometry JSON printed; generated artifacts independently compared."
+      ]
+    },
+    {
+      "name": "BOM",
+      "script": "scripts/build_bom.py",
+      "exit_code": 0,
+      "stderr": "",
+      "outputs": [
+        {
+          "path": "manufacturing/REV_A_BOM.json",
+          "exists": true,
+          "changed_from_original": false,
+          "current_sha256": "67042e301d8ab93fdcee2807ee57af13a0b5a1be626fbc06367458d481574e1b",
+          "regenerated_sha256": "67042e301d8ab93fdcee2807ee57af13a0b5a1be626fbc06367458d481574e1b",
+          "differences": [],
+          "main_output_still_matches_snapshot": true,
+          "byte_exact_match": true
+        },
+        {
+          "path": "manufacturing/REV_A_BOM.csv",
+          "exists": true,
+          "changed_from_original": false,
+          "current_sha256": "099ab0655f634cfaf943c4abf18f1cedfcb21cc345b52dd4fda8dec982a87f63",
+          "regenerated_sha256": "099ab0655f634cfaf943c4abf18f1cedfcb21cc345b52dd4fda8dec982a87f63",
+          "main_output_still_matches_snapshot": true,
+          "byte_exact_match": true
+        },
+        {
+          "path": "manufacturing/REV_A_EXTERNAL_BOM.json",
+          "exists": true,
+          "changed_from_original": false,
+          "current_sha256": "5508478287ee0903ac6b3250f0d340b7eda2201ff3c28e596c52af05dfdb47d8",
+          "regenerated_sha256": "5508478287ee0903ac6b3250f0d340b7eda2201ff3c28e596c52af05dfdb47d8",
+          "differences": [],
+          "main_output_still_matches_snapshot": true,
+          "byte_exact_match": true
+        },
+        {
+          "path": "manufacturing/REV_A_EXTERNAL_BOM.csv",
+          "exists": true,
+          "changed_from_original": false,
+          "current_sha256": "0da2b85b1007a357e23666bb7284b75c32b4331182a42cfc81cef013a4126b0f",
+          "regenerated_sha256": "0da2b85b1007a357e23666bb7284b75c32b4331182a42cfc81cef013a4126b0f",
+          "main_output_still_matches_snapshot": true,
+          "byte_exact_match": true
+        },
+        {
+          "path": "manufacturing/REV_A_BOM_MANIFEST.json",
+          "exists": true,
+          "changed_from_original": false,
+          "current_sha256": "9d366b78dd644e64c99c234f8df062fc2bfab96deddddd2d2624d9746611bc77",
+          "regenerated_sha256": "9d366b78dd644e64c99c234f8df062fc2bfab96deddddd2d2624d9746611bc77",
+          "differences": [],
+          "main_output_still_matches_snapshot": true,
+          "byte_exact_match": true
+        }
+      ],
+      "generator_sha256": "3e9871e64c8708526b9ee773f5a56d77a058c5021a316de85f2841a3f60037b1",
+      "command": [
+        "python",
+        "scripts/build_bom.py"
+      ],
+      "stdout_summary": [
+        "356 purchased PCB positions; 352 populated; 4 DNP; 124 grouped lines; 31 external lines; 0 errors"
+      ]
+    }
+  ],
+  "limits": [
+    "Final analog placement and paired Kelvin routing are a separately applied deterministic overlay; placement-power.json is the original intent, not a round-trip export of the routed PCB.",
+    "build_integration.py, build_schematic.py, build_board.py, autorouting and final repair/overlay scripts were not rerun by this bounded audit.",
+    "wake-io-parts.json and placement-wake.json are authoritative design inputs; this audit does not claim a complete generator for every manually authored input.",
+    "Identical calculated values and drawings prove reproducibility of the declared model only; they do not establish electrical/thermal measurements, fabrication release, ERC/DRC state, component stock, or Rev B validation.",
+    "The mechanical generator consumes reports/board-pad-geometry.json. Re-exporting different geometry intentionally changes its provenance hash and potentially outlines; rerun dependent mechanical/BOM generation after an intentional input change."
+  ],
+  "inputs": [
+    {
+      "path": "design/FINAL_ROUTING_REPAIRS.json",
+      "snapshot_sha256": "a8c8206a3e7624346a86672e821cd71b2bef7bda32d59801714e735927dadf24",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/assembled-parts.json",
+      "snapshot_sha256": "19f61dad0690e63a5b034964c4729a18d664ec3d7118e665c821b3fee7e2a8bf",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/build_chopper_parts.py",
+      "snapshot_sha256": "96db1193b4f8234f9225ab89e73d6d99e0a6beb0bec0611036e21c032b8e204b",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/build_power_parts.py",
+      "snapshot_sha256": "d86d4e7c14466bf76903a5b0d3745a5c90865f437a93b4cfee90e0071c4dca17",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/build_power_placement.py",
+      "snapshot_sha256": "756655bdaad461f86f20f3c3420bb4d68efae7a6ff01666c0f56fff289515640",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/calculate_chopper.py",
+      "snapshot_sha256": "ec57a2b65f02506c83d25dc98b35a7a96421ef280a6c469c22a3128d3217d580",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/chopper-calculations.json",
+      "snapshot_sha256": "8bab51d8ad97a36790eb4676c1f4136c07a3fad8f68df678b62bc1faeba9a0bb",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/chopper-footprint-specs.json",
+      "snapshot_sha256": "4cfd6bdce00206efe0a47e328218f922c5dd97f3782e66e6d3e60b09f9d2803d",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/chopper-parts.json",
+      "snapshot_sha256": "c64938d23db964524f4d0e46eee4e79d61b19141231ec5e5d4690373fb805e52",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/critical-alternatives.json",
+      "snapshot_sha256": "ec12824640ee0eb8ae3bfc13da6fc45b993f96ccf2670e68da3c428a7a17ef49",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/footprint-pin-audit.json",
+      "snapshot_sha256": "e3a44c326d04154cf9bff325bc29f3d88f40dd93f4aaeb4202ec07ad8b6a25ae",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/integration-parts.json",
+      "snapshot_sha256": "4ed1c18cd120f13efbcdbe18b74458d758511598e864bd0caa71c50f2887765d",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/lower-power-routing.json",
+      "snapshot_sha256": "51c8af36d81c0ed6711c37c4ce82fab8418bcf2336d092b345342d978c04015b",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/placement-audit.json",
+      "snapshot_sha256": "53d03b49fee0c726096d9df024930a5c4bd664e42a99927937b0f1c4a2d5bd8b",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/placement-busbar.json",
+      "snapshot_sha256": "f210c5ee04f10dc1c29044088db68caae8060cf8c3f499196e793d0c168ee08d",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/placement-chopper.json",
+      "snapshot_sha256": "caca9cc39cc6ea73e0616daaaef2630e7f362af095ffb4132f4bb0ad80a3be76",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/placement-power.json",
+      "snapshot_sha256": "6ccd8a7c69282861c2ecf4f55b147952ac17e55cda976a508562e3c832d8bd4d",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/placement-wake.json",
+      "snapshot_sha256": "4b085cccd915d8ffd361646a7fbfbb4d6f811c00e573a75af1f5bdc390d182b0",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/power-parts.json",
+      "snapshot_sha256": "05bd625b801b49ede98912c5122b94acd8e537164fbd9623d2da31b6748472e6",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/power_calculations.py",
+      "snapshot_sha256": "c75d533a311ba58b693dd372b935d6a3d518ee45826a2401091d1220a8207762",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/via-field-counts.json",
+      "snapshot_sha256": "ffa12f0ab206b72678047ead8ae1c413af7f9baeaf1714755a745069b29b0599",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "design/wake-io-parts.json",
+      "snapshot_sha256": "08c08665c6eafed23d6a4687534c049f9a2a8410a6238e6ec0a9f408ddc19692",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/chopper/7461103.pdf",
+      "snapshot_sha256": "70f6d91fe87a8b073418e1a0ac1b86448995be8659d938fc79ae2b00990319dd",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/chopper/cross-review-sources.json",
+      "snapshot_sha256": "49e764c0a8d28114d4f2e0ae551dc708aceaeb7b39b371b0f2296665c8af4671",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/chopper/ipt015n10n5-primary-source.json",
+      "snapshot_sha256": "35f98e6cd53415b25c1d7092e7f8f7360577020bbdbe18ace152338ae62a8965",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/chopper/kyc.pdf",
+      "snapshot_sha256": "c2d1a1093f11052553e52272388fba42359d9adcf6dd9d2a3f19be120ec1df43",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/chopper/lm339b.pdf",
+      "snapshot_sha256": "b8b91e2b545800b8c7e9c7f03cf9185831b2e2674bf1e0bd211b5bf128f8463d",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/chopper/mbr10100.pdf",
+      "snapshot_sha256": "a8f4f70172efdf6c87051af08b8f2dd3eeba4b60c43e297d66d9b9a7fe2a7da1",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/chopper/ntcle100.pdf",
+      "snapshot_sha256": "f9d6153738198dc705ed681c3b55e70a6571f8fee13a4ed7b2b41e49973cb9c9",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/chopper/ref50.pdf",
+      "snapshot_sha256": "3432cb9cf8c792a56645eb365b8db138a9bf38cee18497aec729238f0455d031",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/chopper/rhnh.pdf",
+      "snapshot_sha256": "69cb5a113455f33dec03bf72a2998bac89091365f4e158a36f7529dcc2c68541",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/chopper/source_manifest.json",
+      "snapshot_sha256": "c5fb69bb3b5738a6aa9fb1a48c2551a3025adbec0370e94c3c67ebcfc2bc8047",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/chopper/tlv1704.pdf",
+      "snapshot_sha256": "b971c8ca9ae7da43d67fa3486f202e6e688d8f5cc4b220268473fc0b4904c42b",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/chopper/tnpw_e3.pdf",
+      "snapshot_sha256": "6f0508c568cb355aaf2accdd33fe3a780d3ea5ef207c4c9a71839a8acadc33a5",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/chopper/tps3808.pdf",
+      "snapshot_sha256": "74d889c0f68af88032f1633c26381817cc03e10d9fd3b4c177a044ad3ed86eed",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/chopper/tps7a4001.pdf",
+      "snapshot_sha256": "63478c047e91a341a723bf4549689fb362a0fc9bf91e249db7e931e8b219e8a6",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/chopper/ucc27511.pdf",
+      "snapshot_sha256": "781cc451dbb371a4137337a4bdecbe11a9f1ff8979a11e238e97d8a80a287b31",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/chopper/vos618a.pdf",
+      "snapshot_sha256": "61d948c9edadff66dad1bfc49f8ae17f2258b25ee15af8509d0361e218a9971a",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/C0805C102J5GACTU.pdf",
+      "snapshot_sha256": "da96957ade561cf17f7d051aaaab3562a1f4b9bf628abc8f07ad8a0f1d04677c",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/C0805C103J5GACTU.pdf",
+      "snapshot_sha256": "c17910936de60f33ace1826527eb8e763c70b32f35f547a0cbca4878c88768bd",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/C0805C223J5GACTU.pdf",
+      "snapshot_sha256": "5834b6f4f0f4e72fb2a7ea27593d9014e1c3896f18b6ec49f8798e63fbe31b2d",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/C1206C105K3RACTU.pdf",
+      "snapshot_sha256": "6266866f851908368ca32e06e4648c97b38d773bae905bc93837c9dc517a1d55",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/C1206C475K3RACTU.pdf",
+      "snapshot_sha256": "3f934744d2553bbfa653008b7442ec243f4b5e6b86d7e76a3d149d94865b79db",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/C1210C105K1RACTU.pdf",
+      "snapshot_sha256": "18b22e2b76b068af3e7df6936e75b71383d095ac0804b29280eb51568881cf36",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/CN-202508013I.pdf",
+      "snapshot_sha256": "7ba8ac69b8101b4ce1fe72d6a8a781d73625fdd527d1331b90dbb7fcf7f751c0",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/N1902_CSS_CSM_EBW_PCN.pdf",
+      "snapshot_sha256": "047bd5cdbca092424c514812a05b665196d989c70d8f0927679c5588c4fd4d50",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/calculated.json",
+      "snapshot_sha256": "851170b6491afc4058b85cd4b169ed8f8e8fbb6c3e3fe9716afa6287a21e3ae0",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/css4j-4026.pdf",
+      "snapshot_sha256": "27be7941ff95afc1c0a98ac573d33a987279ce2ee55985ed78308d502543e49d",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/lm74930-q1.pdf",
+      "snapshot_sha256": "d54d88498a76c31aa7e3bc8f747a4d1e2f30f021ecd95ee71fe70652a9cbf8c9",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/psmn1r0-100ase.pdf",
+      "snapshot_sha256": "0d89e9f019927720b65390a524d27a2f44a57610cdafbe2392bed11f089f5833",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/psmn1r0-100asf.pdf",
+      "snapshot_sha256": "2e598d48334105c5f6d55ddd188a6be74e91600852cc5e988c27bd4bbe305e74",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/ptvs1.pdf",
+      "snapshot_sha256": "12100949b5bd641ea082a72170728c11ce16a4dd098f8ee3ae851e114664e2f4",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/sources.json",
+      "snapshot_sha256": "89e84396d293724dcb6c4fb79bdf3a0bbd6caf62e01bec110b3c7ed2ae437d17",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/tlv3011.pdf",
+      "snapshot_sha256": "02993c016420887ee4f1ab2fa640e7596c9c1324a73f4f72bee3b32adec38df3",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/tps2663.pdf",
+      "snapshot_sha256": "bb61314ace65ed37684bd07f541fc676081d7cf81cb24020e7c5c2065bfe16b2",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/tps4811-q1.pdf",
+      "snapshot_sha256": "3cfe41fef1407b85abaaee1e27a95ac3cf2cb1bdf218209b8578a835c4c9497f",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/power/wima-mks4.pdf",
+      "snapshot_sha256": "26b7a4345799fcc00f291b705cdc0b2518c9c5e620a8486daf1d7a19ee8e4bdf",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "evidence/wake-io-sources.json",
+      "snapshot_sha256": "f7c6a31b5da56eff0d057416a4c469ba657eb62e482790f1f324cf08911b4ac9",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "manufacturing/ASSEMBLY_ORIENTATION.png",
+      "snapshot_sha256": "c786a70266c3654885fd5091493689000e2bd85856b04c53b6126b0cf91558c7",
+      "main_snapshot_still_matches": false
+    },
+    {
+      "path": "manufacturing/ASSEMBLY_ORIENTATION.svg",
+      "snapshot_sha256": "a8c4d47bf9d963357763c212ecf87da342a5813d8657310dc2b63a66c9712894",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "manufacturing/BUSBAR_PREVIEW.png",
+      "snapshot_sha256": "1b3dcf7042ba32d6698d0df01dfc6cfee67fbb84173c819d0799820a9e3fecdb",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "manufacturing/BUSBAR_TOP_VIEW_1to1.svg",
+      "snapshot_sha256": "69dba0f18fd1bc07d22c42dcd2fc9fc375b4cb9f4a4299673d3fab055b31d00a",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "manufacturing/MECHANICAL_CATALOG_BOM.json",
+      "snapshot_sha256": "f16fa2c81319009f8d2ac8fb37753ba294b622156ee063934a12bd4ffaf1aa30",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "manufacturing/REV_A_BOM.csv",
+      "snapshot_sha256": "099ab0655f634cfaf943c4abf18f1cedfcb21cc345b52dd4fda8dec982a87f63",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "manufacturing/REV_A_BOM.json",
+      "snapshot_sha256": "67042e301d8ab93fdcee2807ee57af13a0b5a1be626fbc06367458d481574e1b",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "manufacturing/REV_A_BOM_MANIFEST.json",
+      "snapshot_sha256": "9d366b78dd644e64c99c234f8df062fc2bfab96deddddd2d2624d9746611bc77",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "manufacturing/REV_A_EXTERNAL_BOM.csv",
+      "snapshot_sha256": "0da2b85b1007a357e23666bb7284b75c32b4331182a42cfc81cef013a4126b0f",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "manufacturing/REV_A_EXTERNAL_BOM.json",
+      "snapshot_sha256": "5508478287ee0903ac6b3250f0d340b7eda2201ff3c28e596c52af05dfdb47d8",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "manufacturing/assembly-orientation.json",
+      "snapshot_sha256": "e49a1370163ad4b808445eae03ec781085d1f2b9af0d928b2fc6e2800b62708a",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "manufacturing/build_mechanical.py",
+      "snapshot_sha256": "1735d07a2ff29523aff7a7a6e99e242d39d81957e32aef5bf928871a29284a4c",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "manufacturing/busbar-calculations.json",
+      "snapshot_sha256": "0bc245b8a81c2475965f75390ed22d647bb8414e54f11de1ba54391a3264625d",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "manufacturing/busbar-pcb-interface.json",
+      "snapshot_sha256": "d31d4c18e7cd00ed6910ec9a7c48d871783a5d9ed8ae269eeda9561b7d63acb1",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "manufacturing/review_assembly_orientation.py",
+      "snapshot_sha256": "703626d6bb83e0bdeee2a510aa655e3fdce02c0e78d9833a774790a350b281f4",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "manufacturing/source-pad-geometry.json",
+      "snapshot_sha256": "e56088f7f81a151e0be56292ac7b2d7f472b2bd84d24191c9d5bd11648d8b845",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "reports/board-pad-geometry.json",
+      "snapshot_sha256": "c90c0252c9a09f0e6f2d69644b970aece073b7a8eec144761803a87ebe28ede9",
+      "main_snapshot_still_matches": true
+    },
+    {
+      "path": "scripts/build_bom.py",
+      "snapshot_sha256": "3e9871e64c8708526b9ee773f5a56d77a058c5021a316de85f2841a3f60037b1",
+      "main_snapshot_still_matches": true
+    }
+  ],
+  "result": {
+    "generators_tested": 7,
+    "outputs_tested": 14,
+    "generators_exited_zero": true,
+    "all_outputs_byte_exact": true,
+    "main_outputs_unchanged": true,
+    "stale_generator_findings": [],
+    "source_code_fixes_required_after_metadata_synchronization": false
+  },
+  "supplemental_library_generator": {
+    "metadata": {
+      "rev_a_engineering_prototype": true,
+      "rev_b_production": false
+    },
+    "temporary_root": "C:\\Users\\chrba\\AppData\\Local\\Temp\\pmu-final-library-repro-n1f97tjb",
+    "generator": "scripts/build_footprints.py",
+    "generator_sha256": "1f31763bb496960d345c9e339fe50ae257eaed33b870c82a790df890de8bf50a",
+    "exit_code": 0,
+    "stdout": "421 footprints audited; 0 unresolved mappings.\n",
+    "stderr": "",
+    "library_footprints": [
+      {
+        "path": "kicad/libraries/Capacitor_SMD.pretty/C_0603_1608Metric.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "d45eebd5cb9faace255d4ec95a0f9484efde898359507b02e2ba9bbb3ef6d857",
+        "after_sha256": "d45eebd5cb9faace255d4ec95a0f9484efde898359507b02e2ba9bbb3ef6d857"
+      },
+      {
+        "path": "kicad/libraries/Capacitor_SMD.pretty/C_0805_2012Metric.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "e890bdf55fa18fc6df6878eb1b5251a991e1b93985509175eb269d3d002880b4",
+        "after_sha256": "e890bdf55fa18fc6df6878eb1b5251a991e1b93985509175eb269d3d002880b4"
+      },
+      {
+        "path": "kicad/libraries/Capacitor_SMD.pretty/C_1206_3216Metric.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "420c3ac494743fbc47653b6e7d0107d51620e25c77eaf73f083e799807fd1381",
+        "after_sha256": "420c3ac494743fbc47653b6e7d0107d51620e25c77eaf73f083e799807fd1381"
+      },
+      {
+        "path": "kicad/libraries/Capacitor_SMD.pretty/C_1210_3225Metric.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "c0c3dbbbe623e957a8ee6c0a36f432e06b10ff8bd79fc785bd13dea723a1f20c",
+        "after_sha256": "c0c3dbbbe623e957a8ee6c0a36f432e06b10ff8bd79fc785bd13dea723a1f20c"
+      },
+      {
+        "path": "kicad/libraries/Capacitor_THT.pretty/CP_Radial_D10.0mm_P5.00mm.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "6a3ad8c69a63ac1ffb450801de034f982235108a98f621f7f514fdcff68c3e75",
+        "after_sha256": "6a3ad8c69a63ac1ffb450801de034f982235108a98f621f7f514fdcff68c3e75"
+      },
+      {
+        "path": "kicad/libraries/Capacitor_THT.pretty/CP_Radial_D12.5mm_P5.00mm.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "fabe0170c7df31ec4bf449f52ccd541fa7154ae616bab98c99076a4fa95a3511",
+        "after_sha256": "fabe0170c7df31ec4bf449f52ccd541fa7154ae616bab98c99076a4fa95a3511"
+      },
+      {
+        "path": "kicad/libraries/Connector_JST.pretty/JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "eba7b52cb0e3e2c812e079c3736734b3720b61b45f7a72b43888f0eb56b32ef9",
+        "after_sha256": "eba7b52cb0e3e2c812e079c3736734b3720b61b45f7a72b43888f0eb56b32ef9"
+      },
+      {
+        "path": "kicad/libraries/Connector_Phoenix_MSTB.pretty/PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "945e880e3b63af393a98bb3347177ea79058b0a25834753d72b42a81cd4bf67f",
+        "after_sha256": "945e880e3b63af393a98bb3347177ea79058b0a25834753d72b42a81cd4bf67f"
+      },
+      {
+        "path": "kicad/libraries/Connector_Phoenix_MSTB.pretty/PhoenixContact_MSTB_2,5_3-GF-5,08_1x03_P5.08mm_Horizontal_ThreadedFlange.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "3f0e79b94463670bd739b577e00cfb789ff78eba15f60a03ebb1f2bdb531198f",
+        "after_sha256": "3f0e79b94463670bd739b577e00cfb789ff78eba15f60a03ebb1f2bdb531198f"
+      },
+      {
+        "path": "kicad/libraries/Connector_PinHeader_2.54mm.pretty/PinHeader_1x02_P2.54mm_Vertical.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "e5c0d699660a4479fa2414cc5be1835c6f52a38630dd85a2d18aab4dcd3ff8e5",
+        "after_sha256": "e5c0d699660a4479fa2414cc5be1835c6f52a38630dd85a2d18aab4dcd3ff8e5"
+      },
+      {
+        "path": "kicad/libraries/Connector_PinHeader_2.54mm.pretty/PinHeader_1x03_P2.54mm_Vertical.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "6a7dba97d6e733fd9d5f12d2d57f2cde29e8393e15b08d8b3e41bf2b430d83ed",
+        "after_sha256": "6a7dba97d6e733fd9d5f12d2d57f2cde29e8393e15b08d8b3e41bf2b430d83ed"
+      },
+      {
+        "path": "kicad/libraries/Connector_PinHeader_2.54mm.pretty/PinHeader_1x05_P2.54mm_Vertical.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "a9beaa5e3bf9f73f4667fd503d8ddc47f81aec7999b51211890c919363099acf",
+        "after_sha256": "a9beaa5e3bf9f73f4667fd503d8ddc47f81aec7999b51211890c919363099acf"
+      },
+      {
+        "path": "kicad/libraries/Diode_SMD.pretty/D_SMC.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "2c0239221d8f29ae09ba6ab1b5d6b6d70d9017a152de5696dbab6218d35dc7fc",
+        "after_sha256": "2c0239221d8f29ae09ba6ab1b5d6b6d70d9017a152de5696dbab6218d35dc7fc"
+      },
+      {
+        "path": "kicad/libraries/Diode_SMD.pretty/D_SOD-123F.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "bd07ed6c51644ac1addb8e72be12163812e6c0eb6df342efd7a0b842845a4236",
+        "after_sha256": "bd07ed6c51644ac1addb8e72be12163812e6c0eb6df342efd7a0b842845a4236"
+      },
+      {
+        "path": "kicad/libraries/Diode_SMD.pretty/D_SOD-323.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "77ac02f4955d3dc824de14f5874874e0e5b095afdda5aab7c6558c1f6b83297e",
+        "after_sha256": "77ac02f4955d3dc824de14f5874874e0e5b095afdda5aab7c6558c1f6b83297e"
+      },
+      {
+        "path": "kicad/libraries/MountingHole.pretty/MountingHole_3.2mm_M3.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "3853c52bba27d3e3e3e18db44a20dfb296eb9e6cd16ebf26fe4a96a2ee8add3b",
+        "after_sha256": "3853c52bba27d3e3e3e18db44a20dfb296eb9e6cd16ebf26fe4a96a2ee8add3b"
+      },
+      {
+        "path": "kicad/libraries/Package_DFN_QFN.pretty/Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "08a136edd6068106307086b3704fc14c075a09ed81b46f87617bebbc813d7106",
+        "after_sha256": "08a136edd6068106307086b3704fc14c075a09ed81b46f87617bebbc813d7106"
+      },
+      {
+        "path": "kicad/libraries/Package_SO.pretty/MSOP-10_3x3mm_P0.5mm.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "58ac9b376faa5c5f6aa3f01271756228330de4931d48610c9d14ba9cc70c258d",
+        "after_sha256": "58ac9b376faa5c5f6aa3f01271756228330de4931d48610c9d14ba9cc70c258d"
+      },
+      {
+        "path": "kicad/libraries/Package_SO.pretty/SOIC-8_3.9x4.9mm_P1.27mm.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "3c9b63198dd4dbf5e6c28c84702c29fad46a35103b821a19306c4ac888ad8e76",
+        "after_sha256": "3c9b63198dd4dbf5e6c28c84702c29fad46a35103b821a19306c4ac888ad8e76"
+      },
+      {
+        "path": "kicad/libraries/Package_SO.pretty/SSOP-4_4.4x2.6mm_P1.27mm.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "fe81e75b3f6454d07e1b4c2daea25ed18e9f7d22f54d1216861cf1517dc0cec4",
+        "after_sha256": "fe81e75b3f6454d07e1b4c2daea25ed18e9f7d22f54d1216861cf1517dc0cec4"
+      },
+      {
+        "path": "kicad/libraries/Package_SO.pretty/Texas_DGN0008B_VSSOP-8-1EP_3x3mm_P0.65mm_EP2x3mm_Mask1.88x1.98mm_ThermalVias.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "5838a3fa49820014e57c2a0dec866c815e7d5ab83958b541a3a1cf7c4481755d",
+        "after_sha256": "5838a3fa49820014e57c2a0dec866c815e7d5ab83958b541a3a1cf7c4481755d"
+      },
+      {
+        "path": "kicad/libraries/Package_SO.pretty/TSSOP-14_4.4x5mm_P0.65mm.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "8da4c0cda07ca9aadbeb33cd860d9bc90a2b382263b25be3609543a6da4a7258",
+        "after_sha256": "8da4c0cda07ca9aadbeb33cd860d9bc90a2b382263b25be3609543a6da4a7258"
+      },
+      {
+        "path": "kicad/libraries/Package_SO.pretty/VSSOP-8_2.3x2mm_P0.5mm.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "86c45430902f81c684c44234069616fc5b91e77178e928437c9a103bd4bcaf35",
+        "after_sha256": "86c45430902f81c684c44234069616fc5b91e77178e928437c9a103bd4bcaf35"
+      },
+      {
+        "path": "kicad/libraries/Package_TO_SOT_SMD.pretty/Infineon_PG-HSOF-8-1.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "c72cf22e551207bfb9fbdde9cdb30c426bad94fdd678be25784e6ab39b90fe69",
+        "after_sha256": "c72cf22e551207bfb9fbdde9cdb30c426bad94fdd678be25784e6ab39b90fe69"
+      },
+      {
+        "path": "kicad/libraries/Package_TO_SOT_SMD.pretty/SOT-223-3_TabPin2.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "b6babdabd232a3e3170a86a17e8ed042377c2bb1854965c489d82c0e98179444",
+        "after_sha256": "b6babdabd232a3e3170a86a17e8ed042377c2bb1854965c489d82c0e98179444"
+      },
+      {
+        "path": "kicad/libraries/Package_TO_SOT_SMD.pretty/SOT-23-5.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "684a94089f59798a46492dac8dd0242edfa4d915e76a210abdca369e4faa4f9b",
+        "after_sha256": "684a94089f59798a46492dac8dd0242edfa4d915e76a210abdca369e4faa4f9b"
+      },
+      {
+        "path": "kicad/libraries/Package_TO_SOT_SMD.pretty/SOT-23-6.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "ea29040bed73e5dfa455e36f2c9324b0de7782c5a6cf79040b7d885ff766fdb4",
+        "after_sha256": "ea29040bed73e5dfa455e36f2c9324b0de7782c5a6cf79040b7d885ff766fdb4"
+      },
+      {
+        "path": "kicad/libraries/Package_TO_SOT_SMD.pretty/SOT-23.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "7fb2859c6463f3a37966a1a20c31d8bfe7d4e8459d00bb165d5a7488270816c5",
+        "after_sha256": "7fb2859c6463f3a37966a1a20c31d8bfe7d4e8459d00bb165d5a7488270816c5"
+      },
+      {
+        "path": "kicad/libraries/Package_TO_SOT_SMD.pretty/TSOT-23-6.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "06b16e157385f8d7fbca5e0c323669c3aa880358789d44a456e62290be2400e3",
+        "after_sha256": "06b16e157385f8d7fbca5e0c323669c3aa880358789d44a456e62290be2400e3"
+      },
+      {
+        "path": "kicad/libraries/Package_TO_SOT_SMD.pretty/TSOT-23-8.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "16e5e01fefc067a09326481d05ab472e4d00f4a9a3a2829043cd9a53f8fca4d8",
+        "after_sha256": "16e5e01fefc067a09326481d05ab472e4d00f4a9a3a2829043cd9a53f8fca4d8"
+      },
+      {
+        "path": "kicad/libraries/Package_TO_SOT_THT.pretty/TO-220-2_Vertical.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "32d10eb7c8a7b856b0c61e5e8ff80668e07e53e91575b5ac70aeadc30bdc2ff5",
+        "after_sha256": "32d10eb7c8a7b856b0c61e5e8ff80668e07e53e91575b5ac70aeadc30bdc2ff5"
+      },
+      {
+        "path": "kicad/libraries/PMU.pretty/TI_DRB0008A_3x3mm_EP1.5x1.75.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "1d9893d405d12c15d344ce2b9f23e8324fcf87615dab0a21b40cc7146c9cb455",
+        "after_sha256": "1d9893d405d12c15d344ce2b9f23e8324fcf87615dab0a21b40cc7146c9cb455"
+      },
+      {
+        "path": "kicad/libraries/PMU.pretty/Wurth_7461103.kicad_mod",
+        "byte_identical": false,
+        "semantic_identical": true,
+        "before_sha256": "65f1af4707017249431a4d336cc416aa7a4d6baf1b1bdcfc5f67e6c644eaf2d5",
+        "after_sha256": "a939f777927ead402a71dfa6bfa4f360e5b2b1cf5abe10ece4ac9e2f44a7c166"
+      },
+      {
+        "path": "kicad/libraries/PMU_RevA.pretty/Busbar_Contact_M3_D8.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "4d466542baecce0d5e596da07ddbac875bc44ed1cfc15a1a304b3c5d30d7e05b",
+        "after_sha256": "4d466542baecce0d5e596da07ddbac875bc44ed1cfc15a1a304b3c5d30d7e05b"
+      },
+      {
+        "path": "kicad/libraries/PMU_RevA.pretty/CCPAK1212_SOT8000A.kicad_mod",
+        "byte_identical": false,
+        "semantic_identical": true,
+        "before_sha256": "034426872512282c75202e6af788ed87be7a15f0a473d676f6b7a5477fb1e7b4",
+        "after_sha256": "41aa59051dab96b2f88d488043b49e12256317e65d890193cda9d487c7d4e202"
+      },
+      {
+        "path": "kicad/libraries/PMU_RevA.pretty/CSS4J_4026_Kelvin.kicad_mod",
+        "byte_identical": false,
+        "semantic_identical": true,
+        "before_sha256": "20fc0b8c00c42dfcf819a9fed38acf35f2966bb09cc0c6f510425325b57480ea",
+        "after_sha256": "0893581f10535bd07db65782bdc6b25c10c2b997d2b22a664a25510f21be0c7c"
+      },
+      {
+        "path": "kicad/libraries/PMU_RevA.pretty/C_Rect_L31.5mm_W13mm_P27.5mm.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "1f1b6274feea69a6f4623543572eac2e4af706e55ddc5b0d959de1081dfec11c",
+        "after_sha256": "1f1b6274feea69a6f4623543572eac2e4af706e55ddc5b0d959de1081dfec11c"
+      },
+      {
+        "path": "kicad/libraries/PMU_RevA.pretty/NetTie_Logic_2.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "51e43af71f18914e0d54c2d7ed6093a833623ea42d04359f50a89990d499e7d7",
+        "after_sha256": "51e43af71f18914e0d54c2d7ed6093a833623ea42d04359f50a89990d499e7d7"
+      },
+      {
+        "path": "kicad/libraries/PMU_RevA.pretty/NetTie_Power_2.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "dec3c3cd8d6b9e6e0551bd8b96ab9df14ed2f5c3ea6ae3387fe933e2f792491b",
+        "after_sha256": "dec3c3cd8d6b9e6e0551bd8b96ab9df14ed2f5c3ea6ae3387fe933e2f792491b"
+      },
+      {
+        "path": "kicad/libraries/PMU_RevA.pretty/PTVS1_DFN8x6.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "30aae5fa515b2dadbfc37b20af0f48dcb618d1fd5765e988c91ef772fefddb3f",
+        "after_sha256": "30aae5fa515b2dadbfc37b20af0f48dcb618d1fd5765e988c91ef772fefddb3f"
+      },
+      {
+        "path": "kicad/libraries/PMU_RevA.pretty/VQFN_RGE24_4x4_P0.5_EP_FLOAT.kicad_mod",
+        "byte_identical": false,
+        "semantic_identical": true,
+        "before_sha256": "9496a9a0222bc36886cf9259e3e4a6a4e517be4a3ed21ec9e617914f4bb750a4",
+        "after_sha256": "f71a0dc3a20b0dcbeea3e5f52819cea93dcd4f67678aa5375f67bbcfffa804a8"
+      },
+      {
+        "path": "kicad/libraries/PMU_RevA.pretty/VSSOP_DGX19_3x5.1_P0.5_Missing16.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "445af5fd00b6832ac066f8db45d7f9d2ef154c9f94611d1711e7af917d8be7ac",
+        "after_sha256": "445af5fd00b6832ac066f8db45d7f9d2ef154c9f94611d1711e7af917d8be7ac"
+      },
+      {
+        "path": "kicad/libraries/Resistor_SMD.pretty/R_0603_1608Metric.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "03fc7902b2661df01b4d828fdb6eab9eddf974e7130ed2b98892607387a50c4b",
+        "after_sha256": "03fc7902b2661df01b4d828fdb6eab9eddf974e7130ed2b98892607387a50c4b"
+      },
+      {
+        "path": "kicad/libraries/Resistor_SMD.pretty/R_0805_2012Metric.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c",
+        "after_sha256": "949bbbe025b509557866ddd9fcb0403244571f3ceb4f954c9766ee622d18421c"
+      },
+      {
+        "path": "kicad/libraries/Resistor_SMD.pretty/R_1206_3216Metric.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "f45a0f7c60b15463e1126a75a9ff484349ecd1861de62f1cbff41574e03b7643",
+        "after_sha256": "f45a0f7c60b15463e1126a75a9ff484349ecd1861de62f1cbff41574e03b7643"
+      },
+      {
+        "path": "kicad/libraries/Resistor_SMD.pretty/R_2010_5025Metric.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "6bde9214570db97950366b7b000158b1915628a1c201365b3a6a01507144c265",
+        "after_sha256": "6bde9214570db97950366b7b000158b1915628a1c201365b3a6a01507144c265"
+      },
+      {
+        "path": "kicad/libraries/RF_Module.pretty/ESP32-S3-WROOM-1.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "04f2cf7af80a4ac5538c4f5e21cdb97dad4932e432a9f9c7938e50467d22cf4b",
+        "after_sha256": "04f2cf7af80a4ac5538c4f5e21cdb97dad4932e432a9f9c7938e50467d22cf4b"
+      },
+      {
+        "path": "kicad/libraries/TestPoint.pretty/TestPoint_Pad_D2.0mm.kicad_mod",
+        "byte_identical": true,
+        "semantic_identical": true,
+        "before_sha256": "075c8efad44dc51dedc947dbb0c586ddfdca34600187cc8ae1a8385e02c6a155",
+        "after_sha256": "075c8efad44dc51dedc947dbb0c586ddfdca34600187cc8ae1a8385e02c6a155"
+      }
+    ],
+    "pin_audit_summary": {
+      "footprints": 421,
+      "errors": []
+    },
+    "result": {
+      "all_48_footprints_semantically_identical": true,
+      "byte_identical_count": 44,
+      "formatting_only_differences": [
+        "kicad/libraries/PMU.pretty/Wurth_7461103.kicad_mod",
+        "kicad/libraries/PMU_RevA.pretty/CCPAK1212_SOT8000A.kicad_mod",
+        "kicad/libraries/PMU_RevA.pretty/CSS4J_4026_Kelvin.kicad_mod",
+        "kicad/libraries/PMU_RevA.pretty/VQFN_RGE24_4x4_P0.5_EP_FLOAT.kicad_mod"
+      ]
+    },
+    "interpretation": "All 48 vendored library definitions preserved every s-expression field. The four annotated custom libraries differ only in serialization formatting from the generator; no geometry or UUID difference. Main libraries and board were not written."
+  },
+  "final_release_binding": {
+    "release_json_sha256": "aeffab8fc513734016e588c2bab3c76a2d8b11c1c1ccdccc1fbaa60d6b19184e",
+    "pcb_sha256": "70bb8eb588f2fc7200f718df0e11659aad3c40c7e9d5652228eb7a58d232065f",
+    "mechanical_interface_sha256": "d31d4c18e7cd00ed6910ec9a7c48d871783a5d9ed8ae269eeda9561b7d63acb1",
+    "bom_manifest_sha256": "9d366b78dd644e64c99c234f8df062fc2bfab96deddddd2d2624d9746611bc77"
+  }
+}

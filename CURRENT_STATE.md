@@ -2,7 +2,7 @@
 
 ## Phase
 
-Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The onboard Linux lifecycle, one-button customer behavior, coarse LED status, battery monitor, electronic main power path, reverse-current blocking, and initial protection thresholds are recorded as accepted architecture. This central subsystem is named the HomeMy Power Management Unit (PMU). A consolidated GPT Astra handoff now authorizes a complete Revision-A engineering prototype and separates its design/order gates from the measurements that gate a later Revision-B production design. The KiCad design, exact Revision-A component selections, firmware, systemd units, and real-hardware validation remain pending. No HomeMy runtime package or source code has been copied.
+Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The onboard Linux lifecycle, one-button customer behavior, coarse LED status, battery monitor, electronic main power path, reverse-current blocking, and initial protection thresholds are recorded as accepted architecture. The HomeMy Power Management Unit (PMU) now has a Revision-A engineering implementation under `hardware/power-management-unit/rev-a`: a hierarchical KiCad schematic, routed four-layer laboratory PCB, exact component BOM, calculations, mechanical reinforcement and prototype manufacturing outputs. Native ERC and DRC reports have zero findings, zero open connections and zero schematic-parity differences. The portable KiCad processes wrote complete reports but timed out during registry-settings shutdown; process failures are recorded separately. Owner order review, firmware, systemd units, assembly and real-hardware validation remain open. No HomeMy runtime package or source code has been copied. Revision B production remains false.
 
 ## Goal
 
@@ -49,7 +49,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 
 - The repository is public; it contains no secrets, home data, maps, camera data, or deployment configuration.
 - The default execution mode is simulation or motorless validation.
-- No systemd unit, actuator, sensor, PMU KiCad design, map, home data, or deployment configuration is tracked here.
+- PMU Revision-A CAD and engineering evidence are tracked; no systemd unit, actuator/sensor runtime, map, home data, or deployment configuration is introduced.
 - No capability from roboter_ws has been copied into HomeMy code.
 - The proposed transfer baseline is roboter_ws main commit `05439c7a13d7a92e69b9eb4663e3a2a1b44626a1`.
 - Customer mode is not enabled as the default boot target.
@@ -57,8 +57,8 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 
 ## Next Safe Step
 
-1. Start GPT Astra with `hardware/power-management-unit/ASTRA_START_PROMPT.md` and have it complete the Revision-A hierarchical KiCad schematic, exact prototype-part selection, routed PCB, BOM, calculations, assumptions record, and prototype fabrication package.
-2. Review Astra's schematic, BOM, layout, ERC/DRC, component data, current-path calculations, and conservative Revision-A assumptions before ordering the prototype. Missing post-build measurements do not block this step.
+1. Read `hardware/power-management-unit/rev-a/README.md`, its final review evidence and `release.json` for the completed CAD artifact scope and remaining physical gates.
+2. Perform the project-owner review of the schematic, BOM, layout, ERC/DRC reports and process limitation, component data, current-path calculations, and conservative Revision-A assumptions before ordering the prototype. Missing post-build measurements do not block that review.
 3. Build and bring up Revision A first with a current-limited supply and no actuators; close all energization gates before applying the battery.
 4. Use Revision A to measure the MOSFET path, shunts, inrush without precharge, DC/DC converters, brake-chopper energy, thermal behavior, arm currents, and fuse/BMS coordination. Feed the evidence into a later Revision-B production layout.
 5. Define and simulate the ESP32 power/lifecycle state machine, button timing, heartbeat, hardware latches, event log, and LED behavior before connecting actuators.

@@ -1,0 +1,5 @@
+Found 0 violations
+Saved ERC Report to C:/Users/chrba/Documents/ChatGPT/HomeMy/pmu-rev-a-work/hardware/power-management-unit/rev-a/reports/erc-pending.json
+20:15:27: Error: Can't create registry key 'HKCU\Software\kicad-cli' (error 5: Zugriff verweigert)
+20:15:27: Error: Can't open registry key 'HKCU\Software\kicad-cli' (error 2: Das System kann die angegebene Datei nicht finden.)
+ERROR: tool timed out; this run is NOT a passed check.

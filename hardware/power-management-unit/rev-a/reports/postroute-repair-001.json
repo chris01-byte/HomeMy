@@ -1,0 +1,290 @@
+{
+  "rev_a_engineering_prototype": true,
+  "rev_b_production": false,
+  "board_sha256_before": "a5fda347cb9910f0fb1f6774115fe7ddc8b8b0febc5a2a40d5e64ee023662d6b",
+  "board_sha256_after": "2b0b536c4ca8584d6b3c897d1839890b47bfda9848bba923a7e468b455220790",
+  "added_locked_segments": [
+    {
+      "net": "MOTION_SENSED_P",
+      "start": [
+        124.025,
+        45
+      ],
+      "end": [
+        135,
+        45
+      ],
+      "width_mm": 4,
+      "layer": "F.Cu"
+    },
+    {
+      "net": "CHOPPER_N",
+      "start": [
+        299.5,
+        44
+      ],
+      "end": [
+        299.5,
+        42
+      ],
+      "width_mm": 0.3,
+      "layer": "F.Cu"
+    },
+    {
+      "net": "CHOPPER_N",
+      "start": [
+        299.5,
+        42
+      ],
+      "end": [
+        298,
+        42
+      ],
+      "width_mm": 0.3,
+      "layer": "F.Cu"
+    },
+    {
+      "net": "LOGIC_GND",
+      "start": [
+        308.7875,
+        245
+      ],
+      "end": [
+        308.7875,
+        243.4
+      ],
+      "width_mm": 0.25,
+      "layer": "F.Cu"
+    },
+    {
+      "net": "LOGIC_GND",
+      "start": [
+        308.7875,
+        243.4
+      ],
+      "end": [
+        303.0625,
+        243.4
+      ],
+      "width_mm": 0.25,
+      "layer": "F.Cu"
+    },
+    {
+      "net": "LOGIC_GND",
+      "start": [
+        303.0625,
+        243.4
+      ],
+      "end": [
+        303.0625,
+        244.05
+      ],
+      "width_mm": 0.25,
+      "layer": "F.Cu"
+    },
+    {
+      "net": "LIFT_N",
+      "start": [
+        349,
+        85.92
+      ],
+      "end": [
+        344,
+        85.92
+      ],
+      "width_mm": 3,
+      "layer": "In1.Cu"
+    },
+    {
+      "net": "LIFT_N",
+      "start": [
+        344,
+        85.92
+      ],
+      "end": [
+        344,
+        113
+      ],
+      "width_mm": 8,
+      "layer": "In1.Cu"
+    },
+    {
+      "net": "LIFT_N",
+      "start": [
+        344,
+        113
+      ],
+      "end": [
+        310,
+        113
+      ],
+      "width_mm": 8,
+      "layer": "In1.Cu"
+    },
+    {
+      "net": "LIFT_N",
+      "start": [
+        310,
+        113
+      ],
+      "end": [
+        310,
+        122
+      ],
+      "width_mm": 8,
+      "layer": "In1.Cu"
+    },
+    {
+      "net": "LIFT_N",
+      "start": [
+        349,
+        85.92
+      ],
+      "end": [
+        344,
+        85.92
+      ],
+      "width_mm": 3,
+      "layer": "In2.Cu"
+    },
+    {
+      "net": "LIFT_N",
+      "start": [
+        344,
+        85.92
+      ],
+      "end": [
+        344,
+        113
+      ],
+      "width_mm": 8,
+      "layer": "In2.Cu"
+    },
+    {
+      "net": "LIFT_N",
+      "start": [
+        344,
+        113
+      ],
+      "end": [
+        310,
+        113
+      ],
+      "width_mm": 8,
+      "layer": "In2.Cu"
+    },
+    {
+      "net": "LIFT_N",
+      "start": [
+        310,
+        113
+      ],
+      "end": [
+        310,
+        122
+      ],
+      "width_mm": 8,
+      "layer": "In2.Cu"
+    }
+  ],
+  "removed_router_dead_stubs": [
+    "37c4e57b-6a45-409f-ada5-240c37c238c3",
+    "60c2e6e7-1a1e-401b-aa3a-02600334b372",
+    "88042ac2-605c-4532-9d9c-b393d8c012b1",
+    "ec54daa0-cd74-4ce7-bd36-05cb76995fc3"
+  ],
+  "removed_signal_items_by_net": {
+    "CHOP_GND": 107,
+    "MOTION_KELVIN_N": 29,
+    "CHOP_NTC": 23,
+    "MOTION_KELVIN_P": 28
+  },
+  "collision_basis": [
+    {
+      "new_net": "MOTION_SENSED_P",
+      "foreign_net": "MOTION_KELVIN_N",
+      "uuid": "62a2c984-3b5e-4ac8-9d30-ebe7154bb6a6"
+    },
+    {
+      "new_net": "MOTION_SENSED_P",
+      "foreign_net": "MOTION_KELVIN_N",
+      "uuid": "6471d6c0-2508-4bb1-ac41-b848c745a493"
+    },
+    {
+      "new_net": "MOTION_SENSED_P",
+      "foreign_net": "MOTION_KELVIN_N",
+      "uuid": "72bb02ee-a490-44f9-a1d1-e2bd7fae5a9c"
+    },
+    {
+      "new_net": "MOTION_SENSED_P",
+      "foreign_net": "MOTION_KELVIN_N",
+      "uuid": "857ceec1-d596-429e-a754-6bc52b6d8677"
+    },
+    {
+      "new_net": "MOTION_SENSED_P",
+      "foreign_net": "MOTION_KELVIN_N",
+      "uuid": "8d223e2e-e930-486a-a8b2-4a314f0a52c8"
+    },
+    {
+      "new_net": "MOTION_SENSED_P",
+      "foreign_net": "MOTION_KELVIN_N",
+      "uuid": "a4160b66-b5c6-4bdf-80d9-61644edc7148"
+    },
+    {
+      "new_net": "MOTION_SENSED_P",
+      "foreign_net": "MOTION_KELVIN_N",
+      "uuid": "bf1aef5a-5db4-4692-a1c1-9949ba4df0f3"
+    },
+    {
+      "new_net": "MOTION_SENSED_P",
+      "foreign_net": "MOTION_KELVIN_N",
+      "uuid": "ea60661c-7833-46dd-9676-7ddb1508d700"
+    },
+    {
+      "new_net": "MOTION_SENSED_P",
+      "foreign_net": "MOTION_KELVIN_P",
+      "uuid": "0814840e-a14c-41fd-a1d0-5c895beb6647"
+    },
+    {
+      "new_net": "MOTION_SENSED_P",
+      "foreign_net": "MOTION_KELVIN_P",
+      "uuid": "a10c2317-90ac-4ee8-98e9-f47374634325"
+    },
+    {
+      "new_net": "MOTION_SENSED_P",
+      "foreign_net": "MOTION_KELVIN_P",
+      "uuid": "b33f193c-2fea-4050-82f6-585b2c64b56c"
+    },
+    {
+      "new_net": "MOTION_SENSED_P",
+      "foreign_net": "MOTION_KELVIN_P",
+      "uuid": "d0a058be-f3c6-439a-82e2-4ff41a6d003b"
+    },
+    {
+      "new_net": "MOTION_SENSED_P",
+      "foreign_net": "MOTION_KELVIN_P",
+      "uuid": "e7222f7b-043f-4574-9d3b-a5e68f45cc8d"
+    },
+    {
+      "new_net": "MOTION_SENSED_P",
+      "foreign_net": "MOTION_KELVIN_P",
+      "uuid": "39b0aecb-93f9-439e-86fe-59fac27c8977"
+    },
+    {
+      "new_net": "LIFT_N",
+      "foreign_net": "CHOP_GND",
+      "uuid": "802e9883-4886-4234-a7bb-2c2b803f9541"
+    },
+    {
+      "new_net": "LIFT_N",
+      "foreign_net": "CHOP_NTC",
+      "uuid": "340ece12-0db6-4139-a050-71e88a447d5d"
+    },
+    {
+      "new_net": "LIFT_N",
+      "foreign_net": "CHOP_NTC",
+      "uuid": "6082d943-ba12-45d4-88a2-86081410d3f8"
+    }
+  ],
+  "required_next_step": "Native DRC, fresh native DSN routing, import/refill and final native DRC."
+}

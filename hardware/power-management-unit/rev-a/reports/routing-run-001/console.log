@@ -1,0 +1,261 @@
+2026-09-10T17:12:56.952723800Z CHECKPOINT input pass=1 incomplete=771 router_clearance_violations=0 bytes=163189
+2026-09-10T17:12:57.010234200Z STATE STARTED pass=0
+2026-09-10T17:12:57.019234100Z STATE RUNNING pass=1
+2026-09-10T17:13:06.908029400Z CHECKPOINT route_step pass=1 incomplete=600 router_clearance_violations=0 bytes=221178
+2026-09-10T17:13:16.905022800Z CHECKPOINT route_step pass=1 incomplete=492 router_clearance_violations=0 bytes=257775
+2026-09-10T17:13:26.964389200Z CHECKPOINT route_step pass=1 incomplete=414 router_clearance_violations=0 bytes=276765
+2026-09-10T17:13:37.083466200Z CHECKPOINT route_step pass=1 incomplete=332 router_clearance_violations=0 bytes=305346
+2026-09-10T17:13:47.075189700Z CHECKPOINT route_step pass=1 incomplete=285 router_clearance_violations=0 bytes=321796
+2026-09-10T17:13:57.372058400Z CHECKPOINT route_step pass=1 incomplete=244 router_clearance_violations=0 bytes=339527
+2026-09-10T17:14:07.641748700Z CHECKPOINT route_step pass=1 incomplete=208 router_clearance_violations=0 bytes=352089
+2026-09-10T17:14:17.653448200Z CHECKPOINT route_step pass=1 incomplete=179 router_clearance_violations=0 bytes=371446
+2026-09-10T17:14:27.698418300Z CHECKPOINT route_step pass=1 incomplete=146 router_clearance_violations=0 bytes=375687
+2026-09-10 19:14:36.196 INFO   [0A8202\C89265] Auto-router pass #1 on board 'dbacfcd6dbbe7aa185fb2dcb264939af' was completed in 1 minute 39,01 seconds with the score of 958,34 (129 unrouted).
+2026-09-10T17:14:36.204921300Z STATE RUNNING pass=2
+2026-09-10T17:14:37.767601900Z CHECKPOINT route_step pass=2 incomplete=126 router_clearance_violations=0 bytes=366431
+2026-09-10T17:14:47.813426600Z CHECKPOINT route_step pass=2 incomplete=107 router_clearance_violations=0 bytes=379768
+2026-09-10T17:14:57.844010100Z CHECKPOINT route_step pass=2 incomplete=89 router_clearance_violations=0 bytes=391417
+2026-09-10T17:15:08.540106300Z CHECKPOINT route_step pass=2 incomplete=79 router_clearance_violations=0 bytes=393468
+2026-09-10 19:15:16.556 INFO   [0A8202\C89265] Auto-router pass #2 on board '006877a9099f1e876e7f5b4fc6001a18' was completed in 40,21 seconds with the score of 972,04 (68 unrouted).
+2026-09-10T17:15:16.564377600Z STATE RUNNING pass=3
+2026-09-10 19:15:18.087 WARN   PolylineTrace.get_trace_connection_shape p_index out of range
+2026-09-10 19:15:18.088 ERROR  AutorouteEngine.autoroute_connection: Exception in maze_search_algo.find_connection
+java.lang.NullPointerException: Cannot invoke "app.freerouting.geometry.planar.TileShape.nearest_point_approx(app.freerouting.geometry.planar.FloatPoint)" because "target_shape" is null
+	at app.freerouting.autoroute.MazeSearchAlgo.expand_to_target_doors(MazeSearchAlgo.java:534) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.expand_to_room_doors(MazeSearchAlgo.java:398) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.occupy_next_element(MazeSearchAlgo.java:286) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.find_connection(MazeSearchAlgo.java:206) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.AutorouteEngine.autoroute_connection(AutorouteEngine.java:155) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_item(BatchAutorouter.java:610) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_pass(BatchAutorouter.java:332) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.runBatchLoop(BatchAutorouter.java:447) [freerouting-2.1.0.jar:unspecified]
+	at CheckpointRouter$1.thread_action(CheckpointRouter.java:122) [classes/:?]
+	at app.freerouting.core.StoppableThread.run(StoppableThread.java:26) [freerouting-2.1.0.jar:unspecified]
+2026-09-10 19:15:18.088 ERROR  AutorouteEngine.autoroute_connection: Exception in maze_search_algo.find_connection
+java.lang.NullPointerException: Cannot invoke "app.freerouting.geometry.planar.TileShape.nearest_point_approx(app.freerouting.geometry.planar.FloatPoint)" because "target_shape" is null
+	at app.freerouting.autoroute.MazeSearchAlgo.expand_to_target_doors(MazeSearchAlgo.java:534) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.expand_to_room_doors(MazeSearchAlgo.java:398) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.occupy_next_element(MazeSearchAlgo.java:286) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.find_connection(MazeSearchAlgo.java:206) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.AutorouteEngine.autoroute_connection(AutorouteEngine.java:155) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_item(BatchAutorouter.java:610) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_pass(BatchAutorouter.java:332) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.runBatchLoop(BatchAutorouter.java:447) [freerouting-2.1.0.jar:unspecified]
+	at CheckpointRouter$1.thread_action(CheckpointRouter.java:122) [classes/:?]
+	at app.freerouting.core.StoppableThread.run(StoppableThread.java:26) [freerouting-2.1.0.jar:unspecified]
+2026-09-10T17:15:18.560407300Z CHECKPOINT route_step pass=3 incomplete=64 router_clearance_violations=0 bytes=397392
+2026-09-10 19:15:18.629 WARN   PolylineTrace.get_trace_connection_shape p_index out of range
+2026-09-10 19:15:18.630 ERROR  AutorouteEngine.autoroute_connection: Exception in maze_search_algo.find_connection
+java.lang.NullPointerException: Cannot invoke "app.freerouting.geometry.planar.TileShape.nearest_point_approx(app.freerouting.geometry.planar.FloatPoint)" because "target_shape" is null
+	at app.freerouting.autoroute.MazeSearchAlgo.expand_to_target_doors(MazeSearchAlgo.java:534) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.expand_to_room_doors(MazeSearchAlgo.java:398) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.occupy_next_element(MazeSearchAlgo.java:286) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.find_connection(MazeSearchAlgo.java:206) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.AutorouteEngine.autoroute_connection(AutorouteEngine.java:155) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_item(BatchAutorouter.java:610) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_pass(BatchAutorouter.java:332) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.runBatchLoop(BatchAutorouter.java:447) [freerouting-2.1.0.jar:unspecified]
+	at CheckpointRouter$1.thread_action(CheckpointRouter.java:122) [classes/:?]
+	at app.freerouting.core.StoppableThread.run(StoppableThread.java:26) [freerouting-2.1.0.jar:unspecified]
+2026-09-10 19:15:18.630 ERROR  AutorouteEngine.autoroute_connection: Exception in maze_search_algo.find_connection
+java.lang.NullPointerException: Cannot invoke "app.freerouting.geometry.planar.TileShape.nearest_point_approx(app.freerouting.geometry.planar.FloatPoint)" because "target_shape" is null
+	at app.freerouting.autoroute.MazeSearchAlgo.expand_to_target_doors(MazeSearchAlgo.java:534) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.expand_to_room_doors(MazeSearchAlgo.java:398) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.occupy_next_element(MazeSearchAlgo.java:286) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.find_connection(MazeSearchAlgo.java:206) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.AutorouteEngine.autoroute_connection(AutorouteEngine.java:155) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_item(BatchAutorouter.java:610) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_pass(BatchAutorouter.java:332) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.runBatchLoop(BatchAutorouter.java:447) [freerouting-2.1.0.jar:unspecified]
+	at CheckpointRouter$1.thread_action(CheckpointRouter.java:122) [classes/:?]
+	at app.freerouting.core.StoppableThread.run(StoppableThread.java:26) [freerouting-2.1.0.jar:unspecified]
+2026-09-10T17:15:28.566538400Z CHECKPOINT route_step pass=3 incomplete=48 router_clearance_violations=0 bytes=405432
+2026-09-10 19:15:32.570 WARN   MazeShoveTraceAlgo.check_shove_trace_line: trace_corner_no to big
+2026-09-10 19:15:32.570 WARN   MazeShoveTraceAlgo.check_shove_trace_line: trace_corner_no to big
+2026-09-10 19:15:36.099 INFO   [0A8202\C89265] Auto-router pass #3 on board '0ff7e349f295ce8bb7804394fd7177f7' was completed in 19,42 seconds with the score of 976,09 (49 unrouted).
+2026-09-10T17:15:36.106752600Z STATE RUNNING pass=4
+2026-09-10T17:15:38.943895400Z CHECKPOINT route_step pass=4 incomplete=49 router_clearance_violations=0 bytes=391004
+2026-09-10T17:15:48.952010800Z CHECKPOINT route_step pass=4 incomplete=37 router_clearance_violations=0 bytes=405296
+2026-09-10T17:16:24.247453700Z CHECKPOINT route_step pass=4 incomplete=36 router_clearance_violations=0 bytes=417746
+2026-09-10 19:16:29.106 INFO   [0A8202\C89265] Auto-router pass #4 on board '0ac3045e20585a15a070df90756abdab' was completed in 52,89 seconds with the score of 978,80 (35 unrouted).
+2026-09-10T17:16:29.114458300Z STATE RUNNING pass=5
+2026-09-10T17:16:34.390724200Z CHECKPOINT route_step pass=5 incomplete=32 router_clearance_violations=0 bytes=410817
+2026-09-10 19:16:42.270 INFO   [0A8202\C89265] Auto-router pass #5 on board 'fe9f83f6947eb4ab8bfa55fd9bf80d02' was completed in 13,05 seconds with the score of 979,95 (25 unrouted).
+2026-09-10T17:16:42.277266500Z STATE RUNNING pass=6
+2026-09-10T17:16:44.722481300Z CHECKPOINT route_step pass=6 incomplete=24 router_clearance_violations=0 bytes=407742
+2026-09-10 19:16:48.810 WARN   MazeShoveTraceAlgo.check_shove_trace_line: trace_corner_no to big
+2026-09-10 19:16:48.818 WARN   MazeShoveTraceAlgo.check_shove_trace_line: trace_corner_no to big
+2026-09-10 19:16:48.820 WARN   MazeShoveTraceAlgo.check_shove_trace_line: trace_corner_no to big
+2026-09-10 19:16:48.821 WARN   MazeShoveTraceAlgo.check_shove_trace_line: trace_corner_no to big
+2026-09-10 19:16:48.823 WARN   MazeShoveTraceAlgo.check_shove_trace_line: trace_corner_no to big
+2026-09-10 19:16:48.823 WARN   MazeShoveTraceAlgo.check_shove_trace_line: trace_corner_no to big
+2026-09-10 19:16:49.666 WARN   MazeShoveTraceAlgo.check_shove_trace_line: trace_corner_no to big
+2026-09-10 19:16:49.667 WARN   MazeShoveTraceAlgo.check_shove_trace_line: trace_corner_no to big
+2026-09-10 19:16:49.669 ERROR  AutorouteEngine.autoroute_connection: Exception in maze_search_algo.find_connection
+java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 4
+	at app.freerouting.autoroute.MazeShoveTraceAlgo.check_shove_trace_line(MazeShoveTraceAlgo.java:123) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.shove_trace_room(MazeSearchAlgo.java:1214) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.expand_to_room_doors(MazeSearchAlgo.java:443) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.occupy_next_element(MazeSearchAlgo.java:286) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.find_connection(MazeSearchAlgo.java:206) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.AutorouteEngine.autoroute_connection(AutorouteEngine.java:155) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_item(BatchAutorouter.java:610) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_pass(BatchAutorouter.java:332) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.runBatchLoop(BatchAutorouter.java:447) [freerouting-2.1.0.jar:unspecified]
+	at CheckpointRouter$1.thread_action(CheckpointRouter.java:122) [classes/:?]
+	at app.freerouting.core.StoppableThread.run(StoppableThread.java:26) [freerouting-2.1.0.jar:unspecified]
+2026-09-10 19:16:49.669 ERROR  AutorouteEngine.autoroute_connection: Exception in maze_search_algo.find_connection
+java.lang.ArrayIndexOutOfBoundsException: Index 4 out of bounds for length 4
+	at app.freerouting.autoroute.MazeShoveTraceAlgo.check_shove_trace_line(MazeShoveTraceAlgo.java:123) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.shove_trace_room(MazeSearchAlgo.java:1214) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.expand_to_room_doors(MazeSearchAlgo.java:443) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.occupy_next_element(MazeSearchAlgo.java:286) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.MazeSearchAlgo.find_connection(MazeSearchAlgo.java:206) ~[freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.AutorouteEngine.autoroute_connection(AutorouteEngine.java:155) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_item(BatchAutorouter.java:610) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.autoroute_pass(BatchAutorouter.java:332) [freerouting-2.1.0.jar:unspecified]
+	at app.freerouting.autoroute.BatchAutorouter.runBatchLoop(BatchAutorouter.java:447) [freerouting-2.1.0.jar:unspecified]
+	at CheckpointRouter$1.thread_action(CheckpointRouter.java:122) [classes/:?]
+	at app.freerouting.core.StoppableThread.run(StoppableThread.java:26) [freerouting-2.1.0.jar:unspecified]
+2026-09-10 19:16:49.982 INFO   [0A8202\C89265] Auto-router pass #6 on board '8ba679cbd44c03d107f0b168db695d77' was completed in 7,59 seconds with the score of 980,52 (24 unrouted).
+2026-09-10T17:16:49.991524800Z STATE RUNNING pass=7
+2026-09-10T17:16:54.837425800Z CHECKPOINT route_step pass=7 incomplete=23 router_clearance_violations=0 bytes=412258
+2026-09-10 19:16:57.112 INFO   [0A8202\C89265] Auto-router pass #7 on board '809f7050f5ddc18e9c8ce5a66eb31123' was completed in 6,98 seconds with the score of 980,56 (23 unrouted).
+2026-09-10T17:16:57.119064700Z STATE RUNNING pass=8
+2026-09-10 19:17:01.314 INFO   [0A8202\C89265] Restoring an earlier board that has the score of 980,56 (23 unrouted).
+2026-09-10 19:17:01.315 INFO   [0A8202\C89265] Auto-router pass #8 on board 'bb1706f54d6b6895564d1bb40645a2b9' was completed in 4,08 seconds with the score of 980,21 (24 unrouted).
+2026-09-10T17:17:01.320868200Z STATE RUNNING pass=9
+2026-09-10T17:17:04.852077900Z CHECKPOINT route_step pass=9 incomplete=18 router_clearance_violations=0 bytes=420724
+2026-09-10 19:17:11.435 INFO   [0A8202\C89265] Auto-router pass #9 on board 'bb1706f54d6b6895564d1bb40645a2b9' was completed in 10,08 seconds with the score of 983,21 (9 unrouted).
+2026-09-10T17:17:11.445654200Z STATE RUNNING pass=10
+2026-09-10T17:17:16.648188500Z CHECKPOINT route_step pass=10 incomplete=8 router_clearance_violations=0 bytes=415099
+2026-09-10 19:17:18.450 INFO   [0A8202\C89265] Auto-router pass #10 on board '8c68a8ad26db46ca59d898619a6073f5' was completed in 6,87 seconds with the score of 982,73 (12 unrouted).
+2026-09-10T17:17:18.457099400Z STATE RUNNING pass=11
+2026-09-10 19:17:25.330 INFO   [0A8202\C89265] Auto-router pass #11 on board '0a8220b2da59e1d00294c4f6c4b0a815' was completed in 6,77 seconds with the score of 982,99 (11 unrouted).
+2026-09-10T17:17:25.337830100Z STATE RUNNING pass=12
+2026-09-10T17:17:26.856724700Z CHECKPOINT route_step pass=12 incomplete=12 router_clearance_violations=0 bytes=417621
+2026-09-10T17:17:58.581432700Z CHECKPOINT route_step pass=12 incomplete=6 router_clearance_violations=0 bytes=422198
+2026-09-10 19:17:58.753 INFO   [0A8202\C89265] Auto-router pass #12 on board 'ff0282aee4b7c5b2ad25f1f1950284e9' was completed in 33,31 seconds with the score of 983,95 (6 unrouted).
+2026-09-10T17:17:58.760312400Z STATE RUNNING pass=13
+2026-09-10 19:17:58.967 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.968 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.968 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.976 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.976 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.976 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.976 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.976 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.976 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.981 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.981 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.981 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.982 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.983 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.983 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.983 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.983 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.983 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.983 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.984 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.984 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:58.998 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.004 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.005 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.005 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.005 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.005 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.005 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.005 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.005 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.028 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.028 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.029 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.029 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.029 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.029 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.029 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.029 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.029 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.030 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.030 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.030 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.030 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.030 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.030 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.030 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.030 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.035 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.036 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.036 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.039 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.039 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.039 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.039 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.039 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.040 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.040 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.040 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.040 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.040 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.040 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.162 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.162 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:17:59.203 WARN   ItemAutorouteInfo.get_expansion_room: p_index out of range
+2026-09-10 19:18:07.511 INFO   [0A8202\C89265] Auto-router pass #13 on board 'eb1df385a2c276c192fc2cdebfa5612e' was completed in 8,64 seconds with the score of 983,74 (6 unrouted).
+2026-09-10T17:18:07.526775600Z STATE RUNNING pass=14
+2026-09-10 19:18:07.920 ERROR  AutorouteEngine.autoroute_connection: Exception in maze_search_algo.find_connection
+java.lang.ArrayIndexOutOfBoundsException: null
+2026-09-10 19:18:07.920 ERROR  AutorouteEngine.autoroute_connection: Exception in maze_search_algo.find_connection
+java.lang.ArrayIndexOutOfBoundsException: null
+2026-09-10T17:18:10.567489Z CHECKPOINT route_step pass=14 incomplete=6 router_clearance_violations=0 bytes=416743
+2026-09-10 19:18:13.806 INFO   [0A8202\C89265] Auto-router pass #14 on board '71852eadb62aace5f03a24efb8c5db04' was completed in 6,14 seconds with the score of 983,70 (7 unrouted).
+2026-09-10T17:18:13.814115300Z STATE RUNNING pass=15
+2026-09-10 19:18:15.969 INFO   [0A8202\C89265] Auto-router pass #15 on board '67d5f21e7689d993e81b2beecaee9fd9' was completed in 2,04 seconds with the score of 983,82 (6 unrouted).
+2026-09-10T17:18:15.975067800Z STATE RUNNING pass=16
+2026-09-10 19:18:18.572 INFO   [0A8202\C89265] Restoring an earlier board that has the score of 983,95 (6 unrouted).
+2026-09-10 19:18:18.572 INFO   [0A8202\C89265] Auto-router pass #16 on board '67a60697148aab48f03164a895052451' was completed in 2,49 seconds with the score of 983,18 (10 unrouted).
+2026-09-10T17:18:18.578176200Z STATE RUNNING pass=17
+2026-09-10T17:18:20.675627100Z CHECKPOINT route_step pass=17 incomplete=7 router_clearance_violations=0 bytes=424478
+2026-09-10 19:18:21.757 INFO   [0A8202\C89265] Auto-router pass #17 on board 'eb1df385a2c276c192fc2cdebfa5612e' was completed in 3,14 seconds with the score of 983,64 (7 unrouted).
+2026-09-10T17:18:21.768815Z STATE RUNNING pass=18
+2026-09-10 19:18:25.381 INFO   [0A8202\C89265] Auto-router pass #18 on board '2279ab5848684579f3ec9d0301aac8a8' was completed in 3,48 seconds with the score of 983,73 (5 unrouted).
+2026-09-10T17:18:25.397195100Z STATE RUNNING pass=19
+2026-09-10 19:18:26.800 INFO   [0A8202\C89265] Auto-router pass #19 on board '8bad6266dc1ed1a460161ccffc8dd4db' was completed in 1,27 seconds with the score of 983,43 (7 unrouted).
+2026-09-10T17:18:26.812930600Z STATE RUNNING pass=20
+2026-09-10 19:18:29.577 INFO   [0A8202\C89265] Restoring an earlier board that has the score of 983,95 (6 unrouted).
+2026-09-10 19:18:29.577 INFO   [0A8202\C89265] Auto-router pass #20 on board '2f24457ff86d25289cd874d1ed1e6681' was completed in 2,63 seconds with the score of 982,94 (11 unrouted).
+2026-09-10T17:18:29.585704700Z STATE RUNNING pass=21
+2026-09-10T17:18:33.771017Z CHECKPOINT route_step pass=21 incomplete=6 router_clearance_violations=0 bytes=423916
+2026-09-10 19:18:37.038 INFO   [0A8202\C89265] Auto-router pass #21 on board 'eb1df385a2c276c192fc2cdebfa5612e' was completed in 7,41 seconds with the score of 983,85 (5 unrouted).
+2026-09-10T17:18:37.044091800Z STATE RUNNING pass=22
+2026-09-10 19:18:38.272 INFO   [0A8202\C89265] Auto-router pass #22 on board '1b5918a6b9c9e9db9bb1cc159efa487a' was completed in 1,12 seconds with the score of 984,50 (1 unrouted).
+2026-09-10T17:18:38.279355800Z STATE RUNNING pass=23
+2026-09-10 19:18:38.676 INFO   [0A8202\C89265] Auto-router pass #23 on board '77a957e62760f65615600b486520b972' was completed in 0,29 seconds with the score of 984,48 (1 unrouted).
+2026-09-10T17:18:38.682385200Z STATE RUNNING pass=24
+2026-09-10 19:18:39.310 INFO   [0A8202\C89265] Restoring an earlier board that has the score of 984,50 (1 unrouted).
+2026-09-10 19:18:39.310 INFO   [0A8202\C89265] Auto-router pass #24 on board '4b8985e745d03e96b6e641a1f0b98ef0' was completed in 0,51 seconds with the score of 984,47 (1 unrouted).
+2026-09-10T17:18:39.316979200Z STATE RUNNING pass=25
+2026-09-10 19:18:39.685 INFO   [0A8202\C89265] Auto-router pass #25 on board '77a957e62760f65615600b486520b972' was completed in 0,33 seconds with the score of 984,50 (1 unrouted).
+2026-09-10T17:18:39.703584500Z STATE RUNNING pass=26
+2026-09-10 19:18:40.090 INFO   [0A8202\C89265] Auto-router pass #26 on board '9771d3bac29362db08b0dad59b3e7e05' was completed in 0,25 seconds with the score of 984,73.
+2026-09-10T17:18:40.097936400Z STATE RUNNING pass=27
+2026-09-10 19:18:40.266 INFO   [0A8202\C89265] Auto-router pass #27 on board '556a91bb4114af490ab8e2cd7ee551a8' was completed in 0,06 seconds with the score of 984,73.
+2026-09-10T17:18:40.273615600Z STATE FINISHED pass=27
+2026-09-10T17:18:40.459199Z CHECKPOINT routing_loop_returned pass=27 incomplete=0 router_clearance_violations=0 bytes=424523
+{
+  "rev_a_engineering_prototype": true,
+  "rev_b_production": false,
+  "state": "engineering_routing_candidate_not_order_release",
+  "input": "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\reports\\HomeMy_PMU_RevA.dsn",
+  "input_sha256": "f37234f4479817c94b6c7db5015422d53edf86a3d75d2e851a1208d085dd5c34",
+  "max_passes": 200,
+  "actual_stop_pass_no": 200,
+  "elapsed_seconds": 343.7232541,
+  "deadline_reached": false,
+  "worker_stopped": true,
+  "checkpoints": 30,
+  "best_router_incomplete_count": 0,
+  "uncaught_exception": null,
+  "native_kicad_drc_performed": false,
+  "warning": "Router internal errors remain in console log. SES/DSN checkpoints are candidates; native KiCad import and DRC are mandatory."
+}

@@ -1,0 +1,106 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "state": "engineering_review_not_order_release",
+    "date": "2026-09-10",
+    "stock_verification": "No live stock query or reservation made by builder",
+    "quantity_basis": "One PCB assembly, no placement waste or spares; DNP positions retained with zero required quantity",
+    "purchased_pcb_positions": 356,
+    "populated_pcb_quantity": 352,
+    "dnp_pcb_positions": 4,
+    "grouped_pcb_line_count": 124,
+    "excluded_pcb_feature_count": 74,
+    "external_bom_line_count": 31,
+    "external_unselected_line_count": 9,
+    "external_custom_drawing_line_count": 10,
+    "mechanical_interface_coverage": {
+      "busbars": 7,
+      "bare_pcb_bc_contacts": 15,
+      "top_nb_bridges": 8,
+      "contact_shims": 23,
+      "separate_cu_branch_backing_washers": 8,
+      "clamp_screws": 31
+    },
+    "validation_passed": true,
+    "errors": [],
+    "warnings": [],
+    "claim_limit": "Identity/coding and source/CAD consistency review; not every individual passive was queried for stock or formal lifecycle"
+  },
+  "builder": {
+    "path": "scripts\\build_bom.py",
+    "sha256": "3e9871e64c8708526b9ee773f5a56d77a058c5021a316de85f2841a3f60037b1"
+  },
+  "inputs": [
+    {
+      "path": "design/assembled-parts.json",
+      "sha256": "19f61dad0690e63a5b034964c4729a18d664ec3d7118e665c821b3fee7e2a8bf"
+    },
+    {
+      "path": "design/chopper-parts.json",
+      "sha256": "c64938d23db964524f4d0e46eee4e79d61b19141231ec5e5d4690373fb805e52"
+    },
+    {
+      "path": "design/critical-alternatives.json",
+      "sha256": "ec12824640ee0eb8ae3bfc13da6fc45b993f96ccf2670e68da3c428a7a17ef49"
+    },
+    {
+      "path": "design/integration-parts.json",
+      "sha256": "4ed1c18cd120f13efbcdbe18b74458d758511598e864bd0caa71c50f2887765d"
+    },
+    {
+      "path": "design/power-parts.json",
+      "sha256": "05bd625b801b49ede98912c5122b94acd8e537164fbd9623d2da31b6748472e6"
+    },
+    {
+      "path": "design/wake-io-parts.json",
+      "sha256": "08c08665c6eafed23d6a4687534c049f9a2a8410a6238e6ec0a9f408ddc19692"
+    },
+    {
+      "path": "evidence/chopper/cross-review-sources.json",
+      "sha256": "49e764c0a8d28114d4f2e0ae551dc708aceaeb7b39b371b0f2296665c8af4671"
+    },
+    {
+      "path": "evidence/chopper/source_manifest.json",
+      "sha256": "c5fb69bb3b5738a6aa9fb1a48c2551a3025adbec0370e94c3c67ebcfc2bc8047"
+    },
+    {
+      "path": "evidence/power/sources.json",
+      "sha256": "89e84396d293724dcb6c4fb79bdf3a0bbd6caf62e01bec110b3c7ed2ae437d17"
+    },
+    {
+      "path": "evidence/wake-io-sources.json",
+      "sha256": "f7c6a31b5da56eff0d057416a4c469ba657eb62e482790f1f324cf08911b4ac9"
+    },
+    {
+      "path": "manufacturing/MECHANICAL_CATALOG_BOM.json",
+      "sha256": "f16fa2c81319009f8d2ac8fb37753ba294b622156ee063934a12bd4ffaf1aa30"
+    },
+    {
+      "path": "manufacturing/busbar-pcb-interface.json",
+      "sha256": "d31d4c18e7cd00ed6910ec9a7c48d871783a5d9ed8ae269eeda9561b7d63acb1"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "REV_A_BOM.csv",
+      "sha256": "099ab0655f634cfaf943c4abf18f1cedfcb21cc345b52dd4fda8dec982a87f63",
+      "bytes": 79289
+    },
+    {
+      "path": "REV_A_BOM.json",
+      "sha256": "67042e301d8ab93fdcee2807ee57af13a0b5a1be626fbc06367458d481574e1b",
+      "bytes": 602123
+    },
+    {
+      "path": "REV_A_EXTERNAL_BOM.csv",
+      "sha256": "0da2b85b1007a357e23666bb7284b75c32b4331182a42cfc81cef013a4126b0f",
+      "bytes": 22949
+    },
+    {
+      "path": "REV_A_EXTERNAL_BOM.json",
+      "sha256": "5508478287ee0903ac6b3250f0d340b7eda2201ff3c28e596c52af05dfdb47d8",
+      "bytes": 36339
+    }
+  ]
+}

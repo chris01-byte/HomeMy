@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false
+  },
+  "before_hashes": {
+    "busbar-pcb-interface.json": "08044127ad4feb26b68ff1674babb7674d38911660e57bd469f0884134f050aa",
+    "busbar-calculations.json": "0bc245b8a81c2475965f75390ed22d647bb8414e54f11de1ba54391a3264625d",
+    "BUSBAR_TOP_VIEW_1to1.svg": "69dba0f18fd1bc07d22c42dcd2fc9fc375b4cb9f4a4299673d3fab055b31d00a"
+  },
+  "after_hashes": {
+    "busbar-pcb-interface.json": "d31d4c18e7cd00ed6910ec9a7c48d871783a5d9ed8ae269eeda9561b7d63acb1",
+    "busbar-calculations.json": "0bc245b8a81c2475965f75390ed22d647bb8414e54f11de1ba54391a3264625d",
+    "BUSBAR_TOP_VIEW_1to1.svg": "69dba0f18fd1bc07d22c42dcd2fc9fc375b4cb9f4a4299673d3fab055b31d00a"
+  },
+  "changes": [
+    {
+      "path": "busbar-pcb-interface.json.metadata.geometry_sha256",
+      "before": "013cda7ef23da571883f4aebdc0f1555a3427eebf7ca0cb90404dd0ac7ee9a3c",
+      "after": "c90c0252c9a09f0e6f2d69644b970aece073b7a8eec144761803a87ebe28ede9"
+    }
+  ],
+  "geometry_and_counts_unchanged": true,
+  "input_board_sha256": "70bb8eb588f2fc7200f718df0e11659aad3c40c7e9d5652228eb7a58d232065f",
+  "counts": {
+    "bars": 7,
+    "contacts": 15,
+    "net_tie_bridges": 8,
+    "conservative_pad_near_hits": 0
+  }
+}

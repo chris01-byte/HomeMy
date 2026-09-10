@@ -1,0 +1,26 @@
+{
+  "rev_a_engineering_prototype": true,
+  "rev_b_production": false,
+  "board_sha256_before": "b0386479f2569c7783dd9ad5adb0d82d6d75c23e363bbcbea7096483cf78ac39",
+  "board_sha256_after": "bc006b41f415a20aa9412b334fb4027861b08900985e67b9a2d2db8188b97be6",
+  "motion_cs_via_mm": [
+    170,
+    91.5
+  ],
+  "adjusted_track_via_uuids": [
+    "d2590f53-7586-4f52-ad38-2aab358d93d4",
+    "4e8e6bc6-ab3f-4968-baa1-f461a4bc21bf",
+    "ded19c93-978b-4f7c-bf2e-5eaee53fe978"
+  ],
+  "chop_drain_zone_extension_mm": [
+    [
+      300,
+      40
+    ],
+    [
+      340,
+      46.5
+    ]
+  ],
+  "remaining_check": "Native DRC and actual filled drain area after rerouting; target at least600mm2, no thermal rating inferred."
+}

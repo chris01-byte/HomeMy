@@ -1,0 +1,2142 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "final_snapshot": true,
+    "scope": "Native read-only placement and 2D access review; no PCB edits, zone refill, connectivity approval or physical tool measurements"
+  },
+  "testpoints": [
+    {
+      "ref": "TP1",
+      "net": "BATT_FUSED_P",
+      "expected_source_net": "BATT_FUSED_P",
+      "source_net_matches": true,
+      "position_mm": [
+        24.0,
+        51.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        24.0,
+        53.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "RSH1",
+        "center_distance_mm": 1.866293117385366,
+        "copper_edge_gap_mm": 0.8662931173853661
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 0.3662931173853661,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 7.877640452282353,
+        "ref": "RSH1",
+        "pin": "2",
+        "net": "MAIN_KELVIN_P"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 65.007575322837,
+      "nearest_top_bridge_probe_gap_mm": 64.507575322837,
+      "nearest_top_fastener_pad_edge_gap_mm": 27.515148038438355,
+      "nearest_top_fastener_probe_gap_mm": 27.015148038438355
+    },
+    {
+      "ref": "TP2",
+      "net": "BATT_SENSED_P",
+      "expected_source_net": "BATT_SENSED_P",
+      "source_net_matches": true,
+      "position_mm": [
+        53.0,
+        85.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        53.0,
+        82.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "Q3",
+        "center_distance_mm": 3.5049999999999955,
+        "copper_edge_gap_mm": 2.5049999999999955
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 2.0049999999999955,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 3.58482551467338,
+        "ref": "R25",
+        "pin": "2",
+        "net": "MAIN_UVLO"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 31.062439083762797,
+      "nearest_top_bridge_probe_gap_mm": 30.562439083762797,
+      "nearest_top_fastener_pad_edge_gap_mm": 6.706555615733702,
+      "nearest_top_fastener_probe_gap_mm": 6.206555615733702
+    },
+    {
+      "ref": "TP3",
+      "net": "MAIN_KELVIN_P",
+      "expected_source_net": "MAIN_KELVIN_P",
+      "source_net_matches": true,
+      "position_mm": [
+        44.0,
+        91.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        44.0,
+        88.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "R27",
+        "center_distance_mm": 3.0549999999999997,
+        "copper_edge_gap_mm": 2.0549999999999997
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 1.5549999999999997,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 2.3241540277189303,
+        "ref": "R27",
+        "pin": "1",
+        "net": "BATT_SENSED_P"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 25.0,
+      "nearest_top_bridge_probe_gap_mm": 24.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 7.538404810405298,
+      "nearest_top_fastener_probe_gap_mm": 7.038404810405298
+    },
+    {
+      "ref": "TP4",
+      "net": "MAIN_KELVIN_N",
+      "expected_source_net": "MAIN_KELVIN_N",
+      "source_net_matches": true,
+      "position_mm": [
+        44.0,
+        85.8
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        44.0,
+        83.3
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "BC2",
+        "center_distance_mm": 3.3049999999999926,
+        "copper_edge_gap_mm": 2.3049999999999926
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 1.8049999999999926,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 2.799999999999997,
+        "ref": "BC2",
+        "pin": "1",
+        "net": "BATT_SENSED_P"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 30.200000000000003,
+      "nearest_top_bridge_probe_gap_mm": 29.700000000000003,
+      "nearest_top_fastener_pad_edge_gap_mm": 2.3638413005349967,
+      "nearest_top_fastener_probe_gap_mm": 1.8638413005349967
+    },
+    {
+      "ref": "TP5",
+      "net": "MAIN_COMMON",
+      "expected_source_net": "MAIN_COMMON",
+      "source_net_matches": true,
+      "position_mm": [
+        79.0,
+        59.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        79.0,
+        61.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "Q5",
+        "center_distance_mm": 2.5050000000000026,
+        "copper_edge_gap_mm": 1.5050000000000026
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 1.0050000000000026,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 3.312844189163343,
+        "ref": "Q5",
+        "pin": "13",
+        "net": "SYS_BUS_P"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 57.137767414994535,
+      "nearest_top_bridge_probe_gap_mm": 56.637767414994535,
+      "nearest_top_fastener_pad_edge_gap_mm": 11.9928556845359,
+      "nearest_top_fastener_probe_gap_mm": 11.4928556845359
+    },
+    {
+      "ref": "TP6",
+      "net": "SYS_BUS_P",
+      "expected_source_net": "SYS_BUS_P",
+      "source_net_matches": true,
+      "position_mm": [
+        97.0,
+        108.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        97.0,
+        105.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "NT8",
+        "center_distance_mm": 8.504999999999995,
+        "copper_edge_gap_mm": 7.5049999999999955
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 7.0049999999999955,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 8.0,
+        "ref": "NT8",
+        "pin": "2",
+        "net": "BATT_N"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 8.0,
+      "nearest_top_bridge_probe_gap_mm": 7.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 37.91658669218482,
+      "nearest_top_fastener_probe_gap_mm": 37.41658669218482
+    },
+    {
+      "ref": "TP7",
+      "net": "MOTION_KELVIN_P",
+      "expected_source_net": "MOTION_KELVIN_P",
+      "source_net_matches": true,
+      "position_mm": [
+        150.0,
+        91.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        150.0,
+        93.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "R35",
+        "center_distance_mm": 2.325000000000003,
+        "copper_edge_gap_mm": 1.3250000000000028
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 0.8250000000000028,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 1.5750000000000028,
+        "ref": "R35",
+        "pin": "1",
+        "net": "SYS_BUS_P"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 50.97114584074513,
+      "nearest_top_bridge_probe_gap_mm": 50.47114584074513,
+      "nearest_top_fastener_pad_edge_gap_mm": 24.51666203960727,
+      "nearest_top_fastener_probe_gap_mm": 24.01666203960727
+    },
+    {
+      "ref": "TP8",
+      "net": "MOTION_KELVIN_N",
+      "expected_source_net": "MOTION_KELVIN_N",
+      "source_net_matches": true,
+      "position_mm": [
+        146.5,
+        85.5
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        146.5,
+        83.0
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "R35",
+        "center_distance_mm": 2.555000000000007,
+        "copper_edge_gap_mm": 1.5550000000000068
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 1.0550000000000068,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 1.801004284180955,
+        "ref": "R35",
+        "pin": "2",
+        "net": "MOTION_UVLO"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 51.100863716449076,
+      "nearest_top_bridge_probe_gap_mm": 50.600863716449076,
+      "nearest_top_fastener_pad_edge_gap_mm": 18.00531854708632,
+      "nearest_top_fastener_probe_gap_mm": 17.50531854708632
+    },
+    {
+      "ref": "TP9",
+      "net": "MOTION_COMMON",
+      "expected_source_net": "MOTION_COMMON",
+      "source_net_matches": true,
+      "position_mm": [
+        158.0,
+        55.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        158.0,
+        52.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "BC10",
+        "center_distance_mm": 3.5426049737446017,
+        "copper_edge_gap_mm": 2.5426049737446017
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 2.0426049737446017,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 5.348277325385212,
+        "ref": "Q8",
+        "pin": "13",
+        "net": "MOTION_SENSED_P"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 75.53757247260981,
+      "nearest_top_bridge_probe_gap_mm": 75.03757247260981,
+      "nearest_top_fastener_pad_edge_gap_mm": 4.399494936611665,
+      "nearest_top_fastener_probe_gap_mm": 3.8994949366116654
+    },
+    {
+      "ref": "TP10",
+      "net": "MOTION_BUS_P",
+      "expected_source_net": "MOTION_BUS_P",
+      "source_net_matches": true,
+      "position_mm": [
+        281.0,
+        52.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        281.0,
+        49.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "R331",
+        "center_distance_mm": 5.295153444424445,
+        "copper_edge_gap_mm": 4.295153444424445
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 3.795153444424445,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 4.64097730894214,
+        "ref": "R331",
+        "pin": "2",
+        "net": "CHOP_SENSE"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 64.0,
+      "nearest_top_bridge_probe_gap_mm": 63.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 27.741540277189323,
+      "nearest_top_fastener_probe_gap_mm": 27.241540277189323
+    },
+    {
+      "ref": "TP11",
+      "net": "PC_BUCK_IN_P",
+      "expected_source_net": "PC_BUCK_IN_P",
+      "source_net_matches": true,
+      "position_mm": [
+        40.0,
+        169.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        40.0,
+        166.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "C21",
+        "center_distance_mm": 3.3049999999999997,
+        "copper_edge_gap_mm": 2.3049999999999997
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 1.8049999999999997,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 2.549999999999997,
+        "ref": "C21",
+        "pin": "2",
+        "net": "BATT_N"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 41.0,
+      "nearest_top_bridge_probe_gap_mm": 40.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 54.91522986797286,
+      "nearest_top_fastener_probe_gap_mm": 54.41522986797286
+    },
+    {
+      "ref": "TP12",
+      "net": "LOGIC_BUCK_IN_P",
+      "expected_source_net": "LOGIC_BUCK_IN_P",
+      "source_net_matches": true,
+      "position_mm": [
+        74.0,
+        176.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        74.0,
+        173.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "R54",
+        "center_distance_mm": 2.080540795081899,
+        "copper_edge_gap_mm": 1.080540795081899
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 0.580540795081899,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 1.3707857347301493,
+        "ref": "R54",
+        "pin": "2",
+        "net": "BATT_N"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 48.0,
+      "nearest_top_bridge_probe_gap_mm": 47.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 75.52468759581859,
+      "nearest_top_fastener_probe_gap_mm": 75.02468759581859
+    },
+    {
+      "ref": "TP13",
+      "net": "V5V",
+      "expected_source_net": "V5V",
+      "source_net_matches": true,
+      "position_mm": [
+        134.0,
+        262.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        134.0,
+        259.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "C246",
+        "center_distance_mm": 2.7706335160857414,
+        "copper_edge_gap_mm": 1.7706335160857414
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 1.2706335160857414,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 6.280109889280518,
+        "ref": "C246",
+        "pin": "2",
+        "net": "LOGIC_5V_N"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 137.07968713753664,
+      "nearest_top_bridge_probe_gap_mm": 136.57968713753664,
+      "nearest_top_fastener_pad_edge_gap_mm": 180.38437266214714,
+      "nearest_top_fastener_probe_gap_mm": 179.88437266214714
+    },
+    {
+      "ref": "TP14",
+      "net": "V3V3",
+      "expected_source_net": "V3V3",
+      "source_net_matches": true,
+      "position_mm": [
+        214.0,
+        207.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        214.0,
+        204.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "R240",
+        "center_distance_mm": 6.063715857459028,
+        "copper_edge_gap_mm": 5.063715857459028
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 4.563715857459028,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 5.326185659621454,
+        "ref": "R240",
+        "pin": "2",
+        "net": "MOTION_ARMED_SENSE"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 74.0,
+      "nearest_top_bridge_probe_gap_mm": 73.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 130.83048081775402,
+      "nearest_top_fastener_probe_gap_mm": 130.33048081775402
+    },
+    {
+      "ref": "TP15",
+      "net": "BATT_N",
+      "expected_source_net": "BATT_N",
+      "source_net_matches": true,
+      "position_mm": [
+        102.0,
+        133.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        102.0,
+        130.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "NT8",
+        "center_distance_mm": 5.5049999999999955,
+        "copper_edge_gap_mm": 4.5049999999999955
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 4.0049999999999955,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 8.219544457292887,
+        "ref": "NT8",
+        "pin": "1",
+        "net": "LOGIC_5V_N"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 5.0,
+      "nearest_top_bridge_probe_gap_mm": 4.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 61.61929677819934,
+      "nearest_top_fastener_probe_gap_mm": 61.11929677819934
+    },
+    {
+      "ref": "TP16",
+      "net": "LOGIC_GND",
+      "expected_source_net": "LOGIC_GND",
+      "source_net_matches": true,
+      "position_mm": [
+        160.0,
+        217.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        160.0,
+        214.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "Q20",
+        "center_distance_mm": 22.533145586002856,
+        "copper_edge_gap_mm": 21.533145586002856
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 21.033145586002856,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 21.88002677008922,
+        "ref": "Q20",
+        "pin": "3",
+        "net": "WAKE_KILL"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 90.92388155425118,
+      "nearest_top_bridge_probe_gap_mm": 90.42388155425118,
+      "nearest_top_fastener_pad_edge_gap_mm": 143.664338901763,
+      "nearest_top_fastener_probe_gap_mm": 143.164338901763
+    },
+    {
+      "ref": "TP17",
+      "net": "AON_3V3",
+      "expected_source_net": "AON_3V3",
+      "source_net_matches": true,
+      "position_mm": [
+        86.0,
+        228.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        86.0,
+        225.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "C257",
+        "center_distance_mm": 4.267573227256904,
+        "copper_edge_gap_mm": 3.2675732272569036
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 2.7675732272569036,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 3.5818425605862876,
+        "ref": "C257",
+        "pin": "2",
+        "net": "LOGIC_GND"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 100.0,
+      "nearest_top_bridge_probe_gap_mm": 99.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 126.4280106724876,
+      "nearest_top_fastener_probe_gap_mm": 125.9280106724876
+    },
+    {
+      "ref": "TP18",
+      "net": "AON_WAKE_EN",
+      "expected_source_net": "AON_WAKE_EN",
+      "source_net_matches": true,
+      "position_mm": [
+        136.0,
+        178.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        136.0,
+        175.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "R229",
+        "center_distance_mm": 22.944032993351456,
+        "copper_edge_gap_mm": 21.944032993351456
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 21.444032993351456,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 14.0,
+        "ref": "TP19",
+        "pin": "1",
+        "net": "MAIN_FAULT_N"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 58.682493245507096,
+      "nearest_top_bridge_probe_gap_mm": 58.182493245507096,
+      "nearest_top_fastener_pad_edge_gap_mm": 107.50442469213318,
+      "nearest_top_fastener_probe_gap_mm": 107.00442469213318
+    },
+    {
+      "ref": "TP19",
+      "net": "MAIN_FAULT_N",
+      "expected_source_net": "MAIN_FAULT_N",
+      "source_net_matches": true,
+      "position_mm": [
+        152.0,
+        177.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        152.0,
+        174.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "R229",
+        "center_distance_mm": 9.50361247105541,
+        "copper_edge_gap_mm": 8.50361247105541
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 8.00361247105541,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 8.852442590545756,
+        "ref": "R229",
+        "pin": "2",
+        "net": "MOTION_FLT_N"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 61.24146527838174,
+      "nearest_top_bridge_probe_gap_mm": 60.74146527838174,
+      "nearest_top_fastener_pad_edge_gap_mm": 107.78283188550682,
+      "nearest_top_fastener_probe_gap_mm": 107.28283188550682
+    },
+    {
+      "ref": "TP20",
+      "net": "MAIN_TMR",
+      "expected_source_net": "MAIN_TMR",
+      "source_net_matches": true,
+      "position_mm": [
+        59.0,
+        108.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        59.0,
+        110.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "R22",
+        "center_distance_mm": 3.0722385975050903,
+        "copper_edge_gap_mm": 2.0722385975050903
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 1.5722385975050903,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 2.3497201375637315,
+        "ref": "R22",
+        "pin": "2",
+        "net": "MAIN_ILIM_TAIL"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 8.0,
+      "nearest_top_bridge_probe_gap_mm": 7.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 26.562439083762797,
+      "nearest_top_fastener_probe_gap_mm": 26.062439083762797
+    },
+    {
+      "ref": "TP21",
+      "net": "MOTION_GATE_EN",
+      "expected_source_net": "MOTION_GATE_EN",
+      "source_net_matches": true,
+      "position_mm": [
+        193.0,
+        139.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        193.0,
+        136.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "NT1",
+        "center_distance_mm": 6.676829337342682,
+        "copper_edge_gap_mm": 5.676829337342682
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 5.176829337342682,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 6.280109889280518,
+        "ref": "NT1",
+        "pin": "1",
+        "net": "ARM_L_N"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 6.280109889280518,
+      "nearest_top_bridge_probe_gap_mm": 5.780109889280518,
+      "nearest_top_fastener_pad_edge_gap_mm": 61.52984409947557,
+      "nearest_top_fastener_probe_gap_mm": 61.02984409947557
+    },
+    {
+      "ref": "TP22",
+      "net": "MOTION_FLT_N",
+      "expected_source_net": "MOTION_FLT_N",
+      "source_net_matches": true,
+      "position_mm": [
+        200.0,
+        168.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        200.0,
+        165.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "R235",
+        "center_distance_mm": 21.423787013504395,
+        "copper_edge_gap_mm": 20.423787013504395
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 19.923787013504395,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 16.11724276862369,
+        "ref": "TP23",
+        "pin": "1",
+        "net": "MOTION_TEMP_FLT_N"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 35.0,
+      "nearest_top_bridge_probe_gap_mm": 34.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 90.63012014972206,
+      "nearest_top_fastener_probe_gap_mm": 90.13012014972206
+    },
+    {
+      "ref": "TP23",
+      "net": "MOTION_TEMP_FLT_N",
+      "expected_source_net": "MOTION_TEMP_FLT_N",
+      "source_net_matches": true,
+      "position_mm": [
+        203.0,
+        186.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        203.0,
+        183.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "R235",
+        "center_distance_mm": 3.3249999999999886,
+        "copper_edge_gap_mm": 2.3249999999999886
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 1.8249999999999886,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 2.5749999999999886,
+        "ref": "R235",
+        "pin": "2",
+        "net": "LOGIC_GND"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 53.0,
+      "nearest_top_bridge_probe_gap_mm": 52.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 108.78035701729323,
+      "nearest_top_fastener_probe_gap_mm": 108.28035701729323
+    },
+    {
+      "ref": "TP24",
+      "net": "MOTION_TMR",
+      "expected_source_net": "MOTION_TMR",
+      "source_net_matches": true,
+      "position_mm": [
+        161.0,
+        108.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        161.0,
+        105.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "C13",
+        "center_distance_mm": 3.305000000000007,
+        "copper_edge_gap_mm": 2.305000000000007
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 1.8050000000000068,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 2.549999999999997,
+        "ref": "C13",
+        "pin": "1",
+        "net": "MOTION_TEMP_DIODE"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 35.76955262170047,
+      "nearest_top_bridge_probe_gap_mm": 35.26955262170047,
+      "nearest_top_fastener_pad_edge_gap_mm": 44.01767361255979,
+      "nearest_top_fastener_probe_gap_mm": 43.51767361255979
+    },
+    {
+      "ref": "TP25",
+      "net": "MOTION_IMON_INPUT",
+      "expected_source_net": "MOTION_IMON_INPUT",
+      "source_net_matches": true,
+      "position_mm": [
+        184.0,
+        133.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        184.0,
+        130.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "C10",
+        "center_distance_mm": 3.887164776543433,
+        "copper_edge_gap_mm": 2.887164776543433
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 2.387164776543433,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 7.330216083631909,
+        "ref": "C10",
+        "pin": "2",
+        "net": "BATT_N"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 10.045361017187261,
+      "nearest_top_bridge_probe_gap_mm": 9.545361017187261,
+      "nearest_top_fastener_pad_edge_gap_mm": 56.48386886924694,
+      "nearest_top_fastener_probe_gap_mm": 55.98386886924694
+    },
+    {
+      "ref": "TP26",
+      "net": "CHOP_GATE",
+      "expected_source_net": "CHOP_GATE",
+      "source_net_matches": true,
+      "position_mm": [
+        293.0,
+        39.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        293.0,
+        36.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "Q40",
+        "center_distance_mm": 2.105000000000018,
+        "copper_edge_gap_mm": 1.1050000000000182
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 0.6050000000000182,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 1.3500000000000227,
+        "ref": "Q40",
+        "pin": "2",
+        "net": "CHOPPER_N"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 77.0,
+      "nearest_top_bridge_probe_gap_mm": 76.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 22.819604517012593,
+      "nearest_top_fastener_probe_gap_mm": 22.319604517012593
+    },
+    {
+      "ref": "TP27",
+      "net": "CHOP_10V",
+      "expected_source_net": "CHOP_10V",
+      "source_net_matches": true,
+      "position_mm": [
+        290.0,
+        67.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        290.0,
+        69.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "R302",
+        "center_distance_mm": 3.0549999999999997,
+        "copper_edge_gap_mm": 2.0549999999999997
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 1.5549999999999997,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 2.299999999999997,
+        "ref": "R302",
+        "pin": "2",
+        "net": "CHOP_SENSE_TOP"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 49.0,
+      "nearest_top_bridge_probe_gap_mm": 48.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 44.82891812864648,
+      "nearest_top_fastener_probe_gap_mm": 44.32891812864648
+    },
+    {
+      "ref": "TP28",
+      "net": "CHOP_REF2V5",
+      "expected_source_net": "CHOP_REF2V5",
+      "source_net_matches": true,
+      "position_mm": [
+        301.0,
+        83.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        301.0,
+        80.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "R311",
+        "center_distance_mm": 6.063715857459028,
+        "copper_edge_gap_mm": 5.063715857459028
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 4.563715857459028,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 5.7416615162732585,
+        "ref": "R311",
+        "pin": "2",
+        "net": "CHOP_NTC"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 33.23448553724738,
+      "nearest_top_bridge_probe_gap_mm": 32.73448553724738,
+      "nearest_top_fastener_pad_edge_gap_mm": 63.85416353759881,
+      "nearest_top_fastener_probe_gap_mm": 63.35416353759881
+    },
+    {
+      "ref": "TP29",
+      "net": "CHOP_FAULT_N",
+      "expected_source_net": "CHOP_FAULT_N",
+      "source_net_matches": true,
+      "position_mm": [
+        226.0,
+        188.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        224.5,
+        190.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "R237",
+        "center_distance_mm": 2.055000000000007,
+        "copper_edge_gap_mm": 1.0550000000000068
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 0.5550000000000068,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 1.3000000000000114,
+        "ref": "R237",
+        "pin": "2",
+        "net": "LOGIC_GND"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 55.0,
+      "nearest_top_bridge_probe_gap_mm": 54.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 114.57081243999309,
+      "nearest_top_fastener_probe_gap_mm": 114.07081243999309
+    },
+    {
+      "ref": "TP30",
+      "net": "CHOP_ACTIVE_N",
+      "expected_source_net": "CHOP_ACTIVE_N",
+      "source_net_matches": true,
+      "position_mm": [
+        250.0,
+        183.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        250.0,
+        180.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "C228",
+        "center_distance_mm": 19.267500000000013,
+        "copper_edge_gap_mm": 18.267500000000013
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 17.767500000000013,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 18.51249999999999,
+        "ref": "C228",
+        "pin": "2",
+        "net": "LOGIC_GND"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 50.24451190127583,
+      "nearest_top_bridge_probe_gap_mm": 49.74451190127583,
+      "nearest_top_fastener_pad_edge_gap_mm": 118.3789731956154,
+      "nearest_top_fastener_probe_gap_mm": 117.8789731956154
+    },
+    {
+      "ref": "TP31",
+      "net": "CAN_TX",
+      "expected_source_net": "CAN_TX",
+      "source_net_matches": true,
+      "position_mm": [
+        138.0,
+        278.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        138.0,
+        280.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "J23",
+        "center_distance_mm": 3.2350000000000136,
+        "copper_edge_gap_mm": 2.2350000000000136
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 1.7350000000000136,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 3.1500000000000057,
+        "ref": "J23",
+        "pin": "1",
+        "net": "I2C_SDA"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 153.5639026422405,
+      "nearest_top_bridge_probe_gap_mm": 153.0639026422405,
+      "nearest_top_fastener_pad_edge_gap_mm": 195.857890334598,
+      "nearest_top_fastener_probe_gap_mm": 195.357890334598
+    },
+    {
+      "ref": "TP32",
+      "net": "CAN_RX",
+      "expected_source_net": "CAN_RX",
+      "source_net_matches": true,
+      "position_mm": [
+        183.0,
+        277.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        183.0,
+        274.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "C246",
+        "center_distance_mm": 43.75551044456426,
+        "copper_edge_gap_mm": 42.75551044456426
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 42.25551044456426,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 43.0,
+        "ref": "TP31",
+        "pin": "1",
+        "net": "CAN_TX"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 144.49570440394453,
+      "nearest_top_bridge_probe_gap_mm": 143.99570440394453,
+      "nearest_top_fastener_pad_edge_gap_mm": 199.85091916034852,
+      "nearest_top_fastener_probe_gap_mm": 199.35091916034852
+    },
+    {
+      "ref": "TP33",
+      "net": "ESP_MAIN_HOLD",
+      "expected_source_net": "ESP_MAIN_HOLD",
+      "source_net_matches": true,
+      "position_mm": [
+        246.0,
+        256.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        246.0,
+        253.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "J22",
+        "center_distance_mm": 17.747091310972632,
+        "copper_edge_gap_mm": 16.747091310972632
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 16.247091310972632,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 17.90424886103651,
+        "ref": "R238",
+        "pin": "1",
+        "net": "MOTION_PERMIT_RAW"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 123.00403219250575,
+      "nearest_top_bridge_probe_gap_mm": 122.50403219250575,
+      "nearest_top_fastener_pad_edge_gap_mm": 185.43716243832682,
+      "nearest_top_fastener_probe_gap_mm": 184.93716243832682
+    },
+    {
+      "ref": "TP34",
+      "net": "ESP_MOTION_RESET",
+      "expected_source_net": "ESP_MOTION_RESET",
+      "source_net_matches": true,
+      "position_mm": [
+        245.0,
+        221.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        245.0,
+        218.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "R233",
+        "center_distance_mm": 14.055000000000007,
+        "copper_edge_gap_mm": 13.055000000000007
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 12.555000000000007,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 13.305593311708547,
+        "ref": "R233",
+        "pin": "1",
+        "net": "V3V3"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 88.0,
+      "nearest_top_bridge_probe_gap_mm": 87.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 151.66551784663199,
+      "nearest_top_fastener_probe_gap_mm": 151.16551784663199
+    },
+    {
+      "ref": "TP35",
+      "net": "LIFT_24V_SAMPLE",
+      "expected_source_net": "LIFT_24V_SAMPLE",
+      "source_net_matches": true,
+      "position_mm": [
+        16.0,
+        241.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        16.0,
+        238.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "J13",
+        "center_distance_mm": 2.505000000000001,
+        "copper_edge_gap_mm": 1.5050000000000008
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 1.0050000000000008,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 2.1622776601683795,
+        "ref": "TP36",
+        "pin": "1",
+        "net": "LIFT_24V_N"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 113.35471131527551,
+      "nearest_top_bridge_probe_gap_mm": 112.85471131527551,
+      "nearest_top_fastener_pad_edge_gap_mm": 125.96102083887831,
+      "nearest_top_fastener_probe_gap_mm": 125.46102083887831
+    },
+    {
+      "ref": "TP36",
+      "net": "LIFT_24V_N",
+      "expected_source_net": "LIFT_24V_N",
+      "source_net_matches": true,
+      "position_mm": [
+        20.0,
+        243.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        20.0,
+        240.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "J20",
+        "center_distance_mm": 2.553517182241003,
+        "copper_edge_gap_mm": 1.553517182241003
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 1.053517182241003,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 2.1622776601683795,
+        "ref": "TP35",
+        "pin": "1",
+        "net": "LIFT_24V_SAMPLE"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 115.1077086157504,
+      "nearest_top_bridge_probe_gap_mm": 114.6077086157504,
+      "nearest_top_fastener_pad_edge_gap_mm": 127.68408313308313,
+      "nearest_top_fastener_probe_gap_mm": 127.18408313308313
+    },
+    {
+      "ref": "TP37",
+      "net": "PC_EFUSE_FAULT_N",
+      "expected_source_net": "PC_EFUSE_FAULT_N",
+      "source_net_matches": true,
+      "position_mm": [
+        35.0,
+        175.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        35.0,
+        172.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "C20",
+        "center_distance_mm": 2.3051355708504504,
+        "copper_edge_gap_mm": 1.3051355708504504
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 0.8051355708504504,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 1.5647855660854102,
+        "ref": "C20",
+        "pin": "2",
+        "net": "BATT_N"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 47.0,
+      "nearest_top_bridge_probe_gap_mm": 46.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 59.99045732013177,
+      "nearest_top_fastener_probe_gap_mm": 59.49045732013177
+    },
+    {
+      "ref": "TP38",
+      "net": "PC_EFUSE_PGOOD",
+      "expected_source_net": "PC_EFUSE_PGOOD",
+      "source_net_matches": true,
+      "position_mm": [
+        39.0,
+        181.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        39.0,
+        183.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "R40",
+        "center_distance_mm": 2.080540795081892,
+        "copper_edge_gap_mm": 1.080540795081892
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 0.5805407950818919,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 1.3707857347301493,
+        "ref": "R40",
+        "pin": "2",
+        "net": "BATT_N"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 53.0,
+      "nearest_top_bridge_probe_gap_mm": 52.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 66.50694410957877,
+      "nearest_top_fastener_probe_gap_mm": 66.00694410957877
+    },
+    {
+      "ref": "TP39",
+      "net": "LOGIC_EFUSE_FAULT_N",
+      "expected_source_net": "LOGIC_EFUSE_FAULT_N",
+      "source_net_matches": true,
+      "position_mm": [
+        85.0,
+        175.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        85.0,
+        172.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "C25",
+        "center_distance_mm": 2.3051355708504504,
+        "copper_edge_gap_mm": 1.3051355708504504
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 0.8051355708504504,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 1.5647855660854106,
+        "ref": "C25",
+        "pin": "2",
+        "net": "BATT_N"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 47.0,
+      "nearest_top_bridge_probe_gap_mm": 46.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 81.61486669908874,
+      "nearest_top_fastener_probe_gap_mm": 81.11486669908874
+    },
+    {
+      "ref": "TP40",
+      "net": "LOGIC_EFUSE_PGOOD",
+      "expected_source_net": "LOGIC_EFUSE_PGOOD",
+      "source_net_matches": true,
+      "position_mm": [
+        89.0,
+        171.0
+      ],
+      "pad_size_mm": [
+        2.0,
+        2.0
+      ],
+      "top_mask_open": true,
+      "reference_visible": true,
+      "reference_position_mm": [
+        89.0,
+        168.5
+      ],
+      "nearest_component_body_courtyard": {
+        "ref": "U4",
+        "center_distance_mm": 2.375,
+        "copper_edge_gap_mm": 1.375
+      },
+      "centered_3mm_probe_to_body_courtyard_gap_mm": 0.875,
+      "nearest_foreign_pad_bbox_lower_bound": {
+        "edge_gap_mm": 1.62797450520358,
+        "ref": "U4",
+        "pin": "23",
+        "net": "unconnected-(U4-NC-Pad23)"
+      },
+      "nearest_top_bridge_pad_edge_gap_mm": 43.0,
+      "nearest_top_bridge_probe_gap_mm": 42.5,
+      "nearest_top_fastener_pad_edge_gap_mm": 81.47700845625813,
+      "nearest_top_fastener_probe_gap_mm": 80.97700845625813
+    }
+  ],
+  "analog_testpoint_moves": {
+    "TP3": {
+      "expected_mm": [
+        44,
+        91
+      ],
+      "actual_mm": [
+        44.0,
+        91.0
+      ],
+      "matches": true
+    },
+    "TP4": {
+      "expected_mm": [
+        44,
+        85.8
+      ],
+      "actual_mm": [
+        44.0,
+        85.8
+      ],
+      "matches": true
+    },
+    "TP7": {
+      "expected_mm": [
+        150,
+        91
+      ],
+      "actual_mm": [
+        150.0,
+        91.0
+      ],
+      "matches": true
+    },
+    "TP8": {
+      "expected_mm": [
+        146.5,
+        85.5
+      ],
+      "actual_mm": [
+        146.5,
+        85.5
+      ],
+      "matches": true
+    }
+  },
+  "geometry_inputs_sha256": {
+    "manufacturing/busbar-pcb-interface.json": "d31d4c18e7cd00ed6910ec9a7c48d871783a5d9ed8ae269eeda9561b7d63acb1",
+    "design/integration-parts.json": "4ed1c18cd120f13efbcdbe18b74458d758511598e864bd0caa71c50f2887765d"
+  },
+  "all_front_courtyard_intersections": [],
+  "footprints_without_front_courtyard": [],
+  "esp_bbox_false_positive_review": [
+    {
+      "pair": [
+        "C205",
+        "U10"
+      ],
+      "intersection_area_mm2": 0.0,
+      "courtyard_gap_mm": 0.20999999999997954
+    },
+    {
+      "pair": [
+        "C239",
+        "U10"
+      ],
+      "intersection_area_mm2": 0.0,
+      "courtyard_gap_mm": 3.0600000000000023
+    },
+    {
+      "pair": [
+        "C240",
+        "U10"
+      ],
+      "intersection_area_mm2": 0.0,
+      "courtyard_gap_mm": 3.5600000000000023
+    },
+    {
+      "pair": [
+        "R219",
+        "U10"
+      ],
+      "intersection_area_mm2": 0.0,
+      "courtyard_gap_mm": 2.3100000000000023
+    },
+    {
+      "pair": [
+        "R220",
+        "U10"
+      ],
+      "intersection_area_mm2": 0.0,
+      "courtyard_gap_mm": 1.579999999999984
+    }
+  ],
+  "antenna": {
+    "module_position_mm": [
+      325.0,
+      280.0
+    ],
+    "rotation_deg": 180.0,
+    "rule_areas": [
+      {
+        "polygons_mm": [
+          [
+            [
+              349.0,
+              286.75
+            ],
+            [
+              301.0,
+              286.75
+            ],
+            [
+              301.0,
+              307.75
+            ],
+            [
+              349.0,
+              307.75
+            ]
+          ]
+        ],
+        "layers": [
+          "F.Cu",
+          "In1.Cu",
+          "In2.Cu",
+          "B.Cu"
+        ],
+        "tracks_prohibited": true,
+        "vias_prohibited": true,
+        "pads_prohibited": true,
+        "zone_fill_prohibited": true,
+        "footprints_prohibited": true,
+        "foreign_courtyard_intersections": [],
+        "busbar_intersections": [],
+        "actual_copper_intersections": [],
+        "mounting_hole_gaps_mm": {
+          "H3": 5.555001000000004,
+          "H1": 400.9710254344193,
+          "H4": 289.555001,
+          "H2": 275.31881917246534
+        }
+      }
+    ]
+  },
+  "connectors": [
+    {
+      "ref": "J1",
+      "position_mm": [
+        15.0,
+        45.0
+      ],
+      "rotation_deg": 0.0,
+      "footprint": "PMU:Wurth_7461103",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        9.505,
+        39.505,
+        20.495,
+        50.495
+      ],
+      "access_basis": "M5 face -Y from assembly specification; 9 mm wide projected 20 mm tool corridor",
+      "required_face_direction_y": -1,
+      "three_dimensional_tool_clearance_verified": false,
+      "nominal_20mm_planar_access_bounds_mm": [
+        10.5,
+        20.5,
+        19.5,
+        40.5
+      ],
+      "planar_access_courtyard_hits": [],
+      "planar_access_top_bridge_hits": [],
+      "planar_access_limitation": "Projection only: screw-axis height, selected tool, mated plug, lug, counterhold and cable bend envelope require physical fixture verification."
+    },
+    {
+      "ref": "J2",
+      "position_mm": [
+        15.0,
+        115.0
+      ],
+      "rotation_deg": 0.0,
+      "footprint": "PMU:Wurth_7461103",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        9.505,
+        109.505,
+        20.495,
+        120.495
+      ],
+      "access_basis": "M5 face -Y from assembly specification; 9 mm wide projected 20 mm tool corridor",
+      "required_face_direction_y": -1,
+      "three_dimensional_tool_clearance_verified": false,
+      "nominal_20mm_planar_access_bounds_mm": [
+        10.5,
+        90.5,
+        19.5,
+        110.5
+      ],
+      "planar_access_courtyard_hits": [],
+      "planar_access_top_bridge_hits": [],
+      "planar_access_limitation": "Projection only: screw-axis height, selected tool, mated plug, lug, counterhold and cable bend envelope require physical fixture verification."
+    },
+    {
+      "ref": "J3",
+      "position_mm": [
+        220.0,
+        20.0
+      ],
+      "rotation_deg": 0.0,
+      "footprint": "PMU:Wurth_7461103",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        214.505,
+        14.505,
+        225.495,
+        25.495
+      ],
+      "access_basis": "M5 face -Y from assembly specification; 9 mm wide projected 20 mm tool corridor",
+      "required_face_direction_y": -1,
+      "three_dimensional_tool_clearance_verified": false,
+      "nominal_20mm_planar_access_bounds_mm": [
+        215.5,
+        -4.5,
+        224.5,
+        15.5
+      ],
+      "planar_access_courtyard_hits": [],
+      "planar_access_top_bridge_hits": [],
+      "planar_access_limitation": "Projection only: screw-axis height, selected tool, mated plug, lug, counterhold and cable bend envelope require physical fixture verification."
+    },
+    {
+      "ref": "J4",
+      "position_mm": [
+        220.0,
+        115.0
+      ],
+      "rotation_deg": 0.0,
+      "footprint": "PMU:Wurth_7461103",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        214.505,
+        109.505,
+        225.495,
+        120.495
+      ],
+      "access_basis": "M5 face +Y from assembly specification; 9 mm wide projected 20 mm tool corridor",
+      "required_face_direction_y": 1,
+      "three_dimensional_tool_clearance_verified": false,
+      "nominal_20mm_planar_access_bounds_mm": [
+        215.5,
+        119.5,
+        224.5,
+        139.5
+      ],
+      "planar_access_courtyard_hits": [],
+      "planar_access_top_bridge_hits": [],
+      "planar_access_limitation": "Projection only: screw-axis height, selected tool, mated plug, lug, counterhold and cable bend envelope require physical fixture verification."
+    },
+    {
+      "ref": "J5",
+      "position_mm": [
+        250.0,
+        20.0
+      ],
+      "rotation_deg": 0.0,
+      "footprint": "PMU:Wurth_7461103",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        244.505,
+        14.505,
+        255.495,
+        25.495
+      ],
+      "access_basis": "M5 face -Y from assembly specification; 9 mm wide projected 20 mm tool corridor",
+      "required_face_direction_y": -1,
+      "three_dimensional_tool_clearance_verified": false,
+      "nominal_20mm_planar_access_bounds_mm": [
+        245.5,
+        -4.5,
+        254.5,
+        15.5
+      ],
+      "planar_access_courtyard_hits": [],
+      "planar_access_top_bridge_hits": [],
+      "planar_access_limitation": "Projection only: screw-axis height, selected tool, mated plug, lug, counterhold and cable bend envelope require physical fixture verification."
+    },
+    {
+      "ref": "J6",
+      "position_mm": [
+        250.0,
+        115.0
+      ],
+      "rotation_deg": 0.0,
+      "footprint": "PMU:Wurth_7461103",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        244.505,
+        109.505,
+        255.495,
+        120.495
+      ],
+      "access_basis": "M5 face +Y from assembly specification; 9 mm wide projected 20 mm tool corridor",
+      "required_face_direction_y": 1,
+      "three_dimensional_tool_clearance_verified": false,
+      "nominal_20mm_planar_access_bounds_mm": [
+        245.5,
+        119.5,
+        254.5,
+        139.5
+      ],
+      "planar_access_courtyard_hits": [],
+      "planar_access_top_bridge_hits": [],
+      "planar_access_limitation": "Projection only: screw-axis height, selected tool, mated plug, lug, counterhold and cable bend envelope require physical fixture verification."
+    },
+    {
+      "ref": "J7",
+      "position_mm": [
+        349.0,
+        63.0
+      ],
+      "rotation_deg": 90.0,
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        346.505,
+        49.805,
+        359.495,
+        71.125
+      ],
+      "access_basis": "Right-edge horizontal mating",
+      "nominal_20mm_planar_access_bounds_mm": [
+        359.495,
+        49.805,
+        379.495,
+        71.125
+      ],
+      "planar_access_courtyard_hits": [],
+      "planar_access_top_bridge_hits": [],
+      "planar_access_limitation": "Projection only: screw-axis height, selected tool, mated plug, lug, counterhold and cable bend envelope require physical fixture verification."
+    },
+    {
+      "ref": "J8",
+      "position_mm": [
+        349.0,
+        91.0
+      ],
+      "rotation_deg": 90.0,
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        346.505,
+        77.805,
+        359.495,
+        99.125
+      ],
+      "access_basis": "Right-edge horizontal mating",
+      "nominal_20mm_planar_access_bounds_mm": [
+        359.495,
+        77.805,
+        379.495,
+        99.125
+      ],
+      "planar_access_courtyard_hits": [],
+      "planar_access_top_bridge_hits": [],
+      "planar_access_limitation": "Projection only: screw-axis height, selected tool, mated plug, lug, counterhold and cable bend envelope require physical fixture verification."
+    },
+    {
+      "ref": "J9",
+      "position_mm": [
+        11.0,
+        160.0
+      ],
+      "rotation_deg": -90.0,
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        0.505,
+        151.875,
+        13.495,
+        173.195
+      ],
+      "access_basis": "Left-edge horizontal mating",
+      "nominal_20mm_planar_access_bounds_mm": [
+        -19.495,
+        151.875,
+        0.505,
+        173.195
+      ],
+      "planar_access_courtyard_hits": [],
+      "planar_access_top_bridge_hits": [],
+      "planar_access_limitation": "Projection only: screw-axis height, selected tool, mated plug, lug, counterhold and cable bend envelope require physical fixture verification."
+    },
+    {
+      "ref": "J10",
+      "position_mm": [
+        11.0,
+        188.0
+      ],
+      "rotation_deg": -90.0,
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        0.505,
+        179.875,
+        13.495,
+        201.195
+      ],
+      "access_basis": "Left-edge horizontal mating",
+      "nominal_20mm_planar_access_bounds_mm": [
+        -19.495,
+        179.875,
+        0.505,
+        201.195
+      ],
+      "planar_access_courtyard_hits": [],
+      "planar_access_top_bridge_hits": [],
+      "planar_access_limitation": "Projection only: screw-axis height, selected tool, mated plug, lug, counterhold and cable bend envelope require physical fixture verification."
+    },
+    {
+      "ref": "J11",
+      "position_mm": [
+        11.0,
+        216.0
+      ],
+      "rotation_deg": -90.0,
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        0.505,
+        207.875,
+        13.495,
+        229.195
+      ],
+      "access_basis": "Left-edge horizontal mating",
+      "nominal_20mm_planar_access_bounds_mm": [
+        -19.495,
+        207.875,
+        0.505,
+        229.195
+      ],
+      "planar_access_courtyard_hits": [],
+      "planar_access_top_bridge_hits": [],
+      "planar_access_limitation": "Projection only: screw-axis height, selected tool, mated plug, lug, counterhold and cable bend envelope require physical fixture verification."
+    },
+    {
+      "ref": "J12",
+      "position_mm": [
+        349.0,
+        35.0
+      ],
+      "rotation_deg": 90.0,
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        346.505,
+        21.805,
+        359.495,
+        43.125
+      ],
+      "access_basis": "Right-edge horizontal mating",
+      "nominal_20mm_planar_access_bounds_mm": [
+        359.495,
+        21.805,
+        379.495,
+        43.125
+      ],
+      "planar_access_courtyard_hits": [],
+      "planar_access_top_bridge_hits": [],
+      "planar_access_limitation": "Projection only: screw-axis height, selected tool, mated plug, lug, counterhold and cable bend envelope require physical fixture verification."
+    },
+    {
+      "ref": "J13",
+      "position_mm": [
+        11.0,
+        244.0
+      ],
+      "rotation_deg": -90.0,
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "dnp": true,
+      "courtyard_bounds_mm": [
+        0.505,
+        235.875,
+        13.495,
+        257.195
+      ],
+      "access_basis": "Left-edge horizontal mating",
+      "nominal_20mm_planar_access_bounds_mm": [
+        -19.495,
+        235.875,
+        0.505,
+        257.195
+      ],
+      "planar_access_courtyard_hits": [],
+      "planar_access_top_bridge_hits": [],
+      "planar_access_limitation": "Projection only: screw-axis height, selected tool, mated plug, lug, counterhold and cable bend envelope require physical fixture verification."
+    },
+    {
+      "ref": "J14",
+      "position_mm": [
+        349.0,
+        141.0
+      ],
+      "rotation_deg": 90.0,
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        346.505,
+        127.805,
+        359.495,
+        149.125
+      ],
+      "access_basis": "Right-edge horizontal mating",
+      "nominal_20mm_planar_access_bounds_mm": [
+        359.495,
+        127.805,
+        379.495,
+        149.125
+      ],
+      "planar_access_courtyard_hits": [],
+      "planar_access_top_bridge_hits": [],
+      "planar_access_limitation": "Projection only: screw-axis height, selected tool, mated plug, lug, counterhold and cable bend envelope require physical fixture verification."
+    },
+    {
+      "ref": "J15",
+      "position_mm": [
+        349.0,
+        169.0
+      ],
+      "rotation_deg": 90.0,
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        346.505,
+        155.805,
+        359.495,
+        177.125
+      ],
+      "access_basis": "Right-edge horizontal mating",
+      "nominal_20mm_planar_access_bounds_mm": [
+        359.495,
+        155.805,
+        379.495,
+        177.125
+      ],
+      "planar_access_courtyard_hits": [],
+      "planar_access_top_bridge_hits": [],
+      "planar_access_limitation": "Projection only: screw-axis height, selected tool, mated plug, lug, counterhold and cable bend envelope require physical fixture verification."
+    },
+    {
+      "ref": "J16",
+      "position_mm": [
+        30.0,
+        285.0
+      ],
+      "rotation_deg": 0.0,
+      "footprint": "Connector_JST:JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        25.275,
+        281.705,
+        34.725,
+        288.295
+      ],
+      "access_basis": "Vertical mating/top access; mated housing/grip volume absent"
+    },
+    {
+      "ref": "J17",
+      "position_mm": [
+        45.0,
+        285.0
+      ],
+      "rotation_deg": 0.0,
+      "footprint": "Connector_JST:JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        40.275,
+        281.705,
+        49.725,
+        288.295
+      ],
+      "access_basis": "Vertical mating/top access; mated housing/grip volume absent"
+    },
+    {
+      "ref": "J18",
+      "position_mm": [
+        110.0,
+        285.0
+      ],
+      "rotation_deg": 0.0,
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_3-GF-5,08_1x03_P5.08mm_Horizontal_ThreadedFlange",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        101.875,
+        282.505,
+        128.275,
+        295.495
+      ],
+      "access_basis": "Bottom-edge horizontal mating",
+      "nominal_20mm_planar_access_bounds_mm": [
+        101.875,
+        295.495,
+        128.275,
+        315.495
+      ],
+      "planar_access_courtyard_hits": [],
+      "planar_access_top_bridge_hits": [],
+      "planar_access_limitation": "Projection only: screw-axis height, selected tool, mated plug, lug, counterhold and cable bend envelope require physical fixture verification."
+    },
+    {
+      "ref": "J20",
+      "position_mm": [
+        16.0,
+        246.0
+      ],
+      "rotation_deg": 0.0,
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        14.235,
+        244.235,
+        17.765,
+        250.315
+      ],
+      "access_basis": "Vertical mating/top access; mated housing/grip volume absent"
+    },
+    {
+      "ref": "J21",
+      "position_mm": [
+        274.0,
+        267.0
+      ],
+      "rotation_deg": 0.0,
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        272.235,
+        265.235,
+        275.765,
+        278.925
+      ],
+      "access_basis": "Vertical mating/top access; mated housing/grip volume absent"
+    },
+    {
+      "ref": "J22",
+      "position_mm": [
+        257.0,
+        234.0
+      ],
+      "rotation_deg": 0.0,
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        255.235,
+        232.235,
+        258.765,
+        240.845
+      ],
+      "access_basis": "Vertical mating/top access; mated housing/grip volume absent"
+    },
+    {
+      "ref": "J23",
+      "position_mm": [
+        133.0,
+        278.0
+      ],
+      "rotation_deg": 0.0,
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical",
+      "dnp": false,
+      "courtyard_bounds_mm": [
+        131.235,
+        276.235,
+        134.765,
+        284.845
+      ],
+      "access_basis": "Vertical mating/top access; mated housing/grip volume absent"
+    }
+  ],
+  "critical_findings": [],
+  "probe_access_basis": {
+    "pad_diameter_mm": 2,
+    "centered_vertical_probe_nose_diameter_mm": 3,
+    "minimum_3mm_nose_to_body_courtyard_gap_mm": 0.3662931173853661,
+    "limited_probe_access_refs": [],
+    "limitation": "No probe shroud/tilt, installed cable or enclosure volume is modeled."
+  },
+  "source": {
+    "pcb_path": "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\kicad\\HomeMy_PMU_RevA.kicad_pcb",
+    "observed_interim_sha256": null,
+    "final_pcb_sha256": "70bb8eb588f2fc7200f718df0e11659aad3c40c7e9d5652228eb7a58d232065f",
+    "read_only_hash_stable": true,
+    "script_sha256": "89f9c3874e7a6dd23d4b67902fa5ac04d82406cbbcb7d0829d34b2372c0251f0"
+  }
+}

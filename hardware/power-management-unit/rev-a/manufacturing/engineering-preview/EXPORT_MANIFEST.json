@@ -1,0 +1,378 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "state": "engineering_review_not_order_release",
+    "fabrication_release": false,
+    "assembly_release": false,
+    "exported_at_utc": "2026-09-10T18:17:37.252274+00:00",
+    "coverage_validation_passed": true,
+    "errors": [],
+    "warnings": [
+      "DRC/ERC, trace current capacity, vendor press-fit holes, stencil apertures and machine placement conventions require separate review",
+      "Native assembly SVGs are unmirrored top-coordinate views; DNP footprints are crossed out where supported by KiCad"
+    ]
+  },
+  "exporter": {
+    "path": "scripts/export_manufacturing.py",
+    "sha256": "ed42d99e76a275cf02e5686575a429e2f67699d7f026bfac92ea40413dc7bb30",
+    "kicad_version": "10.0.6"
+  },
+  "inputs": [
+    {
+      "path": "design/assembled-parts.json",
+      "sha256": "19f61dad0690e63a5b034964c4729a18d664ec3d7118e665c821b3fee7e2a8bf"
+    },
+    {
+      "path": "design/chopper-parts.json",
+      "sha256": "c64938d23db964524f4d0e46eee4e79d61b19141231ec5e5d4690373fb805e52"
+    },
+    {
+      "path": "design/critical-alternatives.json",
+      "sha256": "ec12824640ee0eb8ae3bfc13da6fc45b993f96ccf2670e68da3c428a7a17ef49"
+    },
+    {
+      "path": "design/integration-parts.json",
+      "sha256": "4ed1c18cd120f13efbcdbe18b74458d758511598e864bd0caa71c50f2887765d"
+    },
+    {
+      "path": "design/power-parts.json",
+      "sha256": "05bd625b801b49ede98912c5122b94acd8e537164fbd9623d2da31b6748472e6"
+    },
+    {
+      "path": "design/wake-io-parts.json",
+      "sha256": "08c08665c6eafed23d6a4687534c049f9a2a8410a6238e6ec0a9f408ddc19692"
+    },
+    {
+      "path": "evidence/chopper/cross-review-sources.json",
+      "sha256": "49e764c0a8d28114d4f2e0ae551dc708aceaeb7b39b371b0f2296665c8af4671"
+    },
+    {
+      "path": "evidence/chopper/source_manifest.json",
+      "sha256": "c5fb69bb3b5738a6aa9fb1a48c2551a3025adbec0370e94c3c67ebcfc2bc8047"
+    },
+    {
+      "path": "evidence/power/sources.json",
+      "sha256": "89e84396d293724dcb6c4fb79bdf3a0bbd6caf62e01bec110b3c7ed2ae437d17"
+    },
+    {
+      "path": "evidence/wake-io-sources.json",
+      "sha256": "f7c6a31b5da56eff0d057416a4c469ba657eb62e482790f1f324cf08911b4ac9"
+    },
+    {
+      "path": "kicad/HomeMy_PMU_RevA.kicad_pcb",
+      "sha256": "70bb8eb588f2fc7200f718df0e11659aad3c40c7e9d5652228eb7a58d232065f"
+    },
+    {
+      "path": "manufacturing/MECHANICAL_CATALOG_BOM.json",
+      "sha256": "f16fa2c81319009f8d2ac8fb37753ba294b622156ee063934a12bd4ffaf1aa30"
+    },
+    {
+      "path": "manufacturing/REV_A_BOM.csv",
+      "sha256": "099ab0655f634cfaf943c4abf18f1cedfcb21cc345b52dd4fda8dec982a87f63"
+    },
+    {
+      "path": "manufacturing/REV_A_BOM.json",
+      "sha256": "67042e301d8ab93fdcee2807ee57af13a0b5a1be626fbc06367458d481574e1b"
+    },
+    {
+      "path": "manufacturing/REV_A_BOM_MANIFEST.json",
+      "sha256": "9d366b78dd644e64c99c234f8df062fc2bfab96deddddd2d2624d9746611bc77"
+    },
+    {
+      "path": "manufacturing/REV_A_EXTERNAL_BOM.csv",
+      "sha256": "0da2b85b1007a357e23666bb7284b75c32b4331182a42cfc81cef013a4126b0f"
+    },
+    {
+      "path": "manufacturing/REV_A_EXTERNAL_BOM.json",
+      "sha256": "5508478287ee0903ac6b3250f0d340b7eda2201ff3c28e596c52af05dfdb47d8"
+    },
+    {
+      "path": "manufacturing/busbar-pcb-interface.json",
+      "sha256": "d31d4c18e7cd00ed6910ec9a7c48d871783a5d9ed8ae269eeda9561b7d63acb1"
+    },
+    {
+      "path": "release.json",
+      "sha256": "aeffab8fc513734016e588c2bab3c76a2d8b11c1c1ccdccc1fbaa60d6b19184e"
+    }
+  ],
+  "board_state": {
+    "footprints": 425,
+    "copper_layers": 4,
+    "track_and_via_items": 5682,
+    "zones": 48,
+    "unconnected_ratsnest_edges": 0,
+    "pth_drilled_pads": 143,
+    "npth_drilled_pads": 4,
+    "through_vias": 2232,
+    "other_vias": 0,
+    "populated_purchased_positions": 352,
+    "dnp_purchased_positions": 4,
+    "excluded_pcb_features": 69,
+    "source_release": {
+      "project": "HomeMy PMU",
+      "revision": "A",
+      "rev_a_engineering_prototype": true,
+      "rev_b_production": false,
+      "baseline_commit": "1a70bec1de092db8a2d101e67e9e882622992003",
+      "design_state": "cad_complete_engineering_prototype",
+      "schematic_complete": true,
+      "pcb_routed": true,
+      "native_erc_report_complete": true,
+      "native_erc_report_has_zero_findings": true,
+      "native_drc_report_complete": true,
+      "native_drc_report_has_zero_findings": true,
+      "native_drc_unconnected_items": 0,
+      "native_schematic_parity_issues": 0,
+      "native_check_processes_passed": false,
+      "native_check_process_exit_codes": {
+        "erc": 124,
+        "drc": 124
+      },
+      "native_check_process_limitation": "Both complete fresh reports were saved before the portable KiCad processes hung while closing denied Windows registry settings. Timeout 124 is a failed process exit, recorded separately from the zero-finding reports.",
+      "native_check_evidence": "reports/native-checks-both.json",
+      "review_summary": "evidence/FINAL_REVIEW.md",
+      "engineering_outputs": "manufacturing/engineering-preview/EXPORT_MANIFEST.json",
+      "metadata_inheritance_scope": "evidence/release-metadata-scope.json",
+      "prototype_order_review": "not_performed",
+      "fabrication_release": false,
+      "assembly_release": false,
+      "hardware_tests_performed": false,
+      "firmware_implemented": false,
+      "energization_gate_document": "../DESIGN_REVIEW_AND_BRINGUP.md",
+      "production_validation_document": "../REV_B_VALIDATION.md",
+      "battery_energization_gates": [
+        "BAT-004: identify installed external 60 A fuse and verify DC rating and time-current curve",
+        "Complete current-limited motorless bring-up before connecting battery",
+        "Provide reachable service disconnect before actuator testing"
+      ]
+    }
+  },
+  "required_layers": [
+    "F.Cu",
+    "In1.Cu",
+    "In2.Cu",
+    "B.Cu",
+    "F.Mask",
+    "B.Mask",
+    "F.SilkS",
+    "B.SilkS",
+    "F.Paste",
+    "B.Paste",
+    "Edge.Cuts"
+  ],
+  "placement_convention": {
+    "units": "mm",
+    "origin": "absolute KiCad board origin (0,0)",
+    "x": "right",
+    "y": "down",
+    "position": "footprint anchor, not body centroid",
+    "rotation": "native KiCad GetOrientationDegrees; no vendor remapping",
+    "bottom_side": "unmirrored board coordinates"
+  },
+  "outputs": [
+    {
+      "path": "bom/REV_A_BOM.csv",
+      "kind": "bom",
+      "sha256": "099ab0655f634cfaf943c4abf18f1cedfcb21cc345b52dd4fda8dec982a87f63",
+      "bytes": 79289
+    },
+    {
+      "path": "bom/REV_A_BOM.json",
+      "kind": "bom",
+      "sha256": "67042e301d8ab93fdcee2807ee57af13a0b5a1be626fbc06367458d481574e1b",
+      "bytes": 602123
+    },
+    {
+      "path": "bom/REV_A_EXTERNAL_BOM.csv",
+      "kind": "bom",
+      "sha256": "0da2b85b1007a357e23666bb7284b75c32b4331182a42cfc81cef013a4126b0f",
+      "bytes": 22949
+    },
+    {
+      "path": "bom/REV_A_EXTERNAL_BOM.json",
+      "kind": "bom",
+      "sha256": "5508478287ee0903ac6b3250f0d340b7eda2201ff3c28e596c52af05dfdb47d8",
+      "bytes": 36339
+    },
+    {
+      "path": "bom/REV_A_BOM_MANIFEST.json",
+      "kind": "bom_manifest",
+      "sha256": "9d366b78dd644e64c99c234f8df062fc2bfab96deddddd2d2624d9746611bc77",
+      "bytes": 3754
+    },
+    {
+      "path": "gerbers/HomeMy_PMU_RevA-F_Cu.gbr",
+      "kind": "gerber",
+      "layer": "F.Cu",
+      "sha256": "7b2bc0146dc7e762eb0bbfdf739810a536dfbb8619fe182aecfd1fcef1654e6d",
+      "bytes": 511247
+    },
+    {
+      "path": "gerbers/HomeMy_PMU_RevA-In1_Cu.gbr",
+      "kind": "gerber",
+      "layer": "In1.Cu",
+      "sha256": "da8f0176acbe6d4bbfff91166df0c78170ca487ac2d6a71bceff68541c2c96e1",
+      "bytes": 503359
+    },
+    {
+      "path": "gerbers/HomeMy_PMU_RevA-In2_Cu.gbr",
+      "kind": "gerber",
+      "layer": "In2.Cu",
+      "sha256": "360e33bcf228a05098b3cb233c41fbe9ef79a49e720c00ffd6fc6c1fe439c201",
+      "bytes": 96779
+    },
+    {
+      "path": "gerbers/HomeMy_PMU_RevA-B_Cu.gbr",
+      "kind": "gerber",
+      "layer": "B.Cu",
+      "sha256": "63d10595a506f70e22de8cc1dbaa048e12b9c6e40566ec326a5f9fcb497f47f4",
+      "bytes": 233650
+    },
+    {
+      "path": "gerbers/HomeMy_PMU_RevA-F_Mask.gbr",
+      "kind": "gerber",
+      "layer": "F.Mask",
+      "sha256": "8613a39ddb389fe47bd8cc84d5094845e711716eda042f95546618bee5c14cb4",
+      "bytes": 53159
+    },
+    {
+      "path": "gerbers/HomeMy_PMU_RevA-B_Mask.gbr",
+      "kind": "gerber",
+      "layer": "B.Mask",
+      "sha256": "c9d7b3e282c1bf48315b8e2e1eccd53d3fbba49701859365c1d46a2413957f3f",
+      "bytes": 6776
+    },
+    {
+      "path": "gerbers/HomeMy_PMU_RevA-F_SilkS.gbr",
+      "kind": "gerber",
+      "layer": "F.SilkS",
+      "sha256": "81968b06e77b46e76e3ba19897641b88cc05500073e14c4adc6040e0bce2baec",
+      "bytes": 1073038
+    },
+    {
+      "path": "gerbers/HomeMy_PMU_RevA-B_SilkS.gbr",
+      "kind": "gerber",
+      "layer": "B.SilkS",
+      "sha256": "af8765e4f6019f7799506c892f669018063ecd3eb80a30597bca0fafe545cc40",
+      "bytes": 6788
+    },
+    {
+      "path": "gerbers/HomeMy_PMU_RevA-F_Paste.gbr",
+      "kind": "gerber",
+      "layer": "F.Paste",
+      "sha256": "869e9c847f0f0599ccd74233d812b1208d9e73684993f4e4047a413f639fb6d6",
+      "bytes": 45743
+    },
+    {
+      "path": "gerbers/HomeMy_PMU_RevA-B_Paste.gbr",
+      "kind": "gerber",
+      "layer": "B.Paste",
+      "sha256": "731bd705f65228d858fcb2ea931a23e24199ed4bc908a11672a3360b68f1c2c8",
+      "bytes": 472
+    },
+    {
+      "path": "gerbers/HomeMy_PMU_RevA-Edge_Cuts.gbr",
+      "kind": "gerber",
+      "layer": "Edge.Cuts",
+      "sha256": "b63220e9358231ad6f9cf8cf1a3a7843642ee6e4512d7812104ce3c7f0b9797b",
+      "bytes": 653
+    },
+    {
+      "path": "gerbers/HomeMy_PMU_RevA.gbrjob",
+      "kind": "gerber_job",
+      "sha256": "e800eace0d32c24dc6342c03077b5522506664e884386943af4c46bcc78dd256",
+      "bytes": 3949
+    },
+    {
+      "path": "drill/HomeMy_PMU_RevA-drill-report.txt",
+      "kind": "drill_report",
+      "sha256": "cffbcc04d062e2e68b63ffba1bc0418f78396fdf53e176e04b7fd1f2fa57d4c2",
+      "bytes": 1058
+    },
+    {
+      "path": "drill/HomeMy_PMU_RevA-PTH.drl",
+      "kind": "drill",
+      "plating": "PTH",
+      "sha256": "3423d0d33c66871ea0c0c57b4fcc05750ce328c96aef4c194b19936e951f6571",
+      "bytes": 36744
+    },
+    {
+      "path": "drill/HomeMy_PMU_RevA-PTH-drl_map.svg",
+      "kind": "drill_map",
+      "plating": "PTH",
+      "sha256": "022daede701a44994bfa81eae8f5e5154855d49986f2096fcfc8e409f12d36b8",
+      "bytes": 384428
+    },
+    {
+      "path": "drill/HomeMy_PMU_RevA-NPTH.drl",
+      "kind": "drill",
+      "plating": "NPTH",
+      "sha256": "bee097bd8ba6bb94da629ec09b1ffcb811005a9f2f92ff5ad2340e2081e874fc",
+      "bytes": 395
+    },
+    {
+      "path": "drill/HomeMy_PMU_RevA-NPTH-drl_map.svg",
+      "kind": "drill_map",
+      "plating": "NPTH",
+      "sha256": "ca246a99d40c8bdc002e494d18bf037f68338d6aad36c6ed1fce2c44d826f3e7",
+      "bytes": 25524
+    },
+    {
+      "path": "assembly/HomeMy_PMU_RevA-assembly-front.svg",
+      "kind": "assembly_svg",
+      "view": "top_view_unmirrored",
+      "side": "front",
+      "sha256": "63ddedfd723b398f1da6c91140b0a83eca69e29f3fa6a720b22cce274b6a61ee",
+      "bytes": 1931017
+    },
+    {
+      "path": "assembly/HomeMy_PMU_RevA-assembly-back.svg",
+      "kind": "assembly_svg",
+      "view": "top_view_unmirrored",
+      "side": "back",
+      "sha256": "fa1752ccb10c6dcecee3b4e00e3cb98e6a626c5ee045a454a5d478d22d481d0a",
+      "bytes": 23494
+    },
+    {
+      "path": "assembly/REV_A_positions_all_populated.csv",
+      "kind": "placement_csv",
+      "rows": 352,
+      "sha256": "057d5ffbe2cb29f23edf22f6939a50cfb26519908c7d7755739d4d74ab55ab16",
+      "bytes": 63095
+    },
+    {
+      "path": "assembly/REV_A_positions_smd_populated.csv",
+      "kind": "placement_csv",
+      "rows": 327,
+      "sha256": "e72c48170fd637c3ea825750aafbec3d7f170be10ab41fbb81b4d7a037fabc09",
+      "bytes": 57500
+    },
+    {
+      "path": "assembly/REV_A_positions_manual_populated.csv",
+      "kind": "placement_csv",
+      "rows": 25,
+      "sha256": "2388ff3835a7f94c4ad9a95318cd44340008bc52358c166b2ce409a5e34b6e87",
+      "bytes": 5782
+    },
+    {
+      "path": "assembly/REV_A_positions_dnp_review.csv",
+      "kind": "placement_csv",
+      "rows": 4,
+      "sha256": "f08dc444ba5694aeb4ce46420fd8a077ef3254cd4be5ed9050f3320a70002c5d",
+      "bytes": 948
+    },
+    {
+      "path": "assembly/REV_A_excluded_pcb_features.json",
+      "kind": "excluded_features",
+      "sha256": "2abf0d571cf5845b695a4cee34d7cf023dfc1ee55af77ddd8ddf5f54e3067d55",
+      "bytes": 12650
+    },
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "sha256": "85ed05cfb55a52f59cfc34718ec1f7c0d15c737c1dc433fc3ecef13cb27a9ea2",
+      "bytes": 1897
+    }
+  ]
+}

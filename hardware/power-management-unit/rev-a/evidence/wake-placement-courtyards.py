@@ -27,7 +27,7 @@ for i,r in enumerate(refs):
     rects=[[315.225,266.525,334.775,286.775],[300.975,286.725,349.025,307.775]]
     if not any(min(q[2],other[2])>max(q[0],other[0]) and min(q[3],other[3])>max(q[1],other[1]) for q in rects):continue
    coll.append([r,s,round(ox,3),round(oy,3)])
-(root/'evidence/wake-placement-courtyard-check.json').write_text(json.dumps({'scope':'Own wake parts only; integrated check remains required','component_count':len(parts),'courtyard_overlaps':coll},indent=2)+'\n')
+(root/'evidence/wake-placement-courtyard-check.json').write_text(json.dumps({'metadata':{'rev_a_engineering_prototype':True,'rev_b_production':False},'scope':'Own wake parts only; integrated check remains required','component_count':len(parts),'courtyard_overlaps':coll},indent=2)+'\n')
 print(json.dumps(coll),flush=True)
 import os
 os._exit(1 if coll else 0)

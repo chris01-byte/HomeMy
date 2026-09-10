@@ -1,0 +1,7 @@
+Loaded routing candidate.
+Conflicting signal nets: []
+Removed signal items: {}
+Added locked force segments; rebuilding connectivity.
+Filling native zones.
+Saving repaired board.
+Added 8 locked segments; removed 0 dead stubs; reroute nets: {}
