@@ -1,11 +1,11 @@
 # HomeMy Power Management Unit (PMU) Verification Plan
 
-Status: required evidence plan; no hardware tests have been performed.  
+Status: Revision-A bring-up and Revision-B production evidence plan; no hardware tests have been performed.  
 Date: 2026-09-10.
 
 ## Purpose
 
-This plan is the release counterpart to `ASTRA_PCB_HANDOFF.md` and `requirements.yaml`. Passing ERC/DRC is necessary but does not release the board. Every test result must record board revision, schematic commit, firmware commit, equipment, setup, ambient temperature, raw data location, pass/fail result, and approver.
+This plan is the verification counterpart to `ASTRA_PCB_HANDOFF.md` and `requirements.yaml`. Revision A exists specifically to break the measurement/design dependency: V0 calculations and reviews gate its prototype order; V1-V6 measurements made with Revision A gate only the later Revision-B production design. Passing ERC/DRC alone is insufficient for either gate. Every test result must record board revision, schematic commit, firmware commit, equipment, setup, ambient temperature, raw data location, pass/fail result, and approver.
 
 Real actuators remain disconnected or independently inhibited until a person present at the robot explicitly authorizes the bounded test. Start with simulation, circuit analysis, current-limited supplies, and passive loads.
 
@@ -13,25 +13,26 @@ Real actuators remain disconnected or independently inhibited until a person pre
 
 | Level | Permitted setup | Purpose |
 | --- | --- | --- |
-| V0 | calculations, datasheets, SPICE, ERC/DRC | eliminate design errors before hardware |
-| V1 | unpowered PCB inspection and continuity | assembly and isolation checks |
+| V0 | calculations, datasheets, SPICE, ERC/DRC | complete and review the Rev-A prototype before ordering |
+| V1 | unpowered Rev-A PCB inspection and continuity | assembly and isolation checks |
 | V2 | current-limited bench supply, no battery, no motors | controller and protection bring-up |
 | V3 | battery simulator or protected battery, passive/electronic loads | current, inrush, thermal, and chopper tests |
 | V4 | connected converters and Linux, motion gate physically inhibited | lifecycle and load validation |
 | V5 | supervised single-actuator tests | bounded transient and regeneration evidence |
 | V6 | supervised integrated robot tests | final coordination and duty-cycle evidence |
 
-No level may be skipped because a lower-level test appears likely to pass.
+No level may be skipped during physical bring-up because a lower-level test appears likely to pass. Measurements unavailable before hardware shall be recorded as Revision-B validation items, not used as a reason to leave Revision A incomplete.
 
-## V0: design review before ordering
+## V0: Revision-A design review before ordering
 
 ### Schematic and component evidence
 
-- Cross-reference every ID in `requirements.yaml` to a schematic sheet, part, net, test point, calculation, or explicit open item.
+- Cross-reference every ID in `requirements.yaml` to a schematic sheet, part, net, test point, calculation, documented Revision-A assumption, or Revision-B measurement.
 - Check controller absolute maximum ratings for battery hot-plug, chopper operation, cable inductance, gate transients, reverse polarity, and ground offsets.
 - Verify exact packages, pin numbers, exposed pads, thermal vias, no-connect pins, default pull states, and power sequencing from manufacturer datasheets.
 - Verify every fault/enable line has a defined state while the ESP32 is unpowered, resetting, booting, or disconnected.
 - Prove that the motion gate defaults off independently of firmware.
+- Prove that an open, unpowered, or disconnected external motion-inhibit input keeps the motion gate off.
 - Prove that the wake latch can start from the unpowered state and cannot automatically restart after a latched fault or battery reconnection.
 - Verify I2C/CAN/ADC logic levels and that no signal back-powers an unpowered domain.
 - Verify that the chopper analogue control remains powered from the isolated motor-side energy after main/motion switch opening.
@@ -45,8 +46,8 @@ No level may be skipped because a lower-level test appears likely to pass.
 - Run a worst-case tolerance analysis for undervoltage, overvoltage, overcurrent, short circuit, chopper thresholds, hysteresis, and ADC divider limits.
 - Plot coordination among motor limits, software actions, TPS48110 trip, LM74930 trip, 60 A fuse curve, and BMS behavior.
 - Demonstrate a realizable TPS48110 timing solution; do not accept an impractically large/leakage-sensitive timing capacitor.
-- Calculate the PC and 5 V TPS26631 limits, startup blanking, thermal foldback, and retry/latch behavior from measured converter requirements.
-- Calculate chopper pulse energy from measured/bounded kinetic and gravitational energy, not only resistor nameplate power.
+- Calculate conservative, adjustable Revision-A PC and 5 V TPS26631 limits, startup blanking, thermal foldback, and retry/latch behavior from the documented provisional load envelopes. Validate and, if necessary, revise them after measuring the selected converters.
+- Calculate a conservative Revision-A chopper envelope from bounded kinetic and gravitational assumptions, not only resistor nameplate power. Replace this estimate with measured energy before Revision-B release.
 - Check CAN termination, stub length, common-mode range, ESD current path, and shield/chassis connection.
 
 ### Layout review
@@ -56,7 +57,7 @@ No level may be skipped because a lower-level test appears likely to pass.
 - Review separation of chopper/gate-drive nodes from INA228, ESP32 ADC, CAN, oscillator, antenna, and Power-button nets.
 - Confirm all required test points remain accessible after assembly and installation.
 - Confirm the ESP32 antenna keep-out against enclosure metal, busbars, battery, and harnesses.
-- Obtain two-person review of the final schematic, BOM, layout, and unresolved-items list.
+- Obtain project-owner review of the Revision-A schematic, BOM, layout, calculations, and assumptions list before ordering; a second qualified review is strongly preferred.
 
 ## V1: incoming PCB and unpowered assembly
 
@@ -79,8 +80,9 @@ Use a current-limited supply with an explicit energy limit. Start below nominal 
 5. Verify the hardware long-press fallback with no firmware response.
 6. Verify power removal and reconnection do not cause automatic restart.
 7. Verify every fault input closes the motion gate and latches as designed.
-8. Verify CAN transmit/receive and termination selection using a controlled bus fixture.
-9. Verify LED states with a short test strip; software brightness is not credited as overcurrent protection.
+8. Open and disconnect the hardware motion-inhibit input and verify that motion power cannot enable.
+9. Verify CAN transmit/receive and termination selection using a controlled bus fixture.
+10. Verify LED states with a short test strip; software brightness is not credited as overcurrent protection.
 
 ## V3: measurement, eFuse, switch, and chopper tests
 
@@ -158,19 +160,31 @@ Requires an attending person's explicit authorization, physical restraints/stand
 - Repeat regenerative scenarios using the maximum approved simultaneous axes and payload.
 - Confirm no protection recovery automatically grants motion.
 
-## Release record
+## Release records
 
-Fabrication release and later motion release are separate decisions. The final evidence package must contain:
+### Revision-A prototype order record
 
-- closed `release_blockers` from `requirements.yaml`;
-- signed schematic/BOM/layout reviews;
-- ERC/DRC and manufacturing-rule reports;
-- calculation workbook or reproducible calculation files;
-- oscilloscope captures and thermal images for inrush, trips, switching, and chopper tests;
-- calibrated INA228 results;
-- converter reports;
+The Revision-A fabrication package may be ordered after all of the following are recorded:
+
+- every `REV_A_DESIGN` requirement has an exact circuit/part/footprint or a documented safe alternative;
+- every `REV_A_ASSUMPTION` has a conservative value, adjustment method, test point, and linked Revision-B measurement;
+- all `REV_A_ENERGIZATION_GATE` items are either closed or explicitly labelled as required before battery power;
+- schematic, BOM, layout, calculations, and assumption record have project-owner review;
+- ERC/DRC and manufacturing-rule reports have no unreviewed exclusions;
+- initial bring-up procedure uses a current-limited supply, disconnected actuators, and an accessible service disconnect.
+
+This record authorizes only a functional engineering prototype. It is not a claim of product safety, production readiness, or unrestricted actuator operation.
+
+### Revision-B production record
+
+Production release additionally requires:
+
+- all `rev_b_production_validation_gates` from `requirements.yaml` closed;
+- reproducible calculation files updated with measured values;
+- oscilloscope captures and thermal images for inrush, trips, switching, regeneration, and chopper tests;
+- calibrated INA228 results and converter reports;
 - connector/harness temperature and pull/retention evidence;
 - firmware/Linux versions and fault-injection results;
-- deviations, residual risks, and rollback instructions.
+- final mechanics, motion-safety architecture, deviations, residual risks, and rollback instructions.
 
-Until that record exists, the board remains a prototype for controlled motorless or explicitly supervised tests.
+Until the Revision-B record exists, Revision A remains a prototype for controlled motorless or explicitly supervised tests.

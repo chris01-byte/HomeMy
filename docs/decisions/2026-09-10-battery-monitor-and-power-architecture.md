@@ -1,6 +1,6 @@
-# Battery Monitor and Power Architecture
+# HomeMy Power Management Unit (PMU) Architecture
 
-Status: accepted architecture; PCB handoff prepared; detailed circuit, exact component selection, and hardware validation pending.  
+Status: accepted architecture; complete Revision-A measurement prototype authorized; Revision-B production validation pending.  
 Date: 2026-09-10.
 
 ## Context
@@ -8,6 +8,17 @@ Date: 2026-09-10.
 This decision records the agreed battery, power-path, monitoring, regeneration-protection, customer power-button, status-indicator, compute-power, actuator, and communication assumptions for the HomeMy prototype. The resulting central subsystem is named the HomeMy Power Management Unit (PMU). It is the current design memory for later schematic, firmware, Linux, and commissioning work.
 
 Values marked **initial** are accepted starting points for commissioning, not measured final limits. No real-hardware protection test has yet validated this architecture.
+
+## Prototype-first development decision
+
+The PMU will be developed in two explicit revisions to avoid a circular dependency between PCB design and measurements:
+
+- **Revision A** is a complete, functional engineering prototype used to obtain the missing electrical and thermal evidence. Astra is expected to finish its schematic, exact prototype-component selection, PCB layout, calculations, BOM, test points, and fabrication package.
+- Unknowns that are normal component-design work are selected by Astra from primary manufacturer data. Unknowns caused by missing production mechanics or load measurements receive conservative, documented, configurable Revision-A assumptions.
+- Only conditions necessary to energize the prototype safely, such as a suitably DC-rated external main fuse and a current-limited bring-up setup, remain gates before power is applied. They do not block completing the PCB.
+- **Revision B** is the later production-oriented redesign. Revision-A measurements decide its final protection settings, connectors, copper reinforcement, thermal design, converter acceptance, mechanics, precharge decision, and chopper energy rating.
+
+Revision A is not approved for customer use, unattended operation, or unrestricted motion. Its fabrication package may be generated and, after project-owner design review, ordered for controlled bring-up and measurements.
 
 ## Decision
 
@@ -241,9 +252,9 @@ Detailed voltage, signed current, power, energy, state of charge, remaining time
 
 The decision changes the customer power-on contract, lifecycle/status behavior, PMU requirements, actuator-bus protection, Linux diagnostics, ESP32 firmware scope, CAN/RS485 planning, and the order of commissioning. It removes the permanent customer display and oversized latching contactor from the design direction while retaining independent visible state and low-current electronic shutdown.
 
-## Validation
+## Revision-B production validation
 
-Before any accepted value becomes a production limit, the following evidence is required:
+The following evidence is obtained with Revision A before any accepted value becomes a Revision-B production limit. Its absence does not prevent completing the Revision-A design:
 
 1. Full branch power budget with all actuators, compute, and sensors active.
 2. Exact resettable eFuse settings, wire gauges, connectors, return paths, grounding, and isolation; verify the battery fuse as the only melting fuse.
@@ -265,11 +276,12 @@ Until the complete electronic path is built and validated, retain the developer-
 
 ## PMU Handoff
 
-The consolidated schematic/layout input, machine-readable requirement status, fabrication blockers, and staged evidence plan are maintained in:
+The consolidated schematic/layout input, machine-readable two-stage requirement status, release gates, Astra start prompt, and staged evidence plan are maintained in:
 
 - `hardware/power-management-unit/ASTRA_PCB_HANDOFF.md`;
 - `hardware/power-management-unit/interfaces-and-layout.md`;
 - `hardware/power-management-unit/requirements.yaml`;
-- `hardware/power-management-unit/verification-plan.md`.
+- `hardware/power-management-unit/verification-plan.md`;
+- `hardware/power-management-unit/ASTRA_START_PROMPT.md`.
 
 Those files capture later detail and take precedence for the PCB implementation where they explicitly refine this architectural record.

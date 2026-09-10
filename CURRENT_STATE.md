@@ -2,7 +2,7 @@
 
 ## Phase
 
-Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The onboard Linux lifecycle, one-button customer behavior, coarse LED status, battery monitor, electronic main power path, reverse-current blocking, and initial protection thresholds are recorded as accepted architecture. This central subsystem is named the HomeMy Power Management Unit (PMU). A consolidated GPT Astra handoff defines its topology, requirement status, layout rules, fabrication blockers, and verification plan. The KiCad design, production component selections, firmware, systemd units, and real-hardware validation remain pending. No HomeMy runtime package or source code has been copied.
+Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The onboard Linux lifecycle, one-button customer behavior, coarse LED status, battery monitor, electronic main power path, reverse-current blocking, and initial protection thresholds are recorded as accepted architecture. This central subsystem is named the HomeMy Power Management Unit (PMU). A consolidated GPT Astra handoff now authorizes a complete Revision-A engineering prototype and separates its design/order gates from the measurements that gate a later Revision-B production design. The KiCad design, exact Revision-A component selections, firmware, systemd units, and real-hardware validation remain pending. No HomeMy runtime package or source code has been copied.
 
 ## Goal
 
@@ -57,43 +57,44 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 
 ## Next Safe Step
 
-1. Have GPT Astra create the hierarchical PMU KiCad schematic and controlled pre-layout from `hardware/power-management-unit/ASTRA_PCB_HANDOFF.md`; keep fabrication release false while listed blockers remain.
-2. Close exact MOSFET, shunt, connector, wake-latch, CAN, TVS, mechanics, timer, and converter requirements using manufacturer data and calculations.
-3. Validate the MOSFET path, shunt sharing, inrush without precharge, DC/DC converters, brake-chopper energy, thermal behavior, and fuse/BMS coordination using current-limited supplies and non-moving loads.
-4. Define and simulate the ESP32 power/lifecycle state machine, button timing, heartbeat, hardware latches, event log, and LED behavior before connecting actuators.
-5. Design and test a hardware-independent HomeMy drivebase core using the commissioning contract and synthetic fixtures.
-6. Design and test LiDAR scan normalization and health behavior with synthetic variable-beam inputs.
-7. Assess the smallest hardware-independent `robot_navigation` slice with synthetic maps and a non-moving drivebase profile.
-8. Measure the completed HomeMy chassis, drivebase, mounts, footprint, arm masses, joint speeds, power loads, and safety topology before accepting any real-motion configuration.
-9. Commission obstacle protection and safe-stop behavior with synthetic geometry and fault injection before OAK or LiDAR data can affect movement.
-10. Use synthetic RGB-D fixtures to evaluate semantic perception and grasping before selecting model implementations or enabling manipulation.
+1. Start GPT Astra with `hardware/power-management-unit/ASTRA_START_PROMPT.md` and have it complete the Revision-A hierarchical KiCad schematic, exact prototype-part selection, routed PCB, BOM, calculations, assumptions record, and prototype fabrication package.
+2. Review Astra's schematic, BOM, layout, ERC/DRC, component data, current-path calculations, and conservative Revision-A assumptions before ordering the prototype. Missing post-build measurements do not block this step.
+3. Build and bring up Revision A first with a current-limited supply and no actuators; close all energization gates before applying the battery.
+4. Use Revision A to measure the MOSFET path, shunts, inrush without precharge, DC/DC converters, brake-chopper energy, thermal behavior, arm currents, and fuse/BMS coordination. Feed the evidence into a later Revision-B production layout.
+5. Define and simulate the ESP32 power/lifecycle state machine, button timing, heartbeat, hardware latches, event log, and LED behavior before connecting actuators.
+6. Design and test a hardware-independent HomeMy drivebase core using the commissioning contract and synthetic fixtures.
+7. Design and test LiDAR scan normalization and health behavior with synthetic variable-beam inputs.
+8. Assess the smallest hardware-independent `robot_navigation` slice with synthetic maps and a non-moving drivebase profile.
+9. Measure the completed HomeMy chassis, drivebase, mounts, footprint, arm masses, joint speeds, power loads, and safety topology before accepting any real-motion configuration.
+10. Commission obstacle protection and safe-stop behavior with synthetic geometry and fault injection before OAK or LiDAR data can affect movement.
+11. Use synthetic RGB-D fixtures to evaluate semantic perception and grasping before selecting model implementations or enabling manipulation.
 
 ## Context Entry Points
 
 1. `AGENTS.md` for safety and work rules.
 2. `context/index.json` for task-specific files.
-3. `hardware/power-management-unit/ASTRA_PCB_HANDOFF.md` for the current PMU topology, layout brief, and release blockers.
-4. `hardware/power-management-unit/interfaces-and-layout.md` for connectors, harnesses, placement, component classes, Astra outputs, and blocker checklist.
-5. `hardware/power-management-unit/requirements.yaml` for explicit locked, provisional, open, and blocking requirements.
-6. `hardware/power-management-unit/verification-plan.md` for staged evidence before fabrication and motion.
-7. `docs/decisions/2026-09-10-battery-monitor-and-power-architecture.md` for the accepted battery, power, button, LED, and communication design memory.
-8. `contracts/hardware/customer-power-on.md` for physical one-button startup and shutdown.
-9. `contracts/ros/system-lifecycle.md` for appliance behavior.
-10. `contracts/hardware/drivebase-commissioning.md` for ESS23-RS adaptation.
-11. `contracts/hardware/lidar-commissioning.md` for STL-27L adaptation.
-12. `contracts/hardware/obstacle-protection.md` for STL-27L/OAK 4D protection roles and O0-O5 evidence.
-13. `contracts/hardware/navigation-commissioning.md` for `robot_navigation` assessment.
-14. `integration/roboter_ws/TRANSFER_MANIFEST.md` for incoming transfers.
-15. `docs/decisions/2026-08-31-semantic-perception-and-grasping.md` for the proposed semantic perception and grasping pipeline.
+3. `hardware/power-management-unit/ASTRA_START_PROMPT.md` for the ready-to-use Astra implementation prompt.
+4. `hardware/power-management-unit/ASTRA_PCB_HANDOFF.md` for the current PMU topology and two-stage release model.
+5. `hardware/power-management-unit/interfaces-and-layout.md` for connectors, layout, component ownership, Astra outputs, and Revision-A/Revision-B gates.
+6. `hardware/power-management-unit/requirements.yaml` for explicit locked, provisional, Revision-A design/assumption/energization, and Revision-B validation requirements.
+7. `hardware/power-management-unit/verification-plan.md` for staged prototype bring-up and production evidence.
+8. `docs/decisions/2026-09-10-battery-monitor-and-power-architecture.md` for the accepted battery, power, button, LED, and communication design memory.
+9. `contracts/hardware/customer-power-on.md` for physical one-button startup and shutdown.
+10. `contracts/ros/system-lifecycle.md` for appliance behavior.
+11. `contracts/hardware/drivebase-commissioning.md` for ESS23-RS adaptation.
+12. `contracts/hardware/lidar-commissioning.md` for STL-27L adaptation.
+13. `contracts/hardware/obstacle-protection.md` for STL-27L/OAK 4D protection roles and O0-O5 evidence.
+14. `contracts/hardware/navigation-commissioning.md` for `robot_navigation` assessment.
+15. `integration/roboter_ws/TRANSFER_MANIFEST.md` for incoming transfers.
+16. `docs/decisions/2026-08-31-semantic-perception-and-grasping.md` for the proposed semantic perception and grasping pipeline.
 
 ## Open Decisions
 
-- Exact PMU schematic and PCB, MOSFETs, thermal design, shunt sharing, brake-chopper components, TVS network, and measured evidence supporting operation without precharge.
-- Exact resettable eFuse settings, cable gauges, connectors, grounding, power distribution, converter selection, and battery enclosure/venting. The 60 A battery fuse remains the only melting fuse.
-- Exact board outline, mounting holes, component-height envelope, connector directions, busbar geometry, airflow, and chassis heat-spreader interface.
-- Proven per-arm current envelope or a higher-current arm connector; exact battery and chopper connectors with temperature/pulse derating.
-- Exact Power-button debounce, long-press duration, shutdown timeout, hardware override, heartbeat, and non-volatile logging.
-- Exact battery, MOSFET, shunt, brake-resistor, and converter temperature sensors and thresholds.
+- Revision-A design choices Astra must now close: exact MOSFETs, shunts, wake-latch, ESP32 variant, CAN/ESD, chopper, TVS, eFuse settings, connectors, footprints, configurable timer, and preliminary thermal/current calculations.
+- Conservative Revision-A prototype assumptions to document: generous board outline and mounting, connector directions, external converter pinouts, busbar/heat-spreader provisions, and initial test limits.
+- Revision-B measurements: main inrush/no-precharge proof, regenerative energy, 24 V lift-bus behavior, converter capability, per-arm current, connector/cable temperature, full-load thermal behavior, and fuse/BMS/electronic-trip selectivity.
+- Final production mechanics: enclosure, component-height envelope, airflow, service access, busbar geometry, battery enclosure/venting, and chassis heat-spreader interface.
+- Exact Power-button timing, heartbeat, non-volatile logging, and temperature thresholds start as configurable Revision-A choices and become production limits only after validation.
 - Exact HomeMy emergency-stop, movement-gate, command-ownership, and safe-stop topology.
 - Final onboard Linux computer specification and measured ROS power budget.
 - Exact HomeMy chassis, wheel, drive-train, LiDAR-frame, OAK-frame, sensor-mount, protection-volume, arm-mass, joint-speed, and footprint measurements.

@@ -1,7 +1,7 @@
 # HomeMy Power Management Unit (PMU): GPT Astra PCB Handoff
 
-Status: ready for schematic capture and controlled pre-layout; **not released for fabrication**.  
-Revision: 0.1  
+Status: complete Revision-A engineering prototype authorized; production release remains prohibited.  
+Revision: 0.2 (prototype-first)  
 Date: 2026-09-10  
 Design authority: HomeMy project owner.
 
@@ -9,9 +9,11 @@ Design authority: HomeMy project owner.
 
 This brief gives GPT Astra the accepted HomeMy Power Management Unit (PMU) behavior and current simplifications for a KiCad implementation.
 
-Astra may create the hierarchical schematic, footprints, preliminary placement, net classes, and a routing strategy. Astra must not mark the design production-ready, generate fabrication files for ordering, or silently invent values for items marked `OPEN` or `BLOCKER`.
+Astra is authorized and expected to complete a functional Revision-A engineering prototype: hierarchical schematic, exact prototype parts and footprints, PCB layout, BOM, calculations, ERC/DRC, and prototype fabrication package. Astra may make conservative, documented and preferably configurable choices where production measurements do not yet exist. Missing measurements that can only be obtained from the completed prototype must not stop the Revision-A design.
 
-Status meanings: implement `LOCKED` requirements as written; make `PROVISIONAL` values configurable and testable; select or explicitly question `OPEN` items; never release fabrication while a `BLOCKER` remains.
+Status meanings: implement `LOCKED` requirements as written; make `PROVISIONAL` values configurable and testable; resolve `REV_A_DESIGN` through a justified component or circuit choice; implement `REV_A_ASSUMPTION` conservatively and record it; close `REV_A_ENERGIZATION_GATE` before battery power is applied; use the built prototype to close `REV_B_VALIDATION` before any production release.
+
+The project owner must review the schematic, BOM, layout, ERC/DRC, calculations, and unresolved-assumptions record before ordering Revision A. Revision A is a measurement and development board, not a production unit. Astra must not mark it production-ready.
 
 If sources disagree, use this precedence:
 
@@ -21,7 +23,7 @@ If sources disagree, use this precedence:
 4. the dated power-architecture decision;
 5. lifecycle and customer-power contracts.
 
-Stop and record a design question instead of resolving a safety-relevant conflict by assumption.
+Stop and record a design question only when a conflict prevents a conservative, testable Revision-A implementation or would make even current-limited bench bring-up unsafe. Otherwise select a defensible implementation, document the assumption and continue through the complete deliverable set.
 
 ## 2. Scope
 
@@ -84,7 +86,7 @@ Use a star power topology from the relevant protected bus. Do not use a star CAN
 - the discharge lead includes a 60 A fuse;
 - charging or regeneration through the discharge port is not permitted.
 
-The external fuse must have a verified DC voltage rating of at least 42 V; 58/60 V DC or higher is preferred. This rating and its time-current curve are a `BLOCKER`.
+The external fuse must have a verified DC voltage rating of at least 42 V; 58/60 V DC or higher is preferred. Its exact part and time-current curve are a `REV_A_ENERGIZATION_GATE`: they do not prevent schematic or PCB completion, but must be known before battery-powered testing.
 
 ### Loads
 
@@ -110,9 +112,9 @@ Only the battery's external 60 A melting fuse is used. All other intended branch
 | Battery last resort | external 60 A fuse and BMS | fire/fault containment; BMS cut-off at 27.5 V | physical service / charger-defined | `LOCKED`, ratings to verify |
 | Main path | LM74930-Q1 and 3+3 external 100 V NMOS | reverse-current block, UV/OV, overcurrent, short | latched; deliberate Power-button restart only | `PROVISIONAL` thresholds |
 | Motion path | TPS48110-Q1, 0.5 mOhm shunt, 2+2 external 100 V NMOS | disconnect all actuator branches | latched; explicit ESP32 reset only | `PROVISIONAL` thresholds |
-| Computer input | TPS26631 | current/short/thermal protection for converter harness | controlled retry/latch mode to be selected | `OPEN` settings |
-| 5 V converter input | TPS26631 | current/short/thermal protection for converter harness | controlled retry/latch mode to be selected | `OPEN` settings |
-| 24 V lift converter | converter internal OCP plus common motion gate | converter-specific | converter-specific | `BLOCKER` until tested |
+| Computer input | TPS26631 | current/short/thermal protection for converter harness | controlled retry/latch mode to be selected | `REV_A_DESIGN` |
+| 5 V converter input | TPS26631 | current/short/thermal protection for converter harness | controlled retry/latch mode to be selected | `REV_A_DESIGN` |
+| 24 V lift converter | converter internal OCP plus common motion gate | converter-specific | converter-specific | `REV_B_VALIDATION` after Rev-A build |
 | Individual actuators | internal motor-drive protection | actuator-specific | actuator-specific | external to PCB |
 
 ### Starting thresholds
@@ -121,9 +123,9 @@ All thresholds are `PROVISIONAL` except mandatory reverse-current blocking and t
 
 The current sequence is warning/derating above 45 A for 1 s, controlled motion stop above 50 A for 2 s, motion latch around 60 A, main latch around 65 A/0.5 s, and fast short response around 100 A motion or 120 A main. `requirements.yaml` is authoritative for the individual values.
 
-Do not calculate a 0.5 s TPS48110 timing capacitor by linear scaling from a short datasheet example and then treat it as released. A long analogue timer may require an impractically large capacitor and can become leakage- and tolerance-sensitive. Astra shall calculate the valid timer range from the current TI datasheet, show worst-case tolerances, and propose either a shorter reliable hardware delay coordinated with software or a proven 0.5 s implementation. This is a `BLOCKER`.
+Do not calculate a 0.5 s TPS48110 timing capacitor by linear scaling from a short datasheet example and then treat it as proven. A long analogue timer may require an impractically large capacitor and can become leakage- and tolerance-sensitive. For Revision A, Astra shall select a reliable, configurable hardware delay from the current TI datasheet, show worst-case tolerances, and coordinate it with software. Measurements then determine the final Revision-B value.
 
-Selectivity between the motion 60 A trip, main 65 A trip, 60 A external fuse, battery BMS, and motor transients must be plotted before fabrication release. The present numbers overlap once tolerances are included.
+A preliminary worst-case selectivity plot between the motion 60 A trip, main 65 A trip, 60 A external fuse, battery BMS, and motor transients is required for the Revision-A design review. The present numbers overlap once tolerances are included, so Revision A must retain configurable settings and accessible test points. Final coordination is a Revision-B validation result.
 
 ## 6. Main measurement and switching
 
@@ -139,7 +141,7 @@ Selectivity between the motion 60 A trip, main 65 A trip, 60 A external fuse, ba
 
 At 45/50/60/120/150 A the shunt produces 22.5/25/30/60/75 mV and dissipates about 1.01/1.25/1.80/7.20/11.25 W respectively.
 
-Sharing `RSH_MAIN` with the LM74930-Q1 sense path is allowed only after Astra demonstrates compatible polarity, common-mode range, input filtering, threshold programmability, Kelvin routing, and failure independence. Otherwise Astra must raise a design question; it may not insert a second high-current shunt silently.
+Sharing `RSH_MAIN` with the LM74930-Q1 sense path is allowed only after Astra demonstrates compatible polarity, common-mode range, input filtering, threshold programmability, Kelvin routing, and failure independence. If that cannot be demonstrated from primary data, Astra shall use a separate sense element or another documented conservative Revision-A implementation and record the trade-off.
 
 ### Main FET stage
 
@@ -153,7 +155,7 @@ Sharing `RSH_MAIN` with the LM74930-Q1 sense path is allowed only after Astra de
 
 With 2.5 mOhm hot per device, the two-bank path estimate is 1.67 mOhm and approximately 4.2 W at 50 A or 6.0 W at 60 A. These are estimates, not acceptance evidence.
 
-No populated precharge circuit is required in revision 0.1. Provide access for inrush measurement and avoid a layout that makes a later revision impossible. If measured inrush, battery sag, connector arcing, or FET stress fails the verification plan, precharge returns as a design change.
+No populated precharge circuit is required in Revision A. Provide access for inrush measurement and reserve practical modification points so a later revision can add precharge. If measured inrush, battery sag, connector arcing, or FET stress fails the verification plan, precharge returns as a Revision-B design change.
 
 ## 7. Motion gate and passive outputs
 
@@ -162,10 +164,11 @@ No populated precharge circuit is required in revision 0.1. Provide access for i
 - two parallel 100 V N-channel MOSFETs per opposing bank, four total;
 - target individual hot RDS(on) no more than 2.0-2.5 mOhm at the selected gate voltage;
 - expose `MOTION_EN`, `MOTION_FLT`, `MOTION_IMON`, and MOSFET temperature to the ESP32;
+- provide an external hardware motion-inhibit input whose open, unpowered, or disconnected state forces the motion gate off; this is a Revision-A commissioning interface, not a customer-facing master switch;
 - fail-safe default is motion off; controller reset, missing heartbeat, boot, fault, and shutdown must not turn motion on;
 - use latch-off for hard faults; no autonomous repeated retry.
 
-There are no per-arm eFuses, arm MOSFETs, arm shunts, or arm temperature sensors. `ARM_L` and `ARM_R` are passive protected outputs after the common motion gate. The exact arm connector remains a release blocker: a two-contact Mega-Fit candidate is acceptable only if its exact housing/contact/wire/temperature derating and an enforceable per-arm current envelope are proven. If one arm can exceed the derated connector limit, select a higher-current connector instead of relying on undocumented margin.
+There are no per-arm eFuses, arm MOSFETs, arm shunts, or arm temperature sensors. `ARM_L` and `ARM_R` are passive protected outputs after the common motion gate. For Revision A, Astra shall select a connector and terminal set conservatively rated for at least the provisional 25 A continuous per-arm envelope with 4 mm2 conductors, or choose a higher-current terminal if the candidate cannot meet that basis. Measured current and temperature later determine the final production connector.
 
 The two ESS23 motors share one isolated RS485 bus external to the PMU. The two ESS17 motors share the other external isolated RS485 bus. The PMU does not duplicate these transceivers.
 
@@ -183,7 +186,7 @@ Current starting concept:
 - mount resistors to a metal chassis heat spreader, away from printed polymer;
 - no melting branch fuse; a chopper short/stuck-on is detected by current/temperature protection and causes a latched shutdown.
 
-At 43 V and 5 ohm, total current is 8.6 A and instantaneous dissipation is about 370 W, or about 185 W per resistor. The 100 W nameplate value is not a continuous rating for this operating point. Actual pulse curves, chassis thermal resistance, arm energy, drive energy, and repetition rate are `BLOCKER` items. Upgrade the resistor technology/power if the 500 J and thermal tests are not met.
+At 43 V and 5 ohm, total current is 8.6 A and instantaneous dissipation is about 370 W, or about 185 W per resistor. The 100 W nameplate value is not a continuous rating for this operating point. Revision A shall use an external replaceable resistor bank with documented pulse data and a conservative starting duty limit. Actual arm/drive energy, repetition rate, chassis thermal resistance, and temperatures are Revision-B validation evidence; upgrade the resistor technology or rating when those measurements require it.
 
 | `MOTION_BUS` voltage | Initial action |
 | ---: | --- |
@@ -193,7 +196,7 @@ At 43 V and 5 ohm, total current is 8.6 A and instantaneous dissipation is about
 | 45.0 V | reduce regenerative braking and command controlled stop |
 | 46.0 V | hardware motion enable off |
 
-TVS parts are for fast transients only and must never be sized as the normal braking-energy sink. Exact TVS, comparator, reference, driver, MOSFET, NTC, hysteresis, and threshold-tolerance chain remain open.
+TVS parts are for fast transients only and must never be sized as the normal braking-energy sink. For Revision A, Astra shall select exact TVS, comparator, reference, driver, MOSFET, NTC, hysteresis, and threshold components from primary datasheets and document the full tolerance chain.
 
 The external 24 V buck for the two vertical lifts may isolate its output from the main chopper. Provide a DNP connector/test point for an optional local 24 V clamp and capture the 24 V output during lowering/deceleration tests. Do not populate a second chopper until those measurements justify it.
 
@@ -201,7 +204,7 @@ The external 24 V buck for the two vertical lifts may isolate its output from th
 
 ### ESP32-S3
 
-Use an ESP32-S3 module approach for the prototype, not a bare RF design. The current candidate is the ESP32-S3-WROOM-1 class; exact flash/PSRAM and antenna variant is a `BLOCKER` because it controls footprint and keep-out. Retain accessible programming/recovery pads. A service USB connector is optional and must not be confused with the Linux USB-CAN or USB-RS485 adapters.
+Use an ESP32-S3 module approach for the prototype, not a bare RF design. Astra shall select an exact ESP32-S3-WROOM-1 variant for Revision A and apply its antenna keep-out. Retain accessible programming/recovery pads. A service USB connector is optional and must not be confused with the Linux USB-CAN or USB-RS485 adapters.
 
 The ESP32 shall monitor/control at least:
 
@@ -215,7 +218,7 @@ The ESP32 shall monitor/control at least:
 - addressable LED data;
 - CAN power telemetry.
 
-### Always-on wake and self-hold (`BLOCKER`)
+### Always-on wake and self-hold (`REV_A_DESIGN`)
 
 When the robot is off, the ESP32, LED strip, Linux PC, and normal 5 V converter are unpowered. Only the battery/BMS, LM74930 shutdown domain, and a low-quiescent-current hardwired Power-button/wake latch remain connected.
 
@@ -229,7 +232,7 @@ The circuit must:
 6. prevent automatic restart after brownout, fault recovery, or battery reconnection;
 7. avoid an unsafe motion enable during every transition.
 
-Exact debounce, long-press duration, hold-transfer timeout, shutdown grace time, high-voltage always-on supply, latch/supervisor, and FET/interface parts are open. Astra shall implement this as a separate hierarchical sheet and provide a timing/state note. Do not power the wake latch from the switched 5 V rail only; that creates a start-up deadlock.
+Exact debounce, long-press duration, hold-transfer timeout, shutdown grace time, high-voltage always-on supply, latch/supervisor, and FET/interface parts are Astra Revision-A design choices. Implement them configurably on a separate hierarchical sheet and provide a timing/state note. Do not power the wake latch from the switched 5 V rail only; that creates a start-up deadlock.
 
 ### Status LED
 
@@ -250,11 +253,11 @@ Required states are OFF/dark, BOOTING/blue pulse, SELF_TEST/yellow movement, REA
 - physical linear backbone with exactly two 120 ohm end terminations;
 - no star wiring; PCB stub from connector to transceiver must be short;
 - provide selectable local 120 ohm termination, normally DNP unless this board is a physical end;
-- CAN transceiver, ESD network, common-mode/chassis strategy, and connector shield treatment remain `OPEN`;
+- Astra shall select the Revision-A CAN transceiver, ESD network, common-mode/chassis strategy, and connector shield treatment from primary datasheets;
 - the isolated USB-CAN adapter is external and connects to Linux through SocketCAN.
 
 ## 10. Layout, interfaces, and Astra output
 
-Connector choices, wiring, PCB partitioning, layout constraints, component classes, required Astra deliverables, and the fabrication-blocker checklist are maintained in `hardware/power-management-unit/interfaces-and-layout.md`.
+Connector choices, wiring, PCB partitioning, layout constraints, component classes, required Astra deliverables, and the two-stage release checklist are maintained in `hardware/power-management-unit/interfaces-and-layout.md`.
 
-Astra must read that file before assigning footprints or creating the board outline. Until every blocker named there and in `requirements.yaml` is closed, the output is an engineering prototype design for review and motorless testing only.
+Astra must read that file before assigning footprints or creating the board outline. The expected output is a complete Revision-A engineering prototype package. Human design review gates ordering; measured Revision-A evidence gates only the later Revision-B production release.

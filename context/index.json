@@ -4,7 +4,7 @@
     "AGENTS.md",
     "CURRENT_STATE.md"
   ],
-  "max_bundle_characters": 18000,
+  "max_bundle_characters": 36000,
   "areas": {
     "architecture": {
       "when": "package boundaries, system design, or ownership",
@@ -67,19 +67,25 @@
       ]
     },
     "pmu": {
-      "when": "GPT Astra PMU core schematic capture, power topology, protection coordination, power controller, or regeneration design",
+      "when": "GPT Astra PMU core schematic capture, Revision-A prototype, power topology, protection coordination, power controller, or regeneration design",
       "files": [
         "hardware/power-management-unit/ASTRA_PCB_HANDOFF.md"
       ]
     },
+    "pmu-astra-start": {
+      "when": "starting GPT Astra to create the complete PMU Revision-A KiCad schematic, PCB layout, BOM, calculations, and prototype package",
+      "files": [
+        "hardware/power-management-unit/ASTRA_START_PROMPT.md"
+      ]
+    },
     "pmu-layout": {
-      "when": "PMU connectors, harnesses, component placement, PCB routing, Astra deliverables, or fabrication-blocker checklist",
+      "when": "PMU connectors, harnesses, component placement, PCB routing, Astra deliverables, or Revision-A and Revision-B release gates",
       "files": [
         "hardware/power-management-unit/interfaces-and-layout.md"
       ]
     },
     "pmu-requirements": {
-      "when": "machine-readable PMU limits, locked values, provisional thresholds, or release-blocker status",
+      "when": "machine-readable PMU limits, locked values, prototype assumptions, energization gates, or production-validation status",
       "files": [
         "hardware/power-management-unit/requirements.yaml"
       ]

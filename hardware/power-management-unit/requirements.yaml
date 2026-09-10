@@ -1,16 +1,27 @@
-schema_version: 1
+schema_version: 2
 project: HomeMy
 artifact: power_management_unit
-revision: "0.1"
+revision: "0.2-rev-a"
 date: "2026-09-10"
-fabrication_release: false
-handoff_state: schematic_and_pre_layout_allowed
+handoff_state: complete_rev_a_prototype_authorized
+
+release_state:
+  rev_a_engineering_prototype:
+    schematic_and_layout_required: true
+    fabrication_package_generation_allowed: true
+    fabrication_order_requires_human_review: true
+    production_use_allowed: false
+  rev_b_production:
+    release: false
+    requires_rev_a_measurement_evidence: true
 
 status_vocabulary:
   LOCKED: implement_as_written
   PROVISIONAL: implement_configurably_and_validate
-  OPEN: select_or_raise_design_question
-  BLOCKER: no_fabrication_release_until_closed
+  REV_A_DESIGN: astra_selects_calculates_and_documents_for_the_prototype
+  REV_A_ASSUMPTION: use_a_conservative_configurable_prototype_choice_and_record_it
+  REV_A_ENERGIZATION_GATE: does_not_block_pcb_design_but_must_be_closed_before_battery_power_is_applied
+  REV_B_VALIDATION: measure_with_rev_a_and_close_before_production_release
 
 source_precedence:
   - hardware/power-management-unit/requirements.yaml
@@ -40,7 +51,7 @@ battery:
     regenerative_current_into_battery_allowed: false
     separate_charge_and_discharge_ports: true
   BAT-004:
-    status: BLOCKER
+    status: REV_A_ENERGIZATION_GATE
     external_main_fuse_nominal_a: 60
     minimum_dc_voltage_rating_v: 42
     preferred_dc_voltage_rating_v: 60
@@ -89,7 +100,7 @@ main_monitor:
     placement: high_side_after_main_fuse
     supply_voltage_v: 3.3
   MON-002:
-    status: BLOCKER
+    status: REV_A_DESIGN
     shunt_resistance_ohm: 0.0005
     connection: four_terminal_kelvin
     minimum_continuous_power_w: 10
@@ -100,7 +111,7 @@ main_monitor:
     shunt_range_mv: 163.84
     calculated_full_scale_a: 327.68
   MON-004:
-    status: OPEN
+    status: REV_A_DESIGN
     share_shunt_with_lm74930: candidate
     acceptance:
       - common_mode_valid
@@ -120,7 +131,7 @@ main_switch:
     reverse_current_blocking: true
     fault_retry: deliberate_power_button_only
   MAIN-002:
-    status: BLOCKER
+    status: REV_A_DESIGN
     mosfet_exact_part: null
     target_rds_on_25c_milliohm_max: 1.5
     target_rds_on_hot_milliohm_max: 2.5
@@ -151,7 +162,7 @@ motion_switch:
     default_state: off
     hard_fault_retry: explicit_esp32_reset_only
   MOT-002:
-    status: BLOCKER
+    status: REV_A_DESIGN
     mosfet_exact_part: null
     target_rds_on_hot_milliohm_range: [2.0, 2.5]
     required_proofs:
@@ -160,17 +171,18 @@ motion_switch:
       - transient_thermal_impedance
       - gate_drive
   MOT-003:
-    status: BLOCKER
+    status: REV_A_DESIGN
     shunt_resistance_ohm: 0.0005
     connection: four_terminal_kelvin
     minimum_continuous_power_w: 5
     open_item: exact_part_and_footprint
   MOT-004:
-    status: PROVISIONAL
+    status: REV_A_DESIGN
     overcurrent_trip_a: 60
     requested_delay_s: 0.5
     short_circuit_trip_a: 100
-    blocker_reason: validate_tps48110_timer_range_leakage_tolerance_and_selectivity
+    rev_a_instruction: choose_a_reliable_configurable_hardware_delay_and_document_worst_case_tolerance
+    rev_b_validation: coordinate_measured_motor_transients_with_fuse_bms_and_main_trip
   MOT-005:
     status: LOCKED
     per_arm_efuse: false
@@ -209,20 +221,20 @@ brake_chopper:
     depends_on_esp32_firmware: false
     populated_branch_fuse: false
   CHOP-002:
-    status: BLOCKER
+    status: REV_A_ASSUMPTION
     resistor_configuration: two_10_ohm_100w_in_parallel
     effective_resistance_ohm: 5.0
     target_documented_bank_pulse_energy_j_min: 500
     current_at_43v_a: 8.6
     instantaneous_power_at_43v_w: 369.8
     mounting: external_metal_chassis_heat_spreader
-    required_evidence:
+    rev_b_required_evidence:
       - measured_regenerative_energy
       - resistor_pulse_curve
       - repetition_rate
       - chassis_thermal_test
   CHOP-003:
-    status: BLOCKER
+    status: REV_A_DESIGN
     mosfet_voltage_rating_v: 100
     mosfet_exact_part: null
     comparator_reference_driver_exact_parts: null
@@ -258,7 +270,7 @@ computer_branch:
     allowed_input_current_near_low_battery_a: 3.0
     note: efuse_protects_harness_not_precision_65w_limit
   PC-004:
-    status: BLOCKER
+    status: REV_B_VALIDATION
     required_module_tests:
       - startup_inrush
       - current_limit
@@ -276,7 +288,7 @@ logic_5v_branch:
     minimum_continuous_output_current_a: 5.0
     software_current_limit_required: false
   LOGIC-002:
-    status: BLOCKER
+    status: REV_A_ASSUMPTION
     exact_converter_and_pinout: null
     required_module_tests:
       - startup_inrush
@@ -307,12 +319,12 @@ lift_24v_branch:
     branch_efuse: false
     protection: converter_internal_ocp_plus_common_motion_gate
   LIFT-003:
-    status: BLOCKER
+    status: REV_A_ASSUMPTION
     exact_converter_and_pinout: null
 
 controller_and_io:
   CTRL-001:
-    status: BLOCKER
+    status: REV_A_DESIGN
     controller_family: ESP32-S3-WROOM-1
     exact_flash_psram_antenna_variant: null
     approach: module_not_bare_rf
@@ -328,7 +340,7 @@ controller_and_io:
       - linux_pc
       - regular_5v_converter
   CTRL-003:
-    status: BLOCKER
+    status: REV_A_DESIGN
     wake_self_hold_circuit_exact_parts: null
     required_behaviors:
       - momentary_press_starts
@@ -342,6 +354,12 @@ controller_and_io:
     permanent_external_display: false
     customer_indicator: addressable_led_strip
     development_display: hdmi_to_linux_pc
+  CTRL-005:
+    status: LOCKED
+    hardware_motion_inhibit_input: required
+    open_or_unpowered_state: motion_off
+    customer_facing_master_switch: false
+    final_product_stop_architecture: REV_B_VALIDATION
 
 communications:
   COM-001:
@@ -360,7 +378,7 @@ communications:
     termination_count: 2
     usb_can_adapter: external_isolated
   COM-003:
-    status: BLOCKER
+    status: REV_A_DESIGN
     can_transceiver_exact_part: null
     esd_and_shield_strategy: null
   COM-004:
@@ -390,8 +408,9 @@ mechanical_and_layout:
     arm_wire_mm2: 4.0
     xt_series_final_product_connector: false
   PCB-004:
-    status: BLOCKER
-    open_inputs:
+    status: REV_A_ASSUMPTION
+    rev_a_instruction: choose_a_generous_bench_prototype_outline_and_document_all_provisional_dimensions
+    rev_b_inputs:
       - board_outline
       - mounting_holes
       - maximum_component_height
@@ -401,39 +420,53 @@ mechanical_and_layout:
       - chassis_heat_spreader_interface
       - service_access
   PCB-005:
-    status: BLOCKER
+    status: REV_A_DESIGN
     arm_connector_candidate: Molex_Mega-Fit_2pin
     target_continuous_current_per_arm_a_max: 25
-    required_evidence:
+    rev_a_required_evidence:
       - exact_contact_housing
       - wire_gauge_derating
       - ambient_derating
-      - measured_or_enforced_arm_current
+      - conservative_25a_design_basis_or_higher_current_connector
+    rev_b_validation: measured_or_enforced_arm_current_and_temperature
   PCB-006:
-    status: BLOCKER
+    status: REV_A_DESIGN
     chopper_connector_candidate: Molex_Micro-Fit_3.0_2pin
     pulse_current_a: 8.6
-    required_evidence: exact_contact_wire_temperature_and_pulse_derating
+    rev_a_required_evidence: exact_contact_wire_and_datasheet_pulse_derating
+    rev_b_validation: measured_connector_temperature_at_approved_pulse_pattern
 
-release_blockers:
-  - BAT-004
+rev_a_design_completion_requirements:
   - MON-002
+  - MON-004
   - MAIN-002
   - MOT-002
   - MOT-003
   - MOT-004
-  - CHOP-002
   - CHOP-003
-  - PC-004
-  - LOGIC-002
-  - LIFT-003
   - CTRL-001
   - CTRL-003
   - COM-003
-  - PCB-004
   - PCB-005
   - PCB-006
   - exact_tps26631_limits_and_retry_modes
   - tvs_transient_coordination
-  - measured_main_inrush
-  - emergency_stop_and_motion_inhibit_interface
+  - CTRL-005
+  - conservative_external_converter_connector_pinout_assumptions
+  - documented_provisional_board_mechanics
+
+rev_a_energization_gates:
+  - BAT-004
+  - external_current_limited_bench_supply_for_initial_bringup
+  - reachable_service_disconnect_before_actuator_testing
+
+rev_b_production_validation_gates:
+  - measured_main_inrush_and_no_precharge_confirmation
+  - measured_regenerative_energy_and_chopper_thermal_margin
+  - measured_24v_lift_bus_regeneration
+  - measured_pc_5v_and_24v_converter_behavior
+  - measured_per_arm_current_and_connector_temperature
+  - measured_fuse_bms_main_and_motion_selectivity
+  - final_enclosure_board_outline_mounting_airflow_and_heat_spreader
+  - final_harness_and_connector_derating
+  - final_emergency_stop_and_motion_safety_architecture
