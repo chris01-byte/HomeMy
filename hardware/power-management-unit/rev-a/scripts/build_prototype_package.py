@@ -10,7 +10,10 @@ import html
 import json
 import math
 from pathlib import Path
+import re
 import shutil
+import subprocess
+from urllib.parse import quote
 import zipfile
 from prepare_prototype_release import ROOT, VERSION, PACKAGE
 from sexpr import parse, children, child, unquote
@@ -33,9 +36,11 @@ def main():
     for row in export['inputs']:assert sha(ROOT/row['path'])==row['sha256'],row['path']
     for row in export['outputs']:assert sha(out/row['path'])==row['sha256'],row['path']
     inputs={str((out/'EXPORT_MANIFEST.json').relative_to(ROOT)):sha(out/'EXPORT_MANIFEST.json')}
+    markdown_sources={}
     def copy(source,destination):
         p=ROOT/source;q=out/destination;q.parent.mkdir(parents=True,exist_ok=True)
         inputs[source]=sha(p);shutil.copyfile(p,q)
+        if q.suffix=='.md':markdown_sources[q]=p
     for folder in ['fabrication','mechanical','evidence','integration']:(out/folder).mkdir(exist_ok=True)
     for name in ['PCB_STACKUP_PRESSFIT.md','MECHANICAL_BUILD.md','CONNECTOR_ASSEMBLY.md',
                  'ASSEMBLY_ORIENTATION.md','ASSEMBLY_ORIENTATION.svg','assembly-orientation.json',
@@ -53,6 +58,30 @@ def main():
     # source hashes; they remain the governing staged energization/qualification gates.
     copy('../DESIGN_REVIEW_AND_BRINGUP.md','integration/DESIGN_REVIEW_AND_BRINGUP.md')
     copy('../REV_B_VALIDATION.md','integration/REV_B_VALIDATION.md')
+    copy('reports/assembly-orientation-review.png','assembly/ASSEMBLY_ORIENTATION.png')
+
+    # Keep assembly files local. Further source evidence remains available at
+    # immutable repository URLs, even when this ZIP is unpacked on its own.
+    repo=ROOT.parents[2]
+    source_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=repo,text=True).strip()
+    external_source_links=[]
+    for destination,source in markdown_sources.items():
+        def relink(match):
+            target=match.group(1)
+            if target.startswith(('https:','http:','#')):return match.group(0)
+            local,separator,anchor=target.partition('#')
+            if (destination.parent/local).exists():return match.group(0)
+            original=(source.parent/local).resolve()
+            relative=original.relative_to(repo.resolve()).as_posix()
+            committed=subprocess.check_output(['git','show',source_commit+':'+relative],cwd=repo)
+            current=original.read_bytes()
+            assert committed==current or (original.suffix=='.md' and
+                committed.decode('utf-8').splitlines()==current.decode('utf-8').splitlines()),'Uncommitted linked source: '+relative
+            url='https://github.com/chris01-byte/HomeMy/blob/'+source_commit+'/'+quote(relative,safe='/')
+            if separator:url+='#'+anchor
+            external_source_links.append({'document':destination.relative_to(out).as_posix(),'source':relative,'url':url})
+            return ']('+url+')'
+        destination.write_text(re.sub(r'\]\(([^)]+)\)',relink,destination.read_text(encoding='utf-8')),encoding='utf-8')
 
     orientation=read(ROOT/'manufacturing/assembly-orientation.json')
     board=ROOT/'kicad/HomeMy_PMU_RevA.kicad_pcb'
@@ -196,6 +225,9 @@ No physical board has been ordered, built or tested by this release process.
 Package version: {VERSION}, dated 2026-09-10. PCB SHA-256: `{sha(board)}`.
 Use PACKAGE_MANIFEST.json and SHA256SUMS.txt to verify this exact delivery.
 Source release: RELEASE.json. An altered file invalidates this version.
+Further source references in copied documents use immutable repository links;
+internet access is required for those supporting references. Manufacturing
+drawings and order data are enclosed locally.
 
 | Delivery | Files |
 |---|---|
@@ -254,7 +286,8 @@ transient or real press-fit measurements. See integration/REV_B_VALIDATION.md.
         'native_report_hashes':{k:v['report_sha256'] for k,v in native['checks'].items()},
         'counts':{'gerbers':11,'populated_pcb_positions':352,'dnp_positions':4,'pressfit_holes':48,
                   'busbars':7,'top_star_bridges':8,'open_external_before_pcb_order':0,'open_external_before_energization':9},
-        'source_inputs_sha256':inputs,'files':files,'builder_sha256':sha(Path(__file__))}
+        'source_inputs_sha256':inputs,'files':files,'builder_sha256':sha(Path(__file__)),
+        'external_source_commit':source_commit,'external_source_links':external_source_links}
     write_json(out/'PACKAGE_MANIFEST.json',manifest)
     checks=files+[{'path':'PACKAGE_MANIFEST.json','sha256':sha(out/'PACKAGE_MANIFEST.json')}]
     (out/'SHA256SUMS.txt').write_text(''.join(f"{r['sha256']}  {r['path']}\n" for r in checks),encoding='utf-8')

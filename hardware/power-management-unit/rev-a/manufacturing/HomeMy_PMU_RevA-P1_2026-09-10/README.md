@@ -11,6 +11,9 @@ No physical board has been ordered, built or tested by this release process.
 Package version: RevA-P1, dated 2026-09-10. PCB SHA-256: `13fcae0f58c9a6ac5f85eb721c24b44169a65f628baad6586bcd6002f4c17cfe`.
 Use PACKAGE_MANIFEST.json and SHA256SUMS.txt to verify this exact delivery.
 Source release: RELEASE.json. An altered file invalidates this version.
+Further source references in copied documents use immutable repository links;
+internet access is required for those supporting references. Manufacturing
+drawings and order data are enclosed locally.
 
 | Delivery | Files |
 |---|---|

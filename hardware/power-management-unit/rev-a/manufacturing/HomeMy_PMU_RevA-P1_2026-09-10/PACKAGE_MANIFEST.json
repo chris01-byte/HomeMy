@@ -10,7 +10,7 @@
     "notice": "Engineering prototype – not production qualified"
   },
   "board_sha256": "13fcae0f58c9a6ac5f85eb721c24b44169a65f628baad6586bcd6002f4c17cfe",
-  "created_at_utc": "2026-09-10T21:20:50.678403+00:00",
+  "created_at_utc": "2026-09-10T21:35:25.732125+00:00",
   "native_process_exit_codes": {
     "erc": 0,
     "drc": 0
@@ -55,6 +55,7 @@
     "release.json": "01fc122baabb36d2e36035cd517c6b42e6d153c8f4e1507efd9e261092dadd1e",
     "../DESIGN_REVIEW_AND_BRINGUP.md": "35c77258240912fce735521e98e0c24408ceb638cb1df52119925b47373d1f4d",
     "../REV_B_VALIDATION.md": "a8da5f2a620b920340a5ef73b2f44068198ac3a88c0fb08b4940ad1f5582e860",
+    "reports/assembly-orientation-review.png": "7ddfe8cd4e1ecfd620c4000962413134f4c2fcce0689bc9dbd4973a7499c809e",
     "manufacturing/busbar-pcb-interface.json": "d31d4c18e7cd00ed6910ec9a7c48d871783a5d9ed8ae269eeda9561b7d63acb1"
   },
   "files": [
@@ -65,8 +66,13 @@
     },
     {
       "path": "assembly/ASSEMBLY_ORIENTATION.md",
-      "bytes": 9105,
-      "sha256": "96d76cf59c30a88908b562b626a41031150b82d887ba726384f6c7d4b7991309"
+      "bytes": 10000,
+      "sha256": "19461881793fe87c979c7343a91a45ba778e68db9d240456499de2dadf4795e1"
+    },
+    {
+      "path": "assembly/ASSEMBLY_ORIENTATION.png",
+      "bytes": 210657,
+      "sha256": "7ddfe8cd4e1ecfd620c4000962413134f4c2fcce0689bc9dbd4973a7499c809e"
     },
     {
       "path": "assembly/ASSEMBLY_ORIENTATION.svg",
@@ -75,8 +81,8 @@
     },
     {
       "path": "assembly/CONNECTOR_ASSEMBLY.md",
-      "bytes": 8595,
-      "sha256": "f704ee8a970a0a62629a8ec3ab2700115896de74457719dc30afed103d105496"
+      "bytes": 8656,
+      "sha256": "c9c5c7a10b0aa4184a9595451d498cf4e04b9ce20c13879d7b19938c549884e6"
     },
     {
       "path": "assembly/CONNECTOR_PINOUT.csv",
@@ -225,8 +231,8 @@
     },
     {
       "path": "evidence/HIGH_CURRENT_RULES.md",
-      "bytes": 6380,
-      "sha256": "1d37116212e93655d8424e55f5b6c115a0f98250441d0daf7264e7a7d7d9cf32"
+      "bytes": 6460,
+      "sha256": "ba5f9c05c9746518c059bb161f8652ae86367e4e72518a3b66305539036948f8"
     },
     {
       "path": "evidence/native-checks-both.json",
@@ -260,8 +266,8 @@
     },
     {
       "path": "fabrication/PCB_STACKUP_PRESSFIT.md",
-      "bytes": 8318,
-      "sha256": "024aa70c21664b7dcfc36899f9c5ad02c9325fb301b5eba4d1a9664178926021"
+      "bytes": 8371,
+      "sha256": "41e5dcee0efc454a98298ed8df554ac641e3a1877c895166c80c210e44d60259"
     },
     {
       "path": "fabrication/PRESSFIT_HOLES.csv",
@@ -330,8 +336,8 @@
     },
     {
       "path": "integration/DESIGN_REVIEW_AND_BRINGUP.md",
-      "bytes": 14051,
-      "sha256": "35c77258240912fce735521e98e0c24408ceb638cb1df52119925b47373d1f4d"
+      "bytes": 14470,
+      "sha256": "fe4fb0592cf4ca7f22fa1ac26f3221075f2d1d73b474452d55cc179362496428"
     },
     {
       "path": "integration/external-integration-gates.json",
@@ -345,8 +351,8 @@
     },
     {
       "path": "integration/REV_B_VALIDATION.md",
-      "bytes": 9749,
-      "sha256": "a8da5f2a620b920340a5ef73b2f44068198ac3a88c0fb08b4940ad1f5582e860"
+      "bytes": 9782,
+      "sha256": "df772663158190650462fdc174f1eee07707e75471a98d82b7caad72ffda1f38"
     },
     {
       "path": "mechanical/BB1_1to1.svg",
@@ -405,8 +411,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3864,
-      "sha256": "3bbbfa9d8fe2beef0d3fb66a292ff5d9f4a8556ffa02a8ee78ee46017b072980"
+      "bytes": 4066,
+      "sha256": "80fc1c60738b29cf9abab2ab0979ac8f0971809a27855373ecd50bba4cae439b"
     },
     {
       "path": "RELEASE.json",
@@ -414,5 +420,58 @@
       "sha256": "01fc122baabb36d2e36035cd517c6b42e6d153c8f4e1507efd9e261092dadd1e"
     }
   ],
-  "builder_sha256": "996429d5f2d02ffefc688f48b1f0986b1a740a340b6a922d1dd0173963157312"
+  "builder_sha256": "501748a687db4e88fb66a1198274939f6743b4717beff5a26656fed447ae9597",
+  "external_source_commit": "26c7b057e5b61e150468c9402286b78b4c66bd4c",
+  "external_source_links": [
+    {
+      "document": "assembly/ASSEMBLY_ORIENTATION.md",
+      "source": "hardware/power-management-unit/rev-a/evidence/power/psmn1r0-100asf.pdf",
+      "url": "https://github.com/chris01-byte/HomeMy/blob/26c7b057e5b61e150468c9402286b78b4c66bd4c/hardware/power-management-unit/rev-a/evidence/power/psmn1r0-100asf.pdf"
+    },
+    {
+      "document": "assembly/ASSEMBLY_ORIENTATION.md",
+      "source": "hardware/power-management-unit/rev-a/evidence/power/psmn1r0-100asf-10.png",
+      "url": "https://github.com/chris01-byte/HomeMy/blob/26c7b057e5b61e150468c9402286b78b4c66bd4c/hardware/power-management-unit/rev-a/evidence/power/psmn1r0-100asf-10.png"
+    },
+    {
+      "document": "assembly/ASSEMBLY_ORIENTATION.md",
+      "source": "hardware/power-management-unit/rev-a/evidence/chopper/ipt015n10n5-primary-source.json",
+      "url": "https://github.com/chris01-byte/HomeMy/blob/26c7b057e5b61e150468c9402286b78b4c66bd4c/hardware/power-management-unit/rev-a/evidence/chopper/ipt015n10n5-primary-source.json"
+    },
+    {
+      "document": "assembly/ASSEMBLY_ORIENTATION.md",
+      "source": "hardware/power-management-unit/rev-a/evidence/power/css4j-4026-2.png",
+      "url": "https://github.com/chris01-byte/HomeMy/blob/26c7b057e5b61e150468c9402286b78b4c66bd4c/hardware/power-management-unit/rev-a/evidence/power/css4j-4026-2.png"
+    },
+    {
+      "document": "assembly/ASSEMBLY_ORIENTATION.md",
+      "source": "hardware/power-management-unit/rev-a/evidence/power/lm74930-q1.pdf",
+      "url": "https://github.com/chris01-byte/HomeMy/blob/26c7b057e5b61e150468c9402286b78b4c66bd4c/hardware/power-management-unit/rev-a/evidence/power/lm74930-q1.pdf"
+    },
+    {
+      "document": "assembly/ASSEMBLY_ORIENTATION.md",
+      "source": "hardware/power-management-unit/rev-a/evidence/chopper/redcube-drill.png",
+      "url": "https://github.com/chris01-byte/HomeMy/blob/26c7b057e5b61e150468c9402286b78b4c66bd4c/hardware/power-management-unit/rev-a/evidence/chopper/redcube-drill.png"
+    },
+    {
+      "document": "assembly/ASSEMBLY_ORIENTATION.md",
+      "source": "hardware/power-management-unit/rev-a/evidence/chopper/7461103.pdf",
+      "url": "https://github.com/chris01-byte/HomeMy/blob/26c7b057e5b61e150468c9402286b78b4c66bd4c/hardware/power-management-unit/rev-a/evidence/chopper/7461103.pdf"
+    },
+    {
+      "document": "integration/DESIGN_REVIEW_AND_BRINGUP.md",
+      "source": "hardware/power-management-unit/REQUIREMENTS_TRACEABILITY.md",
+      "url": "https://github.com/chris01-byte/HomeMy/blob/26c7b057e5b61e150468c9402286b78b4c66bd4c/hardware/power-management-unit/REQUIREMENTS_TRACEABILITY.md"
+    },
+    {
+      "document": "integration/DESIGN_REVIEW_AND_BRINGUP.md",
+      "source": "hardware/power-management-unit/REV_A_ASSUMPTIONS.md",
+      "url": "https://github.com/chris01-byte/HomeMy/blob/26c7b057e5b61e150468c9402286b78b4c66bd4c/hardware/power-management-unit/REV_A_ASSUMPTIONS.md"
+    },
+    {
+      "document": "integration/DESIGN_REVIEW_AND_BRINGUP.md",
+      "source": "hardware/power-management-unit/verification-plan.md",
+      "url": "https://github.com/chris01-byte/HomeMy/blob/26c7b057e5b61e150468c9402286b78b4c66bd4c/hardware/power-management-unit/verification-plan.md"
+    }
+  ]
 }

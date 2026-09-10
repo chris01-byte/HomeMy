@@ -229,7 +229,7 @@
       "coverage": "explicit",
       "reason": "Release flags in metadata",
       "release_scope": "release.json",
-      "sha256": "5034bd2844ccf1c509aa0428088ce6009b9c322d86b4dbb63ab8fbda3d695e84"
+      "sha256": "fc054fba1bdf03c7acd025a75d73870349f485fd9ee3638f2b8053053a57ff8a"
     },
     {
       "path": "evidence/generator-reproducibility-review.json",
@@ -516,7 +516,7 @@
       "coverage": "explicit",
       "reason": "Release flags in metadata",
       "release_scope": "release.json",
-      "sha256": "dc82830fd962eb7f46c95e91c758d50b2cb730a881e4e90319dc7342ef98fb45"
+      "sha256": "bf326e489f78a19cda6af6b21eac4e49c5df563923482a50d3f9be848a36afd5"
     },
     {
       "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/RELEASE.json",

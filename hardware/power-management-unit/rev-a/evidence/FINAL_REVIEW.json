@@ -2,7 +2,7 @@
   "metadata": {
     "rev_a_engineering_prototype": true,
     "rev_b_production": false,
-    "checked_at_utc": "2026-09-10T21:31:57.745786+00:00",
+    "checked_at_utc": "2026-09-10T21:35:26.467320+00:00",
     "scope": "Current artifact identity and recorded CAD findings; no new native DRC or physical tests",
     "cad_package_checks_passed": true,
     "hardware_tests_performed": false,
@@ -1500,6 +1500,11 @@
       "matches": true
     },
     {
+      "path": "manufacturing\\HomeMy_PMU_RevA-P1_2026-09-10\\assembly\\ASSEMBLY_ORIENTATION.png",
+      "context": "prototype delivery",
+      "matches": true
+    },
+    {
       "path": "manufacturing\\HomeMy_PMU_RevA-P1_2026-09-10\\assembly\\ASSEMBLY_ORIENTATION.svg",
       "context": "prototype delivery",
       "matches": true
@@ -1970,6 +1975,11 @@
       "matches": true
     },
     {
+      "path": "reports\\assembly-orientation-review.png",
+      "context": "prototype delivery source",
+      "matches": true
+    },
+    {
       "path": "manufacturing\\busbar-pcb-interface.json",
       "context": "prototype delivery source",
       "matches": true
@@ -2012,7 +2022,7 @@
     },
     {
       "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/PACKAGE_MANIFEST.json",
-      "sha256": "dc82830fd962eb7f46c95e91c758d50b2cb730a881e4e90319dc7342ef98fb45"
+      "sha256": "bf326e489f78a19cda6af6b21eac4e49c5df563923482a50d3f9be848a36afd5"
     },
     {
       "path": "manufacturing/REV_A_BOM_MANIFEST.json",

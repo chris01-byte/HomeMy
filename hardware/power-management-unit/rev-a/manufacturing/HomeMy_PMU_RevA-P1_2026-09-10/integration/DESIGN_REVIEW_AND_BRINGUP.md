@@ -4,7 +4,7 @@
 `rev_b_production: false`  
 Date: 2026-09-10. Review/test procedure only. No ordering, assembly, energization, actuator motion or completed CAD verification is recorded here.
 
-Read [requirements traceability](REQUIREMENTS_TRACEABILITY.md), [assumptions](REV_A_ASSUMPTIONS.md), the [verification plan](verification-plan.md) and [Revision-B register](REV_B_VALIDATION.md) with the three circuit-design records. The project owner reviews the complete concrete package before ordering; work on the design and fabrication outputs can continue while measurement-only items remain open.
+Read [requirements traceability](https://github.com/chris01-byte/HomeMy/blob/26c7b057e5b61e150468c9402286b78b4c66bd4c/hardware/power-management-unit/REQUIREMENTS_TRACEABILITY.md), [assumptions](https://github.com/chris01-byte/HomeMy/blob/26c7b057e5b61e150468c9402286b78b4c66bd4c/hardware/power-management-unit/REV_A_ASSUMPTIONS.md), the [verification plan](https://github.com/chris01-byte/HomeMy/blob/26c7b057e5b61e150468c9402286b78b4c66bd4c/hardware/power-management-unit/verification-plan.md) and [Revision-B register](REV_B_VALIDATION.md) with the three circuit-design records. The project owner reviews the complete concrete package before ordering; work on the design and fabrication outputs can continue while measurement-only items remain open.
 
 ## Design review before order
 
