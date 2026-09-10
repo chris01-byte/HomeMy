@@ -38,6 +38,7 @@ def timing(i,vt):
       assumptions='C33uF10%, +/-2% additional drift, R100k0.1%, capacitor/PCB leakage0..1uA, local0..60C; fulltemperature not guaranteed')
 
 result={
+ 'metadata':{'rev_a_engineering_prototype':True,'rev_b_production':False},
  'scope':'Engineering calculations, not physical test results or a fabrication/energization approval',
  'shunt':dict(r_nominal_ohm=rsh,r_corner_ohm=[shlo,shhi],
     steady_w={str(i):i*i*rsh for i in [45,50,60,65,100,120,150]},

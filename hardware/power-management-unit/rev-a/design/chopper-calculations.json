@@ -1,4 +1,8 @@
 {
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false
+  },
   "status": "analytic_prototype_estimate_not_hardware_validation",
   "assumptions": {
     "resistor_fraction_error": 0.002125,

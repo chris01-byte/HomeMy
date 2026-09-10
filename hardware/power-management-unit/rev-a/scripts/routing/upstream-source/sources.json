@@ -1,0 +1,100 @@
+{
+  "license": "GNU General Public License v3 text; license terms as provided by upstream, see LICENSE",
+  "files": [
+    {
+      "path": "v1.9.0-autoroute-BatchAutorouter.java",
+      "sha256": "34b47ab808495cefcfbc616fdc9d749c3de31c778bb23052621a00fe6f8e0aad",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v1.9.0/src/main/java/app/freerouting/autoroute/BatchAutorouter.java"
+    },
+    {
+      "path": "v1.9.0-gui-MainApplication.java",
+      "sha256": "06ea8dcec913c6f11cb5e1086dc424032701b94eb2a9dc2112082b6b9428572c",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v1.9.0/src/main/java/app/freerouting/gui/MainApplication.java"
+    },
+    {
+      "path": "v1.9.0-interactive-BoardHandlingHeadless.java",
+      "sha256": "00ef3ebb7bfb8f5fe4b5d173651566c20ea2c02143c25220d068faaf0e9b76a6",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v1.9.0/src/main/java/app/freerouting/interactive/BoardHandlingHeadless.java"
+    },
+    {
+      "path": "v2.1.0-autoroute-BatchAutorouter.java",
+      "sha256": "4f2faf886ac834b961e1f4dc8c3dac282b6878f1e3489131f8bf96d6b8948349",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v2.1.0/src/main/java/app/freerouting/autoroute/BatchAutorouter.java"
+    },
+    {
+      "path": "v2.1.0-autoroute-BatchAutorouterThread.java",
+      "sha256": "747347082a7187740b392ea5258dcb9d9eb59c015c3e524b027b0621e6edd57e",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v2.1.0/src/main/java/app/freerouting/autoroute/BatchAutorouterThread.java"
+    },
+    {
+      "path": "v2.1.0-autoroute-events-BoardUpdatedEvent.java",
+      "sha256": "c45ce5b7d440330ca6d56e28e0b175b6199d3852ba637e43f6a68ca6d2a49722",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v2.1.0/src/main/java/app/freerouting/autoroute/events/BoardUpdatedEvent.java"
+    },
+    {
+      "path": "v2.1.0-autoroute-events-TaskStateChangedEvent.java",
+      "sha256": "b1670ac2a3c347aecc2997f08ccd5c10ba4d86e4fb4e25df35a278de372191bd",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v2.1.0/src/main/java/app/freerouting/autoroute/events/TaskStateChangedEvent.java"
+    },
+    {
+      "path": "v2.1.0-autoroute-NamedAlgorithm.java",
+      "sha256": "bc17b802d30b86d2b5e85fb5fbb90c3885f3a4219cdbce0f3f74d92dfdfb5c07",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v2.1.0/src/main/java/app/freerouting/autoroute/NamedAlgorithm.java"
+    },
+    {
+      "path": "v2.1.0-core-RoutingJob.java",
+      "sha256": "45dcf9dcb3319f2ca48db9d0d70db2451966901a825892f1af9aa3a0d0b7b33d",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v2.1.0/src/main/java/app/freerouting/core/RoutingJob.java"
+    },
+    {
+      "path": "v2.1.0-core-Session.java",
+      "sha256": "fe9df13263189f7821bf04ac1119b583eb2d42c2362dcf3e4010f006905b1712",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v2.1.0/src/main/java/app/freerouting/core/Session.java"
+    },
+    {
+      "path": "v2.1.0-core-StoppableThread.java",
+      "sha256": "dc9c09000e68d5e5772257541dae86d4655a070a78dd40d4c5feecd565620ed7",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v2.1.0/src/main/java/app/freerouting/core/StoppableThread.java"
+    },
+    {
+      "path": "v2.1.0-interactive-HeadlessBoardManager.java",
+      "sha256": "e51ba9d42ff7234d580f2e2b485671b0b584bb01e85fdc27818bac44c5b5344c",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v2.1.0/src/main/java/app/freerouting/interactive/HeadlessBoardManager.java"
+    },
+    {
+      "path": "v2.1.0-management-ReflectionUtil.java",
+      "sha256": "9376c27d8717ad0fcb4f83c10dd0ed81ec305f480936516326462365626d8d6c",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v2.1.0/src/main/java/app/freerouting/management/ReflectionUtil.java"
+    },
+    {
+      "path": "v2.1.0-management-RoutingJobScheduler.java",
+      "sha256": "ba2ea49d0b80db6b54c215826564617dde9a85851fead4582a5b9694ad49ad8d",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v2.1.0/src/main/java/app/freerouting/management/RoutingJobScheduler.java"
+    },
+    {
+      "path": "v2.1.0-management-RoutingJobSchedulerActionThread.java",
+      "sha256": "25817e1c8cb14fe4d0bb450d61660c807f8ec0a736a407640543c2d4d3aef538",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v2.1.0/src/main/java/app/freerouting/management/RoutingJobSchedulerActionThread.java"
+    },
+    {
+      "path": "v2.1.0-management-SessionManager.java",
+      "sha256": "4fdc28b70d7c5cac69841a6aab5e6e4e243f80f69f0a856fcd1a5d1c81d3c9b6",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v2.1.0/src/main/java/app/freerouting/management/SessionManager.java"
+    },
+    {
+      "path": "v2.1.0-settings-GlobalSettings.java",
+      "sha256": "5d2d0e50f2e382906d72bf8dee783122a5358876193f578b267a8c49ecc8a6bb",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v2.1.0/src/main/java/app/freerouting/settings/GlobalSettings.java"
+    },
+    {
+      "path": "v2.1.0-settings-RouterOptimizerSettings.java",
+      "sha256": "4d424c2284177e93f89c55e2f210e0b485f76edaea103fead34ab8595889a52a",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v2.1.0/src/main/java/app/freerouting/settings/RouterOptimizerSettings.java"
+    },
+    {
+      "path": "v2.1.0-settings-RouterSettings.java",
+      "sha256": "14ac7f5f12776b65c352d713149aeb02ae6a531cc8aeb80c49defce2b1ea2889",
+      "source_url": "https://raw.githubusercontent.com/freerouting/freerouting/v2.1.0/src/main/java/app/freerouting/settings/RouterSettings.java"
+    }
+  ]
+}

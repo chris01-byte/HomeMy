@@ -11,7 +11,7 @@
     "MOTION_SENSED_P": 148,
     "MOTION_COMMON": 117,
     "MOTION_BUS_P": 215,
-    "BATT_N": 759
+    "BATT_N": 723
   },
   "note": "Counts alone do not establish current sharing or local thermal rating."
 }

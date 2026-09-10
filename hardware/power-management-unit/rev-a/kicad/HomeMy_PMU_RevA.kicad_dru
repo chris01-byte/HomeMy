@@ -1,0 +1,143 @@
+(version 1)
+# Only intrinsic same-package pad spacing uses 0.15 mm; routes retain the 0.20 mm netclass clearance.
+(rule "Reviewed fine-pitch land pattern U1"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U1') && B.memberOfFootprint('U1')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U2"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U2') && B.memberOfFootprint('U2')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U3"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U3') && B.memberOfFootprint('U3')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U4"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U4') && B.memberOfFootprint('U4')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U5"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U5') && B.memberOfFootprint('U5')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U10"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U10') && B.memberOfFootprint('U10')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U11"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U11') && B.memberOfFootprint('U11')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U12"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U12') && B.memberOfFootprint('U12')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U13"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U13') && B.memberOfFootprint('U13')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U14"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U14') && B.memberOfFootprint('U14')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U15"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U15') && B.memberOfFootprint('U15')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U16"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U16') && B.memberOfFootprint('U16')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U17"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U17') && B.memberOfFootprint('U17')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U18"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U18') && B.memberOfFootprint('U18')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U19"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U19') && B.memberOfFootprint('U19')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U20"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U20') && B.memberOfFootprint('U20')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U21"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U21') && B.memberOfFootprint('U21')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U22"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U22') && B.memberOfFootprint('U22')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U23"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U23') && B.memberOfFootprint('U23')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U24"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U24') && B.memberOfFootprint('U24')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U25"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U25') && B.memberOfFootprint('U25')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U26"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U26') && B.memberOfFootprint('U26')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U27"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U27') && B.memberOfFootprint('U27')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U28"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U28') && B.memberOfFootprint('U28')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U29"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U29') && B.memberOfFootprint('U29')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U30"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U30') && B.memberOfFootprint('U30')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U31"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U31') && B.memberOfFootprint('U31')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U32"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U32') && B.memberOfFootprint('U32')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U33"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U33') && B.memberOfFootprint('U33')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U34"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U34') && B.memberOfFootprint('U34')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U35"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U35') && B.memberOfFootprint('U35')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U36"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U36') && B.memberOfFootprint('U36')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U50"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U50') && B.memberOfFootprint('U50')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U51"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U51') && B.memberOfFootprint('U51')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U53"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U53') && B.memberOfFootprint('U53')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U54"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U54') && B.memberOfFootprint('U54')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U55"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U55') && B.memberOfFootprint('U55')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U56"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U56') && B.memberOfFootprint('U56')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U57"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U57') && B.memberOfFootprint('U57')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U58"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U58') && B.memberOfFootprint('U58')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U59"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U59') && B.memberOfFootprint('U59')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U60"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U60') && B.memberOfFootprint('U60')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U61"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U61') && B.memberOfFootprint('U61')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U62"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U62') && B.memberOfFootprint('U62')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U63"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U63') && B.memberOfFootprint('U63')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U64"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U64') && B.memberOfFootprint('U64')")
+  (constraint clearance (min 0.15mm)))
+(rule "Reviewed fine-pitch land pattern U65"
+  (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('U65') && B.memberOfFootprint('U65')")
+  (constraint clearance (min 0.15mm)))

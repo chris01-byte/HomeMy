@@ -1,0 +1,846 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "state": "manual_routing_candidate_requires_native_drc",
+    "frozen_session_sha256": "30ff3126f797f816506923bb6c97da340ea58be75bee15d42c2b8535435c311a"
+  },
+  "remove_unlocked_segments": [
+    {
+      "net": "V3V3",
+      "layer": "In2.Cu",
+      "start_mm": [
+        286.5027,
+        239.9151
+      ],
+      "end_mm": [
+        286.5027,
+        240.3473
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "2512511c-0d58-4898-8491-91ff86130e1b"
+    },
+    {
+      "net": "V3V3",
+      "layer": "In2.Cu",
+      "start_mm": [
+        338.0655,
+        274.8354
+      ],
+      "end_mm": [
+        337.4194,
+        274.8354
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "277fbf09-a1ac-4d1f-b239-986ee3d64c74"
+    },
+    {
+      "net": "V3V3",
+      "layer": "In2.Cu",
+      "start_mm": [
+        286.5027,
+        240.3473
+      ],
+      "end_mm": [
+        286.5027,
+        239.9151
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "6626d448-7e4c-40be-b9d8-9f8bf787e046"
+    },
+    {
+      "net": "V3V3",
+      "layer": "In2.Cu",
+      "start_mm": [
+        337.4194,
+        274.8354
+      ],
+      "end_mm": [
+        338.0655,
+        274.8354
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "7cd91c46-cbf8-4db3-8418-5dd6572c51cb"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        132.9301,
+        250.5012
+      ],
+      "end_mm": [
+        132.9301,
+        249.4727
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "1bc7fc5c-7a36-49e6-86d8-50db47392bde"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        284.6917,
+        265.0612
+      ],
+      "end_mm": [
+        284.2233,
+        265.0612
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "20a009a0-f6c1-4aab-9480-192159cafaa2"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        293.6068,
+        272.2748
+      ],
+      "end_mm": [
+        293.1382,
+        271.8062
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "262d2724-95cf-4d51-a518-1fe9eb2a1aee"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        268.6538,
+        244.7689
+      ],
+      "end_mm": [
+        269.3095,
+        245.4246
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "2cbfc537-f0c3-4401-9539-905f3575aeae"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        138.7528,
+        233.4011
+      ],
+      "end_mm": [
+        138.3547,
+        233.7992
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "41c71e2b-2874-4020-a814-2488bf2a6caa"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        126.4183,
+        230.7415
+      ],
+      "end_mm": [
+        126.8937,
+        230.7415
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "53aa0b6a-25f3-4bff-bf1e-e4a1a4d0a2b6"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        138.3547,
+        233.7992
+      ],
+      "end_mm": [
+        138.7528,
+        233.4011
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "5fb97707-dfb8-4efb-bb7b-c4a0c26227db"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        126.8937,
+        230.7415
+      ],
+      "end_mm": [
+        126.4183,
+        230.7415
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "5fbfda77-93f9-4ec1-8778-bc2d5ec72fd6"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        135.663,
+        209.4448
+      ],
+      "end_mm": [
+        135.0227,
+        209.4448
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "652cd895-bb9b-479c-ae7b-757ea3e657e6"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        275.6201,
+        242.1401
+      ],
+      "end_mm": [
+        274.9935,
+        242.1401
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "b0599691-5df0-4e0a-8ae0-469256e5a6e5"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        135.0227,
+        209.4448
+      ],
+      "end_mm": [
+        135.663,
+        209.4448
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "b4ab3108-b450-4f27-8985-e07b3c7285f6"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        111.7554,
+        217.4778
+      ],
+      "end_mm": [
+        111.0158,
+        217.4778
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "c1d2d16d-85e3-44bc-8c66-94a7e45349b3"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        269.3095,
+        245.4246
+      ],
+      "end_mm": [
+        268.6538,
+        244.7689
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "c4f789d0-f1ae-48ef-92be-4f500eab11f6"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        132.9301,
+        249.4727
+      ],
+      "end_mm": [
+        132.9301,
+        250.5012
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "d0ee0eae-d85c-474b-8d2a-354112369d2a"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        284.2233,
+        265.0612
+      ],
+      "end_mm": [
+        284.6917,
+        265.0612
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "d435dfdb-8e97-4e0d-8d72-2cc51829eacf"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        274.9935,
+        242.1401
+      ],
+      "end_mm": [
+        275.6201,
+        242.1401
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "e7ea59c3-51de-475c-9fad-6660d6f4b3f6"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        111.0158,
+        217.4778
+      ],
+      "end_mm": [
+        111.7554,
+        217.4778
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "ec662dd9-0665-4ea3-bd31-2075fa04736e"
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "start_mm": [
+        293.1382,
+        271.8062
+      ],
+      "end_mm": [
+        293.6068,
+        272.2748
+      ],
+      "width_mm": 0.2,
+      "reason": "Native DRC reports this unlocked segment as a dangling branch.",
+      "diagnostic_uuid": "f1787c56-dbe7-4056-ad80-63b768a0afd5"
+    },
+    {
+      "net": "AON_3V3",
+      "layer": "F.Cu",
+      "start_mm": [
+        128.556,
+        211.581
+      ],
+      "end_mm": [
+        127.154,
+        211.581
+      ],
+      "width_mm": 0.2,
+      "reason": "Lower the supply corner to free the U53 ground pad escape.",
+      "diagnostic_uuid": "22c3df83-d3ca-4009-9b63-f99d2999f62a"
+    },
+    {
+      "net": "AON_3V3",
+      "layer": "F.Cu",
+      "start_mm": [
+        129.0,
+        211.137
+      ],
+      "end_mm": [
+        128.556,
+        211.581
+      ],
+      "width_mm": 0.2,
+      "reason": "Lower the supply corner to free the U53 ground pad escape.",
+      "diagnostic_uuid": "72e8758e-93dc-4dbd-8ac0-68749b1b264a"
+    },
+    {
+      "net": "MOTION_PU",
+      "layer": "F.Cu",
+      "start_mm": [
+        165.007,
+        96.9267
+      ],
+      "end_mm": [
+        165.173,
+        97.093
+      ],
+      "width_mm": 0.2,
+      "reason": "Replace the local PU dogleg to free a reviewed SRC escape via under U2.",
+      "diagnostic_uuid": "02be823d-2d9c-4b49-ac1d-c4f004d42227"
+    },
+    {
+      "net": "MOTION_PU",
+      "layer": "F.Cu",
+      "start_mm": [
+        165.007,
+        96.9267
+      ],
+      "end_mm": [
+        165.173,
+        97.093
+      ],
+      "width_mm": 0.2,
+      "reason": "Replace the local PU dogleg to free a reviewed SRC escape via under U2.",
+      "diagnostic_uuid": "207b418b-a011-4f36-b99a-e70107d88dee"
+    },
+    {
+      "net": "MOTION_PU",
+      "layer": "F.Cu",
+      "start_mm": [
+        165.173,
+        94.25
+      ],
+      "end_mm": [
+        164.772,
+        94.6517
+      ],
+      "width_mm": 0.2,
+      "reason": "Replace the local PU dogleg to free a reviewed SRC escape via under U2.",
+      "diagnostic_uuid": "2a2a375a-7210-44c7-b7fd-ce052707bd40"
+    },
+    {
+      "net": "MOTION_PU",
+      "layer": "F.Cu",
+      "start_mm": [
+        164.772,
+        96.6913
+      ],
+      "end_mm": [
+        165.007,
+        96.9267
+      ],
+      "width_mm": 0.2,
+      "reason": "Replace the local PU dogleg to free a reviewed SRC escape via under U2.",
+      "diagnostic_uuid": "bfd3cb0f-4563-425a-93ff-180b9bdd3de1"
+    },
+    {
+      "net": "MOTION_PU",
+      "layer": "F.Cu",
+      "start_mm": [
+        164.772,
+        94.6517
+      ],
+      "end_mm": [
+        164.772,
+        96.6913
+      ],
+      "width_mm": 0.2,
+      "reason": "Replace the local PU dogleg to free a reviewed SRC escape via under U2.",
+      "diagnostic_uuid": "eb274a8c-a594-4740-82fc-f1e148d5a8be"
+    },
+    {
+      "net": "AON_3V3",
+      "layer": "F.Cu",
+      "start_mm": [
+        129.0,
+        210.188
+      ],
+      "end_mm": [
+        129.0,
+        211.137
+      ],
+      "width_mm": 0.2,
+      "reason": "Local pin escape adjustment; endpoints and logical net retained.",
+      "diagnostic_uuid": "26e8308e-d8df-4cce-b972-f3238d5c1d3e"
+    },
+    {
+      "net": "MOTION_TEMP_FLT_N",
+      "layer": "In1.Cu",
+      "start_mm": [
+        164.709,
+        93.8689
+      ],
+      "end_mm": [
+        164.709,
+        185.65
+      ],
+      "width_mm": 0.2,
+      "reason": "Local pin escape adjustment; endpoints and logical net retained.",
+      "diagnostic_uuid": "d356602f-2773-48c8-b5a9-92be383b861b"
+    }
+  ],
+  "tracks": [
+    {
+      "net": "MOTION_PU",
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "points": [
+        [
+          165.173,
+          94.25
+        ],
+        [
+          164.4,
+          95.023
+        ],
+        [
+          164.4,
+          96.32
+        ],
+        [
+          165.173,
+          97.093
+        ]
+      ]
+    },
+    {
+      "net": "MOTION_COMMON",
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "points": [
+        [
+          166.2,
+          95.25
+        ],
+        [
+          165.1,
+          95.25
+        ]
+      ]
+    },
+    {
+      "net": "MOTION_COMMON",
+      "layer": "B.Cu",
+      "width_mm": 0.5,
+      "points": [
+        [
+          165.1,
+          95.25
+        ],
+        [
+          166.8,
+          96.95
+        ],
+        [
+          176,
+          96.95
+        ],
+        [
+          177.2825,
+          96.2144
+        ]
+      ]
+    },
+    {
+      "net": "AON_3V3",
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "points": [
+        [
+          129,
+          210.188
+        ],
+        [
+          129.1,
+          210.1
+        ]
+      ]
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "width_mm": 0.25,
+      "points": [
+        [
+          127.8625,
+          210.95
+        ],
+        [
+          128.95,
+          210.95
+        ]
+      ]
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "B.Cu",
+      "width_mm": 0.25,
+      "points": [
+        [
+          128.95,
+          210.95
+        ],
+        [
+          127.3124,
+          217.2389
+        ]
+      ]
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "width_mm": 0.2,
+      "points": [
+        [
+          52.6,
+          224.75
+        ],
+        [
+          51.7,
+          224.95
+        ]
+      ]
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "B.Cu",
+      "width_mm": 0.25,
+      "points": [
+        [
+          51.7,
+          224.95
+        ],
+        [
+          51.7,
+          226.4
+        ],
+        [
+          58.4977,
+          226.4
+        ],
+        [
+          58.4977,
+          224.9362
+        ]
+      ]
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "F.Cu",
+      "width_mm": 0.25,
+      "points": [
+        [
+          30.625,
+          286.95
+        ],
+        [
+          31.15,
+          285.8
+        ]
+      ]
+    },
+    {
+      "net": "LOGIC_GND",
+      "layer": "B.Cu",
+      "width_mm": 0.25,
+      "points": [
+        [
+          31.15,
+          285.8
+        ],
+        [
+          23.0706,
+          284.8423
+        ]
+      ]
+    },
+    {
+      "net": "V3V3",
+      "layer": "F.Cu",
+      "width_mm": 0.25,
+      "points": [
+        [
+          29.05,
+          76
+        ],
+        [
+          29.9,
+          76.85
+        ],
+        [
+          29.9,
+          77
+        ]
+      ]
+    },
+    {
+      "net": "V3V3",
+      "layer": "B.Cu",
+      "width_mm": 0.25,
+      "points": [
+        [
+          29.9,
+          77
+        ],
+        [
+          27.1,
+          78.8
+        ]
+      ]
+    },
+    {
+      "net": "BATT_N",
+      "layer": "B.Cu",
+      "width_mm": 0.25,
+      "points": [
+        [
+          90,
+          176
+        ],
+        [
+          90,
+          171.8
+        ],
+        [
+          95.5261,
+          171.8
+        ],
+        [
+          98.7184,
+          174.9923
+        ]
+      ]
+    },
+    {
+      "net": "MOTION_TEMP_FLT_N",
+      "layer": "In1.Cu",
+      "width_mm": 0.2,
+      "points": [
+        [
+          164.709,
+          93.8689
+        ],
+        [
+          164.409,
+          94.1689
+        ],
+        [
+          164.409,
+          96.3
+        ],
+        [
+          164.709,
+          96.6
+        ],
+        [
+          164.709,
+          185.65
+        ]
+      ]
+    },
+    {
+      "net": "AON_3V3",
+      "layer": "B.Cu",
+      "width_mm": 0.25,
+      "points": [
+        [
+          129.1,
+          210.1
+        ],
+        [
+          126,
+          210.1
+        ],
+        [
+          126,
+          212.736
+        ],
+        [
+          127.154,
+          212.736
+        ]
+      ]
+    }
+  ],
+  "vias": [
+    {
+      "net": "MOTION_COMMON",
+      "position_mm": [
+        165.1,
+        95.25
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3
+    },
+    {
+      "net": "LOGIC_GND",
+      "position_mm": [
+        128.95,
+        210.95
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3
+    },
+    {
+      "net": "LOGIC_GND",
+      "position_mm": [
+        51.7,
+        224.95
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3
+    },
+    {
+      "net": "LOGIC_GND",
+      "position_mm": [
+        31.15,
+        285.8
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3
+    },
+    {
+      "net": "V3V3",
+      "position_mm": [
+        29.9,
+        77
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3
+    },
+    {
+      "net": "V3V3",
+      "position_mm": [
+        27.1,
+        78.8
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3
+    },
+    {
+      "net": "BATT_N",
+      "position_mm": [
+        90,
+        176
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3
+    },
+    {
+      "net": "AON_3V3",
+      "position_mm": [
+        129.1,
+        210.1
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3
+    },
+    {
+      "net": "AON_3V3",
+      "position_mm": [
+        127.154,
+        212.736
+      ],
+      "diameter_mm": 0.6,
+      "drill_mm": 0.3
+    }
+  ],
+  "notes": [
+    "The U4 via is a ground/thermal via in its grounded exposed pad; it is not placed in a floating pad.",
+    "All 125 locked analog items and all existing power transfer vias remain intact.",
+    "Track fingerprints use geometry, layer and net, not regenerated SES-import UUIDs."
+  ]
+}

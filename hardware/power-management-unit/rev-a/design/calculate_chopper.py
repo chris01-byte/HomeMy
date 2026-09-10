@@ -39,7 +39,7 @@ for voltage in (42.4,43,43.5,45,46):
         'nominal_power_W':voltage**2/5,
         'max_power_at_minus1percent_R_W':voltage**2/4.95,
         'time_to_500J_at_max_power_s':500/(voltage**2/4.95)})
-results={'status':'analytic_prototype_estimate_not_hardware_validation',
+results={'metadata':{'rev_a_engineering_prototype':True,'rev_b_production':False},'status':'analytic_prototype_estimate_not_hardware_validation',
     'assumptions':{'resistor_fraction_error':res_error,'reference_fraction_error':ref_error,
         'comparator_offset_bound_V':.0055,'input_bias_bound_A':50e-9,
         'PCB_ambient_range_C':[0,70],'gate_high_V':gate_hi,
