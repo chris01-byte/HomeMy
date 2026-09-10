@@ -60,6 +60,12 @@
         "docs/decisions/2026-08-31-semantic-perception-and-grasping.md"
       ]
     },
+    "power": {
+      "when": "battery, battery monitor, INA228, shunt, LM74930, MOSFET power path, power button, DC/DC converter, regeneration, brake chopper, LED status, CAN power telemetry, or shutdown hardware",
+      "files": [
+        "docs/decisions/2026-09-10-battery-monitor-and-power-architecture.md"
+      ]
+    },
     "runtime": {
       "when": "ROS 2 packages, launch, simulation, or test setup",
       "files": [
@@ -69,7 +75,7 @@
       ]
     },
     "appliance": {
-      "when": "systemd, customer boot, developer mode, status display, or power-on",
+      "when": "systemd, customer boot, developer mode, status LED, or power-on",
       "files": [
         "contracts/ros/system-lifecycle.md",
         "contracts/hardware/customer-power-on.md"
