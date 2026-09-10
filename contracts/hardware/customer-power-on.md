@@ -19,6 +19,7 @@ One customer-facing Power button starts HomeMy as an appliance. There is no cust
 - An addressable 5 V LED strip is the customer-visible status indicator; HomeMy has no permanently installed graphical display.
 - Detailed diagnostics are stored by Linux and are available through development/service interfaces.
 - The battery fuse and BMS remain the final protection layers.
+- In the OFF state, the ESP32, LED strip, Linux computer, and normal 5 V converter are unpowered. Only the BMS, main-controller shutdown domain, and low-current hardwired wake/self-hold circuit remain connected.
 
 ## Required Button Behavior
 
@@ -72,7 +73,7 @@ One customer-facing Power button starts HomeMy as an appliance. There is no cust
 | FAULT | Flashing red |
 | SHUTTING_DOWN | Pulsing violet |
 
-LED brightness and current are limited. The status indication must be controlled by the ESP32 and must not depend on the Ubuntu GUI.
+The external 5 V converter is sized for the physical LED/logic load. No software brightness or current setting is credited as electrical protection. The status indication remains controlled by the ESP32 and does not depend on the Ubuntu GUI.
 
 ## Validation
 
@@ -83,4 +84,3 @@ No hardware validation has been performed for this document.
 ## Rollback
 
 Until this contract is implemented, retain the developer-controlled power and shutdown procedure. Removing or disabling customer power automation must leave the independent motion gate in its safe state. Real actuators remain disconnected or independently inhibited during power-controller commissioning.
-

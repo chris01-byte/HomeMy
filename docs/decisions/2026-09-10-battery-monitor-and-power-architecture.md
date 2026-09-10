@@ -1,6 +1,6 @@
 # Battery Monitor and Power Architecture
 
-Status: accepted architecture; detailed circuit, component selection, and hardware validation pending.  
+Status: accepted architecture; PCB handoff prepared; detailed circuit, exact component selection, and hardware validation pending.  
 Date: 2026-09-10.
 
 ## Context
@@ -46,7 +46,7 @@ The current prototype plan is:
 - no arm brake or counterweight is planned. On complete power loss the arms may hang or fall vertically when the lift is high enough; this is an accepted prototype limitation, not a safety guarantee;
 - drive, lifts, arms, compute, and sensors may be active simultaneously.
 
-The onboard Linux-computer budget is based on the discussed i5-9600K system without a discrete GPU. The measured basic Ubuntu and sensor load was approximately 25 W at the battery side before the DC/DC converter, without ROS nodes. The complete compute/sensor branch is to be limited to approximately 65 W at the battery side. This limit must be verified under the final ROS workload.
+The onboard Linux-computer budget is based on the discussed i5-9600K system without a discrete GPU. The measured basic Ubuntu and sensor load was approximately 25 W at the battery side before the DC/DC converter, without ROS nodes. The complete compute/sensor branch is to be limited to approximately 65 W at the battery side. This limit is enforced through the final Linux/BIOS CPU-power configuration and verified under the final ROS workload. The branch has no dedicated current sensor; the central INA228 still measures the complete robot.
 
 The existing adjustable Chinese 8-55 V to 1-36 V buck converter is planned for the 12 V computer branch. Its seller ratings are not accepted as proof of continuous capability; it requires load, thermal, transient, and low-battery testing. A separate 24 V converter is planned for the two ESS17 lift motors and also requires testing.
 
@@ -59,7 +59,7 @@ The planned discharge path is:
 3. 0.5 mOhm four-terminal shunt;
 4. LM74930-Q1 controller with external back-to-back N-channel MOSFET banks;
 5. protected HomeMy DC bus;
-6. separately fused load branches and a separately controlled motion gate.
+6. resettable electronically protected small-load branches and a separately controlled motion gate.
 
 The charge port remains separate and is used only with the supplied 42 V charger.
 
@@ -83,7 +83,18 @@ The initial MOSFET concept uses two opposing banks with three parallel 100 V N-c
 
 This is a sizing hypothesis. The final MOSFET must be selected using maximum hot RDS(on), package current, transient thermal impedance, safe operating area, gate charge, and availability. The 150 A/1-3 s case must be verified thermally.
 
-No separate precharge circuit is planned initially because the observed/expected inrush is considered manageable. Commissioning must still measure peak current, pulse duration, battery sag, MOSFET temperature, and reliable startup. A precharge footprint or later revision remains a fallback if these tests fail.
+No separate precharge circuit is planned initially because the observed/expected inrush is considered manageable. Commissioning must still measure peak current, pulse duration, battery sag, MOSFET temperature, and reliable startup. A later revision remains a fallback if these tests fail.
+
+The updated branch-protection direction is intentionally simple and resettable:
+
+- the supplied 60 A battery fuse is the only melting fuse and remains the last-resort protection;
+- a common TPS48110-Q1 motion gate protects two passive arm outputs, the common ESS23 drive output, and the external 24 V lift-converter input;
+- no per-arm eFuse, MOSFET, shunt, or temperature sensor is planned;
+- TPS26631 eFuses protect the external computer-converter input and the external 5 V converter input;
+- the external 24 V lift converter relies on its verified internal protection plus the common motion gate;
+- electronic hard faults latch and do not autonomously repeat retries.
+
+The initial motion-stage concept uses a separate 0.5 mOhm, at least 5 W four-terminal shunt and two parallel 100 V N-channel MOSFETs in each opposing bank, four total. Initial motion thresholds are approximately 60 A overcurrent and 100 A fast short circuit. The requested approximately 0.5 s overcurrent timing is not final until the TPS48110 timing range, capacitor leakage/tolerance, and protection selectivity are calculated from the current datasheet.
 
 ## Measurement
 
@@ -133,7 +144,8 @@ Short motor-induced voltage dips must be filtered or compensated. After a hardwa
 | Up to 45 A | Normal operation |
 | Above 45 A for more than 1 s | Warning and commanded torque/power reduction |
 | Above 50 A for more than 2 s | Stop motion and record a fault |
-| Above 60 A for approximately 0.5 s | Hardware latch-off |
+| Motion current around 60 A | Common motion-gate hardware latch-off; delay remains to be validated |
+| Total battery current around 65 A for approximately 0.5 s | Main-path hardware latch-off |
 | Above approximately 120 A | Fast short-circuit latch-off |
 
 The LM74930-Q1 default 20 mV short-circuit threshold would equal 40 A with a 0.5 mOhm shunt and must therefore be programmed for the intended approximately 60 mV/120 A starting point. All current thresholds remain subject to tolerance analysis, fuse-curve coordination, measured motor transients, and supervised fault injection.
@@ -142,18 +154,17 @@ The LM74930-Q1 default 20 mV short-circuit threshold would equal 40 A with a 0.5
 
 Because the battery is not approved for regeneration, normal operation must not send generated energy into the battery. The LM74930-Q1 reverse-current function isolates the battery. A brake chopper on the protected motor bus absorbs generated energy.
 
-The initial chopper concept is:
+The updated chopper concept is:
 
-- 4.7 ohm brake resistor;
-- at least 150 W continuous rating on the specified heatsink;
-- at least 500 J documented pulse-energy capability;
+- two external 10 ohm/100 W aluminium-housed resistors in parallel, 5 ohm effective;
+- at least 500 J documented pulse-energy capability for the complete bank and verified duty cycle;
 - 100 V low-side MOSFET with suitable gate driver;
 - independent analogue comparator and hysteresis, not ESP32-only control;
 - temperature sensing on the resistor;
-- dedicated branch wiring protection;
+- no melting branch fuse; current, temperature, and main/motion electronic protection handle a stuck-on fault;
 - installation on a metal heat spreader away from the printed polymer enclosure.
 
-At 43 V, 4.7 ohm draws approximately 9.15 A and dissipates approximately 393 W while active.
+At 43 V, 5 ohm draws 8.6 A and dissipates approximately 370 W while active, about 185 W per resistor. The 100 W nameplate is not a continuous rating at this operating point. Exact pulse curves, chassis thermal resistance, repetition rate, and measured regenerative energy must prove this choice; otherwise the resistor technology or rating must increase.
 
 Initial motor-bus thresholds are:
 
@@ -203,7 +214,7 @@ HomeMy has no permanently installed graphical display. A short addressable 5 V L
 | FAULT | Flashing red |
 | SHUTTING_DOWN | Pulsing violet |
 
-The initial interface uses a WS2812B- or SK6812-class 5 V strip, limited brightness/current, a 74AHCT125-class 3.3-to-5 V data-level shifter, approximately 220-330 ohm series data resistance, and local bulk capacitance. Exact LED count and branch fuse remain open.
+The initial interface uses a WS2812B- or SK6812-class 5 V strip, a 74AHCT125-class 3.3-to-5 V data-level shifter, approximately 220-330 ohm series data resistance, and approximately 1000 uF of local bulk capacitance rated for at least 10 V. The external 5 V converter is to be sized for at least 5 A continuous. No software current or brightness limit is credited as electrical protection; animation brightness remains an aesthetic and thermal setting. Exact LED count remains open.
 
 Detailed voltage, signed current, power, energy, state of charge, remaining time, temperatures, faults, and time plots are shown through the Linux diagnostic application. An HDMI monitor is attached only for development; normal customer operation does not start the Ubuntu GUI. The same records are stored locally and later exposed through ROS 2, including `sensor_msgs/BatteryState` where appropriate.
 
@@ -235,7 +246,7 @@ The decision changes the customer power-on contract, lifecycle/status behavior, 
 Before any accepted value becomes a production limit, the following evidence is required:
 
 1. Full branch power budget with all actuators, compute, and sensors active.
-2. Exact branch fuses, wire gauges, connectors, return paths, grounding, and isolation.
+2. Exact resettable eFuse settings, wire gauges, connectors, return paths, grounding, and isolation; verify the battery fuse as the only melting fuse.
 3. MOSFET selection and hot/transient thermal verification.
 4. Main-path inrush test; add precharge if the measured result fails limits.
 5. DC/DC converter load, efficiency, thermal, transient, and undervoltage tests.
@@ -251,3 +262,14 @@ Before any accepted value becomes a production limit, the following evidence is 
 Principal risks are undocumented motor regeneration, unknown final arm energy, unverified Chinese DC/DC converter capability, MOSFET linear/transient stress, fuse/BMS mismatch, shunt-sense interaction, thermal concentration, and loss of diagnostic power during a hard trip.
 
 Until the complete electronic path is built and validated, retain the developer-controlled supply and shutdown procedure. Real actuators remain disconnected or independently inhibited during controller commissioning. Reverting this decision means removing the LM74930/chopper assumptions from the power contract without weakening the independent fuse, BMS, or motion gate.
+
+## PCB Handoff
+
+The consolidated schematic/layout input, machine-readable requirement status, fabrication blockers, and staged evidence plan are maintained in:
+
+- `hardware/power-board/ASTRA_PCB_HANDOFF.md`;
+- `hardware/power-board/interfaces-and-layout.md`;
+- `hardware/power-board/requirements.yaml`;
+- `hardware/power-board/verification-plan.md`.
+
+Those files capture later detail and take precedence for the PCB implementation where they explicitly refine this architectural record.
