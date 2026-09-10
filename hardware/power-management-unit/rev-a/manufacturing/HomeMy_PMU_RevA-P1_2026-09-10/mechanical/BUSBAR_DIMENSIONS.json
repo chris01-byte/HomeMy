@@ -1,0 +1,1035 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "package_version": "RevA-P1"
+  },
+  "coordinate_system": "F.Cu view, X right and Y down, absolute mm; underside bars are not mirrored",
+  "board_sha256": "13fcae0f58c9a6ac5f85eb721c24b44169a65f628baad6586bcd6002f4c17cfe",
+  "busbars": [
+    {
+      "ref": "BB1",
+      "net": "BATT_SENSED_P",
+      "material": "Cu-ETP / CW004A, conductivity certificate required",
+      "thickness_mm": 2.0,
+      "thickness_tolerance_mm": 0.1,
+      "outline": [
+        [
+          37,
+          14
+        ],
+        [
+          49,
+          14
+        ],
+        [
+          49,
+          86
+        ],
+        [
+          37,
+          86
+        ]
+      ],
+      "outline_tolerance_mm": 0.2,
+      "hole_position_tolerance_mm": 0.1,
+      "mounting_side": "B.Cu underside",
+      "contact_refs": [
+        "BC1",
+        "BC2"
+      ],
+      "holes": [
+        {
+          "x": 43,
+          "y": 20,
+          "diameter_mm": 3.4,
+          "function": "BC1"
+        },
+        {
+          "x": 43,
+          "y": 78,
+          "diameter_mm": 3.4,
+          "function": "BC2"
+        }
+      ],
+      "cutouts": [],
+      "minimum_unperforated_width_mm": 12,
+      "insulation": "Four 0.05 mm Kapton HN layers, total nominal 0.20 mm / maximum 0.22 mm; selected film and 0.25 mm Cu contact shims mandatory.",
+      "hole_diameter_tolerance_plus_minus_mm": 0.1,
+      "edge_requirement": "Deburr and break sharp edges; no conductive burrs against insulation; cutout inside radius 1 mm as dimensioned."
+    },
+    {
+      "ref": "BB2",
+      "net": "MAIN_COMMON",
+      "material": "Cu-ETP / CW004A, conductivity certificate required",
+      "thickness_mm": 2.0,
+      "thickness_tolerance_mm": 0.1,
+      "outline": [
+        [
+          65,
+          14
+        ],
+        [
+          75,
+          14
+        ],
+        [
+          75,
+          86
+        ],
+        [
+          65,
+          86
+        ]
+      ],
+      "outline_tolerance_mm": 0.2,
+      "hole_position_tolerance_mm": 0.1,
+      "mounting_side": "B.Cu underside",
+      "contact_refs": [
+        "BC3",
+        "BC4"
+      ],
+      "holes": [
+        {
+          "x": 70,
+          "y": 26,
+          "diameter_mm": 3.4,
+          "function": "BC3"
+        },
+        {
+          "x": 70,
+          "y": 74,
+          "diameter_mm": 3.4,
+          "function": "BC4"
+        }
+      ],
+      "cutouts": [],
+      "minimum_unperforated_width_mm": 10,
+      "insulation": "Four 0.05 mm Kapton HN layers, total nominal 0.20 mm / maximum 0.22 mm; selected film and 0.25 mm Cu contact shims mandatory.",
+      "hole_diameter_tolerance_plus_minus_mm": 0.1,
+      "edge_requirement": "Deburr and break sharp edges; no conductive burrs against insulation; cutout inside radius 1 mm as dimensioned."
+    },
+    {
+      "ref": "BB3",
+      "net": "SYS_BUS_P",
+      "material": "Cu-ETP / CW004A, conductivity certificate required",
+      "thickness_mm": 2.0,
+      "thickness_tolerance_mm": 0.1,
+      "outline": [
+        [
+          94,
+          14
+        ],
+        [
+          106,
+          14
+        ],
+        [
+          106,
+          74
+        ],
+        [
+          94,
+          74
+        ]
+      ],
+      "outline_tolerance_mm": 0.2,
+      "hole_position_tolerance_mm": 0.1,
+      "mounting_side": "B.Cu underside",
+      "contact_refs": [
+        "BC5",
+        "BC6"
+      ],
+      "holes": [
+        {
+          "x": 100,
+          "y": 25,
+          "diameter_mm": 3.4,
+          "function": "BC5"
+        },
+        {
+          "x": 100,
+          "y": 55,
+          "diameter_mm": 3.4,
+          "function": "BC6"
+        }
+      ],
+      "cutouts": [],
+      "minimum_unperforated_width_mm": 12,
+      "insulation": "Four 0.05 mm Kapton HN layers, total nominal 0.20 mm / maximum 0.22 mm; selected film and 0.25 mm Cu contact shims mandatory.",
+      "hole_diameter_tolerance_plus_minus_mm": 0.1,
+      "edge_requirement": "Deburr and break sharp edges; no conductive burrs against insulation; cutout inside radius 1 mm as dimensioned."
+    },
+    {
+      "ref": "BB4",
+      "net": "MOTION_SENSED_P",
+      "material": "Cu-ETP / CW004A, conductivity certificate required",
+      "thickness_mm": 2.0,
+      "thickness_tolerance_mm": 0.1,
+      "outline": [
+        [
+          129,
+          19
+        ],
+        [
+          141,
+          19
+        ],
+        [
+          141,
+          79
+        ],
+        [
+          129,
+          79
+        ]
+      ],
+      "outline_tolerance_mm": 0.2,
+      "hole_position_tolerance_mm": 0.1,
+      "mounting_side": "B.Cu underside",
+      "contact_refs": [
+        "BC7",
+        "BC8"
+      ],
+      "holes": [
+        {
+          "x": 135,
+          "y": 25,
+          "diameter_mm": 3.4,
+          "function": "BC7"
+        },
+        {
+          "x": 135,
+          "y": 65,
+          "diameter_mm": 3.4,
+          "function": "BC8"
+        }
+      ],
+      "cutouts": [],
+      "minimum_unperforated_width_mm": 12,
+      "insulation": "Four 0.05 mm Kapton HN layers, total nominal 0.20 mm / maximum 0.22 mm; selected film and 0.25 mm Cu contact shims mandatory.",
+      "hole_diameter_tolerance_plus_minus_mm": 0.1,
+      "edge_requirement": "Deburr and break sharp edges; no conductive burrs against insulation; cutout inside radius 1 mm as dimensioned."
+    },
+    {
+      "ref": "BB5",
+      "net": "MOTION_COMMON",
+      "material": "Cu-ETP / CW004A, conductivity certificate required",
+      "thickness_mm": 2.0,
+      "thickness_tolerance_mm": 0.1,
+      "outline": [
+        [
+          160,
+          19
+        ],
+        [
+          170,
+          19
+        ],
+        [
+          170,
+          79
+        ],
+        [
+          160,
+          79
+        ]
+      ],
+      "outline_tolerance_mm": 0.2,
+      "hole_position_tolerance_mm": 0.1,
+      "mounting_side": "B.Cu underside",
+      "contact_refs": [
+        "BC9",
+        "BC10"
+      ],
+      "holes": [
+        {
+          "x": 165,
+          "y": 28,
+          "diameter_mm": 3.4,
+          "function": "BC9"
+        },
+        {
+          "x": 165,
+          "y": 48,
+          "diameter_mm": 3.4,
+          "function": "BC10"
+        }
+      ],
+      "cutouts": [],
+      "minimum_unperforated_width_mm": 10,
+      "insulation": "Four 0.05 mm Kapton HN layers, total nominal 0.20 mm / maximum 0.22 mm; selected film and 0.25 mm Cu contact shims mandatory.",
+      "hole_diameter_tolerance_plus_minus_mm": 0.1,
+      "edge_requirement": "Deburr and break sharp edges; no conductive burrs against insulation; cutout inside radius 1 mm as dimensioned."
+    },
+    {
+      "ref": "BB6",
+      "net": "MOTION_BUS_P",
+      "material": "Cu-ETP / CW004A, conductivity certificate required",
+      "thickness_mm": 2.0,
+      "thickness_tolerance_mm": 0.1,
+      "outline": [
+        [
+          188,
+          8
+        ],
+        [
+          278,
+          8
+        ],
+        [
+          278,
+          32
+        ],
+        [
+          202,
+          32
+        ],
+        [
+          202,
+          87
+        ],
+        [
+          188,
+          87
+        ]
+      ],
+      "outline_tolerance_mm": 0.2,
+      "hole_position_tolerance_mm": 0.1,
+      "mounting_side": "B.Cu underside",
+      "contact_refs": [
+        "BC11",
+        "BC12",
+        "BC13",
+        "BC14"
+      ],
+      "holes": [
+        {
+          "x": 195,
+          "y": 42,
+          "diameter_mm": 3.4,
+          "function": "BC11"
+        },
+        {
+          "x": 195,
+          "y": 72,
+          "diameter_mm": 3.4,
+          "function": "BC12"
+        },
+        {
+          "x": 235,
+          "y": 20,
+          "diameter_mm": 3.4,
+          "function": "BC13"
+        },
+        {
+          "x": 272,
+          "y": 20,
+          "diameter_mm": 3.4,
+          "function": "BC14"
+        }
+      ],
+      "cutouts": [
+        {
+          "outline": [
+            [
+              214.0,
+              14.0
+            ],
+            [
+              226.0,
+              14.0
+            ],
+            [
+              226.0,
+              26.0
+            ],
+            [
+              214.0,
+              26.0
+            ]
+          ],
+          "reason": "J3 all eight pressfit tails; no bar contact to pin ends",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              244.0,
+              14.0
+            ],
+            [
+              256.0,
+              14.0
+            ],
+            [
+              256.0,
+              26.0
+            ],
+            [
+              244.0,
+              26.0
+            ]
+          ],
+          "reason": "J5 all eight pressfit tails; no bar contact to pin ends",
+          "corner_radius_mm": 1
+        }
+      ],
+      "minimum_unperforated_width_mm": 12,
+      "insulation": "Four 0.05 mm Kapton HN layers, total nominal 0.20 mm / maximum 0.22 mm; selected film and 0.25 mm Cu contact shims mandatory.",
+      "hole_diameter_tolerance_plus_minus_mm": 0.1,
+      "edge_requirement": "Deburr and break sharp edges; no conductive burrs against insulation; cutout inside radius 1 mm as dimensioned."
+    },
+    {
+      "ref": "BB7",
+      "net": "BATT_N",
+      "material": "Cu-ETP / CW004A, conductivity certificate required",
+      "thickness_mm": 2.0,
+      "thickness_tolerance_mm": 0.1,
+      "outline": [
+        [
+          8,
+          105
+        ],
+        [
+          356,
+          105
+        ],
+        [
+          356,
+          136
+        ],
+        [
+          8,
+          136
+        ]
+      ],
+      "outline_tolerance_mm": 0.2,
+      "hole_position_tolerance_mm": 0.1,
+      "mounting_side": "B.Cu underside",
+      "contact_refs": [
+        "BC15",
+        "NT1.2",
+        "NT2.2",
+        "NT3.2",
+        "NT4.2",
+        "NT5.2",
+        "NT6.2",
+        "NT7.2",
+        "NT8.2"
+      ],
+      "holes": [
+        {
+          "x": 27,
+          "y": 110,
+          "diameter_mm": 3.4,
+          "function": "BC15"
+        },
+        {
+          "x": 210.0,
+          "y": 127.0,
+          "diameter_mm": 3.4,
+          "function": "NT1.2"
+        },
+        {
+          "x": 240.0,
+          "y": 127.0,
+          "diameter_mm": 3.4,
+          "function": "NT2.2"
+        },
+        {
+          "x": 290.0,
+          "y": 122.0,
+          "diameter_mm": 3.4,
+          "function": "NT3.2"
+        },
+        {
+          "x": 320.0,
+          "y": 122.0,
+          "diameter_mm": 3.4,
+          "function": "NT4.2"
+        },
+        {
+          "x": 40.0,
+          "y": 122.0,
+          "diameter_mm": 3.4,
+          "function": "NT5.2"
+        },
+        {
+          "x": 70.0,
+          "y": 122.0,
+          "diameter_mm": 3.4,
+          "function": "NT6.2"
+        },
+        {
+          "x": 350.0,
+          "y": 122.0,
+          "diameter_mm": 3.4,
+          "function": "NT7.2"
+        },
+        {
+          "x": 100.0,
+          "y": 122.0,
+          "diameter_mm": 3.4,
+          "function": "NT8.2"
+        }
+      ],
+      "cutouts": [
+        {
+          "outline": [
+            [
+              9.0,
+              109.0
+            ],
+            [
+              21.0,
+              109.0
+            ],
+            [
+              21.0,
+              121.0
+            ],
+            [
+              9.0,
+              121.0
+            ]
+          ],
+          "reason": "J2 pressfit tails; never clamp on pin ends",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              214.0,
+              109.0
+            ],
+            [
+              226.0,
+              109.0
+            ],
+            [
+              226.0,
+              121.0
+            ],
+            [
+              214.0,
+              121.0
+            ]
+          ],
+          "reason": "J4 pressfit tails; never clamp on pin ends",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              244.0,
+              109.0
+            ],
+            [
+              256.0,
+              109.0
+            ],
+            [
+              256.0,
+              121.0
+            ],
+            [
+              244.0,
+              121.0
+            ]
+          ],
+          "reason": "J6 pressfit tails; never clamp on pin ends",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              194.0,
+              121.0
+            ],
+            [
+              206.0,
+              121.0
+            ],
+            [
+              206.0,
+              133.0
+            ],
+            [
+              194.0,
+              133.0
+            ]
+          ],
+          "reason": "NT1.1 branch washer/nut isolated from BB7; bridge only on top",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              224.0,
+              121.0
+            ],
+            [
+              236.0,
+              121.0
+            ],
+            [
+              236.0,
+              133.0
+            ],
+            [
+              224.0,
+              133.0
+            ]
+          ],
+          "reason": "NT2.1 branch washer/nut isolated from BB7; bridge only on top",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              274.0,
+              116.0
+            ],
+            [
+              286.0,
+              116.0
+            ],
+            [
+              286.0,
+              128.0
+            ],
+            [
+              274.0,
+              128.0
+            ]
+          ],
+          "reason": "NT3.1 branch washer/nut isolated from BB7; bridge only on top",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              304.0,
+              116.0
+            ],
+            [
+              316.0,
+              116.0
+            ],
+            [
+              316.0,
+              128.0
+            ],
+            [
+              304.0,
+              128.0
+            ]
+          ],
+          "reason": "NT4.1 branch washer/nut isolated from BB7; bridge only on top",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              24.0,
+              116.0
+            ],
+            [
+              36.0,
+              116.0
+            ],
+            [
+              36.0,
+              128.0
+            ],
+            [
+              24.0,
+              128.0
+            ]
+          ],
+          "reason": "NT5.1 branch washer/nut isolated from BB7; bridge only on top",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              54.0,
+              116.0
+            ],
+            [
+              66.0,
+              116.0
+            ],
+            [
+              66.0,
+              128.0
+            ],
+            [
+              54.0,
+              128.0
+            ]
+          ],
+          "reason": "NT6.1 branch washer/nut isolated from BB7; bridge only on top",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              334.0,
+              116.0
+            ],
+            [
+              346.0,
+              116.0
+            ],
+            [
+              346.0,
+              128.0
+            ],
+            [
+              334.0,
+              128.0
+            ]
+          ],
+          "reason": "NT7.1 branch washer/nut isolated from BB7; bridge only on top",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              84.0,
+              116.0
+            ],
+            [
+              96.0,
+              116.0
+            ],
+            [
+              96.0,
+              128.0
+            ],
+            [
+              84.0,
+              128.0
+            ]
+          ],
+          "reason": "NT8.1 branch washer/nut isolated from BB7; bridge only on top",
+          "corner_radius_mm": 1
+        }
+      ],
+      "minimum_unperforated_width_mm": 16,
+      "insulation": "Four 0.05 mm Kapton HN layers, total nominal 0.20 mm / maximum 0.22 mm; selected film and 0.25 mm Cu contact shims mandatory.",
+      "hole_diameter_tolerance_plus_minus_mm": 0.1,
+      "edge_requirement": "Deburr and break sharp edges; no conductive burrs against insulation; cutout inside radius 1 mm as dimensioned."
+    }
+  ],
+  "top_bridges": [
+    {
+      "ref": "NB1",
+      "outline": [
+        [
+          195.0,
+          122.0
+        ],
+        [
+          215.0,
+          122.0
+        ],
+        [
+          215.0,
+          132.0
+        ],
+        [
+          195.0,
+          132.0
+        ]
+      ],
+      "material": "Cu-ETP / CW004A",
+      "thickness_mm": 2,
+      "holes": [
+        {
+          "x": 200.0,
+          "y": 127.0,
+          "diameter_mm": 3.4
+        },
+        {
+          "x": 210.0,
+          "y": 127.0,
+          "diameter_mm": 3.4
+        }
+      ]
+    },
+    {
+      "ref": "NB2",
+      "outline": [
+        [
+          225.0,
+          122.0
+        ],
+        [
+          245.0,
+          122.0
+        ],
+        [
+          245.0,
+          132.0
+        ],
+        [
+          225.0,
+          132.0
+        ]
+      ],
+      "material": "Cu-ETP / CW004A",
+      "thickness_mm": 2,
+      "holes": [
+        {
+          "x": 230.0,
+          "y": 127.0,
+          "diameter_mm": 3.4
+        },
+        {
+          "x": 240.0,
+          "y": 127.0,
+          "diameter_mm": 3.4
+        }
+      ]
+    },
+    {
+      "ref": "NB3",
+      "outline": [
+        [
+          275.0,
+          117.0
+        ],
+        [
+          295.0,
+          117.0
+        ],
+        [
+          295.0,
+          127.0
+        ],
+        [
+          275.0,
+          127.0
+        ]
+      ],
+      "material": "Cu-ETP / CW004A",
+      "thickness_mm": 2,
+      "holes": [
+        {
+          "x": 280.0,
+          "y": 122.0,
+          "diameter_mm": 3.4
+        },
+        {
+          "x": 290.0,
+          "y": 122.0,
+          "diameter_mm": 3.4
+        }
+      ]
+    },
+    {
+      "ref": "NB4",
+      "outline": [
+        [
+          305.0,
+          117.0
+        ],
+        [
+          325.0,
+          117.0
+        ],
+        [
+          325.0,
+          127.0
+        ],
+        [
+          305.0,
+          127.0
+        ]
+      ],
+      "material": "Cu-ETP / CW004A",
+      "thickness_mm": 2,
+      "holes": [
+        {
+          "x": 310.0,
+          "y": 122.0,
+          "diameter_mm": 3.4
+        },
+        {
+          "x": 320.0,
+          "y": 122.0,
+          "diameter_mm": 3.4
+        }
+      ]
+    },
+    {
+      "ref": "NB5",
+      "outline": [
+        [
+          25.0,
+          117.0
+        ],
+        [
+          45.0,
+          117.0
+        ],
+        [
+          45.0,
+          127.0
+        ],
+        [
+          25.0,
+          127.0
+        ]
+      ],
+      "material": "Cu-ETP / CW004A",
+      "thickness_mm": 2,
+      "holes": [
+        {
+          "x": 30.0,
+          "y": 122.0,
+          "diameter_mm": 3.4
+        },
+        {
+          "x": 40.0,
+          "y": 122.0,
+          "diameter_mm": 3.4
+        }
+      ]
+    },
+    {
+      "ref": "NB6",
+      "outline": [
+        [
+          55.0,
+          117.0
+        ],
+        [
+          75.0,
+          117.0
+        ],
+        [
+          75.0,
+          127.0
+        ],
+        [
+          55.0,
+          127.0
+        ]
+      ],
+      "material": "Cu-ETP / CW004A",
+      "thickness_mm": 2,
+      "holes": [
+        {
+          "x": 60.0,
+          "y": 122.0,
+          "diameter_mm": 3.4
+        },
+        {
+          "x": 70.0,
+          "y": 122.0,
+          "diameter_mm": 3.4
+        }
+      ]
+    },
+    {
+      "ref": "NB7",
+      "outline": [
+        [
+          335.0,
+          117.0
+        ],
+        [
+          355.0,
+          117.0
+        ],
+        [
+          355.0,
+          127.0
+        ],
+        [
+          335.0,
+          127.0
+        ]
+      ],
+      "material": "Cu-ETP / CW004A",
+      "thickness_mm": 2,
+      "holes": [
+        {
+          "x": 340.0,
+          "y": 122.0,
+          "diameter_mm": 3.4
+        },
+        {
+          "x": 350.0,
+          "y": 122.0,
+          "diameter_mm": 3.4
+        }
+      ]
+    },
+    {
+      "ref": "NB8",
+      "outline": [
+        [
+          85.0,
+          117.0
+        ],
+        [
+          105.0,
+          117.0
+        ],
+        [
+          105.0,
+          127.0
+        ],
+        [
+          85.0,
+          127.0
+        ]
+      ],
+      "material": "Cu-ETP / CW004A",
+      "thickness_mm": 2,
+      "holes": [
+        {
+          "x": 90.0,
+          "y": 122.0,
+          "diameter_mm": 3.4
+        },
+        {
+          "x": 100.0,
+          "y": 122.0,
+          "diameter_mm": 3.4
+        }
+      ]
+    }
+  ],
+  "contact_shim": {
+    "material": "Cu-ETP",
+    "outer_diameter_mm": 8,
+    "inner_diameter_mm": 3.4,
+    "thickness_mm": 0.25,
+    "thickness_tolerance_mm": 0.02,
+    "quantity": 23,
+    "location": "All15 BC underside contacts and8 NT*.2 underside contacts; mandatory to clear0.20mm insulation sheet"
+  },
+  "film": {
+    "manufacturer": "Goodfellow",
+    "mpn": "IM30-FM-000200",
+    "order_code": "312-663-72",
+    "grade": "DuPont Kapton HN",
+    "sheet_size_mm": [
+      500,
+      500
+    ],
+    "sheet_thickness_mm": 0.05,
+    "layers_under_each_bar": 4,
+    "nominal_stack_mm": 0.2,
+    "incoming_maximum_stack_mm": 0.22,
+    "notes": "Cut all layers continuously per bar; reject overthick stack; Cu shim minimum0.23mm must stand proud."
+  },
+  "clamp_stack_document": "MECHANICAL_BUILD.md",
+  "verified_busbar_to_pcb_holes": true
+}

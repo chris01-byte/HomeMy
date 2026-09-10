@@ -19,15 +19,25 @@ Strict source/PCB/BOM reconciliation and final manufacturing file coverage also
 pass. Those results are bound to the final PCB and output hashes.
 
 Completion and release are tracked in [`release.json`](release.json). A missing
-or failed CAD check must never be interpreted as a pass. Native check summaries
-record report findings and command exit status separately. This portable
-Windows KiCad installation can produce complete reports and then fail while
-closing its registry settings; those process failures remain visible.
+or failed CAD check must never be interpreted as a pass. The final Rev A-P1 ERC
+and DRC both exited normally with code **0** in the installed KiCad 10.0.6 user
+session. All current CAD input hashes match. Earlier sandbox timeout reports
+are retained as historical evidence.
 
-Fabrication exports are engineering review artifacts; ordering requires the
-project owner's review. No physical hardware has been energized or ordered by
-this work. The external 60 A fuse remains the only melting fuse, and motion is
-hardware-disabled after power-on or a fault until explicit rearming.
+The versioned [Rev A-P1 order package](manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/README.md)
+and [ZIP](manufacturing/HomeMy_PMU_RevA-P1_2026-09-10.zip) cover the bare or
+populated PCB engineering prototype. **Engineering prototype – not production
+qualified.** Fabrication/assembly release is confined to that scope. The supplier
+must accept the specified stackup and press-fit process. No board has been
+ordered, built or energized by this work; no series-production release exists.
+All nine unresolved external items are required before their powered use,
+with the PCB interfaces frozen. The external 60 A fuse remains the only melting
+fuse, and motion remains OFF until explicit rearming.
+
+Four enforced power netclasses, explicit reviewed low-current tap groups,
+refined power pours and a wider battery-return corridor are documented in
+[HIGH_CURRENT_RULES.md](design/HIGH_CURRENT_RULES.md). All 247 checked power-pad
+connections remain continuous without crediting 492 control/tap copper items.
 
 ## Review entry points
 
@@ -45,7 +55,8 @@ hardware-disabled after power-on or a fault until explicit rearming.
 | [Stackup and press-fit](manufacturing/PCB_STACKUP_PRESSFIT.md) | Minimum finished 70/35/35/70 µm copper, 1.60–1.70 mm between outer copper faces excluding masks, and controlled finished holes |
 | [Connector assembly](manufacturing/CONNECTOR_ASSEMBLY.md) | Pin assignments, cable sizes, mating parts and assembly process |
 | [Reviewed ERC/DRC rules](evidence/REVIEWED_DEFAULT_ERC_DRC.md) | Enabled checks, applicable defaults and narrowly scoped pad rules |
-| [Manufacturing preview](manufacturing/engineering-preview/README.md) | Gerbers, drills, placements, BOM copies, assembly views and hash manifest |
+| [Rev A-P1 order package](manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/README.md) | Gerbers, drills, complete BOM, placements, DNP, 48 press-fit holes, busbar and polarity drawings, ZIP and hashes |
+| [Open external positions](manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/integration/OPEN_ORDER_ITEMS.md) | None before PCB ordering; nine before energization, with frozen interfaces |
 | [Reproduction workflow](scripts/README.md) | Source capture, native CAD generation, routing, checks and exports |
 
 ## Selected architecture

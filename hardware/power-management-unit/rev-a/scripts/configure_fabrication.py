@@ -37,7 +37,8 @@ def main():
         rules.append(f'''(rule "Reviewed fine-pitch land pattern {ref}"
   (condition "A.Type == 'Pad' && B.Type == 'Pad' && A.memberOfFootprint('{ref}') && B.memberOfFootprint('{ref}')")
   (constraint clearance (min 0.15mm)))''')
-    (CAD/(PROJECT+'.kicad_dru')).write_text('\n'.join(rules)+'\n')
+    from configure_power_rules import high_current_rules
+    (CAD/(PROJECT+'.kicad_dru')).write_text('\n'.join(rules)+'\n'+high_current_rules())
     print('Configured 2/1/1/2 oz, 1.60 mm excluding masks, Tg125-135, ENIG; explicit same-package pad constraints.')
 
 

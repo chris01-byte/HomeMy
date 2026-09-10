@@ -1,0 +1,1505 @@
+{
+  "rev_a_engineering_prototype": true,
+  "rev_b_production": false,
+  "passed": true,
+  "errors": [],
+  "board_sha256": "13fcae0f58c9a6ac5f85eb721c24b44169a65f628baad6586bcd6002f4c17cfe",
+  "inputs_sha256": {
+    "kicad\\HomeMy_PMU_RevA.kicad_pcb": "13fcae0f58c9a6ac5f85eb721c24b44169a65f628baad6586bcd6002f4c17cfe",
+    "kicad\\HomeMy_PMU_RevA.kicad_pro": "2a251a5abfb190753f4ad199ffc0a4c83147272ed79a480f5ba1357aa794e750",
+    "kicad\\HomeMy_PMU_RevA.kicad_dru": "cd4887d7d46be94dc7e81aa6dfe1a8736eb724fe911910cf9fd99174821278ac",
+    "evidence\\high-current-tap-capture.json": "7235f751be6bf960ab08618c8c6df106b6032dae5555a7d9b12a1cc08ef3dd15",
+    "evidence\\filled-power-copper-review.json": "dfe0db08ffe8f47d2adf65233863e497c40999737f4b99a9fe06ffa595ef41c9"
+  },
+  "reviewed_tap_items": 492,
+  "power_endpoint_checks": 247,
+  "power_tracks_min_width_mm": {
+    "SYS_BUS_P": 4.0,
+    "MOTION_SENSED_P": 4.0
+  },
+  "power_via_counts": {
+    "BATT_N": 723,
+    "MAIN_COMMON": 104,
+    "BATT_SENSED_P": 116,
+    "SYS_BUS_P": 189,
+    "MOTION_BUS_P": 215,
+    "MOTION_COMMON": 117,
+    "MOTION_SENSED_P": 148
+  },
+  "power_zones": [],
+  "cross_section_ledger": [
+    {
+      "label": "RSH1 input approach",
+      "net": "BATT_FUSED_P",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        22,
+        42.9
+      ],
+      "line_to_mm": [
+        22,
+        49
+      ],
+      "continuous_widths_mm": [
+        6.1
+      ],
+      "total_copper_width_mm": 6.1
+    },
+    {
+      "label": "RSH1 input approach",
+      "net": "BATT_FUSED_P",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        22,
+        42.9
+      ],
+      "line_to_mm": [
+        22,
+        49
+      ],
+      "continuous_widths_mm": [
+        6.1
+      ],
+      "total_copper_width_mm": 6.1
+    },
+    {
+      "label": "RSH1 output approach",
+      "net": "BATT_SENSED_P",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        35.5,
+        42.9
+      ],
+      "line_to_mm": [
+        35.5,
+        49
+      ],
+      "continuous_widths_mm": [
+        6.1
+      ],
+      "total_copper_width_mm": 6.1
+    },
+    {
+      "label": "RSH1 output approach",
+      "net": "BATT_SENSED_P",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        35.5,
+        42.9
+      ],
+      "line_to_mm": [
+        35.5,
+        49
+      ],
+      "continuous_widths_mm": [
+        6.1
+      ],
+      "total_copper_width_mm": 6.1
+    },
+    {
+      "label": "RSH2 input approach",
+      "net": "SYS_BUS_P",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        112,
+        42.9
+      ],
+      "line_to_mm": [
+        112,
+        49
+      ],
+      "continuous_widths_mm": [
+        6.1
+      ],
+      "total_copper_width_mm": 6.1
+    },
+    {
+      "label": "RSH2 input approach",
+      "net": "SYS_BUS_P",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        112,
+        42.9
+      ],
+      "line_to_mm": [
+        112,
+        49
+      ],
+      "continuous_widths_mm": [
+        6.1
+      ],
+      "total_copper_width_mm": 6.1
+    },
+    {
+      "label": "RSH2 output approach",
+      "net": "MOTION_SENSED_P",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        126,
+        42.9
+      ],
+      "line_to_mm": [
+        126,
+        49
+      ],
+      "continuous_widths_mm": [
+        6.1
+      ],
+      "total_copper_width_mm": 6.1
+    },
+    {
+      "label": "RSH2 output approach",
+      "net": "MOTION_SENSED_P",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        126,
+        42.9
+      ],
+      "line_to_mm": [
+        126,
+        49
+      ],
+      "continuous_widths_mm": [
+        6.1
+      ],
+      "total_copper_width_mm": 6.1
+    },
+    {
+      "label": "Q1 source outside lead bank",
+      "net": "MAIN_COMMON",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        63,
+        19.4
+      ],
+      "line_to_mm": [
+        63,
+        28.6
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q1 source outside lead bank",
+      "net": "MAIN_COMMON",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        63,
+        19.4
+      ],
+      "line_to_mm": [
+        63,
+        28.6
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q4 source outside lead bank",
+      "net": "MAIN_COMMON",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        77,
+        21.4
+      ],
+      "line_to_mm": [
+        77,
+        30.6
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q4 source outside lead bank",
+      "net": "MAIN_COMMON",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        77,
+        21.4
+      ],
+      "line_to_mm": [
+        77,
+        30.6
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q7 source outside lead bank",
+      "net": "MOTION_COMMON",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        158,
+        24.4
+      ],
+      "line_to_mm": [
+        158,
+        33.6
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q7 source outside lead bank",
+      "net": "MOTION_COMMON",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        158,
+        24.4
+      ],
+      "line_to_mm": [
+        158,
+        33.6
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q9 source outside lead bank",
+      "net": "MOTION_COMMON",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        172,
+        26.4
+      ],
+      "line_to_mm": [
+        172,
+        35.6
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q9 source outside lead bank",
+      "net": "MOTION_COMMON",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        172,
+        26.4
+      ],
+      "line_to_mm": [
+        172,
+        35.6
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Arm positive top rail",
+      "net": "MOTION_BUS_P",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        260,
+        10
+      ],
+      "line_to_mm": [
+        260,
+        34
+      ],
+      "continuous_widths_mm": [
+        13.0
+      ],
+      "total_copper_width_mm": 13.0
+    },
+    {
+      "label": "Arm positive top rail",
+      "net": "MOTION_BUS_P",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        260,
+        10
+      ],
+      "line_to_mm": [
+        260,
+        34
+      ],
+      "continuous_widths_mm": [
+        13.0
+      ],
+      "total_copper_width_mm": 13.0
+    },
+    {
+      "label": "Right positive rail at junction",
+      "net": "MOTION_BUS_P",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        330,
+        17
+      ],
+      "line_to_mm": [
+        330,
+        23
+      ],
+      "continuous_widths_mm": [
+        6.0
+      ],
+      "total_copper_width_mm": 6.0
+    },
+    {
+      "label": "Right positive rail at junction",
+      "net": "MOTION_BUS_P",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        330,
+        17
+      ],
+      "line_to_mm": [
+        330,
+        23
+      ],
+      "continuous_widths_mm": [
+        6.0
+      ],
+      "total_copper_width_mm": 6.0
+    },
+    {
+      "label": "Star crossed by SYS feed",
+      "net": "BATT_N",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        110,
+        108
+      ],
+      "line_to_mm": [
+        110,
+        134
+      ],
+      "continuous_widths_mm": [],
+      "total_copper_width_mm": 0
+    },
+    {
+      "label": "Star crossed by SYS feed",
+      "net": "BATT_N",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        110,
+        108
+      ],
+      "line_to_mm": [
+        110,
+        134
+      ],
+      "continuous_widths_mm": [
+        24.98
+      ],
+      "total_copper_width_mm": 24.98
+    },
+    {
+      "label": "Star under left arm terminal",
+      "net": "BATT_N",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        220,
+        104
+      ],
+      "line_to_mm": [
+        220,
+        136
+      ],
+      "continuous_widths_mm": [
+        0.24,
+        1.62,
+        1.62,
+        7.8
+      ],
+      "total_copper_width_mm": 11.28
+    },
+    {
+      "label": "Star under left arm terminal",
+      "net": "BATT_N",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        220,
+        104
+      ],
+      "line_to_mm": [
+        220,
+        136
+      ],
+      "continuous_widths_mm": [
+        0.24,
+        1.62,
+        1.62,
+        7.8
+      ],
+      "total_copper_width_mm": 11.28
+    },
+    {
+      "label": "Star under right arm terminal",
+      "net": "BATT_N",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        250,
+        104
+      ],
+      "line_to_mm": [
+        250,
+        136
+      ],
+      "continuous_widths_mm": [
+        2.0,
+        1.62,
+        7.8
+      ],
+      "total_copper_width_mm": 11.42
+    },
+    {
+      "label": "Star under right arm terminal",
+      "net": "BATT_N",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        250,
+        104
+      ],
+      "line_to_mm": [
+        250,
+        136
+      ],
+      "continuous_widths_mm": [
+        2.0,
+        1.62,
+        7.8
+      ],
+      "total_copper_width_mm": 11.42
+    },
+    {
+      "label": "Left arm return approaching NT1",
+      "net": "ARM_L_N",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        207,
+        109
+      ],
+      "line_to_mm": [
+        207,
+        132
+      ],
+      "continuous_widths_mm": [
+        12.5
+      ],
+      "total_copper_width_mm": 12.5
+    },
+    {
+      "label": "Left arm return approaching NT1",
+      "net": "ARM_L_N",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        207,
+        109
+      ],
+      "line_to_mm": [
+        207,
+        132
+      ],
+      "continuous_widths_mm": [
+        12.5
+      ],
+      "total_copper_width_mm": 12.5
+    },
+    {
+      "label": "Right arm return approaching NT2",
+      "net": "ARM_R_N",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        237,
+        109
+      ],
+      "line_to_mm": [
+        237,
+        132
+      ],
+      "continuous_widths_mm": [
+        12.5
+      ],
+      "total_copper_width_mm": 12.5
+    },
+    {
+      "label": "Right arm return approaching NT2",
+      "net": "ARM_R_N",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        237,
+        109
+      ],
+      "line_to_mm": [
+        237,
+        132
+      ],
+      "continuous_widths_mm": [
+        12.5
+      ],
+      "total_copper_width_mm": 12.5
+    },
+    {
+      "label": "Q40 source below bank",
+      "net": "CHOPPER_N",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        290,
+        40
+      ],
+      "line_to_mm": [
+        302,
+        40
+      ],
+      "continuous_widths_mm": [
+        5.0
+      ],
+      "total_copper_width_mm": 5.0
+    },
+    {
+      "label": "Q40 source below bank",
+      "net": "CHOPPER_N",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        290,
+        40
+      ],
+      "line_to_mm": [
+        302,
+        40
+      ],
+      "continuous_widths_mm": [
+        8.0
+      ],
+      "total_copper_width_mm": 8.0
+    },
+    {
+      "label": "Cap negative trunk near C312 positive",
+      "net": "CHOPPER_N",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        300,
+        20
+      ],
+      "line_to_mm": [
+        300,
+        27
+      ],
+      "continuous_widths_mm": [],
+      "total_copper_width_mm": 0
+    },
+    {
+      "label": "Cap negative trunk near C312 positive",
+      "net": "CHOPPER_N",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        300,
+        20
+      ],
+      "line_to_mm": [
+        300,
+        27
+      ],
+      "continuous_widths_mm": [
+        7.0
+      ],
+      "total_copper_width_mm": 7.0
+    },
+    {
+      "label": "Chopper return spine",
+      "net": "CHOPPER_N",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        338,
+        80
+      ],
+      "line_to_mm": [
+        346,
+        80
+      ],
+      "continuous_widths_mm": [],
+      "total_copper_width_mm": 0
+    },
+    {
+      "label": "Chopper return spine",
+      "net": "CHOPPER_N",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        338,
+        80
+      ],
+      "line_to_mm": [
+        346,
+        80
+      ],
+      "continuous_widths_mm": [
+        8.0
+      ],
+      "total_copper_width_mm": 8.0
+    },
+    {
+      "label": "Q40 drain exit",
+      "net": "CHOP_DRAIN",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        311,
+        29
+      ],
+      "line_to_mm": [
+        311,
+        41
+      ],
+      "continuous_widths_mm": [
+        11.28
+      ],
+      "total_copper_width_mm": 11.28
+    },
+    {
+      "label": "Q40 drain exit",
+      "net": "CHOP_DRAIN",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        311,
+        29
+      ],
+      "line_to_mm": [
+        311,
+        41
+      ],
+      "continuous_widths_mm": [],
+      "total_copper_width_mm": 0
+    },
+    {
+      "label": "Chopper drain connector neck",
+      "net": "CHOP_DRAIN",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        345,
+        27
+      ],
+      "line_to_mm": [
+        345,
+        33
+      ],
+      "continuous_widths_mm": [
+        3.0
+      ],
+      "total_copper_width_mm": 3.0
+    },
+    {
+      "label": "Chopper drain connector neck",
+      "net": "CHOP_DRAIN",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        345,
+        27
+      ],
+      "line_to_mm": [
+        345,
+        33
+      ],
+      "continuous_widths_mm": [],
+      "total_copper_width_mm": 0
+    },
+    {
+      "label": "Q1 source bank exit",
+      "net": "MAIN_COMMON",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        63.0,
+        19.4
+      ],
+      "line_to_mm": [
+        63.0,
+        28.599999999999998
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q1 drain bank exit",
+      "net": "BATT_SENSED_P",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        47.0,
+        19.4
+      ],
+      "line_to_mm": [
+        47.0,
+        30.6
+      ],
+      "continuous_widths_mm": [
+        11.2
+      ],
+      "total_copper_width_mm": 11.2
+    },
+    {
+      "label": "Q1 source bank exit",
+      "net": "MAIN_COMMON",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        63.0,
+        19.4
+      ],
+      "line_to_mm": [
+        63.0,
+        28.599999999999998
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q1 drain bank exit",
+      "net": "BATT_SENSED_P",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        47.0,
+        19.4
+      ],
+      "line_to_mm": [
+        47.0,
+        30.6
+      ],
+      "continuous_widths_mm": [
+        11.2
+      ],
+      "total_copper_width_mm": 11.2
+    },
+    {
+      "label": "Q2 source bank exit",
+      "net": "MAIN_COMMON",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        63.0,
+        44.4
+      ],
+      "line_to_mm": [
+        63.0,
+        53.599999999999994
+      ],
+      "continuous_widths_mm": [
+        8.9
+      ],
+      "total_copper_width_mm": 8.9
+    },
+    {
+      "label": "Q2 drain bank exit",
+      "net": "BATT_SENSED_P",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        47.0,
+        44.4
+      ],
+      "line_to_mm": [
+        47.0,
+        55.6
+      ],
+      "continuous_widths_mm": [
+        11.2
+      ],
+      "total_copper_width_mm": 11.2
+    },
+    {
+      "label": "Q2 source bank exit",
+      "net": "MAIN_COMMON",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        63.0,
+        44.4
+      ],
+      "line_to_mm": [
+        63.0,
+        53.599999999999994
+      ],
+      "continuous_widths_mm": [
+        8.96
+      ],
+      "total_copper_width_mm": 8.96
+    },
+    {
+      "label": "Q2 drain bank exit",
+      "net": "BATT_SENSED_P",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        47.0,
+        44.4
+      ],
+      "line_to_mm": [
+        47.0,
+        55.6
+      ],
+      "continuous_widths_mm": [
+        11.2
+      ],
+      "total_copper_width_mm": 11.2
+    },
+    {
+      "label": "Q3 source bank exit",
+      "net": "MAIN_COMMON",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        63.0,
+        69.4
+      ],
+      "line_to_mm": [
+        63.0,
+        78.60000000000001
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q3 drain bank exit",
+      "net": "BATT_SENSED_P",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        47.0,
+        69.4
+      ],
+      "line_to_mm": [
+        47.0,
+        80.6
+      ],
+      "continuous_widths_mm": [
+        11.2
+      ],
+      "total_copper_width_mm": 11.2
+    },
+    {
+      "label": "Q3 source bank exit",
+      "net": "MAIN_COMMON",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        63.0,
+        69.4
+      ],
+      "line_to_mm": [
+        63.0,
+        78.60000000000001
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q3 drain bank exit",
+      "net": "BATT_SENSED_P",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        47.0,
+        69.4
+      ],
+      "line_to_mm": [
+        47.0,
+        80.6
+      ],
+      "continuous_widths_mm": [
+        11.2
+      ],
+      "total_copper_width_mm": 11.2
+    },
+    {
+      "label": "Q4 source bank exit",
+      "net": "MAIN_COMMON",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        77.0,
+        21.4
+      ],
+      "line_to_mm": [
+        77.0,
+        30.599999999999998
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q4 drain bank exit",
+      "net": "SYS_BUS_P",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        93.0,
+        19.4
+      ],
+      "line_to_mm": [
+        93.0,
+        30.6
+      ],
+      "continuous_widths_mm": [
+        11.2
+      ],
+      "total_copper_width_mm": 11.2
+    },
+    {
+      "label": "Q4 source bank exit",
+      "net": "MAIN_COMMON",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        77.0,
+        21.4
+      ],
+      "line_to_mm": [
+        77.0,
+        30.599999999999998
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q4 drain bank exit",
+      "net": "SYS_BUS_P",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        93.0,
+        19.4
+      ],
+      "line_to_mm": [
+        93.0,
+        30.6
+      ],
+      "continuous_widths_mm": [
+        11.2
+      ],
+      "total_copper_width_mm": 11.2
+    },
+    {
+      "label": "Q5 source bank exit",
+      "net": "MAIN_COMMON",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        77.0,
+        46.4
+      ],
+      "line_to_mm": [
+        77.0,
+        55.599999999999994
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q5 drain bank exit",
+      "net": "SYS_BUS_P",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        93.0,
+        44.4
+      ],
+      "line_to_mm": [
+        93.0,
+        55.6
+      ],
+      "continuous_widths_mm": [
+        11.2
+      ],
+      "total_copper_width_mm": 11.2
+    },
+    {
+      "label": "Q5 source bank exit",
+      "net": "MAIN_COMMON",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        77.0,
+        46.4
+      ],
+      "line_to_mm": [
+        77.0,
+        55.599999999999994
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q5 drain bank exit",
+      "net": "SYS_BUS_P",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        93.0,
+        44.4
+      ],
+      "line_to_mm": [
+        93.0,
+        55.6
+      ],
+      "continuous_widths_mm": [
+        11.2
+      ],
+      "total_copper_width_mm": 11.2
+    },
+    {
+      "label": "Q6 source bank exit",
+      "net": "MAIN_COMMON",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        77.0,
+        71.4
+      ],
+      "line_to_mm": [
+        77.0,
+        80.60000000000001
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q6 drain bank exit",
+      "net": "SYS_BUS_P",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        93.0,
+        69.4
+      ],
+      "line_to_mm": [
+        93.0,
+        80.6
+      ],
+      "continuous_widths_mm": [
+        11.2
+      ],
+      "total_copper_width_mm": 11.2
+    },
+    {
+      "label": "Q6 source bank exit",
+      "net": "MAIN_COMMON",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        77.0,
+        71.4
+      ],
+      "line_to_mm": [
+        77.0,
+        80.60000000000001
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q6 drain bank exit",
+      "net": "SYS_BUS_P",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        93.0,
+        69.4
+      ],
+      "line_to_mm": [
+        93.0,
+        80.6
+      ],
+      "continuous_widths_mm": [
+        11.2
+      ],
+      "total_copper_width_mm": 11.2
+    },
+    {
+      "label": "Q7 source bank exit",
+      "net": "MOTION_COMMON",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        158.0,
+        24.4
+      ],
+      "line_to_mm": [
+        158.0,
+        33.599999999999994
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q7 drain bank exit",
+      "net": "MOTION_SENSED_P",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        142.0,
+        24.4
+      ],
+      "line_to_mm": [
+        142.0,
+        35.6
+      ],
+      "continuous_widths_mm": [
+        1.4175,
+        1.5971,
+        1.5971,
+        1.5972,
+        1.5971,
+        1.3975
+      ],
+      "total_copper_width_mm": 9.2035
+    },
+    {
+      "label": "Q7 source bank exit",
+      "net": "MOTION_COMMON",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        158.0,
+        24.4
+      ],
+      "line_to_mm": [
+        158.0,
+        33.599999999999994
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q7 drain bank exit",
+      "net": "MOTION_SENSED_P",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        142.0,
+        24.4
+      ],
+      "line_to_mm": [
+        142.0,
+        35.6
+      ],
+      "continuous_widths_mm": [
+        1.4175,
+        1.5971,
+        1.5971,
+        1.5972,
+        1.5971,
+        1.3975
+      ],
+      "total_copper_width_mm": 9.2035
+    },
+    {
+      "label": "Q8 source bank exit",
+      "net": "MOTION_COMMON",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        158.0,
+        59.4
+      ],
+      "line_to_mm": [
+        158.0,
+        68.6
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q8 drain bank exit",
+      "net": "MOTION_SENSED_P",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        142.0,
+        59.4
+      ],
+      "line_to_mm": [
+        142.0,
+        70.6
+      ],
+      "continuous_widths_mm": [
+        0.42,
+        1.6,
+        1.6,
+        1.62,
+        1.6,
+        1.6,
+        0.38
+      ],
+      "total_copper_width_mm": 8.82
+    },
+    {
+      "label": "Q8 source bank exit",
+      "net": "MOTION_COMMON",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        158.0,
+        59.4
+      ],
+      "line_to_mm": [
+        158.0,
+        68.6
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q8 drain bank exit",
+      "net": "MOTION_SENSED_P",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        142.0,
+        59.4
+      ],
+      "line_to_mm": [
+        142.0,
+        70.6
+      ],
+      "continuous_widths_mm": [
+        0.42,
+        1.6,
+        1.6,
+        1.62,
+        1.6,
+        1.6,
+        0.38
+      ],
+      "total_copper_width_mm": 8.82
+    },
+    {
+      "label": "Q9 source bank exit",
+      "net": "MOTION_COMMON",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        172.0,
+        26.4
+      ],
+      "line_to_mm": [
+        172.0,
+        35.599999999999994
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q9 drain bank exit",
+      "net": "MOTION_BUS_P",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        188.0,
+        24.4
+      ],
+      "line_to_mm": [
+        188.0,
+        35.6
+      ],
+      "continuous_widths_mm": [
+        11.2
+      ],
+      "total_copper_width_mm": 11.2
+    },
+    {
+      "label": "Q9 source bank exit",
+      "net": "MOTION_COMMON",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        172.0,
+        26.4
+      ],
+      "line_to_mm": [
+        172.0,
+        35.599999999999994
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q9 drain bank exit",
+      "net": "MOTION_BUS_P",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        188.0,
+        24.4
+      ],
+      "line_to_mm": [
+        188.0,
+        35.6
+      ],
+      "continuous_widths_mm": [
+        11.2
+      ],
+      "total_copper_width_mm": 11.2
+    },
+    {
+      "label": "Q10 source bank exit",
+      "net": "MOTION_COMMON",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        172.0,
+        61.4
+      ],
+      "line_to_mm": [
+        172.0,
+        70.6
+      ],
+      "continuous_widths_mm": [
+        9.02
+      ],
+      "total_copper_width_mm": 9.02
+    },
+    {
+      "label": "Q10 drain bank exit",
+      "net": "MOTION_BUS_P",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        188.0,
+        59.4
+      ],
+      "line_to_mm": [
+        188.0,
+        70.6
+      ],
+      "continuous_widths_mm": [
+        11.2
+      ],
+      "total_copper_width_mm": 11.2
+    },
+    {
+      "label": "Q10 source bank exit",
+      "net": "MOTION_COMMON",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        172.0,
+        61.4
+      ],
+      "line_to_mm": [
+        172.0,
+        70.6
+      ],
+      "continuous_widths_mm": [
+        9.2
+      ],
+      "total_copper_width_mm": 9.2
+    },
+    {
+      "label": "Q10 drain bank exit",
+      "net": "MOTION_BUS_P",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        188.0,
+        59.4
+      ],
+      "line_to_mm": [
+        188.0,
+        70.6
+      ],
+      "continuous_widths_mm": [
+        11.2
+      ],
+      "total_copper_width_mm": 11.2
+    },
+    {
+      "label": "Drive return vertical",
+      "net": "DRIVE_N",
+      "layer": "F.Cu",
+      "line_from_mm": [
+        328,
+        80
+      ],
+      "line_to_mm": [
+        336,
+        80
+      ],
+      "continuous_widths_mm": [
+        8.0
+      ],
+      "total_copper_width_mm": 8.0
+    },
+    {
+      "label": "Lift return inner 1",
+      "net": "LIFT_N",
+      "layer": "In1.Cu",
+      "line_from_mm": [
+        340,
+        100
+      ],
+      "line_to_mm": [
+        348,
+        100
+      ],
+      "continuous_widths_mm": [
+        8.0
+      ],
+      "total_copper_width_mm": 8.0
+    },
+    {
+      "label": "Lift return inner 2",
+      "net": "LIFT_N",
+      "layer": "In2.Cu",
+      "line_from_mm": [
+        340,
+        100
+      ],
+      "line_to_mm": [
+        348,
+        100
+      ],
+      "continuous_widths_mm": [
+        8.0
+      ],
+      "total_copper_width_mm": 8.0
+    },
+    {
+      "label": "LED positive trunk",
+      "net": "V5V",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        45,
+        256
+      ],
+      "line_to_mm": [
+        45,
+        264
+      ],
+      "continuous_widths_mm": [
+        6.4
+      ],
+      "total_copper_width_mm": 6.4
+    },
+    {
+      "label": "LED return trunk",
+      "net": "LOGIC_5V_N",
+      "layer": "B.Cu",
+      "line_from_mm": [
+        141,
+        255
+      ],
+      "line_to_mm": [
+        149,
+        255
+      ],
+      "continuous_widths_mm": [
+        6.4
+      ],
+      "total_copper_width_mm": 6.4
+    }
+  ],
+  "limits": [
+    "DRC widths are geometry rules, not a 50 A thermal rating.",
+    "1.0 mm zone choke screen and 1.2 mm fill filter reject thin slivers, but are not a permissible full-current trunk size.",
+    "PCB polygons alone do not model external busbars, contact resistance or unequal sharing.",
+    "Every changed power path requires new native checks and renewed bottleneck review."
+  ]
+}

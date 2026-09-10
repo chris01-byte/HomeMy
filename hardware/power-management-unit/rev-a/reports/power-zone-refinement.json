@@ -1,0 +1,136 @@
+{
+  "rev_a_engineering_prototype": true,
+  "rev_b_production": false,
+  "input_board_sha256": "a1684080910a9f78fa0426bea2d3cc7497851e19253950cd017c17e3bd6f21fa",
+  "output_board_sha256": "13fcae0f58c9a6ac5f85eb721c24b44169a65f628baad6586bcd6002f4c17cfe",
+  "new_zone_min_thickness_mm": 1.2,
+  "zones": [
+    {
+      "net": "MOTION_BUS_P",
+      "layer": "F.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "BATT_FUSED_P",
+      "layer": "F.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "MAIN_COMMON",
+      "layer": "F.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "SYS_BUS_P",
+      "layer": "F.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "BATT_SENSED_P",
+      "layer": "F.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "ARM_L_N",
+      "layer": "F.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "MOTION_COMMON",
+      "layer": "F.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "MOTION_BUS_P",
+      "layer": "F.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "ARM_R_N",
+      "layer": "F.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "BATT_N",
+      "layer": "F.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "SYS_BUS_P",
+      "layer": "F.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "SYS_BUS_P",
+      "layer": "F.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "MOTION_SENSED_P",
+      "layer": "F.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "SYS_BUS_P",
+      "layer": "F.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "MOTION_SENSED_P",
+      "layer": "B.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "ARM_L_N",
+      "layer": "B.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "SYS_BUS_P",
+      "layer": "B.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "BATT_SENSED_P",
+      "layer": "B.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "MOTION_BUS_P",
+      "layer": "B.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "ARM_R_N",
+      "layer": "B.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "MOTION_BUS_P",
+      "layer": "B.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "BATT_N",
+      "layer": "B.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "MAIN_COMMON",
+      "layer": "B.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "MOTION_COMMON",
+      "layer": "B.Cu",
+      "previous_min_thickness_mm": 1.2
+    },
+    {
+      "net": "BATT_FUSED_P",
+      "layer": "B.Cu",
+      "previous_min_thickness_mm": 1.2
+    }
+  ],
+  "batt_n_lower_edge_mm": 137,
+  "meaning": "Pour sliver filtering only; width and current capacity of complete paths require separate checks."
+}

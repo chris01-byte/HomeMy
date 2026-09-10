@@ -1,0 +1,61 @@
+{
+  "rev_a_engineering_prototype": true,
+  "rev_b_production": false,
+  "source_board_sha256": "13fcae0f58c9a6ac5f85eb721c24b44169a65f628baad6586bcd6002f4c17cfe",
+  "injected_track_uuid": "bec6a9c6-6088-4b24-a500-5946c3ad567a",
+  "injected_via_uuid": "cf52972e-b29f-4bf6-996e-63683c19ef56",
+  "native_process_exit_code": 124,
+  "expected_native_exit_code": 5,
+  "normal_expected_process_exit": false,
+  "undersized_track_detected": true,
+  "undersized_via_detected": true,
+  "detected_violations": [
+    {
+      "description": "Hole size out of range (rule 'PWR_MOTION power vias' min hole 0,4000 mm; actual 0,3000 mm)",
+      "items": [
+        {
+          "description": "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+          "pos": {
+            "x": 133.0,
+            "y": 32.0
+          },
+          "uuid": "cf52972e-b29f-4bf6-996e-63683c19ef56"
+        }
+      ],
+      "severity": "error",
+      "type": "drill_out_of_range"
+    },
+    {
+      "description": "Track width (rule 'PWR_MOTION power copper' min width 4,0000 mm; actual 0,2000 mm)",
+      "items": [
+        {
+          "description": "Track [MOTION_SENSED_P] on F.Cu, length 4,0000 mm",
+          "pos": {
+            "x": 133.0,
+            "y": 30.0
+          },
+          "uuid": "bec6a9c6-6088-4b24-a500-5946c3ad567a"
+        }
+      ],
+      "severity": "error",
+      "type": "track_width"
+    },
+    {
+      "description": "Via diameter (rule 'PWR_MOTION power vias' min diameter 0,8000 mm; actual 0,6000 mm)",
+      "items": [
+        {
+          "description": "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+          "pos": {
+            "x": 133.0,
+            "y": 32.0
+          },
+          "uuid": "cf52972e-b29f-4bf6-996e-63683c19ef56"
+        }
+      ],
+      "severity": "error",
+      "type": "via_diameter"
+    }
+  ],
+  "native_report_sha256": "857159ad788f0d16a78f2657e49114456bc175e5a00dded72a00f5ea89250a30",
+  "limitation": "Detection evidence is separate from process completion. The actual board is checked independently with native exit code zero."
+}

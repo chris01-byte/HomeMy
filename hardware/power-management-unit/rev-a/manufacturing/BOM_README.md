@@ -1,7 +1,11 @@
 # Revision A BOM
 
-State: `engineering_review_not_order_release`.
+State: `rev_a_prototype_procurement_data`.
 `rev_a_engineering_prototype = true`; `rev_b_production = false`.
+
+The versioned `HomeMy_PMU_RevA-P1_2026-09-10` package and `release.json`
+authorize bare or populated Rev-A prototype procurement only.
+**Engineering prototype – not production qualified.**
 
 Run `python scripts/build_bom.py` from the Revision A directory after
 regenerating the assembled CAD record. The builder uses only Python's standard
@@ -37,8 +41,17 @@ coupon acceptance remain separate from part-identity checks.
 source/CAD reconciliation. A nonzero builder exit means an identity, reference,
 population or source/CAD mismatch remains. The review files still record those
 errors rather than hiding a component. Successful validation establishes
-these data checks; it does not establish electrical performance or procurement
-readiness.
+these data checks; the versioned package supplies the complete procurement
+scope. No electrical performance or physical qualification follows from a BOM
+validation pass.
+
+The nine unselected external rows have explicit `required_before`,
+`fixed_interface` and `closure_evidence` fields. None requires selection before
+PCB ordering; all nine must be closed before their powered use. Their selection
+must fit the frozen PCB interfaces without changing footprints. See
+`HomeMy_PMU_RevA-P1_2026-09-10/integration/OPEN_ORDER_ITEMS.md`.
+Supplier acceptance of the specified stackup and press-fit process is a separate
+PCB order condition.
 
 Bare test pads, copper net ties, mounting holes and ERC power flags are PCB
 features rather than purchased parts. Manufacturer lifecycle observations

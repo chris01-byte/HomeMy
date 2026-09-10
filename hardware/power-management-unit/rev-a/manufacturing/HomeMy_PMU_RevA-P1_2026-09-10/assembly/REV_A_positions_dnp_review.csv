@@ -1,0 +1,5 @@
+﻿reference,value,mpn,manufacturer,footprint,x_mm,y_mm,kicad_rotation_deg,side,mounting,dnp,state,x_right_y_down_board_origin,footprint_anchor_not_centroid,board_excluded_from_position
+C244,10n,GRM21BR71H103KA01L,Murata Manufacturing,Capacitor_SMD:C_0805_2012Metric,33.000000,276.000000,90.000000,top,smd,True,rev_a_pcb_prototype_order_release,True,True,False
+J13,24V lift clamp DNP,1776508,Phoenix Contact,"Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",11.000000,244.000000,-90.000000,top,through_hole_manual,True,rev_a_pcb_prototype_order_release,True,True,False
+R243,60.4,RC1206FR-0760R4L,YAGEO,Resistor_SMD:R_1206_3216Metric,30.000000,272.000000,0.000000,top,smd,True,rev_a_pcb_prototype_order_release,True,True,False
+R244,60.4,RC1206FR-0760R4L,YAGEO,Resistor_SMD:R_1206_3216Metric,30.000000,280.000000,0.000000,top,smd,True,rev_a_pcb_prototype_order_release,True,True,False

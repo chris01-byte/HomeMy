@@ -1,0 +1,90 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-10T22:55:56",
+    "ignored_checks": [
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "HomeMy_PMU_RevA.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 0,3000 mm; actual 0,2751 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Zone [MOTION_BUS_P] on B.Cu, priority 1",
+                    "pos": {
+                        "x": 176.1,
+                        "y": 12.0
+                    },
+                    "uuid": "bc3cc4a5-1a24-4973-bf86-6c4bb462b1b3"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 0,3000 mm; actual 0,2429 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Zone [MOTION_BUS_P] on B.Cu, priority 1",
+                    "pos": {
+                        "x": 176.1,
+                        "y": 12.0
+                    },
+                    "uuid": "bc3cc4a5-1a24-4973-bf86-6c4bb462b1b3"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 0,3000 mm; actual 0,2482 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Zone [MAIN_COMMON] on B.Cu, priority 1",
+                    "pos": {
+                        "x": 59.2,
+                        "y": 14.0
+                    },
+                    "uuid": "e4fa4dff-6039-4f2a-a42c-f92926dc1122"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 0,3000 mm; actual 0,2628 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Zone [MOTION_SENSED_P] on F.Cu, priority 1",
+                    "pos": {
+                        "x": 122.0,
+                        "y": 19.0
+                    },
+                    "uuid": "f4e9243d-bb06-4768-be05-a5a19bc79494"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        }
+    ]
+}

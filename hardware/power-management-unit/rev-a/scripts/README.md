@@ -94,49 +94,70 @@ its final check hashes are authoritative. Source/calculation generator
 reproducibility is documented separately from end-to-end routing reproduction in
 `../evidence/generator-reproducibility-review.md`.
 
-## Native checks and exports
+## High-current rules and geometry
 
-`run_native_checks.py --kicad-root PATH` captures ERC and DRC JSON, complete
-process logs, input hashes, and elapsed time. DRC includes all severities, all
-track errors, and native schematic parity. Report findings, unconnected items,
-and parity differences are separate counts. This portable Windows installation
-can write a complete report and then fail while closing its denied registry
-settings. The script explicitly records that process failure and returns a
-failure code; a zero-finding report is not a successful process exit.
+`configure_power_rules.py` maintains four power classes and actual custom-rule
+minima: 4 mm battery/SYS/motion tracks, 6 mm arm returns, 0.8/0.4 mm power vias
+and a scoped 1 mm neck screen. `configure_fabrication.py` includes these rules.
+Exact low-current tap UUIDs and canonical geometry hashes are captured in
+`evidence/high-current-tap-capture.json`; initial capture refuses an unknown
+board. Do not recapture new thin tracks as exceptions. Kelvin nets retain their
+signal class. See `design/HIGH_CURRENT_RULES.md` for all exceptions and necks.
 
-Review the enabled/default-ignored checks in
-`../evidence/REVIEWED_DEFAULT_ERC_DRC.md`. No item-level DRC exclusions are used.
-The same-package 0.15 mm pad constraints do not lower routed-track clearance.
-Neither ordinary DRC nor the bulk-copper calculations establish a current or
-temperature rating; inspect the actual filled paths and retain the bring-up
-gates in the parent directory.
+`refine_power_zones.py` applies the 1.2 mm minimum fill and BATT_N extent change.
+Changing copper requires a new refill, physical-geometry review and native
+ERC/DRC; do not reuse release checks after edits. `audit_high_current.py` checks
+classes, minima, exact tap geometry and power-path evidence. The negative-control
+script uses a separate temporary board and must never alter the release PCB.
 
-After final native checks and source/PCB parity:
+## Native checks and prototype exports
 
-1. Run `build_bom.py` with ordinary Python. Exact PCB and external purchase
-   records, DNP positions, and input hashes must reconcile.
-2. Set `../release.json` to the actual verified state. Record remaining owner
-   review and physical measurements separately from CAD completion.
-3. Run `export_manufacturing.py` using KiCad Python through `run_tool.py`.
-   The exporter writes eleven Gerber layers, separate PTH/NPTH Excellon files,
-   drill maps, assembly views, placement subsets, BOM copies, and a manifest.
-   It checks file coverage and source hashes and never saves the source PCB.
-   The native assembly SVG viewport is fitted to the board outline without
-   changing plotted geometry or physical scale.
-4. Render and inspect both assembly views, all four copper layers, drill maps,
-   and the mechanical contact drawing. A file-coverage pass alone is not a
-   geometry or assembly review.
-5. Re-run the electrical, rule-configuration, and placement review audits after
-   any affected source changes; record final report/input hashes in the release
-   evidence. Commit the reviewable artifacts on the feature branch.
+`run_native_checks.py --kicad-root PATH` calls the actual `kicad-cli` directly and
+records native exit codes, complete JSON reports/logs, input hashes and elapsed
+time. DRC includes all severities, all track errors and full schematic parity.
+A zero-finding report with timeout 124 is a failed process. Historical examples
+are archived in `reports/archive-before-prototype-release/`.
 
-`render_review.cjs PATH_TO_SHARP` reproduces the retained PNG views from the
-native SVGs; visual inspection remains a separate review action.
-`audit_final_package.py` verifies the recorded input/output hashes, current PCB
-identity and final findings across the native, electrical, BOM, manufacturing,
-critical-routing, filled-power and placement reports. Its artifact-consistency
-result does not reinterpret the native processes' failed shutdown as success.
+The final recorded ERC and DRC both exited **0** using installed KiCad 10.0.6
+outside the agent's restricted Windows registry environment. To repeat there,
+run the prepared `RUN_NATIVE_CHECKS.cmd` file, or invoke its path with PowerShell's
+`&` call operator. Do not paste the batch file's contents into PowerShell.
+No administrator privileges are needed. An installation path can also be passed
+to the Python runner directly; the native checks do not use `run_tool.py`.
 
-The Gerber/placement package retains an engineering-review status. Actual
-fabrication, assembly, press-fit qualification, and battery energization are
-separate owner actions. No physical tests are claimed by the scripts.
+For a changed design, work in this dependency order:
+
+1. Finish CAD, refill zones and review critical routes, placement and orientation.
+   Refresh `review_filled_power.py`, `review_critical_routing.py`,
+   `review_placement_access.py` and `manufacturing/review_assembly_orientation.py`
+   against the actual final PCB. Native scripts use KiCad Python as documented.
+2. Run `build_bom.py` and then the native checks. Both CLI processes must exit 0,
+   with zero findings/open connections/parity differences and matching inputs.
+3. Refresh `evidence/write_power_review.py`, then `audit_high_current.py`.
+   `prepare_prototype_release.py` verifies these records and sets only the
+   engineering-prototype fabrication/assembly scope; it never grants production.
+4. Refresh `audit_electrical_parity.py` after updating `release.json` and BOM.
+5. Run KiCad Python on `export_manufacturing.py --prototype-version RevA-P1
+   --output hardware/power-management-unit/rev-a/manufacturing/HomeMy_PMU_RevA-P1_2026-09-10`.
+   It creates Gerbers, drills/maps, placements, BOM copies and assembly views.
+   A changed delivery requires a new version/date in the release scripts; do not
+   silently replace an already ordered package under the same identity.
+6. Run ordinary Python on `build_prototype_package.py` to add press-fit rows,
+   mechanical and polarity drawings, integration gates, evidence, manifest and ZIP.
+7. Refresh native copper plots and run `render_review.cjs PATH_TO_SHARP`.
+   Inspect changed drawings; rendering is separate from visual acceptance.
+8. Run `evidence/audit_rule_configuration.py`,
+   `evidence/update_rule_review_snapshot.py`, `audit_final_package.py`, and
+   `audit_release_metadata.py --output
+   hardware/power-management-unit/rev-a/evidence/release-metadata-scope.json`.
+   Resolve all consistency findings before committing the delivery.
+
+The final audit verifies current CAD/report hashes, normal native success,
+BOM/export coverage, exact delivery and ZIP bytes, high-current evidence and
+rendered artifacts. No item-level DRC exclusions are accepted. Rule details are
+in `evidence/REVIEWED_DEFAULT_ERC_DRC.md`.
+
+The versioned package is orderable only as a bare/populated engineering
+prototype, subject to supplier acceptance of its stackup and press-fit process.
+Physical assembly, coupon acceptance, staged energization and production
+qualification remain separate; no physical test is claimed by these scripts.

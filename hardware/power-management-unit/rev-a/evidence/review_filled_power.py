@@ -11,6 +11,8 @@ def main():
     digest=hashlib.sha256(filename.read_bytes()).hexdigest()
     board=pcb.LoadBoard(str(filename));board.BuildConnectivity();cn=board.GetConnectivity()
     fps={f.GetReference():f for f in board.GetFootprints()}
+    tap_receipt=json.loads((ROOT/'evidence/high-current-tap-capture.json').read_text())
+    tap_ids={row['uuid'] for rows in tap_receipt['groups'].values() for row in rows}
     layers=[pcb.F_Cu,pcb.In1_Cu,pcb.In2_Cu,pcb.B_Cu]
     selected=['BATT_FUSED_P','BATT_SENSED_P','MAIN_COMMON','SYS_BUS_P','MOTION_SENSED_P','MOTION_COMMON','MOTION_BUS_P','BATT_N','ARM_L_N','ARM_R_N','DRIVE_N','LIFT_N','CHOPPER_N','CHOP_DRAIN','PC_BUCK_IN_P','LOGIC_BUCK_IN_P','PC_N','LOGIC_BUCK_N','LOGIC_5V_N','V5V']
     polys={};zones=[]
@@ -35,6 +37,7 @@ def main():
                 q=pcb.SHAPE_POLY_SET();p.TransformShapeToPolygon(q,layer,0,mm(.005),pcb.ERROR_INSIDE)
                 polys[key].BooleanAdd(q)
     for t in board.GetTracks():
+        if t.m_Uuid.AsString() in tap_ids:continue
         name=t.GetNetname()
         if name not in selected:continue
         for layer in layers:
@@ -80,7 +83,7 @@ def main():
                 if q.Contains(point(x,y),i,0,True):ids.add(i)
         return ids
     path_checks=[]
-    for net,layer,a,b in [
+    required_paths=[
       ('BATT_FUSED_P',pcb.F_Cu,('J1',1),('RSH1',1)),
       ('BATT_SENSED_P',pcb.F_Cu,('RSH1',4),('Q1',13)),
       ('MAIN_COMMON',pcb.F_Cu,('Q1',2),('Q4',2)),
@@ -99,7 +102,23 @@ def main():
       ('CHOPPER_N',pcb.B_Cu,('C313',2),('NT7',1)),
       ('BATT_N',pcb.B_Cu,('J2',1),('NT7',2)),
       ('LOGIC_5V_N',pcb.B_Cu,('J18',3),('J11',2)),
-    ]:
+    ]
+    anchors={'BATT_FUSED_P':('RSH1',1),'BATT_SENSED_P':('BC1',1),
+             'MAIN_COMMON':('BC3',1),'SYS_BUS_P':('BC5',1),
+             'MOTION_SENSED_P':('BC7',1),'MOTION_COMMON':('BC9',1),
+             'MOTION_BUS_P':('BC11',1),'BATT_N':('BC15',1),
+             'ARM_L_N':('NT1',1),'ARM_R_N':('NT2',1)}
+    critical_refs={f'J{i}' for i in range(1,7)}|{f'Q{i}' for i in range(1,11)}|{f'BC{i}' for i in range(1,16)}|{f'NT{i}' for i in range(1,9)}|{'RSH1','RSH2'}
+    for ref in sorted(critical_refs):
+        for p in fps[ref].Pads():
+            net=p.GetNetname()
+            if net not in anchors:continue
+            layers_to_check=[pcb.B_Cu] if net=='BATT_N' else [pcb.F_Cu]
+            if ref.startswith('BC') or net in ['ARM_L_N','ARM_R_N']:
+                layers_to_check=[pcb.F_Cu,pcb.B_Cu] if net!='BATT_N' else [pcb.B_Cu]
+            for layer in layers_to_check:
+                required_paths.append((net,layer,(ref,p.GetNumber()),anchors[net]))
+    for net,layer,a,b in required_paths:
         pa,pb=pad_samples(*a),pad_samples(*b)
         ia,ib=outline_ids(net,layer,pa),outline_ids(net,layer,pb)
         path_checks.append({'net':net,'layer':board.GetLayerName(layer),'from_pad':f'{a[0]}.{a[1]}','to_pad':f'{b[0]}.{b[1]}','from_samples_mm':pa,'to_samples_mm':pb,'from_outline_ids':sorted(ia),'to_outline_ids':sorted(ib),'same_continuous_copper_outline':bool(ia&ib),'limitation':'Same-layer geometric continuity only; no minimum width or current rating implied.'})
@@ -200,6 +219,7 @@ def main():
     out={'metadata':{'rev_a_engineering_prototype':True,'rev_b_production':False},'board_sha256':digest,'board_unchanged_during_review':hashlib.sha256(filename.read_bytes()).hexdigest()==digest,
          'review_status':'Engineering snapshot; final release is not established by this geometry analysis.',
          'method':'Native saved filled polygons plus effective pad/track copper, own drill interiors subtracted. No refilling or saving. Fixed 0.02 mm cross-sections.',
+         'low_current_tap_items_omitted_from_power_geometry':len(tap_ids),
          'limitations':['Cross-sections are local samples, not global minimum cuts.','Native per-layer pad connection flags are local adjacency checks; they do not prove connection to the complete net. No external bars are added to the native copper model.','Per-field via resistance assumes that all counted barrels share current uniformly; a field total does not establish a local transfer rating.','No resistance, temperature, SOA or pressfit measurement was performed.'],
          'zones':zones,'cross_sections':scans,'same_layer_path_checks':path_checks,'power_pad_connectivity':checks,'vias':vias,
          'via_field_source':field,'via_field_ideal_calculations':via_calcs,

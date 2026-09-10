@@ -1,0 +1,2970 @@
+{
+  "rev_a_engineering_prototype": true,
+  "rev_b_production": false,
+  "input_board_sha256": "70bb8eb588f2fc7200f718df0e11659aad3c40c7e9d5652228eb7a58d232065f",
+  "output_board_sha256": "a488c211910deb36736386306b608efc82363ba54f7ec0786471a06c7ea8a3dc",
+  "copper_and_non_group_data_identical": true,
+  "groups": {
+    "PWR_TAP_CONTROL": [
+      {
+        "uuid": "04100a94-6ceb-477b-ae90-c3c266b2e2ff",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "569dc53949dc181980d01b840af2b630d21b36ec54f44471f5c3cab91db86b24"
+      },
+      {
+        "uuid": "07253299-4c11-43f7-9534-fed0f1e3f525",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "132af6be18a163d62b8ab4d83f38bf357d13864997557f3dc1a3bbe7e64f81b5"
+      },
+      {
+        "uuid": "095e853c-610d-4c66-b46a-0c28aed2c451",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "f8deee8e1b36b1ed9c4ddb8ca039753a9abac01e348ece0b8484d74e6fcebd1e"
+      },
+      {
+        "uuid": "09a877b7-17f6-4e09-b77d-db7bc7b712f5",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "56c9a132634f086d5c6cdf06fc1d277a73525b11ca93b1badacadf5ceb9be958"
+      },
+      {
+        "uuid": "0a6d0986-1249-4899-9d6b-11180439b170",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "073028c096c1fad4bc831fcabb4019a38bd2d09c12707b35647780f4f7b08200"
+      },
+      {
+        "uuid": "0a96b916-d3f5-4771-a85d-98071ac6054d",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "97ea3bef3701b236a2f8d6e3ee101d922d07bd212a1b6d83eb5c783c3ddf23d0"
+      },
+      {
+        "uuid": "154f5667-68fd-4d6d-8da8-3bc22b581ced",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "73708bca70baf731c9177671431dc6af1460af3ead321ac7521ef96cb64a51e6"
+      },
+      {
+        "uuid": "1b225738-7dda-488e-a044-2f6db9629b9a",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "798fb0584a8ba33e101eeb97f0b0460c5e9550a83b7213b17a6965e88e4ee2f9"
+      },
+      {
+        "uuid": "204a17ba-bdae-49c9-b5ae-81c451a1122a",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "1e588bf9da4f95a92b8ef4c5946f4e808e5a3c0515d671dda02e7c88295f9f39"
+      },
+      {
+        "uuid": "25732bff-6eae-4489-93f6-b2e46a2f5aae",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "b20302a01cd0cd39bd034e8d555fcc6bb0b91abc0409553b4c273f5b5fc02b5b"
+      },
+      {
+        "uuid": "25af63b4-3d57-4e59-a61a-b83d93ad0154",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "1215a22ba018785ac917e16dc6c09caf27102f4a3faec4a48a329002f9a182a7"
+      },
+      {
+        "uuid": "29ca3876-b7f7-423a-8198-d2eed04efd23",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "f0c0d19a4ddce80ccf2c07f21a2708d1a520aa63f69f06ba9eb33e779ad20e43"
+      },
+      {
+        "uuid": "2a419c48-b294-45a3-9cec-f46500c592ca",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "14f23d08ce096d5d56b2dce7111509d4f3c8be883db85f58bbb759e1b18cf151"
+      },
+      {
+        "uuid": "327a31a0-3aa3-4230-b52d-931ae0589c7b",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "a1201fe0f065a1de4d7b884b5254630895bb1b0ecb03a61ad25a5f2d02cc3cef"
+      },
+      {
+        "uuid": "3e86a66b-a8eb-46df-a17e-a968d5c3d73a",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "10771d23670f0842478cad397b268ac99c0e79feec98705ccb809320797b9f32"
+      },
+      {
+        "uuid": "3eb0a3cf-2e4d-4da3-a5d6-97a4b8f57abb",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "b17c21f3f38677543f3fc582a88bd50dc6ad2ee2e664f08bd726c9baff55e2a0"
+      },
+      {
+        "uuid": "3fcd3e44-4465-4985-bdaf-c5f32760e7bd",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "e6d5292428a58a03e076808f1b55b4fb39a0521bebd4eb2b69be1df79c1ea8b5"
+      },
+      {
+        "uuid": "4034abb6-dcfb-4af5-915e-ccd426c29509",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "e806163afb4c18bd98ddf33eeb776f23cafdc089d082e10dfeb30d498612280f"
+      },
+      {
+        "uuid": "435a0cd1-88d8-4b90-b2cb-af315a496dd4",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "5e5435e623a31de329e1a7c1b53c2d60e532553a5cb807352bc4fdc4d741c0f3"
+      },
+      {
+        "uuid": "48825837-752b-43d9-bbbd-b9e39b77cd54",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "2fccb43c88c4b9606bc3f085b560682a5fe0ece09cef33f4176c71ec0e5a0dd4"
+      },
+      {
+        "uuid": "4a15b58c-9cb5-4a3a-b0bb-abf0bb748281",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "d26aceae0664f37842c6004fd0784fffef98a5a5e95b4c2e5c2d107297ac9856"
+      },
+      {
+        "uuid": "4b4973f4-46bf-42d0-826b-230530770457",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "a1b10eebffdc5bf3360112dd345d8f6e828e1ffbb48d41cf2edf81c6a0892538"
+      },
+      {
+        "uuid": "4d20a443-aa0a-472f-91d2-a9e06673d785",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "2bc3d31790b450158bcfe98211163f9fc591f4fa8c64951cb62ceac1f1a65c9e"
+      },
+      {
+        "uuid": "4e31b0cf-e849-49e2-82a8-6fe641c75455",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "01bcf1b8d1aba5122c4c9269498d5d24bd82ee6771a05a2624749485c689b986"
+      },
+      {
+        "uuid": "5186e42b-1e85-4120-9acd-c939df9abf9e",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "8a12f5c723b8fdcac3ec60c79d67745fafa8aa0e765ef7e183306807aade0e47"
+      },
+      {
+        "uuid": "53837f64-4c5f-48d6-bc89-27e3b539c1a0",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "e2a2c9d04c7177c9a13aaafe6a9ae990dbb2c3566668e6641f4cc4a856124218"
+      },
+      {
+        "uuid": "56842ac5-9775-4003-a61b-98038c7867f2",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "586ee80a3ffc91c0df62b5126ca8cb0ffc8d5f665b247f5b19d957bd3d059b09"
+      },
+      {
+        "uuid": "58e804e3-4d4f-45b1-ae18-e75313570003",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "f55282719354849fe42266f41fafde6db7559f1285996ecdd4be51cfa71bbc6e"
+      },
+      {
+        "uuid": "5a19d8f8-4736-450d-b96e-f92115b4e2da",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "6bc800751ec1ae882f6d06ccf02834a38e892ad4573921b1429624d1271a2b85"
+      },
+      {
+        "uuid": "5b5f563c-acf8-4eec-ac88-0111fc7f5b74",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "603c6393c3e1c77cceac1b92ac96467091c0b15051a37e0ef05924c9a0070346"
+      },
+      {
+        "uuid": "5f734393-28a1-4b43-bd5c-105aae3ac412",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "9db93990ab3a4d372c2653f50bb1cdd946ce27a20512d6d55ea5e3e4e5e1de17"
+      },
+      {
+        "uuid": "606acc87-c156-4e56-8e3f-2d3107324437",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "169a612d5373812a11a7f52bcb18e6dc09dc17be33e3679a3332172d4fb492b9"
+      },
+      {
+        "uuid": "60a4dd70-c7a4-48c5-a063-77dd9e14bc35",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "03d4984e80b16591b62ccb801b1beb86ca79b55b41c42e3b24d2d767720bac78"
+      },
+      {
+        "uuid": "612b1774-4bd6-4d95-967d-e92c7c35784a",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "379b6d31553ff023d9edb9a927aa017b2e16a5fb19c1ef1daf0b07e30c93124d"
+      },
+      {
+        "uuid": "62696eb0-033d-4fd8-a924-9322d881910f",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "ce5dd71c4cb586386e7caadf55b76e2145a3bd9864010760f03067ec4b4f0fe1"
+      },
+      {
+        "uuid": "634c35e1-ef6d-4d91-9b7e-8660797f68c5",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "e0de98d7bd441a988e7bfb733f40d637ea142619997d51b87cea3ab90a13b614"
+      },
+      {
+        "uuid": "65840c66-dadb-4a8b-a585-c6b0d3c48d96",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "02b83681a7f100ff7d8624947236f6975519cb501ed278ed17921523bd655506"
+      },
+      {
+        "uuid": "69b68929-406b-448f-9831-f378542681a6",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "2e0f45d29f0a8ad37c6e03c683f208f1401f16c43cf557a4d1eab4d6a08650ba"
+      },
+      {
+        "uuid": "6b1f60ca-719e-452c-b8a2-e0b8e57129cc",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "b9dd13ef758fb9da325099c50399f00e8bdc0b7a53d90fd7d79e7cdc5f0fc6f7"
+      },
+      {
+        "uuid": "724116da-c5fa-4b04-ba03-99b414585731",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "607e1eb845cca4a9e5278fb2c60e307414b6c3a17ee249e91e8b1ccae22c9271"
+      },
+      {
+        "uuid": "737b20bd-9f54-40b6-9e57-de653adb29cf",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "92e5f46de86a1dc868797fd094251098bf213dd7d928332f5fd64568206b10bd"
+      },
+      {
+        "uuid": "740c3d2e-fdb9-4de6-b83c-7d6567d62021",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "7032f63a2be4932f4705684abf5f586b2960afc8e08099b55643fa3a278a3795"
+      },
+      {
+        "uuid": "7535e1ac-7f30-4ff6-8871-83503d00d297",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "6afc4b357d0945877d5c9249ece98ff1b9b587a8ef10cc1aa6e26eb1780b5546"
+      },
+      {
+        "uuid": "7769244b-517b-401d-af97-19ba07b4706f",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "222b2571b5c370c549a1c8b46dd4eb44a745eb835745411bdd30ad79c046a7c9"
+      },
+      {
+        "uuid": "78a26c5c-f4f3-4b16-82d5-35b31fb3e467",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "98e9cfdd62de70529526ffe5ace8cb3cf7bb4d73c1f772d27c2ff9e22ec65f56"
+      },
+      {
+        "uuid": "83d4af01-6514-4d35-8f55-227d07efb4fd",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "54f0cbcbcf6d8c72ef9a4ae99d49d71622a51ccbc82c2159e5712669f632d7ba"
+      },
+      {
+        "uuid": "8545774d-6006-4774-87bc-859e4d192bba",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "4b44a2576eb43dd4c1e2eb8c29f3b225808273b6fe910acb52584a66575eace8"
+      },
+      {
+        "uuid": "857ac5df-a02f-453c-8863-42b1e94c6385",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "4dd0b6cf3b7489c5c9670c08a7a461dcaa442104a60181c2bdef5d2876a2e9f2"
+      },
+      {
+        "uuid": "889f91d4-adbc-4867-81d0-1c10ccddaf1c",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "c259828973c39c2c61578195889dcce598be4eab9c36602f8c91762a46452d48"
+      },
+      {
+        "uuid": "8bf54e67-e21c-4df3-9e04-bc5d69c9ad84",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "a9470e7ac76daf205ccf25e523ad9fe3901ba6811aaa896a01c51935a986790d"
+      },
+      {
+        "uuid": "8cac6be3-afaf-49b7-8bee-9bfe078d75cb",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "8bff1df0669cd5092c4ce8ed10dd7e000730db53d0b6f8f1ef61c60ff9c35c27"
+      },
+      {
+        "uuid": "8d20a1eb-386e-45ca-910d-62ff3e1dd40e",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "3a409a85159f0c5c270c9b77d12e42ca40cbf111065d14cbd8f83c5af1ae6939"
+      },
+      {
+        "uuid": "902f26ab-6825-4d6b-a2aa-896d048a504f",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "a50eba9f6211d208d6e551bf196e11ff547f6041de349926c4d058f857be364d"
+      },
+      {
+        "uuid": "9241f498-f359-4c06-bbd4-ef1b65a71078",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "b51557ce992363281dab41cf1a5432908b65469a6a9f67f350fe63d4361ef352"
+      },
+      {
+        "uuid": "95d27b94-024f-487a-b442-02dd26763e77",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "89b19be6babb2e4c2b74be593e1da0adb12d85626dd7beb0e7372d97279f3181"
+      },
+      {
+        "uuid": "9e119243-5dfa-4f13-b761-74258829daac",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "0de690876a30d4f2086774999d3af75c1cec7c83b5b73e3d6711ac16a50b1fe0"
+      },
+      {
+        "uuid": "a170b096-bf03-44ee-865d-585e262b5e18",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "acff7cb32f46c4b773e8959fccd7d5a12e1cad545946a7c252ef95a2f167c5f0"
+      },
+      {
+        "uuid": "a41b06fc-fc3c-4c68-ae41-2b6f4fc76420",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "356c8f537f6da1fe026aa82241a3b8c6ce0a0a9b083a98c8b18f572985ed3965"
+      },
+      {
+        "uuid": "abf227bf-dcee-44f7-81cd-1a3e73954276",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "993c4b7391388ab92f431b6783b08f4b06fb57558c9a4cab00ab36384830b15d"
+      },
+      {
+        "uuid": "ac012330-2081-4eb8-9313-330072533009",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "4e821ede01c7f3eb4d9ad1a73e04a7644b9890f24e21be57c9cd79e54d8c7eac"
+      },
+      {
+        "uuid": "ad7b84ed-b805-401d-a6ce-68225593656f",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "12e30d46b973c6d900e65744482d1f84eec8c026673e445ff8515c943e9af60a"
+      },
+      {
+        "uuid": "af6fd6aa-9252-431d-8c4d-f442ab2c0185",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "eedb0e51865888f4726ce32087ff2e85d62d239c09a53730ec72cbfe75a45f43"
+      },
+      {
+        "uuid": "b7f28669-bef1-446b-9069-272b8bab9df2",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "ebefc01c6f9ac8416548cc4a4d242c1dd426c9e5ede3218cd5bbd16a1fba2425"
+      },
+      {
+        "uuid": "bade64f5-bf21-4bac-a195-f3f7c131d86c",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "291d5347a8c753a0e24b02be8caec2fbdf47d4134328b3f87f83c738cd4b1d71"
+      },
+      {
+        "uuid": "c1c09106-b9d4-473c-8020-27e07b40c794",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "79050f329697e27249193b4d95c8b80b1f749424d6aa4f5be78d786ae3a5e10c"
+      },
+      {
+        "uuid": "c1c8aad6-a587-449d-a96d-2b17caa5ec76",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "f1202d36e42a585f22b6ecd1c235da27b80f40b6d5aff17ed8f4cdf07cf22a1b"
+      },
+      {
+        "uuid": "c321d001-1be7-46b4-848c-767ad424de23",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "ab63dde9fd6bda8e55397b5d64885c85e6980af67534bfd9301a080faaba1f4b"
+      },
+      {
+        "uuid": "c4086ff3-4c93-433c-b58c-ecfafe6c97ed",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "2ae5cb99d32d339c9d08c9f8ab536d3e13dea956c43a97902746c219a60bcd11"
+      },
+      {
+        "uuid": "c4868936-852e-4f08-9283-60eec5364981",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "0ea0d6b568ed46396afd4ac854f8550208a3619d3fc315194debe90b9e9dd548"
+      },
+      {
+        "uuid": "c6681bea-2c3a-46a9-869e-00a5ba9b7225",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "86777385316759e7779147dfc676528ac34ff1e4102ce4b6b522b3ccb90f9bc0"
+      },
+      {
+        "uuid": "d22b779b-d7f8-462f-bce0-7982b15b7679",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "27c4e879f2ea86a2af3ef818c9eb9db2bd31d8349034d72c192c16476230d97b"
+      },
+      {
+        "uuid": "d280b345-1b9f-4500-9472-6f632828cb37",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "57be337881e63427d3a7bb7e6ecbc7856f5e639a1415073135d217bc9fd422b7"
+      },
+      {
+        "uuid": "d3316186-706e-4753-8c92-5d18c9cd467c",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "b1d61dec970b8572c85984c2a7ed18fc541d9426921eadf55ea5ebdde2ba892b"
+      },
+      {
+        "uuid": "d3ba29b0-2b31-4935-b3ef-523da311c43d",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "f44636787e47b930ed3d1e32be3b21b9dd484fe84973f5b00bc6ad3e220316f1"
+      },
+      {
+        "uuid": "d564b345-447a-4dfd-85af-85424d7907ec",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "50ff858e4340d4d7bbbe5c87d949defb717fb5a1f15ca4a2d12292413e6f70e1"
+      },
+      {
+        "uuid": "d5a4c461-1d4d-4088-ae6d-88ef1b41e832",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "1d049b2c0a6feb04a792c9770e66bd6e3ba21fd473156399b289914e60e954e0"
+      },
+      {
+        "uuid": "d8ac32ab-37cb-45f0-9dd6-1b03df3f2f83",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "453e095db6cd12dbc24516a306aedf52757b833adb393301aea7524367c10efb"
+      },
+      {
+        "uuid": "daf7cea3-a39c-45b0-b12e-688505573905",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "1c1b06fdd477e0265cdeba5c767996cff0405e0884059ca20994aeee995fbdab"
+      },
+      {
+        "uuid": "dd1b5cc5-9f2e-439e-957a-26225d502681",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "c93e2abfa4d992a7c05505ea1617e6607e8d2fb5b954329094dfa280bf3c1124"
+      },
+      {
+        "uuid": "de0ad1be-ec1d-408d-be82-4c12cad99fec",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "d6b433f7cfecaf5e2ec3d98f72b233d7f228728f796880f8f82bf59d4822c15c"
+      },
+      {
+        "uuid": "dfebde6d-2107-44e5-ae84-455eed287059",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "a79837f3636680202081d27a0d9fab3e67d3b49bbfd9d9396c0dc03aa0c07513"
+      },
+      {
+        "uuid": "ea4b2ff3-a39d-471a-ba06-571f21187efa",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "0460516a5428127e05317326180d179579449f48d88c9d3d019d430ef6d191ed"
+      },
+      {
+        "uuid": "eb07e479-f503-448f-9ba4-3a664ec5cc94",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "d8362fc630e1b138a88e656dc734d8fa8a646766686659dc449f2e9f40840e61"
+      },
+      {
+        "uuid": "ec258aae-a6d7-4599-823b-4c8d1c807c39",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "8916ec8bf6469e11580f439d8cff850584e2b3ae9f46d3868654f1009f51ea27"
+      },
+      {
+        "uuid": "ef7f714a-fb6b-4e18-9261-1e13f389fef3",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "0ab2247630ce7ec0665fa0401330de8476648ed2b6e4b72a1a0b77b4a688d588"
+      },
+      {
+        "uuid": "f00ca379-e965-4112-ac21-faa637e2592a",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "b0c39dc01e8b105488c4a8944503ce290d47213acfb2067fe8e3389922b562c4"
+      },
+      {
+        "uuid": "f34093fb-a2a8-4737-95c5-e9c22ec1d12f",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "bb280c154b5b864e1221badbf4541b6cdafa473f5ff8f22e7d4ba4be43bf326f"
+      },
+      {
+        "uuid": "f4b4ff1e-cb6a-4fc5-9023-c3939363b5f2",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "2d061035e83bff2d9116deede97422dd536d86d6264cce6b8391cc7d282a6879"
+      },
+      {
+        "uuid": "f5bd1444-b145-40cd-a8a1-33ae7f583ba8",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "6d6a91afae186fe0ee2da6c76c98bc8561100ed56edcb8456f6f8b465fb499a0"
+      },
+      {
+        "uuid": "fad6e4e2-00a7-4967-bf58-62b3ab9c1677",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "520372ee6035de793d008b8a67a1e09bb54c00f06b428b6c8c59c4f871b251f2"
+      },
+      {
+        "uuid": "fafb1c9a-ebc7-486d-9346-a50e584f33e3",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "8a6dd559ab8d3e35fee12acb8a6933193bf5454bff30f8604d406d195cf3e81f"
+      },
+      {
+        "uuid": "fc0bd8a6-6a6d-4054-ab51-d888959d3386",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "d6b50bff9a90d41a711e4da73f839dd7083b843e7f2b783ca624a769d5c4128f"
+      },
+      {
+        "uuid": "fc28a431-5da9-4699-833e-2c517e57ffe1",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "a6c9752b1247998a459c42beec8d17b74918fb7cc5bc53d21ac591d364f15535"
+      },
+      {
+        "uuid": "fd7d684e-beac-4988-838d-f75db744a02f",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "5798aa1194539fed204c8731306946f0a89a080a30839e28b70b83ae3722b101"
+      },
+      {
+        "uuid": "ff1260ce-367a-4bc4-858a-bd00087e4917",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "746d5527721196c9a04d21a0ef4c4d706d3c246eea415eb746fbc7d7be750dc0"
+      },
+      {
+        "uuid": "00234630-3504-4810-8b55-617c9f206d13",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "2c9a3d7548c3053a811e82e2ed3065693dc669ed25d31e0061f5e356309ff97c"
+      },
+      {
+        "uuid": "03e7a58c-dff3-4ead-8237-1df74c781d52",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "a1393fe4437ea9bc2caea32a332b892cd18833a0f986d1e705bcae3a7e886f9f"
+      },
+      {
+        "uuid": "0f0ebf41-6f6b-4126-87cc-4309cb05deae",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "0056be0dcd8034531505b7c9a13b75f751805d351721e150580ca436da422e67"
+      },
+      {
+        "uuid": "134cc0c6-060e-46f0-95b8-0053460c6192",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "851c93631f0d3ab03a8fe360be83a111b5c57482bb5abd67c6f8b29661ec20d3"
+      },
+      {
+        "uuid": "15d5f02c-d8b4-494c-b2e1-959b8782ad57",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "daefcaf405e5b5395ce5fd19459e1eccfa5109f32e34759c8f7da79bfbb22ae3"
+      },
+      {
+        "uuid": "15e82f3c-b557-4adf-ad42-578fde45cf9c",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "318e4613c69b97f2558cb4801228e35865cf40d205894ab2042eddf1573117c9"
+      },
+      {
+        "uuid": "16ac4725-5fbf-450e-86c7-9a41859097f5",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "4ef60e2bb4ff4f4e008e71fc1ed0b8197600457e2e6ed1a93a3e0042aaf7247c"
+      },
+      {
+        "uuid": "24b0ff04-f1f2-4844-902d-410b7b1acec3",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "b9ed1968a0847a4a268f13648bea93062db2fc5eebbeb331fc5f1c097a09d0b3"
+      },
+      {
+        "uuid": "262b47db-ccc6-4997-8220-37923a2eac64",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "3f81fb5a300066a9dd43ab2105c7930962663c54089387328344e737f160a8fe"
+      },
+      {
+        "uuid": "26f1f274-4977-4b86-8d71-49170a5c6656",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "9be2cd0eb56489184897ce509cb2013e53782a4c516394679b8387641918cf5c"
+      },
+      {
+        "uuid": "2b567afd-a6c3-4c53-835e-79ca030090d5",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "26a6e5beaac254e09e883df9648bb9abe1a7d95dd5a15adf3868220ab380e73f"
+      },
+      {
+        "uuid": "373da1ee-0505-4706-9230-acacdcb6fbd3",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "96b7d3ec0a18b07751b3ab3e7d93c3d2f2ad2d994694b17317e2dcf3adc62b05"
+      },
+      {
+        "uuid": "383290c3-e1c5-4480-b54b-da15d69db2e6",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "6c2d23bad5dd25a349100bc28a94dbb7ad6e69250572c94cd31200eb7edd384c"
+      },
+      {
+        "uuid": "38604d77-ee53-4928-9cb7-4a3c9773ff55",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "93bb89c26b7ece19660dddcd9efe8c803c4fdf0ae943ab8c5a015298bdea48ad"
+      },
+      {
+        "uuid": "43feab97-608f-4234-84bf-2ca1bfb9abb2",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "e01493c44fb9b01ece5e524db47565eb03af317b15c4cc1cdd42e7713731e72f"
+      },
+      {
+        "uuid": "459a26c2-7a03-4437-b43b-96be889656b0",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "dce337b3f83088ece184516d20fc18bef95e8d7b128335195adb97839fd3c601"
+      },
+      {
+        "uuid": "4d8b0e40-fdd7-433c-9117-b3560990232c",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "54ebd30da674305ac26f9ff74722ef9ce37cd6e466be3409151b8b7d63358880"
+      },
+      {
+        "uuid": "57ad7a95-45a7-4446-b378-d1786eff792d",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "653da44ee88d4d3367a597e1730eff4d4fd00fde693775d8a5d7f111f7797895"
+      },
+      {
+        "uuid": "5f5812d8-c26a-43d9-bda8-469765fbd36f",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "19065fa7b5770371b6bf275e2eb7955d828db563969649b01d75a740a902a599"
+      },
+      {
+        "uuid": "5fa46d46-528b-4641-90e7-4703de525f2d",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "a70967c1024b1326d5524787739eb864b09def8a06c2c1799d045638273c1442"
+      },
+      {
+        "uuid": "6cc40803-169c-4a37-966b-904b88c29e10",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "e68aecdd866d61d89473cf02735f94cb8ad296c7a8c56c8457551d04bee90292"
+      },
+      {
+        "uuid": "7667de3d-7fd8-4218-9195-80520502ef6f",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "e620a901ab546b168579970ae8bde07364153de4913e9ffa6e0df7e9345137c8"
+      },
+      {
+        "uuid": "76b92149-ef87-4874-a15f-34c9b8ac781e",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "a148cb4bf47b13853c37df5ebb453da409eb142927f5a9c4d1404080a429c786"
+      },
+      {
+        "uuid": "79a78bf6-b23c-4a0b-b81b-3a0b4af5fbba",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "a39971f312bbc8f7d6953f6fc99b0764e6b6f10188a40e2402f314af29460f61"
+      },
+      {
+        "uuid": "7b51b1b4-3134-48cb-89fe-7c81c930cfa0",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "c68378b304ff87f6bc9a36dcc6008d3cad62cedde617444860adcab4009430a0"
+      },
+      {
+        "uuid": "8a955cee-248f-4af4-b6d4-2defc96c2206",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "ebcb5b6225f1fd9c3c653272ac36aa90dccd10b877f0ba2443709a9195e2c461"
+      },
+      {
+        "uuid": "940c025e-4736-4ccb-8d99-074540139ee8",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "109a0917fd07dd816a8328ac0a738985ef131e4b2a9e80cb5c3bd26ff2bc1d2a"
+      },
+      {
+        "uuid": "9c9514c1-cba7-4aa7-9a81-b7d51790e3d7",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "426be50b39acb8138df8f4bb41ca8b4d523cf63ade2aa908365643ee8cb9246f"
+      },
+      {
+        "uuid": "9ed52db6-a93c-483a-870f-7bd8b1507b11",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "65d62dac4d807aa8944d385af704b9de1fae4439b482eaac1c12d5510bcfda17"
+      },
+      {
+        "uuid": "a7629210-c30b-4998-884e-616e72150f7a",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "f77900afa7485af90b4236f2aa98b5e4ef67140407a1a1c532fb7587ea726513"
+      },
+      {
+        "uuid": "bf037d99-334d-452d-a592-3fd09826ee7b",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "ba9c7a497916725f7939553f3c9afd3405525da00004670e1b3764a9ed38c2c2"
+      },
+      {
+        "uuid": "bfe99256-b1f1-42fb-9a64-22e657820ca6",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "83fab3485dfc152bb49cdd756bd97d646302dd086ef6632daee284cf82bf99ee"
+      },
+      {
+        "uuid": "c10c4b4c-182d-435f-88f0-d7d2fd32ef75",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "d9952ddb4afd9d33bf6a3633876a1f8c10e4e25e1fd884cb14b3c0b441ff305f"
+      },
+      {
+        "uuid": "c41b6aad-0e8b-4513-b336-5435f870ff60",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "fe52e9ae7585a259bd42535874a6f788f747a3b69901879e00259370e612f1b2"
+      },
+      {
+        "uuid": "c446d1cd-2500-4e89-99b8-9b05ecf816ad",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "a64eaaf88ff1da70a8d09dce6ae38dbfa861106bd34c93090c0dc155a8b32f57"
+      },
+      {
+        "uuid": "c6b5588a-7681-46b4-84b3-5c16c524e3b7",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "2fb1b1b509716f124099c334b4ac9254989c30d190f595d846984255cbc17a59"
+      },
+      {
+        "uuid": "ce6c00f7-f5f4-458b-8114-40cc4111981d",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "16ec75228e43dc1f113a4b2feb4b0f99b60541304c1361fa0746b2f95557ee4e"
+      },
+      {
+        "uuid": "d041c5f4-be87-462a-b698-6a1d36aa56a9",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "a0af0d749afe2a0950d7a4a12d4e155536bc195e77a25c43571c35900f5c10a6"
+      },
+      {
+        "uuid": "d3aa526f-5ca2-4c3a-a9b8-9e8a6f7adf8f",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "918da74dd0ae691dc7196c79b8efc4b9d61d82bf2d574204a4e85511c64dd26a"
+      },
+      {
+        "uuid": "d5bf1b52-96fb-4286-b1f9-129b0315088f",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "6a4090eaf112b89b879a51f73e95c90b873625d200159dee3850d953656af244"
+      },
+      {
+        "uuid": "dc0587db-3e94-4024-95be-ccbbafc9a3af",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "59048f9479e64a4d6fefe4c5a52a8d003c5617c8624c529b12b03892dcd3554a"
+      },
+      {
+        "uuid": "dd59304d-8028-4987-b92f-b4d201823df4",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "611eca077777aefa251e48cd2b3bbbb22f97335ce8d9f7b999fef2a5591fc227"
+      },
+      {
+        "uuid": "e3721608-8c5a-4b84-800c-42543f21f544",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "5efe1def9b54834721bac2b1964e9e4e8ae17bf04d526d5bdfeb40ac5adccfaf"
+      },
+      {
+        "uuid": "e544e18b-e79b-48b2-82ca-6c6ea4b0c8a6",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "878cf61895ca439ad4096fadff77763684a9c4f33657896724c8a445d616ebd0"
+      },
+      {
+        "uuid": "f2f672b6-24ab-4e6c-ad64-ca74e761f7e4",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "c203857d9ecb131bbd23ca1df817493b5f65ea8eb8e72515a8af295594933818"
+      },
+      {
+        "uuid": "f4e639af-723d-4c31-965f-83828bb0f896",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "c0f80b9347a163b94872b4ca9c76301b0c04372f13929fae48f7321c7e7c1740"
+      },
+      {
+        "uuid": "f611f354-1da5-4fa8-b2ea-f1b72429f4e6",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "545bbcf8a2755acd15bbbb6d0954893f21551298ae4a0c6e0a40c5b88b517073"
+      },
+      {
+        "uuid": "f8f5c7c8-824e-4795-a98f-a40b8ec68961",
+        "net": "BATT_N",
+        "kind": "via",
+        "sexpr_sha256": "fae584192dc876da1c13aa25b6e8c1cec06db58c713e1fe45894c68a7198fa64"
+      },
+      {
+        "uuid": "041b4a1b-f45b-48f4-91e1-6238570367a2",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "b4a69fe1a9c03d7008322fb0839493f082aaa78ffe3fd8b162707b501dbceb60"
+      },
+      {
+        "uuid": "354dd308-17ab-4d51-9782-2e762d06f32d",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "d1a5e3292c520bc7dc95dabbdfc00f509ee93648a76c6b47c026b30f18ca4537"
+      },
+      {
+        "uuid": "3a10666f-1699-4156-acd6-370a85054a33",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "267165919dce79854df55ce748d951525a125fc4bd94498f7230089457585eb8"
+      },
+      {
+        "uuid": "4c90fcaf-cfd0-4e8f-98d8-a8f7300b6680",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "8f4f494fedb3e743ae409146ccdf11dc2d242be809505a13d977cccfc201dd1e"
+      },
+      {
+        "uuid": "4e1af4c5-9453-4abd-84f3-6e9ffebf1cec",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "88f8d1787162d7601c9dbab289dedbd7bcae3b2d318a30d40652c35dac269466"
+      },
+      {
+        "uuid": "65d3cdcf-f71f-4d08-811e-153bd2a3d544",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "a3f93e11afdbc74e3702519bd3e51084c01b829ae7eb459341b11fa8a27c777d"
+      },
+      {
+        "uuid": "81b8b787-bf6c-47ba-8e21-683276946609",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "95dd5d750b6a01a758030377c7158a8f0394a3f2c60f60a1fbf45ded52a67b1c"
+      },
+      {
+        "uuid": "0652f641-3feb-4233-b6a7-7304d679315f",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "355e1a399c991ed4e177dea10510013a97de9948163da1be5801116b4990b663"
+      },
+      {
+        "uuid": "1039bcfa-e463-492a-adf9-cf6964798554",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "0230a9351569f1dcb5210fa9637708bd683c98198e2d8c4ed24a00092391222d"
+      },
+      {
+        "uuid": "15c76df9-2b3a-462b-9e3c-d1b93f0ad0be",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "0bec08b88d5302cf595811e4d7fb01c39275ccc72f2b1766ed6db508fa84dffa"
+      },
+      {
+        "uuid": "18b0492a-555c-43dc-a8de-a176e4126c74",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "50a416a946ee9c1b76c7e9b8bd0d06c8b6a124eef114df2bffe82295ec82aeb5"
+      },
+      {
+        "uuid": "1b00a95e-f116-48cc-addb-b386359a8203",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "896d8fbdc083b5262c3d15c93e15adddb507e441808e7388e4409dde52e6dfdf"
+      },
+      {
+        "uuid": "1bbacab0-1e34-4297-829f-f342a5ddaa2d",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "cc464935d6cbd4c6391ae0073b5bbd92892f2e00948786fbb1ed988453e4e3fa"
+      },
+      {
+        "uuid": "1e395564-5cde-41fa-9181-206a89709761",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "42c8ce1f6319d8c7e8e8cbd5f982fc982a672cd5f75731ac32e75888dcaf7dea"
+      },
+      {
+        "uuid": "21696d9e-b445-46d1-ae61-2144ea1dac59",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "d05b66103c0e3f331605a8fbb660459b3dacc419bc94472b35e97f06564846bb"
+      },
+      {
+        "uuid": "21b2dc64-24f1-456b-a4d5-54f969dfdd86",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "ea1cd52c1b9ef6cfd06865e91ba5794d6dbbfcac6b8035d93b6ee8fdff1714fe"
+      },
+      {
+        "uuid": "23b6a62d-1973-467d-99ad-e00390edb9e6",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "a78230a34166ee052fe753eb20eef08eebed4b254fd55a1e91f7d48a706e881f"
+      },
+      {
+        "uuid": "2c3f8aab-e40b-47bb-a109-9eb090957cdb",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "f7696c60f533783a1b95582063250fcde3cb14953ed6d331aeafa496766d2495"
+      },
+      {
+        "uuid": "2d0f962e-4376-410f-b8e4-2641142400f2",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "dffed6ac0ea52b5c84b81e0239900d76bd6302031d66b0a1578f864f336e6b25"
+      },
+      {
+        "uuid": "2fd97bb2-70b6-4cdf-8a85-3ae93c3c0d0b",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "54a85b72a8a3408100fd617bb709fc81dc28d5acc3257b0c753b4b02f9da13f6"
+      },
+      {
+        "uuid": "3ccb630a-10d8-4d3e-89fc-842b69b741ef",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "67635f9cb7b4697b063f21c2f49cb24ca938c3c91f16596a446b9ef8dfa47fb7"
+      },
+      {
+        "uuid": "476bb5b3-4fd3-46a6-a4f8-1a2246467025",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "2b69e7603a92c535453da39dc158de208716bfbaf1cea3da0e8019d96918c830"
+      },
+      {
+        "uuid": "4e142a0a-e418-4755-856d-f6d5ebb75978",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "08ee901b8ed66e8e65218aa4c526c22fe9017a86be9edae23d70aa2feadba8f5"
+      },
+      {
+        "uuid": "510ba1b9-4de9-40ec-aec0-3a1803c0a474",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "bcb0749c2fd7ea42fcd84c649a7a20887038f7c94dfb52ece69e6a73ac56d2aa"
+      },
+      {
+        "uuid": "5abae2ff-4bbc-4629-815d-0bcf5a5545dc",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "1132aac79480b76e3ec2b76255c90b9870c4840115a7e77d653c06ca19fd45f5"
+      },
+      {
+        "uuid": "5d4a1c75-38b7-4218-9861-5a4bda51ec4a",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "93c10e7b85c543024ba5d53a5f68910355f6570f7e930c223f9933951ec1eb73"
+      },
+      {
+        "uuid": "5e2f8d8b-8767-42f3-945b-d18caa09c4b6",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "10b9cd06ca42667b3058cbf56ca771789aa6e839567afb79ec1fbfb6ca599d5c"
+      },
+      {
+        "uuid": "6765983a-64c1-426b-af8a-706444585815",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "440060f4133ce5165576bb8d5f65f2f871b5723c61a0d4e0fea577054954ff0a"
+      },
+      {
+        "uuid": "6c6e4638-ccd6-46db-97c5-cf5fc51a4c5f",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "6c4f190980933768d9156c3947358c61ab3813181a173f4d9ab2fc5618eead0b"
+      },
+      {
+        "uuid": "6ee7c48b-c6a9-44c1-aae3-64944c574725",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "11d2ec9494fa8d0ecfce3940407161d8922010d8e920d9429574e67292de1335"
+      },
+      {
+        "uuid": "72a99a67-e1fd-4990-8624-3dbff486c73f",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "6d0767c103651c3349574ea37b70b4bb6d09de07a4a022e230b4234e37528c61"
+      },
+      {
+        "uuid": "7b66124c-a049-40a5-a476-628e47aa7b97",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "ce05ff45d9e3370af94cd18d4926ba649b9daf9cebf009811477d2571cd22451"
+      },
+      {
+        "uuid": "7b6988c9-c760-4d1a-b3d4-de4748023c31",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "7f7e0e2369e155965817795411a273aea098f5fdf78e67514509847906cf8d95"
+      },
+      {
+        "uuid": "7c9fc410-7a35-4d04-9d13-99587e6ba6ba",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "4bd39911962f11ea907b6b24f4248214ba3280e837df5caa8fe735180a485b71"
+      },
+      {
+        "uuid": "7de940a1-7989-4c79-8b3f-fa69eab5cbe8",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "0def638da6e201cc0ea7d72d85e90085cef8ae93efc25dda1addd6af2bb4f86f"
+      },
+      {
+        "uuid": "81877414-20e3-46b8-a7a2-cb4837f25baf",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "db6ba576febc356311302c73d57b3255e29b116eee431aabb9959b487ecd7f85"
+      },
+      {
+        "uuid": "8c2a0d8e-c212-4369-a446-e1720f5ea2b7",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "9b270fbe931f470d576b323e956aa0251bb0e32935f8b237304eb8af9feefe3a"
+      },
+      {
+        "uuid": "8e216155-64f2-48cd-8012-1178a743a01c",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "4e6a8a07ddb20e8ead824cc6fde860f9968b0a62ac9a878450f37d89483613b3"
+      },
+      {
+        "uuid": "9d938f57-f94b-4a25-9cf0-77df61b0e2c8",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "d36af2e8f3e4fcd04eed9a75d309a29d5a5a2a9bc9b19e246f3c141170dff51a"
+      },
+      {
+        "uuid": "a3a7d1fd-3033-441b-8c2f-c5afe06d70a7",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "c8283b19a8c95f75438c0720f2768427437bac8ee5d9a3f8155263ecb0540e1f"
+      },
+      {
+        "uuid": "a5894da9-89ad-4054-b236-50ffa64a3e79",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "033002e435cfaae83c6eec623623e696f25e67500209af6cd9475f517471c17a"
+      },
+      {
+        "uuid": "aa86374d-016f-4439-a148-322bda30ae70",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "6e89ff2306f83f0d6358ebca0a8d36335f9740112f7dc00e4f6c22ee7db9c6d9"
+      },
+      {
+        "uuid": "aae78b57-1fc3-4ea0-8360-a62eda749a39",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "37f60393e8af24f72ae89ea53bf3b47678ba62a47a5dcbf417b2f8c04c4f1852"
+      },
+      {
+        "uuid": "acfae8da-5eaa-4323-9dfb-055c08246a82",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "6a029cb430d12205a892f14aead8ba2f4d8c146708263ed85a247fdb6c5f84a4"
+      },
+      {
+        "uuid": "c336d8d2-0458-4ea9-b06f-93cfcd7703ae",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "c4e58b93eda2f624d48218f326fb401ebf6bbae37ae77a620c08902ab618c864"
+      },
+      {
+        "uuid": "c78d28ff-6c60-4044-852c-bf7e1bbf5139",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "41ceaf3a7e71146791071d019d47772e95ee0259fdcba9c6d38e5a0035184952"
+      },
+      {
+        "uuid": "c92972d6-a904-4125-b24c-26a893eb97e7",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "4244ee18f8a549843a248441528779ae768a3bf3914cb4988ed5e7e8fd6e9eae"
+      },
+      {
+        "uuid": "cd999143-2804-4d68-9295-099ba2c33843",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "01ff2621fae1b16057d6637bd5602834ec327de52edf472ec5499ed0f44a1ae6"
+      },
+      {
+        "uuid": "cff8e44c-71c6-4993-bc83-d5c1c1ccff99",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "97c4600a75e6f1dbb687e564654dc91035f38f16e2df98f59151a5a512f11412"
+      },
+      {
+        "uuid": "d345deb0-e8ca-486c-a0a8-ff278ada9c43",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "83811c7889e1cdfdbb0b306cc01a13ec9b62a95e5f7404276725e917eb094a4a"
+      },
+      {
+        "uuid": "d4aadba8-7ffc-493a-876c-af013bb471f9",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "ff7ea943f68788d523664cde12dccb8c2fe374f71e47a38dbcb7304fe27ed47b"
+      },
+      {
+        "uuid": "d557eb37-08ab-4936-9c43-7359a5cc7016",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "12b4bc60ef5be1808d35a114c98431ae0b44d6c4bde7e0eb2cacb97a91de8291"
+      },
+      {
+        "uuid": "e0acdb7c-da9f-4da5-b009-58c8068bfba2",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "e7a11f9538ed0c516b7dc52ee740ae67817c827e6b7c84715ad26db281ecfe17"
+      },
+      {
+        "uuid": "ef2b61e9-6d8d-476e-ad84-4f3a8869b3e5",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "c9ad7358f823687b957094f96419c087a277d1e000cf0986e321e3f47e661e3c"
+      },
+      {
+        "uuid": "f13c7159-aa43-4b2b-ab32-ac8bd313609c",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "1918d60561a5ba2de2437f3d1776f540178a55a641ad0860d24a783e58b7e7f5"
+      },
+      {
+        "uuid": "f243ae82-c671-4e92-8a68-01247780330e",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "87a43a9d2ceadeca49f0c8f2818206a16791e0a2622bbe8a7ef5fa34f8e7c99b"
+      },
+      {
+        "uuid": "f77106e9-9d2c-4457-92c8-5efb9825d29b",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "0fe81781dc47c6723216dda56e77783f394d2cf2b493ab5e7857d7b24fb65dfd"
+      },
+      {
+        "uuid": "fb2a3965-1886-40e9-a490-b63ac6d47d3e",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "0bdff6eb62d07e8a5855d0a2ebb51d760dcce9afc44e27a0b534f456d3eb7e2d"
+      },
+      {
+        "uuid": "fdf1495c-0217-448e-9083-c9a3a8f6e112",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "921e82d58f3bd05a39652172faaeedcfd9b5ec029e808ff358dbe113c77c422b"
+      },
+      {
+        "uuid": "040067e4-f900-4f9f-aadc-1a66427b37a7",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "fff2c2d3f00a5d01cd2b58e4d1d15f11bda2404a56fe25a093415866ca56b8af"
+      },
+      {
+        "uuid": "07127db2-12fb-410d-9f25-3c97dea4b4c2",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "4abd1c5837cae49e934ea29f21626f228dec3ab35e91c19342f463842a051d83"
+      },
+      {
+        "uuid": "0c2a0792-0ae4-4189-ae5d-de8704798c00",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "cd3ec6153de9480593ff45b025cd985ef6ec1a8a3bc92518dc9d8ab12d9c4b81"
+      },
+      {
+        "uuid": "0d575e0f-f8fc-43ca-84a2-96693599443e",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "3b13f07cbe781c464c7ec86fa6c0bb34e964150959ef4eb4378bb815751a4cff"
+      },
+      {
+        "uuid": "10849e0f-08ec-49ba-8a90-2cebe10def02",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "770f9924a93668f7aa402627e7640f704e599d4c01d1426e7cbb01a3a94932e8"
+      },
+      {
+        "uuid": "1f046396-3878-428c-bce5-97ba5a88f00c",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "89f6ae12d6fff4f555336d8432a92614c9c544e81a8de78d8544d7634d0277c0"
+      },
+      {
+        "uuid": "209d5722-f13c-462b-bd96-edfde079e54b",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "a8fa0a4a241abc54b30aae8d51bafa3aa99adc3346dfe9737c31a821fd21d89a"
+      },
+      {
+        "uuid": "22f639c3-eaab-457d-b4fa-0a7264e68c61",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "b78402d9e34f74d6967e7bb3e4a8f3877f4f82e7c7f25fe805fb5b05cd970a93"
+      },
+      {
+        "uuid": "2fe803de-5f1f-4181-8160-eb216be66186",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "4ac4772571e20e75f3c3244b0d202cc0bea5586abc7b1f897f4818190267299b"
+      },
+      {
+        "uuid": "30052071-3047-47c1-80ac-55f4a0ab9405",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "8c64727548125ce58be039e994f81935f9d0f33295656710cc1fb4f165b7bf12"
+      },
+      {
+        "uuid": "3bb0ff19-a3a6-410c-bd96-98accccaa3a2",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "e73c556948fb5ab8e012ee47a61e5c66f8efa5f31b68288f56ce4cd3a44f44c0"
+      },
+      {
+        "uuid": "3d525ec4-73d7-47aa-8e2c-147ecb2db894",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "2bcd21921c19fc2d8a64dd82a9338bb49fd3f58ff799b8dd2846291f924f5fbb"
+      },
+      {
+        "uuid": "42d85056-6a50-40a8-9737-4e1ccb67b0e1",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "b1edf66df2de840c227c8a6bf28de99eea155561f7e645d2cc110f57ae61777a"
+      },
+      {
+        "uuid": "44036fb6-bb86-4896-970b-ed34522b2bb2",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "fd5a20b68d15fa28cffd1a6ee522ec727d281b905202107730efeb8213db05b0"
+      },
+      {
+        "uuid": "458437f1-debf-42f3-8d36-4afe71f450d1",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "c18f206dc1dd39d2940f917426fbaf317daad1a4bdeeccce60db10d4cab8ee45"
+      },
+      {
+        "uuid": "495b2be5-a091-4957-9e85-e9e57ffc6e0d",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "901692694c55714ae556f12002cd6bc3d48b79b0f0f75a7c3a756507a409e192"
+      },
+      {
+        "uuid": "5ebf5d76-d457-41e0-99cb-6f3d85579097",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "60019415f1e75b2e3cdcb9fc2aced0b0afd7c4f13de49927ab48f3dd38052d62"
+      },
+      {
+        "uuid": "624f5920-fdaa-4986-9c4c-a636e21e3dca",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "536e555cee7b85bf674b2962c346cdbc02429cfd515d604e59ee3fe7f2c83d77"
+      },
+      {
+        "uuid": "66814b07-163c-4ed7-b675-711b1a60e0fb",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "eaa85ddea9f34ea82ea23c616f9c22aa623653a664f2eff8f809e6cdf5a366fc"
+      },
+      {
+        "uuid": "6b033660-6402-4f2c-9834-627c48814ab0",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "8fd112cfea13cc72449f3c8b58d4d147a77a0063d24806827952cd2cde508d0c"
+      },
+      {
+        "uuid": "74e455fe-eec3-49f9-92d5-efd327ef7443",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "b338a01ff81a0dc39af5c437f33d05a3b245ef5e75001cb1ee967d46d715212a"
+      },
+      {
+        "uuid": "75e57ff5-fd50-4fc3-bb98-1ea062c064da",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "4ca27892bb27de2982af409227bb58869d0fa96b310cf496689ef910f9eee21d"
+      },
+      {
+        "uuid": "7e658aca-22da-4b98-a5ae-7d6064c210f7",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "01f01a2d74635131dafa512be3a23d5b21fb47d1fe2d4d017110c40a5d2c21a7"
+      },
+      {
+        "uuid": "7f4b37f6-d033-4d77-ad8a-80217c660198",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "b4cbbb40a24b0f1021261d97df9baa8935d4943d1a4150755899dc4fcfcbb3d5"
+      },
+      {
+        "uuid": "8324bf3c-96d9-4d36-aa8d-f81eb7dacfd8",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "da4372d5d4ca91d827e3258f73c1f899ab5b15e53dbfe80368462dba72c0bfb9"
+      },
+      {
+        "uuid": "88a63c70-71fa-48a2-a753-7cf7bf4ddc74",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "0290625c8cffb3bf9a0da37c853310e05a59c9823b94294c927cb3ee17678abe"
+      },
+      {
+        "uuid": "90bb94ba-9716-45ed-a167-a279f35617a6",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "9968657e26ddb1c72e3247d55053e1e0695f94ab3db04dff78e754283b0c8799"
+      },
+      {
+        "uuid": "97d83fca-4c92-4dbd-999f-99deba5acd87",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "2f385fe4042389d3409dc5ee428969f45f8a07901ac358a1e1ed37152cd2d32e"
+      },
+      {
+        "uuid": "9a5312ee-2169-446c-a433-820339c7fbad",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "1bc80d920d143774bb4dfbc3766f68005e232a1740825f95be7922a0634e5719"
+      },
+      {
+        "uuid": "9b0d5ff7-151b-41ec-bd40-d9e400a19a26",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "3efdf04bc3fb582972012c635ccbc08136b22e9cbc911ef31ccf75cb43177e25"
+      },
+      {
+        "uuid": "9bedb69b-dcb2-47b0-ba11-c20ebdc3875c",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "a7a64f46dc5c5169c3bf0ed5ee0a2a440b9cbb42fb9aa500e168924c06fe5bfc"
+      },
+      {
+        "uuid": "a21811ea-db4e-4adb-878c-8492381d9874",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "45891d636d5e1aeb8557571c917ea3b820babceb42332bbee7861be8042d05b1"
+      },
+      {
+        "uuid": "a306cc25-13e5-4343-b56d-c793487691ae",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "591ea79837a10574e287848783dc6722755e91ef857a1d3b5ed6289dc124dfb5"
+      },
+      {
+        "uuid": "ac0a5d81-f841-4a8d-84fe-c2e79b66b6b3",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "f8eb34bd442fbc826140c57f310fb1ebd0381aa2279833d0378172aa07de09d4"
+      },
+      {
+        "uuid": "acdd9607-b0e1-4a83-8eac-b5700c49a8a9",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "618e4d29cc4e975d6babd19cfcd347f52690e67e646aeca176c4b8238e878c97"
+      },
+      {
+        "uuid": "bee8e1fe-39ca-4b6d-be31-2f406ac02421",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "790c84baf7aacc3c07aefa6d6d4b3ff5a5e9f16e6bb24441c20701100f72385e"
+      },
+      {
+        "uuid": "c00d0b97-2f3a-46e3-8e4f-840363ced367",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "b9e0faeb5d80fefdc3c9580f41597466084939f5730527d0eb90af420161ed6c"
+      },
+      {
+        "uuid": "c70c59c3-d4b9-4422-a7a2-1c94e8edbc8d",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "07858e312a69b8fc9d78100c49577c0ef08802f637d8356f2bcc85e6f915f819"
+      },
+      {
+        "uuid": "ccda0dfd-6c93-4a24-804f-58afd37a33e6",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "00a7d26f91ef7dca736ca7d2aa1f26d1aaa37151652a527650460c2d0d352e26"
+      },
+      {
+        "uuid": "f7f60840-36f2-4a5c-a4b3-ce9c118ccdda",
+        "net": "BATT_N",
+        "kind": "segment",
+        "sexpr_sha256": "b0e114dec04284520ed562712beb06141b53b263afdb1af5190604dc06ec9ce8"
+      },
+      {
+        "uuid": "0259b219-2569-408d-b115-b5d606403f50",
+        "net": "MAIN_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "c81bab1e1f8c22b744608dfb0a5c2ff5fc91d2124e3c9cf1c6342de480a06ca1"
+      },
+      {
+        "uuid": "20c03966-f905-4b26-b1cd-b1a120ade503",
+        "net": "MAIN_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "e9d730465d2cd98311588ff772ca767feb73de781aac57cfc6755f6f9ff7cb19"
+      },
+      {
+        "uuid": "267b3136-7153-4dba-84d2-a2caa34d7ecc",
+        "net": "MAIN_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "5c7ab6704c7e7fd4222ad45f194d8253ea0a23e82bd172185b54f38acf362375"
+      },
+      {
+        "uuid": "d5d4e4dc-513c-432f-9f66-1d572a6e53c8",
+        "net": "MAIN_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "d7f017e39f6a3e2f16c347d2649f9aba47053058a6996ea9ec35b9dd73cf9ccf"
+      },
+      {
+        "uuid": "45e6765c-0d73-46be-ac4d-9d05a964303f",
+        "net": "MAIN_COMMON",
+        "kind": "via",
+        "sexpr_sha256": "62d73711d11aa7c9127d2479af17a61e3d5c225f8291116f4014c44748a43ba5"
+      },
+      {
+        "uuid": "8194e688-7859-4b52-9d0a-b56466f535f1",
+        "net": "MAIN_COMMON",
+        "kind": "via",
+        "sexpr_sha256": "f0ddf6ae2c752ac6147c77637947973f3856428b1e66a049628eb2d171124aac"
+      },
+      {
+        "uuid": "ab55dba9-2685-449c-949a-65ba60b1c4e9",
+        "net": "MAIN_COMMON",
+        "kind": "via",
+        "sexpr_sha256": "c223cde245819e545bd552390995967cef5d8e540fc0b9be231816a819ee21ab"
+      },
+      {
+        "uuid": "dda39911-b875-4ae0-bc59-b586682f0740",
+        "net": "MAIN_COMMON",
+        "kind": "via",
+        "sexpr_sha256": "9758869b42888f2adedc9e97541bcbf1b84c9736d7542c439d9039790a8bcc89"
+      },
+      {
+        "uuid": "903706cb-04fb-48b0-b867-049589d3b515",
+        "net": "MAIN_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "22943700f0b61813cdad33ee9573ea7c5b1bd9571b7759e2e3251ee84e18cea7"
+      },
+      {
+        "uuid": "ad529aa1-4e3c-410d-be89-2b31861b47f6",
+        "net": "MAIN_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "6357f65fb2e5c18e8a366b3661cb4d1e5e26581a740ad84b55da555f77e16f64"
+      },
+      {
+        "uuid": "65652748-5118-4a1d-aad2-68eddbee98a5",
+        "net": "MAIN_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "d2319a59ee2b48e10e209878c5d06768f4d303078976883bb71944140a189f17"
+      },
+      {
+        "uuid": "a54fb940-6eda-4f55-bdc8-969632fc2026",
+        "net": "MAIN_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "9b14a1d22ba46b5364ed99e2e3b419f58a10b064148f01fd2d0170ac483840aa"
+      },
+      {
+        "uuid": "c03c19de-cc26-4fe8-842b-bf9d68b52d2e",
+        "net": "MAIN_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "32025ce9a863c2b610a52691651292a5e429fa1d8e87004f22f9fcd75c9444e4"
+      },
+      {
+        "uuid": "c7fcb7a7-c169-40b6-a459-66fa99027e3e",
+        "net": "MAIN_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "922e264c4cc6b110be77b8870386b1495e2c198f6d585e5264f4245a2f74f5a7"
+      },
+      {
+        "uuid": "f86a2cbc-01f3-44d7-9912-fef76a7c72bb",
+        "net": "MAIN_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "9e362d69f04fa63c466539743318a7bcbe27d372095048c15482fe56d41d4bb6"
+      },
+      {
+        "uuid": "114dc1b4-b053-4363-a0cd-bba1a6985f7e",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "8c49bfadfb7471e3d953372af4650a829a4cc2fa6831f987b7988d9787af9ade"
+      },
+      {
+        "uuid": "2f0fc918-1375-4a5a-95ba-d854e141aee5",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "07de2d2a13fc29f4d4c978caf718ff8aca625e80928a87a03500ebe21d023913"
+      },
+      {
+        "uuid": "318d7a20-46ba-4261-9afa-4e68fb60ed49",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "579abfc444b569d0c6da04292007da36e02b27f54a9ce16ac1662c142037232a"
+      },
+      {
+        "uuid": "518f3455-575d-45b2-baed-133104ee1ea5",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "3e7d858470f6c9ba2e3954bc947bb86115e6ee00bb3a7f6ee1657b799dfd7011"
+      },
+      {
+        "uuid": "6a018221-19a9-4436-8419-f7f2c7c2e00d",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "cff96c80e677914d6ff029cf0c0c1255d067f067c28bf6ae8f2043da7de61694"
+      },
+      {
+        "uuid": "8ebc0ea8-480f-41b1-976a-58bd6f2f5b20",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "1f814383f083f662575d563fb6dd678fa90b495d2b67ca22941313d27ef61c79"
+      },
+      {
+        "uuid": "a7583c7e-4136-4595-a49a-1ab3632a26af",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "dc33a59f09db2bb635df264d59a10aeb12b0d3c37caa0e0cceffbd3e39e1d2cc"
+      },
+      {
+        "uuid": "cb3ae8d3-003a-42fe-9c0e-6cdbb9aa7e35",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "edd2e21692d1363b5a7467fdef15b07e4c82ab9bb6183f0e2e032af5becfca3a"
+      },
+      {
+        "uuid": "da4711c5-7a0f-453c-a2bc-92a515ea0213",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "67e9c278cb8ad24934d0b06f51d8240082f970a593e8be7e29f02ed9fa0c4f75"
+      },
+      {
+        "uuid": "dd2d4234-2c9d-4c04-a45c-9d49ed3ea56f",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "4fb55663dfcd200e41abcea34e5c1de36eca398f3c707c3f47f97e5ca8807b9f"
+      },
+      {
+        "uuid": "f2abe5b1-224a-431c-87a9-45a0b625a449",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "a3a39007a119cfc5b032d4149f59a7b9112f3df11a334d81abbd1667f27fc39f"
+      },
+      {
+        "uuid": "f83a9a31-9639-49e6-a4c5-6b978987bc94",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "eee7ffc5e6d0f97358f75933d3638e859aafa3f09703fc52af7fe4fc3353cce9"
+      },
+      {
+        "uuid": "0ad1493f-81a5-45c0-a8d6-4e611e78a372",
+        "net": "BATT_SENSED_P",
+        "kind": "via",
+        "sexpr_sha256": "5a171cd70837182d945afcd2fb2df62dbebd759c50f84d59675cd05752428c8a"
+      },
+      {
+        "uuid": "535c0d81-0628-4ad1-ab87-fa3e93895222",
+        "net": "BATT_SENSED_P",
+        "kind": "via",
+        "sexpr_sha256": "e99f832180d273dbbb212c0757b2240d392ca9d302270d31f69470fd2db47477"
+      },
+      {
+        "uuid": "5da2f7e6-287a-425d-9e50-466bf6f987d8",
+        "net": "BATT_SENSED_P",
+        "kind": "via",
+        "sexpr_sha256": "359296de743b78e677bf0293e2b314da5b5754425c4d072de404b1a6f78273e8"
+      },
+      {
+        "uuid": "6e6386f8-cdd1-4b14-a0a4-4d052d72b8cb",
+        "net": "BATT_SENSED_P",
+        "kind": "via",
+        "sexpr_sha256": "17a7b95f9448b4ae96db024ce9c58553b499ae260653f023fdc23e10debd6a82"
+      },
+      {
+        "uuid": "7aa52be7-ca32-48a4-8324-8e5a10b37f30",
+        "net": "BATT_SENSED_P",
+        "kind": "via",
+        "sexpr_sha256": "336b5dce382678d2a01e767c89076272f24990dc9ced1c60a24e0668614292e9"
+      },
+      {
+        "uuid": "8cd7c1ff-8482-4b2e-ae0e-bf288abbaf18",
+        "net": "BATT_SENSED_P",
+        "kind": "via",
+        "sexpr_sha256": "91c2075b6480da22ce85f643fb51f32b3bbd6f7b7078cda05658c9921ecc7188"
+      },
+      {
+        "uuid": "a690d982-5cd4-4c31-a639-9b028c3b3320",
+        "net": "BATT_SENSED_P",
+        "kind": "via",
+        "sexpr_sha256": "f711a1ef0885bcd427c135ee86be93b4895bdb724219f36e0415497e774ba4af"
+      },
+      {
+        "uuid": "aab056da-c8e3-4914-8639-2abd7c63b9eb",
+        "net": "BATT_SENSED_P",
+        "kind": "via",
+        "sexpr_sha256": "534aeea340314427dd0d3bbb9eed0852b3ac1e410f32be5e0c90f97c4b02adc2"
+      },
+      {
+        "uuid": "c84cbf06-7086-4a7a-a219-7066d4611f8e",
+        "net": "BATT_SENSED_P",
+        "kind": "via",
+        "sexpr_sha256": "9a23c4bb0e7bd9752b0c330da60f0414b2e128c76954e7c807a823a6db6bb53c"
+      },
+      {
+        "uuid": "f41a7e48-a3b6-4e1e-bbad-f32881f479ba",
+        "net": "BATT_SENSED_P",
+        "kind": "via",
+        "sexpr_sha256": "e9ff1fd54bb3fe3376d1caeee6dff7680c16f288e1c249cee7704382dd2116fd"
+      },
+      {
+        "uuid": "f73d0c76-5939-44ef-aac9-37a2c0ef2349",
+        "net": "BATT_SENSED_P",
+        "kind": "via",
+        "sexpr_sha256": "d9d9954663033f8bc550fb7b7652257efc632c1fd3b28107589257549f385ff1"
+      },
+      {
+        "uuid": "5ea46b0c-1890-4d9b-a541-979bab2ddaee",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "22d40d87671d214858a15fff7cf31a976bd8c55b960c6cc50c7ab647d9ca5b87"
+      },
+      {
+        "uuid": "79f3038c-f1dd-4710-80c6-18e2b795de8f",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "669bc4d88b211fe4c4ae474de79364396d8a3de69846ab2748c05cebee28d816"
+      },
+      {
+        "uuid": "867797a5-d5a6-4abb-91d8-eeec003d1200",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "c5107d95a9275efd7e23500bfd327dc911dd1fd9d5cfa37006ec4a6f75e2c7a9"
+      },
+      {
+        "uuid": "bdf51466-8043-4b0d-9fc8-3669fda2323e",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "d3715b153aa91d3eb313104a1798f95c57dc8e9dc8bfac05b1cd0ec2f9245b90"
+      },
+      {
+        "uuid": "06250e74-ee3a-4919-96f6-1d37f35aef53",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "d000d93044b53623b70f69339a84613a463cff653a93566aa5655801fb6891d9"
+      },
+      {
+        "uuid": "33ac2a00-2469-4275-b2e0-41a4c9434787",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "d3f8ca91eee3f7436501efc5274cd756fc2afc2ee4686832c1cc49f59c78c24a"
+      },
+      {
+        "uuid": "4fa5279e-cc58-478d-9bef-e54bc132382a",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "4f69ca2f293155d0890b9d1541e663a67a10afd0666741d48dc80e31823a8c23"
+      },
+      {
+        "uuid": "642c5c27-a165-410b-b5ed-2c11759a61d1",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "2655f919ff5409e2576c4575efb41524f40b381406ce475916e2814c6f2f0dfc"
+      },
+      {
+        "uuid": "783d1bcc-a1f1-4e9a-8b7c-c4a53e0223d3",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "d43206261b10a6c0e91843a6ed32bc24a77c60261a20636e3ba4a80234a88bb9"
+      },
+      {
+        "uuid": "d890687f-a5ec-46ba-8d08-382f32141d1b",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "df0ab3f17ee4903b8c07a58d1c79236f7d61a37b2e94a64edadba892709cfea7"
+      },
+      {
+        "uuid": "dbf77cca-09c3-4968-978d-102ac761f3fc",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "b18624c27bfd2dceb588937f2c0895999b4fb199c8fdb1c354abd03119f44fcd"
+      },
+      {
+        "uuid": "02a7c122-a8fc-4015-8cf8-978d39ca7a25",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "5af040b0b5194df83fb17f27833102d4b6206a4877bf4f305bf3c095bfca19ed"
+      },
+      {
+        "uuid": "7ae0d189-db73-4250-ac0a-033657b5c79b",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "ab26dbb77d8314b366dd1cb4dbe0c51c4ad66fd84b97e802d5fecb6e60bb118e"
+      },
+      {
+        "uuid": "84f9469c-b150-4554-8ff9-d0d7e6acc51e",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "b6a00a074126dc29ca7176b01201125a00e7551a39aafe9425ebc6bdd22bdc20"
+      },
+      {
+        "uuid": "9d26bdfa-f911-43c4-a557-4a526769fa72",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "b0a606f9c6c3a6684f31a011f950bc8f85e213c2aebee45ef7d8a0d9b4f4eeb9"
+      },
+      {
+        "uuid": "aafc28ca-cddf-4127-8c4f-58391dd212e0",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "bf00482810ecf05da52a7b6d22e16ff788313f2edbabb6c7e240f31209aabd34"
+      },
+      {
+        "uuid": "bef01752-d6cd-481b-b7f2-620843e6f3e3",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "9c95fa2ff92940c93767da7f041fa8af900b36d308a04a9f2993fa711eac4555"
+      },
+      {
+        "uuid": "caf1ace4-5d83-4173-b869-cb5f0c2331c8",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "8860d51a720a6e38ab5353964ce2fba668b0862400145d89629120092d144526"
+      },
+      {
+        "uuid": "cc2aca8b-d185-4b45-9c29-f29b15b3c7bc",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "671393cbc88282193bdc29c12244106c18e94df3745ace91ac7dc361a3c9b27e"
+      },
+      {
+        "uuid": "f4e2fa32-1cfe-4728-89eb-c03eabbaa511",
+        "net": "BATT_SENSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "3d00f8d2082659df218d3b529fe0a89f2e0a6d20831d9b7fd6490ff4666c5c4d"
+      },
+      {
+        "uuid": "092bcfdc-2711-4e39-8459-e8a32e914346",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "eab3bfee341c21ef69c7b31784ed22ef421e982748b39171e50a1dd78be8bcae"
+      },
+      {
+        "uuid": "0966cb76-3f92-495c-91e2-93f58f15a0cc",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "8ae041629c3ad2a7d98d79c3b610d10f9459d217efbc6cafbfed82f795ba9450"
+      },
+      {
+        "uuid": "0a514a12-4559-4c31-a0b7-fb7f64c85995",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "e0f6ba0b4286f2b92da4f71d07467bc8b2a3364e7a59c1a33e6d4a4b8709c8a0"
+      },
+      {
+        "uuid": "0e4493d6-7233-4867-8d00-59b877340aa0",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "ccf1a9981a990e3741dabe70e216ae03e11f744837f70138b5abbb262006b529"
+      },
+      {
+        "uuid": "0f410dd0-3b30-4190-a597-754ea814c41a",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "361d6eb65b2521deaf706a85d5e61fc44708d76865938d7f1a1e5a4e2f83c06e"
+      },
+      {
+        "uuid": "21a3f0f6-aa7b-40d4-865c-1e52a0ffffca",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "9fc1bf91d5fd56de2e3f0f60e1806a1dd010b9d3727ba8b2f6df6f4225d4ab7c"
+      },
+      {
+        "uuid": "2374d1d0-fca8-4d1e-b8e0-69774c5cf424",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "a231843316b16095de5812db4e8b4d76a6915b2724a36298fa9fb64f2ea170fc"
+      },
+      {
+        "uuid": "25dc2276-1c60-4841-a766-48f77f51a403",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "0957f70a354da27144bf3ce8097317f1c0ba703e9db96ebf5423583a2414d0c4"
+      },
+      {
+        "uuid": "2dafbcd0-7f8a-49d1-a084-5c355c09bc39",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "366c76a15271b1782a661ee1fac0b289fca5d14679c1bba33ba5cbb6fbd8268c"
+      },
+      {
+        "uuid": "3f3687f2-e90f-429c-9ba5-1f4ec0aad448",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "12edc2fa93b2e08bb630072ce6764082ba4df8ff333784df9aa33be0fef6210d"
+      },
+      {
+        "uuid": "43ae45b7-f5f5-4508-9e4d-bb9a8c9b1fc1",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "d18bc4d0bb40dd313f53f2b8c26ed7d3851bf3d6a41cf641493faa3cec720d10"
+      },
+      {
+        "uuid": "53db7ed0-a8fa-4b4e-b405-7b72960e0014",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "40767c0a07af2416e1bf13f43ea618271f1139a623d66a2bbf67db02c3ed0d70"
+      },
+      {
+        "uuid": "553b4b63-9608-4325-a2ab-89a5345b0cf6",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "39f95ed9385c8a5c3c0ea13102d3f78448ec7ee2723bbd2c9c392761988bbfff"
+      },
+      {
+        "uuid": "5a2cc123-3b2f-4a9b-84ef-c184bd2803a8",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "981dccfda68947df2bfa6ce5e5b54641e4ac2cc65fc875439e2d7c8d604b898f"
+      },
+      {
+        "uuid": "5bb5a101-0c9c-437a-ad30-16a7dca5205c",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "2c05133afee185b79b1ddeb1e33d5a28c214acc0a90d67ef3b339908cba43cf7"
+      },
+      {
+        "uuid": "651e759d-989f-45ea-a34e-0f96217de813",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "76541b57378a5905e89c503659e2f736d417aedffd3dd24560f211fa86002fd9"
+      },
+      {
+        "uuid": "6c73b98d-8b83-48f6-a614-775ac1aa978f",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "74d732ca3353b75b3d8312a61582fba0adf275006d22667cc85f07f9a8f3bc46"
+      },
+      {
+        "uuid": "74aff749-2ea1-4ebf-8531-7b1892b9077b",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "406b31913a5498ca28bcbc152d8452cd5276a0a31b2c03e228f464d16f760236"
+      },
+      {
+        "uuid": "79fd51c0-d885-4efc-9b40-22820677d205",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "75fecc275a3d341d1ff244f9c795b16b24d383ce73c974b32b0a8a8e46af5ebf"
+      },
+      {
+        "uuid": "7d508ef8-08f4-4e7c-a11c-080a47839e40",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "fdb503b3b3bff8e16d936ee7180c97ec47b472c2bc4a687e418d4d8934232947"
+      },
+      {
+        "uuid": "83f92c1f-d825-427d-af05-60b9a87928eb",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "f9bb3b4137efee7cabdc2d13c19c78bcdfdefc6366ffa4ec769e2925651cd3e3"
+      },
+      {
+        "uuid": "897319e2-a1eb-4078-87a3-4113225baf8f",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "dc5ea5818670cd31880173b6a5aa7436b2966a7a10bcb5c2190b26ad83e56288"
+      },
+      {
+        "uuid": "8a7bdce6-462b-4c22-ae38-03170972f117",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "e9a50887c54f9eb2f2bd71dc9127d9cd3c0f0b6cf158b0cd5c0f80b4fe6746af"
+      },
+      {
+        "uuid": "8c47924c-9d8a-4518-b4da-169a2505523d",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "8914c7aad2a64e78c70525e1c2b0e76f3054b625e59c9fcbd14d91b817f1fdb4"
+      },
+      {
+        "uuid": "9fd54c7d-67b2-4552-9d95-d992bec34a0a",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "ad861bd64787cba5fd21ce0b3fe11b1aff08790c78fe3eb543e33a580c3b0798"
+      },
+      {
+        "uuid": "a0cfb7f6-e7f5-493c-9d6b-d221901ae4fe",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "7a11b11d10830a66e33cc66d28d8141eeb41ddc4fd0d58ca4965aed7a5fdd7bc"
+      },
+      {
+        "uuid": "a144442d-5229-4284-a4bb-919a1e7ed2ae",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "ee9fd04910d810ab1b834212b74832ee14b3ee1584d793d2f62da5e5731b16bf"
+      },
+      {
+        "uuid": "a74b39e6-976b-4617-8f18-65f25767d896",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "e0ff8dca0e3018200c451edf83438b9b192a496d9a3e92fc84b1a8c68049afe1"
+      },
+      {
+        "uuid": "aa8532b0-c62a-4426-a88a-3f37aef05be8",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "b16c97e88e0a13c5d9c9ab5f3a16fafbc3459bd1041bff251c46e7ba69fa490f"
+      },
+      {
+        "uuid": "b40186d4-27b8-48e1-9f1a-2c23d9b068a6",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "50b3cf2a5cebb5cef751050ad9cd301972d9ff1a0329fb3941a55b759bcf3a48"
+      },
+      {
+        "uuid": "bd2444fb-4e07-4b10-88e8-4f295bb4156e",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "68ac2612f1a9f89764bc70ea0ca35f7ae33d332e3610946675d8c1dc206fc942"
+      },
+      {
+        "uuid": "c3c0d2c8-8fca-4ce8-87bd-34f27a5bb094",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "54801862a6348b63349539e3853a32418c0a8d252bfad6487fde20c722f16557"
+      },
+      {
+        "uuid": "d3846879-35fd-4eab-80c9-1a5849c831f6",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "a623c1608c0e58821df37b9840b4a8a4ac79cb3569ba8daa148e0493d6287ecd"
+      },
+      {
+        "uuid": "ec66f8cb-3d2c-4f45-9cf2-630840dfde69",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "16e6e3ce6735076d00f13bfbafdb70f1605d20d329650a4ed77fcc4e2fde9b6e"
+      },
+      {
+        "uuid": "f5a6312b-0d15-4f51-85e8-fa3f665f16a8",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "b9e909b47a97887e5b592ebd55f6295f294ef8183f4180567a5b738b64f99a1f"
+      },
+      {
+        "uuid": "fbda339b-5355-44cc-a696-44b5582e57f2",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "98b33f9a40fb8e87a588fb5749153d60dcab5f89e4d5f62974e8d9e644858de6"
+      },
+      {
+        "uuid": "fbefe5cd-e01d-4e71-8847-c7888cf86509",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "92a93af9a56ecc76866a0afa1fa2af2538fca2706c94609d67ca3b8a3d6dc083"
+      },
+      {
+        "uuid": "0a46c37e-9125-451f-97d7-3fd1e0524c97",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "d4392a4f26fb988854046d31849e2983946b428babc7b9288e7b21135092e9eb"
+      },
+      {
+        "uuid": "1b3b53c8-ce50-4970-8d35-2cd7bbc4a837",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "01346e71cd06d21f5c3fa8065f96140bb45a63991b7d8a88173b8faadde9fec9"
+      },
+      {
+        "uuid": "4b613616-611e-4a99-897c-4d7e6f0753d3",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "66f584ccde38f3dfadc87bef5001375fe7d307c4604da78d564f7e18d8f72c37"
+      },
+      {
+        "uuid": "5aeafd82-7f7f-41dd-9ed5-2f34ba77e833",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "128246e1af94f91653769c5601a232adec8dbf2326136c5e392532ea1dabed04"
+      },
+      {
+        "uuid": "69c3af9c-efc5-4041-874a-41cc36715450",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "e54a03caef4594106df49a82396aad637ca300c6f51f701d228b37ff9b964b05"
+      },
+      {
+        "uuid": "6f3b9d1a-18f6-49c4-b11f-17b8560c5fab",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "b9172aee166090fcbbd36913c650f2294b5716cb7f2b34af9b005c17df4d9e12"
+      },
+      {
+        "uuid": "9e7e64b6-e099-42fd-93fa-d023a43cb346",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "d6e776b99fbdca1560e8aaf8466677a39297e99e9cb05822643eb2cb9c90bf30"
+      },
+      {
+        "uuid": "9ef87969-4000-4e7b-84b5-c497d94d2dfa",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "118bdd5de768153c5445c3d6ac3f5c1a467b0d2d2b8271edaf190f9dfad1b34f"
+      },
+      {
+        "uuid": "c6f74ff4-72b6-4779-a179-8060f3747a5b",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "f801058c1c8d207d80d23cfeeb59c2429647826e4be2ea185e95fe1cbd55dc9b"
+      },
+      {
+        "uuid": "cadbe4a3-1956-40ba-96d0-ac400b06def0",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "15710c8ee67c874226b3a9b9adc5bbeb50eb1ffbe932fcf7ada380bbbfc2caf8"
+      },
+      {
+        "uuid": "cbce26de-eff4-4cd1-8165-9a6966d934d7",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "f9d9fd09dd88ee2fa08b40e5cf94e0c0a031f6bc719129a989e4ad3f42f6aafe"
+      },
+      {
+        "uuid": "d28a9e36-1a4c-45a7-8466-eb086b68364e",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "f7275527f4a7e00cefc16e8f71d29764d87ee473a46e5d41941b6ddb787d636a"
+      },
+      {
+        "uuid": "de03ad45-a31a-47bf-8f91-f1abb34e2af8",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "310007e8f572143ffda58a5525fe29261c083ad6e7f6091f49e87005ba37822a"
+      },
+      {
+        "uuid": "e93be786-2cbe-4ae9-9912-62f73dd36979",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "a22a4c063339deb0294c2199ce784555c1e6927f09fc01799a5b11a04c6b1d17"
+      },
+      {
+        "uuid": "ee78d1dd-2fc6-4e9d-a23e-8365552cbcb7",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "83bb1310cb3fa284f61a738f7b9c4e69d2bb6675b530ba19292b4576eab3a117"
+      },
+      {
+        "uuid": "f2417734-aa89-4536-9807-e46f907c4fc5",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "31fb98da65b43d6c3b3a5c2bc44dc51a75dbf643c95ef26b5763bba5b2003b30"
+      },
+      {
+        "uuid": "f41ca426-2a35-4d68-9e0d-7caf6b4701f2",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "178c221274a25b978097069bdb019d6b76ec6bab4c28e192c4ee3632010d93f9"
+      },
+      {
+        "uuid": "fe759db9-d1e7-48d8-a493-c042201c2ec5",
+        "net": "SYS_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "8332d6e49202f53182281cc8da57875fec0f3ab637d0e2c9cff7a618774fb6df"
+      },
+      {
+        "uuid": "63435769-8337-4681-a9f9-729eedfb87a3",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "aa606ef3e74187a81f4b63fbbf78b8326deb0b938ba0d5e90f1e54776859700b"
+      },
+      {
+        "uuid": "b3b00b55-0072-44f7-b68b-d4e09d11764b",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "d551ee2fe16f9816c1b8351d6a7aaf2e345c831821dab1e654b5123c52fab00b"
+      },
+      {
+        "uuid": "11d7d187-bfec-4e40-b473-962ba271bbb6",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "ab2d3b643cef0a05080d458c424fb084344e1963d27e335d59616156053ae9ff"
+      },
+      {
+        "uuid": "165af3e9-42ce-432b-9463-6d12a60aab70",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "1a9526e8164a6ad33e5c59ecd7f993e4d049fe94ec75cb41b5619c28164de15a"
+      },
+      {
+        "uuid": "40ed4e6b-1e93-4248-b067-4d8ecd7a1f39",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "e64bdd94bc435b64094806cbda7c2c7d14a09ee871cacd2ded22d902093f123b"
+      },
+      {
+        "uuid": "54305a2c-285a-4e6b-80bb-a9036d0a7597",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "4c08e5fdd1d4582f54abe48e52e1db3e20bf352eb2469b1bbc65c53091c76653"
+      },
+      {
+        "uuid": "74ca5dcc-8c3e-46fe-a18a-af8cb051de53",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "bb5559051c60f94787ec683096bf2c5740f0394344f436da8f62e12bf75310dd"
+      },
+      {
+        "uuid": "80c89f66-80e6-4369-98df-e6b15c549454",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "b22eb45215206f01d10a5369c27dd62c2956896eb08f4195e815c81d66b99b58"
+      },
+      {
+        "uuid": "812cc3b2-9c1c-49e5-bf3d-8d2268ca5a6c",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "209cdfa1514383911af9bd2f085f5575b7208341dc8be1b1b7c2ff715463b061"
+      },
+      {
+        "uuid": "837f4385-8438-4927-ac32-e2bbc13a9754",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "201ce3990a5745276098a08b37acc44b354af42d21ae493d5e18e1f8eda7db90"
+      },
+      {
+        "uuid": "c1a82973-4dfa-4ebc-abaf-ac00375e7854",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "a0eee990f9bdd32b9158592b113604bdb9c6432308610727aa23403444d70bed"
+      },
+      {
+        "uuid": "c28a08c1-f3c9-4274-9eaf-b1ad18d99b8a",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "a8ee9a42d6285d7ed68c005a39428961fc1fe9b3d0767ccbd678718eac0c1ae0"
+      },
+      {
+        "uuid": "cf3c3807-66d3-4458-8942-039d960f0711",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "e24ad8655644fb87dfb819c875f483b7fe0e786423db16c751998534b6e65069"
+      },
+      {
+        "uuid": "e23f1e73-1df4-4228-98a4-0604cb67663f",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "2cba0f23e153ddc3c464ef0b127fee8b6a172f131e7375e1f577f9fa8683666b"
+      },
+      {
+        "uuid": "fa3449be-67f8-40f4-a357-829b14a9a2b7",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "b3bddd2b4e883514c7b8f4b209954bdab0c58180bf89c66a022c532d201292d1"
+      },
+      {
+        "uuid": "0dea2cdc-92b2-46f0-95c4-72fe3b7c3093",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "9d93da728e614e361babda98146acb4ad706a9f9ace89dc5343a30e18e16721a"
+      },
+      {
+        "uuid": "179d92d9-971b-43ec-8bf0-0182042a107e",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "c3abecb6f5a0d7a9779408b26a5e91e217783aaec9650a70092c51b79be0f36b"
+      },
+      {
+        "uuid": "26eb2319-2090-4fca-8889-db6c04e0d5b3",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "85f3197cf18f29cfe2b37268d88d21a81c7449ac92e1033c5c6aebcb159698db"
+      },
+      {
+        "uuid": "39799150-b0d4-420d-9e9c-e06e50ceeb16",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "79813ff1aa118be41c1b17d5b1c51da2cce8d986ffd6c6e88f27572adb4a6337"
+      },
+      {
+        "uuid": "4a5db5cc-32ab-4c3c-83ca-4a81d621a849",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "35a1bc50cb5461b70b7129907fe1c8223458de0f02643165c0a896af3ed8cd61"
+      },
+      {
+        "uuid": "874c002e-79e7-46ef-a31d-cd85caac7164",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "f5c5ec22c20da2d394391747d916c550ccb204deeb1739691f4cded883a99ca9"
+      },
+      {
+        "uuid": "90601eb2-ea43-4f06-88a6-c89e7f06d677",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "09664906e7014d37d9345a66052f9165e1c051332a1fabcd4754831233a4658c"
+      },
+      {
+        "uuid": "97f0bcc7-176b-4fdf-bc1b-36d41ae3fe2b",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "4dafa182850bab16651b3a87b3adfc93ec66fbca46387d37201653be94db3ac3"
+      },
+      {
+        "uuid": "a2abb969-df8f-44ff-8be9-31cff347f73c",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "1886a06c0a8dc4a556eeb175c89bb1f9bdb78f92ebd6fdce95270eb1a8065739"
+      },
+      {
+        "uuid": "b468d3c9-a47e-4bdb-aa91-4cdd404849d4",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "099780c6400a182b2c21576de1ae05ba3c06da0b9aa3a0a5174cd75ca0e4340f"
+      },
+      {
+        "uuid": "c2e469f7-cd04-47d7-97ba-cc1ce5cb8ba9",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "841aad4cd11eeeab6c763b66d224f82de4d3e11d46df3408c7da57abbcc3eac9"
+      },
+      {
+        "uuid": "c32f4e42-7cf7-4dc3-83b3-141c5af93393",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "5d4ccc886b34207a9497c98c912cc08b6920f306b99e0bbf7ec53b42a6426e73"
+      },
+      {
+        "uuid": "c82bc6ca-470e-49de-87b3-ece68d0dd1d8",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "970931b6c56f88c5f586a51bcee342e3685ea4d1e42b147f26a1013e4f1f3a8a"
+      },
+      {
+        "uuid": "cf028174-b8e2-4ad4-9028-7781adbbe274",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "07559dbbff3392eb5ce488c9b24287f8a7be39d86d917002e92f55e51dceb9e0"
+      },
+      {
+        "uuid": "cfa71c99-cde8-4432-a2ee-df95bcb8b0c6",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "696f625c5ba50720fdb471bed804197e40b869bc6fd8e57c4f7cfeb83e248d9b"
+      },
+      {
+        "uuid": "e7f0c9cb-ee00-4ce8-b986-45067ea6937e",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "78dc83685744e72b5e56940dad7486b497eb114f4d431cdd7c2251bca36512c4"
+      },
+      {
+        "uuid": "e88b3137-799d-4a9c-b043-a046dda3b1b0",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "e14f477b57976dcf299885aae7d22aaf111ec9b1d14d58c37d89363ceb13e082"
+      },
+      {
+        "uuid": "ed2aac22-3975-40b0-8d05-5d77c6d54ab3",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "0e0482ffc22cdcd92860e43d75145ed0cc7a4a157280523d1d2cea0a8dbc8174"
+      },
+      {
+        "uuid": "ef06e280-e757-4204-9074-bbae2b13f3b9",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "c2a00e68a0a310ae9bb346380d1ea87ab6a62ee2ac776de3ca52e3685c797a6b"
+      },
+      {
+        "uuid": "fa876216-8cae-439d-ab76-0312dfe8e4e9",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "d9c277ef5b42f16f2864507410d42710e228dc67b5d21fc2d2b9a3adea2bb3dd"
+      },
+      {
+        "uuid": "09392858-05a1-413a-aba0-980838b4ae13",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "5cc4860bd10e0eefc0d094491804a60f7374ffaef9d3a39afe6ae890e8396687"
+      },
+      {
+        "uuid": "09f76158-d2ef-43a2-9a88-5afd312e8a1c",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "ea576c86127e86b63c42d3dd5bff6b5af888aab44041fe31adb0a86c8a452a2d"
+      },
+      {
+        "uuid": "0a546a8f-f1d0-418a-ac1e-90a2a5b0259e",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "a53755f41433e8958cba0e3024ee943a06e899c1ffbce5485e4729c17379c291"
+      },
+      {
+        "uuid": "1e0726d4-95f3-4d1a-b7f8-4de990995fd6",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "32abe7c729b1772eabe6a7a0eef00542fa083fa1be33645fadfed007d5c9cc6f"
+      },
+      {
+        "uuid": "2a4c5f5c-3acd-4db0-8649-86600c8e3d7c",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "324bd2d25ce110513d9c188d7d8a50e6d7809fdc2de7465fd8c5eb078ed27777"
+      },
+      {
+        "uuid": "2d626170-39f4-49c5-a220-0092cc194acc",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "f27cce565a34fe8555976dca5d1aed1b5c7711754c99358a69b6685e71707690"
+      },
+      {
+        "uuid": "335980e4-77f0-451d-aa5b-493850a82db4",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "9f4964cc4378c8053c07c5eb41ee1ba84a875250ffe71c4ec150e91e07134f39"
+      },
+      {
+        "uuid": "33881fc1-ebaf-4d89-a340-d2ef9d666945",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "0265fc549045aaffbc9d988e8a0fa57d120b7daea07b31852b7ece56b61ad5ea"
+      },
+      {
+        "uuid": "4d5409fc-4ead-43a3-a9c2-e7fa03f330d2",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "bbd26607f368d6c01f0b99085428a647913193cccda9108251325addf7fc966a"
+      },
+      {
+        "uuid": "5900e98d-5695-4729-9f01-7c4396a71b6d",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "badbd42b5fb8b1e9edcaae11aa101bee84bdcf5827e3e1ab2f21025f9f2f400d"
+      },
+      {
+        "uuid": "678c9c5d-9760-4aa4-8053-e9f416d6be06",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "238a7f7e755f9eeb3073b1a419fcbc96da5d377987d90f82ee8b443a3ff8d757"
+      },
+      {
+        "uuid": "72beaeb6-ef79-4359-98b6-24172284df7a",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "190d90567354c785ef3940b906df23bea318d8b4d0a3d5d1b774cbaeeffd9843"
+      },
+      {
+        "uuid": "7871882d-c63b-42da-acfb-9a98002b9375",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "4c1618b5637bcfee44c8d808ef34c57b91759277e4d906b6f8eaaa1b28c84337"
+      },
+      {
+        "uuid": "81a897e0-f7d9-4840-a915-12ca4009f06b",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "07e69aad31dfa492ec05d69a683a37c3967c0bd98c7da38b05a67454527ed38f"
+      },
+      {
+        "uuid": "8ca01c34-2446-4915-9f1b-6bc119f93bcc",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "cd77ea70f4aebc042f935bab3fb9d9884e6987e278850679f9e9cfe3d583777d"
+      },
+      {
+        "uuid": "8e7d39ce-424e-4662-ab15-96e23c0bd060",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "d6d9b03494d2f994a877527e1525cf91c50ceea57232eb9d50d820795f2fac8a"
+      },
+      {
+        "uuid": "94443328-c7df-4b33-8f91-eccd1624fb47",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "9230171d34746b78bc303e63eb326dc5ffc8df0b268cb75ebf77f5b1063a1a1a"
+      },
+      {
+        "uuid": "99cd0bc8-a571-40f8-8452-e5bed34738f6",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "4493d1cdceae1ed893b79a8cdc68b0d5b2949d406fddacbb757a776b789726cf"
+      },
+      {
+        "uuid": "9bbeb873-0840-49d2-9638-d527898e1a1f",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "8e33b152c1b0680fda9dfe179a59399e05af60822910a7335bb9953bd695cfac"
+      },
+      {
+        "uuid": "aa6717f4-270f-4048-80d8-ad365f178ee0",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "d8c9d6bf969e478b708e8cd8f64b787478c710413cd39a2f5f66518e778ba9f9"
+      },
+      {
+        "uuid": "b2b7a8e1-86e1-4f9b-8f73-333a0a6885db",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "a55fdeeab4c99655c1ea468ee03413adfc1e736f3db92812ba17d634d0de7308"
+      },
+      {
+        "uuid": "b6fe369e-7b4f-4f5d-8c7a-9ad1b7c49356",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "2ac14817ad4701c29714af0f234a4ed9b78cf064d5ad27e13f14a729e9c15e4e"
+      },
+      {
+        "uuid": "c9aa4311-f8b7-4fcf-bd01-e2ff758ac6d9",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "6c50cfda16e8f83b8e4b6b459797ad351b24c50df658eeb815ea78db965c45c0"
+      },
+      {
+        "uuid": "e40f01ca-7379-4ee4-99fa-1ea5b480b10e",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "e381f8009011ef0f009d5bee1ef3a959ae9bbf41c96995226edd41cac9627a99"
+      },
+      {
+        "uuid": "e6f26811-a62e-4048-868f-542c964a609c",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "ca82abba8669fc8cfeda557d1d082a55cf79a4b33b3fd2dc74504866855a1414"
+      },
+      {
+        "uuid": "ef09d692-1919-4a89-9054-6fb8975a42b8",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "510495b3dafcd6fee6c595017d1b068b3b6e0304ceb1aee3030a89237b9450cb"
+      },
+      {
+        "uuid": "f437c364-a76b-4ad3-bbfb-13d314bfa582",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "3a0c98f75c048d1b34667d7271b0a3bfb29907dea72d8bb1ffa91543583fb468"
+      },
+      {
+        "uuid": "fbc4e94c-f801-44ee-9bb7-c36c64d94dbe",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "1b0bab87c0775cb3b01b1668f6e793e5ad7da86f6aaa13d9f0a2bae5db8ad8c1"
+      },
+      {
+        "uuid": "fc9369e9-c787-4848-a810-a079e33c2db3",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "69a70a3476794ba6a9d073f1cdcdcb7b2e72c831b59f0778d5897874facba704"
+      },
+      {
+        "uuid": "1494fe2e-7731-41d2-a0ae-51724d704f93",
+        "net": "MOTION_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "0ab25cb236ef4acc26bdbc3dee3ad978e9ce359c2aad789273c346cf3473ab56"
+      },
+      {
+        "uuid": "2024c1c4-2656-41f8-9c40-4acde5903d1b",
+        "net": "MOTION_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "994e0db925bfb337305e87240d60d8491cc26c93b4a6d7faae21052a648ab079"
+      },
+      {
+        "uuid": "21671b3b-2cd0-4406-8ba5-60fa8cdcf0ca",
+        "net": "MOTION_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "effc1d3e6f729e456b3e464740538ddc1004199a7a11a0475f12a0a7c7d41f11"
+      },
+      {
+        "uuid": "225404b0-b59a-476b-bb86-be78e72266c2",
+        "net": "MOTION_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "0ae47af74e431a3d164e26ee7bed31b12f1090b7671d48c2161529035a4dbdec"
+      },
+      {
+        "uuid": "3616401c-fa4a-4aa6-a59e-17cd9cbb196d",
+        "net": "MOTION_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "dfe7db64c1d2bc25d8e0d44a11e597f1b8a0713687d6f89314b9d7228c8554d1"
+      },
+      {
+        "uuid": "3ad95ec5-068e-4a71-a31a-6f69436e87f8",
+        "net": "MOTION_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "c20f39733ea4e5ce807118e9766c59e526b973b13e2350d907d8d4c9f05368ef"
+      },
+      {
+        "uuid": "46d293d5-eb2d-4cd6-b1af-dfc6f97a8216",
+        "net": "MOTION_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "101e4b46b72aaf9399efacec3e0ebb878f211e3538639ca55c0e452de4a172d9"
+      },
+      {
+        "uuid": "4f68ab66-0e3b-4fe2-bdf3-8a6afc1ede0d",
+        "net": "MOTION_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "db1f804c191f9d1ccd5b07c6183a44555ebd42ac6999323a9d0026bd05fd9bcd"
+      },
+      {
+        "uuid": "602e28ab-75a9-41d3-b1bb-fbc41cef73c5",
+        "net": "MOTION_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "11431a54bfd28640e2385044028ce32ef7912807edcd03af3eee900f71cfb245"
+      },
+      {
+        "uuid": "cd40cbfd-8531-4693-afc1-9ed1f1a68130",
+        "net": "MOTION_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "ad59b9666f5fc59b718d3b08022d3633d08e3588df63aee7372515d815916723"
+      },
+      {
+        "uuid": "f1d21624-1c53-4fe6-980d-03686231e67d",
+        "net": "MOTION_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "7b5a25654edaa159a9935d9a28fe4e72ea59869a3e99ec488519696e61141f53"
+      },
+      {
+        "uuid": "f27e53eb-4d5c-4723-8607-9c6f7a6bcbd2",
+        "net": "MOTION_BUS_P",
+        "kind": "via",
+        "sexpr_sha256": "2916832a3714e5b6663544ad03a2574f4f7a9208ce3536861740369a6329d8cc"
+      },
+      {
+        "uuid": "13683ac5-c8e5-469a-a55a-f6a5ce703e78",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "84e63d7f0c5472c070f461d72bd854c5f72f387197d7841c6fe974ba774f7088"
+      },
+      {
+        "uuid": "2df9781f-f1a1-41a9-9e94-3a176e9036cf",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "bebcde1b4acb6ba1b154e402ef65b27c70d6ad604f4b9cd3986f82b2df1329c3"
+      },
+      {
+        "uuid": "4487159a-7d4d-4506-a200-c88b30fed386",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "eb6905be3a420a5ce1799b35586ae4f327b6c28dffa38683324bee2f7dfd78b0"
+      },
+      {
+        "uuid": "4e85fba3-4c5c-4e2c-9e81-2a3f86cbf906",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "1f413e584862fa831d5a981ba0d5a67b0ac0cc4257b5793c704a8d8553ec8d2a"
+      },
+      {
+        "uuid": "680053c0-917f-49ac-8f48-1834144b4ad2",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "c96e0734077d2211449838e80f9b8414223473711e3edfec5d4ae897b36d7890"
+      },
+      {
+        "uuid": "6dd501c5-19aa-464a-9598-193a7d4aae03",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "e4465511e8ab5fd9591f9eb3f7af4003c5f0976a5cf3572f8c09e577c7076828"
+      },
+      {
+        "uuid": "79fb5828-c23a-4610-adaa-78f3c7e38d52",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "c987c12e7874454a00ed710e67d5d6482e5d68411482c64ad9f822de59dce443"
+      },
+      {
+        "uuid": "7e8b49e9-159f-432f-8dad-cd08fbeddaac",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "62cdf25c3a52e84e1198b272402e6c3a5a14f3653bbc9178dbf353e9f7604154"
+      },
+      {
+        "uuid": "88fc5d97-a345-4217-9990-81577b963d01",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "e84561c989ef3040dd1c20f136159b12816bc3724604b613dcb22ad24d35a3b2"
+      },
+      {
+        "uuid": "99dc182c-9281-43fb-b4ec-9ed066f95561",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "a0e7c8e1c077976a16d229c4f324df66e6d278eeb2ddbf79ceda856133f55386"
+      },
+      {
+        "uuid": "9dbec602-7453-4755-894f-956a0b56d717",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "1233c8b4698f121215b2a726caec282812f3b2f41beb94dd51f9ba46af73e8dd"
+      },
+      {
+        "uuid": "a2dcd4d1-7a3c-4b71-aa64-9167348d3b7f",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "f6b6f00470c5bc93e7194309fcb152c57905289b585e08899a39acd5de2419f7"
+      },
+      {
+        "uuid": "b12d27de-49ad-4322-b51f-84e06bde0cd4",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "f72fb0211e3f5b3f77e8a9c6fe15ab5ffe0b980362bb0c4a8b25ed90dbb63dd5"
+      },
+      {
+        "uuid": "dfb06a83-2bd6-492d-b213-4f9116b99887",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "f00f8c2af7000dab537886e2c996f7759a14f949347680892c3484d9fb046e9a"
+      },
+      {
+        "uuid": "f8b11218-c0fd-4224-bfe5-ae643d2e23cb",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "6140ac2b2ad5bd093d40aadc8ae422dffac890bcd12683e407b1e36e7fff911c"
+      },
+      {
+        "uuid": "0b07a430-8393-4129-863d-683f020a30e9",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "3d7227a03fa3b37d2656a7b5b760324a963b66b6c70f87c07bf59395e064acb4"
+      },
+      {
+        "uuid": "5b6e3214-35c0-428b-8ff8-f846995e32fe",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "05281308c2577fdff6579312a6e01ab7e2b8bf7c490fa318db082effd04d4235"
+      },
+      {
+        "uuid": "71ada8a0-86ae-465a-a97b-77e3f3d7f93c",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "ebb8a44e5c34b5b84cc0203cc5f389926a778cd154971f5662abca17cbbce57e"
+      },
+      {
+        "uuid": "a0c7e40a-f34c-4f03-9d6d-dd6e63e66323",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "c92a30af0e0bbc04bfc85040335e5b2aff76dd29988f1713e939224624aff335"
+      },
+      {
+        "uuid": "aaa22b29-a9e5-42ae-a461-2e5259e70ad4",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "81afeab799af78d1a4b13511ede2bd6a6cd650014ad0d723897cdb2be0b6fddc"
+      },
+      {
+        "uuid": "c080c6c3-e1f8-4b3f-b80c-f7f8f7dc15d9",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "130e1337d993583231af8396a11fd3327cb7fbf8a7b74dcdf30f5d38eef63c31"
+      },
+      {
+        "uuid": "c1586591-2984-4664-b5a9-296c8f6d7f3a",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "252d82ec2a9c69ba3918e6c3fd501d1ae7c6cd172390ef22d6bca8f709bff6c9"
+      },
+      {
+        "uuid": "e40bae5a-624a-489d-8916-0b22f14eb041",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "51b3980b1e11964f3d7bae095c3ceb79594a757449ad7a91fbda799a040ada56"
+      },
+      {
+        "uuid": "ee5298da-1b51-4236-94a4-def2a82db73f",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "e9284c8ac9af7557f6830c10708504fe27951e80343cffd5805b79dac662279a"
+      },
+      {
+        "uuid": "f7c13427-5f80-4b1c-be71-6b400f929839",
+        "net": "MOTION_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "b3002dba8d6f4846dca5b2042403494325e3a0988e9d39aef60f77df996b4e4f"
+      },
+      {
+        "uuid": "2868f7ac-b652-463f-b93a-21c491f11926",
+        "net": "MOTION_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "144eb0355b73b3dffc487ed368e5c7d191418f61d9053b78c6047c39320b9cdf"
+      },
+      {
+        "uuid": "40ab3433-3352-41bc-a862-492e93530bf7",
+        "net": "MOTION_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "027d3f20ce29c4cabbbbdbb5ef571919892f02c770c02887516162fefcc63876"
+      },
+      {
+        "uuid": "7391587b-b78f-45d3-83bb-81548c01fe88",
+        "net": "MOTION_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "28fc426d7792bb840a21cc539ec94d69202cf44559bd74bfd0a2fe213b314d7d"
+      },
+      {
+        "uuid": "77f60931-0af7-4eb6-a7b8-4375bc6b3e6c",
+        "net": "MOTION_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "0c49fd377171bc70333ee4f006fcf96b6498947226fd8f10689119a00de4ac4a"
+      },
+      {
+        "uuid": "a57efe9f-570f-4c89-a155-7fa688be0e53",
+        "net": "MOTION_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "a85cd2047373b1eef163c60d3c3799a30c381972323631138223f54abe32350c"
+      },
+      {
+        "uuid": "ca2c18aa-a7ab-4173-98d7-d131e2cc8f52",
+        "net": "MOTION_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "a9c3af3746ea837cb18070ee046db35edccde04d5ff868106d55eaf314747a67"
+      },
+      {
+        "uuid": "fc765edb-3c90-4a52-80ad-81c1e4fd230f",
+        "net": "MOTION_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "b435bca29b4c690d18af8d41fb057ba81c70881d09d783159c4acf794ff017b2"
+      },
+      {
+        "uuid": "946f68d6-6b32-4c36-9c1f-5671d347b2ae",
+        "net": "MOTION_COMMON",
+        "kind": "via",
+        "sexpr_sha256": "e4aa27ee50a4c984c345d912ee81c1503f4f07141c5b3ef9c642770df31b7027"
+      },
+      {
+        "uuid": "d11506bd-8ea3-4cff-8e07-4145dc9a42d9",
+        "net": "MOTION_COMMON",
+        "kind": "via",
+        "sexpr_sha256": "9e8153a8ae71766e0603853a2348176b19204b57e4588189078ca3c68e9e08ef"
+      },
+      {
+        "uuid": "e7655331-9528-4f8d-aaa0-4bebcbaf3e8c",
+        "net": "MOTION_COMMON",
+        "kind": "via",
+        "sexpr_sha256": "c19bcc5c4fd52c553688bfab2b5a10fcd4b16f149106e4b9ba550bb4fd46357e"
+      },
+      {
+        "uuid": "f3d56028-1e5f-444c-a0a1-e1fa9f3650ac",
+        "net": "MOTION_COMMON",
+        "kind": "via",
+        "sexpr_sha256": "d657bbc0e1e80cc81f31f474c6e551c45eb50f622ae4fe2707fafeb282fdcd39"
+      },
+      {
+        "uuid": "19d75893-94c1-4159-abb8-13ec4ed485b9",
+        "net": "MOTION_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "fb0231eb2c80401799ed56522b5f3dde86b19aceb3d08792b1e5490b48ec1755"
+      },
+      {
+        "uuid": "287537e1-f2af-4d87-9a61-00de5cd1db71",
+        "net": "MOTION_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "bb6156b22ef4d44c0b74deea028b5e7498fbef66090c51b0c4ab759bbdff2954"
+      },
+      {
+        "uuid": "a115ee19-20a0-4480-91b0-27b6a3b5937d",
+        "net": "MOTION_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "f737fecc8a187306d631864c2d857add9f88419f6f88550169cdef5af9039df1"
+      },
+      {
+        "uuid": "02a9b8dd-6614-4aea-b4be-ce617cb0f3c3",
+        "net": "MOTION_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "79b32e2ba7453f4f2f32577cdd4260d5b19b8b42379e6a5134c8d41ba82bdf72"
+      },
+      {
+        "uuid": "9b2110e6-08ae-4ee1-8ec0-f797520f41c0",
+        "net": "MOTION_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "23519ad6b67906ac12c7b451508bb235ac7cd430f9548ff608ff0f2a63091c09"
+      },
+      {
+        "uuid": "c1b855fd-8935-466c-a547-b0af7322b843",
+        "net": "MOTION_COMMON",
+        "kind": "segment",
+        "sexpr_sha256": "89e02523744907472df163d6456e4bd8758946e708b9651570b16266023e209e"
+      },
+      {
+        "uuid": "19b50ee7-131f-44d0-a800-739008b092cb",
+        "net": "BATT_FUSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "d07bc0ce3490785117e44908ff7cffa2e72fccfb82793a98f57b02067d085443"
+      },
+      {
+        "uuid": "ab87daaf-b539-402b-a982-c47298fd2769",
+        "net": "BATT_FUSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "bc2dd2244fed5e256797afc465d5e411c65d5c210ddcd38c0f92ac5ae86d3c49"
+      },
+      {
+        "uuid": "b6a54e00-9df4-4dca-9cee-c26c666ce708",
+        "net": "BATT_FUSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "bf493611dcbd5bf10531f13c059640d4c7fe6e730d26ad8af5f63b5463d20ff2"
+      },
+      {
+        "uuid": "0cb87016-b43f-426c-af2a-72f57a4e7a08",
+        "net": "BATT_FUSED_P",
+        "kind": "via",
+        "sexpr_sha256": "9d5b570932b87f1ac881c543588623e2d97df522416d805c58a7d6967a349a12"
+      },
+      {
+        "uuid": "7837fcb5-849b-433a-b1e1-2a50a50452e0",
+        "net": "BATT_FUSED_P",
+        "kind": "via",
+        "sexpr_sha256": "265108e8c5e7feb6120f5f805d8873839800fd7770900312dc7a1c72fd921509"
+      },
+      {
+        "uuid": "0f1680d0-1b91-43f4-b05d-6efc5a191d19",
+        "net": "BATT_FUSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "290f60c968fb3b973a6ca4c38d4ed1b27337e118e15c3f8f3960776487089c81"
+      },
+      {
+        "uuid": "c5462b7a-5108-425c-8fc3-2966b90541a7",
+        "net": "BATT_FUSED_P",
+        "kind": "segment",
+        "sexpr_sha256": "a27419540b2888f15246d86e174e2bf3e2775facf3ffa5d96d3936581d1fce95"
+      }
+    ],
+    "PWR_SYS_BRANCH_SPINE": [
+      {
+        "uuid": "0dde5788-6973-48cb-a0e8-f061f5c33341",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "d1cc5131bc203f9c647b7500225d394a553a5a3d3841e2fea90730b5143a1d39"
+      },
+      {
+        "uuid": "1c71d87a-fc02-4a0f-af6d-4a713c941776",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "c78dadb5eb08a25c23d0790a5d0776497583d4f53c0ec9b505422ef798b71912"
+      },
+      {
+        "uuid": "31199f93-d854-4dee-a5cd-1d3adcb8e84e",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "bbb65f39fe3d3d90b90215202ab26d5b4006e81522d5c95aabdbe9654ed30ac4"
+      },
+      {
+        "uuid": "5271459a-4ab1-41d6-bfd9-149c93296b4c",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "d65552b44edd6eb30df4c2b009293ef303c7f6710646d0f0df5fc2a8d949fda7"
+      },
+      {
+        "uuid": "785bce6d-daee-4b3d-aa7c-b6ba921f5d75",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "37d5f1afd115a29188a20349aa369d944186504bfcc35f16b96d19ed9fc68725"
+      },
+      {
+        "uuid": "7d99858d-6592-46f8-aa41-8df3c7a52210",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "7a659681e5225eb8b8371a9036a9420e9c37da1a382dff7671fd07a083449d5e"
+      }
+    ],
+    "PWR_SYS_BRANCH_FANOUT": [
+      {
+        "uuid": "3c4aec68-071d-4f15-a7c2-0261affd75e9",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "c8bb04175b474a40bfb4bc9f0753701478538955ab7698ba22cc4de4c51e82ad"
+      },
+      {
+        "uuid": "4cfe70b6-2442-455b-a027-94468a4fd938",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "a40574b05e6e103c799a3fcc9ff2b385829ed8426d62fed7759b2f80009e6cbb"
+      },
+      {
+        "uuid": "7c9ecfd3-f0f8-4608-bb00-666205ceaa3d",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "107283f11897b8827ef2d93935fdb0889bd6096e2334ca0c58e83323af8f7d14"
+      },
+      {
+        "uuid": "98614bd9-00f4-4ae8-a183-f1f254c78215",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "6445fd98993cd072b9b082ae3b9d18a1ffc93de70b74ac85a9b75a057e8ca830"
+      },
+      {
+        "uuid": "b8063a23-fde9-40b0-9690-321e311c3f8e",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "ea30ca53f0b4ba7492f8372d6e29cece7346f45ef058155aca850cae28e00244"
+      },
+      {
+        "uuid": "d67fb8de-ee0e-4056-af40-f5457475e568",
+        "net": "SYS_BUS_P",
+        "kind": "segment",
+        "sexpr_sha256": "83ef0a30a7ff0b9034f3209d8f9519db76bb164b05424e76b7a0e4893f0a3ec0"
+      }
+    ]
+  },
+  "control_scope": "Existing testpoint, divider, bias, gate-reference and control-return branches only. No new track is automatically exempted.",
+  "sys_branch_scope": "U3/U4 eFuse input spines and six short 0.25 mm package fanouts; at most 3 A/2 A branch design envelopes, not 50 A main current.",
+  "requirement": "All captured members must retain exact geometry; full-current pad connectivity must be independently checked without tap members."
+}

@@ -43,6 +43,13 @@
       "sha256": "ec12824640ee0eb8ae3bfc13da6fc45b993f96ccf2670e68da3c428a7a17ef49"
     },
     {
+      "path": "design/external-integration-gates.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "1335685b3057da6503fd694912cbb9a893895119c0425fa5dda89363c0d9345f"
+    },
+    {
       "path": "design/FINAL_ROUTING_REPAIRS.json",
       "coverage": "explicit",
       "reason": "Release flags in metadata",
@@ -194,14 +201,14 @@
       "coverage": "explicit",
       "reason": "Release flags in metadata",
       "release_scope": "release.json",
-      "sha256": "2b444335ccbb10d991e4ae1baf8bc4dfa95a3ee488483e44ecbb2ff9048abb6e"
+      "sha256": "dfe0db08ffe8f47d2adf65233863e497c40999737f4b99a9fe06ffa595ef41c9"
     },
     {
       "path": "evidence/filled-power-polygons.json",
       "coverage": "inherited",
       "reason": "Filled polygon array used by rendering tools",
       "release_scope": "release.json",
-      "sha256": "8e64dc8b13abe22a52daf2812aebe6f1dfaf6596131d4e61e10cb493c2289b8c"
+      "sha256": "4a306384f6fd9b296a8b282c979ed464ff52bbd0da169de42c8a8805cb9f689c"
     },
     {
       "path": "evidence/final-electrical-review.json",
@@ -222,7 +229,7 @@
       "coverage": "explicit",
       "reason": "Release flags in metadata",
       "release_scope": "release.json",
-      "sha256": "05872dd80acac48e81b4373a0212e154e5d7163b5de19e27958b0eafb534e50b"
+      "sha256": "5034bd2844ccf1c509aa0428088ce6009b9c322d86b4dbb63ab8fbda3d695e84"
     },
     {
       "path": "evidence/generator-reproducibility-review.json",
@@ -230,6 +237,20 @@
       "reason": "Release flags in metadata",
       "release_scope": "release.json",
       "sha256": "9eff516723d95fbad99c127f85b1adcd37458f81a9cf826bb2da27e5b99afabe"
+    },
+    {
+      "path": "evidence/high-current-audit.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "246c6ac58fb2a69b4ddab01483e868b0ddaffef24a7342e71b97f2f9ebc28029"
+    },
+    {
+      "path": "evidence/high-current-tap-capture.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "7235f751be6bf960ab08618c8c6df106b6032dae5555a7d9b12a1cc08ef3dd15"
     },
     {
       "path": "evidence/placement-access-review-interim.json",
@@ -243,7 +264,7 @@
       "coverage": "explicit",
       "reason": "Release flags in metadata",
       "release_scope": "release.json",
-      "sha256": "71dc9ab56d6a6e67c62f8e525da02d3bbc08e3f2d4a7cf5eb3538a007c667c12"
+      "sha256": "71717bed040e4cc5182cebb456b03921a46c52a5d475a32fdc237b145982f839"
     },
     {
       "path": "evidence/power/calculated.json",
@@ -271,14 +292,14 @@
       "coverage": "explicit",
       "reason": "Release flags in metadata",
       "release_scope": "release.json",
-      "sha256": "52dd55076ea3b3a961df08a92a8a679a294249180564aa9a97947a84159c1f0f"
+      "sha256": "2f81c141a3bbc4969009f57bddcb1f48f4b3a3751a55ff3c5f70331a5ffbdc65"
     },
     {
       "path": "evidence/rule-review-report-snapshot.json",
       "coverage": "inherited",
       "reason": "Report-hash snapshot array",
       "release_scope": "release.json",
-      "sha256": "7ed334b481c9744d84411ac57619f5039d7f80c760a3199647f317cce0ab232f"
+      "sha256": "6ed759ef7c8068c6144cfd3fdb5cfb15a48dda2e14a8bd558ec1af2b85941f24"
     },
     {
       "path": "evidence/schematic-readability-review.json",
@@ -320,7 +341,7 @@
       "coverage": "explicit",
       "reason": "Release flags in metadata",
       "release_scope": "release.json",
-      "sha256": "e49a1370163ad4b808445eae03ec781085d1f2b9af0d928b2fc6e2800b62708a"
+      "sha256": "e5b7f9e30a5cff3f72c3e5d8918e6eafb31b9cd4c7c5a0de4b3d88105d26ccaa"
     },
     {
       "path": "manufacturing/busbar-calculations.json",
@@ -372,6 +393,139 @@
       "sha256": "e29992a90babc735d3c9d3a1bddd7ca8d4c530d70a9cd40c98d2053c85661b39"
     },
     {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/assembly/assembly-orientation.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "e5b7f9e30a5cff3f72c3e5d8918e6eafb31b9cd4c7c5a0de4b3d88105d26ccaa"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/assembly/REV_A_excluded_pcb_features.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "c8a3b0bb24278f87ab0712e36fecd2682388234215c91da84c4be42f1f7ce4cb"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/bom/REV_A_BOM.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "6f8d7c0f3f1e3607a3243094579b84edcf9c653693511752528152be0a60655e"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/bom/REV_A_BOM_MANIFEST.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "455971545ab62b910cf8e016e59fb237516b86ce896e3af4cbb071f2ae567248"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/bom/REV_A_EXTERNAL_BOM.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "9cdf6da860fe62e02aa08b89fdbdb5a0e0c27e112c60aa54247a1392c244d4de"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/evidence/drc-final.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "41209f2f29faef8b89e8dab513edf4540d547d1aa666cb81b91bd1e35df13c75"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/evidence/electrical-parity-audit.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "527cb8db9c1eb2dbd24f24402db9003403cea1410c5ccf56f2e75b346b8c6ece"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/evidence/erc-final.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "38a01195bd9bfedae926026ad02f03b66581b02f8acda143ae8389dbc3256a1c"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/evidence/filled-power-copper-review.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "dfe0db08ffe8f47d2adf65233863e497c40999737f4b99a9fe06ffa595ef41c9"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/evidence/high-current-audit.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "246c6ac58fb2a69b4ddab01483e868b0ddaffef24a7342e71b97f2f9ebc28029"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/evidence/high-current-tap-capture.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "7235f751be6bf960ab08618c8c6df106b6032dae5555a7d9b12a1cc08ef3dd15"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/evidence/native-checks-both.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "a1ebf2923be894354190232198eabdb8558caba56c2a4b233481f2dca5c0cb2d"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/evidence/placement-access-review.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "71717bed040e4cc5182cebb456b03921a46c52a5d475a32fdc237b145982f839"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/EXPORT_MANIFEST.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "4654db4b74b6bb8701337c0f95db717c61b8fc9ab5c31905a06e79dd1fb5725d"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/integration/external-integration-gates.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "1335685b3057da6503fd694912cbb9a893895119c0425fa5dda89363c0d9345f"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/mechanical/BUSBAR_DIMENSIONS.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "589c96b2bfa8b1445393498e77852d3768af56ff323ccb644c98cdcdab97c739"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/mechanical/MECHANICAL_CATALOG_BOM.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "f16fa2c81319009f8d2ac8fb37753ba294b622156ee063934a12bd4ffaf1aa30"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/PACKAGE_MANIFEST.json",
+      "coverage": "explicit",
+      "reason": "Release flags in metadata",
+      "release_scope": "release.json",
+      "sha256": "dc82830fd962eb7f46c95e91c758d50b2cb730a881e4e90319dc7342ef98fb45"
+    },
+    {
+      "path": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/RELEASE.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "01fc122baabb36d2e36035cd517c6b42e6d153c8f4e1507efd9e261092dadd1e"
+    },
+    {
       "path": "manufacturing/MECHANICAL_CATALOG_BOM.json",
       "coverage": "explicit",
       "reason": "Release flags in metadata",
@@ -383,21 +537,21 @@
       "coverage": "explicit",
       "reason": "Release flags in metadata",
       "release_scope": "release.json",
-      "sha256": "67042e301d8ab93fdcee2807ee57af13a0b5a1be626fbc06367458d481574e1b"
+      "sha256": "6f8d7c0f3f1e3607a3243094579b84edcf9c653693511752528152be0a60655e"
     },
     {
       "path": "manufacturing/REV_A_BOM_MANIFEST.json",
       "coverage": "explicit",
       "reason": "Release flags in metadata",
       "release_scope": "release.json",
-      "sha256": "9d366b78dd644e64c99c234f8df062fc2bfab96deddddd2d2624d9746611bc77"
+      "sha256": "455971545ab62b910cf8e016e59fb237516b86ce896e3af4cbb071f2ae567248"
     },
     {
       "path": "manufacturing/REV_A_EXTERNAL_BOM.json",
       "coverage": "explicit",
       "reason": "Release flags in metadata",
       "release_scope": "release.json",
-      "sha256": "5508478287ee0903ac6b3250f0d340b7eda2201ff3c28e596c52af05dfdb47d8"
+      "sha256": "9cdf6da860fe62e02aa08b89fdbdb5a0e0c27e112c60aa54247a1392c244d4de"
     },
     {
       "path": "manufacturing/source-pad-geometry.json",
@@ -411,7 +565,7 @@
       "coverage": "explicit",
       "reason": "Top-level release flags",
       "release_scope": "release.json",
-      "sha256": "aeffab8fc513734016e588c2bab3c76a2d8b11c1c1ccdccc1fbaa60d6b19184e"
+      "sha256": "01fc122baabb36d2e36035cd517c6b42e6d153c8f4e1507efd9e261092dadd1e"
     },
     {
       "path": "reports/analog-routing-corrections.json",
@@ -433,6 +587,34 @@
       "reason": "Native schema-constrained report",
       "release_scope": "release.json",
       "sha256": "897515bcd707987b26871a4e98f54f9104710def98f8f48d915fce8b2b93f30c"
+    },
+    {
+      "path": "reports/archive-before-prototype-release/drc-final.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "47e6f417dffc642f963677115169a3e8a9aa61b2465ca48b8aff4c284a52e4e1"
+    },
+    {
+      "path": "reports/archive-before-prototype-release/erc-final.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "b67682255bcbad2657097f54b81eb9213bf22e84cde43384e837a7a66faf11dd"
+    },
+    {
+      "path": "reports/archive-before-prototype-release/native-checks-both.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "ffd1840d2a9d3368eaf7f90e31341f81cb8d8b2f9706ba80fa5f8eff90822b6a"
+    },
+    {
+      "path": "reports/archive-before-prototype-release/native-checks-drc.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "bdbfc8ce8bfd997308b6e27c3830e9b0c53f8ab5f4797106ee07991a22239272"
     },
     {
       "path": "reports/assembly-annotation-application.json",
@@ -474,7 +656,7 @@
       "coverage": "explicit",
       "reason": "Release flags in metadata",
       "release_scope": "release.json",
-      "sha256": "d3c05928bc8011290ed8f57b717807b397cdea7c2239756d4e2e7da3c9e2f554"
+      "sha256": "271a2d6658d26e319879f863a83fc42fc3cd17111d3a005ef4470e995d624195"
     },
     {
       "path": "reports/critical-routing-integrated-interim.json",
@@ -488,7 +670,7 @@
       "coverage": "inherited",
       "reason": "Native schema-constrained report",
       "release_scope": "release.json",
-      "sha256": "47e6f417dffc642f963677115169a3e8a9aa61b2465ca48b8aff4c284a52e4e1"
+      "sha256": "41209f2f29faef8b89e8dab513edf4540d547d1aa666cb81b91bd1e35df13c75"
     },
     {
       "path": "reports/drc-initial.json",
@@ -523,7 +705,7 @@
       "coverage": "explicit",
       "reason": "Release flags in metadata",
       "release_scope": "release.json",
-      "sha256": "30663f134d19e72d8421cad952ffa07bed7bcb3bdc8bab30086f72fa7ed1f838"
+      "sha256": "527cb8db9c1eb2dbd24f24402db9003403cea1410c5ccf56f2e75b346b8c6ece"
     },
     {
       "path": "reports/electrical-parity-completed-candidate.json",
@@ -537,7 +719,7 @@
       "coverage": "inherited",
       "reason": "Native schema-constrained report",
       "release_scope": "release.json",
-      "sha256": "b67682255bcbad2657097f54b81eb9213bf22e84cde43384e837a7a66faf11dd"
+      "sha256": "38a01195bd9bfedae926026ad02f03b66581b02f8acda143ae8389dbc3256a1c"
     },
     {
       "path": "reports/final-power-geometry-corrections.json",
@@ -554,18 +736,67 @@
       "sha256": "95e1f641a9f58ca4c80670aabf6594d78b4297e0f5538de523bcd556f3149189"
     },
     {
+      "path": "reports/high-current-development/drc-installed-probe.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "15e74deb86b1699828e7236448ef0e869628bfdf5ab189f4972362770682387c"
+    },
+    {
+      "path": "reports/high-current-development/drc-power-refill-probe.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "25a555804634d329635768274bab19f9611509aa9249e36a1dcbb088c834ae0e"
+    },
+    {
+      "path": "reports/high-current-development/drc-power-refill-probe2.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "a0098695b20410a0ac213c2a5d13772b4af6d2b7bb27a72ac9b3dce80712f66d"
+    },
+    {
+      "path": "reports/high-current-development/drc-power-refill-probe3.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "8a96d30c74e698ff22268ccb48709e6a4936328c13984ca734f6df2385bb4fbe"
+    },
+    {
+      "path": "reports/high-current-development/drc-power-refill-probe4.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "b46d3719be3e078d8b60cfb4716da2fb9b95a78f21e82164124a9a84353ab5dc"
+    },
+    {
+      "path": "reports/high-current-development/drc-power-rules-probe.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "6269d7ef630b7a56305694f3e2b74ff96b073e6f586a818ea7e5a4e5849eefd6"
+    },
+    {
+      "path": "reports/high-current-development/drc-power-rules-probe2.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "0f2dc195ebc1e758d9d66255e86dd75d68602fd3a9d62a7d4a45502d51303059"
+    },
+    {
+      "path": "reports/high-current-development/drc-power-rules-probe3.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "e96b7d793cc15f2460fbd08107abb34ce12d00232fc7782495434036d26ae0bb"
+    },
+    {
       "path": "reports/native-checks-both.json",
       "coverage": "explicit",
       "reason": "Top-level release flags",
       "release_scope": "release.json",
-      "sha256": "ffd1840d2a9d3368eaf7f90e31341f81cb8d8b2f9706ba80fa5f8eff90822b6a"
-    },
-    {
-      "path": "reports/native-checks-drc.json",
-      "coverage": "explicit",
-      "reason": "Top-level release flags",
-      "release_scope": "release.json",
-      "sha256": "bdbfc8ce8bfd997308b6e27c3830e9b0c53f8ab5f4797106ee07991a22239272"
+      "sha256": "a1ebf2923be894354190232198eabdb8558caba56c2a4b233481f2dca5c0cb2d"
     },
     {
       "path": "reports/nc-net-sync-plan.json",
@@ -596,11 +827,32 @@
       "sha256": "da29aa9bfccb019d0b35fb4e7d198f798440880eb494d703b1fcba354e6baa0e"
     },
     {
+      "path": "reports/power-rule-negative-control.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "64e4c55c869306688d68c9c4c57675972e40eb1266582d32f9d0f8959a77cb17"
+    },
+    {
+      "path": "reports/power-rule-negative-drc.json",
+      "coverage": "inherited",
+      "reason": "Native schema-constrained report",
+      "release_scope": "release.json",
+      "sha256": "857159ad788f0d16a78f2657e49114456bc175e5a00dded72a00f5ea89250a30"
+    },
+    {
+      "path": "reports/power-zone-refinement.json",
+      "coverage": "explicit",
+      "reason": "Top-level release flags",
+      "release_scope": "release.json",
+      "sha256": "3510c6cc7f93332e5790d1ab4cb0197930f7cc2411e0cea7bc18f0933a1ef6d3"
+    },
+    {
       "path": "reports/rendered-review-manifest.json",
       "coverage": "explicit",
       "reason": "Top-level release flags",
       "release_scope": "release.json",
-      "sha256": "2b1f035c7dbfc7687b00b348b89877ea0538fd6cda8e88f3efd1db56721a1a7a"
+      "sha256": "8bcc704104e48722f69b18ea33b771a51ef6056f52d7b2e2e997aa090be5c295"
     },
     {
       "path": "reports/routing-run-001/best-incomplete-count-statistics.json",
@@ -844,8 +1096,8 @@
   "errors": [],
   "passed": true,
   "counts": {
-    "explicit": 83,
-    "inherited": 36,
+    "explicit": 106,
+    "inherited": 49,
     "missing": 0
   }
 }

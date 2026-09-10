@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="220mm" viewBox="0 0 420 220"><rect width="420" height="220" fill="white"/>
+<g font-family="Arial,sans-serif" fill="#17232a"><text x="10" y="12" font-size="6">BB7 — RevA-P1 — BATT_N</text>
+<text x="10" y="19" font-size="3.4">Engineering prototype – not production qualified. Scale 1:1. F.Cu coordinate view; underside NOT mirrored.</text>
+<g transform="translate(15 25)">
+<polygon points="8,105 356,105 356,136 8,136" fill="#efc17f" stroke="#262626" stroke-width="0.2"/>
+<rect x="9.0" y="109.0" width="12.0" height="12.0" rx="1" fill="white" stroke="#262626" stroke-width="0.2"/>
+<rect x="214.0" y="109.0" width="12.0" height="12.0" rx="1" fill="white" stroke="#262626" stroke-width="0.2"/>
+<rect x="244.0" y="109.0" width="12.0" height="12.0" rx="1" fill="white" stroke="#262626" stroke-width="0.2"/>
+<rect x="194.0" y="121.0" width="12.0" height="12.0" rx="1" fill="white" stroke="#262626" stroke-width="0.2"/>
+<rect x="224.0" y="121.0" width="12.0" height="12.0" rx="1" fill="white" stroke="#262626" stroke-width="0.2"/>
+<rect x="274.0" y="116.0" width="12.0" height="12.0" rx="1" fill="white" stroke="#262626" stroke-width="0.2"/>
+<rect x="304.0" y="116.0" width="12.0" height="12.0" rx="1" fill="white" stroke="#262626" stroke-width="0.2"/>
+<rect x="24.0" y="116.0" width="12.0" height="12.0" rx="1" fill="white" stroke="#262626" stroke-width="0.2"/>
+<rect x="54.0" y="116.0" width="12.0" height="12.0" rx="1" fill="white" stroke="#262626" stroke-width="0.2"/>
+<rect x="334.0" y="116.0" width="12.0" height="12.0" rx="1" fill="white" stroke="#262626" stroke-width="0.2"/>
+<rect x="84.0" y="116.0" width="12.0" height="12.0" rx="1" fill="white" stroke="#262626" stroke-width="0.2"/>
+<circle cx="27" cy="110" r="1.7" fill="white" stroke="#262626" stroke-width="0.2"/>
+<circle cx="210.0" cy="127.0" r="1.7" fill="white" stroke="#262626" stroke-width="0.2"/>
+<circle cx="240.0" cy="127.0" r="1.7" fill="white" stroke="#262626" stroke-width="0.2"/>
+<circle cx="290.0" cy="122.0" r="1.7" fill="white" stroke="#262626" stroke-width="0.2"/>
+<circle cx="320.0" cy="122.0" r="1.7" fill="white" stroke="#262626" stroke-width="0.2"/>
+<circle cx="40.0" cy="122.0" r="1.7" fill="white" stroke="#262626" stroke-width="0.2"/>
+<circle cx="70.0" cy="122.0" r="1.7" fill="white" stroke="#262626" stroke-width="0.2"/>
+<circle cx="350.0" cy="122.0" r="1.7" fill="white" stroke="#262626" stroke-width="0.2"/>
+<circle cx="100.0" cy="122.0" r="1.7" fill="white" stroke="#262626" stroke-width="0.2"/>
+</g>
+<text x="10" y="173" font-size="3.6">Cu-ETP / CW004A; thickness 2.00 +/-0.10 mm; outline +/-0.20 mm; hole centers +/-0.10 mm.</text>
+<text x="10" y="180" font-size="3.6">Holes diameter 3.40 +/-0.10 mm. Cutout radius R1. Deburr. Exact vertices/holes: BUSBAR_DIMENSIONS.json.</text>
+<text x="10" y="187" font-size="3.6">4 x 0.05 mm Kapton HN underneath; 0.25 mm Cu contact shims. No shunt or FET-bank bypass.</text>
+<path d="M10 203H110M10 201V205M110 201V205" fill="none" stroke="black" stroke-width="0.3"/><text x="45" y="200" font-size="3.6">100 mm check</text></g></svg>

@@ -1,0 +1,86 @@
+﻿label,net,layer,line_from_mm,line_to_mm,continuous_widths_mm,total_copper_width_mm
+RSH1 input approach,BATT_FUSED_P,F.Cu,"[22, 42.9]","[22, 49]",[6.1],6.1
+RSH1 input approach,BATT_FUSED_P,B.Cu,"[22, 42.9]","[22, 49]",[6.1],6.1
+RSH1 output approach,BATT_SENSED_P,F.Cu,"[35.5, 42.9]","[35.5, 49]",[6.1],6.1
+RSH1 output approach,BATT_SENSED_P,B.Cu,"[35.5, 42.9]","[35.5, 49]",[6.1],6.1
+RSH2 input approach,SYS_BUS_P,F.Cu,"[112, 42.9]","[112, 49]",[6.1],6.1
+RSH2 input approach,SYS_BUS_P,B.Cu,"[112, 42.9]","[112, 49]",[6.1],6.1
+RSH2 output approach,MOTION_SENSED_P,F.Cu,"[126, 42.9]","[126, 49]",[6.1],6.1
+RSH2 output approach,MOTION_SENSED_P,B.Cu,"[126, 42.9]","[126, 49]",[6.1],6.1
+Q1 source outside lead bank,MAIN_COMMON,F.Cu,"[63, 19.4]","[63, 28.6]",[9.2],9.2
+Q1 source outside lead bank,MAIN_COMMON,B.Cu,"[63, 19.4]","[63, 28.6]",[9.2],9.2
+Q4 source outside lead bank,MAIN_COMMON,F.Cu,"[77, 21.4]","[77, 30.6]",[9.2],9.2
+Q4 source outside lead bank,MAIN_COMMON,B.Cu,"[77, 21.4]","[77, 30.6]",[9.2],9.2
+Q7 source outside lead bank,MOTION_COMMON,F.Cu,"[158, 24.4]","[158, 33.6]",[9.2],9.2
+Q7 source outside lead bank,MOTION_COMMON,B.Cu,"[158, 24.4]","[158, 33.6]",[9.2],9.2
+Q9 source outside lead bank,MOTION_COMMON,F.Cu,"[172, 26.4]","[172, 35.6]",[9.2],9.2
+Q9 source outside lead bank,MOTION_COMMON,B.Cu,"[172, 26.4]","[172, 35.6]",[9.2],9.2
+Arm positive top rail,MOTION_BUS_P,F.Cu,"[260, 10]","[260, 34]",[13.0],13.0
+Arm positive top rail,MOTION_BUS_P,B.Cu,"[260, 10]","[260, 34]",[13.0],13.0
+Right positive rail at junction,MOTION_BUS_P,F.Cu,"[330, 17]","[330, 23]",[6.0],6.0
+Right positive rail at junction,MOTION_BUS_P,B.Cu,"[330, 17]","[330, 23]",[6.0],6.0
+Star crossed by SYS feed,BATT_N,F.Cu,"[110, 108]","[110, 134]",[],0
+Star crossed by SYS feed,BATT_N,B.Cu,"[110, 108]","[110, 134]",[24.98],24.98
+Star under left arm terminal,BATT_N,F.Cu,"[220, 104]","[220, 136]","[0.24, 1.62, 1.62, 7.8]",11.28
+Star under left arm terminal,BATT_N,B.Cu,"[220, 104]","[220, 136]","[0.24, 1.62, 1.62, 7.8]",11.28
+Star under right arm terminal,BATT_N,F.Cu,"[250, 104]","[250, 136]","[2.0, 1.62, 7.8]",11.42
+Star under right arm terminal,BATT_N,B.Cu,"[250, 104]","[250, 136]","[2.0, 1.62, 7.8]",11.42
+Left arm return approaching NT1,ARM_L_N,F.Cu,"[207, 109]","[207, 132]",[12.5],12.5
+Left arm return approaching NT1,ARM_L_N,B.Cu,"[207, 109]","[207, 132]",[12.5],12.5
+Right arm return approaching NT2,ARM_R_N,F.Cu,"[237, 109]","[237, 132]",[12.5],12.5
+Right arm return approaching NT2,ARM_R_N,B.Cu,"[237, 109]","[237, 132]",[12.5],12.5
+Q40 source below bank,CHOPPER_N,F.Cu,"[290, 40]","[302, 40]",[5.0],5.0
+Q40 source below bank,CHOPPER_N,B.Cu,"[290, 40]","[302, 40]",[8.0],8.0
+Cap negative trunk near C312 positive,CHOPPER_N,F.Cu,"[300, 20]","[300, 27]",[],0
+Cap negative trunk near C312 positive,CHOPPER_N,B.Cu,"[300, 20]","[300, 27]",[7.0],7.0
+Chopper return spine,CHOPPER_N,F.Cu,"[338, 80]","[346, 80]",[],0
+Chopper return spine,CHOPPER_N,B.Cu,"[338, 80]","[346, 80]",[8.0],8.0
+Q40 drain exit,CHOP_DRAIN,F.Cu,"[311, 29]","[311, 41]",[11.28],11.28
+Q40 drain exit,CHOP_DRAIN,B.Cu,"[311, 29]","[311, 41]",[],0
+Chopper drain connector neck,CHOP_DRAIN,F.Cu,"[345, 27]","[345, 33]",[3.0],3.0
+Chopper drain connector neck,CHOP_DRAIN,B.Cu,"[345, 27]","[345, 33]",[],0
+Q1 source bank exit,MAIN_COMMON,F.Cu,"[63.0, 19.4]","[63.0, 28.599999999999998]",[9.2],9.2
+Q1 drain bank exit,BATT_SENSED_P,F.Cu,"[47.0, 19.4]","[47.0, 30.6]",[11.2],11.2
+Q1 source bank exit,MAIN_COMMON,B.Cu,"[63.0, 19.4]","[63.0, 28.599999999999998]",[9.2],9.2
+Q1 drain bank exit,BATT_SENSED_P,B.Cu,"[47.0, 19.4]","[47.0, 30.6]",[11.2],11.2
+Q2 source bank exit,MAIN_COMMON,F.Cu,"[63.0, 44.4]","[63.0, 53.599999999999994]",[8.9],8.9
+Q2 drain bank exit,BATT_SENSED_P,F.Cu,"[47.0, 44.4]","[47.0, 55.6]",[11.2],11.2
+Q2 source bank exit,MAIN_COMMON,B.Cu,"[63.0, 44.4]","[63.0, 53.599999999999994]",[8.96],8.96
+Q2 drain bank exit,BATT_SENSED_P,B.Cu,"[47.0, 44.4]","[47.0, 55.6]",[11.2],11.2
+Q3 source bank exit,MAIN_COMMON,F.Cu,"[63.0, 69.4]","[63.0, 78.60000000000001]",[9.2],9.2
+Q3 drain bank exit,BATT_SENSED_P,F.Cu,"[47.0, 69.4]","[47.0, 80.6]",[11.2],11.2
+Q3 source bank exit,MAIN_COMMON,B.Cu,"[63.0, 69.4]","[63.0, 78.60000000000001]",[9.2],9.2
+Q3 drain bank exit,BATT_SENSED_P,B.Cu,"[47.0, 69.4]","[47.0, 80.6]",[11.2],11.2
+Q4 source bank exit,MAIN_COMMON,F.Cu,"[77.0, 21.4]","[77.0, 30.599999999999998]",[9.2],9.2
+Q4 drain bank exit,SYS_BUS_P,F.Cu,"[93.0, 19.4]","[93.0, 30.6]",[11.2],11.2
+Q4 source bank exit,MAIN_COMMON,B.Cu,"[77.0, 21.4]","[77.0, 30.599999999999998]",[9.2],9.2
+Q4 drain bank exit,SYS_BUS_P,B.Cu,"[93.0, 19.4]","[93.0, 30.6]",[11.2],11.2
+Q5 source bank exit,MAIN_COMMON,F.Cu,"[77.0, 46.4]","[77.0, 55.599999999999994]",[9.2],9.2
+Q5 drain bank exit,SYS_BUS_P,F.Cu,"[93.0, 44.4]","[93.0, 55.6]",[11.2],11.2
+Q5 source bank exit,MAIN_COMMON,B.Cu,"[77.0, 46.4]","[77.0, 55.599999999999994]",[9.2],9.2
+Q5 drain bank exit,SYS_BUS_P,B.Cu,"[93.0, 44.4]","[93.0, 55.6]",[11.2],11.2
+Q6 source bank exit,MAIN_COMMON,F.Cu,"[77.0, 71.4]","[77.0, 80.60000000000001]",[9.2],9.2
+Q6 drain bank exit,SYS_BUS_P,F.Cu,"[93.0, 69.4]","[93.0, 80.6]",[11.2],11.2
+Q6 source bank exit,MAIN_COMMON,B.Cu,"[77.0, 71.4]","[77.0, 80.60000000000001]",[9.2],9.2
+Q6 drain bank exit,SYS_BUS_P,B.Cu,"[93.0, 69.4]","[93.0, 80.6]",[11.2],11.2
+Q7 source bank exit,MOTION_COMMON,F.Cu,"[158.0, 24.4]","[158.0, 33.599999999999994]",[9.2],9.2
+Q7 drain bank exit,MOTION_SENSED_P,F.Cu,"[142.0, 24.4]","[142.0, 35.6]","[1.4175, 1.5971, 1.5971, 1.5972, 1.5971, 1.3975]",9.2035
+Q7 source bank exit,MOTION_COMMON,B.Cu,"[158.0, 24.4]","[158.0, 33.599999999999994]",[9.2],9.2
+Q7 drain bank exit,MOTION_SENSED_P,B.Cu,"[142.0, 24.4]","[142.0, 35.6]","[1.4175, 1.5971, 1.5971, 1.5972, 1.5971, 1.3975]",9.2035
+Q8 source bank exit,MOTION_COMMON,F.Cu,"[158.0, 59.4]","[158.0, 68.6]",[9.2],9.2
+Q8 drain bank exit,MOTION_SENSED_P,F.Cu,"[142.0, 59.4]","[142.0, 70.6]","[0.42, 1.6, 1.6, 1.62, 1.6, 1.6, 0.38]",8.82
+Q8 source bank exit,MOTION_COMMON,B.Cu,"[158.0, 59.4]","[158.0, 68.6]",[9.2],9.2
+Q8 drain bank exit,MOTION_SENSED_P,B.Cu,"[142.0, 59.4]","[142.0, 70.6]","[0.42, 1.6, 1.6, 1.62, 1.6, 1.6, 0.38]",8.82
+Q9 source bank exit,MOTION_COMMON,F.Cu,"[172.0, 26.4]","[172.0, 35.599999999999994]",[9.2],9.2
+Q9 drain bank exit,MOTION_BUS_P,F.Cu,"[188.0, 24.4]","[188.0, 35.6]",[11.2],11.2
+Q9 source bank exit,MOTION_COMMON,B.Cu,"[172.0, 26.4]","[172.0, 35.599999999999994]",[9.2],9.2
+Q9 drain bank exit,MOTION_BUS_P,B.Cu,"[188.0, 24.4]","[188.0, 35.6]",[11.2],11.2
+Q10 source bank exit,MOTION_COMMON,F.Cu,"[172.0, 61.4]","[172.0, 70.6]",[9.02],9.02
+Q10 drain bank exit,MOTION_BUS_P,F.Cu,"[188.0, 59.4]","[188.0, 70.6]",[11.2],11.2
+Q10 source bank exit,MOTION_COMMON,B.Cu,"[172.0, 61.4]","[172.0, 70.6]",[9.2],9.2
+Q10 drain bank exit,MOTION_BUS_P,B.Cu,"[188.0, 59.4]","[188.0, 70.6]",[11.2],11.2
+Drive return vertical,DRIVE_N,F.Cu,"[328, 80]","[336, 80]",[8.0],8.0
+Lift return inner 1,LIFT_N,In1.Cu,"[340, 100]","[348, 100]",[8.0],8.0
+Lift return inner 2,LIFT_N,In2.Cu,"[340, 100]","[348, 100]",[8.0],8.0
+LED positive trunk,V5V,B.Cu,"[45, 256]","[45, 264]",[6.4],6.4
+LED return trunk,LOGIC_5V_N,B.Cu,"[141, 255]","[149, 255]",[6.4],6.4

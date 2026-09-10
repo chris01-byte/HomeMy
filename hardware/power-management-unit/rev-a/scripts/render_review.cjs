@@ -8,18 +8,21 @@ const crypto = require('node:crypto');
 const sharp = require(process.argv[2] || 'sharp');
 const root = path.resolve(__dirname, '..');
 const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
+const packageDir = 'manufacturing/HomeMy_PMU_RevA-P1_2026-09-10';
 const inputs = [
   ['assembly/schematic/HomeMy_PMU_RevA-02_main_switch_lm74930.svg', 'assembly/main-schematic-review.png'],
   ...['top', 'inner1', 'inner2', 'bottom'].map(name => [
     `reports/HomeMy_PMU_RevA-${name}-copper.svg`, `reports/${name}-copper-review.png`]),
   ...['front', 'back'].map(name => [
-    `manufacturing/engineering-preview/assembly/HomeMy_PMU_RevA-assembly-${name}.svg`,
+    `${packageDir}/assembly/HomeMy_PMU_RevA-assembly-${name}.svg`,
     `reports/assembly-${name}-review.png`]),
   ...['PTH', 'NPTH'].map(name => [
-    `manufacturing/engineering-preview/drill/HomeMy_PMU_RevA-${name}-drl_map.svg`,
+    `${packageDir}/drill/HomeMy_PMU_RevA-${name}-drl_map.svg`,
     `reports/drill-${name}-review.png`]),
   ['manufacturing/BUSBAR_TOP_VIEW_1to1.svg', 'reports/busbar-mechanical-review.png'],
   ['manufacturing/ASSEMBLY_ORIENTATION.svg', 'reports/assembly-orientation-review.png'],
+  [`${packageDir}/assembly/POLARITY.svg`, 'reports/polarity-review.png'],
+  [`${packageDir}/mechanical/BB7_1to1.svg`, 'reports/bb7-release-review.png'],
 ];
 async function main() {
   const outputs = await Promise.all(inputs.map(async ([source, target]) => {

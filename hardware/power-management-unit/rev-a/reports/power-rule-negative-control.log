@@ -1,0 +1,17 @@
+Found 3 violations
+Found 0 unconnected items
+Found 0 schematic parity issues
+Saved DRC Report to C:/Users/chrba/Documents/ChatGPT/HomeMy/tools-local/pmu-negative-rdz2xw2r/negative-drc.json
+23:10:38: Error: Can't create registry key 'HKCU\Software\kicad-cli' (error 5: Zugriff verweigert)
+23:10:38: Error: Can't open registry key 'HKCU\Software\kicad-cli' (error 2: Das System kann die angegebene Datei nicht finden.)
+Fontconfig error: Cannot load default config file: No such file: (null)
+Fontconfig error: "memory", line 2: SHGetFolderPathA failed
+Fontconfig error: "memory", line 3: SHGetFolderPathA failed
+
+Fontconfig error: No writable cache directories
+	C:/Users/chrba/.cache/fontconfig
+
+Fontconfig error: No writable cache directories
+	C:/Users/chrba/.cache/fontconfig
+
+Timeout is not a successful process exit.

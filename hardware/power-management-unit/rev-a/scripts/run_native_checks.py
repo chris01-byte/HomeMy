@@ -8,6 +8,7 @@ import argparse
 from datetime import datetime, timezone
 import hashlib
 import json
+import os
 from pathlib import Path
 import subprocess
 import sys
@@ -30,7 +31,7 @@ def violations(value):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--kicad-root',required=True,type=Path)
-    parser.add_argument('--timeout',type=int,default=25)
+    parser.add_argument('--timeout',type=int,default=180)
     parser.add_argument('--only',choices=['erc','drc','both'],default='both')
     args=parser.parse_args()
     reports=ROOT/'reports';reports.mkdir(exist_ok=True)
@@ -48,20 +49,29 @@ def main():
             continue
         pending=reports/(name+'-pending.json')
         final=reports/(name+'-final.json')
-        command=[sys.executable,str(ROOT/'scripts/run_tool.py'),'--kicad-root',str(args.kicad_root.resolve()),
-                 '--timeout',str(args.timeout),'kicad-cli',domain,name,'--format','json',
-                 '--severity-all','--output',str(pending)]
+        if pending.exists():
+            pending.unlink()
+        executable=args.kicad_root.resolve()/'bin'/('kicad-cli.exe' if os.name=='nt' else 'kicad-cli')
+        command=[str(executable),domain,name,'--format','json',
+                 '--severity-all','--exit-code-violations','--output',str(pending)]
         if name=='drc':
             command+=['--all-track-errors','--schematic-parity']
         command.append(str(CAD/(PROJECT+suffix)))
         started=time.time()
-        run=subprocess.run(command,capture_output=True,text=True,errors='replace',timeout=args.timeout+15)
+        try:
+            run=subprocess.run(command,capture_output=True,text=True,errors='replace',timeout=args.timeout)
+        except subprocess.TimeoutExpired as exc:
+            decode=lambda s:s.decode('utf-8',errors='replace') if isinstance(s,bytes) else (s or '')
+            run=subprocess.CompletedProcess(command,124,decode(exc.stdout),decode(exc.stderr)+'\nTimeout: native process did not exit normally.\n')
         output=run.stdout+run.stderr
         (reports/(name+'-final-process.log')).write_text(output,encoding='utf-8')
         result={'command':command,'process_exit_code':run.returncode,'process_passed':run.returncode==0,
                 'wall_seconds':round(time.time()-started,3),'report_complete':False}
-        if pending.exists() and pending.stat().st_mtime>=started-1 and 'Saved '+name.upper()+' Report' in output:
+        if pending.exists() and pending.stat().st_mtime>=started-1:
             report=json.loads(pending.read_text(encoding='utf-8'))
+            expected='erc' if name=='erc' else 'drc'
+            if expected not in report.get('$schema',''):
+                raise ValueError('Unexpected native report schema: '+str(pending))
             pending.replace(final)
             result.update(report_complete=True,report_path=str(final.relative_to(ROOT)),
                           report_sha256=sha(final),violations=violations(report),

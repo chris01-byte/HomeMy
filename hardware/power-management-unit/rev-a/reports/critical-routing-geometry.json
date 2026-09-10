@@ -3,14 +3,14 @@
     "rev_a_engineering_prototype": true,
     "rev_b_production": false,
     "state": "read_only_geometry_review_not_order_release",
-    "checked_at_utc": "2026-09-10T18:17:04.857301+00:00",
+    "checked_at_utc": "2026-09-10T21:08:41.927681+00:00",
     "pcb_written": false,
     "erc_or_drc_claim": false,
     "all_required_explicit_paths_found": true
   },
   "board": {
     "path": "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a\\kicad\\HomeMy_PMU_RevA.kicad_pcb",
-    "sha256": "70bb8eb588f2fc7200f718df0e11659aad3c40c7e9d5652228eb7a58d232065f"
+    "sha256": "13fcae0f58c9a6ac5f85eb721c24b44169a65f628baad6586bcd6002f4c17cfe"
   },
   "method": "Shortest path of explicit same-net track centerlines, vias and pad-interior center leads. This excludes plane-return paths and field effects. Via vertical length is not included.",
   "footprints": [

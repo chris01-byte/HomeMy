@@ -6,6 +6,7 @@ does not establish an order, thermal, physical-test or production release.
 from datetime import datetime, timezone
 import hashlib
 import json
+import zipfile
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -33,15 +34,20 @@ def main():
     release=read('release.json')
     require(release['rev_a_engineering_prototype'] and not release['rev_b_production'],'Incorrect revision flags')
     require(release['schematic_complete'] and release['pcb_routed'],'CAD completion not recorded')
-    require(not release['hardware_tests_performed'] and not release['fabrication_release'] and not release['assembly_release'],
-            'Physical release state must remain unperformed')
+    require(not release['hardware_tests_performed'] and not release.get('production_release') and not release['rev_b_production'],
+            'Prototype package must not claim physical/production qualification')
+    require(release['fabrication_release'] and release['assembly_release'] and release['prototype_package_version']=='RevA-P1',
+            'Missing explicitly scoped prototype PCB release')
 
     native=read('reports/native-checks-both.json')
     for name,expected in native['input_hashes_sha256'].items():check_hash(ROOT/name,expected,'native check input')
     require(not native['changed_inputs'],'Native check inputs changed')
     require(set(native['checks'])=={'erc','drc'},'Missing native ERC or DRC')
+    require(native['all_processes_passed'] and native['reports_have_zero_findings'],'Native processes/reports did not both pass')
+    require('--schematic-parity' in native['checks']['drc']['command'],'Full schematic parity was not requested')
     for name,row in native['checks'].items():
         require(row['report_complete'] and row['report_has_zero_findings'],name+' report is incomplete or has findings')
+        require(row['process_exit_code']==0,name+' did not exit normally with zero')
         check_hash(ROOT/row['report_path'],row['report_sha256'],name+' native report')
 
     parity=read('reports/electrical-parity-audit.json')
@@ -51,12 +57,13 @@ def main():
     bom=read('manufacturing/REV_A_BOM_MANIFEST.json')
     require(bom['metadata']['validation_passed'] and not bom['metadata']['errors'],'BOM validation failed')
     entries(bom['inputs'],ROOT,'BOM input');entries(bom['outputs'],ROOT/'manufacturing','BOM output')
-    export=read('manufacturing/engineering-preview/EXPORT_MANIFEST.json')
+    package_dir=Path(release['manufacturing_package']).parent
+    export=read((package_dir/'EXPORT_MANIFEST.json').as_posix())
     require(export['metadata']['coverage_validation_passed'] and not export['metadata']['errors'],'Manufacturing file coverage failed')
     require(export['board_state']['unconnected_ratsnest_edges']==0,'Exported PCB has open connections')
     require(export['board_state']['source_release']==release,'Export carries stale release disposition')
     entries(export['inputs'],ROOT,'manufacturing input')
-    entries(export['outputs'],ROOT/'manufacturing/engineering-preview','manufacturing output')
+    entries(export['outputs'],ROOT/package_dir,'manufacturing output')
     check_hash(ROOT/export['exporter']['path'],export['exporter']['sha256'],'manufacturing exporter')
 
     critical=read('reports/critical-routing-geometry.json')
@@ -69,9 +76,12 @@ def main():
     placement=read('evidence/placement-access-review.json')
     require(placement['source']['final_pcb_sha256']==board_sha and placement['source']['read_only_hash_stable'],'Placement review uses another board')
     require(not placement['critical_findings'],'Placement has critical findings')
-    assembly=read('reports/assembly-annotation-application.json')
-    require(assembly['output_sha256']==board_sha and assembly['board']['non_fab_data_preserved'] and
-            assembly['board']['all_existing_uuids_preserved'],'Assembly annotation preservation/hash differs')
+    # The old annotation application receipt is historical. The current read-only
+    # orientation check verifies the labels against the PCB after power-fill edits.
+    assembly=read('manufacturing/assembly-orientation.json')
+    require(assembly['input_board_sha256']==board_sha and assembly['board_unchanged'] and
+            not assembly['required_graphical_improvements'] and all(x['passed'] for x in assembly['graphical_checks']),
+            'Current assembly orientation/annotations failed')
     rendered=read('reports/rendered-review-manifest.json')
     require(rendered['board_sha256']==board_sha,'Rendered review identifies another PCB')
     for row in rendered['outputs']:
@@ -81,13 +91,31 @@ def main():
     require(not rules['drc_exclusions'],'Item-level DRC exclusions are present')
     snapshots=read('evidence/rule-review-report-snapshot.json')
     for row in snapshots:check_hash(ROOT/row['path'],row['sha256'],'reviewed rule/report snapshot')
+    high=read('evidence/high-current-audit.json')
+    require(high['passed'] and high['power_endpoint_checks']>=247 and high['reviewed_tap_items']==492,'Power geometry review failed')
+    for name,expected in high['inputs_sha256'].items():check_hash(ROOT/name,expected,'high-current evidence')
+    package=read(release['manufacturing_package'])
+    require(package['metadata']['fabrication_release'] and not package['metadata']['production_release'],'Wrong package release scope')
+    require(package['board_sha256']==board_sha,'Package uses another PCB')
+    entries(package['files'],ROOT/package_dir,'prototype delivery')
+    for name,expected in package['source_inputs_sha256'].items():check_hash(ROOT/name,expected,'prototype delivery source')
+    require(package['counts']['pressfit_holes']==48 and package['counts']['open_external_before_pcb_order']==0 and
+            package['counts']['open_external_before_energization']==9,'Press-fit/open-order accounting differs')
+    archive=(ROOT/package_dir).with_suffix('.zip')
+    expected_zip=archive.with_suffix('.zip.sha256').read_text().split()[0]
+    check_hash(archive,expected_zip,'prototype ZIP')
+    with zipfile.ZipFile(archive) as z:
+        require(z.testzip() is None,'ZIP integrity failed')
+        for row in package['files']:
+            require(hashlib.sha256(z.read(package_dir.name+'/'+row['path'])).hexdigest()==row['sha256'],'ZIP entry differs: '+row['path'])
     check_hash(board,board_sha,'final unchanged board')
 
     result=dict(metadata=dict(rev_a_engineering_prototype=True,rev_b_production=False,
                 checked_at_utc=datetime.now(timezone.utc).isoformat(),
                 scope='Current artifact identity and recorded CAD findings; no new native DRC or physical tests',
                 cad_package_checks_passed=not errors,hardware_tests_performed=False,
-                fabrication_release=False,assembly_release=False),
+                fabrication_release=True,assembly_release=True,production_release=False,
+                release_scope='Bare/populated Rev A-P1 PCB engineering prototype only'),
                 board_sha256=board_sha,counts=parity['counts'],board_state=export['board_state'],
                 native_report_findings={name:{k:row[k] for k in ['report_complete','violations','unconnected_items',
                     'schematic_parity_issues','report_has_zero_findings','process_passed','process_exit_code']}

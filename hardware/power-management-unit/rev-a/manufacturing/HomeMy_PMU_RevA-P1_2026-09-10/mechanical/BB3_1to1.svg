@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="220mm" viewBox="0 0 420 220"><rect width="420" height="220" fill="white"/>
+<g font-family="Arial,sans-serif" fill="#17232a"><text x="10" y="12" font-size="6">BB3 — RevA-P1 — SYS_BUS_P</text>
+<text x="10" y="19" font-size="3.4">Engineering prototype – not production qualified. Scale 1:1. F.Cu coordinate view; underside NOT mirrored.</text>
+<g transform="translate(15 25)">
+<polygon points="94,14 106,14 106,74 94,74" fill="#efc17f" stroke="#262626" stroke-width="0.2"/>
+<circle cx="100" cy="25" r="1.7" fill="white" stroke="#262626" stroke-width="0.2"/>
+<circle cx="100" cy="55" r="1.7" fill="white" stroke="#262626" stroke-width="0.2"/>
+</g>
+<text x="10" y="173" font-size="3.6">Cu-ETP / CW004A; thickness 2.00 +/-0.10 mm; outline +/-0.20 mm; hole centers +/-0.10 mm.</text>
+<text x="10" y="180" font-size="3.6">Holes diameter 3.40 +/-0.10 mm. Cutout radius R1. Deburr. Exact vertices/holes: BUSBAR_DIMENSIONS.json.</text>
+<text x="10" y="187" font-size="3.6">4 x 0.05 mm Kapton HN underneath; 0.25 mm Cu contact shims. No shunt or FET-bank bypass.</text>
+<path d="M10 203H110M10 201V205M110 201V205" fill="none" stroke="black" stroke-width="0.3"/><text x="45" y="200" font-size="3.6">100 mm check</text></g></svg>

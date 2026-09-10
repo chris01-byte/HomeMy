@@ -1,0 +1,1456 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-10T22:54:56",
+    "ignored_checks": [
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "HomeMy_PMU_RevA.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 3,9538 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [BATT_SENSED_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 70.0
+                    },
+                    "uuid": "1e72d490-f414-4aed-bf4b-7661d148cdaa"
+                },
+                {
+                    "description": "Via [LOGIC_GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 37.9422,
+                        "y": 75.2293
+                    },
+                    "uuid": "d4b589eb-c3ed-4af3-bb3f-c0c6ef9f9cba"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 3,0507 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [BATT_SENSED_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 70.0
+                    },
+                    "uuid": "1e72d490-f414-4aed-bf4b-7661d148cdaa"
+                },
+                {
+                    "description": "Via [LOGIC_GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 37.9422,
+                        "y": 75.2293
+                    },
+                    "uuid": "d4b589eb-c3ed-4af3-bb3f-c0c6ef9f9cba"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 2,8291 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 34.5,
+                        "y": 70.3
+                    },
+                    "uuid": "dbbe0214-f33a-4149-8da3-1f9e6ab61444"
+                },
+                {
+                    "description": "Via [BATT_SENSED_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 70.0
+                    },
+                    "uuid": "1e72d490-f414-4aed-bf4b-7661d148cdaa"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 1,1174 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 34.5,
+                        "y": 70.3
+                    },
+                    "uuid": "dbbe0214-f33a-4149-8da3-1f9e6ab61444"
+                },
+                {
+                    "description": "Via [BATT_SENSED_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 70.0
+                    },
+                    "uuid": "1e72d490-f414-4aed-bf4b-7661d148cdaa"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 1,7968 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 34.5,
+                        "y": 70.3
+                    },
+                    "uuid": "dbbe0214-f33a-4149-8da3-1f9e6ab61444"
+                },
+                {
+                    "description": "Via [BATT_SENSED_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 70.0
+                    },
+                    "uuid": "1e72d490-f414-4aed-bf4b-7661d148cdaa"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 0,6113 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 34.5,
+                        "y": 70.3
+                    },
+                    "uuid": "dbbe0214-f33a-4149-8da3-1f9e6ab61444"
+                },
+                {
+                    "description": "Via [BATT_SENSED_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 70.0
+                    },
+                    "uuid": "1e72d490-f414-4aed-bf4b-7661d148cdaa"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 2,1878 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [BATT_SENSED_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 42.0,
+                        "y": 68.0
+                    },
+                    "uuid": "9afd5731-402b-4c53-8f1c-b570c331f438"
+                },
+                {
+                    "description": "Via [BATT_SENSED_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 70.0
+                    },
+                    "uuid": "1e72d490-f414-4aed-bf4b-7661d148cdaa"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 1,9340 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [BATT_SENSED_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 42.0,
+                        "y": 68.0
+                    },
+                    "uuid": "9afd5731-402b-4c53-8f1c-b570c331f438"
+                },
+                {
+                    "description": "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 34.5,
+                        "y": 70.3
+                    },
+                    "uuid": "dbbe0214-f33a-4149-8da3-1f9e6ab61444"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 1,6663 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [BATT_SENSED_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 42.0,
+                        "y": 68.0
+                    },
+                    "uuid": "9afd5731-402b-4c53-8f1c-b570c331f438"
+                },
+                {
+                    "description": "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 34.5,
+                        "y": 70.3
+                    },
+                    "uuid": "dbbe0214-f33a-4149-8da3-1f9e6ab61444"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 0,6103 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 34.5,
+                        "y": 70.3
+                    },
+                    "uuid": "dbbe0214-f33a-4149-8da3-1f9e6ab61444"
+                },
+                {
+                    "description": "Via [BATT_SENSED_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 70.0
+                    },
+                    "uuid": "1e72d490-f414-4aed-bf4b-7661d148cdaa"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 0,9333 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 34.5,
+                        "y": 70.3
+                    },
+                    "uuid": "dbbe0214-f33a-4149-8da3-1f9e6ab61444"
+                },
+                {
+                    "description": "Via [BATT_SENSED_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 70.0
+                    },
+                    "uuid": "1e72d490-f414-4aed-bf4b-7661d148cdaa"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 1,4688 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 34.5,
+                        "y": 70.3
+                    },
+                    "uuid": "dbbe0214-f33a-4149-8da3-1f9e6ab61444"
+                },
+                {
+                    "description": "Via [BATT_SENSED_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 70.0
+                    },
+                    "uuid": "1e72d490-f414-4aed-bf4b-7661d148cdaa"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 0,9697 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 34.5,
+                        "y": 70.3
+                    },
+                    "uuid": "dbbe0214-f33a-4149-8da3-1f9e6ab61444"
+                },
+                {
+                    "description": "Via [BATT_SENSED_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 70.0
+                    },
+                    "uuid": "1e72d490-f414-4aed-bf4b-7661d148cdaa"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 1,0307 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 34.5,
+                        "y": 70.3
+                    },
+                    "uuid": "dbbe0214-f33a-4149-8da3-1f9e6ab61444"
+                },
+                {
+                    "description": "Via [BATT_SENSED_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 70.0
+                    },
+                    "uuid": "1e72d490-f414-4aed-bf4b-7661d148cdaa"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 1,3786 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 34.5,
+                        "y": 70.3
+                    },
+                    "uuid": "dbbe0214-f33a-4149-8da3-1f9e6ab61444"
+                },
+                {
+                    "description": "Via [BATT_SENSED_P] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 40.0,
+                        "y": 70.0
+                    },
+                    "uuid": "1e72d490-f414-4aed-bf4b-7661d148cdaa"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 1,2647 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_KELVIN_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 124.025,
+                        "y": 40.0
+                    },
+                    "uuid": "f6356384-4b31-4368-bdc4-b486f8508d2c"
+                },
+                {
+                    "description": "Zone [MOTION_SENSED_P] on B.Cu, priority 1",
+                    "pos": {
+                        "x": 122.0,
+                        "y": 19.0
+                    },
+                    "uuid": "1e9afc33-2369-4607-94a3-f523855463a1"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 2,1356 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_KELVIN_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 124.025,
+                        "y": 40.0
+                    },
+                    "uuid": "f6356384-4b31-4368-bdc4-b486f8508d2c"
+                },
+                {
+                    "description": "Zone [MOTION_SENSED_P] on B.Cu, priority 1",
+                    "pos": {
+                        "x": 122.0,
+                        "y": 19.0
+                    },
+                    "uuid": "1e9afc33-2369-4607-94a3-f523855463a1"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 2,7023 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [LOGIC_GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 168.5161,
+                        "y": 78.6647
+                    },
+                    "uuid": "0603ae59-2df3-4d67-b796-7cb069b940e1"
+                },
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 170.0,
+                        "y": 76.0
+                    },
+                    "uuid": "369b228a-b1a9-42d3-a3f3-78b4bd96913a"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 2,6641 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [LOGIC_GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 168.5161,
+                        "y": 78.6647
+                    },
+                    "uuid": "0603ae59-2df3-4d67-b796-7cb069b940e1"
+                },
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 170.0,
+                        "y": 76.0
+                    },
+                    "uuid": "369b228a-b1a9-42d3-a3f3-78b4bd96913a"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 2,3996 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 170.0,
+                        "y": 78.0
+                    },
+                    "uuid": "67361cbf-0742-4f93-b487-547b3f89417a"
+                },
+                {
+                    "description": "Via [LOGIC_GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 168.5161,
+                        "y": 78.6647
+                    },
+                    "uuid": "0603ae59-2df3-4d67-b796-7cb069b940e1"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 1,2112 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 168.0,
+                        "y": 74.0
+                    },
+                    "uuid": "62d0f0f5-dc27-4c01-9819-e2d23fcb649a"
+                },
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 170.0,
+                        "y": 78.0
+                    },
+                    "uuid": "67361cbf-0742-4f93-b487-547b3f89417a"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 3,0718 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 160.0,
+                        "y": 76.0
+                    },
+                    "uuid": "87d6d068-5940-451a-b375-f3b9553cdc7c"
+                },
+                {
+                    "description": "Via [MOTION_TEMP_DIODE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 161.442,
+                        "y": 76.6264
+                    },
+                    "uuid": "7a86765f-1295-4b41-8d8b-a58d96748256"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 3,4223 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 160.0,
+                        "y": 76.0
+                    },
+                    "uuid": "87d6d068-5940-451a-b375-f3b9553cdc7c"
+                },
+                {
+                    "description": "Via [MOTION_TEMP_DIODE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 161.442,
+                        "y": 76.6264
+                    },
+                    "uuid": "7a86765f-1295-4b41-8d8b-a58d96748256"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 1,4745 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 155.3239,
+                        "y": 74.5656
+                    },
+                    "uuid": "b5fa5dd3-f313-432d-a710-dd8baf53f1c3"
+                },
+                {
+                    "description": "Zone [MOTION_SENSED_P] on B.Cu, priority 1",
+                    "pos": {
+                        "x": 122.0,
+                        "y": 19.0
+                    },
+                    "uuid": "1e9afc33-2369-4607-94a3-f523855463a1"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 0,3865 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 155.3239,
+                        "y": 74.5656
+                    },
+                    "uuid": "b5fa5dd3-f313-432d-a710-dd8baf53f1c3"
+                },
+                {
+                    "description": "Zone [MOTION_SENSED_P] on B.Cu, priority 1",
+                    "pos": {
+                        "x": 122.0,
+                        "y": 19.0
+                    },
+                    "uuid": "1e9afc33-2369-4607-94a3-f523855463a1"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 1,2547 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 155.3239,
+                        "y": 74.5656
+                    },
+                    "uuid": "b5fa5dd3-f313-432d-a710-dd8baf53f1c3"
+                },
+                {
+                    "description": "Zone [MOTION_SENSED_P] on B.Cu, priority 1",
+                    "pos": {
+                        "x": 122.0,
+                        "y": 19.0
+                    },
+                    "uuid": "1e9afc33-2369-4607-94a3-f523855463a1"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 3,9467 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 68.0
+                    },
+                    "uuid": "ca7274c6-fac4-47b2-aabc-c347afc7c461"
+                },
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 70.0
+                    },
+                    "uuid": "6bbfaaf0-c942-402e-889d-742590e88afa"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 3,3851 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 68.0
+                    },
+                    "uuid": "ca7274c6-fac4-47b2-aabc-c347afc7c461"
+                },
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 70.0
+                    },
+                    "uuid": "6bbfaaf0-c942-402e-889d-742590e88afa"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 3,8717 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 68.0
+                    },
+                    "uuid": "ca7274c6-fac4-47b2-aabc-c347afc7c461"
+                },
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 70.0
+                    },
+                    "uuid": "6bbfaaf0-c942-402e-889d-742590e88afa"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 3,6566 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 68.0
+                    },
+                    "uuid": "ca7274c6-fac4-47b2-aabc-c347afc7c461"
+                },
+                {
+                    "description": "Via [LOGIC_GND] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 165.0379,
+                        "y": 64.59
+                    },
+                    "uuid": "8831600a-e154-4aba-832b-72b7a916e641"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 3,4068 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 68.0
+                    },
+                    "uuid": "ca7274c6-fac4-47b2-aabc-c347afc7c461"
+                },
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 162.0,
+                        "y": 70.0
+                    },
+                    "uuid": "6bbfaaf0-c942-402e-889d-742590e88afa"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 3,2262 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 158.1922,
+                        "y": 38.9957
+                    },
+                    "uuid": "9a8a16ef-56e2-419a-81a9-474b11415922"
+                },
+                {
+                    "description": "Zone [MOTION_SENSED_P] on B.Cu, priority 1",
+                    "pos": {
+                        "x": 122.0,
+                        "y": 19.0
+                    },
+                    "uuid": "1e9afc33-2369-4607-94a3-f523855463a1"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 3,6632 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [BATT_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 68.0,
+                        "y": 116.0
+                    },
+                    "uuid": "54d406a9-8408-44b8-a12d-be1341664f74"
+                },
+                {
+                    "description": "Via [AON_WAKE_EN] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 63.0075,
+                        "y": 113.298
+                    },
+                    "uuid": "8425fd0f-5c06-4148-8fda-8ca78f70f4c1"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 2,9554 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [BATT_N] of BC15",
+                    "pos": {
+                        "x": 27.0,
+                        "y": 110.0
+                    },
+                    "uuid": "c02f9280-9b33-49f6-ba02-1781a50e919e"
+                },
+                {
+                    "description": "Via [BATT_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 22.0,
+                        "y": 116.0
+                    },
+                    "uuid": "05f42b2d-56bc-451b-974f-ab81891c4617"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 3,8747 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [BATT_N] of BC15",
+                    "pos": {
+                        "x": 27.0,
+                        "y": 110.0
+                    },
+                    "uuid": "c02f9280-9b33-49f6-ba02-1781a50e919e"
+                },
+                {
+                    "description": "Via [BATT_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 22.0,
+                        "y": 116.0
+                    },
+                    "uuid": "05f42b2d-56bc-451b-974f-ab81891c4617"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 2,8055 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [BATT_N] of BC15",
+                    "pos": {
+                        "x": 27.0,
+                        "y": 110.0
+                    },
+                    "uuid": "c02f9280-9b33-49f6-ba02-1781a50e919e"
+                },
+                {
+                    "description": "Via [BATT_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 22.0,
+                        "y": 116.0
+                    },
+                    "uuid": "05f42b2d-56bc-451b-974f-ab81891c4617"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 3,9404 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [AON_WAKE_EN] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 63.0075,
+                        "y": 113.298
+                    },
+                    "uuid": "8425fd0f-5c06-4148-8fda-8ca78f70f4c1"
+                },
+                {
+                    "description": "Via [BATT_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 66.0,
+                        "y": 116.0
+                    },
+                    "uuid": "1ccfca32-9199-4a11-8970-a044cae3efd3"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 3,6632 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [LOGIC_BUCK_N] of NT6",
+                    "pos": {
+                        "x": 60.0,
+                        "y": 122.0
+                    },
+                    "uuid": "70762875-3d00-4979-bd2e-ea131de14585"
+                },
+                {
+                    "description": "Via [BATT_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 68.0,
+                        "y": 116.0
+                    },
+                    "uuid": "54d406a9-8408-44b8-a12d-be1341664f74"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 2,9554 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Via [BATT_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 22.0,
+                        "y": 116.0
+                    },
+                    "uuid": "05f42b2d-56bc-451b-974f-ab81891c4617"
+                },
+                {
+                    "description": "Via [BATT_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 26.0,
+                        "y": 116.0
+                    },
+                    "uuid": "aa85eeae-7991-44e5-82b0-8707a9623874"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 3,8747 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Via [BATT_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 22.0,
+                        "y": 116.0
+                    },
+                    "uuid": "05f42b2d-56bc-451b-974f-ab81891c4617"
+                },
+                {
+                    "description": "Via [BATT_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 26.0,
+                        "y": 116.0
+                    },
+                    "uuid": "aa85eeae-7991-44e5-82b0-8707a9623874"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 2,8055 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Via [BATT_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 22.0,
+                        "y": 116.0
+                    },
+                    "uuid": "05f42b2d-56bc-451b-974f-ab81891c4617"
+                },
+                {
+                    "description": "Via [BATT_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 26.0,
+                        "y": 116.0
+                    },
+                    "uuid": "aa85eeae-7991-44e5-82b0-8707a9623874"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 3,9404 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Via [AON_WAKE_EN] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 63.0075,
+                        "y": 113.298
+                    },
+                    "uuid": "8425fd0f-5c06-4148-8fda-8ca78f70f4c1"
+                },
+                {
+                    "description": "Via [BATT_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 66.0,
+                        "y": 116.0
+                    },
+                    "uuid": "1ccfca32-9199-4a11-8970-a044cae3efd3"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 3,9177 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Via [BATT_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 34.0,
+                        "y": 114.0
+                    },
+                    "uuid": "9277fe5e-e229-4ef8-a183-01ab33d80792"
+                },
+                {
+                    "description": "Via [BATT_N] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 32.0,
+                        "y": 114.0
+                    },
+                    "uuid": "d76ccdc9-aac4-4d11-8f8f-e7c576a62258"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 0,3190 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MAIN_HGATE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 60.2487,
+                        "y": 81.3922
+                    },
+                    "uuid": "21ffb18d-b996-4bf6-adde-ca202185748f"
+                },
+                {
+                    "description": "Zone [BATT_SENSED_P] on B.Cu, priority 1",
+                    "pos": {
+                        "x": 33.0,
+                        "y": 14.0
+                    },
+                    "uuid": "71fc536f-beba-4762-b597-68dbf8087cb2"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 3,9469 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MAIN_HGATE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 60.1935,
+                        "y": 57.8575
+                    },
+                    "uuid": "9b81163e-8854-40b4-b950-676634488c60"
+                },
+                {
+                    "description": "Via [MAIN_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 66.0,
+                        "y": 56.0
+                    },
+                    "uuid": "5047057e-9479-4dc8-8cfa-80ecd9711a2a"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 3,6315 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MAIN_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 66.0,
+                        "y": 54.0
+                    },
+                    "uuid": "161ac4b3-cd21-4776-96db-555ae6d6bdb5"
+                },
+                {
+                    "description": "Via [MAIN_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 66.0,
+                        "y": 56.0
+                    },
+                    "uuid": "5047057e-9479-4dc8-8cfa-80ecd9711a2a"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 3,7139 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MAIN_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 66.0,
+                        "y": 54.0
+                    },
+                    "uuid": "161ac4b3-cd21-4776-96db-555ae6d6bdb5"
+                },
+                {
+                    "description": "Via [MAIN_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 66.0,
+                        "y": 56.0
+                    },
+                    "uuid": "5047057e-9479-4dc8-8cfa-80ecd9711a2a"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_SYS outer power connections' minimum connection width 4,0000 mm; actual 3,5760 mm) (B.Cu)",
+            "items": [
+                {
+                    "description": "Via [MAIN_DGATE] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 79.6637,
+                        "y": 16.9162
+                    },
+                    "uuid": "938e2eaf-91f7-4c72-a7f7-1a80bc16dbb9"
+                },
+                {
+                    "description": "Zone [SYS_BUS_P] on B.Cu, priority 1",
+                    "pos": {
+                        "x": 81.1,
+                        "y": 14.0
+                    },
+                    "uuid": "388ee202-5a23-43d0-893b-5c70075231a0"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 3,9101 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [BATT_SENSED_P] of BC2",
+                    "pos": {
+                        "x": 43.0,
+                        "y": 78.0
+                    },
+                    "uuid": "4221639d-4279-419c-9acf-171864abcb39"
+                },
+                {
+                    "description": "Pad 1 [BATT_SENSED_P] of R225 on F.Cu",
+                    "pos": {
+                        "x": 36.9125,
+                        "y": 76.0
+                    },
+                    "uuid": "9b621481-5c33-4853-b4b9-962feb1beb92"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 3,9538 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [BATT_SENSED_P] of BC2",
+                    "pos": {
+                        "x": 43.0,
+                        "y": 78.0
+                    },
+                    "uuid": "4221639d-4279-419c-9acf-171864abcb39"
+                },
+                {
+                    "description": "Pad 1 [BATT_SENSED_P] of R225 on F.Cu",
+                    "pos": {
+                        "x": 36.9125,
+                        "y": 76.0
+                    },
+                    "uuid": "9b621481-5c33-4853-b4b9-962feb1beb92"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 3,1476 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [BATT_SENSED_P] of BC2",
+                    "pos": {
+                        "x": 43.0,
+                        "y": 78.0
+                    },
+                    "uuid": "4221639d-4279-419c-9acf-171864abcb39"
+                },
+                {
+                    "description": "Pad 1 [BATT_SENSED_P] of R225 on F.Cu",
+                    "pos": {
+                        "x": 36.9125,
+                        "y": 76.0
+                    },
+                    "uuid": "9b621481-5c33-4853-b4b9-962feb1beb92"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 3,6484 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Track [MOTION_TEMP_DIODE] on F.Cu, length 5,2754 mm",
+                    "pos": {
+                        "x": 169.062,
+                        "y": 70.05
+                    },
+                    "uuid": "e915f1f5-eb58-4a29-93d5-d64467ab483f"
+                },
+                {
+                    "description": "Pad 2 [BATT_N] of Q11 on F.Cu",
+                    "pos": {
+                        "x": 169.0625,
+                        "y": 71.95
+                    },
+                    "uuid": "3c3bcf09-970b-4017-a15a-d76884df8bbc"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 3,3028 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 68.0
+                    },
+                    "uuid": "4a321e98-4f00-4877-818c-3cde5a4204b6"
+                },
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 72.0
+                    },
+                    "uuid": "fbc1a94a-412d-48ed-bf6b-4c065c6aa4a2"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 3,6564 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 68.0
+                    },
+                    "uuid": "4a321e98-4f00-4877-818c-3cde5a4204b6"
+                },
+                {
+                    "description": "Track [Q8_G] on F.Cu, length 2,5875 mm",
+                    "pos": {
+                        "x": 157.9,
+                        "y": 70.0
+                    },
+                    "uuid": "e3a5901f-872c-4c12-b851-e3e4d3b4028a"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 3,6147 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 68.0
+                    },
+                    "uuid": "4a321e98-4f00-4877-818c-3cde5a4204b6"
+                },
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 164.0,
+                        "y": 72.0
+                    },
+                    "uuid": "fbc1a94a-412d-48ed-bf6b-4c065c6aa4a2"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 3,1938 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Pad 2 [MOTION_COMMON] of Q7 on F.Cu",
+                    "pos": {
+                        "x": 155.65,
+                        "y": 33.0
+                    },
+                    "uuid": "15b8bb30-0904-4589-b245-fa393ebbe636"
+                },
+                {
+                    "description": "Track [Q7_G] on F.Cu, length 2,2500 mm",
+                    "pos": {
+                        "x": 155.65,
+                        "y": 35.0
+                    },
+                    "uuid": "a61c1fbe-b56d-4558-adc9-92ece7e9fcf3"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 2,2843 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Via [MOTION_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 160.0,
+                        "y": 34.0
+                    },
+                    "uuid": "d549f568-cbfa-4c72-be96-9ef2c72a1f1e"
+                },
+                {
+                    "description": "Pad 1 [MOTION_GATE_DRIVE] of R7 on F.Cu",
+                    "pos": {
+                        "x": 156.65,
+                        "y": 39.4125
+                    },
+                    "uuid": "e248ee3c-70e5-47db-9b74-8c5f16bb5717"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_MOTION outer power connections' minimum connection width 4,0000 mm; actual 2,1954 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Pad 2 [MOTION_COMMON] of Q7 on F.Cu",
+                    "pos": {
+                        "x": 155.65,
+                        "y": 33.0
+                    },
+                    "uuid": "15b8bb30-0904-4589-b245-fa393ebbe636"
+                },
+                {
+                    "description": "Track [Q7_G] on F.Cu, length 2,2500 mm",
+                    "pos": {
+                        "x": 155.65,
+                        "y": 35.0
+                    },
+                    "uuid": "a61c1fbe-b56d-4558-adc9-92ece7e9fcf3"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 1,7393 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Pad 2 [MAIN_COMMON] of R12 on F.Cu",
+                    "pos": {
+                        "x": 65.15,
+                        "y": 57.5875
+                    },
+                    "uuid": "e2261f11-e2b8-4a52-a6cd-251fac8367cd"
+                },
+                {
+                    "description": "Via [MAIN_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 66.0,
+                        "y": 56.0
+                    },
+                    "uuid": "5047057e-9479-4dc8-8cfa-80ecd9711a2a"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 1,6840 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Pad 2 [MAIN_COMMON] of R12 on F.Cu",
+                    "pos": {
+                        "x": 65.15,
+                        "y": 57.5875
+                    },
+                    "uuid": "e2261f11-e2b8-4a52-a6cd-251fac8367cd"
+                },
+                {
+                    "description": "Via [MAIN_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 66.0,
+                        "y": 52.0
+                    },
+                    "uuid": "e68bbac0-620a-4db4-b956-021ea8c62f3d"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 2,1903 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Pad 2 [MAIN_COMMON] of R12 on F.Cu",
+                    "pos": {
+                        "x": 65.15,
+                        "y": 57.5875
+                    },
+                    "uuid": "e2261f11-e2b8-4a52-a6cd-251fac8367cd"
+                },
+                {
+                    "description": "Via [MAIN_COMMON] on F.Cu - B.Cu",
+                    "pos": {
+                        "x": 66.0,
+                        "y": 52.0
+                    },
+                    "uuid": "e68bbac0-620a-4db4-b956-021ea8c62f3d"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 4,0000 mm; actual 3,3794 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Track [LOGIC_GND] on F.Cu, length 1,0950 mm",
+                    "pos": {
+                        "x": 68.0216,
+                        "y": 55.2442
+                    },
+                    "uuid": "96ef7d02-9bef-4e1c-a895-87b5e12da33b"
+                },
+                {
+                    "description": "Pad 2 [MAIN_COMMON] of R12 on F.Cu",
+                    "pos": {
+                        "x": 65.15,
+                        "y": 57.5875
+                    },
+                    "uuid": "e2261f11-e2b8-4a52-a6cd-251fac8367cd"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        }
+    ]
+}

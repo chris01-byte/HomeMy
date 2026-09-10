@@ -1,0 +1,20 @@
+{
+  "rev_a_engineering_prototype": true,
+  "rev_b_production": false,
+  "scope": "The nine unresolved external BOM rows. PCB connectors, hole patterns and component footprints are frozen; select external equipment to these interfaces.",
+  "before_pcb_order": [],
+  "before_energization": [
+    {"reference":"EXT_AL_PANELS","interface":"Two independent external 305 x 305 x 3.2 mm resistor heat-spreader panels; no attachment holes are added to the PCB.","closure":"Select alloy, transfer actual RH100 hole pattern, guards, fasteners and thermal sensor attachment; assemble and inspect before a resistor-bank pulse."},
+    {"reference":"EXT_LUG_BATT","interface":"M5 horizontal faces on installed Wurth 7461103 at J1/J2; 6 mm2 battery conductors.","closure":"Select compatible lug, conductor and crimp tool; verify thread engagement, cable clearance, resistance and torque no greater than 2.2 Nm."},
+    {"reference":"EXT_LUG_ARMS","interface":"M5 horizontal faces at J3-J6; 4 mm2 arm conductors.","closure":"Select compatible lugs and crimp system; keep separate ARM_L_N/ARM_R_N returns; verify fit, restraint and current/temperature envelope."},
+    {"reference":"EXT_CABLES","interface":"Use the already selected PCB headers and their specified mating plugs. Harness, ferrules and restraints are external; no PCB holes or connector changes.","closure":"Release cable lengths, wire grades, pin-to-pin list, coding, polarity and crimp/terminal acceptance; resolve branch-specific cross-sections against design loads and routing."},
+    {"reference":"EXT_COVERS","interface":"Independent enclosure-mounted insulating support and guards; use the existing four PCB mounting holes. At least 15 mm below PCB and planned 25 mm axial M5 tool access; preserve antenna keepout.","closure":"Dimension external guards/support to the fixed PCB and busbars, inspect live-part coverage, clearances and cable-force restraint before power."},
+    {"reference":"EXT_BUTTON","interface":"Normally-open dry contact via existing J20 connector and matching cable; inject no external voltage.","closure":"Select switch/mating harness, confirm pinout and power-button/rearm behavior with a current-limited motorless fixture."},
+    {"reference":"EXT_PERMISSION","interface":"Existing J22 3.3 V permission loop; deenergized contact must be open. No 24 V injection or permanent bypass jumper.","closure":"Select and accept external emergency-stop/permission circuit and harness; verify open/unpowered fault forces Motion OFF before actuator enable."},
+    {"reference":"EXT_FUSE","interface":"External 60 A battery fuse and holder upstream of J1; neither mounts on the PCB.","closure":"Select exact DC-rated fuse/holder, interruption rating and time-current curve for the pack/wiring; verify before battery attachment."},
+    {"reference":"EXT_CONVERTERS","interface":"External PC input at J9, logic converter input at J10 and regulated 5 V return at J11; lift input at J8. Use fixed Phoenix headers/mates. No converter module footprint exists on this PCB.","closure":"Select actual modules, including China-sourced modules if desired; verify wiring, 27.5-42 V operating input, transients, input capacitance/inrush, 5 V output and isolation/return behavior against POWER_STAGE and bring-up limits before connecting them."}
+  ],
+  "pcb_footprint_change_allowed": false,
+  "change_control": "An external part that cannot satisfy the frozen interface is rejected or triggers a new CAD/package revision and complete checks. It must not silently change Rev A-P1.",
+  "separate_manufacturing_acceptance": "PCB vendor must accept the special finished press-fit holes, copper plating, 1.60-1.70 mm thickness and specified laminate. These are fabrication requirements, not unresolved external BOM positions."
+}

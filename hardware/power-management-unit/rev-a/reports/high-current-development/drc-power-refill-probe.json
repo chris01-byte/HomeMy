@@ -1,0 +1,353 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-10T22:57:57",
+    "ignored_checks": [
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "schematic_parity": [],
+    "source": "HomeMy_PMU_RevA.kicad_pcb",
+    "unconnected_items": [
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone [BATT_N] on B.Cu, priority 1",
+                    "pos": {
+                        "x": 6.0,
+                        "y": 109.0
+                    },
+                    "uuid": "dfb58d01-647f-4e72-8fca-0b15beea8ab7"
+                },
+                {
+                    "description": "Zone [BATT_N] on F.Cu, priority 1",
+                    "pos": {
+                        "x": 6.0,
+                        "y": 109.0
+                    },
+                    "uuid": "b53dabab-807c-4e11-a4d6-e862f67162f7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        },
+        {
+            "description": "Missing connection between items",
+            "items": [
+                {
+                    "description": "Zone [BATT_N] on B.Cu, priority 1",
+                    "pos": {
+                        "x": 6.0,
+                        "y": 109.0
+                    },
+                    "uuid": "dfb58d01-647f-4e72-8fca-0b15beea8ab7"
+                },
+                {
+                    "description": "Zone [BATT_N] on F.Cu, priority 1",
+                    "pos": {
+                        "x": 6.0,
+                        "y": 109.0
+                    },
+                    "uuid": "b53dabab-807c-4e11-a4d6-e862f67162f7"
+                }
+            ],
+            "severity": "error",
+            "type": "unconnected_items"
+        }
+    ],
+    "violations": [
+        {
+            "description": "Copper connection too narrow (rule 'PWR_SYS outer power connections' minimum connection width 1,0000 mm; actual 0,6557 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Pad 1 [SYS_BUS_P] of R41 on F.Cu",
+                    "pos": {
+                        "x": 27.0,
+                        "y": 171.9125
+                    },
+                    "uuid": "7fd31df5-92c7-43aa-8d94-894f71c5fe87"
+                },
+                {
+                    "description": "Track [PC_UVLO] on F.Cu, length 3,7172 mm",
+                    "pos": {
+                        "x": 26.0875,
+                        "y": 171.0
+                    },
+                    "uuid": "433b5e6b-0211-4e28-ae7d-4a4961ed3f3b"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_SYS outer power connections' minimum connection width 1,0000 mm; actual 0,2092 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Track [PC_OVP] on F.Cu, length 1,5491 mm",
+                    "pos": {
+                        "x": 22.6814,
+                        "y": 170.088
+                    },
+                    "uuid": "36d26ed8-1284-4733-91fe-c0ea3747766e"
+                },
+                {
+                    "description": "Pad 1 [SYS_BUS_P] of R43 on F.Cu",
+                    "pos": {
+                        "x": 23.0,
+                        "y": 171.9125
+                    },
+                    "uuid": "78fd8d8f-2130-4453-bf08-2e5298ebfd62"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 1,0000 mm; actual 0,2373 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Pad 2 [BATT_N] of R42 on F.Cu",
+                    "pos": {
+                        "x": 31.0,
+                        "y": 174.0875
+                    },
+                    "uuid": "31231909-c5a8-4ee7-ba69-76caf529e67f"
+                },
+                {
+                    "description": "Track [PC_UVLO] on F.Cu, length 0,0005 mm",
+                    "pos": {
+                        "x": 31.0,
+                        "y": 175.9125
+                    },
+                    "uuid": "8b075d37-7924-4d46-b48c-ff80d60ddc72"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 1,0000 mm; actual 0,2042 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Pad 2 [BATT_N] of R42 on F.Cu",
+                    "pos": {
+                        "x": 31.0,
+                        "y": 174.0875
+                    },
+                    "uuid": "31231909-c5a8-4ee7-ba69-76caf529e67f"
+                },
+                {
+                    "description": "Track [PC_UVLO] on F.Cu, length 0,4706 mm",
+                    "pos": {
+                        "x": 29.9887,
+                        "y": 173.605
+                    },
+                    "uuid": "99cccac1-3de9-4adf-bb63-b808dea73474"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 1,0000 mm; actual 0,2012 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Pad 2 [BATT_N] of R42 on F.Cu",
+                    "pos": {
+                        "x": 31.0,
+                        "y": 174.0875
+                    },
+                    "uuid": "31231909-c5a8-4ee7-ba69-76caf529e67f"
+                },
+                {
+                    "description": "Track [PC_UVLO] on F.Cu, length 1,3827 mm",
+                    "pos": {
+                        "x": 30.3212,
+                        "y": 173.272
+                    },
+                    "uuid": "5c40e969-f35a-4ac2-91c8-16464338b82d"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_SYS outer power connections' minimum connection width 1,0000 mm; actual 0,2012 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Track [PC_OVP] on F.Cu, length 1,5491 mm",
+                    "pos": {
+                        "x": 22.6814,
+                        "y": 170.088
+                    },
+                    "uuid": "36d26ed8-1284-4733-91fe-c0ea3747766e"
+                },
+                {
+                    "description": "Pad 1 [SYS_BUS_P] of R43 on F.Cu",
+                    "pos": {
+                        "x": 23.0,
+                        "y": 171.9125
+                    },
+                    "uuid": "78fd8d8f-2130-4453-bf08-2e5298ebfd62"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 1,0000 mm; actual 0,3498 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Pad 2 [BATT_N] of R44 on F.Cu",
+                    "pos": {
+                        "x": 27.0,
+                        "y": 177.0875
+                    },
+                    "uuid": "08c0b925-d7a5-4fe1-a906-5cb90c7c86bb"
+                },
+                {
+                    "description": "Track [PC_OVP] on F.Cu, length 7,6568 mm",
+                    "pos": {
+                        "x": 21.5856,
+                        "y": 173.498
+                    },
+                    "uuid": "d346ad90-6d51-45cb-8975-de7e0318d266"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 1,0000 mm; actual 0,2012 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Pad 1 [MOTION_IWRN] of R31 on F.Cu",
+                    "pos": {
+                        "x": 157.0,
+                        "y": 98.9125
+                    },
+                    "uuid": "d35eef0a-e180-4aa1-9210-f3db62016b40"
+                },
+                {
+                    "description": "Pad 2 [BATT_N] of R31 on F.Cu",
+                    "pos": {
+                        "x": 157.0,
+                        "y": 97.0875
+                    },
+                    "uuid": "433f47fd-1df4-4f5c-8056-582e7c206474"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 1,0000 mm; actual 0,2012 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Track [LOGIC_UVLO] on F.Cu, length 4,9630 mm",
+                    "pos": {
+                        "x": 82.0195,
+                        "y": 173.597
+                    },
+                    "uuid": "75d8e062-3cc9-443b-ae4c-e9133985b193"
+                },
+                {
+                    "description": "Pad 2 [BATT_N] of R52 on F.Cu",
+                    "pos": {
+                        "x": 81.0,
+                        "y": 174.0875
+                    },
+                    "uuid": "790dc712-3cc4-499e-b21c-28664f0055ea"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 1,0000 mm; actual 0,8680 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Track [MAIN_OV] on F.Cu, length 1,7750 mm",
+                    "pos": {
+                        "x": 46.975,
+                        "y": 91.1125
+                    },
+                    "uuid": "c4054b5c-926f-4929-8d2d-6c9ff0411ff0"
+                },
+                {
+                    "description": "Pad 1 [BATT_SENSED_P] of R27 on F.Cu",
+                    "pos": {
+                        "x": 48.0,
+                        "y": 91.9125
+                    },
+                    "uuid": "58a98a6a-aa0d-435c-80c9-e1817dd9a45f"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 1,0000 mm; actual 0,2372 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Pad 1 [MAIN_UVLO] of R26 on F.Cu",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 92.9125
+                    },
+                    "uuid": "fe74f9d9-1853-442d-8b54-5437e324319e"
+                },
+                {
+                    "description": "Pad 2 [BATT_N] of R26 on F.Cu",
+                    "pos": {
+                        "x": 58.0,
+                        "y": 91.0875
+                    },
+                    "uuid": "0e6fb55e-3522-4074-9a4f-f263659ad3cf"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        },
+        {
+            "description": "Copper connection too narrow (rule 'PWR_BATTERY outer power connections' minimum connection width 1,0000 mm; actual 0,2012 mm) (F.Cu)",
+            "items": [
+                {
+                    "description": "Track [MAIN_OV] on F.Cu, length 1,7750 mm",
+                    "pos": {
+                        "x": 46.975,
+                        "y": 91.1125
+                    },
+                    "uuid": "c4054b5c-926f-4929-8d2d-6c9ff0411ff0"
+                },
+                {
+                    "description": "Pad 1 [BATT_SENSED_P] of R27 on F.Cu",
+                    "pos": {
+                        "x": 48.0,
+                        "y": 91.9125
+                    },
+                    "uuid": "58a98a6a-aa0d-435c-80c9-e1817dd9a45f"
+                }
+            ],
+            "severity": "error",
+            "type": "connection_width"
+        }
+    ]
+}

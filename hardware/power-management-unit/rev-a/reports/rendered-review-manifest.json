@@ -4,11 +4,11 @@
   "state": "rendered_for_visual_review_not_automatic_geometry_acceptance",
   "renderer": {
     "path": "scripts/render_review.cjs",
-    "sha256": "ba321c2d95f1050d8bd50494a7e6fd52491b0593099aab7a1254785023f09b48",
+    "sha256": "72f2909b2dcfeed6137ff11ac43eb8dc06b1fe839db2fe78abaa74b269d3d870",
     "sharp": "0.35.4",
     "vips": "8.18.6"
   },
-  "board_sha256": "70bb8eb588f2fc7200f718df0e11659aad3c40c7e9d5652228eb7a58d232065f",
+  "board_sha256": "13fcae0f58c9a6ac5f85eb721c24b44169a65f628baad6586bcd6002f4c17cfe",
   "outputs": [
     {
       "source": "assembly/schematic/HomeMy_PMU_RevA-02_main_switch_lm74930.svg",
@@ -18,49 +18,49 @@
     },
     {
       "source": "reports/HomeMy_PMU_RevA-top-copper.svg",
-      "source_sha256": "18a0954eb14aedecc23d6f2012678e68ca4f9208d4c6398cb226cb10c5c3abf7",
+      "source_sha256": "06bb69c3c21df48f62f07dcdadf4185c0cedd8c3434f87dad1b025c622a65a97",
       "target": "reports/top-copper-review.png",
-      "target_sha256": "63af16ca4b5e55cd4290e2498f05382cfb55181144f80c1ff3120afe3defcf1b"
+      "target_sha256": "c93bb8afa11a4ebffb51c8a9673136ed78fab5054038c0127ee9505f63998973"
     },
     {
       "source": "reports/HomeMy_PMU_RevA-inner1-copper.svg",
-      "source_sha256": "17d860f3c73fafa701b596e9d8b7401cce621b20ba97b62305a2544c9116af0e",
+      "source_sha256": "e7909803ed583a231edb8a3037a0b8007100bc8ad7091b45cc606c85005f9084",
       "target": "reports/inner1-copper-review.png",
       "target_sha256": "4ad406e1ff929dbb4bf1a9a1bbe13e3d62eca594c9bf8a3273413314ccded0cd"
     },
     {
       "source": "reports/HomeMy_PMU_RevA-inner2-copper.svg",
-      "source_sha256": "3491878cf76348d753d3e804e4c1dff1ee5a82845cbb5f64f342f0d682934445",
+      "source_sha256": "1bc1d5a992743e06d77762944682a4dcd886851912687591c5ef39b487007441",
       "target": "reports/inner2-copper-review.png",
       "target_sha256": "243b66e4d9c02659d00563d4a6b0e7ac465d6ba99691e43498489d5620ed37f6"
     },
     {
       "source": "reports/HomeMy_PMU_RevA-bottom-copper.svg",
-      "source_sha256": "307e42308dab3d369669e8acba9cf507064c82f941decb1eadb2e9d788387a20",
+      "source_sha256": "69684bb99146361351073e006cc14e277fc5b40e7c1199fc25e09c334e9870ad",
       "target": "reports/bottom-copper-review.png",
-      "target_sha256": "570548b4fce2052cbaa511b6d5689e4e72779409852471e924759c17d8bbc4da"
+      "target_sha256": "62d600a6e2e302db307345d971c1564d831acd245ef862c399eed1ab8f8b7b2c"
     },
     {
-      "source": "manufacturing/engineering-preview/assembly/HomeMy_PMU_RevA-assembly-front.svg",
-      "source_sha256": "63ddedfd723b398f1da6c91140b0a83eca69e29f3fa6a720b22cce274b6a61ee",
+      "source": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/assembly/HomeMy_PMU_RevA-assembly-front.svg",
+      "source_sha256": "bfdf95ac25c4c12c170e7c33dcc72ed391c5372a093eb88e6f8e9ad783c0882b",
       "target": "reports/assembly-front-review.png",
-      "target_sha256": "55227da391b96957cf50f95bce1337130b14d9321e3c34fa7c4b863a8df241d5"
+      "target_sha256": "de0bad16333d3a5998eeca5010d3ce494a0fa5ab5ab2bf84f6691a4f49c8ffd4"
     },
     {
-      "source": "manufacturing/engineering-preview/assembly/HomeMy_PMU_RevA-assembly-back.svg",
-      "source_sha256": "fa1752ccb10c6dcecee3b4e00e3cb98e6a626c5ee045a454a5d478d22d481d0a",
+      "source": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/assembly/HomeMy_PMU_RevA-assembly-back.svg",
+      "source_sha256": "964aecf56dddbc38ef58cdde9bf6ea3e49bd55497bf83c01a894ccba0dbe8c06",
       "target": "reports/assembly-back-review.png",
       "target_sha256": "65ee565e1e282c62d6e2e1d8d0b8626f3a9213b967d0fc8d8103babb9179480e"
     },
     {
-      "source": "manufacturing/engineering-preview/drill/HomeMy_PMU_RevA-PTH-drl_map.svg",
-      "source_sha256": "022daede701a44994bfa81eae8f5e5154855d49986f2096fcfc8e409f12d36b8",
+      "source": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/drill/HomeMy_PMU_RevA-PTH-drl_map.svg",
+      "source_sha256": "1b6f61cac635319843e0fce8707d87f3104cd2356c17ad6c698d82b7cccecd81",
       "target": "reports/drill-PTH-review.png",
       "target_sha256": "bdc98bec6e7ddfd77ce644b06420f90d29595a629c1f9ea8f25afe96c139bfd3"
     },
     {
-      "source": "manufacturing/engineering-preview/drill/HomeMy_PMU_RevA-NPTH-drl_map.svg",
-      "source_sha256": "ca246a99d40c8bdc002e494d18bf037f68338d6aad36c6ed1fce2c44d826f3e7",
+      "source": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/drill/HomeMy_PMU_RevA-NPTH-drl_map.svg",
+      "source_sha256": "09ca0d403446f6f2f833b666758a59461380a863195e37e0add2a936ebcbd52f",
       "target": "reports/drill-NPTH-review.png",
       "target_sha256": "fc82530a5dc5ea73181a0d0fb4dbe73e638c8e6217add72724db81ee90c685a6"
     },
@@ -72,9 +72,21 @@
     },
     {
       "source": "manufacturing/ASSEMBLY_ORIENTATION.svg",
-      "source_sha256": "a8c4d47bf9d963357763c212ecf87da342a5813d8657310dc2b63a66c9712894",
+      "source_sha256": "455b728274053362ddb077a196963d0f4ced07d54d07b11deb515d8ffa3cedf5",
       "target": "reports/assembly-orientation-review.png",
-      "target_sha256": "c6fc4177df9f637a163d2491ef3691a39d8f13cda7a2611c536007915c90b093"
+      "target_sha256": "7ddfe8cd4e1ecfd620c4000962413134f4c2fcce0689bc9dbd4973a7499c809e"
+    },
+    {
+      "source": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/assembly/POLARITY.svg",
+      "source_sha256": "fb8f33360055eeb8217256fb2d296d052e2ce5a395914809d6ce15f0040c724c",
+      "target": "reports/polarity-review.png",
+      "target_sha256": "f0c38580c4946fbb18fde890b449dd38757d29444c92861226a379ce9534e890"
+    },
+    {
+      "source": "manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/mechanical/BB7_1to1.svg",
+      "source_sha256": "604e8de6f56a0536f3a6cc2153009f69b62a33abdbd99dd4a8b284856782cbad",
+      "target": "reports/bb7-release-review.png",
+      "target_sha256": "a01211b0c2578e75e57df1b8bc6966c65ddf177501dbb941805c1b2124cc8889"
     }
   ]
 }

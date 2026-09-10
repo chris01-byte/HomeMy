@@ -136,11 +136,15 @@ def plot(board, directory, suffix, layer_ids, fmt, assembly=False):
 
 
 def main():
+    global STATE
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--board', type=Path, default=ROOT/'kicad/HomeMy_PMU_RevA.kicad_pcb')
     parser.add_argument('--bom', type=Path, default=ROOT/'manufacturing/REV_A_BOM.json')
     parser.add_argument('--output', type=Path, default=ROOT/'manufacturing/engineering-preview')
+    parser.add_argument('--prototype-version', help='Explicit PCB-only engineering prototype package version; requires scoped release.json')
     args = parser.parse_args()
+    if args.prototype_version:
+        STATE = 'rev_a_pcb_prototype_order_release'
     board_path, bom_path, output = args.board.resolve(), args.bom.resolve(), args.output.resolve()
     if board_path == output or board_path in output.parents:
         raise ValueError('Output must be a directory distinct from the source board')
@@ -164,8 +168,8 @@ def main():
     bom_metadata = bom.get('metadata', {})
     if bom_metadata.get('rev_a_engineering_prototype') is not True or bom_metadata.get('rev_b_production') is not False:
         errors.append('BOM lacks the required Rev A true / Rev B false metadata')
-    if bom_metadata.get('state') != STATE:
-        errors.append('BOM review state differs from required non-release state')
+    if bom_metadata.get('state') not in ('engineering_review_not_order_release','rev_a_prototype_procurement_data'):
+        errors.append('Unrecognized BOM data state')
     if not bom_metadata.get('validation_passed'):
         errors.append('BOM validation has not passed; regenerate final source/assembled data and BOM')
         errors.extend('BOM: ' + e for e in bom_metadata.get('errors', []))
@@ -190,6 +194,19 @@ def main():
     release = json.loads(snapshot(release_path).read_text(encoding='utf-8')) if release_path.exists() else {}
     if release.get('rev_a_engineering_prototype') is not True or release.get('rev_b_production') is not False:
         errors.append('Source release.json lacks required Rev A true / Rev B false flags')
+    if args.prototype_version:
+        if not release.get('fabrication_release') or not release.get('assembly_release') or release.get('prototype_package_version')!=args.prototype_version:
+            raise ValueError('Prototype version does not have a scoped PCB fabrication/assembly release')
+        native=json.loads(snapshot(ROOT/'reports/native-checks-both.json').read_text())
+        if not native['all_processes_passed'] or not native['reports_have_zero_findings']:
+            raise ValueError('Native checks must finish normally and have zero findings')
+        for name,expected in native['input_hashes_sha256'].items():
+            path=snapshot(ROOT/Path(name.replace('\\','/')))
+            if digest(path)!=expected:raise ValueError('Stale native check: '+name)
+        for row in native['checks'].values():
+            path=snapshot(ROOT/row['report_path'])
+            if row['process_exit_code']!=0 or digest(path)!=row['report_sha256']:
+                raise ValueError('Native report/process evidence mismatch')
     board = pcb.LoadBoard(board_path.as_posix())
     if not board:
         raise RuntimeError('KiCad could not load board')
@@ -325,7 +342,7 @@ def main():
             if not match or int(match[1]) != expected:
                 errors.append(f'Drill report {label} count differs from native board pads/vias: expected {expected}')
     if unconnected:
-        warnings.append(f'Actual board has {unconnected} unconnected ratsnest edges; these previews are not routability/DRC acceptance')
+        (errors if args.prototype_version else warnings).append(f'Actual board has {unconnected} unconnected ratsnest edges')
     warnings.append('DRC/ERC, trace current capacity, vendor press-fit holes, stencil apertures and machine placement conventions require separate review')
     warnings.append('Native assembly SVGs are unmirrored top-coordinate views; DNP footprints are crossed out where supported by KiCad')
     # Every native file is closed before checksumming. A changing source produces
@@ -333,9 +350,9 @@ def main():
     for path, original in inputs.items():
         if not path.exists() or digest(path) != original:
             errors.append(f'Input changed during export: {relative(path)}; regenerate after edits finish')
-    readme = output/'README.md'
+    readme = output/('EXPORT_README.md' if args.prototype_version else 'README.md')
     readme.write_text(
-        '# Rev A engineering preview — not an order release\n\n'
+        ('# '+args.prototype_version+' native PCB export\n\nEngineering prototype – not production qualified.\n\n' if args.prototype_version else '# Rev A engineering preview — not an order release\n\n')+
         'These files are native KiCad exports of the board identified by SHA-256 in EXPORT_MANIFEST.json. '
         'They do not certify that the board is routed, DRC-clean, thermally qualified or safe to energize. '
         '`rev_a_engineering_prototype: true`; `rev_b_production: false`.\n\n'
@@ -362,7 +379,10 @@ def main():
             entry.update(sha256=digest(path), bytes=path.stat().st_size)
     manifest = dict(
         metadata=dict(rev_a_engineering_prototype=True, rev_b_production=False, state=STATE,
-                      fabrication_release=False, assembly_release=False,
+                      fabrication_release=bool(args.prototype_version) and not errors,
+                      assembly_release=bool(args.prototype_version) and not errors,
+                      release_scope='Bare PCB and populated PCB engineering prototype only' if args.prototype_version else 'Unreleased intermediate export',
+                      prototype_package_version=args.prototype_version,
                       exported_at_utc=datetime.now(timezone.utc).isoformat(),
                       coverage_validation_passed=not errors, errors=errors, warnings=warnings),
         exporter=dict(path=relative(Path(__file__)), sha256=digest(Path(__file__)), kicad_version=pcb.GetBuildVersion()),
@@ -384,7 +404,7 @@ def main():
           f'{len(dnp)} DNP; {len(errors)} coverage errors; {unconnected} unconnected edges.')
     for error in errors:
         print('ERROR:', error)
-    print('Engineering preview only. Source board unchanged:', digest(board_path) == inputs[board_path])
+    print('PCB prototype scope' if args.prototype_version else 'Engineering preview only', 'Source board unchanged:', digest(board_path) == inputs[board_path])
     return 2 if errors else 0
 
 

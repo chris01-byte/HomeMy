@@ -2,7 +2,7 @@
 
 ## Phase
 
-Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The onboard Linux lifecycle, one-button customer behavior, coarse LED status, battery monitor, electronic main power path, reverse-current blocking, and initial protection thresholds are recorded as accepted architecture. The HomeMy Power Management Unit (PMU) now has a Revision-A engineering implementation under `hardware/power-management-unit/rev-a`: a hierarchical KiCad schematic, routed four-layer laboratory PCB, exact component BOM, calculations, mechanical reinforcement and prototype manufacturing outputs. Native ERC and DRC reports have zero findings, zero open connections and zero schematic-parity differences. The portable KiCad processes wrote complete reports but timed out during registry-settings shutdown; process failures are recorded separately. Owner order review, firmware, systemd units, assembly and real-hardware validation remain open. No HomeMy runtime package or source code has been copied. Revision B production remains false.
+Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The onboard Linux lifecycle, one-button customer behavior, coarse LED status, battery monitor, electronic main power path, reverse-current blocking, and initial protection thresholds are recorded as accepted architecture. The HomeMy Power Management Unit (PMU) now has a Revision-A engineering implementation under `hardware/power-management-unit/rev-a`: a hierarchical KiCad schematic, routed four-layer laboratory PCB, exact component BOM, calculations, mechanical reinforcement and prototype manufacturing outputs. Native ERC and DRC now both exit normally with code 0, with zero findings, zero open connections and full schematic parity. Dedicated power rules and the actual filled-copper review cover the high-current paths. The versioned RevA-P1 package is released for bare or populated engineering-prototype ordering only. All nine unselected external positions have frozen PCB interfaces and are due before energization. Supplier acceptance of stackup/press-fit requirements, firmware, systemd units, assembly and real-hardware validation remain open. No HomeMy runtime package or source code has been copied. Revision B production remains false.
 
 ## Goal
 
@@ -58,7 +58,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 ## Next Safe Step
 
 1. Read `hardware/power-management-unit/rev-a/README.md`, its final review evidence and `release.json` for the completed CAD artifact scope and remaining physical gates.
-2. Perform the project-owner review of the schematic, BOM, layout, ERC/DRC reports and process limitation, component data, current-path calculations, and conservative Revision-A assumptions before ordering the prototype. Missing post-build measurements do not block that review.
+2. Use the versioned RevA-P1 order package and obtain supplier acceptance of its stackup, press-fit holes/plating and coupons. Its fabrication/assembly release covers engineering prototypes only; it does not authorize energization or production.
 3. Build and bring up Revision A first with a current-limited supply and no actuators; close all energization gates before applying the battery.
 4. Use Revision A to measure the MOSFET path, shunts, inrush without precharge, DC/DC converters, brake-chopper energy, thermal behavior, arm currents, and fuse/BMS coordination. Feed the evidence into a later Revision-B production layout.
 5. Define and simulate the ESP32 power/lifecycle state machine, button timing, heartbeat, hardware latches, event log, and LED behavior before connecting actuators.
@@ -90,7 +90,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 
 ## Open Decisions
 
-- Revision-A design choices Astra must now close: exact MOSFETs, shunts, wake-latch, ESP32 variant, CAN/ESD, chopper, TVS, eFuse settings, connectors, footprints, configurable timer, and preliminary thermal/current calculations.
+- Revision-A CAD choices are implemented and documented in the RevA-P1 package. Physical component behavior, thermal/current assumptions and external integration remain to be validated.
 - Conservative Revision-A prototype assumptions to document: generous board outline and mounting, connector directions, external converter pinouts, busbar/heat-spreader provisions, and initial test limits.
 - Revision-B measurements: main inrush/no-precharge proof, regenerative energy, 24 V lift-bus behavior, converter capability, per-arm current, connector/cable temperature, full-load thermal behavior, and fuse/BMS/electronic-trip selectivity.
 - Final production mechanics: enclosure, component-height envelope, airflow, service access, busbar geometry, battery enclosure/venting, and chassis heat-spreader interface.

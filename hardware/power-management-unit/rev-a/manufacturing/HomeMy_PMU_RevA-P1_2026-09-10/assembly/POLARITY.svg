@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297"><rect width="420" height="297" fill="white"/><g font-family="Arial,sans-serif" fill="#17232a">
+<text x="10" y="13" font-size="6">Rev A-P1 — polarity / mounting detail</text>
+<text x="10" y="21" font-size="3.5">F.Cu view. Pad coordinates in mm. Details enlarged; body marks checked against manufacturer drawings.</text>
+<rect x="10" y="32" width="97" height="71" rx="2" fill="#f5f6f7" stroke="#ccd1d5" stroke-width="0.3"/><text x="14" y="40" font-size="5">C246</text>
+<circle cx="58.0" cy="62.0" r="3" fill="#d46a59"/><text x="58.0" y="63.0" text-anchor="middle" font-size="3" fill="white">+</text>
+<circle cx="73.0" cy="62.0" r="3" fill="#637c91"/><text x="73.0" y="63.0" text-anchor="middle" font-size="3" fill="white">-</text>
+<text x="14" y="80" font-size="3">1: V5V  (132, 270)</text>
+<text x="14" y="85" font-size="3">2: LOGIC_5V_N  (137, 270)</text>
+<text x="14" y="96" font-size="3">Stripe = minus (pin 2)</text>
+<rect x="112" y="32" width="97" height="71" rx="2" fill="#f5f6f7" stroke="#ccd1d5" stroke-width="0.3"/><text x="116" y="40" font-size="5">C312</text>
+<circle cx="160.0" cy="62.0" r="3" fill="#d46a59"/><text x="160.0" y="63.0" text-anchor="middle" font-size="3" fill="white">+</text>
+<circle cx="145.0" cy="62.0" r="3" fill="#637c91"/><text x="145.0" y="63.0" text-anchor="middle" font-size="3" fill="white">-</text>
+<text x="116" y="80" font-size="3">1: MOTION_BUS_P  (304, 17)</text>
+<text x="116" y="85" font-size="3">2: CHOPPER_N  (299, 17)</text>
+<text x="116" y="96" font-size="3">Stripe = minus (pin 2)</text>
+<rect x="214" y="32" width="97" height="71" rx="2" fill="#f5f6f7" stroke="#ccd1d5" stroke-width="0.3"/><text x="218" y="40" font-size="5">C313</text>
+<circle cx="262.0" cy="62.0" r="3" fill="#d46a59"/><text x="262.0" y="63.0" text-anchor="middle" font-size="3" fill="white">+</text>
+<circle cx="247.0" cy="62.0" r="3" fill="#637c91"/><text x="247.0" y="63.0" text-anchor="middle" font-size="3" fill="white">-</text>
+<text x="218" y="80" font-size="3">1: MOTION_BUS_P  (321, 17)</text>
+<text x="218" y="85" font-size="3">2: CHOPPER_N  (316, 17)</text>
+<text x="218" y="96" font-size="3">Stripe = minus (pin 2)</text>
+<rect x="316" y="32" width="97" height="71" rx="2" fill="#f5f6f7" stroke="#ccd1d5" stroke-width="0.3"/><text x="320" y="40" font-size="5">D60</text>
+<circle cx="364.0" cy="72.19999999999999" r="3" fill="#d46a59"/><text x="364.0" y="73.19999999999999" text-anchor="middle" font-size="3" fill="white">K</text>
+<circle cx="364.0" cy="51.8" r="3" fill="#637c91"/><text x="364.0" y="52.8" text-anchor="middle" font-size="3" fill="white">A</text>
+<text x="320" y="80" font-size="3">1: MOTION_BUS_P  (338, 20.4)</text>
+<text x="320" y="85" font-size="3">2: CHOPPER_N  (338, 13.6)</text>
+<text x="320" y="96" font-size="3">Cathode body band = pin 1 (K)</text>
+<rect x="10" y="109" width="97" height="71" rx="2" fill="#f5f6f7" stroke="#ccd1d5" stroke-width="0.3"/><text x="14" y="117" font-size="5">D61</text>
+<circle cx="47.80000000000007" cy="139.0" r="3" fill="#d46a59"/><text x="47.80000000000007" y="140.0" text-anchor="middle" font-size="3" fill="white">K</text>
+<circle cx="68.19999999999993" cy="139.0" r="3" fill="#637c91"/><text x="68.19999999999993" y="140.0" text-anchor="middle" font-size="3" fill="white">A</text>
+<text x="14" y="157" font-size="3">1: CHOP_DRAIN  (311.6, 47)</text>
+<text x="14" y="162" font-size="3">2: CHOPPER_N  (318.4, 47)</text>
+<text x="14" y="173" font-size="3">Cathode body band = pin 1 (K)</text>
+<rect x="112" y="109" width="97" height="71" rx="2" fill="#f5f6f7" stroke="#ccd1d5" stroke-width="0.3"/><text x="116" y="117" font-size="5">D62</text>
+<circle cx="155.80000000000007" cy="139.0" r="3" fill="#d46a59"/><text x="155.80000000000007" y="140.0" text-anchor="middle" font-size="3" fill="white">K</text>
+<circle cx="164.19999999999993" cy="139.0" r="3" fill="#637c91"/><text x="164.19999999999993" y="140.0" text-anchor="middle" font-size="3" fill="white">A</text>
+<text x="116" y="157" font-size="3">1: CHOP_GATE  (298.6, 26)</text>
+<text x="116" y="162" font-size="3">2: CHOP_GND  (301.4, 26)</text>
+<text x="116" y="173" font-size="3">Cathode body band = pin 1 (K)</text>
+<rect x="214" y="109" width="97" height="71" rx="2" fill="#f5f6f7" stroke="#ccd1d5" stroke-width="0.3"/><text x="218" y="117" font-size="5">D63</text>
+<circle cx="262.0" cy="139.0" r="3" fill="#d46a59"/><text x="262.0" y="140.0" text-anchor="middle" font-size="3" fill="white">K</text>
+<circle cx="246.76000000000005" cy="139.0" r="3" fill="#637c91"/><text x="246.76000000000005" y="140.0" text-anchor="middle" font-size="3" fill="white">A</text>
+<text x="218" y="157" font-size="3">1: MOTION_BUS_P  (331, 42)</text>
+<text x="218" y="162" font-size="3">2: CHOP_DRAIN  (325.92, 42)</text>
+<text x="218" y="173" font-size="3">Pin 1 and live tab = cathode</text>
+<rect x="316" y="109" width="97" height="71" rx="2" fill="#f5f6f7" stroke="#ccd1d5" stroke-width="0.3"/><text x="320" y="117" font-size="5">D64</text>
+<circle cx="360.84999999999997" cy="139.0" r="3" fill="#d46a59"/><text x="360.84999999999997" y="140.0" text-anchor="middle" font-size="3" fill="white">K</text>
+<circle cx="367.15000000000003" cy="139.0" r="3" fill="#637c91"/><text x="367.15000000000003" y="140.0" text-anchor="middle" font-size="3" fill="white">A</text>
+<text x="320" y="157" font-size="3">1: MOTION_BUS_P  (319.95, 56)</text>
+<text x="320" y="162" font-size="3">2: CHOP_10V  (322.05, 56)</text>
+<text x="320" y="173" font-size="3">Cathode body band = pin 1 (K)</text>
+<rect x="10" y="186" width="97" height="71" rx="2" fill="#f5f6f7" stroke="#ccd1d5" stroke-width="0.3"/><text x="14" y="194" font-size="5">D65</text>
+<circle cx="58.0" cy="219.14999999999998" r="3" fill="#d46a59"/><text x="58.0" y="220.14999999999998" text-anchor="middle" font-size="3" fill="white">K</text>
+<circle cx="58.0" cy="212.85000000000002" r="3" fill="#637c91"/><text x="58.0" y="213.85000000000002" text-anchor="middle" font-size="3" fill="white">A</text>
+<text x="14" y="234" font-size="3">1: CHOP_OV_OK  (265, 98.05)</text>
+<text x="14" y="239" font-size="3">2: CHOP_FAULT_LED_K  (265, 95.95)</text>
+<text x="14" y="250" font-size="3">Cathode body band = pin 1 (K)</text>
+<rect x="112" y="186" width="97" height="71" rx="2" fill="#f5f6f7" stroke="#ccd1d5" stroke-width="0.3"/><text x="116" y="194" font-size="5">D66</text>
+<circle cx="160.0" cy="219.14999999999998" r="3" fill="#d46a59"/><text x="160.0" y="220.14999999999998" text-anchor="middle" font-size="3" fill="white">K</text>
+<circle cx="160.0" cy="212.85000000000002" r="3" fill="#637c91"/><text x="160.0" y="213.85000000000002" text-anchor="middle" font-size="3" fill="white">A</text>
+<text x="116" y="234" font-size="3">1: CHOP_THERMAL_OK  (269, 98.05)</text>
+<text x="116" y="239" font-size="3">2: CHOP_FAULT_LED_K  (269, 95.95)</text>
+<text x="116" y="250" font-size="3">Cathode body band = pin 1 (K)</text>
+<rect x="214" y="186" width="97" height="71" rx="2" fill="#f5f6f7" stroke="#ccd1d5" stroke-width="0.3"/><text x="218" y="194" font-size="5">D1</text>
+<circle cx="262.0" cy="224.61" r="3" fill="#d46a59"/><text x="262.0" y="225.61" text-anchor="middle" font-size="3" fill="white">1</text>
+<circle cx="262.0" cy="213.16500000000002" r="3" fill="#637c91"/><text x="262.0" y="214.16500000000002" text-anchor="middle" font-size="3" fill="white">2</text>
+<text x="218" y="234" font-size="3">1: BATT_FUSED_P  (30, 67.87)</text>
+<text x="218" y="239" font-size="3">2: BATT_N  (30, 64.055)</text>
+<text x="218" y="250" font-size="3">Bidirectional TVS; no K/A polarity</text>
+<rect x="316" y="186" width="97" height="71" rx="2" fill="#f5f6f7" stroke="#ccd1d5" stroke-width="0.3"/><text x="320" y="194" font-size="5">D2</text>
+<circle cx="364.0" cy="224.61" r="3" fill="#d46a59"/><text x="364.0" y="225.61" text-anchor="middle" font-size="3" fill="white">1</text>
+<circle cx="364.0" cy="213.16500000000002" r="3" fill="#637c91"/><text x="364.0" y="214.16500000000002" text-anchor="middle" font-size="3" fill="white">2</text>
+<text x="320" y="234" font-size="3">1: SYS_BUS_P  (103, 82.87)</text>
+<text x="320" y="239" font-size="3">2: BATT_N  (103, 79.055)</text>
+<text x="320" y="250" font-size="3">Bidirectional TVS; no K/A polarity</text>
+<text x="10" y="281" font-size="3.3">Q1-Q10 / Q40 / U1 and M5-face directions: ASSEMBLY_ORIENTATION.svg. Connector pinout: CONNECTOR_PINOUT.csv.</text>
+<text x="10" y="289" font-size="3.3">DNP: C244, J13, R243, R244. Engineering prototype – not production qualified. No power applied for assembly inspection.</text></g></svg>

@@ -16,7 +16,7 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 DESIGN = ROOT / 'design'
-STATE = 'engineering_review_not_order_release'
+STATE = 'rev_a_prototype_procurement_data'
 DATE = '2026-09-10'
 READ_SNAPSHOTS = {}
 MECHANICAL_COVERAGE = {}
@@ -394,6 +394,24 @@ def main():
             alternatives=first['alternatives'],order_code_review=unique('order_code_review'),
             supplier_stock_verified=False,stock_status='unverified_at_build',state=STATE))
     ext=external_items(list(source_by_ref.values()),errors)
+    integration=read(DESIGN/'external-integration-gates.json')
+    pending={r['references'][0] for r in ext if r['selection_status'] not in ('exact_part_selected','custom_manufactured_to_project_drawing')}
+    classified={}
+    for stage in ['before_pcb_order','before_energization']:
+        for item in integration[stage]:
+            ref=item['reference']
+            if ref in classified:errors.append('External item classified twice: '+ref)
+            classified[ref]=(stage,item)
+    if set(classified)!=pending or len(pending)!=9:
+        errors.append('External gate classification must cover exactly the nine unresolved rows')
+    for row in ext:
+        ref=row['references'][0]
+        if ref in classified:
+            stage,item=classified[ref]
+            row.update(required_before=stage,pcb_footprint_change_allowed=False,
+                       fixed_interface=item['interface'],closure_evidence=item['closure'])
+        else:
+            row.update(required_before='selected_or_drawing_controlled',pcb_footprint_change_allowed=False)
     # Independent readback totals make loss, duplicate grouping, and DNP leakage visible.
     grouped_refs=[x for row in rows for x in row['references']]
     if len(grouped_refs)!=len(set(grouped_refs)) or set(grouped_refs)!={x['ref'] for x in records}:
@@ -408,6 +426,8 @@ def main():
         dnp_pcb_positions=sum(r['dnp'] for r in records),grouped_pcb_line_count=len(rows),
         excluded_pcb_feature_count=len(excluded),external_bom_line_count=len(ext),
         external_unselected_line_count=sum(r['selection_status'] not in ('exact_part_selected','custom_manufactured_to_project_drawing') for r in ext),
+        external_open_before_pcb_order=len(integration['before_pcb_order']),
+        external_open_before_energization=len(integration['before_energization']),
         external_custom_drawing_line_count=sum(r['selection_status']=='custom_manufactured_to_project_drawing' for r in ext),
         mechanical_interface_coverage=MECHANICAL_COVERAGE,
         validation_passed=not errors,errors=errors,warnings=warnings,
@@ -421,6 +441,7 @@ def main():
     (out/'REV_A_EXTERNAL_BOM.json').write_text(json.dumps(dict(metadata=metadata,lines=ext),indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
     write_csv(out/'REV_A_EXTERNAL_BOM.csv',ext,['references','quantity_positions','quantity_required','unit',
         'mpn','manufacturer','description','dnp','selection_status','lifecycle','source_url','constraints',
+        'required_before','pcb_footprint_change_allowed','fixed_interface','closure_evidence',
         'supplier_stock_verified','stock_status','state'])
     with (out/'REV_A_BOM.csv').open(encoding='utf-8-sig',newline='') as f:
         rr=list(csv.DictReader(f))
