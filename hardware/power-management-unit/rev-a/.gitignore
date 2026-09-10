@@ -2,6 +2,7 @@ __pycache__/
 *.pyc
 *.kicad_prl
 *-backups/
+.history/
 *.lck
 ~*.lck
 # Router recovery history and compiled helper classes are local working data.
