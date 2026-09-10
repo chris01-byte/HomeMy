@@ -1,0 +1,423 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "review_scope": "source_netlist_and_generator_logic_only",
+    "no_PCB_changes": true
+  },
+  "source_sha256": {
+    "design/power-parts.json": "05bd625b801b49ede98912c5122b94acd8e537164fbd9623d2da31b6748472e6",
+    "design/wake-io-parts.json": "08c08665c6eafed23d6a4687534c049f9a2a8410a6238e6ec0a9f408ddc19692",
+    "design/chopper-parts.json": "c64938d23db964524f4d0e46eee4e79d61b19141231ec5e5d4690373fb805e52",
+    "design/integration-parts.json": "4ed1c18cd120f13efbcdbe18b74458d758511598e864bd0caa71c50f2887765d",
+    "scripts/build_schematic.py": "2d9ec7ad20aba0e7c366543ac755feda6caff2fc46f790a9dd8a117127cbc8ac",
+    "scripts/build_integration.py": "b275b78c5c8bae6a2b3a11693be30c7171ca254da454703e73a641e5b50e4601"
+  },
+  "component_count": 430,
+  "checks": [
+    {
+      "check": "unique_references",
+      "pass": true,
+      "detail": 430
+    },
+    {
+      "check": "explicit_DNP_selection",
+      "pass": true,
+      "detail": [
+        "C244",
+        "J13",
+        "R243",
+        "R244"
+      ]
+    },
+    {
+      "check": "aliases_normalized",
+      "pass": true,
+      "detail": "V3V3/V5V only"
+    },
+    {
+      "check": "no_connect_not_real_net",
+      "pass": true,
+      "detail": "No-connect source placeholders converted to null"
+    },
+    {
+      "check": "star_NT1",
+      "pass": true,
+      "detail": [
+        "ARM_L_N",
+        "BATT_N"
+      ]
+    },
+    {
+      "check": "star_NT2",
+      "pass": true,
+      "detail": [
+        "ARM_R_N",
+        "BATT_N"
+      ]
+    },
+    {
+      "check": "star_NT3",
+      "pass": true,
+      "detail": [
+        "DRIVE_N",
+        "BATT_N"
+      ]
+    },
+    {
+      "check": "star_NT4",
+      "pass": true,
+      "detail": [
+        "LIFT_N",
+        "BATT_N"
+      ]
+    },
+    {
+      "check": "star_NT5",
+      "pass": true,
+      "detail": [
+        "PC_N",
+        "BATT_N"
+      ]
+    },
+    {
+      "check": "star_NT6",
+      "pass": true,
+      "detail": [
+        "LOGIC_BUCK_N",
+        "BATT_N"
+      ]
+    },
+    {
+      "check": "star_NT7",
+      "pass": true,
+      "detail": [
+        "CHOPPER_N",
+        "BATT_N"
+      ]
+    },
+    {
+      "check": "star_NT8",
+      "pass": true,
+      "detail": [
+        "LOGIC_5V_N",
+        "BATT_N"
+      ]
+    },
+    {
+      "check": "star_NT9",
+      "pass": true,
+      "detail": [
+        "LOGIC_GND",
+        "BATT_N"
+      ]
+    },
+    {
+      "check": "star_NT10",
+      "pass": true,
+      "detail": [
+        "CHOP_GND",
+        "CHOPPER_N"
+      ]
+    },
+    {
+      "check": "power_flag_set_reviewed",
+      "pass": true,
+      "detail": {
+        "BATT_FUSED_P": "External fused positive bench/battery input at J1",
+        "BATT_N": "External supply return at J2",
+        "BATT_SENSED_P": "BATT_FUSED_P through four-terminal RSH1",
+        "AON_LDO_IN": "BATT_FUSED_P through current-limiting AON input resistor chain R200/R201",
+        "SYS_BUS_P": "Main controlled back-to-back FET power path",
+        "MOTION_BUS_P": "SYS_BUS_P through RSH2 and controlled motion FET path",
+        "V5V": "External regulated five-volt converter input connector",
+        "LOGIC_GND": "Passive star junction NT9 to BATT_N",
+        "CHOP_GND": "NT10 local Kelvin reference then NT7 power star"
+      }
+    },
+    {
+      "check": "flags_have_explicit_source_model",
+      "pass": true,
+      "detail": "Each flag names external source, shunt/FET transfer or intentional ground tie; not a blanket flag on all power_in pins"
+    },
+    {
+      "check": "R216_strong_default_low",
+      "pass": true,
+      "detail": "10k"
+    },
+    {
+      "check": "R217_strong_default_low",
+      "pass": true,
+      "detail": "10k"
+    },
+    {
+      "check": "R237_strong_default_low",
+      "pass": true,
+      "detail": "10k"
+    },
+    {
+      "check": "critical_pin_nets_U1",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U2",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U5",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U11",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U13",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U16",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U18",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U19",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U21",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U23",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U24",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U25",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U27",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U28",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U29",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U50",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U51",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U54",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U55",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U63",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_Q20",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U31",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U32",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U33",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_Q40",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_D63",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U34",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_U35",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_J11",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "critical_pin_nets_J18",
+      "pass": true,
+      "detail": "Matched explicit reviewed net map"
+    },
+    {
+      "check": "U3_latch_mode",
+      "pass": true,
+      "detail": "MODE floating; SHDN passive SYS divider"
+    },
+    {
+      "check": "U4_latch_mode",
+      "pass": true,
+      "detail": "MODE floating; SHDN passive SYS divider"
+    },
+    {
+      "check": "chopper_reference_testpoint",
+      "pass": true,
+      "detail": "Source net CHOP_REF2V5, not CHOP_REF_2V5"
+    },
+    {
+      "check": "LED_bulk_return",
+      "pass": true,
+      "detail": {
+        "1": "V5V",
+        "2": "LOGIC_5V_N"
+      }
+    },
+    {
+      "check": "external_optos_meaningful_ERC",
+      "pass": true,
+      "detail": {
+        "U34": "open_collector",
+        "U35": "open_collector"
+      }
+    },
+    {
+      "check": "motion_static_all_interlocks",
+      "pass": true,
+      "detail": {
+        "cases": 512,
+        "failures": 0,
+        "scope": "Stable-state Boolean check, not propagation timing or physical fail-safety"
+      }
+    }
+  ],
+  "pass_count": 55,
+  "fail_count": 0,
+  "findings": [
+    {
+      "id": "F01",
+      "severity": "high",
+      "status": "corrected_in_sources",
+      "refs": [
+        "R243",
+        "R244",
+        "C244"
+      ],
+      "finding": "Population=DNP was not consumed by generator",
+      "correction": "Explicit own-source dnp booleans and parent loader normalization"
+    },
+    {
+      "id": "F02",
+      "severity": "medium",
+      "status": "corrected_in_sources",
+      "refs": [
+        "TP28"
+      ],
+      "finding": "Absent CHOP_REF_2V5 omitted reference testpoint",
+      "correction": "Integration uses actual CHOP_REF2V5"
+    },
+    {
+      "id": "F03",
+      "severity": "high",
+      "status": "corrected_in_sources",
+      "refs": [
+        "R216",
+        "R217",
+        "R237"
+      ],
+      "finding": "100k default-low did not cover aggregate off-state leakage",
+      "correction": "10k resistors with explicit main-EN leakage bound below0.41V"
+    },
+    {
+      "id": "F04",
+      "severity": "high",
+      "status": "corrected_in_sources",
+      "refs": [
+        "J18",
+        "C246",
+        "NT9"
+      ],
+      "finding": "LED5A return crossed logic star",
+      "correction": "J18.3/C246.2 nowLOGIC_5V_N direct converter return"
+    },
+    {
+      "id": "F05",
+      "severity": "medium",
+      "status": "corrected_in_sources",
+      "refs": [
+        "U34",
+        "U35"
+      ],
+      "finding": "Optocoupler collectors marked passive",
+      "correction": "Collector pin4 open_collector"
+    }
+  ],
+  "leakage_model": {
+    "AON_EN_old_V": 2.7600000000000002,
+    "AON_EN_new_V_with_1pct_R": 0.3036,
+    "LM74930_guaranteed_off_below_V": 0.41,
+    "note": "Summed conservative3x10uA LVC partial-poweroff plusEN200nA/MODE160nA;10k pull-down replaces100k. Reset and motion pull-downs likewise10k."
+  },
+  "not_proven": [
+    "Physical routing and high-current star geometry",
+    "Dynamic propagation/races and partial-power ramps",
+    "Hot SOA and full940uF power-path startup",
+    "Shared-shunt component failure independence",
+    "Hardware timing, EMC and production safety"
+  ]
+}

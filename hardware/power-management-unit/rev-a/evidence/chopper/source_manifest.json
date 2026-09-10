@@ -1,0 +1,111 @@
+[
+  {
+    "file": "tlv1704.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/tlv1704.pdf",
+    "sha256": "b971c8ca9ae7da43d67fa3486f202e6e688d8f5cc4b220268473fc0b4904c42b",
+    "status": "retrieved",
+    "retrieved": "2026-09-10"
+  },
+  {
+    "file": "ref50.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/ref50.pdf",
+    "sha256": "3432cb9cf8c792a56645eb365b8db138a9bf38cee18497aec729238f0455d031",
+    "status": "retrieved",
+    "retrieved": "2026-09-10"
+  },
+  {
+    "file": "tps7a4001.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/tps7a4001.pdf",
+    "sha256": "63478c047e91a341a723bf4549689fb362a0fc9bf91e249db7e931e8b219e8a6",
+    "status": "retrieved",
+    "retrieved": "2026-09-10"
+  },
+  {
+    "file": "ucc27511.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/ucc27511.pdf",
+    "sha256": "781cc451dbb371a4137337a4bdecbe11a9f1ff8979a11e238e97d8a80a287b31",
+    "status": "retrieved",
+    "retrieved": "2026-09-10"
+  },
+  {
+    "file": "ipt015n10n5.pdf",
+    "url": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-ipt015n10n5-datasheet-en.pdf",
+    "status": "failed",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>"
+  },
+  {
+    "file": "rhnh.pdf",
+    "url": "https://www.vishay.com/docs/30201/rhnh.pdf",
+    "sha256": "69cb5a113455f33dec03bf72a2998bac89091365f4e158a36f7529dcc2c68541",
+    "status": "retrieved",
+    "retrieved": "2026-09-10"
+  },
+  {
+    "file": "ntcle100.pdf",
+    "url": "https://www.vishay.com/docs/29049/ntcle100.pdf",
+    "sha256": "f9d6153738198dc705ed681c3b55e70a6571f8fee13a4ed7b2b41e49973cb9c9",
+    "status": "retrieved",
+    "retrieved": "2026-09-10"
+  },
+  {
+    "file": "7461103.pdf",
+    "url": "https://www.we-online.com/components/products/datasheet/7461103.pdf",
+    "sha256": "70f6d91fe87a8b073418e1a0ac1b86448995be8659d938fc79ae2b00990319dd",
+    "status": "retrieved",
+    "retrieved": "2026-09-10"
+  },
+  {
+    "file": "mbr10100.pdf",
+    "url": "https://www.vishay.com/docs/89193/mbr10100.pdf",
+    "sha256": "a8f4f70172efdf6c87051af08b8f2dd3eeba4b60c43e297d66d9b9a7fe2a7da1",
+    "status": "retrieved",
+    "retrieved": "2026-09-10"
+  },
+  {
+    "file": "vos618a.pdf",
+    "url": "https://www.vishay.com/docs/83465/vos618a.pdf",
+    "sha256": "61d948c9edadff66dad1bfc49f8ae17f2258b25ee15af8509d0361e218a9971a",
+    "status": "retrieved",
+    "retrieved": "2026-09-10"
+  },
+  {
+    "file": "2n7002.pdf",
+    "url": "https://assets.nexperia.com/documents/data-sheet/2N7002.pdf",
+    "status": "failed",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "smcj.pdf",
+    "url": "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smcj_datasheet.pdf.pdf",
+    "status": "failed",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "lm339b.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/lm339b.pdf",
+    "sha256": "b8b91e2b545800b8c7e9c7f03cf9185831b2e2674bf1e0bd211b5bf128f8463d",
+    "status": "retrieved",
+    "retrieved": "2026-09-10"
+  },
+  {
+    "file": "tps3808.pdf",
+    "url": "https://www.ti.com/lit/ds/symlink/tps3808.pdf",
+    "sha256": "74d889c0f68af88032f1633c26381817cc03e10d9fd3b4c177a044ad3ed86eed",
+    "status": "retrieved",
+    "retrieved": "2026-09-10"
+  },
+  {
+    "file": "kyc.pdf",
+    "url": "https://www.chemi-con.co.jp/products/relatedfiles/capacitor/catalog/KYCLL-e.PDF",
+    "sha256": "c2d1a1093f11052553e52272388fba42359d9adcf6dd9d2a3f19be120ec1df43",
+    "status": "retrieved",
+    "retrieved": "2026-09-10"
+  },
+  {
+    "file": "tnpw_e3.pdf",
+    "url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+    "sha256": "6f0508c568cb355aaf2accdd33fe3a780d3ea5ef207c4c9a71839a8acadc33a5",
+    "status": "retrieved",
+    "retrieved": "2026-09-10"
+  }
+]

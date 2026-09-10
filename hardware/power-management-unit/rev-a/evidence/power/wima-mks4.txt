@@ -1,0 +1,1148 @@
+PAGE 1
+40
+03.26
+®
+WIMA MKS 4
+Metallized Polyester (PET) Capacitors  
+in PCM 7.5 mm to 52.5 mm. Capacitances from 1000 pF to 220 F.   
+Rated Voltages from 63 VDC to 2000 VDC. 
+ Special Features  Electrical Data
+Capacitance range: 1000 pF to 220 F
+Rated voltages: 63 VDC, 100 VDC,  
+250 VDC, 400 VDC, 630 VDC, 1000 VDC, 
+1500 VDC, 2000 VDC
+Capacitance tolerances: 
+± 20%, ± 10% ± 5%
+Operating temperature range:
+–55° C to +125° C
+Climatic test category:
+55/100/56 in accordance with IEC
+Test voltage: 1.6 Ur, 2 sec.
+Insulation resistance at +20° C:
+Ur Utest C  0.33 F 0.33 F < C  220 F
+63 VDC  50 V  1 x 104 MΩ  3 000 sec (MΩ x F)
+100 VDC 100 V  1.5 x 104 MΩ  5000 sec (MΩ x F)
+250 VDC 100 V  3 x 104 MΩ  10 000 sec (MΩ x F)
+Measuring time: 1 min.
+Dissipation factors at + 20° C: tan 
+ at f C  0.1 F 0.1 F < C  1.0 F C > 1.0 F
+   1 kHz   8 x 10-3   8 x 10-3  10 x 10-3 
+  10 kHz  15 x 10-3  15 x 10-3 – 
+ 100 kHz  30 x 10-3 – –
+Maximum pulse rise time: 
+Capacitance
+pF/F
+max. pulse rise time V/sec
+63 VDC 100 VDC250 VDC400 VDC630 VDC1000 VDC1500 VDC2000 VDC
+1000 ...6800
+0.01 ...0.022
+0.033...0.068
+0.33 ...0.68
+0.1  ...0.22
+1.0  ...2.2  
+3.3  ...6.8  
+10   ...22  
+33   ...68  
+100  ...220
+–
+–
+–
+10
+9
+6
+3
+2.5
+2.5
+2.5
+–
+30
+15
+12
+9
+5
+3
+2.5
+2.5
+2.5
+–
+35
+20
+15
+10
+6
+6
+3
+3
+–
+–
+38
+25
+15
+10
+9
+6
+6
+3
+–
+–
+40
+32
+17
+13
+13
+9
+6
+–
+–
+70
+50
+26
+20
+20
+14
+12
+–
+–
+–
+90
+50
+35
+35
+20
+15
+–
+–
+–
+–
+100
+60
+40
+40
+38
+15
+–
+–
+–
+–
+Test specifications:
+In accordance with IEC 60384-2
+Voltage derating:
+A voltage derating factor of 1.25 % per K
+must be applied from +85° C for DC  
+voltages and from +75° C for AC  
+voltages.
+Reliability:
+Operational life  300 000 hours (+125° C
+permitted for 1000 hours max. distributed
+over the entire operating life) 
+Failure rate  2 fit (0.5 x U r and 40° C)
+Mechanical Tests
+Pull test on pins:
+d  0.8 Ø: 10 N in direction of pins  
+d > 0.8 Ø: 20 N in direction of pins  
+according to IEC 60068-2-21
+Vibration: 6 hours at 10 ... 2000 Hz and
+0.75 mm displacement amplitude or 10 g
+in accordance with IEC 60068-2-6
+Low air density: 1kPa = 10 mbar in 
+accordance with IEC 60068-2-13
+Bump test: 4000 bumps at 390 m/sec 2  
+in accordance with IEC 60068-2-29
+Packing
+Available taped and reeled up to and 
+including case size 15 x 26 x 31.5 / 
+PCM 27.5 mm.
+Detailed taping information and graphs  
+at the end of the catalogue.
+For further details and graphs please  
+refer to Technical Information.
+O High volume/capacitance ratio 
+O Self-healing  
+O AEC-Q200 qualified 
+O According to RoHS 2015/863/EU
+Typical Applications
+For general DC-applications e.g. 
+O By-pass 
+O Blocking 
+O Coupling and decoupling 
+O Smoothing  
+O Timing
+Construction
+Dielectric:
+Polyethylene-terephthalate (PET) film
+Capacitor electrodes:
+Vacuum-deposited
+Internal construction:
+MKS4 :4 0V AC,6 3V AC,1 60 VAC,200VAC
+MKS4 :4 00 VAC
+Plastic film
+Vacuum-deposited
+electrode
+Metal contact layer
+(schoopage)
+Terminating wire
+Plastic film
+Vacuum-deposited
+electrode
+Metal contact layer
+(schoopage)
+Terminating wire
+Encapsulation:
+Solvent-resistant, flame-retardant plastic 
+case with epoxy resin seal, UL 94 V-0
+Terminations:
+Tinned wire.
+Marking:
+Colour: Red. Marking: Black. 
+PAGE 2
+41
+03.26
+Continuation 
+ 
+General Data
+WIMA FKP 4
+®
+WIMA MKS 4
+Capacitance 63 VDC/40 VAC* 100 VDC/63 VAC*
+W H L PCM** Part number W H L PCM** Part number
+0.01  F 2.5 7 10    7.5 MKS4D021002A _ _ _ _ _ _
+4 9 13 10 MKS4D021003C _ _ _ _ _ _
+0.015  „ 2.5 7 10    7.5 MKS4D021502A _ _ _ _ _ _
+4 9 13 10 MKS4D021503C _ _ _ _ _ _
+0.022  „ 2.5 7 10    7.5 MKS4D022202A _ _ _ _ _ _
+4 9 13 10 MKS4D022203C _ _ _ _ _ _
+0.033  „ 2.5 7 10    7.5 MKS4D023302A _ _ _ _ _ _
+4 9 13 10 MKS4D023303C _ _ _ _ _ _
+0.047  „ 2.5 7 10    7.5 MKS4D024702A _ _ _ _ _ _
+4 9 13 10 MKS4D024703C _ _ _ _ _ _
+0.068  „ 2.5 7 10    7.5 MKS4D026802A _ _ _ _ _ _
+4 9 13 10 MKS4D026803C _ _ _ _ _ _
+0.1  F 2.5 7 10    7.5 MKS4C031002A_ _ _ _ _ _ 2.5 7 10    7.5 MKS4D031002A _ _ _ _ _ _
+4 9 13 10 MKS4C031003C_ _ _ _ _ _ 4 9 13 10 MKS4D031003C _ _ _ _ _ _
+0.15  „ 2.5 7 10    7.5 MKS4C031502A_ _ _ _ _ _ 3 8.5 10    7.5 MKS4D031502B _ _ _ _ _ _
+4 9 13 10 MKS4C031503C_ _ _ _ _ _ 4 9 13 10 MKS4D031503C _ _ _ _ _ _
+0.22  „ 3 8.5 10    7.5 MKS4C032202B_ _ _ _ _ _ 3 8.5 10    7.5 MKS4D032202B _ _ _ _ _ _
+4 9 13 10 MKS4C032203C_ _ _ _ _ _ 4 9 13 10 MKS4D032203C _ _ _ _ _ _
+0.33  „ 4 9 10    7.5 MKS4C033302C_ _ _ _ _ _ 4 9 10    7.5 MKS4D033302C _ _ _ _ _ _
+4 9 13 10 MKS4C033303C_ _ _ _ _ _ 4 9 13 10 MKS4D033303C _ _ _ _ _ _
+0.47  „ 4 9 10    7.5 MKS4C034702C_ _ _ _ _ _ 4.5 9.5 10.3    7.5 MKS4D034702D _ _ _ _ _ _
+4 9 13 10 MKS4C034703C_ _ _ _ _ _ 4 9 13 10 MKS4D034703C _ _ _ _ _ _
+0.68  " 5 10.5 10.3    7.5 MKS4C036802E_ _ _ _ _ _ 5 10.5 10.3    7.5 MKS4D036802E _ _ _ _ _ _
+4 9 13 10 MKS4C036803C_ _ _ _ _ _ 4 9 13 10 MKS4D036803C _ _ _ _ _ _
+1.0  F 5 10.5 10.3    7.5 MKS4C041002E_ _ _ _ _ _ 5.7 12.5 10.3    7.5 MKS4D041002F _ _ _ _ _ _
+4 9 13 10 MKS4C041003C_ _ _ _ _ _ 5 11 13 10 MKS4D041003F _ _ _ _ _ _
+1.5  „ 5.7 12.5 10.3    7.5 MKS4C041502F_ _ _ _ _ _ 6 12 13 10 MKS4D041503G _ _ _ _ _ _
+5 11 13 10 MKS4C041503F_ _ _ _ _ _ 7 14 18 15 MKS4D041504D _ _ _ _ _ _
+2.2  „ 5 11 13 10 MKS4C042203F_ _ _ _ _ _ 8 15 18 15 MKS4D042204F _ _ _ _ _ _
+6 12.5 18 15 MKS4C042204C_ _ _ _ _ _ 6 15 26.5 22.5 MKS4D042205B _ _ _ _ _ _
+3.3  „ 6 12 13 10 MKS4C043303G_ _ _ _ _ _ 9 16 18 15 MKS4D043304J _ _ _ _ _ _
+7 14 18 15 MKS4C043304D_ _ _ _ _ _ 7 16.5 26.5 22.5 MKS4D043305D _ _ _ _ _ _
+4.7  „ 7 14 18 15 MKS4C044704D_ _ _ _ _ _ 10.5 19 26.5 22.5 MKS4D044705G _ _ _ _ _ _
+6 15 26.5 22.5 MKS4C044705B_ _ _ _ _ _ 9 19 31.5 27.5 MKS4D044706A _ _ _ _ _ _
+6.8  „ 8 15 18 15 MKS4C046804F_ _ _ _ _ _ 10.5 19 26.5 22.5 MKS4D046805G _ _ _ _ _ _
+7 16.5 26.5 22.5 MKS4C046805D_ _ _ _ _ _ 11 21 31.5 27.5 MKS4D046806B _ _ _ _ _ _
+10  F 9 16 18 15 MKS4C051004J_ _ _ _ _ _ 11 21 31.5 27.5 MKS4D051006B _ _ _ _ _ _
+8.5 18.5 26.5 22.5 MKS4C051005F_ _ _ _ _ _
+15  „ 11 21 26.5 22.5 MKS4C051505I_ _ _ _ _ _ 13 24 31.5 27.5 MKS4D051506D _ _ _ _ _ _
+11 21 31.5 27.5 MKS4C051506B_ _ _ _ _ _
+22  „ 11 21 31.5 27.5 MKS4C052206B_ _ _ _ _ _ 13 24 31.5 27.5 MKS4D052206D _ _ _ _ _ _
+33  „ 13 24 31.5 27.5 MKS4C053306D_ _ _ _ _ _ 17 29 31.5 27.5 MKS4D053306G _ _ _ _ _ _
+13 24 41.5 37.5 MKS4D053307C _ _ _ _ _ _
+47  „ 15 26 31.5 27.5 MKS4C054706F_ _ _ _ _ _ 17 34.5 31.5 27.5 MKS4D054706I _ _ _ _ _ _ _
+13 24 41.5 37.5 MKS4C054707C_ _ _ _ _ _ 17 29 41.5 37.5 MKS4D054707E _ _ _ _ _ _
+68  „ 17 34.5 31.5 27.5 MKS4C056806I_ _ _ _ _ _ 20 39.5 31.5 27.5 MKS4D056806J _ _ _ _ _ _
+15 26 41.5 37.5 MKS4C056807D_ _ _ _ _ _ 19 32 41.5 37.5 MKS4D056807F _ _ _ _ _ _
+100  F 20 39.5 31.5 27.5 MKS4C061006J_ _ _ _ _ _ 24 45.5 41.5 37.5 MKS4D061007H _ _ _ _ _ _
+19 32 41.5 37.5 MKS4C061007F_ _ _ _ _ _
+150  „ 20 39.5 41.5 37.5 MKS4C061507G_ _ _ _ _ _
+220  „ 31 46 41.5 37.5 MKS4C062207I_ _ _ _ _ _
+* AC voltages:  f   50 Hz; 1.4 x Urms + UDC T  Ur
+         New box sizes.
+** PCM = printed circuit module = pin spacing
+Dims. in mm.
+Rights reserved to amend design data without prior notification.  
+Continuation page 42
+PAGE 3
+42
+03.26
+WIMA FKP 4
+Continuation 
+ 
+General Data
+®
+Capacitance 250 VDC/160 VAC* 400 VDC/200 VAC*
+W H L PCM** Part number W H L PCM** Part number
+0.01  F 3 8.5 10    7.5 MKS4F021002B _ _ _ _ _ _ 3 8.5 10    7.5 MKS4G021002B_ _ _ _ _ _
+4 9 13 10 MKS4F021003C _ _ _ _ _ _ 4 9 13 10 MKS4G021003C_ _ _ _ _ _
+0.015  „ 3 8.5 10    7.5 MKS4F021502B _ _ _ _ _ _ 3 8.5 10    7.5 MKS4G021502B_ _ _ _ _ _
+4 9 13 10 MKS4F021503C _ _ _ _ _ _ 4 9 13 10 MKS4G021503C_ _ _ _ _ _
+0.022  „ 3 8.5 10    7.5 MKS4F022202B _ _ _ _ _ _ 4 9 10    7.5 MKS4G022202C_ _ _ _ _ _
+4 9 13 10 MKS4F022203C _ _ _ _ _ _ 4 9 13 10 MKS4G022203C_ _ _ _ _ _
+0.033  „ 3 8.5 10    7.5 MKS4F023302B _ _ _ _ _ _ 4 9 10    7.5 MKS4G023302C_ _ _ _ _ _
+4 9 13 10 MKS4F023303C _ _ _ _ _ _ 4 9 13 10 MKS4G023303C_ _ _ _ _ _
+0.047  „ 3 8.5 10    7.5 MKS4F024702B _ _ _ _ _ _ 5 10.5 10.3    7.5 MKS4G024702E_ _ _ _ _ _
+4 9 13 10 MKS4F024703C _ _ _ _ _ _ 4 9 13 10 MKS4G024703C_ _ _ _ _ _
+0.068  „ 4 9 10    7.5 MKS4F026802C _ _ _ _ _ _ 5 10.5 10.3    7.5 MKS4G026802E_ _ _ _ _ _
+4 9 13 10 MKS4F026803C _ _ _ _ _ _ 4 9 13 10 MKS4G026803C_ _ _ _ _ _
+0.1  F 4 9 10    7.5 MKS4F031002C _ _ _ _ _ _ 5 10.5 10.3    7.5 MKS4G031002E_ _ _ _ _ _
+4 9 13 10 MKS4F031003C _ _ _ _ _ _ 5 11 13 10 MKS4G031003F_ _ _ _ _ _
+0.15  „ 5 10.5 10.3    7.5 MKS4F031502E _ _ _ _ _ _ 5.7 12.5 10.3    7.5 MKS4G031502F_ _ _ _ _ _
+4 9 13 10 MKS4F031503C _ _ _ _ _ _ 6 12 13 10 MKS4G031503G_ _ _ _ _ _
+0.22  „ 5 10.5 10.3    7.5 MKS4F032202E _ _ _ _ _ _ 6 12 13 10 MKS4G032203G_ _ _ _ _ _
+5 11 13 10 MKS4F032203F _ _ _ _ _ _ 6 12.5 18 15 MKS4G032204C_ _ _ _ _ _
+0.33  „ 5.7 12.5 10.3    7.5 MKS4F033302F _ _ _ _ _ _ 8 15 18 15 MKS4G033304F_ _ _ _ _ _
+5 11 13 10 MKS4F033303F _ _ _ _ _ _
+0.47  „ 6 12 13 10 MKS4F034703G _ _ _ _ _ _ 8 15 18 15 MKS4G034704F_ _ _ _ _ _
+6 12.5 18 15 MKS4F034704C _ _ _ _ _ _ 6 15 26.5 22.5 MKS4G034705B_ _ _ _ _ _
+0.68  " 7 14 18 15 MKS4F036804D _ _ _ _ _ _ 7 16.5 26.5 22.5 MKS4G036805D_ _ _ _ _ _
+1.0  F 8 15 18 15 MKS4F041004F _ _ _ _ _ _ 10.5 19 26.5 22.5 MKS4G041005G_ _ _ _ _ _
+6 15 26.5 22.5 MKS4F041005B _ _ _ _ _ _ 11 21 31.5 27.5 MKS4G041006B_ _ _ _ _ _
+1.5  „ 9 16 18 15 MKS4F041504J _ _ _ _ _ _ 11 21 26.5 22.5 MKS4G041505I_ _ _ _ _ _
+7 16.5 26.5 22.5 MKS4F041505D _ _ _ _ _ _ 11 21 31.5 27.5 MKS4G041506B_ _ _ _ _ _
+2.2  „ 10.5 19 26.5 22.5 MKS4F042205G _ _ _ _ _ _ 11 21 31.5 27.5 MKS4G042206B_ _ _ _ _ _
+9 19 31.5 27.5 MKS4F042206A _ _ _ _ _ _
+3.3  „ 11 21 26.5 22.5 MKS4F043305I _ _ _ _ _ _ 13 24 31.5 27.5 MKS4G043306D_ _ _ _ _ _
+11 21 31.5 27.5 MKS4F043306B _ _ _ _ _ _
+4.7  „ 11 21 31.5 27.5 MKS4F044706B _ _ _ _ _ _ 17 29 31.5 27.5 MKS4G044706G_ _ _ _ _ _
+6.8  „ 13 24 31.5 27.5 MKS4F046806D _ _ _ _ _ _ 17 34.5 31.5 27.5 MKS4G046806I_ _ _ _ _ _
+15 26 41.5 37.5 MKS4G046807D_ _ _ _ _ _
+10  F 17 29 31.5 27.5 MKS4F051006G _ _ _ _ _ _ 19 32 41.5 37.5 MKS4G051007F_ _ _ _ _ _
+15 26 41.5 37.5 MKS4F051007D _ _ _ _ _ _
+15  „ 17 34.5 31.5 27.5 MKS4F051506I _ _ _ _ _ _ 20 39.5 41.5 37.5 MKS4G051507G_ _ _ _ _ _
+17 29 41.5 37.5 MKS4F051507E _ _ _ _ _ _
+22  „ 20 39.5 41.5 37.5 MKS4F052207G _ _ _ _ _ _ 31 46 41.5 37.5 MKS4G052207I_ _ _ _ _ _
+33  „ 24 45.5 41.5 37.5 MKS4F053307H _ _ _ _ _ _ 35 50 41.5 37.5 MKS4G053307J_ _ _ _ _ _
+47  „ 31 46 41.5 37.5 MKS4F054707I _ _ _ _ _ _
+* AC voltage:  f = 50 Hz; 1.4 x Urms + UDC  Ur
+** PCM = printed circuit module = pin spacing  
+Dims. in mm.  
+Rights reserved to amend design data without prior notification. 
+WIMA MKS 4
+Continuation page 43
+ Part number completion:
+ Version code:  2-pin = 00 
+  4-pin = D4 
+ Tolerance: 20 %  = M 
+  10 % = K 
+   5 %  = J 
+ Packing: bulk = S 
+ Pin length: 6-2 = SD
+ Taped version see page 133
+PAGE 4
+43
+03.26
+Continuation 
+ 
+General Data
+WIMA FKP 4
+®
+Capacitance 630 VDC/400 VAC* 1000 VDC/400 VAC *
+W H L PCM** Part number W H L PCM** Part number
+1000  pF 3 8.5 10  7.5 MKS4O111002B_ _ _ _ _ _
+4 9 13 10 MKS4O111003C_ _ _ _ _ _
+1500  „ 3 8.5 10  7.5 MKS4O111502B_ _ _ _ _ _
+4 9 13 10 MKS4O111503C_ _ _ _ _ _
+2200  „ 3 8.5 10  7.5 MKS4O112202B_ _ _ _ _ _
+4 9 13 10 MKS4O112203C_ _ _ _ _ _
+3300  „ 4 9 10  7.5 MKS4O113302C_ _ _ _ _ _
+4 9 13 10 MKS4O113303C_ _ _ _ _ _
+4700  „ 4 9 10  7.5 MKS4O114702C_ _ _ _ _ _
+4 9 13 10 MKS4O114703C_ _ _ _ _ _
+6800  „ 4.5 9.5 10.3  7.5 MKS4O116802D_ _ _ _ _ _
+4 9 13 10 MKS4O116803C_ _ _ _ _ _
+0.01   F 3 8.5 10  7.5* MKS4J021002B_ _ _ _ _ _ 5 10.5 10.3  7.5 MKS4O121002E_ _ _ _ _ _
+4 9 13 10 MKS4J021003C_ _ _ _ _ _ 5 11 13 10 MKS4O121003F_ _ _ _ _ _
+0.015 „ 4 9 10  7.5* MKS4J021502C_ _ _ _ _ _ 5.7 12.5 10.3  7.5 MKS4O121502F_ _ _ _ _ _
+4 9 13 10 MKS4J021503C_ _ _ _ _ _ 6 12 13 10 MKS4O121503G_ _ _ _ _ _
+0.022 „ 4.5 9.5 10.3  7.5* MKS4J022202D_ _ _ _ _ _ 5 11 18 15 MKS4O122204B_ _ _ _ _ _
+4 9 13 10 MKS4J022203C_ _ _ _ _ _
+0.033 „ 5 10.5 10.3  7.5* MKS4J023302E_ _ _ _ _ _ 6 12.5 18 15 MKS4O123304C_ _ _ _ _ _
+5 11 13 10 MKS4J023303F_ _ _ _ _ _ 6 15 26.5 22.5 MKS4O123305B_ _ _ _ _ _
+0.047 „ 5.7 12.5 10.3  7.5* MKS4J024702F_ _ _ _ _ _ 7 14 18 15 MKS4O124704D_ _ _ _ _ _
+6 12 13 10 MKS4J024703G_ _ _ _ _ _ 6 15 26.5 22.5 MKS4O124705B_ _ _ _ _ _
+0.068 „ 6 12 13 10 MKS4J026803G_ _ _ _ _ _ 8 15 18 15 MKS4O126804F_ _ _ _ _ _
+5 11 18 15 MKS4J026804B_ _ _ _ _ _ 6 15 26.5 22.5 MKS4O126805B_ _ _ _ _ _
+0.1     F 6 12.5 18 15 MKS4J031004C_ _ _ _ _ _ 9 16 18 15 MKS4O131004J_ _ _ _ _ _
+6 15 26.5 22.5 MKS4J031005B_ _ _ _ _ _ 7 16.5 26.5 22.5 MKS4O131005D_ _ _ _ _ _
+0.15   „ 7 14 18 15 MKS4J031504D_ _ _ _ _ _ 8.5 18.5 26.5 22.5 MKS4O131505F_ _ _ _ _ _
+6 15 26.5 22.5 MKS4J031505B_ _ _ _ _ _
+0.22   „ 8 15 18 15 MKS4J032204F_ _ _ _ _ _ 10.5 19 26.5 22.5 MKS4O132205G_ _ _ _ _ _
+6 15 26.5 22.5 MKS4J032205B_ _ _ _ _ _
+0.33   „ 7 16.5 26.5 22.5 MKS4J033305D_ _ _ _ _ _ 11 21 26.5 22.5 MKS4O133305I_ _ _ _ _ _
+9 19 31.5 27.5 MKS4J033306A_ _ _ _ _ _ 11 21 31.5 27.5 MKS4O133306B_ _ _ _ _ _
+0.47   „ 10.5 19 26.5 22.5 MKS4J034705G_ _ _ _ _ _ 13 24 31.5 27.5 MKS4O134706D_ _ _ _ _ _
+ 9 19 31.5 27.5 MKS4J034706A_ _ _ _ _ _
+0.68   „ 11 21 26.5 22.5 MKS4J036805I_ _ _ _ _ _ 15 26 31.5 27.5 MKS4O136806F_ _ _ _ _ _
+11 21 31.5 27.5 MKS4J036806B_ _ _ _ _ _
+1.0     F 11 21 31.5 27.5 MKS4J041006B_ _ _ _ _ _ 17 29 31.5 27.5 MKS4O141006G_ _ _ _ _ _
+17 29 41.5 37.5 MKS4O141007E_ _ _ _ _ _
+1.5   „ 15 26 31.5 27.5 MKS4J041506F_ _ _ _ _ _ 19 32 41.5 37.5 MKS4O141507F_ _ _ _ _ _
+2.2   „ 17 34.5 31.5 27.5 MKS4J042206I_ _ _ _ _ _ 20 39.5 41.5 37.5 MKS4O142207G_ _ _ _ _ _
+15 26 41.5 37.5 MKS4J042207D_ _ _ _ _ _
+3.3   „ 20 39.5 31.5 27.5 MKS4J043306J_ _ _ _ _ _ 24 45.5 41.5 37.5 MKS4O143307H_ _ _ _ _ _
+19 32 41.5 37.5 MKS4J043307F_ _ _ _ _ _
+4.7   „ 20 39.5 41.5 37.5 MKS4J044707G_ _ _ _ _ _ 35 50 41.5 37.5 MKS4O144707J_ _ _ _ _ _
+6.8   „ 24 45.5 41.5 37.5 MKS4J046807H_ _ _ _ _ _ 40 55 41.5 37.5 MKS4O146807K_ _ _ _ _ _
+35 50 57 52.5 MKS4O146809F_ _ _ _ _ _
+10  F 35 50 41.5 37.5 MKS4J051007J_ _ _ _ _ _
+15  „ 40 55 41.5 37.5 MKS4J051507K_ _ _ _ _ _
+* AC voltage:  f = 50 Hz; 1.4 x Urms + UDC  Ur
+** PCM = printed circuit module = pin spacing
+* Admissible AC voltage 250 VAC max.
+Dims. in mm.  
+Rights reserved to amend design data without prior notification. 
+ Part number completion:
+ Version code:  2-pin = 00 
+  4-pin = D4 
+ Tolerance: 20 %  = M 
+  10 % = K 
+   5 %  = J 
+ Packing: bulk = S 
+ Pin length: 6-2 = SD
+ Taped version see page 133
+WIMA MKS 4
+Continuation page 44
+PAGE 5
+44
+03.26
+WIMA FKP 4
+Continuation 
+ 
+General Data
+®
+Capacitance 1500 VDC/400 VAC * 2000 VDC/400 VAC *
+W H L PCM** Part number W H L PCM** Part number
+1000  pF 4 9 13 10 MKS4S011003C_ _ _ _ _ _ 4 9 13 10 MKS4U011003C_ _ _ _ _ _
+1500  „ 4 9 13 10 MKS4S011503C_ _ _ _ _ _ 4 9 13 10 MKS4U011503C_ _ _ _ _ _
+2200  „ 4 9 13 10 MKS4S012203C_ _ _ _ _ _ 5 11 13 10 MKS4U012203F_ _ _ _ _ _
+3300  „ 4 9 13 10 MKS4S013303C_ _ _ _ _ _ 6 12 13 10 MKS4U013303G_ _ _ _ _ _
+5 11 18 15 MKS4U013304B_ _ _ _ _ _
+4700  „ 4 9 13 10 MKS4S014703C_ _ _ _ _ _ 5 11 18 15 MKS4U014704B_ _ _ _ _ _
+5 11 18 15 MKS4S014704B_ _ _ _ _ _
+6800  „ 5 11 13 10 MKS4S016803F_ _ _ _ _ _ 6 12.5 18 15 MKS4U016804C_ _ _ _ _ _
+5 11 18 15 MKS4S016804B_ _ _ _ _ _
+0.01   F 6 12 13 10 MKS4S021003G_ _ _ _ _ _ 7 14 18 15 MKS4U021004D_ _ _ _ _ _
+5 11 18 15 MKS4S021004B_ _ _ _ _ _ 6 15 26.5 22.5 MKS4U021005B_ _ _ _ _ _
+0.015 „ 6 12.5 18 15 MKS4S021504C_ _ _ _ _ _ 6 15 26.5 22.5 MKS4U021505B_ _ _ _ _ _
+0.022 „ 7 14 18 15 MKS4S022204D_ _ _ _ _ _ 7 16.5 26.5 22.5 MKS4U022205D_ _ _ _ _ _
+6 15 26.5 22.5 MKS4S022205B_ _ _ _ _ _
+0.033 „ 8 15 18 15 MKS4S023304F_ _ _ _ _ _ 10.5 19 26.5 22.5 MKS4U023305G_ _ _ _ _ _
+6 15 26.5 22.5 MKS4S023305B_ _ _ _ _ _
+0.047 „ 7 16.5 26.5 22.5 MKS4S024705D_ _ _ _ _ _ 11 21 26.5 22.5 MKS4U024705I_ _ _ _ _ _
+11 21 31.5 27.5 MKS4U024706B_ _ _ _ _ _
+0.068 „ 8.5 18.5 26.5 22.5 MKS4S026805F_ _ _ _ _ _ 11 21 31.5 27.5 MKS4U026806B_ _ _ _ _ _
+0.1    F 10.5 19 26.5 22.5 MKS4S031005G_ _ _ _ _ _ 13 24 31.5 27.5 MKS4U031006D_ _ _ _ _ _
+9 19 31.5 27.5 MKS4S031006A_ _ _ _ _ _
+0.15   „ 11 21 31.5 27.5 MKS4S031506B_ _ _ _ _ _ 17 29 31.5 27.5 MKS4U031506G_ _ _ _ _ _
+13 24 41.5 37.5 MKS4U031507C_ _ _ _ _ _
+0.22   „ 13 24 31.5 27.5 MKS4S032206D_ _ _ _ _ _ 17 29 41.5 37.5 MKS4U032207E_ _ _ _ _ _
+0.33   „ 17 34.5 31.5 27.5 MKS4S033306I_ _ _ _ _ _ 20 39.5 41.5 37.5 MKS4U033307G_ _ _ _ _ _
+17 29 41.5 37.5 MKS4S033307E_ _ _ _ _ _
+0.47   „ 20 39.5 31.5 27.5 MKS4S034706J_ _ _ _ _ _ 24 45.5 41.5 37.5 MKS4U034707H_ _ _ _ _ _
+17 29 41.5 37.5 MKS4S034707E_ _ _ _ _ _
+0.68   „ 20 39.5 41.5 37.5 MKS4S036807G_ _ _ _ _ _ 31 46 41.5 37.5 MKS4U036807I_ _ _ _ _ _
+1.0   F 24 45.5 41.5 37.5 MKS4S041007H_ _ _ _ _ _ 40 55 41.5 37.5 MKS4U041007K_ _ _ _ _ _
+25 45 57 52.5 MKS4U041009D_ _ _ _ _ _
+1.5   „ 31 46 41.5 37.5 MKS4S041507I_ _ _ _ _ _
+2.2   „ 35 50 41.5 37.5 MKS4S042207J_ _ _ _ _ _
+35 50 57 52.5 MKS4S042209F_ _ _ _ _ _
+* AC voltage: 
+ f = 50 Hz; 1.4 x Urms + UDC   Ur
+** PCM = printed circuit module = pin spacing
+Dims. in mm.
+Rights reserved to amend design data without prior notification.  
+ Ø d PCM W
+ 0.5 7.5  3 
+ 0.6 7.5  4 
+ 0.6 10 
+ 0.8 15 - 27.5 
+ 1.0 37.5
+pin
+Continuation page 45
+pinpin
+c c
+ W PCM b Ø d c
+ 17 37.5 10   1.0 0.4 
+ 19 37.5 10   1.0 0.4 
+ 20 37.5 12.5 1.0 0.4 
+ 24 37.5 12.5 1.0 0.4 
+ 28 37.5 10   1.0 0.4 
+ 31 37.5 20   1.0 0.4 
+ 35 37.5 20   1.0 0.4 
+ 40 37.5 20   1.0 0.4 
+ 25 52.5 12.5 1.2 0.8 
+ 35 52.5 20   1.2 0.8
+WIMA MKS 4
+ Part number completion:
+ Version code:  2-pin = 00 
+  4-pin = D4 
+ Tolerance: 20 %  = M 
+  10 % = K 
+   5 %  = J 
+ Packing: bulk = S 
+ Pin length: 6-2 = SD
+ Taped version see page 133
+PAGE 6
+45
+03.26
+WIMA FKP 4
+®
+Permissible AC voltage in relation to frequency  
+at 10° C internal temperature rise (general guide).
+10 10 10
+f/Hz
+6 35 7 78
+7
+5
+3
+7
+5
+3
+10
+1
+0.1
+0.01
+Z
+/c83
+--
+--
+.
+--
+.--
+--
+1500
+pF0 01 µ
+F
+0015
+µF
+0.047
+µF0.33
+µF
+PCM 10
+10 10
+f/Hz
+5 35 73 5767 810 10
+7
+5
+3
+7
+5
+3
+10
+1
+0.1
+0.01
+Z
+/c83
+PCM 15
+----
+--
+--
+--
+3300
+pF
+4700
+pF
+0.068
+µF0.33
+µF
+10
+µF
+10 10 10
+f/Hz
+5 35 7 67
+7
+5
+3
+7
+5
+3
+1
+0.1
+0.01
+0.001
+Z
+/c83
+--
+--
+.--
+.--
+.
+0.1 µF
+0 22 µF
+0 47 µF
+1 5
+µF
+PCM 22.5
+10 10 10
+f/Hz
+5 57 67
+7
+5
+3
+7
+5
+3
+1
+0.1
+0.01
+0.001
+Z
+/c83
+--
+--
+--
+.--
+--
+0.1
+µF0.22
+µF0 68 µ
+F2.2
+µF
+47
+µF
+PCM 27.5
+10 10 10
+f/Hz
+5 35 7 67
+7
+5
+3
+7
+5
+3
+1
+0.1
+0.01
+0.001
+Z
+/c83
+PCM 37.5
+--
+--
+----
+0.47
+µF
+3.3
+µF10
+µF22
+µF
+10 10 10
+f/Hz
+6 35 7 78
+7
+5
+3
+7
+5
+3
+10
+1
+0.1
+0.01
+Z
+/c83
+------
+--
+0.015
+µF
+0.022
+µF
+0.047
+µF0.68
+µF
+PCM 7.5
+Impedance change with frequency (general guide).
+Continuation 
+ 
+WIMA MKS 4
+1000 VDC
+1500 VDC
+2000 VDC
+f
+Hz
+10 25 10 25 10 25 1023 45
+5
+2
+5
+2
+400
+10
+10
+2
+1
+U
+V
+rms
+1.0 µF
+2.2 µF
+3.3 µF
+0.047
+µF 0.022
+µF
+0.1 µF
+4700
+pF
+2200
+pF
+1000
+pF
+0.22
+µF
+0.47
+µF
+0.01
+µF
+63 VDC
+f
+Hz
+10 25 10 25 10 25 1023 45
+5
+2
+10
+5
+2
+1
+40
+U
+V
+rms
+2.2
+µF/4.
+7 µF
+10µF
+22µF
+47µF
+100
+µF
+150
+µF
+220 µF
+0.22
+µF
+0.47
+µF
+0.1 µF1.0
+µF
+PAGE 7
+14
+03.26
+®
+Recommendation for Processing  
+and Application of 
+Through-Hole Capacitors 
+WIMA Quality and Environmental Philosophy
+ISO 9001:2015 Certification
+ISO 9001:2015 is an international basic 
+standard of quality assurance systems 
+for all branches of industry. The appro-
+val according to ISO 9001:2015 of 
+our factories certifies that organisation, 
+equipment and monitoring of quality 
+assurance in our factories correspond to 
+internationally recognized standards.
+WIMA WPCS
+The WIMA Process Control System (WPCS)
+is a quality surveillance and optimization 
+system developed by WIMA. WPCS is a 
+major part of the quality-oriented WIMA 
+production. Points of application during 
+production process:
+! incoming material inspection 
+! metallization 
+! film inspection 
+! schoopage 
+! pre-healing 
+! pin attachment 
+! cast resin preparation/encapsu- 
+ lation 
+! 100% final inspection
+! Testing as per customer require-
+ ments 
+ 
+WIMA Environmental Policy
+All WIMA capacitors, irrespective of  
+whether through-hole devices or SMD,  
+are made of environmentally friendly  
+materials. Neither during manufacture  
+nor in the product itself any toxic sub -
+stances are used, e.g.
+– Lead   – PBB/PBDE  
+– PCB   – Arsenic 
+– CFC   – Cadmium  
+– Hydrocarbon chloride – Mercury 
+– Chromium 6+  – etc.
+We merely use pure, recyclable materials 
+for packing our components, such as: 
+! carton 
+! cardboard 
+! adhesive tape made of paper 
+! polystyrene 
+We almost completely refrain from using 
+packing materials such as: 
+! adhesive tapes made of plastic 
+! metal clips 
+ 
+ 
+ 
+ 
+RoHS Compliance
+According to the RoHS Directive 2015/863/EU
+as amended from time to time certain 
+hazardous substances like e.g. lead, cadmium,
+mercury must not be used any longer in 
+electronic equipment as of July 1st, 2006. 
+For the sake of the environment WIMA has 
+re-fraind from using such substances since 
+years already.
+WIMA capacitors are lead free
+in accordance with RoHS 2015/863/EU
+WIMA Kondensatoren sind bleifrei
+konform RoHS 2015/863/EU
+Tape for lead-free WIMA capacitors
+DIN EN ISO 14001:2004
+WIMA’s environmental management has 
+been established in accordance with the 
+guidelines of DIN EN ISO 14001:2004 
+to optimize the production processes 
+with regard to energy and resources.
+Soldering Process
+Internal temperature of the capacitor must  
+be kept as follows:
+Polyester: preheating: T max.  125° C 
+ soldering: T max.  135° C
+Polypropylene: preheating: Tmax.  100° C 
+ soldering: T max.  110° C
+Single wave soldering
+Soldering bath temperature:  T  260 ° C
+Dwell time:  t  5 sec
+Double wave soldering
+Soldering bath temperature: T  260 ° C
+Dwell time:  ∑t  5 sec
+Due to different soldering processes and  
+heat requirements the graphs are to be  
+regarded as a recommendation only.
+PAGE 8
+133
+03.26
+®
+P
+P1
+P0P2
+F
+d
+P
+P1
+H
+1
+H
+P0
+d
+P2
+F
+t
+D0
+W
+2
+Vh
+W
+0
+P1
+P2
+P0
+P
+H
+1
+H
+W
+1
+W
+dF
+Di agram 1:
+PC M2 .5/5/7.5 mm
+Di agram3 :P CM 22. 5a nd 27.5*mm
+*PCM 27. 5t aping possibl ew it ht wo feed hole sb etween component s
+Di agram 2: PC M1 0/1 5m m
+   Dimensions for Radial Taping
+ Designation Symbol PCM 2.5 taping PCM 5 taping PCM 7.5 taping PCM 10 taping* PCM 15 taping* PCM 22.5 taping PCM 27.5 taping
+ Carrier tape width W 18.0 ±0.5 18.0 ±0.5 18.0 ±0.5 18.0 ±0.5 18.0 ±0.5 18.0 ±0.5 18.0 ±0.5
+ Hold-down tape width W0 6.0  for hot-sealing 6.0 for hot-sealing 12.0 for hot-sealing 12.0 for hot-sealing 12.0 for hot-sealing 12.0 for hot-sealing 12.0 for hot-sealing 
+         adhesive tape       adhesive tape        adhesive tape        adhesive tape        adhesive tape        adhesive tape        adhesive tape
+ Hole position W1 9.0 ±0.5 9.0 ±0.5 9.0 ±0.5 9.0 ±0.5 9.0 ±0.5 9.0 ±0.5 9.0 ±0.5
+ Hold-down tape position W2 0.5 to 3.0 max. 0.5 to 3.0 max. 0.5 to 3.0 max. 0.5 to 3.0 max. 0.5 to 3.0 max. 0.5 to 3.0 max. 0.5 to 3.0 max.
+ Feed hole diameter D0 4.0 ±0.2 4.0 ±0.2 4.0 ±0.2 4.0 ±0.2 4.0 ±0.2 4.0 ±0.2 4.0 ±0.2
+ Pitch of component P 12.7 ±1.0 12.7 ±1.0 12.7 ±1.0 25.4 ±1.0 25.4 ±1.0 38.1 ±1.5 *38.1 ±1.5 or 50.8 ±1.5
+                   cumulative pitch                 cumulative pitch                 cumulative pitch                 cumulative pitch                 cumulative pitch                 cumulative pitch                 cumulative pitch 
+ Feed hole pitch P0 12.7 ±0.3  error max. 12.7 ±0.3  error max. 12.7 ±0.3  error max. 12.7 ±0.3  error max. 12.7 ±0.3  error max. 12.7 ±0.3  error max. 12.7 ±0.3  error max. 
+                   1.0 mm/20 pitch                 1.0 mm/20 pitch                 1.0 mm/20 pitch                 1.0 mm/20 pitch                 1.0 mm/20 pitch                 1.0 mm/20 pitch                 1.0 mm/20 pitch
+ Feed hole centre P1 5.1 ±0.5 3.85 ±0.7 2.6 ±0.7 7.7 ±0.7 5.2 ±0.7 7.8 ±0.7 5.3 ±0.7
+ 
+ to pin 
+ Hole centre to P2 6.35 ±1.3 6.35 ±1.3 6.35 ±1.3 12.7 ±1.3 12.7 ±1.3 19.05 ±1.3 19.05 ±1.3
+ 
+ component centre 
+ Feed hole centre to bottom H ▲ 16.5 ±0.3 16.5 ±0.3 16.5 ±0.5 16.5 ±0.5 16.5 ±0.5 16.5 ±0.5 16.5 ±0.5
+ edge of the component  18.5 ±0.5 18.5 ±0.5 18.5 ±0.5 18.5 ±0.5 18.5 ±0.5 18.5 ±0.5 18.5 ±0.5
+ Feed hole centre to top H1
+ H+H component < H1 H+H component < H1 H+H component < H1 H+H component < H1 H+H component < H1 H+H component < H1 H+H component < H1 
+ edge of the component  32.25 max. 32.25 max. 24.5 to 31.5 25.0 to 31.5 26.0 to 37.0 30.0 to 43.0 35.0 to 45.0
+ Pin spacing at F 2.5 ±0.5 5.0 
++0.8
+ 7.5 ±0.8 10.0 ±0.8 15 ±0.8 22.5 ±0.8 27.5 ±0.8
+ 
+ upper edge of carrier tape       –0.2
+ Pin diameter d 0.4 ±0.05 0.5 ±0.05 $0.5 ±0.05 or 0.6–0.05 $0.5 ±0.05 or 0.6 –0.05 0.8 –0.05 0.8 –0.05 0.8 –0.05
+ Component alignment ∆h ± 2.0 max. ± 2.0 max. ± 3.0 max. ± 3.0 max. ± 3.0 max. ± 3.0 max. ± 3.0 max.
+ Total tape thickness t 0.6 ±0.2 0.6 ±0.2 0.6 ±0.2 0.6 ±0.2 0.6 ±0.2 0.6 ±0.2 0.6 ±0.2
+    ROLL/AMMO  AMMO
+ 
+Package
+ ▲ 
+ 
+(see also page 134)
+ Unit  see details page 135.
+ ▲ When ordering please specify dimension H and required packaging type.                                                                                                           Dims in mm.
+ $  Diameter of pins see General Data. Please clarify customer-specific deviations with the manufacturer.
+ * PCM 10 and PCM 15 can be crimped to  PCM 7.5.  
+  Position of components according to PCM 7.5 (sketch 1). P 0 = 12.7 or 15.0 is possible
+ REEL  Ø 360 max. B 52 ±2    depending on 
+  Ø 30 ±1  58 ±2    comp. dimensions
+    +0.06    +0.06 +0.08 +0.08 +0.08
+Typical Dimensions for 
+Taping Configuration
+    52 ±2       54 ±2      depending  
+ REEL  Ø 360 max.  B 58 ±2  or  REEL Ø 500 max.  B 60 ±2      on PCM   
+   Ø 30 ±1   66 ±2     Ø 25 ±1         68 ±2      and component dimensions
+PAGE 9
+134
+03.26
+®
+O ROLL Packaging O AMMO Packaging O  REEL Packaging
+BAR CODE (Labelling)
+50 max.
+70 max.
+340 
+max.
+490 max.
+340 max
+.
+370 max
+.
+/circlefraction
+30 1±
+25 1±
+36
+0 max.
+500 max.
+B
+340 max.
+340 max
+.
+50 max.
+Types of Tape Packaging of 
+Capacitors for Automatic 
+Radial Insertion
+Labelling of package units in  
+plain text and with  
+alphanumerical Bar Code
+! WIMA supplier number 
+! Date code 
+! Customer‘s P/O number 
+! P/O line 
+! Customer‘s part number 
+! WIMA part number 
+! Quantity 
+! WIMA confirmation number 
+! Country of origin 
+! Customer name 
+! Handling unit number 
+! Week of delivery.
+In addition part description of
+– article 
+– capacitance value 
+– rated voltage 
+– dimensions 
+– technical note 
+– capacitance tolerance 
+– packing 
+– connecting information 
+               BARCODE PDF417 
+               BARCODE 2D Datamatrix
+
+PAGE 10
+135
+03.26
+®
+Packing Quantities for Capacitors with
+Radial Pins in PCM 2.5 mm to 22.5 mm
+PCM Size
+pcs. per packing unit
+bulk
+ROLL REEL AMMO
+Ø 360 Ø 500 340 x 340 490 x 370
+H16.5 H18.5 H16.5 H18.5 H16.5 H18.5 H16.5 H18.5 H16.5 H18.5
+W H L Codes S N O F I H J A C B D
+2.5 mm
+ 2.5  7  4.6 0B 5000 2200 2500 – 2800 –
+ 3  7.5  4.6 0C 5000 2000 2300 – 2300 –
+ 3.8  8.5  4.6 0D 5000 1500 1800 – 1800 –
+ 4.6  9  4.6 0E 5000 1200 1500 – 1500 –
+ 5.5 10  4.6 0F 5000  900 1200 – 1200 –
+5 mm
+ 2.5  6.5  7.2 1A 5000 2200 2500 – 2800 –
+ 3  7.5  7.2 1B 5000 2000 2300 – 2300 –
+ 3.5  8.5  7.2 1C 5000 1600 2000 – 2000 –
+ 4.5  6  7.2 1D 6000 1300 1500 – 1500 –
+ 4.5  9.5  7.2 1E 4000 1300 1500 – 1500 –
+ 5 10  7.2 1F 3500 1100 1400 – 1400 –
+ 5.5  7  7.2 1G 4000 1000 1200 – 1200 –
+ 5.5 11.5  7.2 1H 2500 1000 1200 – 1200 –
+ 6.5  8  7.2 1I 2500  800 1000 – 1000 –
+ 7.2  8.5  7.2 1J 2500  700 1000 – 1000 –
+ 7.2 13  7.2 1K 2000  700  950 – 1000 –
+ 8.5 10  7.2 1L 2000  600  800 –  800 –
+ 8.5 14  7.2 1M 1500  600  800 –  800 –
+11 16  7.2 1N 1000  500  600 –  640 –
+11 18  7.2 1O 1000  500  600 –  640 –
+7.5 mm
+ 2.5  7 10 2A 5000 – 2500 4400 2500 –
+ 3  8.5 10 2B 5000 – 2200 4300 2300 4150
+ 4  9 10 2C 4000 – 1700 3200 1700 3000
+ 4.5  9.5 10.3 2D 3500 – 1500 2900 1400 2700
+ 5 10.5 10.3 2E 3000 – 1300 2500 1300 –
+ 5.7 12.5 10.3 2F 2000 – 1000 2200 1100 –
+ 7.2 12.5 10.3 2G 1500 –  900 1800 1000 –
+10 mm
+ 4  9 13 3C 3000 –  900 1600 – 1450
+ 4  9.5 13 3D 3000 –  900 1600 – 1400
+ 5 11 13 3F 3000 –  700 1300 – 1100
+ 6 12 13 3G 2400 –  550 1100 – 1000
+ 6 12.5 13 3H 2400 –  550 1100 – 1000
+ 8 12 13 3I 2000 –  400  800 –  740
+15 mm
+ 5 11 18 4B 2400 –  600 1200 – 1150
+ 6 12.5 18 4C 2000 –  500 1000 – 1000
+ 7 14 18 4D 1600 –  450  900 –  850
+ 8 15 18 4F 1200 –  400  800 –  740
+ 9 14 18 4H 1200 –  350  700 –  650
+ 9 16 18 4J  900 –  350  700 –  650
+11 14 18 4M 1000 –  300  600 –  540
+22.5 mm
+ 5 14 26.5 5A 1200 – –  800 –  770
+ 6 15 26.5 5B 1000 – –  700 –  640
+ 7 16.5 26.5 5D  760 – –  600 –  550
+ 8.5 18.5 26.5 5F  500 – –  480 –  450
+10.5 19 26.5 5G 594* – –  400 –  360
+10.5 20.5 26.5 5H 594* – –  400 –  360
+11 21 26.5 5I 561* – –  380 –  350
+* for 2-inch transport pitches.  Rights reserved to amend design data without prior notification.
+* TPS (Tray-Packing-System). Plate versions may have different packing units.   
+ Samples and pre-production needs on request.
+PAGE 11
+136
+03.26
+®
+PCM Size
+pcs. per packing unit
+bulk
+ROLL REEL AMMO
+Ø 360 Ø 500 340 x 340 490 x 370
+H16.5 H18.5 H16.5 H18.5 H16.5 H18.5 H16.5 H18.5 H16.5 H18.5
+W H L Codes S N O F I H J A C B D
+27.5 mm
+ 9 19 31.5 6A 567* – – 460/340* – –
+11 21 31.5 6B 459* – – 380/280* – –
+13 24 31.5 6D 378* – –  300 – –
+15 26 31.5 6F 324* – –  270 – –
+17 29 31.5 6G 198* – – – – –
+17 34.5 31.5 6I 198* – – – – –
+20 39.5 31.5 6J 162* – – – – –
+37.5 mm**
+ 9 19 41.5 7A 441* – – – – –
+11 22 41.5 7B 357* – – – – –
+13 24 41.5 7C 294* – – – – –
+15 26 41.5 7D 252* – – – – –
+17 29 41.5 7E 154* – – – – –
+19 32 41.5 7F 140* – – – – –
+20 39.5 41.5 7G 126* – – – – –
+24 45.5 41.5 7H 112* – – – – –
+28 38 41.5 7L  84* – – – – –
+31 46 41.5 7I  84* – – – – –
+35 50 41.5 7J  35* – – – – –
+40 55 41.5 7K  28* – – – – –
+48.5 mm**
+19 31 56 8D 120* – – – – –
+23 34 56 8E  80* – – – – –
+27 37.5 56 8H  84* – – – – –
+33 48 56 8J  25* – – – – –
+37 54 56 8L  25* – – – – –
+52.5 mm
+25 45 57 9D  70* – – – – –
+30 45 57 9E  60* – – – – –
+35 50 57 9F  25* – – – – –
+45 55 57 9H  20* – – – – –
+45 65 57 9J  20* – – – – –
+* TPS (Tray-Packing-System). Plate versions may have different packing units. Rights reserved to amend design data without prior notification.
+**For Snubber capacitors in 2-pin version the PCM is changing to 38.5 respective 49.5 mm. 
+ Samples and pre-production needs on request.
+Updated data on www.wima.com 
+Packing Quantities for Capacitors with
+Radial Pins in PCM 27.5 mm to 52.5 mm
+PAGE 12
+131
+03.26
+®
+A WIMA part number consists of 18 digits and is composed as follows:
+Field  1 -  4: Type description 
+Field  5 -  6: Rated voltage 
+Field  7 - 10: Capacitance 
+Field 11 - 12: Size and PCM 
+Field 13 - 14: Version code (e.g. Snubber versions) 
+Field 15: Capacitance tolerance 
+Field 16: Packing 
+Field 17 - 18: Pin length (untaped)
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+M K S 2 C 0 2 1 0 0 1 A 0 0 M S S D
+MKS 2 63 VDC 0.01 F 2.5 x 6.5 x 7.2 - 20 % bulk 6 -2
+WIMA Part Number System  
+ 
+The data on this page is not complete and serves only to explain the part number system. Part number information is listed on 
+the pages of the respective WIMA range.
+Type description: Rated voltage: Capacitance: Size: Tolerance:
+SMD-PET = SMDT 63 VDC = C0 22 pF = 0022 4.8 x 3.3 x 3 Size 1812 = KA ±20 % = M
+SMD-PPS = SMDI 100 VDC = D0 47 pF = 0047 4.8 x 3.3 x 4 Size 1812 = KB ±10 % = K
+MKS 02 = MKS0 250 VDC = F0 100 pF = 0100 5.7 x 5.1 x 3.5 Size 2220 = QA ±5 % = J
+FKS 2 = FKS2 400 VDC = G0 150 pF = 0150 5.7 x 5.1 x 4.5 Size 2220 = QB ±2.5 % = H
+FKP 2 = FKP2 450 VDC = H0 220 pF = 0220 7.2 x 6.1 x 3 Size 2824 = TA ±1 % = E
+MKS 2 = MKS2 520 VDC = H2 330 pF = 0330 7.2 x 6.1 x 5 Size 2824 = TB ...
+MKP 2 = MKP2 600 VDC = I0 470 pF = 0470 10.2 x 7.6 x 5 Size 4030 = VA
+MKS 4 = MKS4 630 VDC = J0 680 pF = 0680 12.7 x 10.2 x 6 Size 5040 = XA
+MKP 4 = MKP4 700 VDC = K0 1000 pF = 1100 15.3 x 13.7 x 7 Size 6054 = YA Packing:
+MKP 10 = MKP1 800 VDC = L0 1500 pF = 1150 2.5 x 7 x 4.6 PCM 2.5 = 0B AMMO H16.5 340 x 340 = A
+FKP 1 = FKP1 850 VDC = M0 2200 pF = 1220 3 x 7.5 x 4.6 PCM 2.5 = 0C AMMO H16.5 490 x 370 = B
+MKP-X2 = MKX2 900 VDC = N0 3300 pF = 1330 2.5 x 6.5 x 7.2 PCM 5 = 1A AMMO H18.5 340 x 340 = C
+MKP-X1 R = MKX1 1000 VDC = O1 4700 pF = 1470 3 x 7.5 x 7.2 PCM 5 = 1B AMMO H18.5 490 x 370 = D
+MKP-Y2 = MKY2 1100 VDC = P0 6800 pF = 1680 2.5 x 7 x 10 PCM 7.5 = 2A REEL H16.5 360 = F
+Snubber MKP = SNMP 1200 VDC = Q0 0.01 F = 2100 3 x 8.5 x 10 PCM 7.5 = 2B REEL H16.5 500 = H
+Snubber FKP = SNFP 1250 VDC = R0 0.022 F = 2220 3 x 9 x 13 PCM 10 = 3A REEL H18.5 360 = I
+GTO MKP = GTOM 1500 VDC = S0 0.047 F = 2470 4 x 9 x 13 PCM 10 = 3C REEL H18.5 500 = J
+DC-LINK MKP 4 = DCP4 1600 VDC = T0 0.1 F = 3100 5 x 11 x 18 PCM 15 = 4B ROLL H16.5 = N
+DC-LINK MKP 6 = DCP6 1700 VDC = TA 0.22 F = 3220 6 x 12.5 x 18 PCM 15 = 4C ROLL H18.5 = O
+DC-LINK HC = DCHC 2000 VDC = U0 0.47 F = 3470 5 x 14 x 26.5 PCM 22.5 = 5A BLISTER W12 180 = P
+2500 VDC = V0 1 F = 4100 6 x 15 x 26.5 PCM 22.5 = 5B BLISTER W12 330 = Q
+3000 VDC = W0 2.2 F = 4220 9 x 19 x 31.5 PCM 27.5 = 6A BLISTER W16 330 = R
+4000 VDC = X0 4.7 F = 4470 11 x21 x 31.5 PCM 27.5 = 6B BLISTER W24 330 = T
+6000 VDC = Y0 10 F = 5100 9 x 19 x 41.5 PCM 37.5 = 7A Bulk/TPS Standard = S
+230 VAC = 3Y 22 F = 5220 11 x 22 x 41.5 PCM 37.5 = 7B ...
+275 VAC = 1W 47 F = 5470 19 x 31 x 56 PCM 48.5 = 8D
+300 VAC = 2W 100 F = 6100 25 x 45 x 57 PCM 52.5 = 9D
+305 VAC = AW 220 F = 6220 ...
+350 VAC = BW 1000 F = 7100
+440 VAC = 4W 1500 F = 7150
+... ... Version code: Pin length (untaped)
+Standard = 00 3.5 ±0.5 = C9
+Version A1 = 1A 6 -2 = SD
+Version A1.1.1 = 1B 16 ±1 = P1
+Version A2 = 2A ...
+... Pin length (taped)
+none = 00

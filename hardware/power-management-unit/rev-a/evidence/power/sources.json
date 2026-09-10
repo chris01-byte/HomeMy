@@ -1,0 +1,154 @@
+{
+  "sources": [
+    {
+      "file": "C0805C102J5GACTU.pdf",
+      "source_url": "https://yageogroup.com/download/specsheet/C0805C102J5GACTU",
+      "retrieved_date": "2026-09-10",
+      "sha256": "da96957ade561cf17f7d051aaaab3562a1f4b9bf628abc8f07ad8a0f1d04677c",
+      "bytes": 243664,
+      "content_status": "manufacturer_pdf; originaldisclaimersretained"
+    },
+    {
+      "file": "C0805C103J5GACTU.pdf",
+      "source_url": "https://yageogroup.com/download/specsheet/C0805C103J5GACTU",
+      "retrieved_date": "2026-09-10",
+      "sha256": "c17910936de60f33ace1826527eb8e763c70b32f35f547a0cbca4878c88768bd",
+      "bytes": 241131,
+      "content_status": "manufacturer_pdf; originaldisclaimersretained"
+    },
+    {
+      "file": "C0805C223J5GACTU.pdf",
+      "source_url": "https://yageogroup.com/download/specsheet/C0805C223J5GACTU",
+      "retrieved_date": "2026-09-10",
+      "sha256": "5834b6f4f0f4e72fb2a7ea27593d9014e1c3896f18b6ec49f8798e63fbe31b2d",
+      "bytes": 69702,
+      "content_status": "manufacturer_pdf; originaldisclaimersretained"
+    },
+    {
+      "file": "C1206C105K3RACTU.pdf",
+      "source_url": "https://yageogroup.com/download/specsheet/C1206C105K3RACTU",
+      "retrieved_date": "2026-09-10",
+      "sha256": "6266866f851908368ca32e06e4648c97b38d773bae905bc93837c9dc517a1d55",
+      "bytes": 291192,
+      "content_status": "manufacturer_pdf; originaldisclaimersretained"
+    },
+    {
+      "file": "C1206C475K3RACTU.pdf",
+      "source_url": "https://yageogroup.com/download/specsheet/C1206C475K3RACTU",
+      "retrieved_date": "2026-09-10",
+      "sha256": "3f934744d2553bbfa653008b7442ec243f4b5e6b86d7e76a3d149d94865b79db",
+      "bytes": 290364,
+      "content_status": "manufacturer_pdf; originaldisclaimersretained"
+    },
+    {
+      "file": "C1210C105K1RACTU.pdf",
+      "source_url": "https://yageogroup.com/download/specsheet/C1210C105K1RACTU",
+      "retrieved_date": "2026-09-10",
+      "sha256": "18b22e2b76b068af3e7df6936e75b71383d095ac0804b29280eb51568881cf36",
+      "bytes": 289802,
+      "content_status": "manufacturer_pdf; originaldisclaimersretained"
+    },
+    {
+      "file": "css4j-4026.pdf",
+      "source_url": "https://www.bourns.com/docs/product-datasheets/css4j-4026.pdf",
+      "retrieved_date": "2026-09-10",
+      "sha256": "27be7941ff95afc1c0a98ac573d33a987279ce2ee55985ed78308d502543e49d",
+      "bytes": 757481,
+      "content_status": "manufacturer_pdf; originaldisclaimersretained"
+    },
+    {
+      "file": "lm74930-q1.pdf",
+      "source_url": "https://www.ti.com/lit/ds/symlink/lm74930-q1.pdf",
+      "retrieved_date": "2026-09-10",
+      "sha256": "d54d88498a76c31aa7e3bc8f747a4d1e2f30f021ecd95ee71fe70652a9cbf8c9",
+      "bytes": 3392368,
+      "content_status": "manufacturer_pdf; originaldisclaimersretained"
+    },
+    {
+      "file": "psmn1r0-100asf.pdf",
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/PSMN1R0-100ASF.pdf?download=1",
+      "retrieved_date": "2026-09-10",
+      "sha256": "2e598d48334105c5f6d55ddd188a6be74e91600852cc5e988c27bd4bbe305e74",
+      "bytes": 413564,
+      "content_status": "manufacturer_pdf; originaldisclaimersretained"
+    },
+    {
+      "file": "ptvs1.pdf",
+      "source_url": "https://bourns.com/docs/Product-Datasheets/PTVS1-xxxC-H.pdf",
+      "retrieved_date": "2026-09-10",
+      "sha256": "12100949b5bd641ea082a72170728c11ce16a4dd098f8ee3ae851e114664e2f4",
+      "bytes": 663181,
+      "content_status": "manufacturer_pdf; originaldisclaimersretained"
+    },
+    {
+      "file": "tps2663.pdf",
+      "source_url": "https://www.ti.com/lit/ds/symlink/tps2663.pdf",
+      "retrieved_date": "2026-09-10",
+      "sha256": "bb61314ace65ed37684bd07f541fc676081d7cf81cb24020e7c5c2065bfe16b2",
+      "bytes": 5728602,
+      "content_status": "manufacturer_pdf; originaldisclaimersretained"
+    },
+    {
+      "file": "tps4811-q1.pdf",
+      "source_url": "https://www.ti.com/lit/ds/symlink/tps4811-q1.pdf",
+      "retrieved_date": "2026-09-10",
+      "sha256": "3cfe41fef1407b85abaaee1e27a95ac3cf2cb1bdf218209b8578a835c4c9497f",
+      "bytes": 2978681,
+      "content_status": "manufacturer_pdf; originaldisclaimersretained"
+    },
+    {
+      "file": "wima-mks4.pdf",
+      "source_url": "https://www.wima.de/wp-content/uploads/media/e_WIMA_MKS_4.pdf",
+      "retrieved_date": "2026-09-10",
+      "sha256": "26b7a4345799fcc00f291b705cdc0b2518c9c5e620a8486daf1d7a19ee8e4bdf",
+      "bytes": 558757,
+      "content_status": "manufacturer_pdf; originaldisclaimersretained"
+    },
+    {
+      "file": "tlv3011.pdf",
+      "source_url": "https://www.ti.com/lit/ds/symlink/tlv3011.pdf",
+      "retrieved_date": "2026-09-10",
+      "sha256": "02993c016420887ee4f1ab2fa640e7596c9c1324a73f4f72bee3b32adec38df3",
+      "bytes": 1624948,
+      "content_status": "manufacturer_pdf; original disclaimers retained"
+    },
+    {
+      "file": "psmn1r0-100ase.pdf",
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/PSMN1R0-100ASE.pdf",
+      "retrieved_date": "2026-09-10",
+      "sha256": "0d89e9f019927720b65390a524d27a2f44a57610cdafbe2392bed11f089f5833",
+      "bytes": 415226,
+      "content_status": "manufacturer authored PDF; original disclaimers retained"
+    },
+    {
+      "file": "CN-202508013I.pdf",
+      "source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7517/CN-202508013I.pdf",
+      "retrieved_date": "2026-09-10",
+      "sha256": "7ba8ac69b8101b4ce1fe72d6a8a781d73625fdd527d1331b90dbb7fcf7f751c0",
+      "bytes": 164877,
+      "content_status": "manufacturer authored PDF; original disclaimers retained"
+    },
+    {
+      "file": "N1902_CSS_CSM_EBW_PCN.pdf",
+      "source_url": "https://bourns.com/docs/technical-documents/product-change-notifications/N1902_CSS_CSM_EBW_PCN.pdf",
+      "retrieved_date": "2026-09-10",
+      "sha256": "047bd5cdbca092424c514812a05b665196d989c70d8f0927679c5588c4fd4d50",
+      "bytes": 319673,
+      "content_status": "manufacturer authored PDF; original disclaimers retained"
+    }
+  ],
+  "availability_observations": [
+    {
+      "mpn": "PSMN1R0-100ASFJ",
+      "url": "https://www.digikey.com/en/products/detail/nexperia-usa-inc/PSMN1R0-100ASFJ/25724050",
+      "observation": "Indexedlistingreported312incut-tape; notstockreservationorcheckoutverification",
+      "date": "2026-09-10"
+    },
+    {
+      "mpn": "MKS4C053306D00KSSD",
+      "url": "https://www.mouser.co.uk/en/ProductDetail/WIMA/MKS4C053306D00KSSD?qs=DRkmTr78QATdPwsx92rcKg%3D%3D",
+      "observation": "Catalogued; smallquantitystockunconfirmed; leadtimequote required",
+      "date": "2026-09-10"
+    }
+  ]
+}

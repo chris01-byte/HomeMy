@@ -1,0 +1,79 @@
+PAGE 1
+nexperia.com 
+ 
+ 
+ 
+Customer Information Notification CN-202508013I 
+ 
+Issue date: 16 Sep 2025 
+Effective date: 16 Oct 2025 
+Here's your personalized quality 
+information concerning products 
+our customers and partners 
+purchased from Nexperia. 
+For more details please contact 
+your respective Nexperia CSR/AM. 
+  
+Package Tolerance Update for MOS CCPAK1212/i (A2 Max) 
+ 
+Notification information 
+ 
+POD update to tighten the specs limits for Dimension A and A2 on all MOS 
+CCPAK (SOT8000A and SOT80005A) Packages and Products. 
+Why do we issue this notification? 
+Errata on Datasheet 
+Identification of affected products 
+Product Identification does not change 
+Impact 
+ 
+
+PAGE 2
+Impact to the product's functionality is anticipated 
+Data sheet revision 
+No impact to existing datasheet 
+Additional information 
+ 
+View Change Notification Online 
+Contact and support 
+ 
+For all Quality Notification content inquiries, please contact your local 
+Nexperia Sales Support Team. 
+For specific questions on this notice or the products affected please contact 
+our specialist directly: pcn@nexperia.com 
+In case of distribution, please contact you distribution partner. 
+About Nexperia B.V. 
+ 
+We at Nexperia are the efficiency semiconductor company. We deliver over 
+90 billion products a year and as such service thousands of global 
+customers, both directly and through our extensive network of channel 
+partners. We are at the heart of billions of electronic devices in the 
+Automotive, Mobile, Industrial, Consumer, Computing, and Communication 
+Infrastructure segments. 
+You have received this email because you are a designated contact or 
+subscribed to Nexperia Quality Notifications. Nexperia shall not be held liable 
+if this Notification is not correctly distributed within your organization. 
+This message has been automatically distributed. Please do not reply. 
+If you would like to adjust your mailing preferences, please click here. 
+ 
+ 
+  
+  
+ 
+PAGE 3
+SalesItem_name SalesItem_orderablePartNumber SalesOrder_customerPartNumber ProductType_name BasicType_description PackageOutlineVersion_description PackageType_description SalesItem_state SalesItem_customerSpecificIndicator BusinessLine_description
+934666620118 PSMN1R0-100ASEJ PSMN1R0-100ASEJ PSMN1R0-100ASE N-CH 100V 1.04mOhm std level mOhm in CCPAK1212 SOT8000A CCPAK1212 RFS No MOS Discretes
+934666616118 PSMN1R0-100ASFJ PSMN1R0-100ASF N-CH 100V 0.99mOhm std level mOhm in CCPAK1212 SOT8000A CCPAK1212 RFS No MOS Discretes
+934666617118 PSMN1R0-100CSFJ PSMN1R0-100CSFJ PSMN1R0-100CSF N-CH 100V 1.04 mOhm std level mOhm in CCPAK1212i SOT8005A CCPAK1212i RFS No MOS Discretes
+934666613118 PSMN1R0-80CSEJ PSMN1R0-80CSE N-CH 80V 0.95mOhm std level mOhm in CCPAK1212i SOT8005A CCPAK1212i RFS No MOS Discretes
+934666621118 PSMN1R1-100CSEJ PSMN1R1-100CSEJ PSMN1R1-100CSE N-CH 100V 1.09 mOhm std level mOhm in CCPAK1212i SOT8005A CCPAK1212i RFS No MOS Discretes
+934666610118 PSMN1R1-80ASFJ PSMN1R1-80ASF N-CH 80V 1.11mOhm std level mOhm in CCPAK1212 SOT8000A CCPAK1212 RFS No MOS Discretes
+934666611118 PSMN1R1-80CSFJ PSMN1R1-80CSF N-CH 80V 1.16 mOhm std level mOhm in CCPAK1212i SOT8005A CCPAK1212i RFS No MOS Discretes
+934666614118 PSMN1R2-80ASEJ PSMN1R2-80ASE N-CH 80V 1.18mOhm std level mOhm in CCPAK1212 SOT8000A CCPAK1212 RFS No MOS Discretes
+934666615118 PSMN1R2-80CSEJ PSMN1R2-80CSE N-CH 80V 1.23mOhm std level mOhm in CCPAK1212i SOT8005A CCPAK1212i RFS No MOS Discretes
+934666618118 PSMN1R3-100ASFJ 934666618118 PSMN1R3-100ASF N-CH 100V 1.3mOhm std level mOhm in CCPAK1212 SOT8000A CCPAK1212 RFS No MOS Discretes
+934666622118 PSMN1R4-100ASEJ 934666622118 PSMN1R4-100ASE N-CH 100V 1.36mOhm std level mOhm in CCPAK1212 SOT8000A CCPAK1212 RFS No MOS Discretes
+934666623118 PSMN1R4-100CSEJ PSMN1R4-100CSEJ PSMN1R4-100CSE N-CH 100V 1.42 mOhm std level mOhm in CCPAK1212i SOT8005A CCPAK1212i RFS No MOS Discretes
+934666619118 PSMN1R4-100CSFJ PSMN1R4-100CSF N-CH 100V 1.35 mOhm std level mOhm in CCPAK1212i SOT8005A CCPAK1212i RFS No MOS Discretes
+934666612118 PSMNR90-80ASEJ PSMNR90-80ASEJ PSMNR90-80ASE N-CH 80V 0.9mOhm std level mOhm in CCPAK1212 SOT8000A CCPAK1212 RFS No MOS Discretes
+934666608118 PSMNR90-80ASFJ PSMNR90-80ASFJ PSMNR90-80ASF N-CH 80V 0.85mOhm std level mOhm in CCPAK1212 SOT8000A CCPAK1212 RFS No MOS Discretes
+934666609118 PSMNR90-80CSFJ PSMNR90-80CSF N-CH 80V 0.9 mOhm std level mOhm in CCPAK1212i SOT8005A CCPAK1212i RFS No MOS Discretes

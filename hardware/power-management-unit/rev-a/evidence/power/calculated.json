@@ -1,0 +1,207 @@
+{
+  "scope": "Engineering calculations, not physical test results or a fabrication/energization approval",
+  "shunt": {
+    "r_nominal_ohm": 0.0005,
+    "r_corner_ohm": [
+      0.00049005,
+      0.0005100500000000001
+    ],
+    "steady_w": {
+      "45": 1.0125,
+      "50": 1.25,
+      "60": 1.8,
+      "65": 2.1125,
+      "100": 5.0,
+      "120": 7.2,
+      "150": 11.25
+    },
+    "pulse_150a_3s_j": 33.75,
+    "bourns_qualification_50w_5s_j": 250,
+    "note": "250J is the stated5x10W5s short-time overload qualification atspecified conditions, not a shape-independent rating"
+  },
+  "thresholds": {
+    "main_uv_falling": {
+      "nominal_v": 29.030198019801983,
+      "minimum_v": 27.97305173277614,
+      "maximum_v": 30.408294496827516
+    },
+    "main_uv_rising": {
+      "nominal_v": 31.669306930693068,
+      "minimum_v": 30.71234503353478,
+      "maximum_v": 33.42278773263758
+    },
+    "main_ov_rising": {
+      "nominal_v": 44.52,
+      "minimum_v": 43.174895158441565,
+      "maximum_v": 46.98487072432432
+    },
+    "motion_uv_rising": {
+      "nominal_v": 27.848,
+      "minimum_v": 27.25122805962038,
+      "maximum_v": 28.44668661429429
+    },
+    "motion_native_uv_falling": {
+      "nominal_v": 26.196000000000005,
+      "minimum_v": 25.837937350329675,
+      "maximum_v": 26.79151944712712
+    },
+    "motion_external_latched_uv_nominal_v": 29.311200000000003,
+    "motion_external_latched_uv_conservative_min_v": 27.891006863976088,
+    "motion_external_latched_uv_conservative_max_v": 30.734326302057195,
+    "motion_external_uv_bound_notes": "Referenceinitial1.223..1.260V,100ppm/K100K,offset9mV,entire8mVhysteresis,2.5mVCMRRallowance,1.5mVPSRRallowance,R0.1%+25ppm/K100K; staticengineeringbounds not shortpulse immunity proof. Native EN fallingtable1.10..1.13V. U5OD joins externalmotionfaultlatch.",
+    "motion_ov": "U2OV grounded. Independentchopper46V comparatorfeeds latchedmotioninhibit; nativeautorecoveringOVnotused.",
+    "efuse_uv_rising": {
+      "nominal_v": 24.12,
+      "minimum_v": 23.56404302832168,
+      "maximum_v": 24.6778822536036
+    },
+    "efuse_ov_rising": {
+      "nominal_v": 46.08,
+      "minimum_v": 45.01436697692308,
+      "maximum_v": 47.14940294684684
+    },
+    "main_oc_equation_nominal_a": 65.08695652173911,
+    "main_oc_bound_status": "No guaranteed65A window: published CSA error6..30mV does not cover nominal32.5mV, and mirror/OCP error correlation not specified",
+    "main_scp_nominal_a": 120.29999999999998,
+    "main_scp_min_a": 102.02985001470442,
+    "main_scp_max_a": 134.361391694725,
+    "motion_oc_equation_nominal_a": 59.94962216624685,
+    "motion_oc_table_min_a": 57.13490509098783,
+    "motion_oc_table_max_a": 64.40784218561996,
+    "motion_scp_nominal_a": 99.9648,
+    "motion_scp_conservative_min_a": 85.73759827467894,
+    "motion_scp_conservative_max_a": 114.91118049178654,
+    "current_corner_notes": "Shunt1% plus100ppm/K100K. MotionOCP scales exactRSET100/RIWRN39.7k datasheet29.2..31.5mV table; SCP uses40+/-5mV table at2100ohm andspecifiedbias fordeltaR."
+  },
+  "timers": {
+    "main_FLT": {
+      "nominal_s": 0.45733433884428415,
+      "conditional_min_s": 0.3300751054577854,
+      "conditional_max_s": 0.7688912513735767,
+      "assumptions": "C33uF10%, +/-2% additional drift, R100k0.1%, capacitor/PCB leakage0..1uA, local0..60C; fulltemperature not guaranteed"
+    },
+    "main_native_gate_off": {
+      "nominal_s": 0.5022329906283536,
+      "conditional_min_s": 0.35030860182671153,
+      "conditional_max_s": 0.9141469737390787,
+      "assumptions": "C33uF10%, +/-2% additional drift, R100k0.1%, capacitor/PCB leakage0..1uA, local0..60C; fulltemperature not guaranteed"
+    },
+    "motion_FLT": {
+      "nominal_s": 0.47532992173569455,
+      "conditional_min_s": 0.3496021409145234,
+      "conditional_max_s": 0.6751293265251322,
+      "assumptions": "C33uF10%, +/-2% additional drift, R100k0.1%, capacitor/PCB leakage0..1uA, local0..60C; fulltemperature not guaranteed"
+    },
+    "motion_native_gate_off": {
+      "nominal_s": 0.5221392172091508,
+      "conditional_min_s": 0.37932433162359774,
+      "conditional_max_s": 0.7373724557321696,
+      "assumptions": "C33uF10%, +/-2% additional drift, R100k0.1%, capacitor/PCB leakage0..1uA, local0..60C; fulltemperature not guaranteed"
+    },
+    "external_latch_note": "External hardware latchesactonFLT, which precedes nativegate-off; useFLT bounds for actual disconnection."
+  },
+  "conduction": [
+    {
+      "current_a": 45,
+      "main_fet_w": 3.105,
+      "motion_fet_w": 4.6575,
+      "main_shunt_w": 1.0125,
+      "motion_shunt_w": 1.0125,
+      "main_fet_w_3p2mR_assumption": 4.32,
+      "motion_fet_w_3p2mR_assumption": 6.48,
+      "note": "2.3mR manufacturerhotmax requires10Vgate;3.2mR is an engineering fallbackassumption for mainminimum9.2V, not a guaranteedtablemax"
+    },
+    {
+      "current_a": 50,
+      "main_fet_w": 3.8333333333333335,
+      "motion_fet_w": 5.75,
+      "main_shunt_w": 1.25,
+      "motion_shunt_w": 1.25,
+      "main_fet_w_3p2mR_assumption": 5.333333333333333,
+      "motion_fet_w_3p2mR_assumption": 8.0,
+      "note": "2.3mR manufacturerhotmax requires10Vgate;3.2mR is an engineering fallbackassumption for mainminimum9.2V, not a guaranteedtablemax"
+    },
+    {
+      "current_a": 60,
+      "main_fet_w": 5.52,
+      "motion_fet_w": 8.28,
+      "main_shunt_w": 1.8,
+      "motion_shunt_w": 1.8,
+      "main_fet_w_3p2mR_assumption": 7.680000000000001,
+      "motion_fet_w_3p2mR_assumption": 11.520000000000001,
+      "note": "2.3mR manufacturerhotmax requires10Vgate;3.2mR is an engineering fallbackassumption for mainminimum9.2V, not a guaranteedtablemax"
+    },
+    {
+      "current_a": 65,
+      "main_fet_w": 6.478333333333333,
+      "motion_fet_w": 9.7175,
+      "main_shunt_w": 2.1125,
+      "motion_shunt_w": 2.1125,
+      "main_fet_w_3p2mR_assumption": 9.013333333333334,
+      "motion_fet_w_3p2mR_assumption": 13.520000000000001,
+      "note": "2.3mR manufacturerhotmax requires10Vgate;3.2mR is an engineering fallbackassumption for mainminimum9.2V, not a guaranteedtablemax"
+    }
+  ],
+  "gate": {
+    "mosfet_max_qg_c": 5.39e-07,
+    "mosfet_max_qgd_c": 1.6e-07,
+    "main_max_charge_time_s": 0.047074235807860264,
+    "main_typical_miller_ramp_s": 0.003790909090909091,
+    "main_min_miller_ramp_s_estimate": 0.00084,
+    "motion_max_total_gate_c": 2.156e-06,
+    "motion_cap_min_for_1v_droop_f": 2.156e-06,
+    "motion_boost_startup_s_estimate": 1.41,
+    "motion_boost_effective_f_estimate": 3.8831399999999996e-06,
+    "note": "Charge ratios are approximate startup estimates, not assured slew times; nonlinear gatecharge, idealdiode regulation and common-source trajectory require waveform review."
+  },
+  "motion_bus_inrush": {
+    "capacitor_nominal_f": 0.00094,
+    "capacitor_min_f": 0.000752,
+    "capacitor_max_f": 0.001128,
+    "energy42v_nominal_j": 0.8290799999999999,
+    "energy42v_max_j": 0.9948960000000001,
+    "RPU_ohm": 180000,
+    "each_gate_source_bleed_ohm": 10000000.0,
+    "miller_typical_gate_current_a": 4.065777777777778e-05,
+    "miller_typical_ramp_s_estimate": 0.0034187800612155658,
+    "nominal_average_inrush_a_estimate": 11.547978896882496,
+    "fast_table_point_ramp_s_estimate": 0.0006872727272727273,
+    "max_cap_average_at_fast_table_point_a_estimate": 68.93333333333332,
+    "steady_gate11vboost_nominal_parts_v": 10.194029850746269,
+    "steady_gate11vboost_RPUplus2percent_bleedsminus3percent_v": 10.157520509085334,
+    "limitations": "Only2inputbankQgd credited: outputbank can followbodydiode andneednot contributeMiller. Qgd21/69.5/160nC specified50V25A25C,plateau4.3Vtyp; fastmodel2Vplateauassumed. Valuesareestimatesnot guaranteed42Vlowcurrentcold/hotinrushbounds. NoequalparallelSOAsharingcredit.1AsupplymaytripSYS/mainUV,not guaranteedfunctionalboot. FirstanalogchoptestusesseparatecurrentlimitedfixtureprechargingmotioncapacitorswithmotiongateOFF; powerpathinrushtestfollowswaveformreview."
+  },
+  "bench_inrush": {
+    "max_direct_bus_cap_f": 0.0001,
+    "max_supply_current_a": 1,
+    "max_start_voltage_v": 42,
+    "stored_capacitor_energy_j": 0.0882,
+    "resistor_charge_upper_mosfet_energy_j": 0.0882,
+    "no_parallel_linear_sharing_credit": true,
+    "gate_off_25us_42v_120a_engineering_allowance_energy_j": 0.126,
+    "line_L_2uh_120a_j": 0.0144,
+    "limits": "Initial motorless supply1A, localambient20..30C, no externalconverter input untilcapacitance/inrush bounded; capturedstartup<=100ms. SOA visualbench check only."
+  },
+  "efuses": {
+    "pc_nominal_ilim_a": 2.980132450331126,
+    "logic_nominal_ilim_a": 1.9801980198019802,
+    "current_limit_engineering_plusminus_percent": 10,
+    "pc_max_assumed_a": 3.281427122486725,
+    "logic_max_assumed_a": 2.1803982200021803,
+    "pulse_overload_note": "TPS26631 can pass2x programmed current during overloadpulse window; branch harness/converter must tolerate thatpulse.",
+    "dvdt_22nf_nominal_v_s": 2272.7272727272725,
+    "ramp42v_nominal_s": 0.018480000000000003,
+    "ramp42v_min_s": 0.015173725151253242,
+    "ramp42v_max_s": 0.02325921486364998,
+    "pc65w_current_at29v_a": 2.2413793103448274,
+    "logic25w_current_at29v_85percent_a": 1.0141987829614605
+  },
+  "motion_imon": {
+    "load_resistance_ohm": 7500.0,
+    "isolated_input_v_per_a_unloaded": 0.011250000000000001,
+    "input_max_v_from_7p5v_abs_raw": 2.503334444814938,
+    "with_wake_100k_adc_pulldown_v_per_a": 0.010465116279069769,
+    "note": "FinalADCpulldown changes load/sensitivity; calibrate using completeintegratednetlist, not nominalunloadedgain."
+  },
+  "selectivity": "NOT PROVEN: currentthreshold andtimerintervals overlap. Bothmain/motion maytrip. FuseBMS curves unknown. Final selectivity is RevBvalidation; external60Afuse identification remains prebattery energizationgate."
+}

@@ -1,0 +1,402 @@
+{
+  "scope": "Initial placement; not a routed-board DRC or thermal validation",
+  "all_168_refs_placed": 168,
+  "bypasses": [
+    {
+      "capacitor": "C205",
+      "owner": "U10",
+      "supply_pin": "2",
+      "supply_pad_mm": [
+        333.75,
+        283.99
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C206",
+      "owner": "U11",
+      "supply_pin": "6",
+      "supply_pad_mm": [
+        27.1,
+        76.0
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C207",
+      "owner": "U12",
+      "supply_pin": "3",
+      "supply_pad_mm": [
+        284.85,
+        244.3
+      ],
+      "capacitor_power_pad_center_distance_mm": 2.1,
+      "upper_bound_copper_edge_distance_mm": 1.55
+    },
+    {
+      "capacitor": "C208",
+      "owner": "U13",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        45.475,
+        277.905
+      ],
+      "capacitor_power_pad_center_distance_mm": 2.05,
+      "upper_bound_copper_edge_distance_mm": 1.5
+    },
+    {
+      "capacitor": "C209",
+      "owner": "U14",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        99.1375,
+        275.05
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C210",
+      "owner": "U15",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        29.1375,
+        209.05
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C211",
+      "owner": "U16",
+      "supply_pin": "1",
+      "supply_pad_mm": [
+        64.8625,
+        233.025
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C212",
+      "owner": "U17",
+      "supply_pin": "3",
+      "supply_pad_mm": [
+        43.9375,
+        210.0
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C213",
+      "owner": "U18",
+      "supply_pin": "8",
+      "supply_pad_mm": [
+        44.4,
+        223.25
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C214",
+      "owner": "U19",
+      "supply_pin": "8",
+      "supply_pad_mm": [
+        55.4,
+        223.25
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C215",
+      "owner": "U20",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        26.1375,
+        235.05
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C216",
+      "owner": "U21",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        89.1375,
+        246.0
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C217",
+      "owner": "U22",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        104.1375,
+        233.05
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C218",
+      "owner": "U23",
+      "supply_pin": "8",
+      "supply_pad_mm": [
+        131.4,
+        230.25
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C219",
+      "owner": "U24",
+      "supply_pin": "8",
+      "supply_pad_mm": [
+        119.4,
+        217.25
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C220",
+      "owner": "U25",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        141.1375,
+        244.0
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C221",
+      "owner": "U26",
+      "supply_pin": "3",
+      "supply_pad_mm": [
+        304.9375,
+        245.0
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C222",
+      "owner": "U27",
+      "supply_pin": "8",
+      "supply_pad_mm": [
+        209.4,
+        194.25
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C223",
+      "owner": "U28",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        166.1375,
+        190.0
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C224",
+      "owner": "U29",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        188.1375,
+        218.0
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C225",
+      "owner": "U50",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        191.1375,
+        195.0
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C226",
+      "owner": "U51",
+      "supply_pin": "1",
+      "supply_pad_mm": [
+        223.6,
+        223.025
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C227",
+      "owner": "U53",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        130.1375,
+        209.05
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C228",
+      "owner": "U54",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        226.1375,
+        183.0
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C229",
+      "owner": "U55",
+      "supply_pin": "8",
+      "supply_pad_mm": [
+        111.4,
+        247.25
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C230",
+      "owner": "U56",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        125.1375,
+        247.05
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C231",
+      "owner": "U57",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        134.1375,
+        248.0
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C232",
+      "owner": "U58",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        131.1375,
+        219.05
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C233",
+      "owner": "U59",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        35.1375,
+        235.05
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C234",
+      "owner": "U60",
+      "supply_pin": "14",
+      "supply_pad_mm": [
+        294.8625,
+        194.05
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C235",
+      "owner": "U61",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        270.1375,
+        242.05
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C236",
+      "owner": "U13",
+      "supply_pin": "3",
+      "supply_pad_mm": [
+        40.525,
+        276.635
+      ],
+      "capacitor_power_pad_center_distance_mm": 2.05,
+      "upper_bound_copper_edge_distance_mm": 1.5
+    },
+    {
+      "capacitor": "C255",
+      "owner": "U62",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        90.1375,
+        217.05
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C256",
+      "owner": "U63",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        106.1375,
+        218.0
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C257",
+      "owner": "U64",
+      "supply_pin": "5",
+      "supply_pad_mm": [
+        80.1375,
+        233.05
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    },
+    {
+      "capacitor": "C258",
+      "owner": "U65",
+      "supply_pin": "14",
+      "supply_pad_mm": [
+        291.8625,
+        269.05
+      ],
+      "capacitor_power_pad_center_distance_mm": 1.95,
+      "upper_bound_copper_edge_distance_mm": 1.4
+    }
+  ]
+}

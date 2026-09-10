@@ -1,0 +1,2108 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "status": "reviewable_circuit_candidate_not_hardware_validated",
+    "net_ties_required": [
+      [
+        "CHOP_GND",
+        "CHOPPER_N"
+      ],
+      [
+        "CHOPPER_N",
+        "BATT_N"
+      ],
+      [
+        "ARM_L_N",
+        "BATT_N"
+      ],
+      [
+        "ARM_R_N",
+        "BATT_N"
+      ],
+      [
+        "DRIVE_N",
+        "BATT_N"
+      ],
+      [
+        "LIFT_N",
+        "BATT_N"
+      ],
+      [
+        "PC_N",
+        "BATT_N"
+      ],
+      [
+        "LOGIC_BUCK_N",
+        "BATT_N"
+      ],
+      [
+        "LOGIC_5V_N",
+        "BATT_N"
+      ]
+    ],
+    "external_components": [
+      {
+        "mpn": "RH10010R00FE01",
+        "quantity": 2,
+        "description": "10ohm100W1% aluminum-housed resistor;parallel bank"
+      },
+      {
+        "mpn": "NTCLE100E3103GB0",
+        "quantity": 2,
+        "description": "10k2% external thermistors, independent analog and telemetry circuits"
+      },
+      {
+        "mpn": "1777989",
+        "quantity": 8,
+        "description": "Mating two-position screw-flanged plugs;add1 forDNPJ13 when fitted"
+      }
+    ]
+  },
+  "components": [
+    {
+      "ref": "U30",
+      "mpn": "TPS7A4001DGNR",
+      "value": "100V LDO, nominal 10V",
+      "footprint": "Package_SO:Texas_DGN0008B_VSSOP-8-1EP_3x3mm_P0.65mm_EP2x3mm_Mask1.88x1.98mm_ThermalVias",
+      "pins": {
+        "1": "CHOP_10V",
+        "2": "CHOP_FB",
+        "3": "NC_U30_3",
+        "4": "CHOP_GND",
+        "5": "MOTION_BUS_P",
+        "6": "NC_U30_6",
+        "7": "NC_U30_7",
+        "8": "MOTION_BUS_P",
+        "9": "CHOP_GND"
+      },
+      "source_url": "https://www.ti.com/lit/ds/symlink/tps7a4001.pdf",
+      "notes": "Pins3/6/7 unconnected. EP internally ground. Motion-bus supply independent of ESP. Datasheet package appendix DGN0008B: exposed mask1.88x1.98mm; matched official KiCad DGN0008B footprint.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "OUT",
+        "2": "FB",
+        "3": "NC",
+        "4": "GND",
+        "5": "EN",
+        "6": "NC",
+        "7": "NC",
+        "8": "IN",
+        "9": "EP"
+      },
+      "pin_types": {
+        "1": "power_out",
+        "2": "input",
+        "3": "no_connect",
+        "4": "power_in",
+        "5": "input",
+        "6": "no_connect",
+        "7": "no_connect",
+        "8": "power_in",
+        "9": "power_in"
+      }
+    },
+    {
+      "ref": "R300",
+      "mpn": "TNPW080575K0BEEA",
+      "value": "75.0k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_10V",
+        "2": "CHOP_FB"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_10V",
+        "2": "CHOP_FB"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R301",
+      "mpn": "TNPW080510K0BEEA",
+      "value": "10.0k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_FB",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_FB",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "C300",
+      "mpn": "C3216X7R2A105K160AB",
+      "value": "1uF 100V",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "pins": {
+        "1": "MOTION_BUS_P",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://product.tdk.com/en/search/capacitor/ceramic/mlcc/info?part_no=C3216X7R2A105K160AB",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "MOTION_BUS_P",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "C301",
+      "mpn": "GRM32ER71E106KA12L",
+      "value": "10uF 25V",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "pins": {
+        "1": "CHOP_10V",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+      "notes": "Effective capacitance must stay >=4.7uF at10V.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_10V",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "U31",
+      "mpn": "REF5025IDR",
+      "value": "2.5V high-grade reference",
+      "footprint": "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",
+      "pins": {
+        "1": "NC_U31_1",
+        "2": "CHOP_10V",
+        "3": "NC_U31_3",
+        "4": "CHOP_GND",
+        "5": "NC_U31_5",
+        "6": "CHOP_REF2V5",
+        "7": "NC_U31_7",
+        "8": "NC_U31_8"
+      },
+      "source_url": "https://www.ti.com/lit/ds/symlink/ref50.pdf",
+      "notes": "High grade:0.05%/3ppm per C. Pins1/8 DNC; TEMP and TRIM/NR unused.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "DNC",
+        "2": "VIN",
+        "3": "TEMP",
+        "4": "GND",
+        "5": "TRIM_NR",
+        "6": "VOUT",
+        "7": "NC",
+        "8": "DNC"
+      },
+      "pin_types": {
+        "1": "no_connect",
+        "2": "power_in",
+        "3": "no_connect",
+        "4": "power_in",
+        "5": "no_connect",
+        "6": "power_out",
+        "7": "no_connect",
+        "8": "no_connect"
+      }
+    },
+    {
+      "ref": "C302",
+      "mpn": "GRM188R71H104KA93D",
+      "value": "100nF 50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "CHOP_10V",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_10V",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "C303",
+      "mpn": "GRM21BR71E105KA99L",
+      "value": "1uF 25V",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_REF2V5",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_REF2V5",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "U32",
+      "mpn": "LM339BIPWR",
+      "value": "Independent analog chopper/OV/NTC window",
+      "footprint": "Package_SO:TSSOP-14_4.4x5mm_P0.65mm",
+      "pins": {
+        "1": "CHOP_OV_OK",
+        "2": "CHOP_REQUEST",
+        "3": "CHOP_10V",
+        "4": "CHOP_REF2V5",
+        "5": "CHOP_SENSE",
+        "6": "CHOP_OV_SENSE",
+        "7": "CHOP_REF2V5",
+        "8": "CHOP_TEMP_LOW",
+        "9": "CHOP_NTC",
+        "10": "CHOP_NTC",
+        "11": "CHOP_TEMP_HIGH",
+        "12": "CHOP_GND",
+        "13": "CHOP_THERMAL_OK",
+        "14": "CHOP_THERMAL_OK"
+      },
+      "source_url": "https://www.ti.com/lit/ds/symlink/lm339b.pdf",
+      "notes": "Ch1 on comparator; ch2 OV; ch3 hot/short; ch4 open. Open collectors ch3/4 wired together. Output low<=0.55V at<=4mA across -40..85C; TLV1704 rejected because its0.9V bound exceeds driver0.8V VIL.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "OUT2",
+        "2": "OUT1",
+        "3": "VCC",
+        "4": "IN1-",
+        "5": "IN1+",
+        "6": "IN2-",
+        "7": "IN2+",
+        "8": "IN3-",
+        "9": "IN3+",
+        "10": "IN4-",
+        "11": "IN4+",
+        "12": "GND",
+        "13": "OUT4",
+        "14": "OUT3"
+      },
+      "pin_types": {
+        "1": "open_collector",
+        "2": "open_collector",
+        "3": "power_in",
+        "4": "input",
+        "5": "input",
+        "6": "input",
+        "7": "input",
+        "8": "input",
+        "9": "input",
+        "10": "input",
+        "11": "input",
+        "12": "power_in",
+        "13": "open_collector",
+        "14": "open_collector"
+      }
+    },
+    {
+      "ref": "C304",
+      "mpn": "GRM188R71H104KA93D",
+      "value": "100nF 50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "CHOP_10V",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_10V",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R302",
+      "mpn": "TNPW0805160KBEEA",
+      "value": "160k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "MOTION_BUS_P",
+        "2": "CHOP_SENSE_TOP"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "MOTION_BUS_P",
+        "2": "CHOP_SENSE_TOP"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R303",
+      "mpn": "TNPW08051K40BEEA",
+      "value": "1.40k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_SENSE_TOP",
+        "2": "CHOP_SENSE"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_SENSE_TOP",
+        "2": "CHOP_SENSE"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R304",
+      "mpn": "TNPW080510K0BEEA",
+      "value": "10.0k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_SENSE",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_SENSE",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R305",
+      "mpn": "TNPW08051M00BEEA",
+      "value": "1.00M 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_GATE",
+        "2": "CHOP_HYS_MID"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_GATE",
+        "2": "CHOP_HYS_MID"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R306",
+      "mpn": "TNPW08051M00BEEA",
+      "value": "1.00M 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_HYS_MID",
+        "2": "CHOP_HYS_MID2"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_HYS_MID",
+        "2": "CHOP_HYS_MID2"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R331",
+      "mpn": "TNPW0805690KBEEA",
+      "value": "690k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_HYS_MID2",
+        "2": "CHOP_SENSE"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_HYS_MID2",
+        "2": "CHOP_SENSE"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "C305",
+      "mpn": "GRM1885C1H101JA01D",
+      "value": "100pF 50V C0G",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "CHOP_SENSE",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_SENSE",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R307",
+      "mpn": "TNPW080510K0BEEA",
+      "value": "10.0k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_10V",
+        "2": "CHOP_REQUEST"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_10V",
+        "2": "CHOP_REQUEST"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R308",
+      "mpn": "TNPW0805174KBEEA",
+      "value": "174k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "MOTION_BUS_P",
+        "2": "CHOP_OV_SENSE"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "MOTION_BUS_P",
+        "2": "CHOP_OV_SENSE"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R309",
+      "mpn": "TNPW080510K0BEEA",
+      "value": "10.0k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_OV_SENSE",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_OV_SENSE",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "C306",
+      "mpn": "GRM1885C1H101JA01D",
+      "value": "100pF 50V C0G",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "CHOP_OV_SENSE",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_OV_SENSE",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R310",
+      "mpn": "TNPW080510K0BEEA",
+      "value": "10.0k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_10V",
+        "2": "CHOP_OV_OK"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_10V",
+        "2": "CHOP_OV_OK"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R311",
+      "mpn": "TNPW080510K0BEEA",
+      "value": "10.0k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_REF2V5",
+        "2": "CHOP_NTC"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_REF2V5",
+        "2": "CHOP_NTC"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R312",
+      "mpn": "TNPW080590K9BEEA",
+      "value": "90.9k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_REF2V5",
+        "2": "CHOP_TEMP_LOW"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_REF2V5",
+        "2": "CHOP_TEMP_LOW"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R313",
+      "mpn": "TNPW080510K0BEEA",
+      "value": "10.0k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_TEMP_LOW",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_TEMP_LOW",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R314",
+      "mpn": "TNPW08051K00BEEA",
+      "value": "1.00k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_REF2V5",
+        "2": "CHOP_TEMP_HIGH"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_REF2V5",
+        "2": "CHOP_TEMP_HIGH"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R315",
+      "mpn": "TNPW0805100KBEEA",
+      "value": "100k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_TEMP_HIGH",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_TEMP_HIGH",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "C307",
+      "mpn": "GRM188R71H104KA93D",
+      "value": "100nF 50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "CHOP_NTC",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_NTC",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R316",
+      "mpn": "TNPW080510K0BEEA",
+      "value": "10.0k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_10V",
+        "2": "CHOP_THERMAL_OK"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_10V",
+        "2": "CHOP_THERMAL_OK"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R317",
+      "mpn": "TNPW0805100KBEEA",
+      "value": "100k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_THERMAL_OK",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_THERMAL_OK",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R318",
+      "mpn": "TNPW080510K0BEEA",
+      "value": "10.0k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_10V",
+        "2": "CHOP_DISABLE"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_10V",
+        "2": "CHOP_DISABLE"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "Q41",
+      "mpn": "2N7002,215",
+      "value": "NTC healthy enables driver",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "1": "CHOP_THERMAL_OK",
+        "2": "CHOP_QUALIFY_N",
+        "3": "CHOP_DISABLE"
+      },
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/2N7002.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "G",
+        "2": "S",
+        "3": "D"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive"
+      }
+    },
+    {
+      "ref": "U33",
+      "mpn": "UCC27511DBVR",
+      "value": "4A source/8A sink driver",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "pins": {
+        "1": "CHOP_10V",
+        "2": "CHOP_DRIVE_H",
+        "3": "CHOP_DRIVE_L",
+        "4": "CHOP_GND",
+        "5": "CHOP_DISABLE",
+        "6": "CHOP_REQUEST"
+      },
+      "source_url": "https://www.ti.com/lit/ds/symlink/ucc27511.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "VDD",
+        "2": "OUTH",
+        "3": "OUTL",
+        "4": "GND",
+        "5": "IN-",
+        "6": "IN+"
+      },
+      "pin_types": {
+        "1": "power_in",
+        "2": "output",
+        "3": "output",
+        "4": "power_in",
+        "5": "input",
+        "6": "input"
+      }
+    },
+    {
+      "ref": "C308",
+      "mpn": "GRM188R71H104KA93D",
+      "value": "100nF 50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "CHOP_10V",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_10V",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "C309",
+      "mpn": "GRM21BR71E105KA99L",
+      "value": "1uF 25V",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_10V",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_10V",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R319",
+      "mpn": "TNPW080510R0BEEA",
+      "value": "10.0 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_DRIVE_H",
+        "2": "CHOP_GATE"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_DRIVE_H",
+        "2": "CHOP_GATE"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R320",
+      "mpn": "TNPW08052R20FEEA",
+      "value": "2.20 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_DRIVE_L",
+        "2": "CHOP_GATE"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "TNPW0805 precision0.1% range starts at3.5ohm; this gate resistor uses supported1% grade.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_DRIVE_L",
+        "2": "CHOP_GATE"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R321",
+      "mpn": "TNPW080547K0BEEA",
+      "value": "47.0k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_GATE",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_GATE",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "Q40",
+      "mpn": "IPT015N10N5ATMA1",
+      "value": "100V chopper NMOS",
+      "footprint": "Package_TO_SOT_SMD:Infineon_PG-HSOF-8-1",
+      "pins": {
+        "1": "CHOP_GATE",
+        "2": "CHOPPER_N",
+        "3": "CHOP_DRAIN"
+      },
+      "source_url": "https://www.infineon.com/assets/row/public/documents/24/49/infineon-ipt015n10n5-datasheet-en.pdf",
+      "notes": "KiCad logical pads1=G,2=all source leads,3=drain tab. Manufacturer physical pin1=G,pins2..8=S,tab=D.6cm2 drain copper;no linear regulation.",
+      "sheet": "04_brake_chopper",
+      "physical_pin_map": {
+        "1": "G",
+        "2-8": "S",
+        "TAB": "D"
+      },
+      "logical_to_physical": {
+        "1": [
+          "1"
+        ],
+        "2": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8"
+        ],
+        "3": [
+          "TAB"
+        ]
+      },
+      "pin_names": {
+        "1": "G",
+        "2": "S_LEADS_2_TO_8",
+        "3": "D_TAB"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive"
+      }
+    },
+    {
+      "ref": "D60",
+      "mpn": "SMCJ43A",
+      "value": "43V standoff TVS 1500W",
+      "footprint": "Diode_SMD:D_SMC",
+      "pins": {
+        "1": "MOTION_BUS_P",
+        "2": "CHOPPER_N"
+      },
+      "source_url": "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smcj_datasheet.pdf.pdf",
+      "notes": "Pin1 cathode. Clamp69.4V at21.7A per10/1000us rating; not a braking resistor; local motion bus only.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "K",
+        "2": "A"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "D61",
+      "mpn": "SMCJ43A",
+      "value": "43V drain spike clamp",
+      "footprint": "Diode_SMD:D_SMC",
+      "pins": {
+        "1": "CHOP_DRAIN",
+        "2": "CHOPPER_N"
+      },
+      "source_url": "https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smcj_datasheet.pdf.pdf",
+      "notes": "Pin1 cathode.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "K",
+        "2": "A"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "D62",
+      "mpn": "BZT52H-C15,115",
+      "value": "15V gate clamp",
+      "footprint": "Diode_SMD:D_SOD-123F",
+      "pins": {
+        "1": "CHOP_GATE",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/BZT52H_SER.pdf",
+      "notes": "Pin1 cathode.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "K",
+        "2": "A"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "D63",
+      "mpn": "MBR10100-M3/4W",
+      "value": "100V 10A resistor cable freewheel",
+      "footprint": "Package_TO_SOT_THT:TO-220-2_Vertical",
+      "pins": {
+        "1": "MOTION_BUS_P",
+        "2": "CHOP_DRAIN"
+      },
+      "source_url": "https://www.vishay.com/docs/89193/mbr10100.pdf",
+      "notes": "Manufacturer pin1 and metal tab CATHODE, pin2 ANODE: verified visual page1. Keep exposed live tab isolated.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "K",
+        "2": "A"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "D64",
+      "mpn": "1N4148WS-E3-08",
+      "value": "LDO reverse discharge path",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "pins": {
+        "1": "MOTION_BUS_P",
+        "2": "CHOP_10V"
+      },
+      "source_url": "https://www.vishay.com/docs/85751/1n4148ws.pdf",
+      "notes": "Cathode1,anode2.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "K",
+        "2": "A"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "D65",
+      "mpn": "1N4148WS-E3-08",
+      "value": "Analog fault OR",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "pins": {
+        "1": "CHOP_OV_OK",
+        "2": "CHOP_FAULT_LED_K"
+      },
+      "source_url": "https://www.vishay.com/docs/85751/1n4148ws.pdf",
+      "notes": "Cathode1,anode2.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "K",
+        "2": "A"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "D66",
+      "mpn": "1N4148WS-E3-08",
+      "value": "Analog fault OR",
+      "footprint": "Diode_SMD:D_SOD-323",
+      "pins": {
+        "1": "CHOP_THERMAL_OK",
+        "2": "CHOP_FAULT_LED_K"
+      },
+      "source_url": "https://www.vishay.com/docs/85751/1n4148ws.pdf",
+      "notes": "Cathode1,anode2.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "K",
+        "2": "A"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R322",
+      "mpn": "TNPW08054K70BEEA",
+      "value": "4.70k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_FAULT_PWR",
+        "2": "CHOP_FAULT_LED_A"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_FAULT_PWR",
+        "2": "CHOP_FAULT_LED_A"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "U34",
+      "mpn": "VOS618A-3T",
+      "value": "Isolated analog fault",
+      "footprint": "Package_SO:SSOP-4_4.4x2.6mm_P1.27mm",
+      "pins": {
+        "1": "CHOP_FAULT_LED_A",
+        "2": "CHOP_FAULT_LED_K",
+        "3": "LOGIC_GND",
+        "4": "CHOP_FAULT_N"
+      },
+      "source_url": "https://www.vishay.com/docs/83465/vos618a.pdf",
+      "notes": "A1 K2 E3 C4. OV or NTC fault activates LED and low fault. Unpowered is released.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "A",
+        "2": "K",
+        "3": "E",
+        "4": "C"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive",
+        "3": "passive",
+        "4": "open_collector"
+      }
+    },
+    {
+      "ref": "Q42",
+      "mpn": "2N7002,215",
+      "value": "Chopper gate status isolation driver",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "1": "CHOP_GATE",
+        "2": "CHOP_GND",
+        "3": "CHOP_ACTIVE_LED_K"
+      },
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/2N7002.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "G",
+        "2": "S",
+        "3": "D"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive"
+      }
+    },
+    {
+      "ref": "R323",
+      "mpn": "TNPW08054K70BEEA",
+      "value": "4.70k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_10V",
+        "2": "CHOP_ACTIVE_LED_A"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_10V",
+        "2": "CHOP_ACTIVE_LED_A"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "U35",
+      "mpn": "VOS618A-3T",
+      "value": "Isolated chopper active",
+      "footprint": "Package_SO:SSOP-4_4.4x2.6mm_P1.27mm",
+      "pins": {
+        "1": "CHOP_ACTIVE_LED_A",
+        "2": "CHOP_ACTIVE_LED_K",
+        "3": "LOGIC_GND",
+        "4": "CHOP_ACTIVE_N"
+      },
+      "source_url": "https://www.vishay.com/docs/83465/vos618a.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "A",
+        "2": "K",
+        "3": "E",
+        "4": "C"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive",
+        "3": "passive",
+        "4": "open_collector"
+      }
+    },
+    {
+      "ref": "R324",
+      "mpn": "TNPW080510K0BEEA",
+      "value": "10.0k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "+3V3",
+        "2": "CHOP_TEMP_ADC"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "+3V3",
+        "2": "CHOP_TEMP_ADC"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "C310",
+      "mpn": "GRM188R71H104KA93D",
+      "value": "100nF 50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "CHOP_TEMP_ADC",
+        "2": "LOGIC_GND"
+      },
+      "source_url": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_TEMP_ADC",
+        "2": "LOGIC_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "U36",
+      "mpn": "TPS3808G01DBVR",
+      "value": "Reference qualification 12..28ms",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "pins": {
+        "1": "CHOP_REF_READY",
+        "2": "CHOP_GND",
+        "3": "CHOP_REF2V5",
+        "4": "NC_U36_CT",
+        "5": "CHOP_REF_SENSE",
+        "6": "CHOP_REF2V5"
+      },
+      "source_url": "https://www.ti.com/lit/ds/symlink/tps3808.pdf",
+      "notes": "SENSE threshold nominal0.405V; RESET_n1,SENSE5. CT4 left open gives20ms nominal,12..28ms. No firmware required.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "RESET_N",
+        "2": "GND",
+        "3": "MR_N",
+        "4": "CT",
+        "5": "SENSE",
+        "6": "VDD"
+      },
+      "pin_types": {
+        "1": "open_collector",
+        "2": "power_in",
+        "3": "input",
+        "4": "no_connect",
+        "5": "input",
+        "6": "power_in"
+      }
+    },
+    {
+      "ref": "R325",
+      "mpn": "TNPW0805117KBEEA",
+      "value": "117k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_REF2V5",
+        "2": "CHOP_REF_SENSE"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_REF2V5",
+        "2": "CHOP_REF_SENSE"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R326",
+      "mpn": "TNPW080524K9BEEA",
+      "value": "24.9k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_REF_SENSE",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_REF_SENSE",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R327",
+      "mpn": "TNPW080510K0BEEA",
+      "value": "10.0k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_REF2V5",
+        "2": "CHOP_REF_READY"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_REF2V5",
+        "2": "CHOP_REF_READY"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R328",
+      "mpn": "TNPW08051K00BEEA",
+      "value": "1.00k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_REF_READY",
+        "2": "CHOP_QUALIFY_BASE"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_REF_READY",
+        "2": "CHOP_QUALIFY_BASE"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R329",
+      "mpn": "TNPW0805100KBEEA",
+      "value": "100k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_QUALIFY_BASE",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_QUALIFY_BASE",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R330",
+      "mpn": "TNPW0805100KBEEA",
+      "value": "100k 0.1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "pins": {
+        "1": "CHOP_10V",
+        "2": "CHOP_QUALIFY_N"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_10V",
+        "2": "CHOP_QUALIFY_N"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "Q43",
+      "mpn": "BSS84,215",
+      "value": "Qualified fault LED power",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "1": "CHOP_QUALIFY_N",
+        "2": "CHOP_10V",
+        "3": "CHOP_FAULT_PWR"
+      },
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/BSS84.pdf",
+      "notes": "PMOS gate1,source2,drain3. Body diode points from qualified rail to10V.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "G",
+        "2": "S",
+        "3": "D"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive"
+      }
+    },
+    {
+      "ref": "Q44",
+      "mpn": "MMBT3904,215",
+      "value": "Qualified local enable",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "pins": {
+        "1": "CHOP_QUALIFY_BASE",
+        "2": "CHOP_GND",
+        "3": "CHOP_QUALIFY_N"
+      },
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf",
+      "notes": "B1 E2 C3. Provides return for thermal-enable Q41 and pulls fault-power PMOS gate low after reference qualification.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "B",
+        "2": "E",
+        "3": "C"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive"
+      }
+    },
+    {
+      "ref": "C311",
+      "mpn": "GRM188R71H104KA93D",
+      "value": "100nF 50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "pins": {
+        "1": "CHOP_REF2V5",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.murata.com/en-us/products/capacitor/ceramiccapacitor",
+      "notes": "",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "CHOP_REF2V5",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "C312",
+      "mpn": "EKYC101ELL471MK35S",
+      "value": "470uF 100V20% high-ripple MOTION bulk",
+      "footprint": "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm",
+      "pins": {
+        "1": "MOTION_BUS_P",
+        "2": "CHOPPER_N"
+      },
+      "source_url": "https://www.chemi-con.co.jp/en/products/detail-condenser.php?part_number=EKYC101ELL471MK35S",
+      "notes": "Positive1,negative2;D12.5mm,L35mm(max36.5),lead0.6mm,pitch5mm. Two parts parallel:940uFnom/752uFmin at20C. Each3.3Arms100kHz105C;0.85factorat1kHz.25mohmmaxESR100kHz. Symmetrical short copper,vent clearance,mechanical restraint. Motion first enable on1Acurrent-limited source;no full-battery inrush proof.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "MOTION_BUS_P",
+        "2": "CHOPPER_N"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "C313",
+      "mpn": "EKYC101ELL471MK35S",
+      "value": "470uF 100V20% high-ripple MOTION bulk",
+      "footprint": "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm",
+      "pins": {
+        "1": "MOTION_BUS_P",
+        "2": "CHOPPER_N"
+      },
+      "source_url": "https://www.chemi-con.co.jp/en/products/detail-condenser.php?part_number=EKYC101ELL471MK35S",
+      "notes": "Positive1,negative2;D12.5mm,L35mm(max36.5),lead0.6mm,pitch5mm. Two parts parallel:940uFnom/752uFmin at20C. Each3.3Arms100kHz105C;0.85factorat1kHz.25mohmmaxESR100kHz. Symmetrical short copper,vent clearance,mechanical restraint. Motion first enable on1Acurrent-limited source;no full-battery inrush proof.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "MOTION_BUS_P",
+        "2": "CHOPPER_N"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "R332",
+      "mpn": "TNPW120622K0FEEA",
+      "value": "22.0k1% motion-bulk discharge",
+      "footprint": "Resistor_SMD:R_1206_3216Metric",
+      "pins": {
+        "1": "MOTION_BUS_P",
+        "2": "CHOPPER_N"
+      },
+      "source_url": "https://www.vishay.com/docs/28758/tnpw_e3.pdf",
+      "notes": "0.52W family P70 maximum;0.096W at46V. With1128uF and+1%R,42Vto5V<54s;measure bus before service.",
+      "sheet": "04_brake_chopper",
+      "pin_names": {
+        "1": "MOTION_BUS_P",
+        "2": "CHOPPER_N"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "J1",
+      "mpn": "7461103",
+      "value": "Battery M5 160A class",
+      "footprint": "PMU:Wurth_7461103",
+      "pins": {
+        "1": "BATT_FUSED_P",
+        "2": "BATT_FUSED_P",
+        "3": "BATT_FUSED_P",
+        "4": "BATT_FUSED_P",
+        "5": "BATT_FUSED_P",
+        "6": "BATT_FUSED_P",
+        "7": "BATT_FUSED_P",
+        "8": "BATT_FUSED_P"
+      },
+      "source_url": "https://www.we-online.com/components/products/datasheet/7461103.pdf",
+      "notes": "All8 pins same potential; exact qualified press-fit drill; lug6mm2; insulated cover;2.2Nm maximum torque.",
+      "sheet": "09_connectors_testpoints",
+      "pin_names": {
+        "1": "BATT_FUSED_P",
+        "2": "BATT_FUSED_P",
+        "3": "BATT_FUSED_P",
+        "4": "BATT_FUSED_P",
+        "5": "BATT_FUSED_P",
+        "6": "BATT_FUSED_P",
+        "7": "BATT_FUSED_P",
+        "8": "BATT_FUSED_P"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive"
+      }
+    },
+    {
+      "ref": "J2",
+      "mpn": "7461103",
+      "value": "Battery M5 160A class",
+      "footprint": "PMU:Wurth_7461103",
+      "pins": {
+        "1": "BATT_N",
+        "2": "BATT_N",
+        "3": "BATT_N",
+        "4": "BATT_N",
+        "5": "BATT_N",
+        "6": "BATT_N",
+        "7": "BATT_N",
+        "8": "BATT_N"
+      },
+      "source_url": "https://www.we-online.com/components/products/datasheet/7461103.pdf",
+      "notes": "All8 pins same potential; exact qualified press-fit drill; lug6mm2; insulated cover;2.2Nm maximum torque.",
+      "sheet": "09_connectors_testpoints",
+      "pin_names": {
+        "1": "BATT_N",
+        "2": "BATT_N",
+        "3": "BATT_N",
+        "4": "BATT_N",
+        "5": "BATT_N",
+        "6": "BATT_N",
+        "7": "BATT_N",
+        "8": "BATT_N"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive"
+      }
+    },
+    {
+      "ref": "J3",
+      "mpn": "7461103",
+      "value": "Left arm + M5 160A class",
+      "footprint": "PMU:Wurth_7461103",
+      "pins": {
+        "1": "MOTION_BUS_P",
+        "2": "MOTION_BUS_P",
+        "3": "MOTION_BUS_P",
+        "4": "MOTION_BUS_P",
+        "5": "MOTION_BUS_P",
+        "6": "MOTION_BUS_P",
+        "7": "MOTION_BUS_P",
+        "8": "MOTION_BUS_P"
+      },
+      "source_url": "https://www.we-online.com/components/products/datasheet/7461103.pdf",
+      "notes": "Same qualified M5 press-fit terminal as battery.4mm2 cable with M5 ring lug;25A prototype envelope,temperature validation. KDSP4/1 1714029 is an alternate requiring another footprint.",
+      "sheet": "09_connectors_testpoints",
+      "pin_names": {
+        "1": "MOTION_BUS_P",
+        "2": "MOTION_BUS_P",
+        "3": "MOTION_BUS_P",
+        "4": "MOTION_BUS_P",
+        "5": "MOTION_BUS_P",
+        "6": "MOTION_BUS_P",
+        "7": "MOTION_BUS_P",
+        "8": "MOTION_BUS_P"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive"
+      }
+    },
+    {
+      "ref": "J4",
+      "mpn": "7461103",
+      "value": "Left arm return M5 160A class",
+      "footprint": "PMU:Wurth_7461103",
+      "pins": {
+        "1": "ARM_L_N",
+        "2": "ARM_L_N",
+        "3": "ARM_L_N",
+        "4": "ARM_L_N",
+        "5": "ARM_L_N",
+        "6": "ARM_L_N",
+        "7": "ARM_L_N",
+        "8": "ARM_L_N"
+      },
+      "source_url": "https://www.we-online.com/components/products/datasheet/7461103.pdf",
+      "notes": "Same qualified M5 press-fit terminal as battery.4mm2 cable with M5 ring lug;25A prototype envelope,temperature validation. KDSP4/1 1714029 is an alternate requiring another footprint.",
+      "sheet": "09_connectors_testpoints",
+      "pin_names": {
+        "1": "ARM_L_N",
+        "2": "ARM_L_N",
+        "3": "ARM_L_N",
+        "4": "ARM_L_N",
+        "5": "ARM_L_N",
+        "6": "ARM_L_N",
+        "7": "ARM_L_N",
+        "8": "ARM_L_N"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive"
+      }
+    },
+    {
+      "ref": "J5",
+      "mpn": "7461103",
+      "value": "Right arm + M5 160A class",
+      "footprint": "PMU:Wurth_7461103",
+      "pins": {
+        "1": "MOTION_BUS_P",
+        "2": "MOTION_BUS_P",
+        "3": "MOTION_BUS_P",
+        "4": "MOTION_BUS_P",
+        "5": "MOTION_BUS_P",
+        "6": "MOTION_BUS_P",
+        "7": "MOTION_BUS_P",
+        "8": "MOTION_BUS_P"
+      },
+      "source_url": "https://www.we-online.com/components/products/datasheet/7461103.pdf",
+      "notes": "Same qualified M5 press-fit terminal as battery.4mm2 cable with M5 ring lug;25A prototype envelope,temperature validation. KDSP4/1 1714029 is an alternate requiring another footprint.",
+      "sheet": "09_connectors_testpoints",
+      "pin_names": {
+        "1": "MOTION_BUS_P",
+        "2": "MOTION_BUS_P",
+        "3": "MOTION_BUS_P",
+        "4": "MOTION_BUS_P",
+        "5": "MOTION_BUS_P",
+        "6": "MOTION_BUS_P",
+        "7": "MOTION_BUS_P",
+        "8": "MOTION_BUS_P"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive"
+      }
+    },
+    {
+      "ref": "J6",
+      "mpn": "7461103",
+      "value": "Right arm return M5 160A class",
+      "footprint": "PMU:Wurth_7461103",
+      "pins": {
+        "1": "ARM_R_N",
+        "2": "ARM_R_N",
+        "3": "ARM_R_N",
+        "4": "ARM_R_N",
+        "5": "ARM_R_N",
+        "6": "ARM_R_N",
+        "7": "ARM_R_N",
+        "8": "ARM_R_N"
+      },
+      "source_url": "https://www.we-online.com/components/products/datasheet/7461103.pdf",
+      "notes": "Same qualified M5 press-fit terminal as battery.4mm2 cable with M5 ring lug;25A prototype envelope,temperature validation. KDSP4/1 1714029 is an alternate requiring another footprint.",
+      "sheet": "09_connectors_testpoints",
+      "pin_names": {
+        "1": "ARM_R_N",
+        "2": "ARM_R_N",
+        "3": "ARM_R_N",
+        "4": "ARM_R_N",
+        "5": "ARM_R_N",
+        "6": "ARM_R_N",
+        "7": "ARM_R_N",
+        "8": "ARM_R_N"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive"
+      }
+    },
+    {
+      "ref": "J7",
+      "mpn": "1776508",
+      "value": "Drive 8A peak",
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "pins": {
+        "1": "MOTION_BUS_P",
+        "2": "DRIVE_N"
+      },
+      "source_url": "https://www.phoenixcontact.com/en-us/products/pcb-header-mstb-25-2-gf-508-1776508",
+      "notes": "12A header; mating screw-flanged plug1777989. 1.5mm2 trunk.",
+      "sheet": "09_connectors_testpoints",
+      "dnp": false,
+      "pin_names": {
+        "1": "MOTION_BUS_P",
+        "2": "DRIVE_N"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "J8",
+      "mpn": "1776508",
+      "value": "24V lift-buck INPUT",
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "pins": {
+        "1": "MOTION_BUS_P",
+        "2": "LIFT_N"
+      },
+      "source_url": "https://www.phoenixcontact.com/en-us/products/pcb-header-mstb-25-2-gf-508-1776508",
+      "notes": "12A header; mating screw-flanged plug1777989. 1.0mm2;5A provisional input.",
+      "sheet": "09_connectors_testpoints",
+      "dnp": false,
+      "pin_names": {
+        "1": "MOTION_BUS_P",
+        "2": "LIFT_N"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "J9",
+      "mpn": "1776508",
+      "value": "12V PC-buck INPUT",
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "pins": {
+        "1": "PC_BUCK_IN_P",
+        "2": "PC_N"
+      },
+      "source_url": "https://www.phoenixcontact.com/en-us/products/pcb-header-mstb-25-2-gf-508-1776508",
+      "notes": "12A header; mating screw-flanged plug1777989. 0.75mm2;3A input.",
+      "sheet": "09_connectors_testpoints",
+      "dnp": false,
+      "pin_names": {
+        "1": "PC_BUCK_IN_P",
+        "2": "PC_N"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "J10",
+      "mpn": "1776508",
+      "value": "5V logic-buck INPUT",
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "pins": {
+        "1": "LOGIC_BUCK_IN_P",
+        "2": "LOGIC_BUCK_N"
+      },
+      "source_url": "https://www.phoenixcontact.com/en-us/products/pcb-header-mstb-25-2-gf-508-1776508",
+      "notes": "12A header; mating screw-flanged plug1777989. 1.0mm2;2A provisional input.",
+      "sheet": "09_connectors_testpoints",
+      "dnp": false,
+      "pin_names": {
+        "1": "LOGIC_BUCK_IN_P",
+        "2": "LOGIC_BUCK_N"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "J11",
+      "mpn": "1776508",
+      "value": "5V converter OUTPUT return",
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "pins": {
+        "1": "+5V",
+        "2": "LOGIC_5V_N"
+      },
+      "source_url": "https://www.phoenixcontact.com/en-us/products/pcb-header-mstb-25-2-gf-508-1776508",
+      "notes": "12A header; mating screw-flanged plug1777989. 1.0mm2;5A input to board; key separately fromJ10.",
+      "sheet": "09_connectors_testpoints",
+      "dnp": false,
+      "pin_names": {
+        "1": "+5V",
+        "2": "LOGIC_5V_N"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "J12",
+      "mpn": "1776508",
+      "value": "External resistor bank",
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "pins": {
+        "1": "MOTION_BUS_P",
+        "2": "CHOP_DRAIN"
+      },
+      "source_url": "https://www.phoenixcontact.com/en-us/products/pcb-header-mstb-25-2-gf-508-1776508",
+      "notes": "12A header; mating screw-flanged plug1777989. 1.5mm2 high-temp twisted pair; neither pin is ground.",
+      "sheet": "09_connectors_testpoints",
+      "dnp": false,
+      "pin_names": {
+        "1": "MOTION_BUS_P",
+        "2": "CHOP_DRAIN"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "J13",
+      "mpn": "1776508",
+      "value": "24V lift clamp DNP",
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "pins": {
+        "1": "LIFT_24V_SAMPLE",
+        "2": "LIFT_24V_N"
+      },
+      "source_url": "https://www.phoenixcontact.com/en-us/products/pcb-header-mstb-25-2-gf-508-1776508",
+      "notes": "12A header; mating screw-flanged plug1777989. Sample external converter OUTPUT only; separately keyed.",
+      "sheet": "09_connectors_testpoints",
+      "dnp": true,
+      "pin_names": {
+        "1": "LIFT_24V_SAMPLE",
+        "2": "LIFT_24V_N"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "J14",
+      "mpn": "1776508",
+      "value": "Analog bank NTC",
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "pins": {
+        "1": "CHOP_NTC",
+        "2": "CHOP_GND"
+      },
+      "source_url": "https://www.phoenixcontact.com/en-us/products/pcb-header-mstb-25-2-gf-508-1776508",
+      "notes": "12A header; mating screw-flanged plug1777989. NTCLE100E3103GB0,10k2%; electrically insulated to hotter resistor chassis.",
+      "sheet": "09_connectors_testpoints",
+      "dnp": false,
+      "pin_names": {
+        "1": "CHOP_NTC",
+        "2": "CHOP_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "J15",
+      "mpn": "1776508",
+      "value": "Telemetry bank NTC",
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "pins": {
+        "1": "CHOP_TEMP_ADC",
+        "2": "LOGIC_GND"
+      },
+      "source_url": "https://www.phoenixcontact.com/en-us/products/pcb-header-mstb-25-2-gf-508-1776508",
+      "notes": "12A header; mating screw-flanged plug1777989. Second NTCLE100E3103GB0; no shared sensor or local wiring withJ14. Grounds ultimately join at the systemstar.",
+      "sheet": "09_connectors_testpoints",
+      "dnp": false,
+      "pin_names": {
+        "1": "CHOP_TEMP_ADC",
+        "2": "LOGIC_GND"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      }
+    },
+    {
+      "ref": "J16",
+      "mpn": "BM04B-GHS-TBT(LF)(SN)",
+      "value": "CAN backbone IN",
+      "footprint": "Connector_JST:JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical",
+      "pins": {
+        "1": "CAN_H",
+        "2": "CAN_L",
+        "3": "LOGIC_GND",
+        "4": "CHASSIS"
+      },
+      "source_url": "https://www.jst-mfg.com/product/pdf/eng/eGH.pdf",
+      "notes": "Mating GHR-04V-S housing and SSHL-002T-P0.2 contacts. Linear CAN backbone; short parallel link across board; shield to CHASSIS strategy in CAN sheet.",
+      "sheet": "09_connectors_testpoints",
+      "pin_names": {
+        "1": "CAN_H",
+        "2": "CAN_L",
+        "3": "LOGIC_GND",
+        "4": "CHASSIS"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive"
+      }
+    },
+    {
+      "ref": "J17",
+      "mpn": "BM04B-GHS-TBT(LF)(SN)",
+      "value": "CAN backbone OUT",
+      "footprint": "Connector_JST:JST_GH_BM04B-GHS-TBT_1x04-1MP_P1.25mm_Vertical",
+      "pins": {
+        "1": "CAN_H",
+        "2": "CAN_L",
+        "3": "LOGIC_GND",
+        "4": "CHASSIS"
+      },
+      "source_url": "https://www.jst-mfg.com/product/pdf/eng/eGH.pdf",
+      "notes": "Mating GHR-04V-S housing and SSHL-002T-P0.2 contacts. Linear CAN backbone; short parallel link across board; shield to CHASSIS strategy in CAN sheet.",
+      "sheet": "09_connectors_testpoints",
+      "pin_names": {
+        "1": "CAN_H",
+        "2": "CAN_L",
+        "3": "LOGIC_GND",
+        "4": "CHASSIS"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive"
+      }
+    },
+    {
+      "ref": "J18",
+      "mpn": "1776511",
+      "value": "5V LED strip 5A",
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_3-GF-5,08_1x03_P5.08mm_Horizontal_ThreadedFlange",
+      "pins": {
+        "1": "+5V",
+        "2": "LED_DATA_OUT",
+        "3": "LOGIC_5V_N"
+      },
+      "source_url": "https://www.phoenixcontact.com/en-au/products/pcb-header-mstb-25-3-gf-508-1776511",
+      "notes": "12A rated; mating1777992 screw-flanged plug. 1mm2 power/return;0.25mm2 data. LED return is LOGIC_5V_N direct broad copper toJ11.2/NT8; data reference meetsLOGIC_GND atsystemstar, never viaNT9 smallsignalneck.",
+      "sheet": "09_connectors_testpoints",
+      "pin_names": {
+        "1": "+5V",
+        "2": "LED_DATA_OUT",
+        "3": "LOGIC_5V_N"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive",
+        "3": "passive"
+      }
+    }
+  ]
+}

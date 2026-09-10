@@ -1,0 +1,156 @@
+{
+  "status": "analytic_prototype_estimate_not_hardware_validation",
+  "assumptions": {
+    "resistor_fraction_error": 0.002125,
+    "reference_fraction_error": 0.0009350000000000001,
+    "comparator_offset_bound_V": 0.0055,
+    "input_bias_bound_A": 5e-08,
+    "PCB_ambient_range_C": [
+      0,
+      70
+    ],
+    "gate_high_V": [
+      9.7012965,
+      10.2397035
+    ],
+    "conductor_temperature_C": 100,
+    "rho_Cu_20C_ohm_m": 1.724e-08
+  },
+  "thresholds_V": {
+    "nominal_on": 43.0,
+    "nominal_off": 42.40177,
+    "on_corner_bounds": [
+      42.682933329366186,
+      43.31592445427423
+    ],
+    "off_corner_bounds": [
+      42.072172550263026,
+      42.73320580388339
+    ],
+    "independent_OV_corner_bounds": [
+      45.66320386794157,
+      46.33877800084084
+    ],
+    "minimum_hysteresis_bound": 0.5766219280990394
+  },
+  "bank": [
+    {
+      "voltage_V": 42.4,
+      "nominal_current_A": 8.48,
+      "min_R_4_95ohm_current_A": 8.565656565656566,
+      "nominal_power_W": 359.552,
+      "max_power_at_minus1percent_R_W": 363.18383838383835,
+      "time_to_500J_at_max_power_s": 1.3767132431470275
+    },
+    {
+      "voltage_V": 43,
+      "nominal_current_A": 8.6,
+      "min_R_4_95ohm_current_A": 8.686868686868687,
+      "nominal_power_W": 369.8,
+      "max_power_at_minus1percent_R_W": 373.5353535353535,
+      "time_to_500J_at_max_power_s": 1.3385613845321795
+    },
+    {
+      "voltage_V": 43.5,
+      "nominal_current_A": 8.7,
+      "min_R_4_95ohm_current_A": 8.787878787878787,
+      "nominal_power_W": 378.45,
+      "max_power_at_minus1percent_R_W": 382.27272727272725,
+      "time_to_500J_at_max_power_s": 1.3079667063020215
+    },
+    {
+      "voltage_V": 45,
+      "nominal_current_A": 9.0,
+      "min_R_4_95ohm_current_A": 9.09090909090909,
+      "nominal_power_W": 405.0,
+      "max_power_at_minus1percent_R_W": 409.09090909090907,
+      "time_to_500J_at_max_power_s": 1.2222222222222223
+    },
+    {
+      "voltage_V": 46,
+      "nominal_current_A": 9.2,
+      "min_R_4_95ohm_current_A": 9.292929292929292,
+      "nominal_power_W": 423.2,
+      "max_power_at_minus1percent_R_W": 427.47474747474746,
+      "time_to_500J_at_max_power_s": 1.1696597353497165
+    }
+  ],
+  "conductors": {
+    "bar_R_100C_ohm": 7.553418666666667e-05,
+    "two_pours_R_100C_ohm": 0.0008092948571428573,
+    "single_via_R_100C_ohm": 0.0011540773613208898,
+    "current_rows": [
+      {
+        "current_A": 25,
+        "bar_100mm_loss_W": 0.04720886666666667,
+        "two_pours_100mm_loss_W": 0.5058092857142859,
+        "160_via_transfer_loss_W": 0.004508114692659725
+      },
+      {
+        "current_A": 45,
+        "bar_100mm_loss_W": 0.15295672800000001,
+        "two_pours_100mm_loss_W": 1.6388220857142861,
+        "160_via_transfer_loss_W": 0.014606291604217512
+      },
+      {
+        "current_A": 50,
+        "bar_100mm_loss_W": 0.18883546666666667,
+        "two_pours_100mm_loss_W": 2.0232371428571434,
+        "160_via_transfer_loss_W": 0.0180324587706389
+      },
+      {
+        "current_A": 60,
+        "bar_100mm_loss_W": 0.27192307200000004,
+        "two_pours_100mm_loss_W": 2.9134614857142864,
+        "160_via_transfer_loss_W": 0.02596674062972002
+      },
+      {
+        "current_A": 120,
+        "bar_100mm_loss_W": 1.0876922880000002,
+        "two_pours_100mm_loss_W": 11.653845942857146,
+        "160_via_transfer_loss_W": 0.10386696251888008
+      },
+      {
+        "current_A": 150,
+        "bar_100mm_loss_W": 1.6995192000000001,
+        "two_pours_100mm_loss_W": 18.209134285714292,
+        "160_via_transfer_loss_W": 0.16229212893575012
+      }
+    ],
+    "bar150A3s_adiabatic_delta_C": 0.49267138218923934,
+    "160vias150A3s_adiabatic_delta_C": 17.549313605901666
+  },
+  "supervisor": {
+    "nominal_reference_valid_V": 2.3080120481927717,
+    "qualification_ms": [
+      12,
+      20,
+      28
+    ]
+  },
+  "motion_bulk": {
+    "part": "EKYC101ELL471MK35S",
+    "quantity": 2,
+    "nominal_uF": 940,
+    "tolerance_only_min_uF": 752,
+    "tolerance_only_max_uF": 1128,
+    "nominal_energy_at42V_J": 0.8290799999999999,
+    "max_energy_at42V_J": 0.9948960000000001,
+    "worst_hysteretic_frequency_Hz": 5357.7648275261845,
+    "max_total_capacitor_ripple_RMS_A": 4.646464646464646,
+    "max_capacitor_ripple_balanced_RMS_A": 2.323232323232323,
+    "each_rating_1kHz105C_RMS_A": 2.8049999999999997,
+    "bleed_R_ohm": 22000,
+    "bleed_loss_at46V_W": 0.09618181818181819,
+    "max_RC_time42V_to5V_s": 53.34233999247899,
+    "limits": "Capacitance bounds only20C120Hz initial. Frequency formula neglectsESR/inductance/delay. Measurecapacitance,ripple,sharing,ESR andinrush beforehigherenergy."
+  },
+  "thermal": {
+    "ntc_trip_resistance_ohm": 1100.1100110011,
+    "trip_temperature_C_approx_from_manufacturer_table": 84.0,
+    "open_detection_R_ohm": 1000000,
+    "telemetry_at25C_V": 1.65,
+    "bank_500J_60s_average_W": 8.333333333333334,
+    "one_305x305x3_2mm_Al_plate_250J_adiabatic_delta_C": 0.34560823177981054
+  }
+}

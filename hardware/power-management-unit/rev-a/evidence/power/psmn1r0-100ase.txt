@@ -1,0 +1,803 @@
+PAGE 1
+CCPAK1212
+PSMN1R0-100ASE
+N-channel, 100 V, 1.04 mOhm, MOSFET with enhanced SOA
+in CCPAK1212 package
+20 October 2025 Product data sheet
+1.  General description
+N-channel enhancement mode MOSFET in a CCPAK1212 package qualified to 175 °C.
+Part of Nexperia's Application Specific MOSFETs (ASFETs) for Hotswap and Soft Start. The
+PSMN1R0-100ASE delivers very low RDSon and enhanced safe operating area performance in a
+high-reliability copper-clip package (CCPAK1212).
+PSMN1R0-100ASE complements the latest "hot-swap" controllers - robust enough to withstand
+substantial inrush currents during turn-on, low RDSon to minimize I²R losses and deliver optimum
+efficiency when turned fully ON.
+2.  Features and benefits
+• Fully optimized Safe Operating Area (SOA) for superior linear mode operation
+• Low RDSon for low I²R conduction losses
+• CCPAK1212 package for applications that demand the highest performance and reliability
+• CCPAK1212 is JEDEC listed package for open market and 2nd source compatibility
+3.  Applications
+• Hot swap
+• Load switch
+• Soft start
+• E-fuse
+• Telecommunication systems based on a 48 V backplane/supply rail
+4.  Quick reference data
+Table 1. Quick reference data
+Symbol Parameter Conditions Min Typ Max Unit
+VDS drain-source voltage 25 °C ≤  Tj ≤  175 °C - - 100 V
+ID drain current VGS = 10 V; Tmb = 25 °C; Fig. 2 - - 430 A
+Ptot total power dissipation Tmb = 25 °C; Fig. 1 - - 1.55 kW
+Static characteristics
+RDSon drain-source on-state
+resistance
+VGS = 10 V; ID = 25 A; Tj = 25 °C;
+Fig. 11
+- 0.82 1.04 mΩ
+Dynamic characteristics
+QGD gate-drain charge ID = 25 A; VDS = 50 V; VGS = 10 V;
+Tj = 25 °C; Fig. 13; Fig. 14
+14.5 48.2 111 nC
+Source-drain diode
+Qr recovered charge IS = 25 A; dIS/dt = -100 A/µs; VGS = 0 V;
+VDS = 50 V; Tj = 25 °C; Fig. 17
+- 110 - nC
+PAGE 2
+Nexperia PSMN1R0-100ASE
+N-channel, 100 V, 1.04 mOhm, MOSFET with enhanced SOA in CCPAK1212 package
+5.  Pinning information
+Table 2. Pinning information
+Pin Symbol Description Simplified outline Graphic symbol
+1 G gate
+2 S source
+3 S source
+4 S source
+5 S source
+6 S source
+7 D drain
+8 D drain
+9 D drain
+10 D drain
+11 D drain
+12 D drain
+mb D mounting base; connected
+to drain
+2 3 4 5
+11 10 9 8
+1 6
+712
+CCPAK1212 (SOT8000A)
+S
+D
+G
+mbb076
+6.  Ordering information
+Table 3. Ordering information
+PackageType number
+Name Description Version
+PSMN1R0-100ASE CCPAK1212 Plastic, surface mounted copper clip package
+(CCPAK1212); 13 terminals; 2.0 mm pitch, 12 mm x 12
+mm x 2.5 mm body
+SOT8000A
+7.  Marking
+Table 4. Marking codes
+Type number Marking code
+PSMN1R0-100ASE XP1E0S10A
+PSMN1R0-100ASE
+Submit document feedback
+All information provided in this document is subject to legal disclaimers. © Nexperia B.V. 2025. All rights reserved
+Product data sheet 20 October 2025 2 / 13
+PAGE 3
+Nexperia PSMN1R0-100ASE
+N-channel, 100 V, 1.04 mOhm, MOSFET with enhanced SOA in CCPAK1212 package
+8.  Limiting values
+Table 5. Limiting values
+In accordance with the Absolute Maximum Rating System (IEC 60134).Tj = 25 °C unless otherwise stated.
+Symbol Parameter Conditions Min Max Unit
+VDS drain-source voltage 25 °C ≤  Tj ≤  175 °C - 100 V
+VDGR drain-gate voltage 25 °C ≤  Tj ≤  175 °C; RGS = 20 kΩ - 100 V
+VGS gate-source voltage -20 20 V
+Ptot total power dissipation Tmb = 25 °C; Fig. 1 - 1.55 kW
+VGS = 10 V; Tmb = 25 °C; Fig. 2 - 430 AID drain current
+VGS = 10 V; Tmb = 100 °C; Fig. 2 - 430 A
+IDM peak drain current pulsed; tp ≤  10 µs; Tmb = 25 °C; Fig. 3 - 3216 A
+Tstg storage temperature -55 175 °C
+Tj junction temperature -55 175 °C
+Tsld(M) peak soldering
+temperature
+- 260 °C
+Source-drain diode
+IS source current Tmb = 25 °C - 430 A
+ISM peak source current pulsed; tp ≤  10 µs; Tmb = 25 °C - 3216 A
+Avalanche ruggedness
+EDS(AL)S non-repetitive drain-
+source avalanche energy
+ID = 117 A; Vsup ≤  100 V; RGS = 50 Ω;
+VGS = 10 V; Tj(init) = 25 °C; unclamped;
+tp = 214 µs; Fig. 4
+[1] - 1630 mJ
+IAS non-repetitive avalanche
+current
+Vsup ≤  100 V; VGS = 10 V; Tj(init) = 25 °C;
+RGS = 50 Ω; Fig. 4
+[1] - 117 A
+[1] Protected by 100% test
+Tmb (°C)
+0 20015050 100
+03aa16
+40
+80
+120
+Pder 
+(%)
+0
+Fig. 1. Normalized total power dissipation as a
+function of mounting base temperature
+aaa-040100
+0 25 50 75 100 125 150 175 200
+0
+200
+400
+600
+800
+1000
+Tmb (°C)
+IDID
+(A)(A)
+(1)(1)
+VGS ≥ 10 V
+(1) 430 A continuous current has been successfully
+demonstrated during application tests. Practically
+the current will be limited by PCB, thermal design
+and operating temperature.
+Fig. 2. Continuous drain current as a function of
+mounting base temperature
+PSMN1R0-100ASE
+Submit document feedback
+All information provided in this document is subject to legal disclaimers. © Nexperia B.V. 2025. All rights reserved
+Product data sheet 20 October 2025 3 / 13
+PAGE 4
+Nexperia PSMN1R0-100ASE
+N-channel, 100 V, 1.04 mOhm, MOSFET with enhanced SOA in CCPAK1212 package
+aaa-040102
+1 10 102
+1
+10
+102
+103
+104
+VDS (V)
+IDID
+(A)(A)
+DCDC
+100 ms100 ms
+10 ms10 ms
+1 ms1 ms
+100 µs100 µs
+tp = 10 µstp = 10 µs
+DCDC100ms100ms
+10ms10ms
+1ms1ms
+100 µs100 µs10 µs10 µs
+Limit RDSon = VDS / IDLimit RDSon = VDS / ID
+Tmb = 25 °C (solid black line); Tmb = 125 °C (red dashed line); IDM is a single pulse
+Fig. 3. Safe operating area; continuous and peak drain currents as a function of drain-source voltage
+aaa-040101
+10-3 10-2 10-1 1 10
+10-1
+1
+10
+102
+103
+tAL (ms)
+IALIAL
+(A)(A)
+(1)(1)
+(2)(2)
+(3)(3)
+(1) Tj (init) = 25 °C; (2) Tj (init) = 150 °C; (3) Repetitive Avalanche
+Fig. 4. Avalanche rating; avalanche current as a function of avalanche time
+9.  Thermal characteristics
+Table 6. Thermal characteristics
+Symbol Parameter Conditions Min Typ Max Unit
+Rth(j-mb) thermal resistance from
+junction to mounting
+base
+Fig. 5 - 0.075 0.1 K/W
+Fig. 6 - 58 - K/WRth(j-a) thermal resistance from
+junction to ambient Fig. 7 - 29 - K/W
+PSMN1R0-100ASE
+Submit document feedback
+All information provided in this document is subject to legal disclaimers. © Nexperia B.V. 2025. All rights reserved
+Product data sheet 20 October 2025 4 / 13
+PAGE 5
+Nexperia PSMN1R0-100ASE
+N-channel, 100 V, 1.04 mOhm, MOSFET with enhanced SOA in CCPAK1212 package
+aaa-039736
+10-6 10-5 10-4 10-3 10-2 10-1 1
+10-3
+10-2
+10-1
+tp (s)
+Zth(j-mb)Zth(j-mb)
+(K/W)(K/W)
+single shotsingle shot
+δ = 0.5δ = 0.5
+0.20.2
+0.10.1
+0.050.05
+0.020.02
+P
+ttp
+T
+tp
+δ = T
+Fig. 5. Transient thermal impedance from junction to mounting base as a function of pulse duration
+aaa-040397
+70 μm thick Copper on FR4 board
+Fig. 6. PCB layout with minimum footprint for thermal
+resistance from junction to ambient
+aaa-040398
+Copper area 25.4mm square; 70 μm thick on FR4
+board
+Fig. 7. PCB layout for thermal resistance from junction
+to ambient
+PSMN1R0-100ASE
+Submit document feedback
+All information provided in this document is subject to legal disclaimers. © Nexperia B.V. 2025. All rights reserved
+Product data sheet 20 October 2025 5 / 13
+PAGE 6
+Nexperia PSMN1R0-100ASE
+N-channel, 100 V, 1.04 mOhm, MOSFET with enhanced SOA in CCPAK1212 package
+10.  Characteristics
+Table 7. Characteristics
+Symbol Parameter Conditions Min Typ Max Unit
+Static characteristics
+ID = 250 µA; VGS = 0 V; Tj = 25 °C 100 - - VV(BR)DSS drain-source
+breakdown voltage ID = 250 µA; VGS = 0 V; Tj = -55 °C 90 - - V
+ID = 1 mA; VDS=VGS; Tj = 25 °C 2 2.6 3.6 V
+ID = 1 mA; VDS=VGS; Tj = 175 °C - 1.55 - V
+VGS(th) gate-source threshold
+voltage
+ID = 1 mA; VDS=VGS; Tj = -55 °C - 3 - V
+ΔVGS(th)/ΔT gate-source threshold
+voltage variation with
+temperature
+25 °C ≤  Tj ≤  150 °C - -6.6 - mV/K
+VDS = 100 V; VGS = 0 V; Tj = 25 °C - 0.06 2 µAIDSS drain leakage current
+VDS = 100 V; VGS = 0 V; Tj = 125 °C - 40 200 µA
+VGS = 20 V; VDS = 0 V; Tj = 25 °C - 2 100 nAIGSS gate leakage current
+VGS = -20 V; VDS = 0 V; Tj = 25 °C - 2 100 nA
+VGS = 10 V; ID = 25 A; Tj = 25 °C;
+Fig. 11
+- 0.82 1.04 mΩ
+VGS = 10 V; ID = 25 A; Tj = 100 °C;
+Fig. 12
+- 1.2 1.7 mΩ
+RDSon drain-source on-state
+resistance
+VGS = 10 V; ID = 25 A; Tj = 175 °C;
+Fig. 12
+- 1.7 2.4 mΩ
+RG gate resistance f = 1 MHz; Tj = 25 °C 0.64 1.27 2.55 Ω
+Dynamic characteristics
+ID = 25 A; VDS = 50 V; VGS = 10 V;
+Tj = 25 °C; Fig. 13; Fig. 14
+170 339 509 nCQG(tot) total gate charge
+ID = 0 A; VDS = 0 V; VGS = 10 V;
+Tj = 25 °C
+- 312 - nC
+QGS gate-source charge 64.8 108 151 nC
+QGS(th) pre-threshold gate-
+source charge
+- 73.6 - nC
+QGS(th-pl) post-threshold gate-
+source charge
+- 34.4 - nC
+QGD gate-drain charge
+ID = 25 A; VDS = 50 V; VGS = 10 V;
+Tj = 25 °C; Fig. 13; Fig. 14
+14.5 48.2 111 nC
+VGS(pl) gate-source plateau
+voltage
+ID = 25 A; VDS = 50 V; Tj = 25 °C;
+Fig. 13; Fig. 14
+- 4.3 - V
+Ciss input capacitance 15626 26043 36460 pF
+Coss output capacitance 3381 5635 9015 pF
+Crss reverse transfer
+capacitance
+VDS = 50 V; VGS = 0 V; f = 0.5 MHz;
+Tj = 25 °C; Fig. 15
+14 137 356 pF
+td(on) turn-on delay time - 87 - ns
+tr rise time - 91 - ns
+td(off) turn-off delay time - 212 - ns
+tf fall time
+VDS = 50 V; RL = 2 Ω; VGS = 10 V;
+RG(ext) = 5 Ω; Tj = 25 °C
+- 131 - ns
+Source-drain diode
+VSD source-drain voltage IS = 25 A; VGS = 0 V; Tj = 25 °C; Fig. 16 - 0.75 1 V
+PSMN1R0-100ASE
+Submit document feedback
+All information provided in this document is subject to legal disclaimers. © Nexperia B.V. 2025. All rights reserved
+Product data sheet 20 October 2025 6 / 13
+PAGE 7
+Nexperia PSMN1R0-100ASE
+N-channel, 100 V, 1.04 mOhm, MOSFET with enhanced SOA in CCPAK1212 package
+Symbol Parameter Conditions Min Typ Max Unit
+trr reverse recovery time - 74 - ns
+Qr recovered charge
+IS = 25 A; dIS/dt = -100 A/µs; VGS = 0 V;
+VDS = 50 V; Tj = 25 °C; Fig. 17 - 110 - nC
+aaa-040104
+0 1 2 3 4
+0
+100
+200
+300
+400
+VDS (V)
+IDID
+(A)(A)
+4.5 V4.5 V
+5 V5 V
+VGS = 5.5 VVGS = 5.5 V
+6 V6 V
+6.5 V6.5 V
+7 V7 V
+8 V8 V
+10 V10 V
+Tj = 25 °C
+Fig. 8. Output characteristics; drain current as a
+function of drain-source voltage; typical values
+aaa-040105
+0 4 8 12 16 20
+0
+0.5
+1
+1.5
+2
+2.5
+3
+VGS (V)
+RDSonRDSon
+(mΩ)(mΩ)
+Tj = 25 °C; ID = 25 A
+Fig. 9. Drain-source on-state resistance as a function
+of gate-source voltage; typical values
+aaa-040106
+0 2 4 6 8 10
+0
+100
+200
+300
+400
+VGS (V)
+IDID
+(A)(A)
+Tj = 25°CTj = 25°C
+175°C175°C
+VDS = 8 V
+Fig. 10. Transfer characteristics; drain current as a
+function of gate-source voltage; typical values
+aaa-040107
+0 50 100 150 200 250 300 350 400
+0
+2
+4
+6
+8
+ID (A)
+RDSonRDSon
+(mΩ)(mΩ)
+6 V6 V 6.5 V6.5 V
+7 V7 V
+8 V8 V
+VGS = 10 VVGS = 10 V
+Tj = 25 °C
+Fig. 11. Drain-source on-state resistance as a function
+of drain current; typical values
+PSMN1R0-100ASE
+Submit document feedback
+All information provided in this document is subject to legal disclaimers. © Nexperia B.V. 2025. All rights reserved
+Product data sheet 20 October 2025 7 / 13
+PAGE 8
+Nexperia PSMN1R0-100ASE
+N-channel, 100 V, 1.04 mOhm, MOSFET with enhanced SOA in CCPAK1212 package
+aaa-029656
+-60 -30 0 30 60 90 120 150 180
+0
+0.5
+1
+1.5
+2
+2.5
+Tj (°C)
+aa
+Fig. 12. Normalized drain-source on-state resistance
+factor as a function of junction temperature
+aaa-040108
+0 50 100 150 200 250 300 350
+0
+2
+4
+6
+8
+10
+QG (nC)
+VGSVGS
+(V)(V)
+50 V50 V
+VDS = 20 VVDS = 20 V
+80 V80 V
+Tj = 25 °C; ID = 25 A
+Fig. 13. Gate-source voltage as a function of gate
+charge; typical values
+003aaa508
+VGS
+VGS(th)
+QGS1
+QGS2
+QGD
+VDS
+QG(tot)
+ID
+QGS
+VGS(pl)
+Fig. 14. Gate charge waveform definitions
+aaa-040109
+10-1 1 10 102
+102
+103
+104
+105
+VDS (V)
+CC
+(pF)(pF)
+CissCiss
+CossCoss
+CrssCrss
+VGS = 0 V; f = 0.5 MHz
+Fig. 15. Input, output and reverse transfer capacitances
+as a function of drain-source voltage; typical
+values
+PSMN1R0-100ASE
+Submit document feedback
+All information provided in this document is subject to legal disclaimers. © Nexperia B.V. 2025. All rights reserved
+Product data sheet 20 October 2025 8 / 13
+PAGE 9
+Nexperia PSMN1R0-100ASE
+N-channel, 100 V, 1.04 mOhm, MOSFET with enhanced SOA in CCPAK1212 package
+aaa-040110
+0 0.2 0.4 0.6 0.8 1 1.2
+0
+100
+200
+300
+400
+VSD (V)
+ISIS
+(A)(A)
+Tj = 25°CTj = 25°C175°C175°C
+VGS = 0 V
+Fig. 16. Source-drain (diode forward) current as a
+function of source-drain (diode forward)
+voltage; typical values
+003aal160
+0
+t (s)
+ID
+(A)
+IRM
+0.25 IRM
+ta tb
+trr
+Fig. 17. Reverse recovery timing definition
+PSMN1R0-100ASE
+Submit document feedback
+All information provided in this document is subject to legal disclaimers. © Nexperia B.V. 2025. All rights reserved
+Product data sheet 20 October 2025 9 / 13
+PAGE 10
+Nexperia PSMN1R0-100ASE
+N-channel, 100 V, 1.04 mOhm, MOSFET with enhanced SOA in CCPAK1212 package
+11.  Package outline
+ReferencesOutline
+version
+European
+projection Issue date
+IEC JEDEC JEITA
+SOT8000A
+sot8000a_po
+25-04-14
+25-05-06
+Unit(1)
+mm
+max
+nom
+min
+0.13 1.12 0.30 12.15
+A(ref)
+Dimensions (mm are the original dimensions)
+A1
+2.525
+b c D y θ(ref)E E1 e
+2.0
+H L w
+0.252.63 0.11.3 0.20
+L1(ref)
+9.25 7.10 11.8510.65 0.60 0.93 0.22 11.852.475
+9.55 7.40 12.1510.95 1.0
+Plastic, surface mounted copper clip package (CCPAK1212);
+13 terminals; 2.0 mm pitch, 12 mm x 12 mm x 2.5 mm body SOT8000A
+D
+A2
+EH
+D
+A A-BCw Db
+1 6
+712
+B
+Mold ID
+c
+M
+e
+D1
+E1
+e/2
+Exposed
+thermal
+pad area
+pin 1 index
+& Gate ID
+C
+A1Cy
+detail M
+A3
+Gauge plane
+(θ)
+(L1)
+L
+(View rotated 90° CCW)
+0
+scale
+5 10 mm
+Seating plane
+A2 A3 D1
+4°
+(A)
+6 1
+127
+Note
+1. Plastic or metal protrusions of 0.15 mm maximum per side are not included for dimension D.
+2. Plastic or metal protrusions of 0.25 mm maximum per side are not included for dimension E. 
+MO-359
+pin 1 index
+& Gate ID
+Fig. 18. Package outline CCPAK1212 (SOT8000A)
+PSMN1R0-100ASE
+Submit document feedback
+All information provided in this document is subject to legal disclaimers. © Nexperia B.V. 2025. All rights reserved
+Product data sheet 20 October 2025 10 / 13
+PAGE 11
+Nexperia PSMN1R0-100ASE
+N-channel, 100 V, 1.04 mOhm, MOSFET with enhanced SOA in CCPAK1212 package
+12.  Soldering
+SOT8000AFootprint information for reflow soldering of CCPAK1212 package
+sot8000a_fr
+occupied area
+solder paste
+solder resist
+solder land
+Dimensions in mm
+Issue date
+recommended stencil thickness: 0.15 mm
+24-08-26
+1.15
+1.30
+1.45 0.7
+0.55
+11.8
+12.5
+2.0
+1.5
+3.10
+(2×)
+1.65
+1.22
+1.8
+7.41 7.26
+0.26
+1.22
+9.9 13.5
+3.16
+(3×)
+10.8
+10.95
+0.26
+(2×)
+pad 1
+Fig. 19. Reflow soldering footprint for CCPAK1212 (SOT8000A)
+PSMN1R0-100ASE
+Submit document feedback
+All information provided in this document is subject to legal disclaimers. © Nexperia B.V. 2025. All rights reserved
+Product data sheet 20 October 2025 11 / 13
+PAGE 12
+Nexperia PSMN1R0-100ASE
+N-channel, 100 V, 1.04 mOhm, MOSFET with enhanced SOA in CCPAK1212 package
+13.  Legal information
+Data sheet status
+Document status
+[1][2]
+Product
+status [3]
+Definition
+Objective [short]
+data sheet
+Development This document contains data from
+the objective specification for
+product development.
+Preliminary [short]
+data sheet
+Qualification This document contains data from
+the preliminary specification.
+Product [short]
+data sheet
+Production This document contains the product
+specification.
+[1] Please consult the most recently issued document before initiating or
+completing a design.
+[2] The term 'short data sheet' is explained in section "Definitions".
+[3] The product status of device(s) described in this document may have
+changed since this document was published and may differ in case of
+multiple devices. The latest product status information is available on
+the internet at https://www.nexperia.com.
+Definitions
+Draft — The document is a draft version only. The content is still under
+internal review and subject to formal approval, which may result in
+modifications or additions. Nexperia does not give any representations or
+warranties as to the accuracy or completeness of information included herein
+and shall have no liability for the consequences of use of such information.
+Short data sheet — A short data sheet is an extract from a full data sheet
+with the same product type number(s) and title. A short data sheet is
+intended for quick reference only and should not be relied upon to contain
+detailed and full information. For detailed and full information see the relevant
+full data sheet, which is available on request via the local Nexperia sales
+office. In case of any inconsistency or conflict with the short data sheet, the
+full data sheet shall prevail.
+Product specification — The information and data provided in a Product
+data sheet shall define the specification of the product as agreed between
+Nexperia and its customer, unless Nexperia and customer have explicitly
+agreed otherwise in writing. In no event however, shall an agreement be
+valid in which the Nexperia product is deemed to offer functions and qualities
+beyond those described in the Product data sheet.
+Disclaimers
+Limited warranty and liability — Information in this document is believed
+to be accurate and reliable. However, Nexperia does not give any
+representations or warranties, expressed or implied, as to the accuracy
+or completeness of such information and shall have no liability for the
+consequences of use of such information. Nexperia takes no responsibility
+for the content in this document if provided by an information source outside
+of Nexperia.
+In no event shall Nexperia be liable for any indirect, incidental, punitive,
+special or consequential damages (including - without limitation - lost
+profits, lost savings, business interruption, costs related to the removal
+or replacement of any products or rework charges) whether or not such
+damages are based on tort (including negligence), warranty, breach of
+contract or any other legal theory.
+Notwithstanding any damages that customer might incur for any reason
+whatsoever, Nexperia’s aggregate and cumulative liability towards customer
+for the products described herein shall be limited in accordance with the
+Terms and conditions of commercial sale of Nexperia.
+Right to make changes — Nexperia reserves the right to make changes
+to information published in this document, including without limitation
+specifications and product descriptions, at any time and without notice. This
+document supersedes and replaces all information supplied prior to the
+publication hereof.
+Suitability for use — Nexperia products are not designed, authorized or
+warranted to be suitable for use in life support, life-critical or safety-critical
+systems or equipment, nor in applications where failure or malfunction
+of an Nexperia product can reasonably be expected to result in personal
+injury, death or severe property or environmental damage. Nexperia and its
+suppliers accept no liability for inclusion and/or use of Nexperia products in
+such equipment or applications and therefore such inclusion and/or use is at
+the customer’s own risk.
+Quick reference data — The Quick reference data is an extract of the
+product data given in the Limiting values and Characteristics sections of this
+document, and as such is not complete, exhaustive or legally binding.
+Applications — Applications that are described herein for any of these
+products are for illustrative purposes only. Nexperia makes no representation
+or warranty that such applications will be suitable for the specified use
+without further testing or modification.
+Customers are responsible for the design and operation of their applications
+and products using Nexperia products, and Nexperia accepts no liability for
+any assistance with applications or customer product design. It is customer’s
+sole responsibility to determine whether the Nexperia product is suitable
+and fit for the customer’s applications and products planned, as well as
+for the planned application and use of customer’s third party customer(s).
+Customers should provide appropriate design and operating safeguards to
+minimize the risks associated with their applications and products.
+Nexperia does not accept any liability related to any default, damage, costs
+or problem which is based on any weakness or default in the customer’s
+applications or products, or the application or use by customer’s third party
+customer(s). Customer is responsible for doing all necessary testing for the
+customer’s applications and products using Nexperia products in order to
+avoid a default of the applications and the products or of the application or
+use by customer’s third party customer(s). Nexperia does not accept any
+liability in this respect.
+Limiting values — Stress above one or more limiting values (as defined in
+the Absolute Maximum Ratings System of IEC 60134) will cause permanent
+damage to the device. Limiting values are stress ratings only and (proper)
+operation of the device at these or any other conditions above those
+given in the Recommended operating conditions section (if present) or the
+Characteristics sections of this document is not warranted. Constant or
+repeated exposure to limiting values will permanently and irreversibly affect
+the quality and reliability of the device.
+Terms and conditions of commercial sale — Nexperia products are
+sold subject to the general terms and conditions of commercial sale, as
+published at http://www.nexperia.com/profile/terms, unless otherwise agreed
+in a valid written individual agreement. In case an individual agreement is
+concluded only the terms and conditions of the respective agreement shall
+apply. Nexperia hereby expressly objects to applying the customer’s general
+terms and conditions with regard to the purchase of Nexperia products by
+customer.
+No offer to sell or license — Nothing in this document may be interpreted
+or construed as an offer to sell products that is open for acceptance or the
+grant, conveyance or implication of any license under any copyrights, patents
+or other industrial or intellectual property rights.
+Export control — This document as well as the item(s) described herein
+may be subject to export control regulations. Export might require a prior
+authorization from competent authorities.
+Non-automotive qualified products — Unless this data sheet expressly
+states that this specific Nexperia product is automotive qualified, the
+product is not suitable for automotive use. It is neither qualified nor tested in
+accordance with automotive testing or application requirements. Nexperia
+accepts no liability for inclusion and/or use of non-automotive qualified
+products in automotive equipment or applications.
+In the event that customer uses the product for design-in and use in
+automotive applications to automotive specifications and standards,
+customer (a) shall use the product without Nexperia’s warranty of the
+product for such automotive applications, use and specifications, and (b)
+whenever customer uses the product for automotive applications beyond
+Nexperia’s specifications such use shall be solely at customer’s own risk,
+and (c) customer fully indemnifies Nexperia for any liability, damages or failed
+product claims resulting from customer design and use of the product for
+automotive applications beyond Nexperia’s standard warranty and Nexperia’s
+product specifications.
+Translations — A non-English (translated) version of a document is for
+reference only. The English version shall prevail in case of any discrepancy
+between the translated and English versions.
+Trademarks
+Notice: All referenced brands, product names, service names and
+trademarks are the property of their respective owners.
+PSMN1R0-100ASE
+Submit document feedback
+All information provided in this document is subject to legal disclaimers. © Nexperia B.V. 2025. All rights reserved
+Product data sheet 20 October 2025 12 / 13
+PAGE 13
+Nexperia PSMN1R0-100ASE
+N-channel, 100 V, 1.04 mOhm, MOSFET with enhanced SOA in CCPAK1212 package
+Contents
+1.  General description......................................................1
+2.  Features and benefits .................................................. 1
+3.  Applications.................................................................. 1
+4.  Quick reference data ....................................................1
+5.  Pinning information......................................................2
+6.  Ordering information....................................................2
+7.  Marking.......................................................................... 2
+8.  Limiting values............................................................. 3
+9.  Thermal characteristics............................................... 4
+10.  Characteristics............................................................6
+11.  Package outline........................................................ 10
+12.  Soldering................................................................... 11
+13.  Legal information ......................................................12
+© Nexperia B.V. 2025. All rights reserved
+For more information, please visit: http://www.nexperia.com
+For sales office addresses, please send an email to: salesaddresses@nexperia.com
+Date of release: 20 October 2025
+PSMN1R0-100ASE
+Submit document feedback
+All information provided in this document is subject to legal disclaimers. © Nexperia B.V. 2025. All rights reserved
+Product data sheet 20 October 2025 13 / 13

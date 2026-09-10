@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "date": "2026-09-10"
+  },
+  "sources": [
+    {
+      "id": "ltc2954",
+      "source_url": "https://www.analog.com/media/en/technical-documentation/data-sheets/2954fb.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "lt3014",
+      "source_url": "https://www.analog.com/media/en/technical-documentation/data-sheets/3014bfb.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "ltc6993",
+      "source_url": "https://www.analog.com/media/en/technical-documentation/data-sheets/ltc6993-6993-1-6993-2-6993-3-6993-4.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "esp",
+      "source_url": "https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "ina",
+      "source_url": "https://www.ti.com/lit/ds/symlink/ina228.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "can",
+      "source_url": "https://www.ti.com/lit/ds/symlink/tcan1042h-q1.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "ldo",
+      "source_url": "https://www.ti.com/lit/ds/symlink/tlv1117lv.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "supervisor",
+      "source_url": "https://www.ti.com/lit/ds/symlink/tps3839.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "ff",
+      "source_url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g74.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "nand",
+      "source_url": "https://www.ti.com/lit/ds/symlink/sn74lvc2g00.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "inv",
+      "source_url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g14.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "or",
+      "source_url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g32.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "and",
+      "source_url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g11.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "wd",
+      "source_url": "https://www.ti.com/lit/ds/symlink/tps3431.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "led",
+      "source_url": "https://www.ti.com/lit/ds/symlink/sn74ahct1g125.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "esd",
+      "source_url": "https://www.ti.com/lit/ds/symlink/esd2can24-q1.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "ntc",
+      "source_url": "https://pim.murata.com/en-us/pim/details/?partNum=NCP18XH103F03RB",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "tmux",
+      "source_url": "https://www.ti.com/lit/ds/symlink/tmux1511.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "buffer",
+      "source_url": "https://www.ti.com/lit/ds/symlink/sn74lvc1g17.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    },
+    {
+      "id": "nmos",
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/BSS138BK.pdf",
+      "accessed": "2026-09-10",
+      "evidence_kind": "manufacturer_datasheet_or_exact_product_page"
+    }
+  ],
+  "limitations": [
+    "No measured hardware performance",
+    "No independent verification of distributor stock; exact manufacturer order codes selected",
+    "Full-temperature timer bounds include resistor TCR allowance",
+    "PDT timing capacitor effective-capacitance assumptions must be measured",
+    "CAN ESD network does not tolerate continuous42V miswire",
+    "Boolean checks are not ERC,DRC,SPICE or safety certification"
+  ]
+}

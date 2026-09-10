@@ -1,0 +1,854 @@
+RH, NH
+www.vishay.com
+Vishay Dale
+   
+ 
+Revision: 02-Sep-2026
+1
+Document Number: 30201
+For technical questions, contact: ww2aresistors@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+Wirewound Resistors, Industrial Power,
+Aluminum Housed, Chassis Mount
+LINKS TO ADDITIONAL RESOURCES
+FEATURES
+• Molded construction for total environmental 
+protection
+• Complete welded construction
+• Meets 
+applicable 
+requirements 
+of 
+MIL-PRF-18546
+• Available in non-inductive styles (type NH) 
+with Ayrton-Perry winding for lowest 
+reactive components
+• Mounts on chassis to utilize heat-sink effect
+• Excellent stability in operation 
+(< 1 % change in resistance)
+• MIL-PRF-18546 qualified, type RE resistors can be found 
+at: www.vishay.com/doc?30282
+• Material categorization: for definitions of compliance 
+please see www.vishay.com/doc?99912
+Note 
+* This  datasheet  provides  information  about  parts  that  are  RoHS-compliant  and / or  parts  that  are  non RoHS-compliant.   For  example,  parts 
+with lead (Pb) terminations are not RoHS-compliant. Please see the information / tables in this datasheet for details
+Notes
+(1) RH005 and NH005 printed with 5 W power rating. RH010 and NH010 printed with 10 W power rating. New construction allows these 
+resistors to be rated at higher wattage but will only be printed with the higher wattage upon customer request
+(2) Continuous working voltage shall be V = (P x R)1/2 or maximum working voltage, whichever is less
+3
+D
+3
+D
+3D Models
+Available
+Available
+Available
+Available
+STANDARD ELECTRICAL SPECIFICATIONS
+GLOBAL 
+MODEL
+HISTORICAL
+MODEL
+POWER
+RATING (1)
+P25 °C W
+MAXIMUM
+WORKING
+VOLTAGE (2)
+RESISTANCE
+RANGE Ω
+RESISTANCE
+RANGE Ω
+RESISTANCE
+RANGE Ω
+RESISTANCE 
+RANGE Ω
+WEIGHT
+(typical)
+g
+± 0.05 %, ± 0.1 %
+± 0.25 %
+± 0.5 %
+± 1 %, ± 3 %,  ± 5 %
+RH005
+RH-5
+7.5
+160
+0.5 to 6.75K
+0.1 to 8.6K
+0.05 to 8.6K
+0.02 to 24.5K
+3
+NH005
+NH-5
+7.5
+115
+0.5 to 2.32K
+0.1 to 3.27K
+0.05 to 3.27K
+0.05 to 12.75K
+3
+RH010
+RH-10
+12.5
+265
+0.5 to 12.7K
+0.1 to 16.69K
+0.05 to 16.69K
+0.01 to 47.1K
+5
+NH010
+NH-10
+12.5
+187
+0.5 to 4.45K
+0.1 to 5.54K
+0.05 to 5.54K
+0.05 to 23.5K
+5
+RH025
+RH-25
+25
+550
+0.5 to 25.7K
+0.1 to 32.99K
+0.05 to 32.99K
+0.01 to 95.2K
+12
+NH025
+NH-25
+25
+390
+0.5 to 9.09K
+0.1 to 12.8K
+0.05 to 12.8K
+0.05 to 47.6K
+12
+RH050
+RH-50
+50
+1250
+0.5 to 73.4K
+0.1 to 96K
+0.05 to 96K
+0.01 to 273K
+28
+NH050
+NH-50
+50
+990
+0.5 to 26K
+0.1 to 36.7K
+0.05 to 36.7K
+0.05 to 136K
+28
+RH100
+RH-100
+100
+1900
+0.5 to 90K
+0.1 to 90K
+0.05 to 90K
+0.05 to 90K
+353
+NH100
+NH-100
+100
+1350
+0.5 to 37.5K
+0.1 to 37.5K
+0.05 to 37.5K
+0.05 to 37.5K
+353
+RH250
+RH-250
+250
+2300
+0.5 to 116K
+0.1 to 116K
+0.05 to 116K
+0.05 to 116K
+637
+NH250
+NH-250
+250
+1625
+0.5 to 48.5K
+0.1 to 48.5K
+0.05 to 48.5K
+0.05 to 48.5K
+637
+TECHNICAL SPECIFICATIONS
+PARAMETER
+UNIT
+RH RESISTOR CHARACTERISTICS
+Temperature coefficient
+ppm/°C
+ ± 20 for 10 Ω and above; ± 50 for 1 Ω to 9.9 Ω, ± 100 for 0.1 Ω to 0.99 Ω
+Maximum working voltage
+V
+(P x R)1/2 or maximum working voltage, whichever is less
+Insulation resistance
+Ω
+10 000 MΩ minimum dry, 1000 MΩ minimum after moisture test
+Solderability
+-
+Meets requirements of ANSI J-STD-002
+Operating temperature range
+°C
+-55 to +250
+RH, NH
+www.vishay.com
+Vishay Dale
+   
+ 
+Revision: 02-Sep-2026
+2
+Document Number: 30201
+For technical questions, contact: ww2aresistors@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+DIMENSIONS in inches [millimeters]
+GLOBAL PART NUMBER INFORMATION
+Global Part Numbering Example: RH0054R125FC02
+GLOBAL MODEL
+RESISTANCE VALUE
+TOLERANCE CODE
+PACKAGING
+SPECIAL
+RH005
+(see Standard 
+Electrical 
+Specifications 
+Global Model 
+column for 
+options)
+R = decimal
+K = thousand
+15R00 = 15 Ω
+10K00 = 10 kΩ
+A = 0.05 %
+B = 0.1 %
+C = 0.25 %
+D = 0.5 %
+F = 1.0 %
+H = 3.0 %
+J = 5.0 %
+E02 = lead (Pb)-free, card pack (RH005 - RH050)
+E01 = lead (Pb)-free, skin pack (RH100 and RH250)
+(dash number)
+(up to 3 digits)
+from 1 to 999
+as applicable
+C02 = tin / lead, card pack (RH005 - RH050)
+J01 = tin / lead, skin pack (RH100 and RH250)
+Historical Part Numbering Example: RH-5  4.125 Ω  1 %  C02
+RH-5
+4.125 Ω
+1 %
+C02
+HISTORICAL MODEL
+RESISTANCE VALUE
+TOLERANCE CODE
+PACKAGING
+GLOBAL  
+MODEL
+DIMENSIONS in inches [millimeters]
+A
+B
+C
+D
+E
+F
+G
+H
+J
+K
+L
+M
+N
+P
+RH005 
+NH005
+0.444
+± 0.005
+[11.28
+± 0.127]
+0.490
+± 0.005
+[12.45
+± 0.127]
+0.600
+± 0.030
+[15.24
+± 0.787]
+1.125
+± 0.062
+[28.58
+± 1.57]
+0.334
+± 0.015
+[8.48
+± 0.381]
+0.646
+± 0.015
+[16.41
+± 0.381]
+0.320
+± 0.015
+[8.13
+± 0.381]
+0.065
+± 0.010
+[1.65
+± 0.254]
+0.133
+± 0.010
+[3.38
+± 0.254]
+0.078
+± 0.010
+[1.98
+± 0.254]
+0.093
+± 0.005
+[2.36
+± 0.127]
+0.078
+± 0.015
+[1.98
+± 0.381]
+0.050
+± 0.005
+[1.27
+± 0.127]
+0.266
+± 0.062
+[6.76
+± 1.57]
+RH010 
+NH010
+0.562
+± 0.005
+[14.27
+± 0.127]
+0.625
+± 0.005
+[15.88
+± 0.127]
+0.750
+± 0.031
+[19.05
+± 0.787]
+1.375
+± 0.062
+[34.93
+± 1.57]
+0.420
+± 0.015
+[10.67
+± 0.381]
+0.800
+± 0.015
+[20.32
+± 0.381]
+0.390
+± 0.015
+[9.91
+± 0.381]
+0.075
+± 0.010
+[1.91
+± 0.254]
+0.165
+± 0.010
+[4.19
+± 0.254]
+0.093
+± 0.010
+[2.36
+± 0.254]
+0.094
+± 0.005
+[2.39
+± 0.127]
+0.102
+± 0.015
+[2.59
+± 0.381]
+0.085
+± 0.005
+[2.16
+± 0.127]
+0.312
+± 0.062
+[7.92
+± 1.57]
+RH025 
+NH025
+0.719
+± 0.005
+[18.26
+± 0.127]
+0.781
+± 0.005
+[19.84
+± 0.127]
+1.062
+± 0.031
+[26.97
+± 0.787]
+1.938
+± 0.062
+[49.23
+± 1.57]
+0.550
+± 0.015
+[13.97
+± 0.381]
+1.080
+± 0.015
+[27.43
+± 0.381]
+0.546
+± 0.015
+[13.87
+± 0.381]
+0.075
+± 0.010
+[1.91
+± 0.254]
+0.231
+± 0.010
+[5.87
+± 0.254]
+0.172
+± 0.010
+[4.37
+± 0.254]
+0.125
+± 0.005
+[3.18
+± 0.127]
+0.115
+± 0.015
+[2.92
+± 0.381]
+0.085
+± 0.005
+[2.16
+± 0.127]
+0.438
+± 0.062
+[11.13
+± 1.57]
+RH050 
+NH050
+1.562
+± 0.005
+[39.67
+± 0.127]
+0.844
+± 0.005
+[21.44
+± 0.127]
+1.968
+± 0.031
+[49.99
+± 0.787]
+2.781
+± 0.062
+[70.64
+± 1.57]
+0.630
+± 0.015
+[16.00
+± 0.381]
+1.140
+± 0.015
+[28.96
+± 0.381]
+0.610
+± 0.015
+[15.49
+± 0.381]
+0.088
+± 0.010
+[2.24
+± 0.254]
+0.260
+± 0.010
+[6.60
+± 0.254]
+0.196
+± 0.010
+[4.98
+± 0.254]
+0.125
+± 0.005
+[3.18
+± 0.127]
+0.107
+± 0.015
+[2.72
+± 0.381]
+0.085
+± 0.005
+[2.16
+± 0.127]
+0.438
+± 0.062
+[11.13
+± 1.57]
+RH005, 010, 025, 050
+NH005, 010, 025, 050
+P
+D
+C
+A
+L
+M
+N
+J
+F
+E
+H
+G
+K
+B
+R
+H
+0
+0
+5
+4
+R
+1
+2
+5
+F
+C
+0
+2
+RH, NH
+www.vishay.com
+Vishay Dale
+   
+ 
+Revision: 02-Sep-2026
+3
+Document Number: 30201
+For technical questions, contact: ww2aresistors@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+DIMENSIONS in inches [millimeters]
+POWER RATING
+Vishay RH resistor wattage ratings are based on mounting to the following heat sink:
+RH005 and RH010: 4" x 6" x 2" x 0.040" thick aluminum chassis (129 sq. in. surface area)
+RH025:
+5" x 7" x 2" x 0.040" thick aluminum chassis (167 sq. in. surface area)
+RH050:
+12" x 12" x 0.059" thick aluminum panel (291 sq. in. surface area)
+RH100 and RH250: 12" x 12" x 0.125" thick aluminum panel (294 sq. in. surface area)
+FREE AIR POWER RATING
+GLOBAL 
+MODEL
+RH005
+NH005
+RH010
+NH010
+RH025
+NH025
+RH050
+NH050
+RH100
+NH100
+RH250
+NH250
+W at 25 °C
+4.5
+7.5
+12.5
+20
+40
+100
+RH250, NH250
+RH100, NH100
+2.25 ± 0.010
+[57.15 ± 0.254]
+0.989 ± 0.031
+[25.12 ± 0.787]
+2.812 ± 0.031
+[71.42 ± 0.787]
+3.50 ± 0.031
+[88.90 ± 0.787]
+Stainless steel
+nut and stud
+1.125 ± 0.031
+[28.58 ± 0.787]
+0.188 ± 0.010
+[4.78 ± 0.254]
+Dia. typ.
+12 - 24
+UNC-2A
+Thd. typ.
+2.75 ± 0.010
+[69.85 ± 0.254]
+0.375 ± 0.031
+[9.52 ± 0.787]
+5.478 ± 0.093
+[139.14 ± 2.36]
+1.75 ± 0.031
+[44.45 ± 0.787]
+2.188 ± 0.031
+[55.58 ± 0.787]
+2.125 ± 0.031
+[53.98 ± 0.787]
+0.250 ± 0.031
+[6.35 ± 0.787]
+typ.
+4.50 ± 0.031
+[114.30 ± 0.787]
+2.50 ± 0.010
+[63.50 ± 0.254]
+7.0 ± 0.093 [177.80 ± 2.36]
+0.875 ± 0.010
+[22.23 ± 0.254]
+3.0 ± 0.010
+[76.20 ± 0.254]
+3.875 ± 0.010
+[98.42 ± 0.254]
+0.770 ± 0.015
+[19.56 ± 0.381]
+0.188 ± 0.031
+[4.78 ± 0.787]
+typ.
+1.812 ± 0.031
+[46.02 ± 0.787]
+0.312 ± 0.031
+[7.92 ± 0.787]
+1.25 ± 0.062
+[31.75 ± 1.575]
+1.25 ± 0.062
+[31.75 ± 1.575]
+1/4 - 20
+UNC-2A thd. typ.
+0.955 ± 0.015
+[24.26 ± 0.381]
+3.0 ± 0.031
+[76.20 ± 0.787]
+Nickel plated
+brass nut
+stainless steel stud
+0.188 ± 0.010
+[4.78 ± 0.254]
+Dia. typ.
+RH, NH
+www.vishay.com
+Vishay Dale
+   
+ 
+Revision: 02-Sep-2026
+4
+Document Number: 30201
+For technical questions, contact: ww2aresistors@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+AMBIENT TEMPERATURE DERATING
+Derating is required for ambient temperatures above 25 °C, see the following graph.
+Curves A, B, C apply to operation of unmounted resistors. Curve D applies to all types when mounted to specified heat sink.
+A = RH005 and RH010 size resistor, unmounted
+B = RH025 size resistor, unmounted
+C = RH050, RH100 and RH250 size resistor, unmounted
+D = All types mounted to recommended aluminum heat sink
+REDUCED HEAT SINK DERATING
+Derating is also required when recommended heat sink area is reduced.
+A = RH005 and RH010 size resistor
+B = RH025 size resistor
+C = RH050, RH100 and RH250 size resistor
+10
+100
+1000
+10000
+0
+20
+40
+60
+80
+100
+120
+-55-50
+0
+50
+150
+250
+Axis Title
+1st line
+2nd line
+2nd line
+Rated Power (%)
+Ambient Temperature (°C)
+25
+A
+D
+C
+B
+10
+100
+1000
+10000
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+0
+20
+40
+60
+80
+100
+Axis Title
+1st line
+2nd line
+2nd line
+Rated Power (%)
+Percent of Recommended Heat Sink Area
+A
+C
+B
+RH, NH
+www.vishay.com
+Vishay Dale
+   
+ 
+Revision: 02-Sep-2026
+5
+Document Number: 30201
+For technical questions, contact: ww2aresistors@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+MATERIAL SPECIFICATIONS
+Element: copper-nickel alloy or nickel-chrome alloy, 
+depending on resistance value
+Core: ceramic, steatite or alumina, depending on physical 
+size
+Encapsulant: silicone molded construction
+Housing: aluminum with hard anodic coating
+End Caps: stainless steel
+Standard Terminals: for RH005 through RH050 size 
+terminal finish - tin / lead is 60/40 Sn/Pb w/nickel underplate 
+and   lead (Pb)-free is Ni/Pd/Au, finish is on copper clad steel 
+core terminal. For RH100 and RH250 terminals are threaded 
+stainless steel.
+Part Marking: Dale, model, wattage, value, tolerance, date 
+code
+NH NON-INDUCTIVE
+Models of equivalent physical and electrical specifications 
+are available with non-inductive (Ayrton-Perry) winding. 
+They are identified by substituting the letter N for R in the 
+model number (NH005, for example).
+SPECIAL MODIFICATIONS
+A number of special modifications to the aluminum housed 
+resistor 
+style 
+are 
+available 
+upon 
+request. 
+Special 
+modifications include:
+• Terminal configurations and materials
+• Resistance values and tolerances
+• Low resistance temperature coefficient (RTC)
+• Housing configuration
+• Threaded mounting holes
+• Preconditioning and other additional testing
+APPLICABLE MIL SPECIFICATIONS
+Vishay RH and NH resistors are listed as qualified on the 
+MIL-PRF-18546 QPL. MIL-PRF-18546 qualified, type RE 
+resistors can be found at: www.vishay.com/doc?30282
+PERFORMANCE
+TEST
+CONDITIONS OF TEST
+TEST LIMITS
+Thermal shock
+Rated power applied until thermally stable, then a minimum of 15 min at -55 °C
+± (0.5 % + 0.05 Ω) ΔR
+Short time overload
+5 x rated power for 5 s
+± (0.5 % + 0.05 Ω) ΔR
+Dielectric withstanding 
+voltage
+1000 VRMS for RH005, RH010 and RH025; 2000 VRMS for RH050; 
+4500 VRMS for RH100 and RH250; duration 1 min
+± (0.2 % + 0.05 Ω) ΔR
+Temperature
+250 °C for 2 h
+± (0.5 % + 0.05 Ω) ΔR
+Moisture resistance
+MIL-STD-202 Method 106, 7b not applicable
+± (1.0 % + 0.05 Ω) ΔR
+Shock, specified pulse
+MIL-STD-202 Method 213, 100 g’s for 6 ms, 10 shocks
+± (0.2 % + 0.05 Ω) ΔR
+Vibration, high frequency
+Frequency varied 10 Hz to 2000 Hz, 20 g peak, 2 directions 6 h each
+± (0.2 % + 0.05 Ω) ΔR
+Load life
+1000 h at rated power, +25 °C, 1.5 h “ON”, 0.5 h “OFF”
+± (1.0 % + 0.05 Ω) ΔR
+Terminal strength
+30 s, 5 pound pull test for RH005 and RH010, 10 pound pull test for other sizes; 
+torque test - 24 pound inch for RH100 and 32 pound inch for RH250
+± (0.2 % + 0.05 Ω) ΔR
+Legal Disclaimer Notice
+www.vishay.com
+Vishay
+   
+ 
+Revision: 01-Jan-2026
+1
+Document Number: 91000
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+Disclaimer
+ALL PRODUCT, PRODUCT SPECIFICATIONS AND DATA ARE SUBJECT TO CHANGE WITHOUT NOTICE TO IMPROVE 
+RELIABILITY, FUNCTION OR DESIGN OR OTHERWISE. 
+Vishay Intertechnology, Inc., its affiliates, agents, and employees, and all persons acting on its or their behalf (collectively, 
+“Vishay”), disclaim any and all liability for any errors, inaccuracies or incompleteness contained in any datasheet or in any other 
+disclosure relating to any product.
+Vishay makes no warranty, representation or guarantee regarding the suitability of the products for any particular purpose or 
+the continuing production of any product. To the maximum extent permitted by applicable law, Vishay disclaims (i) any and all 
+liability arising out of the application or use of any product, (ii) any and all liability, including without limitation special, 
+consequential or incidental damages, and (iii) any and all implied warranties, including warranties of fitness for particular 
+purpose, non-infringement and merchantability.
+Statements regarding the suitability of products for certain types of applications are based on Vishay's knowledge of typical 
+requirements that are often placed on Vishay products in generic applications. Such statements are not binding statements 
+about the suitability of products for a particular application. It is the customer's responsibility to validate that a particular product 
+with the properties described in the product specification is suitable for use in a particular application. Parameters provided in 
+datasheets and / or specifications may vary in different applications and performance may vary over time. All operating 
+parameters, including typical parameters, must be validated for each customer application by the customer's technical experts. 
+Product specifications do not expand or otherwise modify Vishay's terms and conditions of purchase, including but not limited 
+to the warranty expressed therein.
+Hyperlinks included in this datasheet may direct users to third-party websites. These links are provided as a convenience and 
+for informational purposes only. Inclusion of these hyperlinks does not constitute an endorsement or an approval by Vishay of 
+any of the products, services or opinions of the corporation, organization or individual associated with the third-party website. 
+Vishay disclaims any and all liability and bears no responsibility for the accuracy, legality or content of the third-party website 
+or for that of subsequent links.
+Vishay products are not designed for use in life-saving or life-sustaining applications or any application in which the failure of 
+the Vishay product could result in personal injury or death unless specifically qualified in writing by Vishay. Customers using or 
+selling Vishay products not expressly indicated for use in such applications do so at their own risk. Please contact authorized 
+Vishay personnel to obtain written terms and conditions regarding products designed for such applications.
+No license, express or implied, by estoppel or otherwise, to any intellectual property rights is granted by this document or by 
+any conduct of Vishay. Product names and markings noted herein may be trademarks of their respective owners.
+© 2026 VISHAY INTERTECHNOLOGY, INC. ALL RIGHTS RESERVED

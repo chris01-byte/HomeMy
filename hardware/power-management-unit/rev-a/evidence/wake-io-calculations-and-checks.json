@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "date": "2026-09-10",
+    "verification_kind": "independent_boolean_invariants_and_conservative_arithmetic",
+    "does_not_cover": [
+      "ERC/DRC",
+      "SPICE",
+      "physical timing",
+      "EMI",
+      "hardware safety certification"
+    ]
+  },
+  "checks": [
+    {
+      "name": "unique_component_references",
+      "pass": true,
+      "detail": "168 references"
+    },
+    {
+      "name": "no_null_populated_pins_without_nc_type",
+      "pass": true,
+      "detail": "Explicit NC pins preserve intentional omissions."
+    },
+    {
+      "name": "pin_types_and_names_complete",
+      "pass": true,
+      "detail": "All electrical pin types and physical pin labels supplied."
+    },
+    {
+      "name": "all_components_have_sheet",
+      "pass": true,
+      "detail": "Hierarchical sheet membership provided."
+    },
+    {
+      "name": "release_to_arm_asynchronous_truth_table",
+      "pass": true,
+      "detail": "8 combinations; power reset and held-at-reattach do not present an active PB. No simultaneous async preset/clear."
+    },
+    {
+      "name": "main_capture_clear_priority",
+      "pass": true,
+      "detail": "16 combinations; raw-enable removal defeats delayed capture and prevents preset/clear contention."
+    },
+    {
+      "name": "motion_interlock_fault_latches",
+      "pass": true,
+      "detail": "256 interlock combinations; a fault cannot be cleared merely by signal recovery."
+    },
+    {
+      "name": "aon_supervisor_and_off_isolation_margin",
+      "pass": true,
+      "detail": {
+        "aon_min_v": 3.1925425742574256,
+        "aon_max_v": 3.498448309090909,
+        "supervisor_release_bound_v": 3.157,
+        "tmux_off_limit_v": 3.6
+      }
+    },
+    {
+      "name": "open_drain_enable_to_buffer_high_level",
+      "pass": true,
+      "detail": {
+        "minimum_enable_v": 2.7746781579369535,
+        "required_lvc_vih_v": 2,
+        "pullup": "47k1%",
+        "pulldown": "1M1%",
+        "sink_leak_allowance_uA": 6
+      }
+    },
+    {
+      "name": "startup_window_bound",
+      "pass": true,
+      "detail": {
+        "nominal_s": 5.0331648,
+        "min_s": 4.801614053376,
+        "max_s": 5.269698379775999,
+        "firmware_latest_hold_s": 4.7,
+        "failed_start_acceptance_max_s": 5.4
+      }
+    },
+    {
+      "name": "powered_off_voltage_dividers",
+      "pass": true,
+      "detail": {
+        "max_divider_input_v": 3.154733301297453,
+        "source_bus_v": 65
+      }
+    },
+    {
+      "name": "powered_off_adc_uart_leakage",
+      "pass": true,
+      "detail": {
+        "max_off_leak_uA": 2,
+        "resistor_ohm": 100000,
+        "max_pin_v": 0.2
+      }
+    }
+  ],
+  "calculations": {
+    "aon_output": {
+      "nominal_v": 3.343496,
+      "min_v": 3.1925425742574256,
+      "max_v": 3.498448309090909
+    },
+    "timer": {
+      "nominal_s": 5.0331648,
+      "min_s": 4.801614053376,
+      "max_s": 5.269698379775999
+    },
+    "main_capture_mask": {
+      "nominal_rc_s": 0.0047,
+      "effective_cap_min_f": 8e-7,
+      "effective_cap_max_f": 0.0000011,
+      "engineering_acceptance_s": [
+        0.001,
+        0.0055
+      ]
+    },
+    "aon_feed_short": {
+      "bus_v": 65,
+      "total_current_a": 0.006513026052104208,
+      "each_resistor_power_w": 0.21167334669338675
+    },
+    "ldo_loss": {
+      "input_v": 5,
+      "output_v": 3.3,
+      "current_a": 0.5,
+      "power_w": 0.85,
+      "reference_theta_ja_c_per_w": 62.9,
+      "estimated_rise_c": 53.465
+    },
+    "bus_dividers": {
+      "gain_on": 0.043478260869565216,
+      "max_off_input_v": 3.154733301297453,
+      "adc_at_42v": 1.826086956521739,
+      "adc_at_46v": 2,
+      "adc_at_65v": 2.8260869565217392
+    },
+    "can": {
+      "extended_frame_max_bits": 160,
+      "joint_frames_per_second": 2400,
+      "joint_utilization_fraction": 0.384,
+      "pmu_frames_per_second": 80,
+      "total_utilization_fraction": 0.3968
+    }
+  }
+}

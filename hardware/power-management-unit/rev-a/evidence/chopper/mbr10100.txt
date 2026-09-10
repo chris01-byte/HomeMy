@@ -1,0 +1,349 @@
+MBR1090-M3, MBR10100-M3
+www.vishay.com
+Vishay General Semiconductor
+  
+ 
+Revision: 21-May-2019
+1
+Document Number: 89193
+For technical questions within your region: DiodesAmericas@vishay.com, DiodesAsia@vishay.com, DiodesEurope@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+High Voltage TMBS® (Trench MOS Barrier Schottky) Rectifier
+FEATURES
+• Trench MOS Schottky technology
+• Lower power losses, high efficiency
+• Low forward voltage drop
+• High forward surge capability
+• High frequency operation
+• Solder dip 275 °C max. 10 s, per JESD 22-B106
+• Material categorization: for definitions of compliance 
+please see www.vishay.com/doc?99912
+TYPICAL APPLICATIONS
+For use in high frequency rectifier of switching  mode power 
+supplies, freewheeling diodes, DC/DC converters or polarity 
+protection application.
+MECHANICAL DATA
+Case: TO-220AC
+Molding compound meets UL 94 V-0 flammability rating 
+Base P/N-M3 - halogen-free, RoHS-compliant, and 
+commercial grade
+Terminals: matte tin plated leads, solderable per 
+J-STD-002 and JESD 22-B102
+M3 suffix meets JESD 201 class 1A whisker test
+Polarity: as marked
+Mounting Torque: 10 in-lbs maximum
+Notes
+(1) Pulse test: 300 μs pulse width, 1 % duty cycle
+(2) Pulse test: Pulse width  40 ms
+PRIMARY CHARACTERISTICS
+IF(AV)
+10 A
+VRRM
+90 V, 100 V
+IFSM
+150 A
+VF
+0.65 V
+TJ max.
+150 °C
+Package
+TO-220AC
+Circuit configuration
+Single
+TO-220AC
+1
+2
+CASE
+PIN 2
+PIN 1
+MAXIMUM RATINGS (TC = 25 °C unless otherwise noted)
+PARAMETER 
+SYMBOL 
+MBR1090
+MBR10100
+UNIT 
+Maximum repetitive peak reverse voltage 
+VRRM 
+90
+100
+V 
+Working peak reverse voltage 
+VRWM 
+90
+100
+V 
+Maximum DC blocking voltage 
+VDC 
+90
+100
+V 
+Maximum average forward rectified current at TC = 133 °C 
+IF(AV) 
+10
+A 
+Peak forward surge current 8.3 ms single half sine-wave 
+superimposed on rated load
+IFSM 
+150
+A 
+Voltage rate of change (rated VR) 
+dV/dt 
+10 000
+V/μs 
+Operating junction and storage temperature range 
+TJ, TSTG
+- 65 to + 150 
+°C 
+ELECTRICAL CHARACTERISTICS (TC = 25 °C unless otherwise noted)
+PARAMETER
+TEST CONDITIONS
+SYMBOL
+VALUE
+UNIT
+Maximum instantaneous forward voltage
+IF = 10 A
+TC = 25 °C
+VF (1)
+0.80
+V
+TC = 125 °C 
+0.65
+IF = 20 A 
+0.75
+Maximum reverse current per diode
+at working peak reverse voltage
+TJ = 25 °C
+IR (2)
+100
+μA
+TJ = 100 °C
+6.0
+mA 
+MBR1090-M3, MBR10100-M3
+www.vishay.com
+Vishay General Semiconductor
+  
+ 
+Revision: 21-May-2019
+2
+Document Number: 89193
+For technical questions within your region: DiodesAmericas@vishay.com, DiodesAsia@vishay.com, DiodesEurope@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+
+RATINGS AND CHARACTERISTICS CURVES (TA = 25 °C unless otherwise noted)
+Fig. 1 - Forward Current Derating Curve
+Fig. 2 - Maximum Non-Repetitive Peak Forward Surge Current
+Fig. 3 - Typical Instantaneous Forward Characteristics
+Fig. 4 - Typical Reverse Characteristics
+THERMAL CHARACTERISTICS (TC = 25 °C unless otherwise noted)
+PARAMETER
+SYMBOL
+MBR1090
+MBR10100
+UNIT
+Typical thermal resistance 
+RJA
+60
+°C/W
+RJC
+2.0
+ORDERING INFORMATION (Example)
+PACKAGE
+PREFERRED P/N
+UNIT WEIGHT (g)
+PACKAGE CODE
+BASE QUANTITY
+DELIVERY MODE
+TO-220AC
+MBR10100-M3/4W
+1.845
+4W
+50/tube
+Tube
+0
+2
+4
+6
+10
+0
+50
+100
+150
+8
+Average Forward Current (A)
+Case Temperature (°C)
+Resistive or Inductive Load
+40
+60
+100
+80
+140
+120
+160
+1
+100
+10
+TJ = TJ max.
+8.3 ms Single Half Sine-Wave
+Number of Cycles at 60 Hz
+Peak Forward Surge Current (A)
+0
+0.2
+0.1
+0.5
+1.0
+0.4
+0.3
+1
+100
+10
+0.01
+0.1
+0.6
+0.7
+0.8
+0.9
+Instantaneous Forward Voltage (V)
+Instantaneous Forward Current (A)
+TJ = 150 °C
+TJ = 125 °C
+TJ = 25 °C
+Percent of Rated Peak Reverse Voltage (%)
+Instantaneous Reverse Current (mA)
+20
+10
+100
+40
+60
+80
+1
+10
+0.01
+0.1
+100
+0.001
+30
+50
+70
+90
+TJ = 150 °C
+TJ = 125 °C
+TJ = 25 °C
+MBR1090-M3, MBR10100-M3
+www.vishay.com
+Vishay General Semiconductor
+  
+ 
+Revision: 21-May-2019
+3
+Document Number: 89193
+For technical questions within your region: DiodesAmericas@vishay.com, DiodesAsia@vishay.com, DiodesEurope@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+Fig. 5 - Typical Junction Capacitance
+Fig. 6 - Typical Transient Thermal Impedance
+PACKAGE OUTLINE DIMENSIONS in inches (millimeters)
+1
+10
+100
+1000
+10 000
+ 10
+100
+Reverse Voltage (V)
+Junction Capacitance (pF)
+TJ = 25 °C
+f = 1.0 MHz
+Vsig = 50 mVp-p
+0.01
+10
+1
+100
+10
+100
+0.1
+0.1
+1
+t - Pulse Duration (s)
+Transient Thermal Impedance (°C/W)
+Junction to Case
+MBR
+0.161 (4.08)
+0.139 (3.53) DIA.
+0.113 (2.87)
+0.103 (2.62)
+0.185 (4.70)
+0.175 (4.44)
+0.055 (1.39)
+0.045 (1.14)
+0.350 (8.89)
+0.330 (8.38)
+0.160 (4.06)
+0.140 (3.56)
+0.037 (0.94)
+0.027 (0.68) 
+0.205 (5.20)           
+0.195 (4.95)
+0.560 (14.22)
+0.530 (13.46)
+0.022 (0.56)
+0.014 (0.36)
+0.110 (2.79)
+0.100 (2.54)
+1
+1.148 (29.16)
+1.118 (28.40)
+0.635 (16.13)
+0.625 (15.87)
+0.603 (15.32)
+0.573 (14.55)
+PIN
+0.057 (1.45)
+0.045 (1.14)
+TO-220AC
+2
+0.415 (10.54)
+0.380 (9.65)
+Legal Disclaimer Notice
+www.vishay.com
+Vishay
+   
+ 
+Revision: 01-Jan-2026
+1
+Document Number: 91000
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+Disclaimer
+ALL PRODUCT, PRODUCT SPECIFICATIONS AND DATA ARE SUBJECT TO CHANGE WITHOUT NOTICE TO IMPROVE 
+RELIABILITY, FUNCTION OR DESIGN OR OTHERWISE. 
+Vishay Intertechnology, Inc., its affiliates, agents, and employees, and all persons acting on its or their behalf (collectively, 
+“Vishay”), disclaim any and all liability for any errors, inaccuracies or incompleteness contained in any datasheet or in any other 
+disclosure relating to any product.
+Vishay makes no warranty, representation or guarantee regarding the suitability of the products for any particular purpose or 
+the continuing production of any product. To the maximum extent permitted by applicable law, Vishay disclaims (i) any and all 
+liability arising out of the application or use of any product, (ii) any and all liability, including without limitation special, 
+consequential or incidental damages, and (iii) any and all implied warranties, including warranties of fitness for particular 
+purpose, non-infringement and merchantability.
+Statements regarding the suitability of products for certain types of applications are based on Vishay's knowledge of typical 
+requirements that are often placed on Vishay products in generic applications. Such statements are not binding statements 
+about the suitability of products for a particular application. It is the customer's responsibility to validate that a particular product 
+with the properties described in the product specification is suitable for use in a particular application. Parameters provided in 
+datasheets and / or specifications may vary in different applications and performance may vary over time. All operating 
+parameters, including typical parameters, must be validated for each customer application by the customer's technical experts. 
+Product specifications do not expand or otherwise modify Vishay's terms and conditions of purchase, including but not limited 
+to the warranty expressed therein.
+Hyperlinks included in this datasheet may direct users to third-party websites. These links are provided as a convenience and 
+for informational purposes only. Inclusion of these hyperlinks does not constitute an endorsement or an approval by Vishay of 
+any of the products, services or opinions of the corporation, organization or individual associated with the third-party website. 
+Vishay disclaims any and all liability and bears no responsibility for the accuracy, legality or content of the third-party website 
+or for that of subsequent links.
+Vishay products are not designed for use in life-saving or life-sustaining applications or any application in which the failure of 
+the Vishay product could result in personal injury or death unless specifically qualified in writing by Vishay. Customers using or 
+selling Vishay products not expressly indicated for use in such applications do so at their own risk. Please contact authorized 
+Vishay personnel to obtain written terms and conditions regarding products designed for such applications.
+No license, express or implied, by estoppel or otherwise, to any intellectual property rights is granted by this document or by 
+any conduct of Vishay. Product names and markings noted herein may be trademarks of their respective owners.
+© 2026 VISHAY INTERTECHNOLOGY, INC. ALL RIGHTS RESERVED

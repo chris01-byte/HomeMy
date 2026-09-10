@@ -1,0 +1,19 @@
+{
+  "project": "HomeMy PMU",
+  "revision": "A",
+  "rev_a_engineering_prototype": true,
+  "rev_b_production": false,
+  "baseline_commit": "1a70bec1de092db8a2d101e67e9e882622992003",
+  "design_state": "in_progress",
+  "schematic_complete": false,
+  "pcb_routed": false,
+  "erc_passed": false,
+  "drc_passed": false,
+  "prototype_order_review": "not_performed",
+  "hardware_tests_performed": false,
+  "battery_energization_gates": [
+    "BAT-004: identify installed external 60 A fuse and verify DC rating and time-current curve",
+    "Complete current-limited motorless bring-up before connecting battery",
+    "Provide reachable service disconnect before actuator testing"
+  ]
+}

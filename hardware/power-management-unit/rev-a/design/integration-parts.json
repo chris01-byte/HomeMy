@@ -1,0 +1,1089 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "status": "integration_circuit_features"
+  },
+  "components": [
+    {
+      "ref": "NT1",
+      "value": "ARM_L_N to BATT_N at star",
+      "mpn": "",
+      "footprint": "PMU_RevA:NetTie_Power_2",
+      "pins": {
+        "1": "ARM_L_N",
+        "2": "BATT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Physical star, not a populated resistor."
+    },
+    {
+      "ref": "NT2",
+      "value": "ARM_R_N to BATT_N at star",
+      "mpn": "",
+      "footprint": "PMU_RevA:NetTie_Power_2",
+      "pins": {
+        "1": "ARM_R_N",
+        "2": "BATT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Physical star, not a populated resistor."
+    },
+    {
+      "ref": "NT3",
+      "value": "DRIVE_N to BATT_N at star",
+      "mpn": "",
+      "footprint": "PMU_RevA:NetTie_Power_2",
+      "pins": {
+        "1": "DRIVE_N",
+        "2": "BATT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Physical star, not a populated resistor."
+    },
+    {
+      "ref": "NT4",
+      "value": "LIFT_N to BATT_N at star",
+      "mpn": "",
+      "footprint": "PMU_RevA:NetTie_Power_2",
+      "pins": {
+        "1": "LIFT_N",
+        "2": "BATT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Physical star, not a populated resistor."
+    },
+    {
+      "ref": "NT5",
+      "value": "PC_N to BATT_N at star",
+      "mpn": "",
+      "footprint": "PMU_RevA:NetTie_Power_2",
+      "pins": {
+        "1": "PC_N",
+        "2": "BATT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Physical star, not a populated resistor."
+    },
+    {
+      "ref": "NT6",
+      "value": "LOGIC_BUCK_N to BATT_N at star",
+      "mpn": "",
+      "footprint": "PMU_RevA:NetTie_Power_2",
+      "pins": {
+        "1": "LOGIC_BUCK_N",
+        "2": "BATT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Physical star, not a populated resistor."
+    },
+    {
+      "ref": "NT7",
+      "value": "CHOPPER_N to BATT_N at star",
+      "mpn": "",
+      "footprint": "PMU_RevA:NetTie_Power_2",
+      "pins": {
+        "1": "CHOPPER_N",
+        "2": "BATT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Physical star, not a populated resistor."
+    },
+    {
+      "ref": "NT8",
+      "value": "LOGIC_5V_N to BATT_N at star",
+      "mpn": "",
+      "footprint": "PMU_RevA:NetTie_Power_2",
+      "pins": {
+        "1": "LOGIC_5V_N",
+        "2": "BATT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Physical star, not a populated resistor."
+    },
+    {
+      "ref": "NT9",
+      "value": "LOGIC_GND to BATT_N at star",
+      "mpn": "",
+      "footprint": "PMU_RevA:NetTie_Logic_2",
+      "pins": {
+        "1": "LOGIC_GND",
+        "2": "BATT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Physical star, not a populated resistor."
+    },
+    {
+      "ref": "NT10",
+      "value": "Chopper local analog reference",
+      "mpn": "",
+      "footprint": "PMU_RevA:NetTie_Logic_2",
+      "pins": {
+        "1": "CHOP_GND",
+        "2": "CHOPPER_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Join beside chopper FET source, outside resistor return current."
+    },
+    {
+      "ref": "BC1",
+      "value": "BB1 copper clamp contact",
+      "mpn": "",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "pins": {
+        "1": "BATT_SENSED_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "pin_types": {
+        "1": "passive"
+      },
+      "notes": "Bare PCB feature; separate Cu bar and clamping hardware in external BOM."
+    },
+    {
+      "ref": "BC2",
+      "value": "BB1 copper clamp contact",
+      "mpn": "",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "pins": {
+        "1": "BATT_SENSED_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "pin_types": {
+        "1": "passive"
+      },
+      "notes": "Bare PCB feature; separate Cu bar and clamping hardware in external BOM."
+    },
+    {
+      "ref": "BC3",
+      "value": "BB2 copper clamp contact",
+      "mpn": "",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "pins": {
+        "1": "MAIN_COMMON"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "pin_types": {
+        "1": "passive"
+      },
+      "notes": "Bare PCB feature; separate Cu bar and clamping hardware in external BOM."
+    },
+    {
+      "ref": "BC4",
+      "value": "BB2 copper clamp contact",
+      "mpn": "",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "pins": {
+        "1": "MAIN_COMMON"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "pin_types": {
+        "1": "passive"
+      },
+      "notes": "Bare PCB feature; separate Cu bar and clamping hardware in external BOM."
+    },
+    {
+      "ref": "BC5",
+      "value": "BB3 copper clamp contact",
+      "mpn": "",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "pins": {
+        "1": "SYS_BUS_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "pin_types": {
+        "1": "passive"
+      },
+      "notes": "Bare PCB feature; separate Cu bar and clamping hardware in external BOM."
+    },
+    {
+      "ref": "BC6",
+      "value": "BB3 copper clamp contact",
+      "mpn": "",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "pins": {
+        "1": "SYS_BUS_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "pin_types": {
+        "1": "passive"
+      },
+      "notes": "Bare PCB feature; separate Cu bar and clamping hardware in external BOM."
+    },
+    {
+      "ref": "BC7",
+      "value": "BB4 copper clamp contact",
+      "mpn": "",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "pins": {
+        "1": "MOTION_SENSED_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "pin_types": {
+        "1": "passive"
+      },
+      "notes": "Bare PCB feature; separate Cu bar and clamping hardware in external BOM."
+    },
+    {
+      "ref": "BC8",
+      "value": "BB4 copper clamp contact",
+      "mpn": "",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "pins": {
+        "1": "MOTION_SENSED_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "pin_types": {
+        "1": "passive"
+      },
+      "notes": "Bare PCB feature; separate Cu bar and clamping hardware in external BOM."
+    },
+    {
+      "ref": "BC9",
+      "value": "BB5 copper clamp contact",
+      "mpn": "",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "pins": {
+        "1": "MOTION_COMMON"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "pin_types": {
+        "1": "passive"
+      },
+      "notes": "Bare PCB feature; separate Cu bar and clamping hardware in external BOM."
+    },
+    {
+      "ref": "BC10",
+      "value": "BB5 copper clamp contact",
+      "mpn": "",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "pins": {
+        "1": "MOTION_COMMON"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "pin_types": {
+        "1": "passive"
+      },
+      "notes": "Bare PCB feature; separate Cu bar and clamping hardware in external BOM."
+    },
+    {
+      "ref": "BC11",
+      "value": "BB6 copper clamp contact",
+      "mpn": "",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "pins": {
+        "1": "MOTION_BUS_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "pin_types": {
+        "1": "passive"
+      },
+      "notes": "Bare PCB feature; separate Cu bar and clamping hardware in external BOM."
+    },
+    {
+      "ref": "BC12",
+      "value": "BB6 copper clamp contact",
+      "mpn": "",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "pins": {
+        "1": "MOTION_BUS_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "pin_types": {
+        "1": "passive"
+      },
+      "notes": "Bare PCB feature; separate Cu bar and clamping hardware in external BOM."
+    },
+    {
+      "ref": "BC13",
+      "value": "BB6 copper clamp contact",
+      "mpn": "",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "pins": {
+        "1": "MOTION_BUS_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "pin_types": {
+        "1": "passive"
+      },
+      "notes": "Bare PCB feature; separate Cu bar and clamping hardware in external BOM."
+    },
+    {
+      "ref": "BC14",
+      "value": "BB6 copper clamp contact",
+      "mpn": "",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "pins": {
+        "1": "MOTION_BUS_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "pin_types": {
+        "1": "passive"
+      },
+      "notes": "Bare PCB feature; separate Cu bar and clamping hardware in external BOM."
+    },
+    {
+      "ref": "BC15",
+      "value": "BB7 copper clamp contact",
+      "mpn": "",
+      "footprint": "PMU_RevA:Busbar_Contact_M3_D8",
+      "pins": {
+        "1": "BATT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "pin_types": {
+        "1": "passive"
+      },
+      "notes": "Bare PCB feature; separate Cu bar and clamping hardware in external BOM."
+    },
+    {
+      "ref": "TP1",
+      "value": "BATT_FUSED_P",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "BATT_FUSED_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP2",
+      "value": "BATT_SENSED_P",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "BATT_SENSED_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP3",
+      "value": "MAIN_KELVIN_P",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "MAIN_KELVIN_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP4",
+      "value": "MAIN_KELVIN_N",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "MAIN_KELVIN_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP5",
+      "value": "MAIN_COMMON",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "MAIN_COMMON"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP6",
+      "value": "SYS_BUS_P",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "SYS_BUS_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP7",
+      "value": "MOTION_KELVIN_P",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "MOTION_KELVIN_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP8",
+      "value": "MOTION_KELVIN_N",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "MOTION_KELVIN_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP9",
+      "value": "MOTION_COMMON",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "MOTION_COMMON"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP10",
+      "value": "MOTION_BUS_P",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "MOTION_BUS_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP11",
+      "value": "PC_BUCK_IN_P",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "PC_BUCK_IN_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP12",
+      "value": "LOGIC_BUCK_IN_P",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "LOGIC_BUCK_IN_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP13",
+      "value": "V5V",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "V5V"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP14",
+      "value": "V3V3",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "V3V3"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP15",
+      "value": "BATT_N",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "BATT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP16",
+      "value": "LOGIC_GND",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "LOGIC_GND"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP17",
+      "value": "AON_3V3",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "AON_3V3"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP18",
+      "value": "AON_WAKE_EN",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "AON_WAKE_EN"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP19",
+      "value": "MAIN_FAULT_N",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "MAIN_FAULT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP20",
+      "value": "MAIN_TMR",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "MAIN_TMR"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP21",
+      "value": "MOTION_GATE_EN",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "MOTION_GATE_EN"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP22",
+      "value": "MOTION_FLT_N",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "MOTION_FLT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP23",
+      "value": "MOTION_TEMP_FLT_N",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "MOTION_TEMP_FLT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP24",
+      "value": "MOTION_TMR",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "MOTION_TMR"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP25",
+      "value": "MOTION_IMON_INPUT",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "MOTION_IMON_INPUT"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP26",
+      "value": "CHOP_GATE",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "CHOP_GATE"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP27",
+      "value": "CHOP_10V",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "CHOP_10V"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP28",
+      "value": "CHOP_REF2V5",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "CHOP_REF2V5"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP29",
+      "value": "CHOP_FAULT_N",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "CHOP_FAULT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP30",
+      "value": "CHOP_ACTIVE_N",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "CHOP_ACTIVE_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP31",
+      "value": "CAN_TX",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "CAN_TX"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP32",
+      "value": "CAN_RX",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "CAN_RX"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP33",
+      "value": "ESP_MAIN_HOLD",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "ESP_MAIN_HOLD"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP34",
+      "value": "ESP_MOTION_RESET",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "ESP_MOTION_RESET"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP35",
+      "value": "LIFT_24V_SAMPLE",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "LIFT_24V_SAMPLE"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP36",
+      "value": "LIFT_24V_N",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "LIFT_24V_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP37",
+      "value": "PC_EFUSE_FAULT_N",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "PC_EFUSE_FAULT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP38",
+      "value": "PC_EFUSE_PGOOD",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "PC_EFUSE_PGOOD"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP39",
+      "value": "LOGIC_EFUSE_FAULT_N",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "LOGIC_EFUSE_FAULT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "TP40",
+      "value": "LOGIC_EFUSE_PGOOD",
+      "mpn": "",
+      "footprint": "TestPoint:TestPoint_Pad_D2.0mm",
+      "pins": {
+        "1": "LOGIC_EFUSE_PGOOD"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "notes": "Bare labelled PCB probe pad; not a purchased part."
+    },
+    {
+      "ref": "#PWR001",
+      "value": "ERC source: BATT_FUSED_P",
+      "mpn": "",
+      "footprint": "",
+      "pins": {
+        "1": "BATT_FUSED_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "on_board": false,
+      "pin_names": {
+        "1": "PWR_FLAG"
+      },
+      "pin_types": {
+        "1": "power_out"
+      },
+      "notes": "External fused positive bench/battery input at J1"
+    },
+    {
+      "ref": "#PWR002",
+      "value": "ERC source: BATT_N",
+      "mpn": "",
+      "footprint": "",
+      "pins": {
+        "1": "BATT_N"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "on_board": false,
+      "pin_names": {
+        "1": "PWR_FLAG"
+      },
+      "pin_types": {
+        "1": "power_out"
+      },
+      "notes": "External supply return at J2"
+    },
+    {
+      "ref": "#PWR003",
+      "value": "ERC source: BATT_SENSED_P",
+      "mpn": "",
+      "footprint": "",
+      "pins": {
+        "1": "BATT_SENSED_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "on_board": false,
+      "pin_names": {
+        "1": "PWR_FLAG"
+      },
+      "pin_types": {
+        "1": "power_out"
+      },
+      "notes": "BATT_FUSED_P through four-terminal RSH1"
+    },
+    {
+      "ref": "#PWR004",
+      "value": "ERC source: AON_LDO_IN",
+      "mpn": "",
+      "footprint": "",
+      "pins": {
+        "1": "AON_LDO_IN"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "on_board": false,
+      "pin_names": {
+        "1": "PWR_FLAG"
+      },
+      "pin_types": {
+        "1": "power_out"
+      },
+      "notes": "BATT_FUSED_P through current-limiting AON input resistor chain R200/R201"
+    },
+    {
+      "ref": "#PWR005",
+      "value": "ERC source: SYS_BUS_P",
+      "mpn": "",
+      "footprint": "",
+      "pins": {
+        "1": "SYS_BUS_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "on_board": false,
+      "pin_names": {
+        "1": "PWR_FLAG"
+      },
+      "pin_types": {
+        "1": "power_out"
+      },
+      "notes": "Main controlled back-to-back FET power path"
+    },
+    {
+      "ref": "#PWR006",
+      "value": "ERC source: MOTION_BUS_P",
+      "mpn": "",
+      "footprint": "",
+      "pins": {
+        "1": "MOTION_BUS_P"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "on_board": false,
+      "pin_names": {
+        "1": "PWR_FLAG"
+      },
+      "pin_types": {
+        "1": "power_out"
+      },
+      "notes": "SYS_BUS_P through RSH2 and controlled motion FET path"
+    },
+    {
+      "ref": "#PWR007",
+      "value": "ERC source: V5V",
+      "mpn": "",
+      "footprint": "",
+      "pins": {
+        "1": "V5V"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "on_board": false,
+      "pin_names": {
+        "1": "PWR_FLAG"
+      },
+      "pin_types": {
+        "1": "power_out"
+      },
+      "notes": "External regulated five-volt converter input connector"
+    },
+    {
+      "ref": "#PWR008",
+      "value": "ERC source: LOGIC_GND",
+      "mpn": "",
+      "footprint": "",
+      "pins": {
+        "1": "LOGIC_GND"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "on_board": false,
+      "pin_names": {
+        "1": "PWR_FLAG"
+      },
+      "pin_types": {
+        "1": "power_out"
+      },
+      "notes": "Passive star junction NT9 to BATT_N"
+    },
+    {
+      "ref": "#PWR009",
+      "value": "ERC source: CHOP_GND",
+      "mpn": "",
+      "footprint": "",
+      "pins": {
+        "1": "CHOP_GND"
+      },
+      "sheet": "09b_star_and_measurements",
+      "source_url": "",
+      "in_bom": false,
+      "on_board": false,
+      "pin_names": {
+        "1": "PWR_FLAG"
+      },
+      "pin_types": {
+        "1": "power_out"
+      },
+      "notes": "NT10 local Kelvin reference then NT7 power star"
+    }
+  ]
+}

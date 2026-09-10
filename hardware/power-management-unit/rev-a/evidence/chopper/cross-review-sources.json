@@ -1,0 +1,23 @@
+{
+  "date": "2026-09-10",
+  "review_scope": "JSON circuit connectivity and manufacturer behavior, not hardware or full CAD signoff",
+  "sources": [
+    {
+      "file": "design/power-parts.json",
+      "sha256": "05bd625b801b49ede98912c5122b94acd8e537164fbd9623d2da31b6748472e6"
+    },
+    {
+      "file": "design/wake-io-parts.json",
+      "sha256": "04b7e1ab417b089d63005ecc8aee165510616b0b688cea6572f9033bf2781821"
+    },
+    {
+      "file": "design/chopper-parts.json",
+      "sha256": "7dd763d387ff97c1e87ae890822a4c2876ce618a43a5f8cd209ce4b2137228df"
+    },
+    {
+      "file": "design/integration-parts.json",
+      "sha256": "832576e9632e56603d407a7586dea578e280d2e96e0422452c10b5425d912003"
+    }
+  ],
+  "closed_procurement_issue": "U5 divider R62 uses standard226k RT0805BRD07226KL in reviewed power source."
+}

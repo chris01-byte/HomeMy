@@ -1,0 +1,161 @@
+{
+  "metadata": {
+    "units": "mm",
+    "source": "https://www.we-online.com/components/products/datasheet/7461103.pdf",
+    "source_page": 1,
+    "source_revision": "001.005 2025-09-11",
+    "visual_source_checked": true,
+    "fabrication_note": "Qualified press-fit process required. Gerber/drill data alone do not define plating and insertion controls."
+  },
+  "footprint_specs": {
+    "PMU:Wurth_7461103": {
+      "body": {
+        "width": 9.0,
+        "depth": 9.0,
+        "height_above_PCB": 14.0
+      },
+      "courtyard": {
+        "width": 11.0,
+        "depth": 11.0
+      },
+      "pad_type": "thru_hole",
+      "pad_shape": "circle",
+      "pad_diameter": 2.1,
+      "finished_hole_diameter": 1.475,
+      "finished_hole_tolerance": 0.05,
+      "raw_drill_diameter": 1.6,
+      "raw_drill_tolerance_minus": 0.03,
+      "raw_drill_tolerance_plus": 0,
+      "hole_copper_um_min": 25,
+      "hole_copper_um_max": 60,
+      "PCB_thickness_min": 1.6,
+      "PCB_thickness_max": 3.2,
+      "finish_basis": "chemical surfaces/ENIG; HAL uses a different finished-hole target1.45mm",
+      "pads": [
+        {
+          "number": "1",
+          "x": -3.81,
+          "y": -3.81
+        },
+        {
+          "number": "2",
+          "x": -3.81,
+          "y": -1.27
+        },
+        {
+          "number": "3",
+          "x": -3.81,
+          "y": 1.27
+        },
+        {
+          "number": "4",
+          "x": -3.81,
+          "y": 3.81
+        },
+        {
+          "number": "5",
+          "x": 3.81,
+          "y": -3.81
+        },
+        {
+          "number": "6",
+          "x": 3.81,
+          "y": -1.27
+        },
+        {
+          "number": "7",
+          "x": 3.81,
+          "y": 1.27
+        },
+        {
+          "number": "8",
+          "x": 3.81,
+          "y": 3.81
+        }
+      ],
+      "electrical_pin_note": "All eight pins are one conducting terminal; numbering is local CAD convention.",
+      "assembly": "M5 internal thread,2.2Nm maximum. Support every pin during one-stroke insertion; resist lug torque independently from PCB. No wave/reflow soldering. Minimum3mm hole-to-board-edge/component separation. Review TG>135 compatibility with manufacturer.",
+      "mechanical_allowance": "Reserve25mm ring-lug/tool access beyond wire-exit side and an insulated removable cover. Copper busbars need formed tabs to meet vertical M5 lug face."
+    }
+  },
+  "verified_library_reuse": {
+    "Q40": {
+      "footprint": "Package_TO_SOT_SMD:Infineon_PG-HSOF-8-1",
+      "logical_pads": {
+        "1": "gate",
+        "2": "all seven source leads",
+        "3": "drain tab"
+      },
+      "manufacturer_physical_pins": {
+        "1": "gate",
+        "2-8": "source",
+        "TAB": "drain"
+      },
+      "note": "Preserve custom source/drain pad polygons and paste windows in official KiCad footprint."
+    },
+    "U34_U35": {
+      "footprint": "Package_SO:SSOP-4_4.4x2.6mm_P1.27mm",
+      "source": "https://www.vishay.com/docs/83465/vos618a.pdf",
+      "note": "Official footprint description cites exact datasheet."
+    },
+    "J7_to_J15": {
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_2-GF-5,08_1x02_P5.08mm_Horizontal_ThreadedFlange",
+      "order_code_in_library_description": "1776508 12A",
+      "pins": [
+        {
+          "number": "1",
+          "x": 0,
+          "y": 0
+        },
+        {
+          "number": "2",
+          "x": 5.08,
+          "y": 0
+        }
+      ],
+      "pad_size": [
+        2.08,
+        3.6
+      ],
+      "drill": 1.4,
+      "note": "Keep full library flange/body/courtyard. No board mounting-hole option selected; plug screw-locks into housing flange."
+    },
+    "J18": {
+      "footprint": "Connector_Phoenix_MSTB:PhoenixContact_MSTB_2,5_3-GF-5,08_1x03_P5.08mm_Horizontal_ThreadedFlange",
+      "order_code": "1776511",
+      "mating_plug": "1777992"
+    },
+    "U30": {
+      "footprint": "Package_SO:Texas_DGN0008B_VSSOP-8-1EP_3x3mm_P0.65mm_EP2x3mm_Mask1.88x1.98mm_ThermalVias",
+      "source": "https://www.ti.com/lit/ds/symlink/tps7a4001.pdf",
+      "manufacturer_package": "DGN0008B",
+      "exposed_pad_mask_mm": [
+        1.88,
+        1.98
+      ],
+      "note": "Thermal pad9 connects local CHOP_GND; other DGN0008 suffix drawings are not interchangeable."
+    },
+    "C312_C313": {
+      "footprint": "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm",
+      "mpn": "EKYC101ELL471MK35S",
+      "source": "https://www.chemi-con.co.jp/products/relatedfiles/capacitor/catalog/KYCLL-e.PDF",
+      "source_page": 1,
+      "visual_source_checked": true,
+      "body_nominal_mm": [
+        12.5,
+        35
+      ],
+      "body_max_mm": [
+        13.0,
+        36.5
+      ],
+      "lead_diameter_mm": 0.6,
+      "lead_pitch_mm": 5.0,
+      "pin_map": {
+        "1": "positive",
+        "2": "negative"
+      },
+      "note": "Long lead positive per manufacturer drawing; physical case stripe marks negative. Reserve height and vent clearance;mechanical restraint required."
+    }
+  }
+}

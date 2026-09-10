@@ -1,0 +1,112 @@
+# Revision-A brake chopper, connectors and conductors
+
+Status: engineering prototype circuit and mechanical basis; production release is false. Dated 2026-09-10. This record addresses CHOP-001..005 and PCB-001..006. The generated connectivity is in `chopper-parts.json`; `calculate_chopper.py` reproduces `chopper-calculations.json`. It is an analytical design, not evidence of assembled hardware performance. The parent KiCad project and its ERC/DRC reports determine whether that design has actually been captured and routed.
+
+## Analog circuit and startup
+
+U30 TPS7A4001DGNR derives nominal 9.9705 V from **MOTION_BUS_P**, with 75.0 kΩ/10.0 kΩ feedback, 1 µF/100 V input and 10 µF/25 V output. The output capacitor must retain at least 4.7 µF at its working bias. The package appendix specifies **DGN0008B**, with 1.88 × 1.98 mm exposed-pad mask; the selected official KiCad DGN0008B footprint preserves that geometry. U31 REF5025IDR supplies the 2.5 V threshold reference. This is the high grade, not the less accurate `A` grade. U32 LM339BIPWR implements chopper hysteresis, independent overvoltage and two NTC window comparisons. The local supply remains powered while the isolated motion bus contains energy. [TI LDO](https://www.ti.com/lit/ds/symlink/tps7a4001.pdf), [reference](https://www.ti.com/lit/ds/symlink/ref50.pdf), [comparator](https://www.ti.com/lit/ds/symlink/lm339b.pdf).
+
+U36 TPS3808G01DBVR supervises the reference at nominal 2.308 V using 117 kΩ/24.9 kΩ. Its **CT pin is unconnected**, giving 12–28 ms qualification. During qualification Q44 is off: Q43 disconnects the fault optocoupler LED supply, and Q41 has no ground return to enable U33. Thus a comparator/reference startup transient cannot latch motion off, and the chopper gate remains disabled during startup. Once qualified, Q44 provides both the Q41 return and Q43 gate pull-down. A subsequent reference drop removes local permission. This is a supply qualification interval, not a 46 V fault delay. [TPS3808 timing and pin table](https://www.ti.com/lit/ds/symlink/tps3808.pdf).
+
+U33 UCC27511DBVR uses IN+ for the voltage request and IN− for thermal/supply disable. Pin 1 is VDD, 2 OUTH, 3 OUTL, 4 GND, 5 IN− and 6 IN+. Separate 10 Ω turn-on and 2.2 Ω turn-off resistors drive Q40; 47 kΩ gate pull-down and 15 V gate clamp are fitted. U32 was changed from TLV1704 because the latter's 0.9 V low-output bound does not guarantee the driver's 0.8 V low-input requirement. LM339B guarantees at most 0.55 V at up to 4 mA over its specified −40..85 °C range. The prototype local board-temperature limit is 70 °C. The maximum simultaneous pull-up and optocoupler LED sink on a fault output is approximately 2.8 mA. [Gate driver](https://www.ti.com/lit/ds/symlink/ucc27511.pdf).
+
+U34 and U35 VOS618A-3T isolate `CHOP_FAULT_N` and `CHOP_ACTIVE_N` from the motion-powered circuit. Their transistor emitters connect to LOGIC_GND; the receiving sheet provides pull-ups. The fault output releases when the motion bus is unpowered. Hardware inhibit on the motion controller remains a separate default-off interface, so an unpowered analog chopper does not prevent initially powering the motion bus. The 46 V comparator activates the motion fault latch through U34, **while leaving the chopper operating**. Local overtemperature disables the driver and faults motion. No chopper status line may connect a 10 V pull-up directly to the ESP32. [Optocoupler and pinout](https://www.vishay.com/docs/83465/vos618a.pdf).
+
+Motorless commissioning must verify the supervisor interval, turn-on overshoot, reference brownout, isolated motion-bus hold-up, and no GPIO backpower. Motion commands must remain inhibited through initial bus and reference establishment. A disabled chopper cannot absorb energy from already-moving machinery during that initial 28 ms; normal startup therefore requires stationary actuators as already required by the power-on contract.
+
+## Thresholds and uncertainty
+
+The chopper non-inverting input uses 161.4 kΩ total from the bus, 10.0 kΩ to CHOP_GND and 2.69 MΩ feedback from the **actual gate**, not the loaded open-collector comparator output. For gate voltage `Vg`, input offset `Vos` and input-bias allowance `Ib`:
+
+`Vbus_trip = (Vref + Vos) × (1 + Rt/Rb + Rt/Rf) − Vg × Rt/Rf + Ib × Rt`.
+
+Nominal values produce 43.000 V on and 42.402 V off. A separate 174 kΩ/10.0 kΩ divider produces nominal 46.000 V motion-off. The numerical corner sweep includes 0.1% resistors, independently signed 25 ppm/°C resistor drift over 0..70 °C, 0.05% reference error, 3 ppm/°C reference drift, an added 300 ppm reference aging/hysteresis allowance, ±5.5 mV comparator offset, ±50 nA bias allowance and ±2.7% gate-rail variation.
+
+| Threshold | Nominal | Conservative corner range |
+| --- | ---: | ---: |
+| Chopper turns on | 43.000 V | 42.683–43.316 V |
+| Chopper turns off | 42.402 V | 42.072–42.733 V |
+| Independent motion fault | 46.000 V | 45.663–46.339 V |
+
+The different-device corner intervals overlap; an individual device retains at least approximately 0.577 V hysteresis under the stated bounds. These are provisional starting thresholds, not calibrated guarantees. Replaceable R303 (initial 1.40 kΩ, service range 0–3.0 kΩ), and R305/R306/R331 (1.00 MΩ + 1.00 MΩ + 690 kΩ; total initial 2.69 MΩ, service range 2.32–3.01 MΩ), allow measured threshold correction. Every feedback resistor stays within TNPW0805's 1 MΩ range. R320's 2.2 Ω uses the supported 1% grade; it does not set a voltage threshold. Do not fit a live-adjustable exposed potentiometer to the high-voltage divider. R308 also remains replaceable for OV calibration. The 100 pF divider filters have approximately 1 µs time constants; full turn-off latency includes comparator, optocoupler and motion-latch propagation and must be measured. [Resistor ranges and ordering codes](https://www.vishay.com/docs/28758/tnpw_e3.pdf).
+
+## Resistor bank, thermal protection and FET
+
+Fit two external **Vishay RH10010R00FE01**, 10 Ω, 100 W, 1%, in parallel. Each has its own 305 × 305 × 3.2 mm aluminum heat-spreader panel for the first prototype. This preserves the manufacturer's per-resistor mounting-area basis. A smaller common plate needs separate derating evidence. Locate them away from polymers and shield their hot surfaces. The family data includes a five-times-rated-power, five-second short-overload test; that is **2500 J per resistor** under the stated test/mounting basis. A cold 250 J pulse per resistor is below that demonstrated test in both power and duration. The test does not document a repetitive braking duty cycle. [RH/NH electrical, mounting and overload data, pages 1–5](https://www.vishay.com/docs/30201/rhnh.pdf).
+
+| Bus | Nominal bank current | Nominal bank power | Maximum power at −1% resistance | Time to 500 J at maximum power |
+| --- | ---: | ---: | ---: | ---: |
+| 43 V | 8.60 A | 369.8 W | 373.5 W | 1.339 s |
+| 45 V | 9.00 A | 405.0 W | 409.1 W | 1.222 s |
+| 46 V | 9.20 A | 423.2 W | 427.5 W | 1.170 s |
+
+The initial **test** limit is one measured 500 J bank pulse from a cold assembly, no more frequently than once per minute, and only when both resistor cases have returned below 40 °C. The 60 s period corresponds to 8.33 W bank average; it is an engineering starting assumption, not a manufacturer repetitive-pulse rating. Start staged commissioning with lower energy and increase only after recording current, integrated energy and both case temperatures. Actual permissible regeneration, repetition rate and continuous braking remain Revision-B measurements. A 5 Ω bank at 43 V cannot absorb a continuous regenerative source above approximately 8.6 A; motion-off and controlled-stop strategy remain necessary.
+
+The analogue sensor is **NTCLE100E3103GB0**, 10 kΩ/2%, B25/85 = 3977 K. R311 supplies the divider from 2.5 V. The 0.24777 V hot threshold (90.9 kΩ/10.0 kΩ) corresponds to 1100 Ω, approximately 84 °C using the manufacturer resistance table. The upper 2.47525 V window (1.00 kΩ/100 kΩ) detects a disconnected sensor above approximately 1 MΩ; a short also faults. The sensor is 1070 Ω at 85 °C and 332 kΩ at −40 °C. Allow approximately ±4 °C electrical threshold uncertainty, plus mounting lag and case/core differences. Its coating is not rated electrical insulation and it is not intended for potting: use an insulated, removable clamp against the hotter resistor case, clear of live terminals. A **second independent sensor** supplies ESP32 telemetry from +3V3 through R324. Never share the two sensor returns. [NTC data and resistance table, pages 1–2 and 10](https://www.vishay.com/docs/29049/ntcle100.pdf).
+
+Q40 is **IPT015N10N5ATMA1**, a 100 V switching MOSFET. Manufacturer physical pin 1 is gate, 2–8 are source and the tab is drain. The official KiCad HSOF-8-1 footprint groups these into logical pads 1 gate, 2 source and 3 drain; JSON records both maps. Datasheet maximum RDS(on) is 1.5 mΩ at 10 V/25 °C and maximum Qg is 211 nC. The datasheet provides SOA and transient-thermal curves; source/drain switching waveforms still must be overlaid against them, because the graph was not treated as a guaranteed hot linear-mode rating. [Infineon data, pages 3–6](https://www.infineon.com/assets/row/public/documents/24/49/infineon-ipt015n10n5-datasheet-en.pdf).
+
+Using an intentionally conservative **4 mΩ hot-resistance assumption** gives approximately 0.345 W conduction at 9.29 A. At 10 kHz and an assumed total 200 ns switching overlap, `0.5 × 46 × 9.29 × 200ns × 10kHz = 0.427 W` switching loss; gate-drive power is about 0.021 W. These assumptions must be replaced by waveforms. Provide at least 6 cm² drain copper and a local temperature test point. Do not credit continuous linear operation or avalanche as the braking sink. D63 MBR10100-M3/4W returns resistor/cable inductive current to the bus; its **pin 1 and metal tab are cathode, pin 2 anode**, verified from the drawing. Keep the live tab inaccessible. [Freewheel diode](https://www.vishay.com/docs/89193/mbr10100.pdf).
+
+**The hysteretic circuit's frequency depends on its populated bus capacitance.** C312/C313 are two **EKYC101ELL471MK35S**, each 470 µF/100 V, ±20%, giving 940 µF nominal and 752–1128 µF initial at 20 °C. The manufacturer lists each as 12.5 mm diameter, 35 mm length (36.5 mm maximum), 0.6 mm leads on 5 mm pitch, 3.3 A RMS at 105 °C/100 kHz and 25 mΩ maximum ESR at 20 °C/100 kHz. The conservative 1 kHz ripple multiplier is 0.85, or 2.805 A per part. Use symmetrical copper and mechanically restrain the cans without covering their vents. [Exact capacitor](https://www.chemi-con.co.jp/en/products/detail-condenser.php?part_number=EKYC101ELL471MK35S), [dimensions and frequency factors](https://www.chemi-con.co.jp/products/relatedfiles/capacitor/catalog/KYCLL-e.PDF).
+
+For a roughly constant source, `f ≈ Iregen × (1 − Iregen/Ibrake) / (Cbus × hysteresis)`. At 46 V, 4.95 Ω, 0.577 V minimum hysteresis and 752 µF, the ideal maximum is approximately **5.36 kHz**. Worst bank capacitor ripple is `Ibrake/2 = 4.646 A RMS`, or 2.323 A per capacitor with equal sharing; measure sharing and keep each below 2.7 A in the initial envelope. Frequency, effective capacitance and ESR at the real switching frequency remain measurements: the formula neglects ESR steps, wiring inductance and propagation delay. The 100 kHz ESR number does not prove a 5 kHz worst-case ESR. Temperature and aging also change capacitance beyond its initial tolerance. These qualifications remain relevant even with the populated bulk; unknown motor capacitors are no longer necessary for the nominal frequency estimate.
+
+MOTION stays off during the initial main-path test, retaining that test's ≤100 µF directly switched SYS-bus assumption. Subsequent **motorless motion enable must use the 1 A current-limited supply** and record the actual current, VDS, gate and bus ramp. The pair stores 0.829 J nominal, 0.995 J at +20% capacitance and 42 V. A 10 kΩ gate pull-up does not guarantee 2 ms charging or a 10 A inrush; no full-battery inrush/hot-SOA claim follows from that resistor. The separate power-stage analysis owns this enable envelope. R332, 22.0 kΩ/1%, provides a defined discharge path below the chopper's off threshold: its worst initial RC estimate from 42 V to 5 V is 53.35 s, with 0.096 W dissipation at 46 V. Verify the test-point voltage before touching the motion bus.
+
+D60/D61 SMCJ43A are local motion-bus/drain transient clamps only: 43 V standoff, 69.4 V specified clamp at 21.7 A for their stated pulse waveform. They are not assigned to the input/SYS domain, whose controllers have tighter limits. The power-path sheet separately selects its TVS. Clamp lead inductance, temperature and actual waveform must be included before claiming a below-100 V peak. [Littelfuse SMCJ data](https://www.littelfuse.com/~/media/electronics/datasheets/tvs_diodes/littelfuse_tvs_diode_smcj_datasheet.pdf.pdf).
+
+## Connector and harness pin table
+
+J1–J6 use **Würth 7461103** M5 press-fit terminals. Their published 160 A class provides margin over the ≥70 A battery-terminal and 25 A arm requirements; it does not rate the complete PCB or cable. Use insulated covers and mechanically restrained ring lugs. The drawing specifies 2.2 Nm maximum tightening torque, qualified hole plating and a press-fit process. Fabricator/assembler confirmation is an ordering gate for this footprint. **Do not reflow or wave-solder these parts.** [Würth product drawing](https://www.we-online.com/components/products/datasheet/7461103.pdf).
+
+The 12 A two-pin lower-current interface is Phoenix **1776508** header with **1777989** screw-flanged cable plug. It accepts the required 1.5 mm² conductors for the approximately 9.3 A chopper pulse; no unspecified Micro-Fit pulse-current exception is needed. Library footprints explicitly identify the part and include the flange. Four-pin CAN headers are JST **BM04B-GHS-TBT(LF)(SN)** with **GHR-04V-S** housings and **SSHL-002T-P0.2** crimp contacts. They form a straight backbone connection. [Phoenix header](https://www.phoenixcontact.com/en-us/products/pcb-header-mstb-25-2-gf-508-1776508), [mating plug](https://www.phoenixcontact.com/en-dk/products/pcb-connector-mstb-25-2-stf-508-1777989), [JST GH](https://www.jst-mfg.com/product/pdf/eng/eGH.pdf).
+
+| Ref | Pin assignment | Wire / provisional envelope |
+| --- | --- | --- |
+| J1 | All 8 PCB pins BATT_FUSED_P | 6 mm², M5 ring lug, 50 A system continuous maximum |
+| J2 | All 8 BATT_N | 6 mm², M5 ring lug |
+| J3/J4 | All pins MOTION_BUS_P / ARM_L_N | 4 mm², M5 ring lugs, 25 A left-arm planning envelope |
+| J5/J6 | All pins MOTION_BUS_P / ARM_R_N | 4 mm², M5 ring lugs, 25 A right-arm planning envelope |
+| J7 | 1 MOTION_BUS_P, 2 DRIVE_N | 1.5 mm², approximately 8 A peak setting |
+| J8 | 1 MOTION_BUS_P, 2 LIFT_N | 1.0 mm², 5 A provisional 24 V converter **input** |
+| J9 | 1 PC_BUCK_IN_P, 2 PC_N | 0.75 mm², 3 A provisional PC converter **input** |
+| J10 | 1 LOGIC_BUCK_IN_P, 2 LOGIC_BUCK_N | 1.0 mm², 2 A provisional 5 V converter **input** |
+| J11 | 1 +5V, 2 LOGIC_5V_N | 1.0 mm², 5 A regulated converter **output** into board |
+| J12 | 1 MOTION_BUS_P, 2 CHOP_DRAIN | 1.5 mm² high-temperature twisted pair; **neither terminal is ground** |
+| J13, DNP | 1 LIFT_24V_SAMPLE, 2 LIFT_24V_N | Sample external 24 V **output**, no populated clamp |
+| J14 | 1 CHOP_NTC, 2 CHOP_GND | 0.25 mm², independent analog NTC |
+| J15 | 1 CHOP_TEMP_ADC, 2 LOGIC_GND | 0.25 mm², separate telemetry NTC |
+| J16/J17 | 1 CAN_H, 2 CAN_L, 3 LOGIC_GND, 4 CHASSIS | CAN twisted pair/backbone, no star; 0.14–0.2 mm² crimp contact range |
+| J18 | 1 +5V, 2 LED_DATA_OUT, 3 LOGIC_5V_N | Phoenix1776511/1777992, 1 mm² power/return, 0.25 mm² data, 5 A |
+
+The LED return uses LOGIC_5V_N directly to J11.2/NT8 through broad copper. Its data reference meets LOGIC_GND at the system star; the 5 A strip current must not traverse NT9 or the INA/ADC region. Connector IDs are not interchangeable keys: label and mechanically code J8–J13 for their distinct voltages and directions. None of these connectors is credited with live-mating interrupt capability. Ring-lug crimp tooling, exact cable insulation/temperature rating, ferrules and harness strain relief remain assembly selections requiring inspection; unspecified ring lugs must not be called a released harness BOM.
+
+A possible arm alternative is Phoenix **KDSP 4/1, 1714029**, 41 A nominal and 4 mm². It needs a different, separately verified footprint and temperature derating; it is not a drop-in substitute for the selected stud. Mega-Fit is not populated without evidence for the exact 4 mm² contact/current combination. [KDSP alternative](https://www.phoenixcontact.com/en-nz/products/printed-circuit-board-terminal-kdsp-4-1-1714029).
+
+## Copper, busbars and mechanics
+
+Use four layers with 70 µm outer and 35 µm inner copper, subject to fabricator confirmation. An analytical basis is a 15 × 2 mm copper bar per high-current bus segment, a maximum 100 mm electrical length for each calculated segment, and 20 mm broad copper on both outer layers in parallel. Form the bar ends to meet the vertical M5 terminal faces. **Split reinforcement at every shunt, opposing FET bank and protected-bus boundary; never bridge a switching or measuring element.** Symmetrical short connections to the parallel FETs must carry current from the bar to every device; a low-loss bar does not prove FET-pad neck capability.
+
+Calculated at 100 °C conductor temperature using copper resistivity 1.724e−8 Ωm at 20 °C and 0.00393/°C coefficient:
+
+| Current | 100 mm, 15 × 2 mm bar | 100 mm, two 20 mm × 70 µm pours alone | 160-via layer transfer |
+| --- | ---: | ---: | ---: |
+| 25 A | 0.047 W | 0.506 W | 0.0045 W |
+| 45 A | 0.153 W | 1.639 W | 0.0146 W |
+| 50 A | 0.189 W | 2.023 W | 0.0180 W |
+| 60 A | 0.272 W | 2.913 W | 0.0260 W |
+| 120 A | 1.088 W | 11.654 W | 0.1039 W |
+| 150 A | 1.700 W | 18.209 W | 0.1623 W |
+
+The via estimate uses 0.4 mm finished holes, 25 µm copper plating and 1.6 mm board thickness. Provide **160 vias wherever the complete main current transfers between outer layers**, distributed in multiple arrays, not a bottleneck line. The no-cooling 150 A/3 s estimate is approximately +17.5 °C for the combined via copper and +0.49 °C for one bar. These calculations omit contact resistance, current crowding, local plating defects and thermal boundary conditions. At 50 A a 100 µΩ bolted joint adds 0.25 W; measure every assembled joint by four-wire voltage drop and temperature. The current rating is contingent on the implemented geometry and assembly, not these bulk-material estimates.
+
+Power-negative branches meet BATT_N at the defined star. CHOP_GND meets CHOPPER_N locally at Q40's source Kelvin reference, before the chopper return joins the main star. An ordinary zero-ohm resistor is not the power star or high-current net tie. Keep resistor current, LED current and arm returns out of signal-ground necks.
+
+The parent layout sets the final generous rectangular outline and four mounting-hole coordinates. Reserve ≥25 mm screwdriver/lug access at power terminals, 11 × 11 mm courtyard per stud, and an insulated cover above live bars. The stud body is **9 × 9 mm and 14 mm above the PCB**; 17.5 mm on the drawing includes the protruding press-fit pins. Allow at least 5 mm underside standoff beyond pin ends and secure busbars independently against terminal torque. The supply-derived bulk thermal calculations do not decide enclosure airflow or permissible customer-accessible temperatures.
+
+## Review limits and alternatives
+
+Verified primary pin data, analytical corners, manufacturer overload evidence and explicit footprint mappings support a plausible Revision-A design. They do not close measured braking energy, hot SOA, actual switching frequency/edge losses, thermal delay, repetitive resistor duty, cable/terminal temperatures, current sharing, or final enclosure geometry. A resistor/NTC fault must reach the parent **hardware motion latch**, not merely an ESP32 log input; that interconnection needs an independent netlist review.
+
+Critical compatible candidates include LM2901BIPWR for U32 (recheck its wider-temperature errors and low output), REF5025EIDR for U31 (its pin1 enable may remain floating per that device's data, while pin8 stays DNC), UCC27511DBVT for U33 (same silicon, alternate packaging quantity), and TPS7A4001DGNT for U30 (same silicon, alternate packaging quantity). The latter two are procurement alternatives, not second sources. A different chopper FET must retain the verified physical/footprint map and pass loss/SOA review. A second source resistor is not approved solely by a 100 W label. Manufacturer family/order-code availability was checked where public product data permits; distributor stock, exact passive suffixes and an assembled harness quotation are not yet purchase evidence. The order review must record those remaining BOM/assembly checks explicitly.

@@ -1,0 +1,669 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "units": "mm",
+    "angles": "KiCad degrees; positive90 maps local bottom source row toward board right",
+    "board_size_mm": [
+      360,
+      300
+    ],
+    "status": "Placement intent; CAD courtyard and routing verification remains authoritative",
+    "reserved_power_star_y_mm": [
+      110,
+      125
+    ],
+    "external_anchor_notes": {
+      "J1": [
+        15,
+        45
+      ],
+      "J2": [
+        15,
+        115
+      ],
+      "TH20": [
+        68,
+        50
+      ],
+      "TH21": [
+        164,
+        65
+      ]
+    },
+    "constraints": [
+      "No controller/support bodies inside y110..125 power star strip.",
+      "Route Kelvin pairs before power pours; prevent sense-to-force shorts at shunt ends.",
+      "U5 uses logic star ground; no high-current return through its reference.",
+      "Film timer traces cross star strip only as insulated signal layers; guard from high-dVdt copper.",
+      "Gate resistors have device-specific pads; no common resistor may replace individual parts.",
+      "Part center proposals are not a completed high-current routing or assembly clearance proof."
+    ]
+  },
+  "placements": {
+    "Q1": {
+      "x": 55,
+      "y": 25,
+      "rotation": 90,
+      "reason": "Source terminals face common-source strip; drain base faces its own bus"
+    },
+    "R1": {
+      "x": 61.65,
+      "y": 33.5,
+      "rotation": 90,
+      "reason": "Individual 10-ohm gate resistor within ~4mm of physical gate pad; route pad2 directly to gate"
+    },
+    "R11": {
+      "x": 65.15,
+      "y": 33.5,
+      "rotation": 90,
+      "reason": "Individual gate-source bleed; separate from common gate trace"
+    },
+    "Q2": {
+      "x": 55,
+      "y": 50,
+      "rotation": 90,
+      "reason": "Source terminals face common-source strip; drain base faces its own bus"
+    },
+    "R2": {
+      "x": 61.65,
+      "y": 58.5,
+      "rotation": 90,
+      "reason": "Individual 10-ohm gate resistor within ~4mm of physical gate pad; route pad2 directly to gate"
+    },
+    "R12": {
+      "x": 65.15,
+      "y": 58.5,
+      "rotation": 90,
+      "reason": "Individual gate-source bleed; separate from common gate trace"
+    },
+    "Q3": {
+      "x": 55,
+      "y": 75,
+      "rotation": 90,
+      "reason": "Source terminals face common-source strip; drain base faces its own bus"
+    },
+    "R3": {
+      "x": 61.65,
+      "y": 83.5,
+      "rotation": 90,
+      "reason": "Individual 10-ohm gate resistor within ~4mm of physical gate pad; route pad2 directly to gate"
+    },
+    "R13": {
+      "x": 65.15,
+      "y": 83.5,
+      "rotation": 90,
+      "reason": "Individual gate-source bleed; separate from common gate trace"
+    },
+    "Q4": {
+      "x": 85,
+      "y": 25,
+      "rotation": 270,
+      "reason": "Source terminals face common-source strip; drain base faces its own bus"
+    },
+    "R4": {
+      "x": 78.35,
+      "y": 16.5,
+      "rotation": 90,
+      "reason": "Individual 10-ohm gate resistor within ~4mm of physical gate pad; route pad2 directly to gate"
+    },
+    "R14": {
+      "x": 74.85,
+      "y": 16.5,
+      "rotation": 90,
+      "reason": "Individual gate-source bleed; separate from common gate trace"
+    },
+    "Q5": {
+      "x": 85,
+      "y": 50,
+      "rotation": 270,
+      "reason": "Source terminals face common-source strip; drain base faces its own bus"
+    },
+    "R5": {
+      "x": 78.35,
+      "y": 41.5,
+      "rotation": 90,
+      "reason": "Individual 10-ohm gate resistor within ~4mm of physical gate pad; route pad2 directly to gate"
+    },
+    "R15": {
+      "x": 74.85,
+      "y": 41.5,
+      "rotation": 90,
+      "reason": "Individual gate-source bleed; separate from common gate trace"
+    },
+    "Q6": {
+      "x": 85,
+      "y": 75,
+      "rotation": 270,
+      "reason": "Source terminals face common-source strip; drain base faces its own bus"
+    },
+    "R6": {
+      "x": 78.35,
+      "y": 66.5,
+      "rotation": 90,
+      "reason": "Individual 10-ohm gate resistor within ~4mm of physical gate pad; route pad2 directly to gate"
+    },
+    "R16": {
+      "x": 74.85,
+      "y": 66.5,
+      "rotation": 90,
+      "reason": "Individual gate-source bleed; separate from common gate trace"
+    },
+    "Q7": {
+      "x": 150,
+      "y": 30,
+      "rotation": 90,
+      "reason": "Source terminals face common-source strip; drain base faces its own bus"
+    },
+    "R7": {
+      "x": 156.65,
+      "y": 38.5,
+      "rotation": 90,
+      "reason": "Individual 10-ohm gate resistor within ~4mm of physical gate pad; route pad2 directly to gate"
+    },
+    "R17": {
+      "x": 160.15,
+      "y": 38.5,
+      "rotation": 90,
+      "reason": "Individual gate-source bleed; separate from common gate trace"
+    },
+    "Q8": {
+      "x": 150,
+      "y": 65,
+      "rotation": 90,
+      "reason": "Source terminals face common-source strip; drain base faces its own bus"
+    },
+    "R8": {
+      "x": 156.65,
+      "y": 73.5,
+      "rotation": 90,
+      "reason": "Individual 10-ohm gate resistor within ~4mm of physical gate pad; route pad2 directly to gate"
+    },
+    "R18": {
+      "x": 160.15,
+      "y": 73.5,
+      "rotation": 90,
+      "reason": "Individual gate-source bleed; separate from common gate trace"
+    },
+    "Q9": {
+      "x": 180,
+      "y": 30,
+      "rotation": 270,
+      "reason": "Source terminals face common-source strip; drain base faces its own bus"
+    },
+    "R9": {
+      "x": 173.35,
+      "y": 21.5,
+      "rotation": 90,
+      "reason": "Individual 10-ohm gate resistor within ~4mm of physical gate pad; route pad2 directly to gate"
+    },
+    "R19": {
+      "x": 169.85,
+      "y": 21.5,
+      "rotation": 90,
+      "reason": "Individual gate-source bleed; separate from common gate trace"
+    },
+    "Q10": {
+      "x": 180,
+      "y": 65,
+      "rotation": 270,
+      "reason": "Source terminals face common-source strip; drain base faces its own bus"
+    },
+    "R10": {
+      "x": 173.35,
+      "y": 56.5,
+      "rotation": 90,
+      "reason": "Individual 10-ohm gate resistor within ~4mm of physical gate pad; route pad2 directly to gate"
+    },
+    "R20": {
+      "x": 169.85,
+      "y": 56.5,
+      "rotation": 90,
+      "reason": "Individual gate-source bleed; separate from common gate trace"
+    },
+    "RSH1": {
+      "x": 30,
+      "y": 45,
+      "rotation": 0,
+      "reason": "Force current left-to-right; sense pads face top for independent Kelvin pairs"
+    },
+    "RSH2": {
+      "x": 120,
+      "y": 45,
+      "rotation": 0,
+      "reason": "Force current left-to-right; sense pads face top for independent Kelvin pair"
+    },
+    "D1": {
+      "x": 30,
+      "y": 65,
+      "rotation": 90,
+      "reason": "Input TVS local heavy return to power star; preserve short input loop"
+    },
+    "D2": {
+      "x": 103,
+      "y": 80,
+      "rotation": 90,
+      "reason": "System TVS close to main output bus; heavy return separate from Kelvin"
+    },
+    "U1": {
+      "x": 65,
+      "y": 98,
+      "rotation": 0,
+      "reason": "Main controller below MOSFET banks; Kelvin routes kept together"
+    },
+    "C1": {
+      "x": 72,
+      "y": 92,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "C2": {
+      "x": 67,
+      "y": 90,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "C3": {
+      "x": 52,
+      "y": 141,
+      "rotation": 0,
+      "reason": "31.5x13mm film body and27.5mm lead pitch; retain24mm enclosure height clearance"
+    },
+    "R21": {
+      "x": 73,
+      "y": 101,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "C4": {
+      "x": 70,
+      "y": 105,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "R23": {
+      "x": 76,
+      "y": 101,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "C5": {
+      "x": 76,
+      "y": 105,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "R22": {
+      "x": 57,
+      "y": 104,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "R64": {
+      "x": 52,
+      "y": 104,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "R24": {
+      "x": 63,
+      "y": 105,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "R25": {
+      "x": 54,
+      "y": 91,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R26": {
+      "x": 58,
+      "y": 92,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "C6": {
+      "x": 59,
+      "y": 97,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R27": {
+      "x": 48,
+      "y": 91,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R28": {
+      "x": 52,
+      "y": 97,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "C7": {
+      "x": 55,
+      "y": 97,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R29": {
+      "x": 60,
+      "y": 101,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "U2": {
+      "x": 164,
+      "y": 94,
+      "rotation": 0,
+      "reason": "Motion controller below banks; differential sensing and charge pump stay local"
+    },
+    "C8": {
+      "x": 169,
+      "y": 87,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "C9": {
+      "x": 174,
+      "y": 97,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "C29": {
+      "x": 174,
+      "y": 101,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "C10": {
+      "x": 164,
+      "y": 141,
+      "rotation": 0,
+      "reason": "31.5x13mm film body and27.5mm lead pitch; retain24mm enclosure height clearance"
+    },
+    "R30": {
+      "x": 173,
+      "y": 88,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "C11": {
+      "x": 173,
+      "y": 91,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "R32": {
+      "x": 179,
+      "y": 88,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "C12": {
+      "x": 179,
+      "y": 91,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "R31": {
+      "x": 157,
+      "y": 98,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R33": {
+      "x": 157,
+      "y": 103,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "R34": {
+      "x": 172,
+      "y": 105,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "R35": {
+      "x": 150,
+      "y": 87,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R36": {
+      "x": 156,
+      "y": 87,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R39": {
+      "x": 156,
+      "y": 92,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "C13": {
+      "x": 161,
+      "y": 103,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "Q11": {
+      "x": 170,
+      "y": 71,
+      "rotation": 0,
+      "reason": "Thermal coupling beside motion common-source copper; keep collector/base trace clear of force copper"
+    },
+    "R59": {
+      "x": 150,
+      "y": 99,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R60": {
+      "x": 147,
+      "y": 99,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R61": {
+      "x": 144,
+      "y": 99,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "C28": {
+      "x": 141,
+      "y": 99,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "U5": {
+      "x": 192,
+      "y": 94,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "R62": {
+      "x": 198,
+      "y": 91,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R63": {
+      "x": 198,
+      "y": 96,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "C30": {
+      "x": 192,
+      "y": 88,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "C31": {
+      "x": 187,
+      "y": 95,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "U3": {
+      "x": 40,
+      "y": 176,
+      "rotation": 0,
+      "reason": "eFuse local input/output decouplers; bottomEP uses thermal ground vias"
+    },
+    "R40": {
+      "x": 36,
+      "y": 183,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R41": {
+      "x": 27,
+      "y": 171,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R42": {
+      "x": 31,
+      "y": 175,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R43": {
+      "x": 23,
+      "y": 171,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R44": {
+      "x": 27,
+      "y": 178,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R45": {
+      "x": 24,
+      "y": 185,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R46": {
+      "x": 28,
+      "y": 185,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R47": {
+      "x": 50,
+      "y": 171,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R48": {
+      "x": 50,
+      "y": 176,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "C20": {
+      "x": 34,
+      "y": 179,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "C21": {
+      "x": 35,
+      "y": 169,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "C22": {
+      "x": 46,
+      "y": 171,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "U4": {
+      "x": 90,
+      "y": 176,
+      "rotation": 0,
+      "reason": "eFuse local input/output decouplers; bottomEP uses thermal ground vias"
+    },
+    "R50": {
+      "x": 86,
+      "y": 183,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R51": {
+      "x": 77,
+      "y": 171,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R52": {
+      "x": 81,
+      "y": 175,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R53": {
+      "x": 73,
+      "y": 171,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R54": {
+      "x": 77,
+      "y": 178,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R55": {
+      "x": 74,
+      "y": 185,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R56": {
+      "x": 78,
+      "y": 185,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R57": {
+      "x": 100,
+      "y": 171,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "R58": {
+      "x": 100,
+      "y": 176,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "C25": {
+      "x": 84,
+      "y": 179,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    },
+    "C26": {
+      "x": 85,
+      "y": 169,
+      "rotation": 0,
+      "reason": "Controller support; short local connection"
+    },
+    "C27": {
+      "x": 96,
+      "y": 171,
+      "rotation": 90,
+      "reason": "Controller support; short local connection"
+    }
+  }
+}

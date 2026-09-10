@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "date": "2026-09-10",
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "qualification_status": "Procurement aliases and packaging options verified; changed silicon candidates require engineering qualification",
+    "stock_reserved": false,
+    "independent_second_manufacturer_qualified": false
+  },
+  "alternatives": [
+    {
+      "selected_mpn": "LM74930QRGERQ1",
+      "alternative_mpn": "LM74930QRGERQ1.A",
+      "class": "manufacturer_identical_alias",
+      "same_source": true,
+      "electrical_compatibility_verified": true,
+      "independently_orderable_at_manufacturer": false,
+      "instruction": "TI directs ordering canonical LM74930QRGERQ1; alias is not a second source or separate stock pool",
+      "source_url": "https://www.ti.com/product/LM74930-Q1/part-details/LM74930QRGERQ1"
+    },
+    {
+      "selected_mpn": "TPS48110AQDGXRQ1",
+      "alternative_mpn": "TPS48110AQDGXRQ1.A",
+      "class": "manufacturer_identical_alias",
+      "same_source": true,
+      "electrical_compatibility_verified": true,
+      "independently_orderable_at_manufacturer": false,
+      "instruction": "TI directs ordering canonical TPS48110AQDGXRQ1; exact same IC and19pinDGX package",
+      "source_url": "https://www.ti.com/product/TPS4811-Q1/part-details/TPS48110AQDGXRQ1"
+    },
+    {
+      "selected_mpn": "TPS26631RGER",
+      "alternative_mpn": "TPS26631RGET",
+      "class": "same_silicon_packaging_alternative",
+      "same_source": true,
+      "electrical_compatibility_verified": true,
+      "packaging": "250piece smallreel instead of3000piece largereel",
+      "source_url": "https://www.ti.com/product/TPS2663/part-details/TPS26631RGET"
+    },
+    {
+      "selected_mpn": "PSMN1R0-100ASFJ",
+      "alternative_mpn": "PSMN1R0-100ASEJ",
+      "manufacturer_sales_item": "934666620118",
+      "class": "mechanically_compatible_engineering_candidate",
+      "same_source": true,
+      "mechanical_and_pin_compatibility_verified": true,
+      "electrical_compatibility_verified": false,
+      "automatic_substitution_approved": false,
+      "required_review": ["180kRPU andMiller/inrush timing", "main gate timing", "cold/hot SOA", "conduction andthermal losses", "reverseblocking andfaultturnoff waveforms"],
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/PSMN1R0-100ASE.pdf",
+      "order_code_source_url": "https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/7517/CN-202508013I.pdf",
+      "stock_observation": "DigiKey zeroimmediate stock inretrieved listing; backorder not an immediatefallback"
+    },
+    {
+      "selected_mpn": "CSS4J-4026R-L500F",
+      "alternative_mpn": "CSS4J-4026R-L500FE",
+      "class": "same_resistor_packaging_alternative",
+      "same_source": true,
+      "electrical_compatibility_verified": true,
+      "packaging": "E suffix mini7inchreel instead ofstandard13inchreel",
+      "source_url": "https://www.bourns.com/docs/product-datasheets/css4j-4026.pdf",
+      "exact_order_code_source_url": "https://bourns.com/docs/technical-documents/product-change-notifications/N1902_CSS_CSM_EBW_PCN.pdf"
+    }
+  ]
+}

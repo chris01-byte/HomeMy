@@ -1,0 +1,383 @@
+Dimensions: [mm]
+sectional drawing A-A
+5
+M
+17.5
+9.0
+q
+5.0 ±0.2
+detail B
+3.5 ±0.2
+0.3 ±0.2
+Bevelled edge
+around
+2.54
+7.62
+7.62
+5.0 ±0.2
+14.0
+10.9
+A
+A
+B
+Drillhole specification for PCB:
+1,475 ±0,05
+O
+1,60 -0,03
+(O
+)
+0,10
+min.
+Drill hole specification for chemical surfaces
+min. 25µm copper max. 60µm
+Drillhole specification for PCB:
+1,45 ±0,05
+O
+1,60 -0,03
+(O
+)
+max. 15µm Sn
+0,10
+min.
+Drill hole specification for HAL
+min. 25µm copper max. 60µm
+Mechanical and Electrical Properties:
+Properties
+Test conditions
+Value
+Unit
+Tol.
+Tightening Torque
+2.2
+N*m
+Insertion Force
+40
+N per Pin
+min.
+Extraction Force 1)
+30
+N per Pin
+min.
+PCB Thickness min
+1.6
+mm
+PCB Thickness max
+3.2
+mm
+Rated Current
+IR
+@ 20 °C
+160
+A
+Operating current depends on PCB, cable lug and cross section of the cable
+1) min. 24hours after Press-Fit Process
+Operating current depends on PCB, cable lug and cross section of the cable.
+Certification:
+RoHS Approval
+Compliant [2011/65/EU&2015/863]
+REACh Approval
+Conform or declared [(EC)1907/2006]
+Halogen Free
+Conform [JEDEC JS709B]
+Halogen Free
+Conform [IEC 61249-2-21]
+General Information:
+Material
+Brass
+Surface
+Tin
+Execution
+Press-Fit
+Operating Temperature
+-55 °C up to +150 °C
+Packaging
+Tray
+Würth Elektronik eiSos GmbH & Co. KG
+EMC & Inductive Solutions
+Max-Eyth-Str. 1
+74638 Waldenburg
+Germany
+Tel. +49 (0) 79 42 945 - 0
+www.we-online.com
+eiSos@we-online.com
+CHECKED
+REVISION
+DATE (YYYY-MM-DD)
+GENERAL TOLERANCE
+PROJECTION
+METHOD
+KaGo
+001.005
+2025-09-11
+DIN ISO 2768-1m
+DESCRIPTION
+WP-RATR REDCUBE PRESS-FIT
+ORDER CODE
+7461103
+SIZE/TYPE
+BUSINESS UNIT
+STATUS
+PAGE
+Terminals right angled with two rows pin-plate
+eiCan
+Valid
+1/4
+This electronic component has been designed and developed for usage in general electronic equipment only. This product is not authorized for use in equipment where a higher safety standard and reliability standard is especially required or where a failure of the product is reasonably expected to cause severe personal injury or death, unless the parties have executed an agreement specifically governing such use. Moreover Würth Elektronik eiSos GmbH
+& Co KG products are neither designed nor intended for use in areas such as military, aerospace, aviation, nuclear control, submarine, transportation, transportation signal, disaster prevention, medical, public information network etc.. Würth Elektronik eiSos GmbH & Co KG must be informed about the intent of such usage before the design-in stage. In addition, sufficient reliability evaluation checks for safety must be performed on every electronic
+component which is used in electrical circuits that require high safety and reliability functions or performance.
+Further information
+Component Libraries:
+3D
+Download_3D_7461103
+Altium
+Altium_WP-RATR (22b)
+Cadence17-2
+Downloads_CADENCE_WP-RATR (22a)
+Eagle
+Eagle_WP-RATR (22a)
+IGS
+Download_IGS_7461103
+STP
+Download_STP_7461103
+Free Sample Order:
+Order free samples of this article directly here!
+Würth Elektronik eiSos GmbH & Co. KG
+EMC & Inductive Solutions
+Max-Eyth-Str. 1
+74638 Waldenburg
+Germany
+Tel. +49 (0) 79 42 945 - 0
+www.we-online.com
+eiSos@we-online.com
+CHECKED
+REVISION
+DATE (YYYY-MM-DD)
+GENERAL TOLERANCE
+PROJECTION
+METHOD
+KaGo
+001.005
+2025-09-11
+DIN ISO 2768-1m
+DESCRIPTION
+WP-RATR REDCUBE PRESS-FIT
+ORDER CODE
+7461103
+SIZE/TYPE
+BUSINESS UNIT
+STATUS
+PAGE
+Terminals right angled with two rows pin-plate
+eiCan
+Valid
+2/4
+This electronic component has been designed and developed for usage in general electronic equipment only. This product is not authorized for use in equipment where a higher safety standard and reliability standard is especially required or where a failure of the product is reasonably expected to cause severe personal injury or death, unless the parties have executed an agreement specifically governing such use. Moreover Würth Elektronik eiSos GmbH
+& Co KG products are neither designed nor intended for use in areas such as military, aerospace, aviation, nuclear control, submarine, transportation, transportation signal, disaster prevention, medical, public information network etc.. Würth Elektronik eiSos GmbH & Co KG must be informed about the intent of such usage before the design-in stage. In addition, sufficient reliability evaluation checks for safety must be performed on every electronic
+component which is used in electrical circuits that require high safety and reliability functions or performance.
+Cautions and Warnings:
+The following conditions apply to all goods within the product series of REDCUBE Press-
+Fit of Würth Elektronik eiSos GmbH & Co. KG:
+General:
+  
+•
+This electromechanical component was designed and manufactured for use in general electronic equipment.  
+•
+Würth Elektronik must be asked for written approval (following the PPAP procedure) before incorporating the components into any
+equipment in fields such as military, aerospace, aviation, nuclear control, submarine, transportation (automotive control, train control,
+ship control), transportation signal, disaster prevention, medical, public information network, etc. where higher safety and reliability are
+especially required and/or if there is the possibility of direct damage or human injury.  
+•
+Electromechanical components that will be used in safety-critical or high-reliability applications, should be pre-evaluated by the
+customer.  
+•
+The component is designed and manufactured to be used within the datasheet specified values. If the usage and operation conditions
+specified in the datasheet are not met, the component may be damaged or dissolved.  
+•
+Do not drop or impact the components, the component may be damaged.  
+•
+The responsibility for the applicability of the customer specific products and use in a particular customer design is always within the
+authority of the customer.   
+•
+Würth Elektronik products are qualified according to international standards. Würth Elektronik does not warrant any customer qualified
+product characteristics beyond Würth Elektroniks’ specifications, for its validity and sustainability over time.
+Product Specific:
+Press-Fit Technology:
+Follow all instructions in the datasheet, especially:
+  
+•
+Drill-hole specifications.  
+•
+Wave and reflow soldering is not applicable.  
+•
+Chip formation due to material displacement is permitted.  
+•
+Cosmetic marks such as friction marks, black dots, scratches and discolorations may occur during manufacturing, transport conditions
+and during the time. These have no influence on electrical and mechanical parameters and are permitted.  
+•
+The temperature rise of the component must be taken into consideration. The operating temperature is comprised of ambient
+temperature and temperature rise of the component. The operating temperature of the component shall not exceed the maximum
+temperature specified.  
+•
+The press-fit behavior of REDCUBE Press-Fit terminals has been tested and qualified with a TG value of  125-135 in accordance with
+the DIN-EN 60352-5 press-fit standard. If using with PCBs above a TG value of 135, pre-evaluation by the customer is necessary.  
+•
+The maximum permissible torques must be complied with to prevent mechanical destruction. REDCUBE Press-Fit right angled versions
+have to be fixed and hold in position when the screw is tightened. Otherwise the PCB can be damaged.  
+•
+Blind hole thread: the dimension of the thread length in the drawing (page 1) defines the minimum screw-in depth of a screw.  
+•
+External thread: the dimension of the shaft length in the drawing (page 1) includes the thread run-out. The usable thread length is
+defined by DIN 76-1:2016-08 (Table 1, a2)
+Storage Conditions:
+  
+•
+Products shall be used within the period of 12 months based on the day of shipment.  
+•
+Do not expose the components to direct sunlight.  
+•
+The storage conditions stated in the original packaging apply to the storage time and not to the transportation time of the components.
+Packaging:
+  
+•
+The packaging specifications apply only to purchase orders comprising whole packaging units. If the ordered quantity exceeds or is
+lower than the specified packaging unit, packaging in accordance with the packaging specifications cannot be ensured.
+Handling:
+  
+•
+The maximum permissible torques must be complied with to prevent mechanical destruction. REDCUBE Press-Fit right angled versions
+have to be fixed and hold in position when the screw is tightened. Otherwise the PCB can be damaged.  
+•
+Blind hole thread: the dimension of the thread length in the drawing (page 1) defines the minimum screw-in depth of a screw.  
+•
+External thread: the dimension of the shaft length in the drawing (page 1) includes the thread run-out. The usable thread length is
+defined by DIN 76-1:2016-08 (Table 1, a1).
+Press-in process:
+  
+•
+A visual inspection by the customer before pressing is required.  
+•
+The press-fit plated through-holes must be at least 3 mm away from the other components or the edge of the PCB.  
+•
+For serial production, monitoring of the press-fit forces during press-in process is required to ensure the quality of the connection.  
+•
+Each pin of the press-fit zone must be supported through the entire press-fit process by a support matrix. The diameter of each drill hole
+of the support matrix is specified as 1.75mm (-0/+0.1). Without a support matrix, deflection of the PCB can occur during pressing.  
+•
+A stamp must be used to press the parts into the PCB to avoid damaging the thread.  
+•
+The stroke cycle must be performed at a right angle to the PCB.  
+•
+The part must be pressed in with one stroke.
+These cautions and warnings comply with the state of the scientific and technical knowledge and are believed to be accurate and reliable.
+However, no responsibility is assumed for inaccuracies or incompleteness.V3.0
+Würth Elektronik eiSos GmbH & Co. KG
+EMC & Inductive Solutions
+Max-Eyth-Str. 1
+74638 Waldenburg
+Germany
+Tel. +49 (0) 79 42 945 - 0
+www.we-online.com
+eiSos@we-online.com
+CHECKED
+REVISION
+DATE (YYYY-MM-DD)
+GENERAL TOLERANCE
+PROJECTION
+METHOD
+KaGo
+001.005
+2025-09-11
+DIN ISO 2768-1m
+DESCRIPTION
+WP-RATR REDCUBE PRESS-FIT
+ORDER CODE
+7461103
+SIZE/TYPE
+BUSINESS UNIT
+STATUS
+PAGE
+Terminals right angled with two rows pin-plate
+eiCan
+Valid
+3/4
+This electronic component has been designed and developed for usage in general electronic equipment only. This product is not authorized for use in equipment where a higher safety standard and reliability standard is especially required or where a failure of the product is reasonably expected to cause severe personal injury or death, unless the parties have executed an agreement specifically governing such use. Moreover Würth Elektronik eiSos GmbH
+& Co KG products are neither designed nor intended for use in areas such as military, aerospace, aviation, nuclear control, submarine, transportation, transportation signal, disaster prevention, medical, public information network etc.. Würth Elektronik eiSos GmbH & Co KG must be informed about the intent of such usage before the design-in stage. In addition, sufficient reliability evaluation checks for safety must be performed on every electronic
+component which is used in electrical circuits that require high safety and reliability functions or performance.
+Important Notes
+The following conditions apply to all goods within the product range of Würth Elektronik
+eiSos GmbH & Co. KG:
+1. General Customer Responsibility
+Some goods within the product range of Würth Elektronik eiSos GmbH & Co. KG contain statements regarding general suitability for certain
+application areas. These statements about suitability are based on our knowledge and experience of typical requirements concerning the
+areas, serve as general guidance and cannot be estimated as binding statements about the suitability for a customer application. The
+responsibility for the applicability and use in a particular customer design is always solely within the authority of the customer. Due to this
+fact it is up to the customer to evaluate, where appropriate to investigate and decide whether the device with the specific product
+characteristics described in the product specification is valid and suitable for the respective customer application or not.
+2. Customer Responsibility related to Specific, in particular Safety-Relevant Applications
+It has to be clearly pointed out that the possibility of a malfunction of electronic components or failure before the end of the usual lifetime
+cannot be completely eliminated in the current state of the art, even if the products are operated within the range of the specifications.
+In certain customer applications requiring a very high level of safety and especially in customer applications in which the malfunction or
+failure of an electronic component could endanger human life or health it must be ensured by most advanced technological aid of suitable
+design of the customer application that no injury or damage is caused to third parties in the event of malfunction or failure of an electronic
+component. Therefore, customer is cautioned to verify that data sheets are current before placing orders. The current data sheets can be
+downloaded at www.we-online.com.
+3. Best Care and Attention
+Any product-specific notes, cautions and warnings must be strictly observed. Any disregard will result in the loss of warranty.
+4. Customer Support for Product Specifications
+Some products within the product range may contain substances which are subject to restrictions in certain jurisdictions in order to serve
+specific technical requirements. Necessary information is available on request. In this case the field sales engineer or the internal sales
+person in charge should be contacted who will be happy to support in this matter.
+5. Product R&D
+Due to constant product improvement product specifications may change from time to time. As a standard reporting procedure of the
+Product Change Notification (PCN) according to the JEDEC-Standard inform about minor and major changes. In case of further queries
+regarding the PCN, the field sales engineer or the internal sales person in charge should be contacted. The basic responsibility of the
+customer as per Section 1 and 2 remains unaffected.
+6. Product Life Cycle
+Due to technical progress and economical evaluation we also reserve the right to discontinue production and delivery of products. As a
+standard reporting procedure of the Product Termination Notification (PTN) according to the JEDEC-Standard we will inform at an early stage
+about inevitable product discontinuance. According to this we cannot guarantee that all products within our product range will always be
+available. Therefore it needs to be verified with the field sales engineer or the internal sales person in charge about the current product
+availability expectancy before or when the product for application design-in disposal is considered. The approach named above does not
+apply in the case of individual agreements deviating from the foregoing for customer-specific products.
+7. Property Rights
+All the rights for contractual products produced by Würth Elektronik eiSos GmbH & Co. KG on the basis of ideas, development contracts as
+well as models or templates that are subject to copyright, patent or commercial protection supplied to the customer will remain with Würth
+Elektronik eiSos GmbH & Co. KG. Würth Elektronik eiSos GmbH & Co. KG does not warrant or represent that any license, either expressed or
+implied, is granted under any patent right, copyright, mask work right, or other intellectual property right relating to any combination,
+application, or process in which Würth Elektronik eiSos GmbH & Co. KG components or services are used.
+8. General Terms and Conditions
+Unless otherwise agreed in individual contracts, all orders are subject to the current version of the “General Terms and Conditions of Würth
+Elektronik eiSos Group”, last version available at www.we-online.com.
+Würth Elektronik eiSos GmbH & Co. KG
+EMC & Inductive Solutions
+Max-Eyth-Str. 1
+74638 Waldenburg
+Germany
+Tel. +49 (0) 79 42 945 - 0
+www.we-online.com
+eiSos@we-online.com
+CHECKED
+REVISION
+DATE (YYYY-MM-DD)
+GENERAL TOLERANCE
+PROJECTION
+METHOD
+KaGo
+001.005
+2025-09-11
+DIN ISO 2768-1m
+DESCRIPTION
+WP-RATR REDCUBE PRESS-FIT
+ORDER CODE
+7461103
+SIZE/TYPE
+BUSINESS UNIT
+STATUS
+PAGE
+Terminals right angled with two rows pin-plate
+eiCan
+Valid
+4/4
+This electronic component has been designed and developed for usage in general electronic equipment only. This product is not authorized for use in equipment where a higher safety standard and reliability standard is especially required or where a failure of the product is reasonably expected to cause severe personal injury or death, unless the parties have executed an agreement specifically governing such use. Moreover Würth Elektronik eiSos GmbH
+& Co KG products are neither designed nor intended for use in areas such as military, aerospace, aviation, nuclear control, submarine, transportation, transportation signal, disaster prevention, medical, public information network etc.. Würth Elektronik eiSos GmbH & Co KG must be informed about the intent of such usage before the design-in stage. In addition, sufficient reliability evaluation checks for safety must be performed on every electronic
+component which is used in electrical circuits that require high safety and reliability functions or performance.

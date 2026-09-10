@@ -1,0 +1,920 @@
+VOS618A
+www.vishay.com
+Vishay Semiconductors
+ 
+ 
+Rev. 1.6, 13-Mar-15
+1
+Document Number: 83465
+For technical questions, contact: optocoupleranswers@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+Optocoupler, Phototransistor Output, Low Input Current,
+SSOP-4, Half Pitch, Mini-Flat Package
+DESCRIPTION
+The VOS618A series has a GaAs infrared emitting diode 
+emitter, which is optically coupled to a silicon planar 
+phototransistor detector, and is incorporated in a 4-pin 
+50 mil lead pitch mini-flat package.
+It features a high current transfer ratio at low input current, 
+low coupling capacitance, and high isolation voltage.
+The coupling devices are designed for signal transmission 
+between two electrically separated circuits.
+FEATURES
+• High CTR with low input current
+• Low profile package (half pitch)
+• High collector emitter voltage, VCEO = 80 V
+• Isolation test voltage = 3750 VRMS
+• Low coupling capacitance
+• High common mode transient immunity
+• Material categorization: 
+for definitions of compliance please see 
+www.vishay.com/doc?99912 
+APPLICATIONS
+• Telecom
+• Industrial controls
+• Battery powered equipment
+• Office machines
+• Programmable controllers
+AGENCY APPROVALS
+Safety application model number covering all products in 
+this datasheet is VOS618A. This model number should be 
+used when consulting safety agency documents.
+• UL1577, file no. E52744
+• cUL
+• DIN EN 60747-5-5 (VDE 0884-5), available with option 1
+• FIMKO EN 60065, EN 60950-1
+• CQC GB4943.1-2011 and GB8898-2011 (suitable for 
+installation altitude below 2000 m)
+Note
+•
+Additional options may be possible, please contact sales office.
+E
+C
+A
+C
+1
+2
+4
+3
+22628-1
+ORDERING INFORMATION
+V
+O
+S
+6
+1
+8
+A
+-
+#
+X
+0
+0
+1
+T
+PART NUMBER
+CTR 
+BIN
+PACKAGE OPTION
+ TAPE 
+AND 
+REEL
+AGENCY 
+CERTIFIED/PACKAGE
+CTR (%)
+1 mA
+UL, cUL, FIMKO, CQC
+50 to 600
+63 to 125
+100 to 200
+80 to 160
+130 to 260
+SSOP-4, 50 mil pitch
+VOS618AT
+VOS618A-2T
+VOS618A-3T
+VOS618A-7T
+VOS618A-8T
+UL, cUL, FIMKO, 
+CQC, VDE (option 1)
+50 to 600
+63 to 125
+100 to 200
+80 to 160
+130 to 260
+SSOP-4, 50 mil pitch
+VOS618A-X001T
+VOS618A-2X001T
+VOS618A-3X001T
+VOS618A-7X001T
+VOS618A-8X001T
+SSOP-4
+≥ 5 mm
+VOS618A
+www.vishay.com
+Vishay Semiconductors
+ 
+ 
+Rev. 1.6, 13-Mar-15
+2
+Document Number: 83465
+For technical questions, contact: optocoupleranswers@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+Notes
+•
+Stresses in excess of the absolute maximum ratings can cause permanent damage to the device. Functional operation of the device is not 
+implied at these or any other conditions in excess of those given in the operational sections of this document. Exposure to absolute 
+maximum ratings for extended periods of the time can adversely affect reliability.
+(1) Refer to reflow profile for soldering conditions for surface mounted devices. 
+Fig. 1 - Power Dissipation vs. Ambient Temperature
+Fig. 2 - Forward Current vs. Ambient Temperature
+ABSOLUTE MAXIMUM RATINGS (Tamb = 25 °C, unless otherwise specified)
+PARAMETER
+TEST CONDITION
+SYMBOL
+VALUE
+UNIT
+INPUT
+Reverse voltage
+VR
+6
+V
+Power dissipation
+Pdiss
+70
+mW
+Forward current
+IF
+50
+mA
+OUTPUT
+Collector emitter voltage
+VCEO
+80
+V
+Emitter collector voltage
+VECO
+7
+V
+Collector current
+IC
+50
+mA
+tp/T = 0.5, tp < 10 ms
+IC
+100
+mA
+Power dissipation
+Pdiss
+150
+mW
+COUPLER
+Isolation test voltage 
+between emitter and detector
+t = 1 min
+VISO
+3750
+VRMS
+Total power dissipation
+Ptot
+170
+mW
+Storage temperature range
+Tstg
+-55 to +150
+°C
+Ambient temperature range
+Tamb
+-55 to +110
+°C
+Junction temperature
+Tj
+125
+°C
+Soldering temperature (1)
+t = 10 s
+Tsld
+260
+°C
+0 
+20 
+40 
+60 
+80 
+100 
+120 
+140 
+160 
+- 25 
+0 
+25 
+50 
+75 
+100 
+125 
+Pdiss - Collector Power Dissipation (mW) 
+Tamb - Ambient Temperature (°C) 
+0 
+10 
+20 
+30 
+40 
+50 
+60 
+- 25 
+0 
+25 
+50 
+75 
+100 
+125 
+IF - Forward Current (mA)
+ 
+Tamb - Ambient Temperature (°C)
+VOS618A
+www.vishay.com
+Vishay Semiconductors
+ 
+ 
+Rev. 1.6, 13-Mar-15
+3
+Document Number: 83465
+For technical questions, contact: optocoupleranswers@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+Note
+•
+Minimum and maximum values are testing requirements. Typical values are characteristics of the device and are the result of engineering 
+evaluation. Typical values are for information only and are not part of the testing requirements.
+Fig. 3 - Test Circuit
+Fig. 4 - Test Circuit and Waveforms
+ELECTRICAL CHARACTERISTICS (Tamb = 25 °C, unless otherwise specified) 
+PARAMETER
+TEST CONDITION
+SYMBOL
+MIN.
+TYP.
+MAX.
+UNIT
+INPUT 
+Forward voltage
+IF = 50 mA
+VF
+1.1
+1.5
+V
+Reverse current
+VR = 6 V
+IR
+0.01
+10
+μA
+Input capacitance
+VF = 0 V, f = 1 MHz
+CI
+8
+pF
+OUTPUT
+Collector emitter leakage current
+VCE = 10 V
+ICEO
+0.7
+100
+nA
+Collector emitter breakdown voltage
+IC = 100 μA
+BVCEO
+80
+V
+Emitter collector breakdown voltage
+IE = 10 μA
+BVECO
+7
+V
+Collector emitter capacitance
+VCE = 5 V, f = 1 MHz
+CCE
+6
+pF
+COUPLER
+Collector emitter saturation voltage
+IF = 1 mA, IC = 0.25 mA
+VCEsat
+0.12
+0.4
+V
+Cut-off frequency
+IF = 10 mA, VCC = 5 V, RL = 100 Ω
+fctr
+119
+kHz
+Coupling capacitance
+f = 1 MHz
+CC
+0.3
+pF
+CURRENT TRANSFER RATIO (Tamb = 25 °C, unless otherwise specified)
+PARAMETER
+TEST CONDITION
+PART
+SYMBOL
+MIN.
+TYP.
+MAX.
+UNIT
+IC/IF
+IF = 1 mA, VCE = 5 V
+VOS618A
+CTR
+50
+600
+%
+VOS618A-2
+CTR
+63
+125
+%
+VOS618A-3
+CTR
+100
+200
+%
+VOS618A-7
+CTR
+80
+160
+%
+VOS618A-8
+CTR
+130
+260
+%
+SWITCHING CHARACTERISTICS (Tamb = 25 °C, unless otherwise specified)
+PARAMETER
+TEST CONDITION
+SYMBOL
+MIN.
+TYP.
+MAX.
+UNIT
+NON-SATURATED
+Turn on time
+VCC = 5 V, IC = 2 mA, RL = 100 Ω
+ton
+5
+μs
+Rise time
+tr
+5
+μs
+Turn off time
+toff
+8
+μs
+Fall time
+tf
+7
+μs
+SATURATED
+Rise and fall time
+IF = 1.6 mA, VCC = 5 V, RL = 1.9 kΩ
+tr
+10
+μs
+Fall time
+tf
+11
+μs
+Turn on time
+ton
+14
+μs
+Turn off time
+toff
+12
+μs
+isfh618a_10
+Input
+VOUT
+VCC = 5 V
+RL
+isfh618a_12
+10 %
+90 %
+Input pulse
+Output pulse
+tr
+ton
+tf
+toff
+VOS618A
+www.vishay.com
+Vishay Semiconductors
+ 
+ 
+Rev. 1.6, 13-Mar-15
+4
+Document Number: 83465
+For technical questions, contact: optocoupleranswers@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+Note
+•
+As per IEC 60747-5-5, § 7.4.3.8.2, this optocoupler is suitable for “safe electrical insulation” only within the safety ratings. Compliance with 
+the safety ratings shall be ensured by means of protective circuits. 
+TYPICAL CHARACTERISTICS (Tamb = 25 °C, unless otherwise specified) 
+Fig. 5 - Forward Voltage vs. Forward Current
+Fig. 6 - Collector Current vs. Collector Emitter Voltage
+SAFETY AND INSULATION RATINGS
+PARAMETER
+TEST CONDITION
+SYMBOL
+VALUE
+UNIT
+Climatic classification (according to IEC 68 part 1)
+55/110/21
+Comparative tracking index
+CTI
+175
+Maximum rated withstanding isolation voltage
+40 % to 80 % RH, AC test of t = 1 min
+VISO
+3750
+VRMS
+Maximum transient isolation voltage
+VIOTM
+6000
+Vpeak
+Maximum repetitive peak isolation voltage
+VIORM
+565
+Vpeak
+Isolation resistance
+Tamb = 25 °C, VDC = 500 V
+RIO
+≥ 1012
+Ω
+Tamb = 100 °C, VDC = 500 V
+RIO
+≥ 1011
+Ω
+Output safety power
+PSO
+300
+mW
+Input safety current
+ISI
+200
+mA
+Input safety temperature
+TSI
+150
+°C
+Creepage distance
+≥ 5
+mm
+Clearance distance
+≥ 5
+mm
+Insulation thickness
+DTI
+≥ 0.4
+mm
+Environment 
+(pollution degree in accordance to DIN VDE 0109)
+2
+0.1 
+1 
+10 
+100 
+0.6 
+0.8 
+1.0 
+1.2 
+1.4 
+1.6 
+IF - Forward Current (mA) 
+VF - Forward Voltage (V) 
+Tamb = 110 °C 
+Tamb = 75 °C 
+Tamb = 25 °C 
+Tamb = 0 °C 
+Tamb = -55 °C
+ 
+ 
+0 
+10 
+20 
+30 
+40 
+50 
+0 
+1 
+2 
+3 
+4 
+5 
+6 
+7 
+8 
+9 
+10 
+IC - Collector Current (mA) 
+VCE - Collector Emitter Voltage (V)
+ 
+IF = 1 mA 
+IF = 10 mA 
+IF = 5 mA 
+IF = 15 mA 
+IF = 20 mA 
+IF = 25 mA 
+VOS618A
+www.vishay.com
+Vishay Semiconductors
+ 
+ 
+Rev. 1.6, 13-Mar-15
+5
+Document Number: 83465
+For technical questions, contact: optocoupleranswers@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+Fig. 7 - Collector Emitter Current vs. Ambient Temperature
+Fig. 8 - Collector Current vs. Collector Emitter Voltage
+Fig. 9 - Collector Emitter Voltage vs. Ambient Temperature 
+Fig. 10 - Normalized Current Transfer Ratio vs.
+Ambient Temperature (saturated)
+Fig. 11 - Normalized Current Transfer Ratio vs.
+Ambient Temperature (non-saturated)
+Fig. 12 - Current Transfer Ratio vs. Forward Current (saturated)
+0.001
+0.01
+0.1
+1
+10
+100
+1000
+10 000
+ICE0 - Leakage Current (nA)
+IF = 0 mA
+VCE = 40 V
+VCE = 24 V
+VCE = 12 V
+-60 -40 -20
+0
+20
+40
+60
+80
+120
+Tamb - Ambient Temperature (°C)
+100
+0 
+5 
+10 
+15 
+20 
+25 
+30 
+35 
+0.0 
+0.1 
+0.2 
+0.3 
+0.4 
+IC - Collector Current (mA) 
+VCE - Collector Emitter Voltage (V) 
+IF = 25 mA 
+IF = 10 mA 
+IF = 0.5 mA 
+IF = 2 mA 
+IF = 5 mA 
+IF = 1 mA 
+0.00 
+0.02 
+0.04 
+0.06 
+0.08 
+0.10 
+0.12 
+VCEsat - Collector Emitter Voltage (V) 
+IF = 1 mA 
+-60 -40 -20
+0
+20
+40
+60
+80
+120
+Tamb - Ambient Temperature (°C)
+100
+0.2 
+0.4 
+0.6 
+0.8 
+1.0 
+1.2 
+1.4 
+NCTR - Normalized CTR (sat) 
+0 
+Normalized to CTR value: 
+IF = 1 mA, VCE = 5 V, Tamb = 25 °C 
+-60 -40 -20
+0
+20
+40
+60
+80
+120
+Tamb - Ambient Temperature (°C)
+100
+0 
+0.2 
+0.4 
+0.6 
+0.8 
+1.0 
+1.2 
+1.4 
+NCTR - Normalized CTR (non-saturated) 
+Normalized to CTR value: 
+IF = 1 mA, VCE = 5 V, Tamb = 25 °C 
+-60 -40 -20
+0
+20
+40
+60
+80
+120
+Tamb - Ambient Temperature (°C)
+100
+0.0 
+0.2 
+0.4 
+0.6 
+0.8 
+1.0 
+1.2 
+1.4 
+1.6 
+1.8 
+2.0 
+0.1 
+1 
+10 
+100 
+NCTR - Normalized CTR (sat) 
+IF - Forward Current (mA) 
+Tamb = 0 °C 
+Tamb = -55 °C
+ 
+ 
+Tamb = 25 °C 
+Tamb = 110 °C 
+Normalized to:
+IF = 1 mA, VCE = 5 V,
+Tamb = 25 °C
+VOS618A
+www.vishay.com
+Vishay Semiconductors
+ 
+ 
+Rev. 1.6, 13-Mar-15
+6
+Document Number: 83465
+For technical questions, contact: optocoupleranswers@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+Fig. 13 - Current Transfer Ratio vs. Forward Current (non-saturated)
+Fig. 14 - Cut-off Frequency (- 3 dB) vs. Collector Current
+Fig. 15 - Phase Angle vs. Frequency
+Fig. 16 - Switching Time vs. Load Resistance
+Fig. 17 - Voltage Gain vs. Frequency
+0.0 
+0.5 
+1.0 
+1.5 
+2.0 
+2.5 
+0.1 
+1 
+10 
+100 
+NCTR - Normalized CTR (NS) 
+IF - Forward Current (mA) 
+Tamb = 0 °C 
+Tamb = -55 °C
+ 
+ 
+Tamb = 25 °C 
+Tamb = 110 °C 
+Normalized to:
+IF = 1 mA, VCE = 5 V,
+Tamb = 25 °C
+1000
+0.1
+FCTR - Cut-off-Frequency (kHz)
+100
+10
+1
+1 
+10
+100
+IC - Collector Current (mA)
+VCE = 5 V,
+Tamb = 25 °C
+-160
+-140
+-120
+-100
+-80
+-60
+-40
+-20
+0
+1 
+10 
+100 
+1000 
+Phase Angle (deg)
+ 
+f - Frequency (kHz) 
+ 
+VCE = 5 V
+ 
+RL = 1000 Ω
+RL = 100 Ω
+1
+10
+100
+1000
+0
+5
+10
+15
+20
+ton, toff - Switching Time (μs)
+RL - Load Resistance (kΩ)
+ton (μs)
+toff (μs)
+IC = 2 mA
+VCE = 5 V
+1 
+10 
+100 
+1000 
+Voltage Gain  
+VCE = 5 V 
+RL = 100 Ω 
+RL = 1000 Ω 
+-40
+-35
+-30
+-25
+-20
+-15
+-10
+-5
+0
+f - Frequency (kHz)
+VOS618A
+www.vishay.com
+Vishay Semiconductors
+ 
+ 
+Rev. 1.6, 13-Mar-15
+7
+Document Number: 83465
+For technical questions, contact: optocoupleranswers@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+PACKAGE DIMENSIONS in millimeters
+PACKAGE MARKING (example of VOS618A-3X001T)
+Notes
+•
+Option 1 is reflected with letter “X”. 
+•
+Tape and reel suffix (T) is not part of the package marking.
+22629-2
+4.4 ± 0.2
+1.27 ± 0.25
+2.6 ± 0.3
+2.0 ± 0.2
+0.12 ± 0.1
+0.4 ± 0.1
+7.0 + 0.2
+- 0.7
+5.3 ± 0.3
+0.2 ± 0.05
+0.9
+5.0
+1.27
+7.5
+0.5
+V YWW 25
+618A3X
+Pin 1 dimple
+VOS618A
+www.vishay.com
+Vishay Semiconductors
+ 
+ 
+Rev. 1.6, 13-Mar-15
+8
+Document Number: 83465
+For technical questions, contact: optocoupleranswers@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+TAPE AND REEL DIMENSIONS in millimeters
+Fig. 18 - Reel Dimensions (3000 units per reel)
+Fig. 19 - Tape Dimensions
+SOLDER PROFILE
+Fig. 20 - Lead (Pb)-free Reflow Solder Profile
+according to J-STD-020
+HANDLING AND STORAGE CONDITIONS
+ESD level: HBM class 2
+Floor life: unlimited
+Conditions: Tamb < 30 °C, RH < 85 %
+Moisture sensitivity level 1, according to J-STD-020
+330
+(13")
+100
+17.1
+Ø 1.50 ± 0.1
+2 ± 0.1
+4 ± 0.1
+1.75 ± 0.1
+12 ± 0.3
+5.5 ± 0.1
+8 ± 0.1
+0.35 ± 0.05
+0
+50
+100
+150
+200
+250
+300
+0
+50
+100
+150
+200
+250
+300
+Time (s)
+Temperature (°C)
+240 °C
+245 °C
+max. 260 °C
+max. 120 s
+max. 100 s
+217 °C
+max. 30 s
+max. ramp up 3 °C/s
+max. ramp down 6 °C/s
+19841
+255 °C
+Legal Disclaimer Notice
+www.vishay.com
+Vishay
+   
+ 
+Revision: 01-Jan-2026
+1
+Document Number: 91000
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+Disclaimer
+ALL PRODUCT, PRODUCT SPECIFICATIONS AND DATA ARE SUBJECT TO CHANGE WITHOUT NOTICE TO IMPROVE 
+RELIABILITY, FUNCTION OR DESIGN OR OTHERWISE. 
+Vishay Intertechnology, Inc., its affiliates, agents, and employees, and all persons acting on its or their behalf (collectively, 
+“Vishay”), disclaim any and all liability for any errors, inaccuracies or incompleteness contained in any datasheet or in any other 
+disclosure relating to any product.
+Vishay makes no warranty, representation or guarantee regarding the suitability of the products for any particular purpose or 
+the continuing production of any product. To the maximum extent permitted by applicable law, Vishay disclaims (i) any and all 
+liability arising out of the application or use of any product, (ii) any and all liability, including without limitation special, 
+consequential or incidental damages, and (iii) any and all implied warranties, including warranties of fitness for particular 
+purpose, non-infringement and merchantability.
+Statements regarding the suitability of products for certain types of applications are based on Vishay's knowledge of typical 
+requirements that are often placed on Vishay products in generic applications. Such statements are not binding statements 
+about the suitability of products for a particular application. It is the customer's responsibility to validate that a particular product 
+with the properties described in the product specification is suitable for use in a particular application. Parameters provided in 
+datasheets and / or specifications may vary in different applications and performance may vary over time. All operating 
+parameters, including typical parameters, must be validated for each customer application by the customer's technical experts. 
+Product specifications do not expand or otherwise modify Vishay's terms and conditions of purchase, including but not limited 
+to the warranty expressed therein.
+Hyperlinks included in this datasheet may direct users to third-party websites. These links are provided as a convenience and 
+for informational purposes only. Inclusion of these hyperlinks does not constitute an endorsement or an approval by Vishay of 
+any of the products, services or opinions of the corporation, organization or individual associated with the third-party website. 
+Vishay disclaims any and all liability and bears no responsibility for the accuracy, legality or content of the third-party website 
+or for that of subsequent links.
+Vishay products are not designed for use in life-saving or life-sustaining applications or any application in which the failure of 
+the Vishay product could result in personal injury or death unless specifically qualified in writing by Vishay. Customers using or 
+selling Vishay products not expressly indicated for use in such applications do so at their own risk. Please contact authorized 
+Vishay personnel to obtain written terms and conditions regarding products designed for such applications.
+No license, express or implied, by estoppel or otherwise, to any intellectual property rights is granted by this document or by 
+any conduct of Vishay. Product names and markings noted herein may be trademarks of their respective owners.
+© 2026 VISHAY INTERTECHNOLOGY, INC. ALL RIGHTS RESERVED

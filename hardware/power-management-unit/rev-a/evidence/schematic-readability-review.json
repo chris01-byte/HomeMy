@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false
+  },
+  "source_generator_sha256": "2d9ec7ad20aba0e7c366543ac755feda6caff2fc46f790a9dd8a117127cbc8ac",
+  "native_export_components": 421,
+  "connected_source_pins_checked": 1214,
+  "pin_net_or_type_mismatches": [],
+  "component_uuid_mismatches": [],
+  "native_DNP_refs": [
+    "C244",
+    "J13",
+    "R243",
+    "R244"
+  ],
+  "expected_DNP_refs": [
+    "C244",
+    "J13",
+    "R243",
+    "R244"
+  ],
+  "ERC_report_violations": 0,
+  "native_process_exit_code": 1,
+  "native_process_diagnostic": "HKCU Software/kicad-cli registry create/open denied;complete parseable SVG/XML/ERC artifacts generated;do not describe process exit as clean.",
+  "visual_review": {
+    "rasterizer": "Bundled Node.js Sharp;6720x4752 native SVG raster",
+    "reviewed_pages": [
+      "06c_esp32_p1",
+      "06a_aon_wake_p2",
+      "04_brake_chopper_p1"
+    ],
+    "observed": [
+      "Left net labels extend away from symbols and pin names",
+      "ESP32/TMUX/chopper IC pin labels readable",
+      "Long connector pin names fit widened bodies",
+      "Two-pin R/C symbols use standard graphics without duplicate internal pin names",
+      "Displayed title and revision fit native title block"
+    ],
+    "remaining_limit": "Functional pin-level hierarchy remains;this is not a fully manually drawn application schematic or PCB review."
+  },
+  "retained_visual_artifacts": [
+    {
+      "path": "assembly/schematic/HomeMy_PMU_RevA-02_main_switch_lm74930.svg",
+      "sha256": "6a6df58c5ff4f138752780fb17cb158ef128efbe7505f4438289055dd8ececc1",
+      "bytes": 1640229
+    },
+    {
+      "path": "assembly/schematic/HomeMy_PMU_RevA-03_motion_gate_tps48110.svg",
+      "sha256": "6355a7a0c18bdabeb9d086fd6dd70104d2dfef62cf063dec9ad5a4bad82c8f6c",
+      "bytes": 1656793
+    },
+    {
+      "path": "assembly/schematic/HomeMy_PMU_RevA-04_brake_chopper_p1.svg",
+      "sha256": "d0225b88430a1148b121635d8aadf37b00ac4f15599658e9fa7153a1eb3f875b",
+      "bytes": 1468924
+    },
+    {
+      "path": "assembly/schematic/HomeMy_PMU_RevA-04_brake_chopper_p2.svg",
+      "sha256": "463b5be21641438b7eeb6900d276b3b815fa522bdddd7ad7c0cce58832e44de7",
+      "bytes": 729495
+    },
+    {
+      "path": "assembly/schematic/HomeMy_PMU_RevA-05_pc_and_5v_efuses.svg",
+      "sha256": "68b2707f1ea79fd7316f85f225811584555954be32343e6af7bbee40ca0b7e22",
+      "bytes": 974704
+    },
+    {
+      "path": "assembly/schematic/HomeMy_PMU_RevA-06a_aon_wake_p1.svg",
+      "sha256": "5df52bacb9bf0cdab4b52304d62f99ef9501ef747b0e53a9c6906240734290fb",
+      "bytes": 1509944
+    },
+    {
+      "path": "assembly/schematic/HomeMy_PMU_RevA-06a_aon_wake_p2.svg",
+      "sha256": "bf8d03ea0bafed3e2896baea970de1a7d41f4ee50e5733811e3ab44a2ea4ae4f",
+      "bytes": 649999
+    },
+    {
+      "path": "assembly/schematic/HomeMy_PMU_RevA-06b_motion_latches.svg",
+      "sha256": "9168d5bae93d45a7a68bde0e7abd323a7e223edc50802340fa8c1fb493cc94b6",
+      "bytes": 732684
+    },
+    {
+      "path": "assembly/schematic/HomeMy_PMU_RevA-06c_esp32_p1.svg",
+      "sha256": "d90c8039b234be3e9c25803396617c5b67ee15360bd08385babec5047e73bf3c",
+      "bytes": 1493462
+    },
+    {
+      "path": "assembly/schematic/HomeMy_PMU_RevA-06c_esp32_p2.svg",
+      "sha256": "504bb1b3c7751fe8130fbc3e72e192ec0ff12a8d64466efb9a1f69eaa888744e",
+      "bytes": 233905
+    },
+    {
+      "path": "assembly/schematic/HomeMy_PMU_RevA-07_ina228_analog.svg",
+      "sha256": "9f7bd02ec41fea5d190850c1400f889252e944fa1772688591b7a4dbb7ce94b0",
+      "bytes": 471464
+    },
+    {
+      "path": "assembly/schematic/HomeMy_PMU_RevA-08_can_led_io.svg",
+      "sha256": "c6c7b82f0473ea4e2d96772a047bc7fbec8d53a272a9f8777893d32bc3c9aebf",
+      "bytes": 540472
+    },
+    {
+      "path": "assembly/schematic/HomeMy_PMU_RevA-09_connectors_testpoints.svg",
+      "sha256": "29cafd0b442be72bf20367c5113db1d7aaded3212699f865a81285bd09be9b8d",
+      "bytes": 1031957
+    },
+    {
+      "path": "assembly/schematic/HomeMy_PMU_RevA-09b_star_and_measurements_p1.svg",
+      "sha256": "29cb12d46a2d9538c3dbb5e3b4f5f0172b6a0c54d3a07836ef5b1fc890e2e863",
+      "bytes": 1027217
+    },
+    {
+      "path": "assembly/schematic/HomeMy_PMU_RevA-09b_star_and_measurements_p2.svg",
+      "sha256": "91e8a5122894592cd33c272b9d85d4278bb136d4fa589642c56c07883ea17f07",
+      "bytes": 617917
+    },
+    {
+      "path": "assembly/schematic/HomeMy_PMU_RevA.svg",
+      "sha256": "fd03fbff4ddf49cdc890a54064f95ec2ee0ebe8dbecbb5405944d37f344e1401",
+      "bytes": 726626
+    },
+    {
+      "path": "evidence/schematic-before/HomeMy_PMU_RevA-06c_esp32_p1-detail.png",
+      "sha256": "d09c9cd28d7a1351d84b236ba1030422d29288c25d4f5bb93003518649c8e10b",
+      "bytes": 303594
+    },
+    {
+      "path": "evidence/schematic-after/HomeMy_PMU_RevA-06a_aon_wake_p2-detail.png",
+      "sha256": "1d4441b4562a9711f52bf607d8d3573268ef5a3b23f8cd3bc5f5bd3c0c71b061",
+      "bytes": 134662
+    },
+    {
+      "path": "evidence/schematic-after/HomeMy_PMU_RevA-06c_esp32_p1-detail.png",
+      "sha256": "ac741995f4c0f0c257f62d403808c2154b3acabf256d93da0d9dc70eccc5ad1d",
+      "bytes": 302607
+    }
+  ],
+  "visual_consolidation": {
+    "native_svg_count": 16,
+    "png_crop_count": 3,
+    "native_svg_destination": "assembly/schematic",
+    "duplicate_svg_copy_sha256_verified_before_removal": true
+  }
+}

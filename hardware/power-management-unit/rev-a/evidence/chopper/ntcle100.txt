@@ -1,0 +1,4434 @@
+NTCLE100E3
+www.vishay.com
+Vishay BCcomponents
+  
+ 
+Revision: 07-May-2025
+1
+Document Number: 29049
+For technical questions, contact: nlr@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+NTC Thermistors, Radial Leaded, Standard Precision
+LINKS TO ADDITIONAL RESOURCES
+FEATURES
+• Accuracy over a wide temperature range
+• High stability over a long life
+• Excellent price/performance ratio
+• cULus recognized, file E148885 
+(category XGPU2/XGPU8)
+• Mounting: radial
+• Material 
+categorization: 
+for 
+definitions 
+of 
+compliance please see www.vishay.com/doc?99912
+APPLICATIONS
+• Temperature measurement, compensation, sensing and 
+control in consumer and industrial applications
+DESCRIPTION
+These thermistors have a negative temperature coefficient. 
+The part consists of a NTC chip, soldered between two tin 
+plated copper wires. It has a gray base coating with a blue 
+colored dot. The coating has no specified insulation 
+properties.
+PACKAGING
+The thermistors are packed in bulk or tape on reel; see part 
+numbers and relevant packaging quantities.
+DESIGN-IN SUPPORT
+For complete Curve Computation, visit: 
+www.vishay.com/thermistors/ntc-curve-list/
+MARKING
+The thermistors are with a blue colored dot; see dimensions 
+drawing and “Electrical Data and Ordering Information”.
+MOUNTING
+Important mounting and handling instructions: see 
+www.vishay.com/doc?29222
+By soldering in any position. 
+Not intended for potted applications.
+QUICK REFERENCE DATA
+PARAMETER
+VALUE
+UNIT
+Resistance value at 25 °C
+3.3 to 470K
+Ω
+Tolerance on R25-value
+± 2; ± 3; ± 5
+%
+B25/85-value
+2880 to 4570
+K
+Tolerance on B25/85-value
+± 0.5 to ± 3
+%
+Operating temperature range:
+°C
+At zero power dissipation; 
+continuously
+-40 to +125
+At zero power dissipation; 
+for short periods
+≤ 150
+Response time (in oil)
+≈ 1.2
+s
+Thermal time constant τ 
+(for information only)
+15
+s
+Dissipation factor δ 
+(for information only)
+7
+mW/K
+8.5
+(for R25-value ≤ 680 Ω)
+Maximum power dissipation 
+at 55 °C
+500
+mW
+Climatic category 
+(LCT / UCT / days)
+40 / 125 / 56
+-
+Weight
+≈ 0.3
+g
+3
+D
+3
+D
+3D Models
+Design Tools
+Models
+Related
+Documents
+Available
+ELECTRICAL DATA AND ORDERING INFORMATION
+R25
+(Ω)
+R25-TOL.
+(± %)
+B25/85
+(K)
+B25/85-TOL.
+(± %)
+UL
+RECOG.
+SAP MATERIAL AND ORDERING NUMBER (1)
+NTCLE100E3....B0/T1/T2
+RoHS-COMPLIANT
+WITH EXEMPTION (2)
+NTCLE100E3....B0A/T1A/T2A
+RoHS-COMPLIANT
+3.3
+5
+2880
+3
+338*B0
+338*B0A
+4.7
+5
+2880
+3
+478*B0
+478*B0A
+6.8
+5
+2880
+3
+688*B0
+688*B0A
+10
+5
+2990
+3
+109*B0
+109*B0A
+15
+5
+3041
+3
+159*B0
+159*B0A
+22
+5
+3136
+3
+229*B0
+229*B0A
+33
+5
+3390
+3
+✓
+339*B0
+339*B0A
+47
+5
+3390
+3
+✓
+479*B0
+479*B0A
+68
+5
+3390
+3
+✓
+689*B0
+689*B0A
+100
+5
+3560
+1.5
+✓
+101*B0
+101*B0A
+150
+5
+3560
+1.5
+✓
+151*B0
+151*B0A
+220
+5
+3560
+1.5
+✓
+221*B0
+221*B0A
+NTCLE100E3
+www.vishay.com
+Vishay BCcomponents
+  
+ 
+Revision: 07-May-2025
+2
+Document Number: 29049
+For technical questions, contact: nlr@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+Notes
+Preferred versions for new designs
+(1) Replace * in SAP by J for 5 %, H for 3 %, G for 2 %
+(2) RoHS exemption 7(c)-I: electrical and electronic components containing lead in a glass or ceramic other than dielectric ceramic in 
+capacitors, e.g. piezo-electronic devices, or in a glass or ceramic matrix compound
+DIMENSIONS in millimeters
+POWER DERATING
+Note
+•
+Zero power is considered as measuring power max. 1 % of max. 
+power. Voltage on the NTC should always be below 50 VDC
+330
+5
+3560
+1.5
+✓
+331*B0
+331*B0A
+470
+5
+3560
+1.5
+✓
+471*B0
+471*B0A
+680
+5
+3560
+1.5
+✓
+681*B0
+681*B0A
+1000
+2, 3, 5
+3528
+0.5
+✓
+102*B0
+102*B0A
+1500
+2, 3, 5
+3528
+0.5
+✓
+152*B0
+152*B0A
+2000
+2, 3, 5
+3528
+0.5
+✓
+202*B0
+202*B0A
+2200
+2, 3, 5
+3977
+0.75
+✓
+222*B0
+222*B0A
+2700
+2, 3, 5
+3977
+0.75
+✓
+272*B0
+272*B0A
+3300
+2, 3, 5
+3977
+0.75
+✓
+332*B0
+332*B0A
+4700
+2, 3, 5
+3977
+0.75
+✓
+472*B0
+472*B0A
+5000
+2, 3, 5
+3977
+0.75
+✓
+502*B0
+502*B0A
+6800
+2, 3, 5
+3977
+0.75
+✓
+682*B0
+682*B0A
+10 000
+2, 3, 5
+3977
+0.75
+✓
+103*B0
+103*B0A
+12 000
+2, 3, 5
+3740
+2
+✓
+123*B0
+123*B0A
+15 000
+2, 3, 5
+3740
+2
+✓
+153*B0
+153*B0A
+22 000
+2, 3, 5
+3740
+2
+✓
+223*B0
+223*B0A
+33 000
+2, 3, 5
+4090
+1.5
+✓
+333*B0
+333*B0A
+47 000
+2, 3, 5
+4090
+1.5
+✓
+473*B0
+473*B0A
+50 000
+2, 3, 5
+4190
+1.5
+✓
+503*B0
+503*B0A
+68 000
+2, 3, 5
+4190
+1.5
+✓
+683*B0
+683*B0A
+100 000
+2, 3, 5
+4190
+1.5
+✓
+104*B0
+104*B0A
+150 000
+2, 3, 5
+4370
+2.5
+✓
+154*B0
+154*B0A
+220 000
+2, 3, 5
+4370
+2.5
+✓
+224*B0
+224*B0A
+330 000
+2, 3, 5
+4570
+1.5
+334*B0
+334*B0A
+470 000
+2, 3, 5
+4570
+1.5
+474*B0
+474*B0A
+ELECTRICAL DATA AND ORDERING INFORMATION
+R25
+(Ω)
+R25-TOL.
+(± %)
+B25/85
+(K)
+B25/85-TOL.
+(± %)
+UL
+RECOG.
+SAP MATERIAL AND ORDERING NUMBER (1)
+NTCLE100E3....B0/T1/T2
+RoHS-COMPLIANT
+WITH EXEMPTION (2)
+NTCLE100E3....B0A/T1A/T2A
+RoHS-COMPLIANT
+B
+T
+L
+d
+H2
+P
+H1
+Power derating curve
+100
+0
+P
+(%)
+- 40
+0
+55
+85
+Tamb (°C)
+125
+150
+PHYSICAL DIMENSIONS FOR RELEVANT TYPE (all dimensions in millimeters)
+R25-VALUE
+BMAX.
+d
+H1
+H2 MAX.
+L
+P
+TMAX.
+MIN.
+MAX.
+3.3 Ω to 220 Ω
+5.0
+0.6 ± 0.06
+1.0
+4.0
+6.0
+24 ± 1.5
+2.54
+4.0
+330 Ω to 470 kΩ
+3.3 ± 0.5
+0.6 ± 0.06
+1.0
+3.0
+6.0
+24 ± 1.5
+2.54
+3.0
+NTCLE100E3
+www.vishay.com
+Vishay BCcomponents
+  
+ 
+Revision: 07-May-2025
+3
+Document Number: 29049
+For technical questions, contact: nlr@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+TEMPERATURE DEVIATION AS A FUNCTION 
+OF THE AMBIENT TEMPERATURE
+TEMPERATURE DEVIATION AS A FUNCTION 
+OF THE AMBIENT TEMPERATURE
+TEMPERATURE DEVIATION AS A FUNCTION 
+OF THE AMBIENT TEMPERATURE
+TEMPERATURE DEVIATION AS A FUNCTION 
+OF THE AMBIENT TEMPERATURE
+TEMPERATURE DEVIATION AS A FUNCTION 
+OF THE AMBIENT TEMPERATURE
+TEMPERATURE DEVIATION AS A FUNCTION 
+OF THE AMBIENT TEMPERATURE
+Curves valid for 2.2 kΩ to 10 kΩ
+Curve 1: ΔR25/R25 = 5 %
+Curve 2: ΔR25/R25 = 3 %
+Curve 3: ΔR25/R25 = 2 %
+Curve 4: ΔR25/R25 = 1 %
+(for NTCLE203E3 series only)
+40
+160
+3.0
+0
+1.0
+2.0
+2.5
+0.5
+1.5
+0
+40
+80
+120
+1
+2
+4
+3
+ΔT
+(K)
+T (°C)
+-
+Curves valid for 33 kΩ to 47 kΩ
+Curve 1: ΔR25/R25 = 5 %
+Curve 2: ΔR25/R25 = 3 %
+Curve 3: ΔR25/R25 = 2 %
+Curve 4: ΔR25/R25 = 1 %
+(for NTCLE203E3 series only)
+- 40
+160
+4.0
+0
+1.0
+2.0
+2.5
+0.5
+1.5
+3.5
+3.0
+0
+40
+80
+120
+1
+2
+3
+ΔT
+(K)
+T (°C)
+4
+Curves valid for 150 kΩ to 220 kΩ
+Curve 1: ΔR25/R25 = 5 %
+Curve 2: ΔR25/R25 = 3 %
+Curve 3: ΔR25/R25 = 2 %
+T (°C)
+- 40
+160
+6
+0
+2
+4
+5
+1
+3
+0
+40
+80
+120
+3
+ΔT
+(K)
+2
+1
+Curves valid for 12 kΩ to 22 kΩ
+Curve 1: ΔR25/R25 = 5 %
+Curve 2: ΔR25/R25 = 3 %
+Curve 3: ΔR25/R25 = 2 %
+T (°C)
+- 40
+160
+0
+2
+4
+5
+1
+3
+0
+40
+80
+120
+1
+2
+3
+ΔT
+(K)
+Curves valid for 68 kΩ to 100 kΩ
+Curve 1: ΔR25/R25 = 5 %
+Curve 2: ΔR25/R25 = 3 %
+Curve 3: ΔR25/R25 = 2 %
+Curve 4: ΔR25/R25 = 1 %
+(for NTCLE203E3 series only)
+T (°C)
+- 40
+160
+4.0
+0
+1.0
+2.0
+2.5
+0.5
+1.5
+3.5
+3.0
+0
+40
+80
+120
+3
+ΔT
+(K)
+4
+2
+1
+Curves valid for 330 kΩ to 470 kΩ
+Curve 1: ΔR25/R25 = 5 %
+Curve 2: ΔR25/R25 = 3 %
+Curve 3: ΔR25/R25 = 2 %
+T (°C)
+- 40
+160
+4.0
+0
+1.0
+2.0
+2.5
+0.5
+1.5
+3.5
+3.0
+0
+40
+80
+120
+1
+3
+ΔT
+(K)
+2
+NTCLE100E3
+www.vishay.com
+Vishay BCcomponents
+  
+ 
+Revision: 07-May-2025
+4
+Document Number: 29049
+For technical questions, contact: nlr@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+RT VALUE AND TOLERANCE
+These thermistors have a narrow tolerance on the B-value, 
+the result of which provides a very small tolerance on the 
+nominal resistance value over a wide temperature range. For 
+this reason the usual graphs of R = f(T) are replaced by 
+Resistance Values at Intermediate Temperatures Tables, 
+together with a formula to calculate the characteristics with 
+a high precision.
+FORMULAE TO DETERMINE NOMINAL 
+RESISTANCE VALUES
+The resistance values at intermediate temperatures, or the 
+operating temperature values, can be calculated using the 
+following interpolation laws (extended “Steinhart and Hart”):
+where:
+A, B, C, D, A1, B1, C1 and D1 are constant values 
+depending on the material concerned; see table below.
+Rref. is the resistance value at a reference temperature (in 
+this event 25 °C, Rref. = R25).
+T is the temperature in K. T (°C) = T (K) - 273.15
+Formulae numbered  and  are interchangeable with an error 
+of max. 0.005 °C in the range 25 °C to 125 °C and max. 
+0.015 °C in the range -40 °C to +25 °C.
+DETERMINATION OF THE RESISTANCE / 
+TEMPERATURE DEVIATION FROM NOMINAL 
+VALUE
+The total resistance deviation is obtained by combining 
+the “R25-tolerance” and the “resistance deviation due to 
+B-tolerance”.
+When:
+X = R25-tolerance
+Y = resistance deviation due to B-tolerance
+Z = complete resistance deviation, 
+then: 
+ or Z ≈ X + Y
+When:
+TCR = temperature coefficient
+ΔT = temperature deviation,
+then: 
+The temperature tolerances are plotted in the graphs on the 
+previous page.
+Example: at 0 °C, assume X = 5 %, Y = 0.92 % and 
+TCR = 5.09 %/K (see table ), then: 
+A NTC with a R25-value of 10 kΩ has a value of 32.55 kΩ
+between -1.17 °C and +1.17 °C.
+Notes
+(1) Temperature < 25 °C
+(2) Temperature ≥ 25 °C
+R T
+( )
+Rref x e A
+B T
+⁄
+C T2
+⁄
+D T3
+⁄
++
++
++
+(
+)
+=
+T R
+(
+) = A1
+B1
+R
+Rref
+---------
+ln
+C1ln2 R
+Rref
+---------
+D1ln3 R
+Rref
+---------
++
++
++
+
+
+
+-1
+Z
+1
+X
+100
+---------
++
+
+
+
+ x 1
+Y
+100
+---------
++
+
+
+
+
+1
+–
+=
+  x 100 %
+ΔT
+Z
+TCR
+-----------
+=
+Z
+1
+5
+100
+---------
++
+  x 1
+0.92
+100
+-----------
++
+ - 1
+
+
+
+
+
+  x 100 %
+=
+ΔT
+Z
+TCR
+------------
+5.966
+5.09
+--------------
+1.17 °C
+≈
+=
+=
+1.05 x 1.0092 - 1
+{
+} x 100 %
+5.966 %
+=
+=
+PARAMETER FOR DETERMINING NOMINAL RESISTANCE VALUES
+NUMBER B25/85
+(K)
+NAME
+TOL. B
+(%)
+A
+B
+(K)
+C
+(K2)
+D
+(K3)
+A1
+B1
+(K-1)
+C1
+(K-2)
+D1
+(K-3)
+1
+2880
+Mat O. with
+Bn = 2880K
+3
+- 9.094 
+2251.74 
+229098 - 2.744820E+07 3.354016E-03 3.495020E-04 2.095959E-06 4.260615E-07
+2
+2990
+Mat P. with
+Bn = 3990K
+3
+- 10.2296 2887.62 
+132336 - 2.502510E+07 3.354016E-03 3.415560E-04 4.955455E-06 4.364236E-07
+3
+3041
+Mat Q. with
+Bn = 3041K
+3
+- 11.1334 3658.73 
+- 102895 5.166520E+05 3.354016E-03 3.349290E-04 3.683843E-06 7.050455E-07
+4
+3136
+Mat R. with
+Bn = 3136K
+3
+- 12.4493 4702.74 
+- 402687 3.196830E+07 3.354016E-03 3.243880E-04 2.658012E-06 - 2.701560E-07
+5
+3390
+Mat S. with
+Bn = 3390K
+3
+- 12.6814 4391.97 
+- 232807 1.509643E+07 3.354016E-03 2.993410E-04 2.135133E-06 - 5.672000E-09
+6
+3528 (1)
+Mat I. with
+Bn = 3528K 
+0.5
+- 12.0596 3687.667 - 7617.13 - 5.914730E+06 3.354016E-03 2.909670E-04 1.632136E-06 7.192200E-08
+3528 (2)
+- 21.0704 11903.95 - 2504699 2.470338E+08 3.354016E-03 2.933908E-04 3.494314E-06 - 7.712690E-07
+7
+3560
+Mat H. with
+Bn = 3560K 
+1.5
+- 13.0723 4190.574 - 47158.4 - 1.199256E+07 3.354016E-03 2.884193E-04 4.118032E-06 1.786790E-07
+8
+3740
+Mat B. with
+Bn = 3740K 
+2
+- 13.8973 4557.725 
+- 98275 - 7.522357E+06 3.354016E-03 2.744032E-04 3.666944E-06 1.375492E-07
+9
+3977
+Mat A. with
+Bn =3977K
+0.75
+- 14.6337 4791.842 - 115334 - 3.730535E+06 3.354016E-03 2.569850E-04 2.620131E-06 6.383091E-08
+10
+4090
+Mat C. with
+Bn = 4090K 
+1.5
+- 15.5322 5229.973 - 160451 - 5.414091E+06 3.354016E-03 2.519107E-04 3.510939E-06 1.105179E-07
+11
+4190
+Mat D. with
+Bn = 4190K 
+1.5
+- 16.0349 5459.339 - 191141 - 3.328322E+06 3.354016E-03 2.460382E-04 3.405377E-06 1.034240E-07
+12
+4370
+Mat E. with
+Bn = 4370K 
+2.5
+- 16.8717 5759.15 
+- 194267 - 6.869149E+06 3.354016E-03 2.367720E-04 3.585140E-06 1.255349E-07
+13
+4570
+Mat F. with
+Bn = 4570K
+1.5
+- 17.6439 6022.726 - 203157 - 7.183526E+06 3.354016E-03 2.264097E-04 3.278184E-06 1.097628E-07
+NTCLE100E3
+www.vishay.com
+Vishay BCcomponents
+  
+ 
+Revision: 07-May-2025
+5
+Document Number: 29049
+For technical questions, contact: nlr@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+For complete Curve Computation, visit: www.vishay.com/thermistors/ntc-curve-list/
+RESISTANCE VALUES AT INTERMEDIATE TEMPERATURES WITH R25 AT (3.3, 4.7, 6.8) Ω
+TOPER
+(°C)
+PART NUMBER
+NTCLE100E3338***
+PART NUMBER
+NTCLE100E3478***
+PART NUMBER
+NTCLE100E3688***
+TCR
+(%/K)
+ΔR/R DUE TO Btol.
+(%)
+RT
+(Ω)
+RT
+(Ω)
+RT
+(Ω)
+-40
+45.00
+64.09
+92.73
+-4.97
+8.08
+-35
+35.25
+50.20
+72.63
+-4.80
+7.30
+-30
+27.84
+39.64
+57.36
+-4.64
+6.55
+-25
+22.16
+31.56
+45.66
+-4.48
+5.84
+-20
+17.78
+25.32
+36.63
+-4.33
+5.15
+-15
+14.37
+20.46
+29.60
+-4.19
+4.49
+-10
+11.69
+16.65
+24.09
+-4.05
+3.85
+-5
+9.582
+13.65
+19.74
+-3.92
+3.24
+0
+7.904
+11.26
+16.29
+-3.79
+2.65
+5
+6.560
+9.344
+13.52
+-3.66
+2.08
+10
+5.479
+7.803
+11.29
+-3.55
+1.54
+15
+4.602
+6.554
+9.482
+-3.43
+1.01
+20
+3.886
+5.535
+8.008
+-3.32
+0.49
+25
+3.300
+4.700
+6.800
+-3.22
+0.00
+30
+2.816
+4.011
+5.803
+-3.12
+0.48
+35
+2.415
+3.440
+4.977
+-3.02
+0.94
+40
+2.081
+2.964
+4.289
+-2.93
+1.39
+45
+1.801
+2.566
+3.712
+-2.84
+1.82
+50
+1.566
+2.230
+3.227
+-2.76
+2.24
+55
+1.367
+1.947
+2.817
+-2.68
+2.65
+60
+1.198
+1.706
+2.469
+-2.60
+3.04
+65
+1.054
+1.501
+2.172
+-2.52
+3.43
+70
+0.9308
+1.326
+1.918
+-2.45
+3.80
+75
+0.8248
+1.175
+1.700
+-2.38
+4.16
+80
+0.7334
+1.044
+1.511
+-2.32
+4.51
+85
+0.6542
+0.9318
+1.348
+-2.25
+4.85
+90
+0.5854
+0.8338
+1.206
+-2.19
+5.19
+95
+0.5255
+0.7484
+1.083
+-2.13
+5.51
+100
+0.4730
+0.6737
+0.9748
+-2.07
+5.82
+105
+0.4270
+0.6082
+0.8799
+-2.02
+6.13
+110
+0.3865
+0.5505
+0.7965
+-1.97
+6.43
+115
+0.3508
+0.4996
+0.7228
+-1.92
+6.72
+120
+0.3192
+0.4545
+0.6576
+-1.87
+7.00
+125
+0.2911
+0.4145
+0.5998
+-1.82
+7.28
+130
+0.2661
+0.3789
+0.5483
+-1.77
+7.55
+135
+0.2438
+0.3472
+0.5023
+-1.73
+7.81
+140
+0.2238
+0.3188
+0.4612
+-1.69
+8.07
+145
+0.2059
+0.2933
+0.4244
+-1.65
+8.32
+150
+0.1899
+0.2704
+0.3912
+-1.61
+8.56
+NTCLE100E3
+www.vishay.com
+Vishay BCcomponents
+  
+ 
+Revision: 07-May-2025
+6
+Document Number: 29049
+For technical questions, contact: nlr@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+For complete Curve Computation, visit: www.vishay.com/thermistors/ntc-curve-list/
+RESISTANCE VALUES AT INTERMEDIATE TEMPERATURES WITH R25 AT (10, 15, 22) Ω
+TOPER
+(°C)
+PART NUMBER
+NTCLE100E3109***
+PART NUMBER
+NTCLE100E3159***
+PART NUMBER
+NTCLE100E3229***
+RT
+(Ω)
+TCR
+(%/K)
+ΔR/R DUE TO Btol.
+(%)
+RT
+(Ω)
+TCR
+(%/K)
+ΔR/R DUE TO Btol.
+(%)
+RT
+(Ω)
+TCR
+(%/K)
+ΔR/R DUE TO Btol.
+(%)
+ -40
+ 136.7
+ -4.86
+ 8.39
+ 224.8
+ -5.16
+ 8.65
+ 374.9
+ -5.54
+ 8.80
+ -35
+ 107.6
+ -4.72
+ 7.58
+ 174.5
+ -4.98
+ 7.79
+ 285.8
+ -5.31
+ 7.95
+ -30
+ 85.32
+ -4.58
+ 6.81
+ 136.6
+ -4.80
+ 6.98
+ 220.4
+ -5.10
+ 7.14
+ -25
+ 68.10
+ -4.44
+ 6.06
+ 107.9
+ -4.64
+ 6.21
+ 171.7
+ -4.90
+ 6.36
+ -20
+ 54.72
+ -4.31
+ 5.35
+ 85.94
+ -4.48
+ 5.47
+ 135.0
+ -4.71
+ 5.61
+ -15
+ 44.25
+ -4.18
+ 4.66
+ 68.96
+ -4.33
+ 4.76
+ 107.2
+ -4.53
+ 4.89
+ -10
+ 36.02
+ -4.06
+ 4.00
+ 55.74
+ -4.19
+ 4.08
+ 85.79
+ -4.37
+ 4.20
+ -5
+ 29.49
+ -3.94
+ 3.37
+ 45.37
+ -4.05
+ 3.43
+ 69.21
+ -4.22
+ 3.53
+ 0
+ 24.30
+ -3.82
+ 2.75
+ 37.17
+ -3.92
+ 2.81
+ 56.26
+ -4.07
+ 2.89
+ 5
+ 20.13
+ -3.71
+ 2.16
+ 30.65
+ -3.80
+ 2.20
+ 46.05
+ -3.94
+ 2.27
+ 10
+ 16.77
+ -3.60
+ 1.59
+ 25.42
+ -3.68
+ 1.62
+ 37.94
+ -3.81
+ 1.67
+ 15
+ 14.04
+ -3.50
+ 1.04
+ 21.21
+ -3.57
+ 1.06
+ 31.45
+ -3.69
+ 1.10
+ 20
+ 11.82
+ -3.39
+ 0.51
+ 17.79
+ -3.46
+ 0.52
+ 26.23
+ -3.57
+ 0.54
+ 25
+ 10.00
+ -3.30
+ 0.00
+ 15.00
+ -3.36
+ 0.00
+ 22.00
+ -3.47
+ 0.00
+ 30
+ 8.500
+ -3.20
+ 0.50
+ 12.76
+ -3.26
+ 0.49
+ 18.55
+ -3.36
+ 0.52
+ 35
+ 7.259
+ -3.11
+ 0.98
+ 10.86
+ -3.17
+ 0.98
+ 15.72
+ -3.26
+ 1.02
+ 40
+ 6.226
+ -3.03
+ 1.44
+ 9.291
+ -3.08
+ 1.46
+ 13.38
+ -3.17
+ 1.51
+ 45
+ 5.363
+ -2.94
+ 1.89
+ 7.982
+ -2.99
+ 1.92
+ 11.45
+ -3.08
+ 1.98
+ 50
+ 4.639
+ -2.86
+ 2.33
+ 6.887
+ -2.91
+ 2.36
+ 9.833
+ -3.00
+ 2.44
+ 55
+ 4.029
+ -2.78
+ 2.75
+ 5.966
+ -2.83
+ 2.79
+ 8.482
+ -2.92
+ 2.88
+ 60
+ 3.512
+ -2.71
+ 3.16
+ 5.189
+ -2.75
+ 3.21
+ 7.346
+ -2.84
+ 3.32
+ 65
+ 3.073
+ -2.64
+ 3.56
+ 4.529
+ -2.68
+ 3.62
+ 6.386
+ -2.76
+ 3.73
+ 70
+ 2.698
+ -2.57
+ 3.95
+ 3.968
+ -2.61
+ 4.02
+ 5.572
+ -2.69
+ 4.14
+ 75
+ 2.377
+ -2.50
+ 4.32
+ 3.488
+ -2.54
+ 4.41
+ 4.879
+ -2.62
+ 4.53
+ 80
+ 2.101
+ -2.43
+ 4.69
+ 3.077
+ -2.48
+ 4.78
+ 4.286
+ -2.56
+ 4.91
+ 85
+ 1.864
+ -2.37
+ 5.04
+ 2.722
+ -2.41
+ 5.15
+ 3.777
+ -2.50
+ 5.29
+ 90
+ 1.658
+ -2.31
+ 5.38
+ 2.416
+ -2.35
+ 5.51
+ 3.339
+ -2.44
+ 5.65
+ 95
+ 1.479
+ -2.25
+ 5.72
+ 2.151
+ -2.30
+ 5.85
+ 2.960
+ -2.38
+ 6.00
+ 100
+ 1.323
+ -2.20
+ 6.05
+ 1.920
+ -2.24
+ 6.19
+ 2.632
+ -2.32
+ 6.34
+ 105
+ 1.187
+ -2.14
+ 6.36
+ 1.719
+ -2.19
+ 6.53
+ 2.347
+ -2.27
+ 6.68
+ 110
+ 1.068
+ -2.09
+ 6.67
+ 1.543
+ -2.13
+ 6.85
+ 2.098
+ -2.22
+ 7.00
+ 115
+ 0.9635
+ -2.04
+ 6.98
+ 1.389
+ -2.08
+ 7.17
+ 1.880
+ -2.17
+ 7.32
+ 120
+ 0.8712
+ -1.99
+ 7.27
+ 1.253
+ -2.03
+ 7.48
+ 1.689
+ -2.12
+ 7.62
+ 125
+ 0.7897
+ -1.94
+ 7.56
+ 1.133
+ -1.99
+ 7.78
+ 1.521
+ -2.07
+ 7.93
+ 130
+ 0.7174
+ -1.90
+ 7.84
+ 1.027
+ -1.94
+ 8.08
+ 1.373
+ -2.03
+ 8.22
+ 135
+ 0.6533
+ -1.85
+ 8.11
+ 0.9326
+ -1.90
+ 8.37
+ 1.242
+ -1.98
+ 8.50
+ 140
+ 0.5961
+ -1.81
+ 8.37
+ 0.8490
+ -1.86
+ 8.65
+ 1.126
+ -1.94
+ 8.78
+ 145
+ 0.5451
+ -1.77
+ 8.63
+ 0.7744
+ -1.82
+ 8.93
+ 1.023
+ -1.90
+ 9.06
+ 150
+ 0.4995
+ -1.73
+ 8.89
+ 0.7079
+ -1.78
+ 9.20
+ 0.9309
+ -1.86
+ 9.32
+NTCLE100E3
+www.vishay.com
+Vishay BCcomponents
+  
+ 
+Revision: 07-May-2025
+7
+Document Number: 29049
+For technical questions, contact: nlr@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+For complete Curve Computation, visit: www.vishay.com/thermistors/ntc-curve-list/
+RESISTANCE VALUES AT INTERMEDIATE TEMPERATURES WITH R25 AT (33, 47, 68) Ω
+TOPER
+(°C)
+PART NUMBER
+NTCLE100E3339***
+PART NUMBER
+NTCLE100E3479***
+PART NUMBER
+NTCLE100E3689***
+TCR
+(%/K)
+ΔR/R DUE TO Btol.
+(%)
+RT
+(Ω)
+RT
+(Ω)
+RT
+(Ω)
+-40
+707.0
+1007
+1457
+-5.94
+9.30
+-35
+528.5
+752.7
+1089
+-5.70
+8.44
+-30
+399.5
+569.0
+823.3
+-5.49
+7.60
+-25
+305.3
+434.8
+629.1
+-5.28
+6.79
+-20
+235.6
+335.6
+485.5
+-5.09
+6.01
+-15
+183.5
+261.4
+378.2
+-4.90
+5.25
+-10
+144.3
+205.5
+297.3
+-4.73
+4.51
+-5
+114.3
+162.8
+235.6
+-4.57
+3.80
+0
+91.34
+130.1
+188.2
+-4.42
+3.11
+5
+73.51
+104.7
+151.5
+-4.27
+2.45
+10
+59.59
+84.87
+122.8
+-4.13
+1.80
+15
+48.63
+69.26
+100.2
+-4.00
+1.18
+20
+39.94
+56.88
+82.29
+-3.88
+0.58
+25
+33.00
+47.00
+68.00
+-3.76
+0.00
+30
+27.43
+39.06
+56.51
+-3.64
+0.56
+35
+22.92
+32.64
+47.23
+-3.54
+1.11
+40
+19.26
+27.42
+39.68
+-3.43
+1.63
+45
+16.26
+23.16
+33.50
+-3.34
+2.14
+50
+13.79
+19.65
+28.42
+-3.24
+2.63
+55
+11.76
+16.74
+24.23
+-3.15
+3.11
+60
+10.06
+14.33
+20.74
+-3.07
+3.57
+65
+8.652
+12.32
+17.83
+-2.98
+4.02
+70
+7.468
+10.64
+15.39
+-2.90
+4.45
+75
+6.471
+9.216
+13.33
+-2.83
+4.87
+80
+5.628
+8.015
+11.60
+-2.76
+5.27
+85
+4.912
+6.996
+10.12
+-2.69
+5.66
+90
+4.302
+6.127
+8.865
+-2.62
+6.04
+95
+3.780
+5.384
+7.790
+-2.55
+6.41
+100
+3.332
+4.746
+6.867
+-2.49
+6.77
+105
+2.946
+4.196
+6.071
+-2.43
+7.11
+110
+2.613
+3.721
+5.384
+-2.37
+7.45
+115
+2.324
+3.310
+4.788
+-2.32
+7.77
+120
+2.072
+2.951
+4.270
+-2.26
+8.09
+125
+1.853
+2.639
+3.818
+-2.21
+8.39
+130
+1.661
+2.365
+3.422
+-2.16
+8.69
+135
+1.492
+2.125
+3.075
+-2.11
+8.97
+140
+1.344
+1.914
+2.770
+-2.07
+9.25
+145
+1.213
+1.728
+2.500
+-2.02
+9.52
+150
+1.098
+1.564
+2.262
+-1.98
+9.79
+NTCLE100E3
+www.vishay.com
+Vishay BCcomponents
+  
+ 
+Revision: 07-May-2025
+8
+Document Number: 29049
+For technical questions, contact: nlr@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+For complete Curve Computation, visit: www.vishay.com/thermistors/ntc-curve-list/
+RESISTANCE VALUES AT INTERMEDIATE TEMPERATURES WITH R25 AT (100, 150, 220, 330, 470, 680) Ω
+TOPER
+(°C)
+ PART NUMBER
+NTCLE100E3101***
+ PART NUMBER
+NTCLE100E3151***
+ PART NUMBER
+NTCLE100E3221***
+ PART NUMBER
+NTCLE100E3331***
+ PART NUMBER
+NTCLE100E3471***
+ PART NUMBER
+NTCLE100E3681*** TCR
+(%/K)
+ΔR/R
+DUE
+TO
+Btol.
+(%)
+RT
+(Ω)
+RT
+(Ω)
+RT
+(Ω)
+RT
+(Ω)
+RT
+(Ω)
+RT
+(Ω)
+-40
+2193
+3289
+4824
+7236
+10 305
+14 910
+-5.75
+4.99
+-35
+1652
+2478
+3635
+5452
+7766
+11 235
+-5.57
+4.51
+-30
+1256
+1884
+2763
+4144
+5902
+8540
+-5.40
+4.05
+-25
+962.5
+1444
+2117
+3176
+4524
+6545
+-5.24
+3.61
+-20
+743.6
+1115
+1636
+2454
+3495
+5057
+-5.08
+3.19
+-15
+579.0
+868.5
+1274
+1911
+2721
+3937
+-4.93
+2.78
+-10
+454.2
+681.2
+999.1
+1499
+2135
+3088
+-4.78
+2.38
+-5
+358.8
+538.2
+789.4
+1184
+1686
+2440
+-4.64
+2.01
+0
+285.4
+428.2
+628.0
+942.0
+1342
+1941
+-4.51
+1.64
+5
+228.6
+342.9
+502.9
+754.4
+1074
+1554
+-4.38
+1.29
+10
+184.2
+276.4
+405.3
+608.0
+866.0
+1253
+-4.25
+0.95
+15
+149.4
+224.1
+328.7
+493.1
+702.2
+1016
+-4.13
+0.62
+20
+121.9
+182.8
+268.2
+402.2
+572.9
+828.8
+-4.01
+0.31
+25
+100.0
+150.0
+220.0
+330.0
+470.0
+680.0
+-3.90
+0.00
+30
+82.49
+123.7
+181.5
+272.2
+387.7
+561.0
+-3.80
+0.30
+35
+68.41
+102.6
+150.5
+225.8
+321.5
+465.2
+-3.69
+0.58
+40
+57.02
+85.54
+125.5
+188.2
+268.0
+387.8
+-3.59
+0.86
+45
+47.77
+71.65
+105.1
+157.6
+224.5
+324.8
+-3.50
+1.13
+50
+40.20
+60.30
+88.44
+132.7
+188.9
+273.3
+-3.40
+1.39
+55
+33.98
+50.98
+74.76
+112.1
+159.7
+231.1
+-3.31
+1.64
+60
+28.86
+43.28
+63.48
+95.23
+135.6
+196.2
+-3.23
+1.88
+65
+24.61
+36.91
+54.13
+81.20
+115.6
+167.3
+-3.15
+2.12
+70
+21.07
+31.60
+46.35
+69.52
+99.01
+143.3
+-3.07
+2.35
+75
+18.11
+27.16
+39.84
+59.76
+85.11
+123.1
+-2.99
+2.57
+80
+15.62
+23.43
+34.37
+51.56
+73.43
+106.2
+-2.91
+2.79
+85
+13.53
+20.29
+29.76
+44.65
+63.59
+92.00
+-2.84
+3.00
+90
+11.76
+17.63
+25.86
+38.80
+55.26
+79.95
+-2.77
+3.21
+95
+10.25
+15.38
+22.55
+33.83
+48.18
+69.71
+-2.71
+3.41
+100
+8.968
+13.45
+19.73
+29.59
+42.15
+60.98
+-2.64
+3.60
+105
+7.871
+11.81
+17.32
+25.97
+36.99
+53.52
+-2.58
+3.79
+110
+6.928
+10.39
+15.24
+22.86
+32.56
+47.11
+-2.52
+3.97
+115
+6.117
+9.176
+13.46
+20.19
+28.75
+41.60
+-2.46
+4.15
+120
+5.416
+8.125
+11.92
+17.87
+25.46
+36.83
+-2.41
+4.33
+125
+4.809
+7.214
+10.58
+15.87
+22.60
+32.70
+-2.35
+4.50
+130
+4.282
+6.422
+9.419
+14.13
+20.12
+29.11
+-2.30
+4.66
+135
+3.822
+5.732
+8.408
+12.61
+17.96
+25.99
+-2.25
+4.83
+140
+3.420
+5.130
+7.523
+11.29
+16.07
+23.25
+-2.20
+4.99
+145
+3.068
+4.601
+6.749
+10.12
+14.42
+20.86
+-2.15
+5.14
+150
+2.758
+4.137
+6.068
+9.102
+12.96
+18.76
+-2.10
+5.29
+NTCLE100E3
+www.vishay.com
+Vishay BCcomponents
+  
+ 
+Revision: 07-May-2025
+9
+Document Number: 29049
+For technical questions, contact: nlr@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+For complete Curve Computation, visit: www.vishay.com/thermistors/ntc-curve-list/
+RESISTANCE VALUES AT INTERMEDIATE TEMPERATURES WITH R25 AT (1, 1.5, 2) kΩ
+TOPER
+(°C)
+PART NUMBER
+NTCLE100E3102***
+PART NUMBER
+NTCLE100E3152***
+PART NUMBER
+NTCLE100E3202***
+TCR
+(%/K)
+ΔR/R DUE TO Btol.
+(%)
+RT
+(Ω)
+RT
+(Ω)
+RT
+(Ω)
+-40
+23 342
+35 013
+46 684
+-6.06
+1.65
+-35
+17 336
+26 004
+34 672
+-5.84
+1.49
+-30
+13 018
+19 526
+26 035
+-5.62
+1.34
+-25
+9877
+14 816
+19 754
+-5.42
+1.19
+-20
+7569
+11 353
+15 138
+-5.23
+1.05
+-15
+5855
+8782
+11 709
+-5.05
+0.92
+-10
+4569
+6854
+9138
+-4.87
+0.79
+-5
+3596
+5395
+7193
+-4.71
+0.66
+0
+2854
+4280
+5707
+-4.55
+0.54
+5
+2282
+3422
+4563
+-4.40
+0.43
+10
+1838
+2757
+3675
+-4.26
+0.31
+15
+1491
+2236
+2981
+-4.12
+0.21
+20
+1217
+1826
+2434
+-3.99
+0.10
+25
+1000
+1500
+2000
+-3.87
+0.00
+30
+826.6
+1240
+1653
+-3.75
+0.10
+35
+687.3
+1031
+1375
+-3.63
+0.19
+40
+574.6
+861.9
+1149
+-3.53
+0.28
+45
+482.7
+724.0
+965.4
+-3.42
+0.37
+50
+407.4
+611.0
+814.7
+-3.32
+0.46
+55
+345.2
+517.8
+690.5
+-3.23
+0.54
+60
+293.7
+440.6
+587.4
+-3.14
+0.62
+65
+250.8
+376.2
+501.6
+-3.05
+0.70
+70
+214.9
+322.4
+429.8
+-2.97
+0.78
+75
+184.7
+277.1
+369.5
+-2.89
+0.86
+80
+159.3
+238.9
+318.6
+-2.81
+0.93
+85
+137.7
+206.6
+275.5
+-2.73
+1.01
+90
+119.4
+179.1
+238.8
+-2.66
+1.08
+95
+103.8
+155.7
+207.6
+-2.59
+1.15
+100
+90.45
+135.7
+180.9
+-2.53
+1.22
+105
+79.00
+118.5
+158.0
+-2.46
+1.29
+110
+69.15
+103.7
+138.3
+-2.40
+1.35
+115
+60.66
+90.99
+121.3
+-2.34
+1.42
+120
+53.32
+79.98
+106.6
+-2.29
+1.48
+125
+46.96
+70.44
+93.92
+-2.23
+1.55
+130
+41.43
+62.15
+82.87
+-2.18
+1.61
+135
+36.63
+54.94
+73.25
+-2.13
+1.67
+140
+32.43
+48.65
+64.87
+-2.08
+1.73
+145
+28.77
+43.16
+57.54
+-2.03
+1.79
+150
+25.56
+38.34
+51.12
+-1.98
+1.85
+NTCLE100E3
+www.vishay.com
+Vishay BCcomponents
+  
+ 
+Revision: 07-May-2025
+10
+Document Number: 29049
+For technical questions, contact: nlr@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+For complete Curve Computation, visit: www.vishay.com/thermistors/ntc-curve-list/
+RESISTANCE VALUES AT INTERMEDIATE TEMPERATURES WITH R25 AT (2.2, 2.7, 3.3, 4.7, 5.0, 6.8, 10) kΩ
+TOPER
+(°C)
+PART NUMBER
+NTCLE100E3222***
+PART NUMBER
+NTCLE100E3272***
+PART NUMBER
+NTCLE100E3332***
+PART NUMBER
+NTCLE100E3472***
+PART NUMBER
+NTCLE100E3502***
+PART NUMBER
+NTCLE100E3682***
+PART NUMBER
+NTCLE100E3103*** TCR
+(%/K)
+ΔR/R
+DUE
+TO
+Btol.
+(%)
+RT
+(Ω)
+RT
+(Ω)
+RT
+(Ω)
+RT
+(Ω)
+RT
+(Ω)
+RT
+(Ω)
+RT
+(Ω)
+-40
+73 061
+89 665
+109 591
+156 084
+166 047
+225 824
+332 094
+-6.62
+2.79
+-35
+52 778
+64 773
+79 167
+112 753
+119 950
+163 132
+239 900
+-6.39
+2.52
+-30
+38 544
+47 304
+57 816
+82 344
+87 600
+119 136
+175 200
+-6.18
+2.26
+-25
+28 443
+34 907
+42 665
+60 765
+64 643
+87 915
+129 287
+-5.98
+2.02
+-20
+21 199
+26 017
+31 798
+45 288
+48 179
+65 524
+96 358
+-5.78
+1.78
+-15
+15 950
+19 575
+23 925
+34 075
+36 250
+49 300
+72 500
+-5.60
+1.55
+-10
+12 110
+14 862
+18 165
+25 872
+27 523
+37 431
+55 046
+-5.42
+1.33
+-5
+9275
+11 382
+13 912
+19 814
+21 078
+28 667
+42 157
+-5.25
+1.12
+0
+7162
+8790
+10 743
+15 300
+16 277
+22 137
+32 554
+-5.09
+0.92
+5
+5574
+6841
+8362
+11 909
+12 669
+17 230
+25 339
+-4.93
+0.72
+10
+4372
+5365
+6558
+9340
+9936
+13 513
+19 872
+-4.79
+0.53
+15
+3454
+4239
+5180
+7378
+7849
+10 675
+15 698
+-4.64
+0.35
+20
+2747
+3372
+4121
+5869
+6244
+8492
+12 488
+-4.51
+0.17
+25
+2200
+2700
+3300
+4700
+5000
+6800
+10 000
+-4.38
+0.00
+30
+1773
+2176
+2659
+3788
+4030
+5480
+8059
+-4.25
+0.17
+35
+1438
+1764
+2156
+3071
+3267
+4444
+6535
+-4.13
+0.32
+40
+1173
+1439
+1759
+2505
+2665
+3624
+5330
+-4.02
+0.48
+45
+961.8
+1180
+1443
+2055
+2186
+2973
+4372
+-3.91
+0.63
+50
+793.2
+973.4
+1190
+1694
+1803
+2452
+3605
+-3.80
+0.77
+55
+657.5
+806.9
+986.3
+1405
+1494
+2032
+2989
+-3.70
+0.91
+60
+547.8
+672.3
+821.7
+1170
+1245
+1693
+2490
+-3.60
+1.05
+65
+458.6
+562.8
+687.9
+979.7
+1042
+1417
+2084
+-3.51
+1.18
+70
+385.7
+473.3
+578.5
+823.9
+876.5
+1192
+1753
+-3.42
+1.31
+75
+325.8
+399.8
+488.7
+696.0
+740.5
+1007
+1481
+-3.33
+1.44
+80
+276.4
+339.2
+414.6
+590.5
+628.2
+854.3
+1256
+-3.25
+1.56
+85
+235.5
+289.0
+353.2
+503.0
+535.2
+727.8
+1070
+-3.17
+1.68
+90
+201.4
+247.2
+302.1
+430.2
+457.7
+622.5
+915.4
+-3.09
+1.79
+95
+172.9
+212.2
+259.4
+369.4
+393.0
+534.5
+786.0
+-3.01
+1.90
+100
+149.0
+182.9
+223.5
+318.3
+338.6
+460.6
+677.3
+-2.94
+2.01
+105
+128.9
+158.2
+193.3
+275.3
+292.9
+398.3
+585.7
+-2.87
+2.12
+110
+111.8
+137.2
+167.7
+238.9
+254.2
+345.7
+508.3
+-2.80
+2.22
+115
+97.37
+119.5
+146.1
+208.0
+221.3
+301.0
+442.6
+-2.74
+2.32
+120
+85.05
+104.4
+127.6
+181.7
+193.3
+262.9
+386.6
+-2.67
+2.42
+125
+74.52
+91.46
+111.8
+159.2
+169.4
+230.3
+338.7
+-2.61
+2.51
+130
+65.49
+80.38
+98.24
+139.9
+148.8
+202.4
+297.7
+-2.55
+2.61
+135
+57.72
+70.84
+86.59
+123.3
+131.2
+178.4
+262.4
+-2.50
+2.70
+140
+51.02
+62.62
+76.53
+109.0
+116.0
+157.7
+231.9
+-2.44
+2.78
+145
+45.22
+55.49
+67.83
+96.60
+102.8
+139.8
+205.5
+-2.39
+2.87
+150
+40.18
+49.31
+60.27
+85.84
+91.32
+124.2
+182.6
+-2.34
+2.96
+NTCLE100E3
+www.vishay.com
+Vishay BCcomponents
+  
+ 
+Revision: 07-May-2025
+11
+Document Number: 29049
+For technical questions, contact: nlr@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+For complete Curve Computation, visit: www.vishay.com/thermistors/ntc-curve-list/
+RESISTANCE VALUES AT INTERMEDIATE TEMPERATURES WITH R25 AT (12, 15, 22) kΩ
+TOPER
+(°C)
+PART NUMBER
+NTCLE100E3123***
+PART NUMBER
+NTCLE100E3153***
+PART NUMBER
+NTCLE100E3223***
+TCR
+(%/K)
+ΔR/R DUE TO Btol.
+(%)
+RT
+(kΩ)
+RT
+(kΩ)
+RT
+(kΩ)
+-40
+309.4
+386.7
+567.2
+-6.07
+7.00
+-35
+229.5
+286.9
+420.8
+-5.88
+6.32
+-30
+171.8
+214.8
+315.0
+-5.70
+5.68
+-25
+129.8
+162.3
+238.0
+-5.52
+5.06
+-20
+98.93
+123.7
+181.4
+-5.35
+4.46
+-15
+76.02
+95.02
+139.4
+-5.19
+3.89
+-10
+58.88
+73.60
+107.9
+-5.03
+3.34
+-5
+45.95
+57.44
+84.25
+-4.88
+2.81
+0
+36.13
+45.16
+66.24
+-4.74
+2.30
+5
+28.61
+35.76
+52.45
+-4.60
+1.80
+10
+22.80
+28.51
+41.81
+-4.47
+1.33
+15
+18.30
+22.87
+33.55
+-4.34
+0.87
+20
+14.77
+18.47
+27.08
+-4.22
+0.43
+25
+12.00
+15.00
+22.00
+-4.10
+0.00
+30
+9.804
+12.25
+17.97
+-3.99
+0.41
+35
+8.054
+10.07
+14.77
+-3.88
+0.81
+40
+6.652
+8.315
+12.20
+-3.77
+1.20
+45
+5.522
+6.903
+10.12
+-3.67
+1.58
+50
+4.607
+5.759
+8.447
+-3.58
+1.94
+55
+3.862
+4.828
+7.081
+-3.48
+2.29
+60
+3.252
+4.066
+5.963
+-3.39
+2.64
+65
+2.751
+3.439
+5.044
+-3.30
+2.97
+70
+2.337
+2.921
+4.284
+-3.22
+3.29
+75
+1.993
+2.492
+3.654
+-3.14
+3.60
+80
+1.707
+2.134
+3.129
+-3.06
+3.91
+85
+1.467
+1.834
+2.690
+-2.99
+4.20
+90
+1.266
+1.582
+2.321
+-2.92
+4.49
+95
+1.096
+1.370
+2.010
+-2.85
+4.77
+100
+0.9524
+1.190
+1.746
+-2.78
+5.04
+105
+0.8302
+1.038
+1.522
+-2.71
+5.31
+110
+0.7260
+0.9075
+1.331
+-2.65
+5.56
+115
+0.6369
+0.7961
+1.168
+-2.59
+5.82
+120
+0.5604
+0.7005
+1.027
+-2.53
+6.06
+125
+0.4945
+0.6181
+0.9065
+-2.47
+6.30
+130
+0.4375
+0.5469
+0.8022
+-2.42
+6.53
+135
+0.3882
+0.4853
+0.7117
+-2.37
+6.76
+140
+0.3454
+0.4317
+0.6332
+-2.31
+6.98
+145
+0.3080
+0.3850
+0.5647
+-2.26
+7.20
+150
+0.2754
+0.3442
+0.5049
+-2.22
+7.41
+NTCLE100E3
+www.vishay.com
+Vishay BCcomponents
+  
+ 
+Revision: 07-May-2025
+12
+Document Number: 29049
+For technical questions, contact: nlr@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+For complete Curve Computation, visit: www.vishay.com/thermistors/ntc-curve-list/
+RESISTANCE VALUES AT INTERMEDIATE TEMPERATURES WITH R25 AT (33, 47, 50, 68, 100) kΩ
+ TOPER
+(°C)
+ PART NUMBER
+NTCLE100E3 
+ 333*** 
+ 473***
+ TCR
+(%/K)
+ ΔR/R DUE 
+TO Btol.
+(%)  
+ 503***
+ 683***  
+ 104***
+TCR
+(%/K)
+ ΔR/R DUE 
+TO Btol.
+(%)  
+ RT
+(kΩ)
+ RT
+(kΩ)
+ RT
+(kΩ)
+ RT
+(kΩ)
+ RT
+(kΩ)
+-40
+1116
+1589
+-6.54
+5.74
+1833
+2493
+3666
+-6.69
+5.88
+-35
+808.6
+1152
+-6.34
+5.19
+1319
+1794
+2638
+-6.49
+5.31
+-30
+591.7
+842.8
+-6.15
+4.66
+958.3
+1303
+1917
+-6.29
+4.77
+-25
+437.1
+622.6
+-5.96
+4.15
+703.1
+956.2
+1406
+-6.10
+4.25
+-20
+325.9
+464.1
+-5.79
+3.66
+520.6
+708.0
+1041
+-5.92
+3.75
+-15
+245.0
+349.0
+-5.62
+3.19
+388.9
+528.9
+777.8
+-5.75
+3.27
+-10
+185.8
+264.6
+-5.45
+2.74
+293.0
+398.5
+586.1
+-5.58
+2.80
+-5
+142.0
+202.3
+-5.30
+2.30
+222.6
+302.8
+445.3
+-5.42
+2.36
+0
+109.4
+155.8
+-5.14
+1.88
+170.5
+231.8
+340.9
+-5.26
+1.93
+5
+84.91
+120.9
+-5.00
+1.48
+131.5
+178.9
+263.1
+-5.11
+1.52
+10
+66.37
+94.53
+-4.86
+1.09
+102.2
+139.0
+204.4
+-4.97
+1.12
+15
+52.24
+74.40
+-4.72
+0.71
+80.01
+108.8
+160.0
+-4.83
+0.73
+20
+41.39
+58.95
+-4.59
+0.35
+63.04
+85.74
+126.1
+-4.70
+0.36
+25
+33.00
+47.00
+-4.47
+0.00
+50.00
+68.00
+100.0
+-4.57
+0.00
+30
+26.47
+37.71
+-4.35
+0.34
+39.90
+54.27
+79.81
+-4.45
+0.35
+35
+21.37
+30.43
+-4.23
+0.67
+32.04
+43.57
+64.08
+-4.33
+0.68
+40
+17.34
+24.70
+-4.12
+0.99
+25.87
+35.19
+51.75
+-4.22
+1.01
+45
+14.15
+20.15
+-4.01
+1.29
+21.01
+28.57
+42.02
+-4.11
+1.33
+50
+11.61
+16.53
+-3.91
+1.59
+17.15
+23.33
+34.31
+-4.00
+1.63
+55
+9.572
+13.63
+-3.81
+1.88
+14.08
+19.15
+28.16
+-3.90
+1.93
+60
+7.931
+11.30
+-3.71
+2.16
+11.61
+15.79
+23.22
+-3.80
+2.21
+65
+6.603
+9.404
+-3.62
+2.43
+9.623
+13.09
+19.25
+-3.71
+2.49
+70
+5.522
+7.865
+-3.53
+2.70
+8.012
+10.90
+16.02
+-3.62
+2.76
+75
+4.639
+6.607
+-3.44
+2.95
+6.701
+9.114
+13.40
+-3.53
+3.03
+80
+3.913
+5.573
+-3.36
+3.20
+5.629
+7.655
+11.26
+-3.45
+3.28
+85
+3.315
+4.721
+-3.28
+3.45
+4.748
+6.457
+9.496
+-3.36
+3.53
+90
+2.819
+4.015
+-3.20
+3.68
+4.021
+5.469
+8.042
+-3.28
+3.77
+95
+2.406
+3.427
+-3.13
+3.91
+3.419
+4.649
+6.837
+-3.21
+4.01
+100
+2.062
+2.936
+-3.05
+4.13
+2.918
+3.968
+5.835
+-3.13
+4.24
+105
+1.773
+2.525
+-2.98
+4.35
+2.499
+3.399
+4.998
+-3.06
+4.46
+110
+1.530
+2.179
+-2.92
+4.56
+2.148
+2.921
+4.296
+-2.99
+4.68
+115
+1.324
+1.886
+-2.85
+4.77
+1.853
+2.519
+3.705
+-2.93
+4.89
+120
+1.150
+1.638
+-2.79
+4.97
+1.603
+2.180
+3.206
+-2.86
+5.09
+125
+1.002
+1.427
+-2.73
+5.17
+1.392
+1.892
+2.783
+-2.80
+5.29
+130
+0.8757
+1.247
+-2.67
+5.36
+1.212
+1.648
+2.423
+-2.74
+5.49
+135
+0.7675
+1.093
+-2.61
+5.54
+1.058
+1.439
+2.116
+-2.68
+5.68
+140
+0.6746
+0.9608
+-2.55
+5.73
+0.9269
+1.261
+1.854
+-2.62
+5.87
+145
+0.5946
+0.8468
+-2.50
+5.90
+0.8141
+1.107
+1.628
+-2.57
+6.05
+150
+0.5254
+0.7483
+-2.45
+6.08
+0.7170
+0.9752
+1.434
+-2.51
+6.23
+NTCLE100E3
+www.vishay.com
+Vishay BCcomponents
+  
+ 
+Revision: 07-May-2025
+13
+Document Number: 29049
+For technical questions, contact: nlr@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+For complete Curve Computation, visit: www.vishay.com/thermistors/ntc-curve-list/
+RESISTANCE VALUES AT INTERMEDIATE TEMPERATURES WITH R25 AT (150, 220, 330, 470) kΩ
+ TOPER
+(°C)
+ PART NUMBER
+NTCLE100E3
+154***
+224***
+ TCR
+(%/K)
+ ΔR/R DUE 
+TO Btol.
+(%)  
+334***
+474***
+TCR
+(%/K)
+ ΔR/R DUE 
+TO Btol.
+(%)  
+ RT
+(kΩ)
+ RT
+(kΩ)
+ RT
+(kΩ)
+ RT
+(kΩ)
+-40
+6153
+9024
+-6.83
+10.22
+16 044
+22 850
+-7.14
+6.41
+-35
+4394
+6444
+-6.64
+9.24
+11 282
+16 068
+-6.94
+5.80
+-30
+3168
+4646
+-6.45
+8.29
+8013
+11 413
+-6.74
+5.20
+-25
+2305
+3381
+-6.27
+7.39
+5747
+8185
+-6.55
+4.64
+-20
+1693
+2483
+-6.09
+6.52
+4161
+5926
+-6.37
+4.09
+-15
+1254
+1839
+-5.92
+5.68
+3040
+4329
+-6.19
+3.57
+-10
+936.4
+1373
+-5.75
+4.88
+2240
+3190
+-6.02
+3.06
+-5
+705.0
+1034
+-5.60
+4.10
+1665
+2371
+-5.85
+2.57
+0
+535.0
+784.7
+-5.44
+3.36
+1248
+1777
+-5.69
+2.11
+5
+409.1
+600.0
+-5.29
+2.64
+942.3
+1342
+-5.54
+1.65
+10
+315.1
+462.1
+-5.15
+1.94
+717.1
+1021
+-5.39
+1.22
+15
+244.4
+358.4
+-5.01
+1.27
+549.8
+783.0
+-5.24
+0.80
+20
+190.8
+279.9
+-4.88
+0.63
+424.5
+604.6
+-5.10
+0.39
+25
+150.0
+220.0
+-4.75
+0.00
+330.0
+470.0
+-4.97
+0.00
+30
+118.6
+174.0
+-4.63
+0.60
+258.2
+367.8
+-4.84
+0.38
+35
+94.42
+138.5
+-4.51
+1.19
+203.4
+289.6
+-4.72
+0.75
+40
+75.58
+110.9
+-4.39
+1.76
+161.1
+229.5
+-4.59
+1.10
+45
+60.85
+89.24
+-4.28
+2.30
+128.4
+182.9
+-4.48
+1.45
+50
+49.25
+72.24
+-4.17
+2.83
+103.0
+146.7
+-4.37
+1.78
+55
+40.08
+58.78
+-4.07
+3.35
+83.00
+118.2
+-4.26
+2.10
+60
+32.78
+48.08
+-3.97
+3.85
+67.26
+95.80
+-4.15
+2.41
+65
+26.94
+39.51
+-3.87
+4.33
+54.79
+78.04
+-4.05
+2.72
+70
+22.25
+32.63
+-3.78
+4.80
+44.85
+63.88
+-3.95
+3.01
+75
+18.46
+27.07
+-3.69
+5.26
+36.90
+52.55
+-3.86
+3.30
+80
+15.38
+22.56
+-3.60
+5.70
+30.49
+43.43
+-3.77
+3.58
+85
+12.87
+18.88
+-3.52
+6.14
+25.31
+36.05
+-3.68
+3.85
+90
+10.82
+15.87
+-3.44
+6.56
+21.10
+30.06
+-3.59
+4.11
+95
+9.129
+13.39
+-3.36
+6.96
+17.67
+25.16
+-3.51
+4.37
+100
+7.732
+11.34
+-3.28
+7.36
+14.85
+21.15
+-3.43
+4.62
+105
+6.574
+9.642
+-3.21
+7.75
+12.53
+17.85
+-3.35
+4.86
+110
+5.610
+8.228
+-3.14
+8.13
+10.62
+15.12
+-3.28
+5.10
+115
+4.804
+7.046
+-3.07
+8.49
+9.029
+12.86
+-3.21
+5.33
+120
+4.128
+6.054
+-3.00
+8.85
+7.704
+10.97
+-3.14
+5.55
+125
+3.559
+5.219
+-2.94
+9.20
+6.597
+9.396
+-3.07
+5.77
+130
+3.078
+4.514
+-2.87
+9.54
+5.668
+8.072
+-3.00
+5.99
+135
+2.670
+3.916
+-2.81
+9.87
+4.885
+6.958
+-2.94
+6.20
+140
+2.323
+3.408
+-2.75
+10.20
+4.224
+6.016
+-2.88
+6.40
+145
+2.028
+2.974
+-2.69
+10.52
+3.663
+5.217
+-2.82
+6.60
+150
+1.774
+2.603
+-2.64
+10.83
+3.186
+4.538
+-2.76
+6.79
+NTCLE100E3
+www.vishay.com
+Vishay BCcomponents
+  
+ 
+Revision: 07-May-2025
+14
+Document Number: 29049
+For technical questions, contact: nlr@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+PACKAGING 
+TAPE SPECIFICATIONS
+Thermistors on tape
+DIMENSIONS in millimeters
+DETAILS
+SYMBOL
+DIMENSIONS NOMINAL
+TOLERANCE
+REMARKS
+Body diameter 
+Lead diameter 
+Feed hole diameter
+D
+d
+D0
+3.3
+0.6
+4.0
+± 0.5
+± 0.06
+± 0.2
+5 max. for 3.3 Ω to 220 Ω  
+  
+Lead to lead distance
+F
+2.5
++0.5
+-0.2
+Guaranteed between 
+component and tape
+Distance component to tape center 
+Component height 
+Component alignment 
+Distance top/bottom of components 
+Length of lacquer under the comp. bottom
+H
+H1
+Δh
+H2
+H3
+22.0
+32.2
+0
+6
+2
+± 1.0
+max.
+± 2.0
+max.
+± 1
+ 
+ 
+ 
+ 
+1 to 4 max. for 3.3 Ω to 220 Ω
+Length of snipped lead
+L
+11.0
+ max.
+Pitch between thermistors 
+Feed hole pitch 
+Feed hole center to lead center 
+Component alignment
+P
+P0
+P1
+Δp
+12.7
+12.7
+5.08
+0
+± 1.0
+± 0.3
+± 0.7
+± 1.3
+Cumulative pitch error 
+± 1 mm / 20 pitches 
+guaranteed between 
+component and tape
+Total thickness 
+Total tape thickness
+T
+t
+3.0
+0.9
+max.
+max.
+4 max. for 3.3 Ω to 220 Ω with 
+cardboard tape 0.5 ± 0.1
+Tape width 
+ 
+Hold down tape width 
+Hole position 
+Hold down tape position
+W
+W0
+W1
+W2
+18.0
+5.0
+9.0
+1.5
+± 1.0
+- 0.5
+± 0.3
+± 0.5
+± 1.0
+None of the hold down tapes may 
+cover the holes
+ 
+ 
+ 
+P
+A
+Δp
+D
+D0
+L
+H
+W0
+W2
+W1
+W
+P0
+P1
+F
+Direction of unreeling
+t
+Detail A
+d
+H3
+H2
+H1
+Taped according to IEC 60286-2 
+(cover tape may differ from shown)
+T
+ΔH
+1E pitch
+NTCLE100E3....T1
+NTCLE100E3
+www.vishay.com
+Vishay BCcomponents
+  
+ 
+Revision: 07-May-2025
+15
+Document Number: 29049
+For technical questions, contact: nlr@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+Thermistors on tape
+DIMENSIONS in millimeters
+DETAILS
+SYMBOL
+DIMENSIONS NOMINAL
+TOLERANCE
+REMARKS
+Body diameter 
+Lead diameter 
+Feed hole diameter
+D
+d
+D0
+3.3
+0.6
+4.0
+± 0.5
+± 0.06
+± 0.2
+5 max. for 3.3 Ω to 220 Ω 
+ 
+Lead to lead distance
+F
+5.0
++0.5
+-0.2
+Guaranteed between 
+component and tape
+Distance component to tape center 
+Component height 
+Component alignment 
+Distance top/bottom of components 
+Length of lacquer under the comp. bottom
+H
+H0
+H1
+Δh
+H3
+20.0
+16.0
+10.0
+0.0
+2.0
+± 2.0
+± 0.5
+max.
+± 2.0
+± 1.0
+ 
+ 
+12 max. for 100 Ω to 220 Ω 
+ 
+Length of snipped lead
+L
+11.0
+ max.
+Pitch between thermistors 
+Feed hole pitch 
+Feed hole center to lead center 
+Component alignment
+P
+P0
+P1
+Δp
+12.7
+12.7
+3.81
+0.0
+± 1.0
+± 0.3
+± 0.7
+± 1.3
+Cumulative pitch error 
+± 1 mm / 20 pitches 
+guaranteed between 
+component and tape
+Total thickness 
+Total tape thickness
+T
+t
+3.0
+0.9
+max.
+max.
+4 max. for 3.3 Ω to 220 Ω with 
+cardboard tape 0.5 ± 0.1
+Tape width 
+ 
+Hold down tape width 
+Hole position 
+Hold down tape position
+W
+W0
+W1
+W2
+18.0
+5.0
+9.0
+1.5
+± 1.0
+- 0.5
+± 0.3
+± 0.5
+± 1.0
+None of the hold down tapes may 
+cover the holes
+ 
+ 
+ 
+T
+ΔH
+P
+L
+P0
+P1
+F
+D0
+W0
+W2
+W
+W1
+H0
+H
+Δp
+d
+H3
+H1
+t
+Taped according to IEC 60286-2 
+(cover tape may differ from shown)
+2E pitch
+NTCLE100E3...T2
+D
+NTCLE100E3
+www.vishay.com
+Vishay BCcomponents
+  
+ 
+Revision: 07-May-2025
+16
+Document Number: 29049
+For technical questions, contact: nlr@vishay.com
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+REEL SPECIFICATIONS
+CHARACTERISTICS OF TAPED PRODUCTS
+Minimum pull-out force of the component: 5 N
+Minimum peel-off force of adhesive tape: 6 N
+Minimum tearing force tape: 15 N
+Minimum pull-off force of tape-reel: 5 N
+STORAGE CONDITIONS
+Storage temperature range: -25 °C to +40 °C
+Maximum relative humidity: 80 %, non-condensing 
+22.5
+77
+85.6
+92
+356
+max.
+16 +1
+- 0
+18
+3
+42 ±1
+56 max.
+Dimensions of the reel
+PART NUMBERS AND PACKAGING 
+PACKING METHOD
+PART NUMBERS
+QUANTITY
+Bulk
+NTCLE100E3....B0(A)
+500
+Tape and reel 
+1E pitch
+NTCLE100E3....T1(A)
+1500 per reel,
+2 reels per box
+Tape and reel 
+2E pitch
+NTCLE100E3....T2(A)
+1500 per reel,
+2 reels per box
+Legal Disclaimer Notice
+www.vishay.com
+Vishay
+   
+ 
+Revision: 01-Jan-2026
+1
+Document Number: 91000
+THIS DOCUMENT IS SUBJECT TO CHANGE WITHOUT NOTICE. THE PRODUCTS DESCRIBED HEREIN AND THIS DOCUMENT
+ARE SUBJECT TO SPECIFIC DISCLAIMERS, SET FORTH AT www.vishay.com/doc?91000
+Disclaimer
+ALL PRODUCT, PRODUCT SPECIFICATIONS AND DATA ARE SUBJECT TO CHANGE WITHOUT NOTICE TO IMPROVE 
+RELIABILITY, FUNCTION OR DESIGN OR OTHERWISE. 
+Vishay Intertechnology, Inc., its affiliates, agents, and employees, and all persons acting on its or their behalf (collectively, 
+“Vishay”), disclaim any and all liability for any errors, inaccuracies or incompleteness contained in any datasheet or in any other 
+disclosure relating to any product.
+Vishay makes no warranty, representation or guarantee regarding the suitability of the products for any particular purpose or 
+the continuing production of any product. To the maximum extent permitted by applicable law, Vishay disclaims (i) any and all 
+liability arising out of the application or use of any product, (ii) any and all liability, including without limitation special, 
+consequential or incidental damages, and (iii) any and all implied warranties, including warranties of fitness for particular 
+purpose, non-infringement and merchantability.
+Statements regarding the suitability of products for certain types of applications are based on Vishay's knowledge of typical 
+requirements that are often placed on Vishay products in generic applications. Such statements are not binding statements 
+about the suitability of products for a particular application. It is the customer's responsibility to validate that a particular product 
+with the properties described in the product specification is suitable for use in a particular application. Parameters provided in 
+datasheets and / or specifications may vary in different applications and performance may vary over time. All operating 
+parameters, including typical parameters, must be validated for each customer application by the customer's technical experts. 
+Product specifications do not expand or otherwise modify Vishay's terms and conditions of purchase, including but not limited 
+to the warranty expressed therein.
+Hyperlinks included in this datasheet may direct users to third-party websites. These links are provided as a convenience and 
+for informational purposes only. Inclusion of these hyperlinks does not constitute an endorsement or an approval by Vishay of 
+any of the products, services or opinions of the corporation, organization or individual associated with the third-party website. 
+Vishay disclaims any and all liability and bears no responsibility for the accuracy, legality or content of the third-party website 
+or for that of subsequent links.
+Vishay products are not designed for use in life-saving or life-sustaining applications or any application in which the failure of 
+the Vishay product could result in personal injury or death unless specifically qualified in writing by Vishay. Customers using or 
+selling Vishay products not expressly indicated for use in such applications do so at their own risk. Please contact authorized 
+Vishay personnel to obtain written terms and conditions regarding products designed for such applications.
+No license, express or implied, by estoppel or otherwise, to any intellectual property rights is granted by this document or by 
+any conduct of Vishay. Product names and markings noted herein may be trademarks of their respective owners.
+© 2026 VISHAY INTERTECHNOLOGY, INC. ALL RIGHTS RESERVED

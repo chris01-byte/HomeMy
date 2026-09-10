@@ -1,0 +1,2479 @@
+{
+  "metadata": {
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "date": "2026-09-10",
+    "connectivity_status": "engineering_design_not_energization_release",
+    "notes": "null nets are explicit NC/unused pins, not omitted connections; PIN_TYPES distinguish electrical ERC intent."
+  },
+  "components": [
+    {
+      "ref": "U1",
+      "mpn": "LM74930QRGERQ1",
+      "value": "LM74930-Q1",
+      "footprint": "PMU_RevA:VQFN_RGE24_4x4_P0.5_EP_FLOAT",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_DGATE",
+        "2": "MAIN_COMMON",
+        "3": null,
+        "4": "MAIN_UVLO",
+        "5": "MAIN_OV",
+        "6": "AON_WAKE_EN",
+        "7": "AON_WAKE_EN",
+        "8": null,
+        "9": "MAIN_TMR",
+        "10": null,
+        "11": "MAIN_ILIM",
+        "12": "MAIN_FAULT_N",
+        "13": "BATT_N",
+        "14": "MAIN_HGATE",
+        "15": "MAIN_COMMON",
+        "16": "BATT_N",
+        "17": null,
+        "18": "MAIN_ISCP",
+        "19": "MAIN_KELVIN_N",
+        "20": "MAIN_CS_P",
+        "21": null,
+        "22": "BATT_SENSED_P",
+        "23": "MAIN_CAP",
+        "24": "SYS_BUS_P",
+        "25": null
+      },
+      "source_url": "https://www.ti.com/lit/ds/symlink/lm74930-q1.pdf",
+      "notes": "Datasheet pp3-4: exposed pad must FLOAT. SW unused; independent input dividers avoid common-source startup UV deadlock. Positive-polarity bench input only; this wiring does not claim negative-battery tolerance.",
+      "pin_names": {
+        "1": "DGATE",
+        "2": "A",
+        "3": "SW",
+        "4": "UVLO",
+        "5": "OV",
+        "6": "EN",
+        "7": "MODE",
+        "8": "NC",
+        "9": "TMR",
+        "10": "IMON",
+        "11": "ILIM",
+        "12": "FLT_N",
+        "13": "GND",
+        "14": "HGATE",
+        "15": "OUT",
+        "16": "OVCLAMP",
+        "17": "NC",
+        "18": "ISCP",
+        "19": "CS-",
+        "20": "CS+",
+        "21": "NC",
+        "22": "VS",
+        "23": "CAP",
+        "24": "C",
+        "25": "EP_FLOAT"
+      },
+      "pin_types": {
+        "1": "output",
+        "2": "input",
+        "3": "no_connect",
+        "4": "input",
+        "5": "input",
+        "6": "input",
+        "7": "input",
+        "8": "no_connect",
+        "9": "passive",
+        "10": "output",
+        "11": "passive",
+        "12": "open_collector",
+        "13": "power_in",
+        "14": "output",
+        "15": "input",
+        "16": "input",
+        "17": "no_connect",
+        "18": "input",
+        "19": "input",
+        "20": "input",
+        "21": "no_connect",
+        "22": "power_in",
+        "23": "output",
+        "24": "input",
+        "25": "no_connect"
+      }
+    },
+    {
+      "ref": "U2",
+      "mpn": "TPS48110AQDGXRQ1",
+      "value": "TPS48110-Q1",
+      "footprint": "PMU_RevA:VSSOP_DGX19_3x5.1_P0.5_Missing16",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_UVLO",
+        "2": "BATT_N",
+        "3": "MOTION_GATE_EN",
+        "4": "MOTION_TEMP_FLT_N",
+        "5": "MOTION_FLT_N",
+        "6": "BATT_N",
+        "7": "MOTION_IMON_RAW",
+        "8": "MOTION_IWRN",
+        "9": "MOTION_TMR",
+        "10": "MOTION_TEMP_DIODE",
+        "11": null,
+        "12": "MOTION_BST",
+        "13": "MOTION_COMMON",
+        "14": "MOTION_GATE_DRIVE",
+        "15": "MOTION_PU",
+        "17": "MOTION_KELVIN_N",
+        "18": "MOTION_CS_P",
+        "19": "MOTION_ISCP",
+        "20": "SYS_BUS_P"
+      },
+      "source_url": "https://www.ti.com/lit/ds/symlink/tps4811-q1.pdf",
+      "notes": "Physical pin16 absent. Pin11 no-connect. External fault latch must capture both FLT_I and FLT_T; native thermal behavior retries after512ms. OV grounded: external chopper46V comparator supplies latched OV inhibit. IMON combined load including wake100k ADC pulldown provides0.627906V at60A; unloaded interface0.675V.",
+      "pin_names": {
+        "1": "EN_UVLO",
+        "2": "OV",
+        "3": "INP",
+        "4": "FLT_T_N",
+        "5": "FLT_I_N",
+        "6": "GND",
+        "7": "IMON",
+        "8": "IWRN",
+        "9": "TMR",
+        "10": "DIODE",
+        "11": "NC",
+        "12": "BST",
+        "13": "SRC",
+        "14": "PD",
+        "15": "PU",
+        "17": "CS-",
+        "18": "CS+",
+        "19": "ISCP",
+        "20": "VS"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "input",
+        "3": "input",
+        "4": "open_collector",
+        "5": "open_collector",
+        "6": "power_in",
+        "7": "output",
+        "8": "input",
+        "9": "passive",
+        "10": "input",
+        "11": "no_connect",
+        "12": "output",
+        "13": "passive",
+        "14": "output",
+        "15": "output",
+        "17": "input",
+        "18": "input",
+        "19": "input",
+        "20": "power_in"
+      }
+    },
+    {
+      "ref": "Q1",
+      "mpn": "PSMN1R0-100ASFJ",
+      "value": "100V N-MOS .99mR@25C/2.3mR@175C 10V",
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "Q1_G",
+        "2": "MAIN_COMMON",
+        "3": "MAIN_COMMON",
+        "4": "MAIN_COMMON",
+        "5": "MAIN_COMMON",
+        "6": "MAIN_COMMON",
+        "7": "BATT_SENSED_P",
+        "8": "BATT_SENSED_P",
+        "9": "BATT_SENSED_P",
+        "10": "BATT_SENSED_P",
+        "11": "BATT_SENSED_P",
+        "12": "BATT_SENSED_P",
+        "13": "BATT_SENSED_P"
+      },
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/PSMN1R0-100ASF.pdf",
+      "notes": "Manufacturer mounting-base mb is library pad13 and is D. Top-view1 bottom-left,1..6 left-to-right bottom;12..7 top. Separate gate resistor per die. No assumption of equal current sharing during linear startup.",
+      "pin_names": {
+        "1": "G",
+        "2": "S",
+        "3": "S",
+        "4": "S",
+        "5": "S",
+        "6": "S",
+        "7": "D",
+        "8": "D",
+        "9": "D",
+        "10": "D",
+        "11": "D",
+        "12": "D",
+        "13": "D"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive",
+        "9": "passive",
+        "10": "passive",
+        "11": "passive",
+        "12": "passive",
+        "13": "passive"
+      }
+    },
+    {
+      "ref": "R1",
+      "mpn": "RC0805FR-0710RL",
+      "value": "10R 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_HGATE",
+        "2": "Q1_G"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R11",
+      "mpn": "RC0805FR-0710ML",
+      "value": "10M 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "Q1_G",
+        "2": "MAIN_COMMON"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "Main HGATE only39uA minimum: do not substitute ordinary10k/100k pull-downs.",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "Q2",
+      "mpn": "PSMN1R0-100ASFJ",
+      "value": "100V N-MOS .99mR@25C/2.3mR@175C 10V",
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "Q2_G",
+        "2": "MAIN_COMMON",
+        "3": "MAIN_COMMON",
+        "4": "MAIN_COMMON",
+        "5": "MAIN_COMMON",
+        "6": "MAIN_COMMON",
+        "7": "BATT_SENSED_P",
+        "8": "BATT_SENSED_P",
+        "9": "BATT_SENSED_P",
+        "10": "BATT_SENSED_P",
+        "11": "BATT_SENSED_P",
+        "12": "BATT_SENSED_P",
+        "13": "BATT_SENSED_P"
+      },
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/PSMN1R0-100ASF.pdf",
+      "notes": "Manufacturer mounting-base mb is library pad13 and is D. Top-view1 bottom-left,1..6 left-to-right bottom;12..7 top. Separate gate resistor per die. No assumption of equal current sharing during linear startup.",
+      "pin_names": {
+        "1": "G",
+        "2": "S",
+        "3": "S",
+        "4": "S",
+        "5": "S",
+        "6": "S",
+        "7": "D",
+        "8": "D",
+        "9": "D",
+        "10": "D",
+        "11": "D",
+        "12": "D",
+        "13": "D"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive",
+        "9": "passive",
+        "10": "passive",
+        "11": "passive",
+        "12": "passive",
+        "13": "passive"
+      }
+    },
+    {
+      "ref": "R2",
+      "mpn": "RC0805FR-0710RL",
+      "value": "10R 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_HGATE",
+        "2": "Q2_G"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R12",
+      "mpn": "RC0805FR-0710ML",
+      "value": "10M 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "Q2_G",
+        "2": "MAIN_COMMON"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "Main HGATE only39uA minimum: do not substitute ordinary10k/100k pull-downs.",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "Q3",
+      "mpn": "PSMN1R0-100ASFJ",
+      "value": "100V N-MOS .99mR@25C/2.3mR@175C 10V",
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "Q3_G",
+        "2": "MAIN_COMMON",
+        "3": "MAIN_COMMON",
+        "4": "MAIN_COMMON",
+        "5": "MAIN_COMMON",
+        "6": "MAIN_COMMON",
+        "7": "BATT_SENSED_P",
+        "8": "BATT_SENSED_P",
+        "9": "BATT_SENSED_P",
+        "10": "BATT_SENSED_P",
+        "11": "BATT_SENSED_P",
+        "12": "BATT_SENSED_P",
+        "13": "BATT_SENSED_P"
+      },
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/PSMN1R0-100ASF.pdf",
+      "notes": "Manufacturer mounting-base mb is library pad13 and is D. Top-view1 bottom-left,1..6 left-to-right bottom;12..7 top. Separate gate resistor per die. No assumption of equal current sharing during linear startup.",
+      "pin_names": {
+        "1": "G",
+        "2": "S",
+        "3": "S",
+        "4": "S",
+        "5": "S",
+        "6": "S",
+        "7": "D",
+        "8": "D",
+        "9": "D",
+        "10": "D",
+        "11": "D",
+        "12": "D",
+        "13": "D"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive",
+        "9": "passive",
+        "10": "passive",
+        "11": "passive",
+        "12": "passive",
+        "13": "passive"
+      }
+    },
+    {
+      "ref": "R3",
+      "mpn": "RC0805FR-0710RL",
+      "value": "10R 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_HGATE",
+        "2": "Q3_G"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R13",
+      "mpn": "RC0805FR-0710ML",
+      "value": "10M 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "Q3_G",
+        "2": "MAIN_COMMON"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "Main HGATE only39uA minimum: do not substitute ordinary10k/100k pull-downs.",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "Q4",
+      "mpn": "PSMN1R0-100ASFJ",
+      "value": "100V N-MOS .99mR@25C/2.3mR@175C 10V",
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "Q4_G",
+        "2": "MAIN_COMMON",
+        "3": "MAIN_COMMON",
+        "4": "MAIN_COMMON",
+        "5": "MAIN_COMMON",
+        "6": "MAIN_COMMON",
+        "7": "SYS_BUS_P",
+        "8": "SYS_BUS_P",
+        "9": "SYS_BUS_P",
+        "10": "SYS_BUS_P",
+        "11": "SYS_BUS_P",
+        "12": "SYS_BUS_P",
+        "13": "SYS_BUS_P"
+      },
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/PSMN1R0-100ASF.pdf",
+      "notes": "Manufacturer mounting-base mb is library pad13 and is D. Top-view1 bottom-left,1..6 left-to-right bottom;12..7 top. Separate gate resistor per die. No assumption of equal current sharing during linear startup.",
+      "pin_names": {
+        "1": "G",
+        "2": "S",
+        "3": "S",
+        "4": "S",
+        "5": "S",
+        "6": "S",
+        "7": "D",
+        "8": "D",
+        "9": "D",
+        "10": "D",
+        "11": "D",
+        "12": "D",
+        "13": "D"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive",
+        "9": "passive",
+        "10": "passive",
+        "11": "passive",
+        "12": "passive",
+        "13": "passive"
+      }
+    },
+    {
+      "ref": "R4",
+      "mpn": "RC0805FR-0710RL",
+      "value": "10R 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_DGATE",
+        "2": "Q4_G"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R14",
+      "mpn": "RC0805FR-0710ML",
+      "value": "10M 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "Q4_G",
+        "2": "MAIN_COMMON"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "Main HGATE only39uA minimum: do not substitute ordinary10k/100k pull-downs.",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "Q5",
+      "mpn": "PSMN1R0-100ASFJ",
+      "value": "100V N-MOS .99mR@25C/2.3mR@175C 10V",
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "Q5_G",
+        "2": "MAIN_COMMON",
+        "3": "MAIN_COMMON",
+        "4": "MAIN_COMMON",
+        "5": "MAIN_COMMON",
+        "6": "MAIN_COMMON",
+        "7": "SYS_BUS_P",
+        "8": "SYS_BUS_P",
+        "9": "SYS_BUS_P",
+        "10": "SYS_BUS_P",
+        "11": "SYS_BUS_P",
+        "12": "SYS_BUS_P",
+        "13": "SYS_BUS_P"
+      },
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/PSMN1R0-100ASF.pdf",
+      "notes": "Manufacturer mounting-base mb is library pad13 and is D. Top-view1 bottom-left,1..6 left-to-right bottom;12..7 top. Separate gate resistor per die. No assumption of equal current sharing during linear startup.",
+      "pin_names": {
+        "1": "G",
+        "2": "S",
+        "3": "S",
+        "4": "S",
+        "5": "S",
+        "6": "S",
+        "7": "D",
+        "8": "D",
+        "9": "D",
+        "10": "D",
+        "11": "D",
+        "12": "D",
+        "13": "D"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive",
+        "9": "passive",
+        "10": "passive",
+        "11": "passive",
+        "12": "passive",
+        "13": "passive"
+      }
+    },
+    {
+      "ref": "R5",
+      "mpn": "RC0805FR-0710RL",
+      "value": "10R 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_DGATE",
+        "2": "Q5_G"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R15",
+      "mpn": "RC0805FR-0710ML",
+      "value": "10M 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "Q5_G",
+        "2": "MAIN_COMMON"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "Main HGATE only39uA minimum: do not substitute ordinary10k/100k pull-downs.",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "Q6",
+      "mpn": "PSMN1R0-100ASFJ",
+      "value": "100V N-MOS .99mR@25C/2.3mR@175C 10V",
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "Q6_G",
+        "2": "MAIN_COMMON",
+        "3": "MAIN_COMMON",
+        "4": "MAIN_COMMON",
+        "5": "MAIN_COMMON",
+        "6": "MAIN_COMMON",
+        "7": "SYS_BUS_P",
+        "8": "SYS_BUS_P",
+        "9": "SYS_BUS_P",
+        "10": "SYS_BUS_P",
+        "11": "SYS_BUS_P",
+        "12": "SYS_BUS_P",
+        "13": "SYS_BUS_P"
+      },
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/PSMN1R0-100ASF.pdf",
+      "notes": "Manufacturer mounting-base mb is library pad13 and is D. Top-view1 bottom-left,1..6 left-to-right bottom;12..7 top. Separate gate resistor per die. No assumption of equal current sharing during linear startup.",
+      "pin_names": {
+        "1": "G",
+        "2": "S",
+        "3": "S",
+        "4": "S",
+        "5": "S",
+        "6": "S",
+        "7": "D",
+        "8": "D",
+        "9": "D",
+        "10": "D",
+        "11": "D",
+        "12": "D",
+        "13": "D"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive",
+        "9": "passive",
+        "10": "passive",
+        "11": "passive",
+        "12": "passive",
+        "13": "passive"
+      }
+    },
+    {
+      "ref": "R6",
+      "mpn": "RC0805FR-0710RL",
+      "value": "10R 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_DGATE",
+        "2": "Q6_G"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R16",
+      "mpn": "RC0805FR-0710ML",
+      "value": "10M 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "Q6_G",
+        "2": "MAIN_COMMON"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "Main HGATE only39uA minimum: do not substitute ordinary10k/100k pull-downs.",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "Q7",
+      "mpn": "PSMN1R0-100ASFJ",
+      "value": "100V N-MOS .99mR@25C/2.3mR@175C 10V",
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "Q7_G",
+        "2": "MOTION_COMMON",
+        "3": "MOTION_COMMON",
+        "4": "MOTION_COMMON",
+        "5": "MOTION_COMMON",
+        "6": "MOTION_COMMON",
+        "7": "MOTION_SENSED_P",
+        "8": "MOTION_SENSED_P",
+        "9": "MOTION_SENSED_P",
+        "10": "MOTION_SENSED_P",
+        "11": "MOTION_SENSED_P",
+        "12": "MOTION_SENSED_P",
+        "13": "MOTION_SENSED_P"
+      },
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/PSMN1R0-100ASF.pdf",
+      "notes": "Manufacturer mounting-base mb is library pad13 and is D. Top-view1 bottom-left,1..6 left-to-right bottom;12..7 top. Separate gate resistor per die. No assumption of equal current sharing during linear startup.",
+      "pin_names": {
+        "1": "G",
+        "2": "S",
+        "3": "S",
+        "4": "S",
+        "5": "S",
+        "6": "S",
+        "7": "D",
+        "8": "D",
+        "9": "D",
+        "10": "D",
+        "11": "D",
+        "12": "D",
+        "13": "D"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive",
+        "9": "passive",
+        "10": "passive",
+        "11": "passive",
+        "12": "passive",
+        "13": "passive"
+      }
+    },
+    {
+      "ref": "R7",
+      "mpn": "RC0805FR-0710RL",
+      "value": "10R 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_GATE_DRIVE",
+        "2": "Q7_G"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R17",
+      "mpn": "RC0805FR-0710ML",
+      "value": "10M 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "Q7_G",
+        "2": "MOTION_COMMON"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "Main HGATE only39uA minimum: do not substitute ordinary10k/100k pull-downs.",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "Q8",
+      "mpn": "PSMN1R0-100ASFJ",
+      "value": "100V N-MOS .99mR@25C/2.3mR@175C 10V",
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "Q8_G",
+        "2": "MOTION_COMMON",
+        "3": "MOTION_COMMON",
+        "4": "MOTION_COMMON",
+        "5": "MOTION_COMMON",
+        "6": "MOTION_COMMON",
+        "7": "MOTION_SENSED_P",
+        "8": "MOTION_SENSED_P",
+        "9": "MOTION_SENSED_P",
+        "10": "MOTION_SENSED_P",
+        "11": "MOTION_SENSED_P",
+        "12": "MOTION_SENSED_P",
+        "13": "MOTION_SENSED_P"
+      },
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/PSMN1R0-100ASF.pdf",
+      "notes": "Manufacturer mounting-base mb is library pad13 and is D. Top-view1 bottom-left,1..6 left-to-right bottom;12..7 top. Separate gate resistor per die. No assumption of equal current sharing during linear startup.",
+      "pin_names": {
+        "1": "G",
+        "2": "S",
+        "3": "S",
+        "4": "S",
+        "5": "S",
+        "6": "S",
+        "7": "D",
+        "8": "D",
+        "9": "D",
+        "10": "D",
+        "11": "D",
+        "12": "D",
+        "13": "D"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive",
+        "9": "passive",
+        "10": "passive",
+        "11": "passive",
+        "12": "passive",
+        "13": "passive"
+      }
+    },
+    {
+      "ref": "R8",
+      "mpn": "RC0805FR-0710RL",
+      "value": "10R 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_GATE_DRIVE",
+        "2": "Q8_G"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R18",
+      "mpn": "RC0805FR-0710ML",
+      "value": "10M 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "Q8_G",
+        "2": "MOTION_COMMON"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "Main HGATE only39uA minimum: do not substitute ordinary10k/100k pull-downs.",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "Q9",
+      "mpn": "PSMN1R0-100ASFJ",
+      "value": "100V N-MOS .99mR@25C/2.3mR@175C 10V",
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "Q9_G",
+        "2": "MOTION_COMMON",
+        "3": "MOTION_COMMON",
+        "4": "MOTION_COMMON",
+        "5": "MOTION_COMMON",
+        "6": "MOTION_COMMON",
+        "7": "MOTION_BUS_P",
+        "8": "MOTION_BUS_P",
+        "9": "MOTION_BUS_P",
+        "10": "MOTION_BUS_P",
+        "11": "MOTION_BUS_P",
+        "12": "MOTION_BUS_P",
+        "13": "MOTION_BUS_P"
+      },
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/PSMN1R0-100ASF.pdf",
+      "notes": "Manufacturer mounting-base mb is library pad13 and is D. Top-view1 bottom-left,1..6 left-to-right bottom;12..7 top. Separate gate resistor per die. No assumption of equal current sharing during linear startup.",
+      "pin_names": {
+        "1": "G",
+        "2": "S",
+        "3": "S",
+        "4": "S",
+        "5": "S",
+        "6": "S",
+        "7": "D",
+        "8": "D",
+        "9": "D",
+        "10": "D",
+        "11": "D",
+        "12": "D",
+        "13": "D"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive",
+        "9": "passive",
+        "10": "passive",
+        "11": "passive",
+        "12": "passive",
+        "13": "passive"
+      }
+    },
+    {
+      "ref": "R9",
+      "mpn": "RC0805FR-0710RL",
+      "value": "10R 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_GATE_DRIVE",
+        "2": "Q9_G"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R19",
+      "mpn": "RC0805FR-0710ML",
+      "value": "10M 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "Q9_G",
+        "2": "MOTION_COMMON"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "Main HGATE only39uA minimum: do not substitute ordinary10k/100k pull-downs.",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "Q10",
+      "mpn": "PSMN1R0-100ASFJ",
+      "value": "100V N-MOS .99mR@25C/2.3mR@175C 10V",
+      "footprint": "PMU_RevA:CCPAK1212_SOT8000A",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "Q10_G",
+        "2": "MOTION_COMMON",
+        "3": "MOTION_COMMON",
+        "4": "MOTION_COMMON",
+        "5": "MOTION_COMMON",
+        "6": "MOTION_COMMON",
+        "7": "MOTION_BUS_P",
+        "8": "MOTION_BUS_P",
+        "9": "MOTION_BUS_P",
+        "10": "MOTION_BUS_P",
+        "11": "MOTION_BUS_P",
+        "12": "MOTION_BUS_P",
+        "13": "MOTION_BUS_P"
+      },
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/PSMN1R0-100ASF.pdf",
+      "notes": "Manufacturer mounting-base mb is library pad13 and is D. Top-view1 bottom-left,1..6 left-to-right bottom;12..7 top. Separate gate resistor per die. No assumption of equal current sharing during linear startup.",
+      "pin_names": {
+        "1": "G",
+        "2": "S",
+        "3": "S",
+        "4": "S",
+        "5": "S",
+        "6": "S",
+        "7": "D",
+        "8": "D",
+        "9": "D",
+        "10": "D",
+        "11": "D",
+        "12": "D",
+        "13": "D"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive",
+        "5": "passive",
+        "6": "passive",
+        "7": "passive",
+        "8": "passive",
+        "9": "passive",
+        "10": "passive",
+        "11": "passive",
+        "12": "passive",
+        "13": "passive"
+      }
+    },
+    {
+      "ref": "R10",
+      "mpn": "RC0805FR-0710RL",
+      "value": "10R 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_GATE_DRIVE",
+        "2": "Q10_G"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R20",
+      "mpn": "RC0805FR-0710ML",
+      "value": "10M 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "Q10_G",
+        "2": "MOTION_COMMON"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "Main HGATE only39uA minimum: do not substitute ordinary10k/100k pull-downs.",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "RSH1",
+      "mpn": "CSS4J-4026R-L500F",
+      "value": "0.5mR 1% four-terminal10W@70C terminal",
+      "footprint": "PMU_RevA:CSS4J_4026_Kelvin",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "BATT_FUSED_P",
+        "2": "MAIN_KELVIN_P",
+        "3": "MAIN_KELVIN_N",
+        "4": "BATT_SENSED_P"
+      },
+      "source_url": "https://www.bourns.com/docs/product-datasheets/css4j-4026.pdf",
+      "notes": "Footprint pad numbers are project-defined, not manufacturer lead numbers:1left-force,2left-sense,3right-sense,4right-force. Sense pads must stay separate from power copper until inside resistor.",
+      "pin_names": {
+        "1": "FORCE_P",
+        "2": "SENSE_P",
+        "3": "SENSE_N",
+        "4": "FORCE_N"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive"
+      },
+      "pad_geometry_mm": {
+        "1": [
+          -4.025,
+          0.85,
+          2.55,
+          5.6
+        ],
+        "2": [
+          -4.025,
+          -3.25,
+          2.55,
+          0.8
+        ],
+        "3": [
+          4.025,
+          -3.25,
+          2.55,
+          0.8
+        ],
+        "4": [
+          4.025,
+          0.85,
+          2.55,
+          5.6
+        ]
+      },
+      "qualification": {
+        "continuous_power_w": 10,
+        "terminal_temperature_c": 70,
+        "short_overload_power_w": 50,
+        "short_overload_duration_s": 5,
+        "short_overload_energy_j": 250,
+        "not_universal_pulse_energy_rating": true
+      }
+    },
+    {
+      "ref": "RSH2",
+      "mpn": "CSS4J-4026R-L500F",
+      "value": "0.5mR 1% four-terminal10W@70C terminal",
+      "footprint": "PMU_RevA:CSS4J_4026_Kelvin",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "SYS_BUS_P",
+        "2": "MOTION_KELVIN_P",
+        "3": "MOTION_KELVIN_N",
+        "4": "MOTION_SENSED_P"
+      },
+      "source_url": "https://www.bourns.com/docs/product-datasheets/css4j-4026.pdf",
+      "notes": "Footprint pad numbers are project-defined, not manufacturer lead numbers:1left-force,2left-sense,3right-sense,4right-force. Sense pads must stay separate from power copper until inside resistor.",
+      "pin_names": {
+        "1": "FORCE_P",
+        "2": "SENSE_P",
+        "3": "SENSE_N",
+        "4": "FORCE_N"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive",
+        "3": "passive",
+        "4": "passive"
+      },
+      "pad_geometry_mm": {
+        "1": [
+          -4.025,
+          0.85,
+          2.55,
+          5.6
+        ],
+        "2": [
+          -4.025,
+          -3.25,
+          2.55,
+          0.8
+        ],
+        "3": [
+          4.025,
+          -3.25,
+          2.55,
+          0.8
+        ],
+        "4": [
+          4.025,
+          0.85,
+          2.55,
+          5.6
+        ]
+      },
+      "qualification": {
+        "continuous_power_w": 10,
+        "terminal_temperature_c": 70,
+        "short_overload_power_w": 50,
+        "short_overload_duration_s": 5,
+        "short_overload_energy_j": 250,
+        "not_universal_pulse_energy_rating": true
+      }
+    },
+    {
+      "ref": "R21",
+      "mpn": "RT0805BRD0749R9L",
+      "value": "49R9 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_KELVIN_P",
+        "2": "MAIN_CS_P"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R22",
+      "mpn": "RT0805BRD0718K2L",
+      "value": "18K2 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_ILIM",
+        "2": "MAIN_ILIM_TAIL"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "R22 plus R64=18.4k effective. Standard catalog values replace unverified18.4k single-part ordercode.",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R64",
+      "mpn": "RT0805BRD07200RL",
+      "value": "200R 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_ILIM_TAIL",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R23",
+      "mpn": "RT0805BRD073K65L",
+      "value": "3K65 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_KELVIN_P",
+        "2": "MAIN_ISCP"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R24",
+      "mpn": "RT0805BRD07100KL",
+      "value": "100K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_TMR",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R25",
+      "mpn": "RT0805BRD07523KL",
+      "value": "523K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "BATT_SENSED_P",
+        "2": "MAIN_UVLO"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R26",
+      "mpn": "RT0805BRD0710K1L",
+      "value": "10K1 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_UVLO",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R27",
+      "mpn": "RT0805BRD07732KL",
+      "value": "732K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "BATT_SENSED_P",
+        "2": "MAIN_OV"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R28",
+      "mpn": "RT0805BRD0710KL",
+      "value": "10K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_OV",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R29",
+      "mpn": "RC0805FR-071ML",
+      "value": "1M 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "AON_WAKE_EN",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "C1",
+      "mpn": "GRM21BR72A104KA01L",
+      "value": "100nF100V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "BATT_SENSED_P",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "C2",
+      "mpn": "C1206C105K3RACTU",
+      "value": "1uF25V X7R",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_CAP",
+        "2": "BATT_SENSED_P"
+      },
+      "source_url": "https://yageogroup.com/download/specsheet/C1206C105K3RACTU",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "C3",
+      "mpn": "MKS4C053306D00KSSD",
+      "value": "33uF63V10% PET film",
+      "footprint": "PMU_RevA:C_Rect_L31.5mm_W13mm_P27.5mm",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_TMR",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.wima.de/en/our-product-range/metallized-capacitors/mks-4/",
+      "notes": "Non-polar. Body31.5x13x24mm;0.8mm leads,27.5mm pitch. Manufacturer insulationRC>=3000s at20C. Prototype calculations include2% thermal capacitance drift and1uA leakage allowance; verify at local0..60C. No unbounded high-temp tantalum leakage.",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "C4",
+      "mpn": "C0805C102J5GACTU",
+      "value": "1nF50V5% C0G",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_CS_P",
+        "2": "MAIN_KELVIN_N"
+      },
+      "source_url": "https://yageogroup.com/download/specsheet/C0805C102J5GACTU",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "C5",
+      "mpn": "C0805C102J5GACTU",
+      "value": "1nF50V5% C0G",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_ISCP",
+        "2": "MAIN_KELVIN_N"
+      },
+      "source_url": "https://yageogroup.com/download/specsheet/C0805C102J5GACTU",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "C6",
+      "mpn": "C0805C102J5GACTU",
+      "value": "1nF50V5% C0G",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_UVLO",
+        "2": "BATT_N"
+      },
+      "source_url": "https://yageogroup.com/download/specsheet/C0805C102J5GACTU",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "C7",
+      "mpn": "C0805C102J5GACTU",
+      "value": "1nF50V5% C0G",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "MAIN_OV",
+        "2": "BATT_N"
+      },
+      "source_url": "https://yageogroup.com/download/specsheet/C0805C102J5GACTU",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "D1",
+      "mpn": "PTVS1-043C-H",
+      "value": "43V bidirectional low-clamp TVS",
+      "footprint": "PMU_RevA:PTVS1_DFN8x6",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "BATT_FUSED_P",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.bourns.com/docs/Product-Datasheets/PTVS1-xxxC-H.pdf",
+      "notes": "56V at1kA8/20us is TYPICAL, not guaranteed maximum. See explicit transient design envelope and limitation inPOWER_STAGE.md. Pin1narrowpad andpin2widepad; bidirectional.",
+      "pin_names": {
+        "1": "TVS_A",
+        "2": "TVS_B"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      },
+      "pad_geometry_mm": {
+        "1": [
+          -2.87,
+          0,
+          1.19,
+          4.93
+        ],
+        "2": [
+          0.945,
+          0,
+          5.04,
+          4.93
+        ]
+      }
+    },
+    {
+      "ref": "D2",
+      "mpn": "PTVS1-043C-H",
+      "value": "43V bidirectional low-clamp TVS",
+      "footprint": "PMU_RevA:PTVS1_DFN8x6",
+      "sheet": "02_main_switch_lm74930",
+      "pins": {
+        "1": "SYS_BUS_P",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.bourns.com/docs/Product-Datasheets/PTVS1-xxxC-H.pdf",
+      "notes": "56V at1kA8/20us is TYPICAL, not guaranteed maximum. See explicit transient design envelope and limitation inPOWER_STAGE.md. Pin1narrowpad andpin2widepad; bidirectional.",
+      "pin_names": {
+        "1": "TVS_A",
+        "2": "TVS_B"
+      },
+      "pin_types": {
+        "1": "passive",
+        "2": "passive"
+      },
+      "pad_geometry_mm": {
+        "1": [
+          -2.87,
+          0,
+          1.19,
+          4.93
+        ],
+        "2": [
+          0.945,
+          0,
+          5.04,
+          4.93
+        ]
+      }
+    },
+    {
+      "ref": "R30",
+      "mpn": "RT0805BRD07100RL",
+      "value": "100R 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_KELVIN_P",
+        "2": "MOTION_CS_P"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R31",
+      "mpn": "RT0805BRD0739K7L",
+      "value": "39K7 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_IWRN",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R32",
+      "mpn": "RT0805BRD072K74L",
+      "value": "2K74 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_KELVIN_P",
+        "2": "MOTION_ISCP"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R33",
+      "mpn": "RT0805BRD07100KL",
+      "value": "100K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_TMR",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R34",
+      "mpn": "RC0805FR-07180KL",
+      "value": "180K 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_PU",
+        "2": "MOTION_GATE_DRIVE"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "Slow turn-on for940uF motor-bus capacitor. Two input-bank Miller charges govern ramp estimate; four totalQg govern reservoir. DirectPD path still provides fastfaultturnoff. Four10M gatebleeds preserve>=10V steady gate under stated11Vboostmodel.",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R35",
+      "mpn": "RT0805BRD07226KL",
+      "value": "226K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "SYS_BUS_P",
+        "2": "MOTION_UVLO"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R36",
+      "mpn": "RT0805BRD0710KL",
+      "value": "10K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_UVLO",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R39",
+      "mpn": "RC0805FR-07100KL",
+      "value": "100K 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_GATE_EN",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "C8",
+      "mpn": "GRM21BR72A104KA01L",
+      "value": "100nF100V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "SYS_BUS_P",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "C9",
+      "mpn": "C1206C475K3RACTU",
+      "value": "4.7uF25V X7R",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_BST",
+        "2": "MOTION_COMMON"
+      },
+      "source_url": "https://yageogroup.com/download/specsheet/C1206C475K3RACTU",
+      "notes": "C9andC29 inparallel. YAGEOgeneratedspecsheet9/10/2026 p2 shows~40% DC-biasloss12V. Two partsretain~3.6uF with tolerance/temp/aging allowance, above2.156uF for1Vgatecharge droop.",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "C29",
+      "mpn": "C1206C475K3RACTU",
+      "value": "4.7uF25V X7R",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_BST",
+        "2": "MOTION_COMMON"
+      },
+      "source_url": "https://yageogroup.com/download/specsheet/C1206C475K3RACTU",
+      "notes": "Second populatedboostcapacitor; totalnominal9.4uF. Approx1.41s unladen12Vcharging at80uA. Motion remainsinhibitedthroughboot.",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "C10",
+      "mpn": "MKS4C053306D00KSSD",
+      "value": "33uF63V10% PET film",
+      "footprint": "PMU_RevA:C_Rect_L31.5mm_W13mm_P27.5mm",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_TMR",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.wima.de/en/our-product-range/metallized-capacitors/mks-4/",
+      "notes": "Same film timing/insulation assumptions asC3; configurable component, not firmware timing.",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "C11",
+      "mpn": "C0805C102J5GACTU",
+      "value": "1nF50V5% C0G",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_CS_P",
+        "2": "MOTION_KELVIN_N"
+      },
+      "source_url": "https://yageogroup.com/download/specsheet/C0805C102J5GACTU",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "C12",
+      "mpn": "C0805C102J5GACTU",
+      "value": "1nF50V5% C0G",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_ISCP",
+        "2": "MOTION_KELVIN_N"
+      },
+      "source_url": "https://yageogroup.com/download/specsheet/C0805C102J5GACTU",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "C13",
+      "mpn": "C0805C102J5GACTU",
+      "value": "1nF50V5% C0G",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_TEMP_DIODE",
+        "2": "BATT_N"
+      },
+      "source_url": "https://yageogroup.com/download/specsheet/C0805C102J5GACTU",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "R59",
+      "mpn": "RT0805BRD0710KL",
+      "value": "10K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_IMON_RAW",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R60",
+      "mpn": "RT0805BRD0720KL",
+      "value": "20K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_IMON_RAW",
+        "2": "MOTION_IMON_INPUT"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R61",
+      "mpn": "RT0805BRD0710KL",
+      "value": "10K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_IMON_INPUT",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "C28",
+      "mpn": "C0805C103J5GACTU",
+      "value": "10nF50V5% C0G",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_IMON_INPUT",
+        "2": "BATT_N"
+      },
+      "source_url": "https://yageogroup.com/download/specsheet/C0805C103J5GACTU",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "Q11",
+      "mpn": "MMBT3904,215",
+      "value": "Remote temperature diode",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_TEMP_DIODE",
+        "2": "BATT_N",
+        "3": "MOTION_TEMP_DIODE"
+      },
+      "source_url": "https://assets.nexperia.com/documents/data-sheet/MMBT3904.pdf",
+      "notes": "Base1 and collector3 tied; emitter2 GND. Place at hottest motion-bank copper. TPS remote temperature trip150Ctyp/140..160C table; separate board NTC protection acts earlier.",
+      "pin_names": {
+        "1": "B",
+        "2": "E",
+        "3": "C"
+      },
+      "pin_types": {
+        "1": "input",
+        "2": "passive",
+        "3": "passive"
+      }
+    },
+    {
+      "ref": "U5",
+      "mpn": "TLV3011BIDBVR",
+      "value": "Latched motion SYS undervoltage detector",
+      "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_FLT_N",
+        "2": "LOGIC_GND",
+        "3": "MOTION_LATCH_UV_SENSE",
+        "4": "MOTION_UV_REF",
+        "5": "MOTION_UV_REF",
+        "6": "V3V3"
+      },
+      "source_url": "https://www.ti.com/lit/ds/symlink/tlv3011.pdf",
+      "notes": "B version required: integrated reference,2..8mV internal hysteresis,fail-safe input. Open-drain OUT wired-OR with U2 FLT_I and existing wake10k pullup. POR output is high-Z; externalmotionlatch starts unarmed. NativeTPS EN falling threshold26.2V is backed by independent~29V latched UV. No RC sense delay.",
+      "pin_names": {
+        "1": "OUT_OD",
+        "2": "GND",
+        "3": "IN+",
+        "4": "IN-",
+        "5": "REF",
+        "6": "VCC"
+      },
+      "pin_types": {
+        "1": "open_collector",
+        "2": "power_in",
+        "3": "input",
+        "4": "input",
+        "5": "output",
+        "6": "power_in"
+      }
+    },
+    {
+      "ref": "R62",
+      "mpn": "RT0805BRD07226KL",
+      "value": "226K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "SYS_BUS_P",
+        "2": "MOTION_LATCH_UV_SENSE"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R63",
+      "mpn": "RT0805BRD0710KL",
+      "value": "10K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_LATCH_UV_SENSE",
+        "2": "LOGIC_GND"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "C30",
+      "mpn": "GRM21BR72A104KA01L",
+      "value": "100nF100V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "V3V3",
+        "2": "LOGIC_GND"
+      },
+      "source_url": "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "C31",
+      "mpn": "C0805C102J5GACTU",
+      "value": "1nF50V5% C0G",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "sheet": "03_motion_gate_tps48110",
+      "pins": {
+        "1": "MOTION_UV_REF",
+        "2": "LOGIC_GND"
+      },
+      "source_url": "https://yageogroup.com/download/specsheet/C0805C102J5GACTU",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "U3",
+      "mpn": "TPS26631RGER",
+      "value": "TPS26631 eFuse latch-off",
+      "footprint": "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "SYS_BUS_P",
+        "2": "SYS_BUS_P",
+        "3": null,
+        "4": null,
+        "5": "SYS_BUS_P",
+        "6": "PC_UVLO",
+        "7": "PC_OVP",
+        "8": "BATT_N",
+        "9": "PC_DVDT",
+        "10": "PC_ILIM",
+        "11": null,
+        "12": "PC_SHDN",
+        "13": null,
+        "14": "PC_EFUSE_FAULT_N",
+        "15": "PC_PGTH",
+        "16": "PC_EFUSE_PGOOD",
+        "17": "PC_BUCK_IN_P",
+        "18": "PC_BUCK_IN_P",
+        "19": null,
+        "20": null,
+        "21": null,
+        "22": null,
+        "23": null,
+        "24": null,
+        "25": "BATT_N"
+      },
+      "source_url": "https://www.ti.com/lit/ds/symlink/tps2663.pdf",
+      "notes": "MODE MUST float for latch-off; GND would select auto-retry. TPS26631 supports2x overload pulses; neither branch precisely enforces65W. Passive divider powersSHDN enable directly fromSYS_BUS; deliberate main power cycle resets eFuse latch. OUT17isERCpower_out; internallycommonOUT18ispassive toavoidself-conflictingstackedoutputwithoutmaskingcross-ICoutputcontention.",
+      "pin_names": {
+        "1": "IN",
+        "2": "IN",
+        "3": "B_GATE",
+        "4": "DRV",
+        "5": "IN_SYS",
+        "6": "UVLO",
+        "7": "OVP",
+        "8": "GND",
+        "9": "DVDT",
+        "10": "ILIM",
+        "11": "MODE",
+        "12": "SHDN",
+        "13": "IMON",
+        "14": "FLT_N",
+        "15": "PGTH",
+        "16": "PGOOD",
+        "17": "OUT",
+        "18": "OUT",
+        "19": "NC",
+        "20": "NC",
+        "21": "NC",
+        "22": "NC",
+        "23": "NC",
+        "24": "NC",
+        "25": "EP_GND"
+      },
+      "pin_types": {
+        "1": "power_in",
+        "2": "power_in",
+        "3": "no_connect",
+        "4": "no_connect",
+        "5": "power_in",
+        "6": "input",
+        "7": "input",
+        "8": "power_in",
+        "9": "passive",
+        "10": "passive",
+        "11": "no_connect",
+        "12": "input",
+        "13": "no_connect",
+        "14": "open_collector",
+        "15": "input",
+        "16": "open_collector",
+        "17": "power_out",
+        "18": "passive",
+        "19": "no_connect",
+        "20": "no_connect",
+        "21": "no_connect",
+        "22": "no_connect",
+        "23": "no_connect",
+        "24": "no_connect",
+        "25": "power_in"
+      }
+    },
+    {
+      "ref": "R40",
+      "mpn": "RT0805BRD076K04L",
+      "value": "6K04 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "PC_ILIM",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R41",
+      "mpn": "RT0805BRD07191KL",
+      "value": "191K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "SYS_BUS_P",
+        "2": "PC_UVLO"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R42",
+      "mpn": "RT0805BRD0710KL",
+      "value": "10K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "PC_UVLO",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R43",
+      "mpn": "RT0805BRD07374KL",
+      "value": "374K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "SYS_BUS_P",
+        "2": "PC_OVP"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R44",
+      "mpn": "RT0805BRD0710KL",
+      "value": "10K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "PC_OVP",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R45",
+      "mpn": "RC0805FR-071ML",
+      "value": "1M 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "SYS_BUS_P",
+        "2": "PC_SHDN"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R46",
+      "mpn": "RC0805FR-0768KL",
+      "value": "68K 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "PC_SHDN",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R47",
+      "mpn": "RT0805BRD07191KL",
+      "value": "191K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "PC_BUCK_IN_P",
+        "2": "PC_PGTH"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R48",
+      "mpn": "RT0805BRD0710KL",
+      "value": "10K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "PC_PGTH",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "C20",
+      "mpn": "C0805C223J5GACTU",
+      "value": "22nF50V5% C0G",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "PC_DVDT",
+        "2": "BATT_N"
+      },
+      "source_url": "https://yageogroup.com/download/specsheet/C0805C223J5GACTU",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "C21",
+      "mpn": "GRM21BR72A104KA01L",
+      "value": "100nF100V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "SYS_BUS_P",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "C22",
+      "mpn": "C1210C105K1RACTU",
+      "value": "1uF100V X7R",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "PC_BUCK_IN_P",
+        "2": "BATT_N"
+      },
+      "source_url": "https://yageogroup.com/download/specsheet/C1210C105K1RACTU",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "U4",
+      "mpn": "TPS26631RGER",
+      "value": "TPS26631 eFuse latch-off",
+      "footprint": "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "SYS_BUS_P",
+        "2": "SYS_BUS_P",
+        "3": null,
+        "4": null,
+        "5": "SYS_BUS_P",
+        "6": "LOGIC_UVLO",
+        "7": "LOGIC_OVP",
+        "8": "BATT_N",
+        "9": "LOGIC_DVDT",
+        "10": "LOGIC_ILIM",
+        "11": null,
+        "12": "LOGIC_SHDN",
+        "13": null,
+        "14": "LOGIC_EFUSE_FAULT_N",
+        "15": "LOGIC_PGTH",
+        "16": "LOGIC_EFUSE_PGOOD",
+        "17": "LOGIC_BUCK_IN_P",
+        "18": "LOGIC_BUCK_IN_P",
+        "19": null,
+        "20": null,
+        "21": null,
+        "22": null,
+        "23": null,
+        "24": null,
+        "25": "BATT_N"
+      },
+      "source_url": "https://www.ti.com/lit/ds/symlink/tps2663.pdf",
+      "notes": "MODE MUST float for latch-off; GND would select auto-retry. TPS26631 supports2x overload pulses; neither branch precisely enforces65W. Passive divider powersSHDN enable directly fromSYS_BUS; deliberate main power cycle resets eFuse latch. OUT17isERCpower_out; internallycommonOUT18ispassive toavoidself-conflictingstackedoutputwithoutmaskingcross-ICoutputcontention.",
+      "pin_names": {
+        "1": "IN",
+        "2": "IN",
+        "3": "B_GATE",
+        "4": "DRV",
+        "5": "IN_SYS",
+        "6": "UVLO",
+        "7": "OVP",
+        "8": "GND",
+        "9": "DVDT",
+        "10": "ILIM",
+        "11": "MODE",
+        "12": "SHDN",
+        "13": "IMON",
+        "14": "FLT_N",
+        "15": "PGTH",
+        "16": "PGOOD",
+        "17": "OUT",
+        "18": "OUT",
+        "19": "NC",
+        "20": "NC",
+        "21": "NC",
+        "22": "NC",
+        "23": "NC",
+        "24": "NC",
+        "25": "EP_GND"
+      },
+      "pin_types": {
+        "1": "power_in",
+        "2": "power_in",
+        "3": "no_connect",
+        "4": "no_connect",
+        "5": "power_in",
+        "6": "input",
+        "7": "input",
+        "8": "power_in",
+        "9": "passive",
+        "10": "passive",
+        "11": "no_connect",
+        "12": "input",
+        "13": "no_connect",
+        "14": "open_collector",
+        "15": "input",
+        "16": "open_collector",
+        "17": "power_out",
+        "18": "passive",
+        "19": "no_connect",
+        "20": "no_connect",
+        "21": "no_connect",
+        "22": "no_connect",
+        "23": "no_connect",
+        "24": "no_connect",
+        "25": "power_in"
+      }
+    },
+    {
+      "ref": "R50",
+      "mpn": "RT0805BRD079K09L",
+      "value": "9K09 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "LOGIC_ILIM",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R51",
+      "mpn": "RT0805BRD07191KL",
+      "value": "191K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "SYS_BUS_P",
+        "2": "LOGIC_UVLO"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R52",
+      "mpn": "RT0805BRD0710KL",
+      "value": "10K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "LOGIC_UVLO",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R53",
+      "mpn": "RT0805BRD07374KL",
+      "value": "374K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "SYS_BUS_P",
+        "2": "LOGIC_OVP"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R54",
+      "mpn": "RT0805BRD0710KL",
+      "value": "10K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "LOGIC_OVP",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R55",
+      "mpn": "RC0805FR-071ML",
+      "value": "1M 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "SYS_BUS_P",
+        "2": "LOGIC_SHDN"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R56",
+      "mpn": "RC0805FR-0768KL",
+      "value": "68K 1%",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "LOGIC_SHDN",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 1
+    },
+    {
+      "ref": "R57",
+      "mpn": "RT0805BRD07191KL",
+      "value": "191K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "LOGIC_BUCK_IN_P",
+        "2": "LOGIC_PGTH"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "R58",
+      "mpn": "RT0805BRD0710KL",
+      "value": "10K 0.1% 25ppm/K",
+      "footprint": "Resistor_SMD:R_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "LOGIC_PGTH",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.yageo.com/en/Product/Index/chip-resistors",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {},
+      "tolerance_percent": 0.1
+    },
+    {
+      "ref": "C25",
+      "mpn": "C0805C223J5GACTU",
+      "value": "22nF50V5% C0G",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "LOGIC_DVDT",
+        "2": "BATT_N"
+      },
+      "source_url": "https://yageogroup.com/download/specsheet/C0805C223J5GACTU",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "C26",
+      "mpn": "GRM21BR72A104KA01L",
+      "value": "100nF100V X7R",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "SYS_BUS_P",
+        "2": "BATT_N"
+      },
+      "source_url": "https://www.murata.com/en-global/products/capacitor/ceramiccapacitor",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    },
+    {
+      "ref": "C27",
+      "mpn": "C1210C105K1RACTU",
+      "value": "1uF100V X7R",
+      "footprint": "Capacitor_SMD:C_1210_3225Metric",
+      "sheet": "05_pc_and_5v_efuses",
+      "pins": {
+        "1": "LOGIC_BUCK_IN_P",
+        "2": "BATT_N"
+      },
+      "source_url": "https://yageogroup.com/download/specsheet/C1210C105K1RACTU",
+      "notes": "",
+      "pin_names": {},
+      "pin_types": {}
+    }
+  ],
+  "sources": {
+    "lm": "https://www.ti.com/lit/ds/symlink/lm74930-q1.pdf",
+    "tps": "https://www.ti.com/lit/ds/symlink/tps4811-q1.pdf",
+    "efuse": "https://www.ti.com/lit/ds/symlink/tps2663.pdf",
+    "fet": "https://assets.nexperia.com/documents/data-sheet/PSMN1R0-100ASF.pdf",
+    "shunt": "https://www.bourns.com/docs/product-datasheets/css4j-4026.pdf",
+    "tvs": "https://www.bourns.com/docs/Product-Datasheets/PTVS1-xxxC-H.pdf"
+  },
+  "unresolved_design_items": [
+    "Main UV0.5s absent: native fastUV selected; documented provisional deviation.",
+    "Guaranteed44-45V inputOV window cannot be obtained with nativeLM comparator tolerance.",
+    "Film timer calculations cover stated0..60C prototype envelope and1uA allowance, not unverified full-temperature timing.",
+    "Main DGATE minimum9.2V does not directly inherit10V hotRds guaranteed table.",
+    "System TVS and external buck55V limit need coordinated transient envelope.",
+    "Full-load main inrush remains RevB measurement; conservative bench envelope inPOWER_STAGE.md."
+  ]
+}

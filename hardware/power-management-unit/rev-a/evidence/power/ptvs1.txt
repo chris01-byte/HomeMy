@@ -1,0 +1,425 @@
+PAGE 1
+PTVS1-xxxC-H High Current TVS Diodes
+*RoHS COMPLIANT
+LEAD FREE
+RoHS COMPLIANT*
+&
+HALOGEN FREE**
+LEAD FREE 
+VERSIONS ARE 
+RoHS COMPLIANT*
+Features
+n 1 kA, 8/20 μs surge capability
+n Repetitive standoff voltage: 22 to 86 volts
+n Bidirectional TVS
+n Low clamping voltage under surge
+n Excellent per formance over temperature
+n Sur face mount DFN package
+n RoHS compliant* and halogen free**
+Applications
+n Protection against lightning, inductive and  
+transient surges up to rated limits
+n Exposed PoE ports
+n Small cell, Remote Radio Units (RRUs)  
+and Baseband Units (BBUs)
+n High power DC bus protection
+n Robot OVP
+Additional Information
+Click these links for more information:
+PRODUCT 
+SELECTOR
+TECHNICAL
+LIBRARY
+INVENTORY SAMPLES CONTACT
+Agency Recognition
+Description
+UL File Number: E215609
+General Information
+The Bourns® PTVS1-xxxC-H family of high current bidirectional TVS 
+diodes is designed to protect DC or PoE powered systems such as 
+small cell or surveillance cameras that can be exposed to high surge 
+events such as induced lightning or inductive power switching. These 
+devices offer bidirectional port protection and are available with standoff 
+voltage ratings of 22 to 86 V.
+The devices are RoHS* compliant and halogen free** and are designed to meet IEC 
+61000-4-5 8/20 μs current surge requirements.
+* RoHS Directive 2015/863, Mar 31, 2015 and Annex.
+**
+ Bourns considers a product to be “halogen free” if (a) the Bromine (Br) content is 900 ppm or less; (b) the Chlorine (Cl) conte
+nt is 900 ppm or less; and (c) the total Bromine (Br) 
+and Chlorine (Cl) content is 1500 ppm or less.
+Specifications are subject to change without notice.
+Users should verify actual device performance in their specific applications. 
+The products described herein and this document are subject to specific legal disclaimers as set forth on the last page of this document, and at www.bourns.com/docs/legal/disclaimer.pdf.
+WARNING  Cancer and Reproductive Harm - www.P65Warnings.ca.gov
+Absolute Maximum Ratings (@ TA = 25 °C Unless Otherwise Noted)
+Rating Symbol Value Unit
+Repetitive Standoff Voltage
+PTVS1-022C-H
+VWM
+22
+V
+PTVS1-026C-H 26
+PTVS1-029C-H 29
+PTVS1-043C-H 43
+PTVS1-058C-H 58
+PTVS1-066C-H 66
+PTVS1-076C-H 76
+PTVS1-086C-H 86
+Peak Current Rating per 8/20 µs IEC 61000-4-5 IPPM 1 kA
+Operating Temperature Range TOP -55 to +125 °C
+Storage Temperature Range TS -55 to +150 °C
+0 1 0 7 62 1 2 5 P
+Asia-Pacific: Tel: +886-2 2562-4117 • Email: asiacus@bourns.com
+Europe: Tel: +36 88 885 877 • Email: eurocus@bourns.com
+Mexico: Tel: +52 614 478 0400 • Email: mexicus@bourns.com
+The Americas: Tel: +1-951 781-5500 • Email: americus@bourns.com
+www.bourns.com
+PAGE 2
+ PTVS1-xxxC-H High Current TVS Diodes
+How to Order
+PTVS  1  -  xxx  C  -  H
+Series 
+ PTVS = Power TVS High Current Diode
+Peak Current Rating 
+ 1 = 1 kA
+Repetitive Standoff Voltage 
+ 022 - 086 = 22 - 86 VWM (Volts)
+Suffix 
+ C = Bidirectional Device
+Package 
+ H = DFN Package
+Typical Part Marking
+XXXXX
+YWWLL
+MANUFACTURER’S
+TRADEMARK
+PIN 1 INDICATOR
+5 DIGIT PRODUCT CODE:
+• 1ST & 2ND DIGITS INDICATE
+PEAK CURRENT RATING
+• 3RD, 4TH & 5TH DIGITS INDICATE
+REPETITIVE STANDOFF VOLTAGE
+MANUFACTURING DATE CODE:
+• 1ST DIGIT INDICATES LAST DIGIT OF YEAR
+• 2ND & 3RD DIGITS INDICATE WEEK NUMBER
+• 4TH & 5TH DIGITS INDICATE LOT CODE
+Specifications are subject to change without notice.
+Users should verify actual device performance in their specific applications. 
+The products described herein and this document are subject to specific legal disclaimers as set forth on the last page of this document, and at www.bourns.com/docs/legal/disclaimer.pdf.
+Electrical Characteristics (@ TA = 25 °C Unless Otherwise Noted)
+Bidirectional 
+Device
+Breakdown Voltage 
+VBR 
+(V)
+Standby Current 
+VD = VWM
+Typical Clamping 
+Voltage(1)(2) 
+@ IPPM
+VBR
+Temperature 
+Coefficient
+Typical 
+Capacitance 
+(f=10 kHz 
+Vd = 1 Vrms)
+Model Number Min. Max. @ IBR (mA) ID (µA) VC (V) % / °C C (nF)
+PTVS1-022C-H 24 27 10 10 28 0.1 2.0
+PTVS1-026C-H 28 32 10 10 30 0.1 1.5
+PTVS1-029C-H 32 35 10 10 34 0.1 1.5
+PTVS1-043C-H 48 53 10 10 56 0.1 1.0
+PTVS1-058C-H 64 70 10 10 67 0.1 0.8
+PTVS1-066C-H 72 80 10 10 86 0.1 0.7
+PTVS1-076C-H 85 95 10 10 91 0.1 0.6
+PTVS1-086C-H 96 105 10 10 99 0.1 0.5
+Notes:  (1) 8/20 µs per IEC 61000-4-5. 
+(2) VC measured at the time which is coincident with the peak surge current.
+PAGE 3
+ PTVS1-xxxC-H High Current TVS Diodes
+Performance Graphs
+Exposed
+DC
+Power
+Interface
++
+-
+120
+0
+0 25 50 10075 125 150 175
+Ambient Temperature (°C)
+Percent of Rated Value 20
+40
+60
+80
+100
+120
+0
+03 0252015105
+IPP – Peak Pulse Current (% of IPP)
+t – Time (µs)
+Test Waveform Parameters
+tt = 8 µs
+td = 20 µs
+td = t|IPP/2
+110
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+VBR Change vs. Temperature (%)
+12
+2
+4
+6
+8
+10
+-6
+-4
+-2
+0
+-8
+-10
+-12
+-40 -20 0 20 40 60 80 100 120 140
+Junction Temperature (°C)
+Normalized
+to 25 °C
+V-I Characteristic Typical VBR vs. Junction Temperature
+Typical Surge Current Derating Current 8/20 µs Waveform per IEC 61000-4-5
+This graph shows the typical device surge current derating versus 
+ambient temperature when subjected to the 8/20 µs current waveform 
+per the IEC 61000-4-5 specification. This device is not intended for 
+continuous operation at temperatures above 125 °C.
+Specifications are subject to change without notice.
+Users should verify actual device performance in their specific applications. 
+The products described herein and this document are subject to specific legal disclaimers as set forth on the last page of this document, and at www.bourns.com/docs/legal/disclaimer.pdf.
+PAGE 4
+ PTVS1-xxxC-H High Current TVS Diodes
+Application
+A typical application for Power TVS products  
+includes DC power line protection.
+Exposed
+DC
+Power
+Interface
++
+-
+120
+0
+0 25 50 10075 125 150 175
+Ambient Temperature (°C)
+Percent of Rated Value 20
+40
+60
+80
+100
+120
+0
+03 0252015105
+IPP – Peak Pulse Current (% of IPP)
+t – Time (µs)
+Test Waveform Parameters
+tt = 8 µs
+td = 20 µs
+td = t|IPP/2
+110
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+VBR Change vs. Temperature (%)
+12
+2
+4
+6
+8
+10
+-6
+-4
+-2
+0
+-8
+-10
+-12
+-40 -20 0 20 40 60 80 100 120 140
+Junction Temperature (°C)
+Normalized
+to 25 °C
+Product Dimensions
+This is an RoHS compliant*, molded package with 100 % Sn on the terminations, and a flammability rating of UL 94-V-0.
+PIN 1 INDICATOR
+TOP VIEW
+XXXXX
+YWWLL
+BOTTOM VIEWSIDE VIEW 2
+SIDE VIEW 1
+8.00 ± 0.10
+(0.315 ± 0.004)
+5.04 ± 0.15
+(0.198 ± 0.006)
+1.19 ± 0.15
+(0.047 ± 0.006)
+2.50 ± 0.10
+(0.098 ± 0.004)
+0.70
+(0.028)
+MIN.
+6.00 ± 0.10
+(0.236 ± 0.004) 4.93 ± 0.15
+(0.194 ± 0.006)
+0.00 - 0.05
+(0.000 - 0.002)
+0.20
+(0.008) REF.
+0.53
+(0.021)
+TYP.
+2 PLCS.
+Recommended Pad Layout
+DIMENSIONS: MM
+(INCHES)
+DIMENSIONS: MM
+(INCHES)
+6.93
+(0.273)
+4.93
+(0.194)
+PACKAGE
+OUTLINE
+1.19
+(0.047)
+5.04
+(0.198)
+0.70
+(0.028)
+Specifications are subject to change without notice.
+Users should verify actual device performance in their specific applications. 
+The products described herein and this document are subject to specific legal disclaimers as set forth on the last page of this document, and at www.bourns.com/docs/legal/disclaimer.pdf.
+Environmental Specifications
+Test Standard
+HTRB MIL-STD-750, 1038
+Temperature Cycling JESD22-A104
+High Temperature High 
+Humidity Reverse Bias JESD22-A101
+MSL JESD22-A113, Level 1
+UHAST JESD22-A118
+ESD (HBM) ANSI-ESDA-JEDEC-
+JS-001-2017, Class 3B
+PAGE 5
+ PTVS1-xxxC-H High Current TVS Diodes
+Packaging Information
+The product will be dispensed in tape and reel format (see diagram below).
+Specifications are subject to change without notice.
+Users should verify actual device performance in their specific applications. 
+The products described herein and this document are subject to specific legal disclaimers as set forth on the last page of this document, and at www.bourns.com/docs/legal/disclaimer.pdf.
+REV. 06/25
+4.00 ± 0.10
+(.157 ± .004)
+1.75 ± 0.10
+(.069 ± .004)
+7.50 ± 0.10
+(.295 ± .004)
+2.00 ± 0.10
+(.079 ± .004)
+1.50 +0.1/-0
+(.059 +.004/-0) DIA.
+1.50
+(.059) DIA. MIN.
+TYP.
+8.00 ± 0.10
+(.315 ± .004)
+6.30 ± 0.10
+(.248 ± .004)
+8.30 ± 0.10
+(.327 ± .004)
+0.30 ± 0.05
+(.012 ± .002)
+2.80 ± 0.10
+(.110 ± .004)
+16.00 ± 0.30
+(.630 ± .012)
+3.40
+(.134)
+330.0 ± 1.5
+(13.0 ± .059)
+16.40 +2.0/-0
+(.646 +.079/-0)
+100.0 ± 1.5
+(3.937 ± .059)
+22.40
+(.882) MAX.
+DIMENSIONS: MM
+(INCHES)
+2,500 PIECES PER REEL
+PAGE 6
+This legal disclaimer applies to purchasers and users of Bourns® products manufactured by or on behalf of Bourns, Inc. and its affiliates (collectively, 
+“Bourns”).
+Unless otherwise expressly indicated in writing, Bourns® products and data sheets relating thereto are subject to change without notice. Users should check 
+for and obtain the latest relevant information and verify that such information is current and complete before placing orders for Bourns® products.
+The characteristics and parameters of a Bourns® product set forth in its data sheet are based on laboratory conditions, and statements regarding the 
+suitability of products for certain “typical” applications are based on Bourns’ knowledge of typical requirements in generic applications. Bourns assumes 
+that “typical” applications include failsafe/backup features to address critical risks to users and are designed to allow rework of Bourns® product to 
+avoid scrap of a device solely due to malfunctioning Bourns® product. The characteristics and parameters of a Bourns® product in a user application 
+may vary from the data sheet characteristics and parameters due to (i) the combination of the Bourns® product with other components in the user’s 
+application, or (ii) the environment of the user application itself. The characteristics and parameters of a Bourns® product also can and do vary in 
+different applications and actual performance may vary over time. Thus, users should always verify the actual performance of the Bourns® product in 
+their specific devices and applications and make their own independent judgments regarding the suitability of Bourns® product and the amount of 
+additional test margin to design into their device or application to compensate for differences between laboratory and real-world conditions.
+Unless Bourns has explicitly designated an individual Bourns® product as meeting the requirements of a particular industry standard (e.g., IATF 
+16949) or a particular qualification (e.g., UL listed or recognized), Bourns is not responsible for any failure of an individual Bourns® product to meet 
+the requirements of such industry standard or particular qualification even if such industry standard or qualification is a “state of art” . Users of Bourns® 
+products are responsible for ensuring compliance with safety-related requirements and standards applicable to their devices or applications.
+Bourns® products are not recommended, authorized or intended for use in applications where failure or malfunction may result in personal injury, 
+death, or severe property or environmental damage, such as without limitation nuclear, life-critical medical and certain automotive and aviation 
+applications. Except as set forth in the bullet points below or unless expressly and specifically approved in writing on a case-by-case basis by an 
+authorized Bourns’ representative, use of any Bourns® products in such unauthorized high-risk applications is at the user’s sole risk.
+• Bourns considers implantable/invasive devices and devices/procedures designed as life-supporting or life-sustaining by the U.S. Food and Drug  
+ Administration or equivalent organizations outside of the United States as “life-critical” medical applications. Bourns expressly identifies those  
+ Bourns® standard products that are suitable for use in typical medical applications that are not life-critical in its publication entitled “Bourns  
+ Medical Grade Component Guide. ” 
+• Bourns expressly identifies those Bourns® standard products that are suitable for use in typical automotive applications associated with any  
+ Automate Safety Integrity Level (ASIL) in its publication entitled “Bourns Automotive Grade Component Guide. ” Bourns’ designation of Bourns®  
+ product as compliant with the AEC-Q standard does not by itself mean that Bourns has approved such product for use in an automotive  
+ application.
+• Bourns expressly identifies Bourns® standard products that are suitable for use in the typical aviation applications/systems requiring System  
+ Design Assurance Level (RTCA DO-254 DAL) of C, D or E in its publication entitled “Bourns Civilian Aerospace/Aviation Grade Component Guide. ”  
+ Bourns does not test its products for compliance with United States Federal Aviation Administration standards or any other generally equivalent  
+ governmental organization standard applicable to products designed or manufactured for use in aviation applications. Use of Bourns® standard  
+ components in aviation applications associated with RTCA DO-254 DAL A or B without proper approval noted above shall be at the user’s sole  
+ risk. 
+• Bourns will review and authorize on a case-by-case basis the use of Bourns® standard products which are at least AEC-Q compliant in space- 
+ related civil applications (rockets, satellites) with a negotiated cross-waiver and indemnity agreement.
+The use and level of testing applicable to Bourns® custom products shall be negotiated on a case-by-case basis by Bourns and the user for which such 
+Bourns® custom products are specially designed. Absent a written agreement between Bourns and the user regarding the use and level of such testing, 
+the above provisions applicable to Bourns® standard products shall also apply to such Bourns® custom products.
+Use of Bourns® products or Bourns’ technology in military/defense applications must be reviewed with Bourns for compliance with applicable export 
+control laws and embargoes. Users shall not sell, transfer, export or re-export (which includes transfers within a country) any Bourns® products or 
+technology or technical data for use in activities which involve the design, development, production, use or stockpiling of nuclear, chemical or 
+biological weapons or missiles, nor shall they use Bourns® products or technology or technical data in any facility which engages in activities relating 
+to such devices. Further, Bourns® products and Bourns’ technology and technical data may not under any circumstance be exported or re-exported to 
+countries subject to international sanctions or embargoes. Bourns® products and technology may not, without prior authorization from Bourns and/or 
+the Government of a country where such product/technology is designed and/or manufactured, be resold, transferred, or re-exported (including within 
+the same country) to any party not eligible to receive commodities, software, and technical data originating in such country.
+To the maximum extent permitted by applicable law, Bourns disclaims (i) any and all liability for special, punitive, consequential, incidental or indirect 
+damages or lost revenues or lost profits, and (ii) any and all implied warranties (those not based on parameters specified in Bourns’ data sheets and/or 
+specifications), including implied warranties of fitness for particular purpose, non-infringement and merchantability.
+For your convenience, copies of this Legal Disclaimer Notice with German, Spanish, Japanese, Traditional Chinese and Simplified Chinese bilingual versions are 
+available at:
+ Web Page: https://www.bourns.com/legal/disclaimers-terms-and-policies
+ PDF: https://www.bourns.com/docs/Legal/disclaimer.pdf
+ Legal Disclaimer Notice
+K2540 05/26R
