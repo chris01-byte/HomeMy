@@ -1,4 +1,4 @@
-# HomeMy Power-Control Board Verification Plan
+# HomeMy Power Management Unit (PMU) Verification Plan
 
 Status: required evidence plan; no hardware tests have been performed.  
 Date: 2026-09-10.

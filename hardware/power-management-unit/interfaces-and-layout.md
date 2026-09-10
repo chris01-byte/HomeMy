@@ -1,4 +1,4 @@
-# HomeMy Power-Control Board Interfaces and Layout
+# HomeMy Power Management Unit (PMU) Interfaces and Layout
 
 Status: companion to `ASTRA_PCB_HANDOFF.md`; **not released for fabrication**.  
 Date: 2026-09-10.

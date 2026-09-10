@@ -1,4 +1,4 @@
-# HomeMy Power-Control Board: GPT Astra PCB Handoff
+# HomeMy Power Management Unit (PMU): GPT Astra PCB Handoff
 
 Status: ready for schematic capture and controlled pre-layout; **not released for fabrication**.  
 Revision: 0.1  
@@ -7,7 +7,7 @@ Design authority: HomeMy project owner.
 
 ## 1. Purpose and design gate
 
-This brief gives GPT Astra the accepted HomeMy power-board behavior and current simplifications for a KiCad implementation.
+This brief gives GPT Astra the accepted HomeMy Power Management Unit (PMU) behavior and current simplifications for a KiCad implementation.
 
 Astra may create the hierarchical schematic, footprints, preliminary placement, net classes, and a routing strategy. Astra must not mark the design production-ready, generate fabrication files for ordering, or silently invent values for items marked `OPEN` or `BLOCKER`.
 
@@ -15,9 +15,9 @@ Status meanings: implement `LOCKED` requirements as written; make `PROVISIONAL` 
 
 If sources disagree, use this precedence:
 
-1. `hardware/power-board/requirements.yaml` for explicit value/status pairs;
+1. `hardware/power-management-unit/requirements.yaml` for explicit value/status pairs;
 2. this handoff for topology and implementation intent;
-3. `hardware/power-board/interfaces-and-layout.md` for physical interfaces and layout constraints;
+3. `hardware/power-management-unit/interfaces-and-layout.md` for physical interfaces and layout constraints;
 4. the dated power-architecture decision;
 5. lifecycle and customer-power contracts.
 
@@ -167,7 +167,7 @@ No populated precharge circuit is required in revision 0.1. Provide access for i
 
 There are no per-arm eFuses, arm MOSFETs, arm shunts, or arm temperature sensors. `ARM_L` and `ARM_R` are passive protected outputs after the common motion gate. The exact arm connector remains a release blocker: a two-contact Mega-Fit candidate is acceptable only if its exact housing/contact/wire/temperature derating and an enforceable per-arm current envelope are proven. If one arm can exceed the derated connector limit, select a higher-current connector instead of relying on undocumented margin.
 
-The two ESS23 motors share one isolated RS485 bus external to this board. The two ESS17 motors share the other external isolated RS485 bus. The power PCB does not duplicate these transceivers.
+The two ESS23 motors share one isolated RS485 bus external to the PMU. The two ESS17 motors share the other external isolated RS485 bus. The PMU does not duplicate these transceivers.
 
 ## 8. Regeneration and brake chopper
 
@@ -255,6 +255,6 @@ Required states are OFF/dark, BOOTING/blue pulse, SELF_TEST/yellow movement, REA
 
 ## 10. Layout, interfaces, and Astra output
 
-Connector choices, wiring, PCB partitioning, layout constraints, component classes, required Astra deliverables, and the fabrication-blocker checklist are maintained in `hardware/power-board/interfaces-and-layout.md`.
+Connector choices, wiring, PCB partitioning, layout constraints, component classes, required Astra deliverables, and the fabrication-blocker checklist are maintained in `hardware/power-management-unit/interfaces-and-layout.md`.
 
 Astra must read that file before assigning footprints or creating the board outline. Until every blocker named there and in `requirements.yaml` is closed, the output is an engineering prototype design for review and motorless testing only.

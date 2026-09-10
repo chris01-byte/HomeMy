@@ -5,7 +5,7 @@ Date: 2026-09-10.
 
 ## Context
 
-This decision records the agreed battery, power-path, monitoring, regeneration-protection, customer power-button, status-indicator, compute-power, actuator, and communication assumptions for the HomeMy prototype. It is the current design memory for later schematic, firmware, Linux, and commissioning work.
+This decision records the agreed battery, power-path, monitoring, regeneration-protection, customer power-button, status-indicator, compute-power, actuator, and communication assumptions for the HomeMy prototype. The resulting central subsystem is named the HomeMy Power Management Unit (PMU). It is the current design memory for later schematic, firmware, Linux, and commissioning work.
 
 Values marked **initial** are accepted starting points for commissioning, not measured final limits. No real-hardware protection test has yet validated this architecture.
 
@@ -239,7 +239,7 @@ Detailed voltage, signed current, power, energy, state of charge, remaining time
 
 ## Impact
 
-The decision changes the customer power-on contract, lifecycle/status behavior, power-board requirements, actuator-bus protection, Linux diagnostics, ESP32 firmware scope, CAN/RS485 planning, and the order of commissioning. It removes the permanent customer display and oversized latching contactor from the design direction while retaining independent visible state and low-current electronic shutdown.
+The decision changes the customer power-on contract, lifecycle/status behavior, PMU requirements, actuator-bus protection, Linux diagnostics, ESP32 firmware scope, CAN/RS485 planning, and the order of commissioning. It removes the permanent customer display and oversized latching contactor from the design direction while retaining independent visible state and low-current electronic shutdown.
 
 ## Validation
 
@@ -263,13 +263,13 @@ Principal risks are undocumented motor regeneration, unknown final arm energy, u
 
 Until the complete electronic path is built and validated, retain the developer-controlled supply and shutdown procedure. Real actuators remain disconnected or independently inhibited during controller commissioning. Reverting this decision means removing the LM74930/chopper assumptions from the power contract without weakening the independent fuse, BMS, or motion gate.
 
-## PCB Handoff
+## PMU Handoff
 
 The consolidated schematic/layout input, machine-readable requirement status, fabrication blockers, and staged evidence plan are maintained in:
 
-- `hardware/power-board/ASTRA_PCB_HANDOFF.md`;
-- `hardware/power-board/interfaces-and-layout.md`;
-- `hardware/power-board/requirements.yaml`;
-- `hardware/power-board/verification-plan.md`.
+- `hardware/power-management-unit/ASTRA_PCB_HANDOFF.md`;
+- `hardware/power-management-unit/interfaces-and-layout.md`;
+- `hardware/power-management-unit/requirements.yaml`;
+- `hardware/power-management-unit/verification-plan.md`.
 
 Those files capture later detail and take precedence for the PCB implementation where they explicitly refine this architectural record.

@@ -1,6 +1,6 @@
 schema_version: 1
 project: HomeMy
-artifact: power_control_board
+artifact: power_management_unit
 revision: "0.1"
 date: "2026-09-10"
 fabrication_release: false
@@ -13,9 +13,9 @@ status_vocabulary:
   BLOCKER: no_fabrication_release_until_closed
 
 source_precedence:
-  - hardware/power-board/requirements.yaml
-  - hardware/power-board/ASTRA_PCB_HANDOFF.md
-  - hardware/power-board/interfaces-and-layout.md
+  - hardware/power-management-unit/requirements.yaml
+  - hardware/power-management-unit/ASTRA_PCB_HANDOFF.md
+  - hardware/power-management-unit/interfaces-and-layout.md
   - docs/decisions/2026-09-10-battery-monitor-and-power-architecture.md
   - contracts/hardware/customer-power-on.md
   - contracts/ros/system-lifecycle.md

@@ -66,28 +66,28 @@
         "docs/decisions/2026-09-10-battery-monitor-and-power-architecture.md"
       ]
     },
-    "power-pcb": {
-      "when": "GPT Astra core schematic capture, power topology, protection coordination, power controller, or regeneration design",
+    "pmu": {
+      "when": "GPT Astra PMU core schematic capture, power topology, protection coordination, power controller, or regeneration design",
       "files": [
-        "hardware/power-board/ASTRA_PCB_HANDOFF.md"
+        "hardware/power-management-unit/ASTRA_PCB_HANDOFF.md"
       ]
     },
-    "power-pcb-layout": {
-      "when": "power-board connectors, harnesses, component placement, PCB routing, Astra deliverables, or fabrication-blocker checklist",
+    "pmu-layout": {
+      "when": "PMU connectors, harnesses, component placement, PCB routing, Astra deliverables, or fabrication-blocker checklist",
       "files": [
-        "hardware/power-board/interfaces-and-layout.md"
+        "hardware/power-management-unit/interfaces-and-layout.md"
       ]
     },
-    "power-pcb-requirements": {
-      "when": "machine-readable power-board limits, locked values, provisional thresholds, or release-blocker status",
+    "pmu-requirements": {
+      "when": "machine-readable PMU limits, locked values, provisional thresholds, or release-blocker status",
       "files": [
-        "hardware/power-board/requirements.yaml"
+        "hardware/power-management-unit/requirements.yaml"
       ]
     },
-    "power-pcb-verification": {
-      "when": "power-board calculations, ERC/DRC review, bench bring-up, fault injection, thermal tests, or release evidence",
+    "pmu-verification": {
+      "when": "PMU calculations, ERC/DRC review, bench bring-up, fault injection, thermal tests, or release evidence",
       "files": [
-        "hardware/power-board/verification-plan.md"
+        "hardware/power-management-unit/verification-plan.md"
       ]
     },
     "runtime": {

@@ -2,7 +2,7 @@
 
 ## Phase
 
-Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The onboard Linux lifecycle, one-button customer behavior, coarse LED status, battery monitor, electronic main power path, reverse-current blocking, and initial protection thresholds are recorded as accepted architecture. A consolidated GPT Astra handoff now defines the power-board topology, requirement status, layout rules, fabrication blockers, and verification plan. The KiCad design, production component selections, firmware, systemd units, and real-hardware validation remain pending. No HomeMy runtime package or source code has been copied.
+Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The onboard Linux lifecycle, one-button customer behavior, coarse LED status, battery monitor, electronic main power path, reverse-current blocking, and initial protection thresholds are recorded as accepted architecture. This central subsystem is named the HomeMy Power Management Unit (PMU). A consolidated GPT Astra handoff defines its topology, requirement status, layout rules, fabrication blockers, and verification plan. The KiCad design, production component selections, firmware, systemd units, and real-hardware validation remain pending. No HomeMy runtime package or source code has been copied.
 
 ## Goal
 
@@ -49,7 +49,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 
 - The repository is public; it contains no secrets, home data, maps, camera data, or deployment configuration.
 - The default execution mode is simulation or motorless validation.
-- No systemd unit, actuator, sensor, power PCB, map, home data, or deployment configuration is tracked here.
+- No systemd unit, actuator, sensor, PMU KiCad design, map, home data, or deployment configuration is tracked here.
 - No capability from roboter_ws has been copied into HomeMy code.
 - The proposed transfer baseline is roboter_ws main commit `05439c7a13d7a92e69b9eb4663e3a2a1b44626a1`.
 - Customer mode is not enabled as the default boot target.
@@ -57,7 +57,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 
 ## Next Safe Step
 
-1. Have GPT Astra create the hierarchical KiCad schematic and controlled pre-layout from `hardware/power-board/ASTRA_PCB_HANDOFF.md`; keep fabrication release false while listed blockers remain.
+1. Have GPT Astra create the hierarchical PMU KiCad schematic and controlled pre-layout from `hardware/power-management-unit/ASTRA_PCB_HANDOFF.md`; keep fabrication release false while listed blockers remain.
 2. Close exact MOSFET, shunt, connector, wake-latch, CAN, TVS, mechanics, timer, and converter requirements using manufacturer data and calculations.
 3. Validate the MOSFET path, shunt sharing, inrush without precharge, DC/DC converters, brake-chopper energy, thermal behavior, and fuse/BMS coordination using current-limited supplies and non-moving loads.
 4. Define and simulate the ESP32 power/lifecycle state machine, button timing, heartbeat, hardware latches, event log, and LED behavior before connecting actuators.
@@ -72,10 +72,10 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 
 1. `AGENTS.md` for safety and work rules.
 2. `context/index.json` for task-specific files.
-3. `hardware/power-board/ASTRA_PCB_HANDOFF.md` for the current PCB topology, layout brief, and release blockers.
-4. `hardware/power-board/interfaces-and-layout.md` for connectors, harnesses, placement, component classes, Astra outputs, and blocker checklist.
-5. `hardware/power-board/requirements.yaml` for explicit locked, provisional, open, and blocking requirements.
-6. `hardware/power-board/verification-plan.md` for staged evidence before fabrication and motion.
+3. `hardware/power-management-unit/ASTRA_PCB_HANDOFF.md` for the current PMU topology, layout brief, and release blockers.
+4. `hardware/power-management-unit/interfaces-and-layout.md` for connectors, harnesses, placement, component classes, Astra outputs, and blocker checklist.
+5. `hardware/power-management-unit/requirements.yaml` for explicit locked, provisional, open, and blocking requirements.
+6. `hardware/power-management-unit/verification-plan.md` for staged evidence before fabrication and motion.
 7. `docs/decisions/2026-09-10-battery-monitor-and-power-architecture.md` for the accepted battery, power, button, LED, and communication design memory.
 8. `contracts/hardware/customer-power-on.md` for physical one-button startup and shutdown.
 9. `contracts/ros/system-lifecycle.md` for appliance behavior.
@@ -88,7 +88,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 
 ## Open Decisions
 
-- Exact power PCB schematic, MOSFETs, thermal design, shunt sharing, brake-chopper components, TVS network, and measured evidence supporting operation without precharge.
+- Exact PMU schematic and PCB, MOSFETs, thermal design, shunt sharing, brake-chopper components, TVS network, and measured evidence supporting operation without precharge.
 - Exact resettable eFuse settings, cable gauges, connectors, grounding, power distribution, converter selection, and battery enclosure/venting. The 60 A battery fuse remains the only melting fuse.
 - Exact board outline, mounting holes, component-height envelope, connector directions, busbar geometry, airflow, and chassis heat-spreader interface.
 - Proven per-arm current envelope or a higher-current arm connector; exact battery and chopper connectors with temperature/pulse derating.
