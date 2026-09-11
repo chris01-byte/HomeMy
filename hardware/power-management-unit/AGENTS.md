@@ -2,11 +2,11 @@
 
 Diese Anweisungen gelten für alle Dateien unter hardware/power-management-unit/.
 
-## Pflichtkontext für die Rev-A.1-Verkleinerung
+## Pflichtkontext für den Rev-A.1-Abschluss auf 280 × 220 mm
 
 Vor jeder Analyse oder Änderung an der kompakten PMU Rev A.1 vollständig lesen und befolgen:
 
-- ASTRA_BOUNDED_SHRINK.md
+- ASTRA_280X220_FINISH.md
 - rev-a/README.md
 - rev-a/design/HIGH_CURRENT_RULES.md
 - rev-a/manufacturing/PCB_STACKUP_PRESSFIT.md
@@ -22,7 +22,7 @@ Die eingefrorene Versuchsevidenz liegt auf Branch codex/pmu-rev-a1-250x200-wip b
 - Bestehende ERC-/DRC-Regeln nicht abschwächen, unterdrücken oder pauschal ausnehmen.
 - Ein Agent besitzt die KiCad-Schreibverantwortung. Weitere Agenten prüfen nur lesend.
 - Keine unbeschränkten Routing- oder Reparaturschleifen.
-- Die Größen-, Zyklen-, Prüf- und Abbruchgrenzen aus ASTRA_BOUNDED_SHRINK.md sind harte Grenzen.
+- Die feste Größe sowie die Zeit-, Zyklen-, Prüf- und Abbruchgrenzen aus ASTRA_280X220_FINISH.md sind harte Grenzen.
 - Fehlende oder abgebrochene native Prüfungen gelten niemals als bestanden.
 - Fertigungs-, Bestückungs- und Produktionsfreigaben bleiben false, solange der Nutzer keinen separaten Freigabeauftrag erteilt.
 - Keine temporären Routerdateien, Caches, kompilierten Hilfsdateien oder redundanten Zwischenstände committen.

@@ -51,6 +51,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - The default execution mode is simulation or motorless validation.
 - PMU Revision-A CAD and engineering evidence are tracked; no systemd unit, actuator/sensor runtime, map, home data, or deployment configuration is introduced.
 - The bounded PMU Rev-A.1 shrink attempt is closed without a passing size (250x200, 275x210, 300x220 mm; three cycles). Its separate WIP sources and [result](hardware/power-management-unit/rev-a1/BOUNDED_SHRINK_RESULT.md) are not orderable; the Rev-A sources and prototype package remain unchanged.
+- The next authorized Rev-A.1 CAD task fixes the board size at 280 × 220 mm and continues only from the 275 × 210-mm candidate under `hardware/power-management-unit/ASTRA_280X220_FINISH.md`. It remains a non-orderable WIP until every stated CAD gate passes and the user grants a separate release.
 - No capability from roboter_ws has been copied into HomeMy code.
 - The proposed transfer baseline is roboter_ws main commit `05439c7a13d7a92e69b9eb4663e3a2a1b44626a1`.
 - Customer mode is not enabled as the default boot target.
@@ -74,7 +75,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 
 1. `AGENTS.md` for safety and work rules.
 2. `context/index.json` for task-specific files.
-3. `hardware/power-management-unit/ASTRA_START_PROMPT.md` for the ready-to-use Astra implementation prompt.
+3. `hardware/power-management-unit/ASTRA_280X220_FINISH.md` for the bounded Astra task that finishes the fixed 280 × 220-mm Rev-A.1 prototype layout.
 4. `hardware/power-management-unit/ASTRA_PCB_HANDOFF.md` for the current PMU topology and two-stage release model.
 5. `hardware/power-management-unit/interfaces-and-layout.md` for connectors, layout, component ownership, Astra outputs, and Revision-A/Revision-B gates.
 6. `hardware/power-management-unit/requirements.yaml` for explicit locked, provisional, Revision-A design/assumption/energization, and Revision-B validation requirements.

@@ -72,12 +72,6 @@
         "hardware/power-management-unit/ASTRA_PCB_HANDOFF.md"
       ]
     },
-    "pmu-astra-start": {
-      "when": "starting GPT Astra to create the complete PMU Revision-A KiCad schematic, PCB layout, BOM, calculations, and prototype package",
-      "files": [
-        "hardware/power-management-unit/ASTRA_START_PROMPT.md"
-      ]
-    },
     "pmu-layout": {
       "when": "PMU connectors, harnesses, component placement, PCB routing, Astra deliverables, or Revision-A and Revision-B release gates",
       "files": [
@@ -122,6 +116,12 @@
       "files": [
         "docs/decisions/README.md",
         "CURRENT_STATE.md"
+      ]
+    },
+    "pmu-astra-finish": {
+      "when": "finishing the fixed 280 x 220 mm PMU Rev-A.1 KiCad PCB from the 275 x 210 mm candidate with bounded Astra iterations",
+      "files": [
+        "hardware/power-management-unit/ASTRA_280X220_FINISH.md"
       ]
     }
   }
