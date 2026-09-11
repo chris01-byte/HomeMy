@@ -50,6 +50,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - The repository is public; it contains no secrets, home data, maps, camera data, or deployment configuration.
 - The default execution mode is simulation or motorless validation.
 - PMU Revision-A CAD and engineering evidence are tracked; no systemd unit, actuator/sensor runtime, map, home data, or deployment configuration is introduced.
+- The bounded PMU Rev-A.1 shrink attempt is closed without a passing size (250x200, 275x210, 300x220 mm; three cycles). Its separate WIP sources and [result](hardware/power-management-unit/rev-a1/BOUNDED_SHRINK_RESULT.md) are not orderable; the Rev-A sources and prototype package remain unchanged.
 - No capability from roboter_ws has been copied into HomeMy code.
 - The proposed transfer baseline is roboter_ws main commit `05439c7a13d7a92e69b9eb4663e3a2a1b44626a1`.
 - Customer mode is not enabled as the default boot target.
