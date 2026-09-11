@@ -1,0 +1,37 @@
+{
+  "pcb_sha256": "d6c44c6fb3233af09af3c62d060077a1e0b0a8a34e0e81eeabf495157b3843bc",
+  "reference_stitches": {
+    "stitches_checked": 2,
+    "at_least_two_layers": 0,
+    "lookup_coordinate_rounding_mm": 1e-05,
+    "unproven_stitches": [
+      {
+        "pad": "U11.1",
+        "net": "LOGIC_GND",
+        "via_xy_mm": [
+          23.9,
+          22.0
+        ],
+        "via_exists": true,
+        "attached_copper_layers": [
+          "F.Cu"
+        ],
+        "at_least_two_layers": false
+      },
+      {
+        "pad": "U11.2",
+        "net": "LOGIC_GND",
+        "via_xy_mm": [
+          22.9,
+          21.5
+        ],
+        "via_exists": true,
+        "attached_copper_layers": [
+          "F.Cu"
+        ],
+        "at_least_two_layers": false
+      }
+    ],
+    "limitation": "Local via-to-copper attachment only. Global reference integrity also requires zero native opens; no inference from a nearby zone outline."
+  }
+}

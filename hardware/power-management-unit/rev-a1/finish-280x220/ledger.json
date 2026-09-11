@@ -1,0 +1,3642 @@
+{
+  "started_utc": "2026-09-11T14:48:00+00:00",
+  "branch": "codex/pmu-rev-a1-280x220-finish",
+  "source_pcb": "kicad\\HomeMy_PMU_RevA_275x210.kicad_pcb",
+  "source_sha256": "1fed03fee50306971e381b0a862e38ba01ba24395e59430c27f37d2513381daa",
+  "limits": {
+    "total_minutes": 180,
+    "cycles": 6,
+    "autorouter_calls": 4,
+    "router_seconds": 600,
+    "router_passes": 250,
+    "attempts_per_unchanged_fault": 2,
+    "consecutive_no_progress": 2,
+    "identical_process_restarts": 2
+  },
+  "cycle_counting": "Phase A outline/refill/baseline counts as cycle 1; five subsequent edit/check cycles remain.",
+  "cycles": [
+    {
+      "number": 1,
+      "label": "Phase A: unchanged 275 source, fixed outline extension, refill and native baseline",
+      "started_utc": "2026-09-11T14:58:10.707055+00:00",
+      "status": "completed",
+      "actions": [
+        {
+          "label": "Outline-only source transfer",
+          "details": {
+            "source_sha256": "1fed03fee50306971e381b0a862e38ba01ba24395e59430c27f37d2513381daa",
+            "output_sha256": "336da2935fae0c6010b44226a2db2255716c3ef720f21f9bc9577b24be88d836",
+            "edges": [
+              {
+                "before": [
+                  0.0,
+                  0.0
+                ],
+                "after": [
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "before": [
+                  275.0,
+                  0.0
+                ],
+                "after": [
+                  280,
+                  0.0
+                ]
+              },
+              {
+                "before": [
+                  0.0,
+                  210.0
+                ],
+                "after": [
+                  0.0,
+                  220
+                ]
+              },
+              {
+                "before": [
+                  0.0,
+                  0.0
+                ],
+                "after": [
+                  0.0,
+                  0.0
+                ]
+              },
+              {
+                "before": [
+                  275.0,
+                  0.0
+                ],
+                "after": [
+                  280,
+                  0.0
+                ]
+              },
+              {
+                "before": [
+                  275.0,
+                  210.0
+                ],
+                "after": [
+                  280,
+                  220
+                ]
+              },
+              {
+                "before": [
+                  275.0,
+                  210.0
+                ],
+                "after": [
+                  280,
+                  220
+                ]
+              },
+              {
+                "before": [
+                  0.0,
+                  210.0
+                ],
+                "after": [
+                  0.0,
+                  220
+                ]
+              }
+            ],
+            "footprint_moves": 0,
+            "existing_tracks_vias_and_zone_contours_unchanged": true,
+            "antenna_note": "Existing full four-layer antenna keepout extends to Y=224.15 mm, beyond new Y=220 edge; no new copper is introduced there."
+          },
+          "at_utc": "2026-09-11T14:58:19.957660+00:00"
+        }
+      ],
+      "finished_utc": "2026-09-11T14:59:20.453099+00:00",
+      "label_id": "cycle-01",
+      "metrics": {
+        "opens": 136,
+        "counts": {
+          "connection_width": 5,
+          "track_dangling": 8,
+          "via_dangling": 9
+        },
+        "force": 244,
+        "critical": 37,
+        "pcb_sha256": "336da2935fae0c6010b44226a2db2255716c3ef720f21f9bc9577b24be88d836"
+      },
+      "progress": true,
+      "progress_reasons": [
+        "validated Phase A WIP baseline"
+      ],
+      "lost_paths": [],
+      "eligible": true
+    },
+    {
+      "number": 2,
+      "label": "Phase B: controlled Kelvin/gates then force paths and local neck repairs",
+      "started_utc": "2026-09-11T15:01:09.908888+00:00",
+      "status": "completed",
+      "actions": [
+        {
+          "label": "cycle-02-critical",
+          "details": {
+            "input_sha256": "336da2935fae0c6010b44226a2db2255716c3ef720f21f9bc9577b24be88d836",
+            "output_sha256": "0e0cb7b577ad28608da6759178d20e2a2fa8523d137d4519b1012243f7e2a06e",
+            "recipes": [
+              {
+                "label": "Restore MAIN_KELVIN_P",
+                "net": "MAIN_KELVIN_P",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        25.975,
+                        41.75
+                      ],
+                      [
+                        25.4,
+                        40
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "F.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        25.4,
+                        40
+                      ],
+                      [
+                        30.5,
+                        40
+                      ],
+                      [
+                        30.5,
+                        84.5
+                      ],
+                      [
+                        34.8,
+                        88.8
+                      ],
+                      [
+                        34.8,
+                        89.6
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In2.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        35.7,
+                        89.5875
+                      ],
+                      [
+                        34.8,
+                        89.6
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "F.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        34.8,
+                        89.6
+                      ],
+                      [
+                        44.5,
+                        89.6
+                      ],
+                      [
+                        45.9,
+                        91
+                      ],
+                      [
+                        45.9,
+                        94.1
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        45,
+                        94.0875
+                      ],
+                      [
+                        45.9,
+                        94.1
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "F.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        25.4,
+                        40
+                      ],
+                      [
+                        29.3,
+                        36.1
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In2.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        29.3,
+                        36.1
+                      ],
+                      [
+                        29.3,
+                        17.3
+                      ],
+                      [
+                        33.5,
+                        17.3
+                      ],
+                      [
+                        34.5,
+                        18.3
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        33,
+                        18.5875
+                      ],
+                      [
+                        34.5,
+                        18.3
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "F.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        30.5,
+                        78.5
+                      ],
+                      [
+                        36,
+                        78.5
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "B.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        36,
+                        77
+                      ],
+                      [
+                        36,
+                        78.5
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "F.Cu"
+                  }
+                ],
+                "vias": [
+                  {
+                    "xy_mm": [
+                      25.4,
+                      40
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      34.8,
+                      89.6
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      45.9,
+                      94.1
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      29.3,
+                      36.1
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      34.5,
+                      18.3
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      30.5,
+                      78.5
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      36,
+                      78.5
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  }
+                ],
+                "added_uuids": [
+                  "a6e1ed8f-9c5c-4ae1-aaf6-9e3b33437c66",
+                  "c62ce541-acef-49cc-a086-fa57d5f5b074",
+                  "401e47bc-0677-489b-9726-b1bc5f8d4996",
+                  "0adccaf5-ebe0-47f9-bd8b-da8ab74f661a",
+                  "79812eb4-c036-4146-8ddb-e5ca74befbaa",
+                  "7636467c-2975-4434-9d08-6768bd48edae",
+                  "4fcbb5ec-c761-47de-be85-d9ab97a082a1",
+                  "f7aa7789-d030-49ee-b124-58be67d5352c",
+                  "67f356d7-7bf5-4d8b-bd70-9ba54a7fcb9c",
+                  "8bf38125-46f0-411e-8fcd-b4eea9d90834",
+                  "3e650e67-d3a9-4578-b0cb-30863a58f62a",
+                  "328cc3f5-12fc-41bb-ba5a-183f6b3081e4",
+                  "3f2560b9-e9d1-4d35-b2ba-75911bd31ebb",
+                  "99b1814e-5fbe-4a73-9ef7-5201759ccafe",
+                  "3fba1242-dd18-478c-bb93-6f4540818bc2",
+                  "2b8da9c9-1c45-49f9-aa2c-512aae8e8882",
+                  "7914f030-9e30-4efe-90a3-0ff81d84662c",
+                  "0f6bd219-363e-4274-9dd5-6693c7bbaf20",
+                  "0c4a0d4b-e7e7-4260-8dbf-1d09bfa045cf",
+                  "f496d2e4-3ea1-4cc1-ba75-2de3925417c9",
+                  "6207184e-d659-4744-8176-366512ea238b",
+                  "934d8a84-6bd6-4086-b7da-ffad2cb005fe",
+                  "44b5a43a-9541-47fa-bd43-2a0a07abc904",
+                  "e900d0b7-63e2-43d8-bd27-1c66471cc3cf"
+                ]
+              },
+              {
+                "label": "Restore MAIN_HGATE",
+                "net": "MAIN_HGATE",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        39.9,
+                        96.75
+                      ],
+                      [
+                        41.6,
+                        96.75
+                      ],
+                      [
+                        42.1,
+                        97.25
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "F.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        42.1,
+                        97.25
+                      ],
+                      [
+                        43,
+                        98.15
+                      ],
+                      [
+                        59,
+                        98.15
+                      ],
+                      [
+                        63,
+                        94.15
+                      ],
+                      [
+                        63,
+                        34.4125
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        61.65,
+                        34.4125
+                      ],
+                      [
+                        63,
+                        34.4125
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "F.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        61.65,
+                        59.4125
+                      ],
+                      [
+                        63,
+                        59.4125
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "F.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        61.65,
+                        84.4125
+                      ],
+                      [
+                        63,
+                        84.4125
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "F.Cu"
+                  }
+                ],
+                "vias": [
+                  {
+                    "xy_mm": [
+                      42.1,
+                      97.25
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      63,
+                      34.4125
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      63,
+                      59.4125
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      63,
+                      84.4125
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  }
+                ],
+                "added_uuids": [
+                  "4c7c8e1c-dca0-4b46-83d2-0872c6f1c73d",
+                  "d411ab62-8add-4deb-9f01-d77a5177d2c8",
+                  "e890487b-be68-4b0c-91f2-c714f7f57b34",
+                  "4d707b8c-898a-4839-86fe-cbcce032368e",
+                  "1525781d-c9d0-421c-a88e-24f05cfde23b",
+                  "3f0d8917-9d22-4fbe-91eb-cf39838a56da",
+                  "802265b5-9824-4122-82cb-3e5e815b1c35",
+                  "1a61e675-cfdd-48c4-94b2-c1c6ac32596a",
+                  "6b306ad2-4fa4-44dd-9c81-fa56a8dbeed2",
+                  "873f4501-e1f8-4143-a4ca-ed0efd5d95cf",
+                  "8f1f4cd2-e95f-468d-b7b4-7739226a2ad4",
+                  "377864b0-1dc8-4d6b-934e-ae0b7e038d12",
+                  "6d981180-bb0c-409d-9ddc-11ee16148430"
+                ]
+              },
+              {
+                "label": "Restore MAIN_DGATE",
+                "net": "MAIN_DGATE",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        36.1,
+                        94.75
+                      ],
+                      [
+                        35.6,
+                        94.75
+                      ],
+                      [
+                        35.6,
+                        94.15
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "F.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        35.6,
+                        94.15
+                      ],
+                      [
+                        36.6,
+                        95.15
+                      ],
+                      [
+                        36.6,
+                        100.5
+                      ],
+                      [
+                        37.6,
+                        101.5
+                      ],
+                      [
+                        73,
+                        101.5
+                      ],
+                      [
+                        78.8,
+                        95.7
+                      ],
+                      [
+                        78.8,
+                        17.4125
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "B.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        78.35,
+                        17.4125
+                      ],
+                      [
+                        79.55,
+                        17.4125
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "F.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        78.8,
+                        17.4125
+                      ],
+                      [
+                        79.55,
+                        17.4125
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "B.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        78.35,
+                        42.4125
+                      ],
+                      [
+                        79.55,
+                        42.4125
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "F.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        78.8,
+                        42.4125
+                      ],
+                      [
+                        79.55,
+                        42.4125
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "B.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        78.35,
+                        67.4125
+                      ],
+                      [
+                        79.55,
+                        67.4125
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "F.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        78.8,
+                        67.4125
+                      ],
+                      [
+                        79.55,
+                        67.4125
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "B.Cu"
+                  }
+                ],
+                "vias": [
+                  {
+                    "xy_mm": [
+                      35.6,
+                      94.15
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      79.55,
+                      17.4125
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      79.55,
+                      42.4125
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      79.55,
+                      67.4125
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  }
+                ],
+                "added_uuids": [
+                  "0ca9b088-a266-4118-a9ee-e24cfe68dc4a",
+                  "b327bc1d-4d63-43a9-ab52-62d4995d1498",
+                  "405b64a8-84a5-4e92-8619-0aa9d958224a",
+                  "17f87d41-27eb-4cc3-936c-9a087eb408e3",
+                  "4269e306-e6d9-4606-b859-eedb5c424f38",
+                  "d37fa97e-45a8-4f7a-addf-aca1371fdb46",
+                  "6bd48a6a-86f6-4eb0-9e2b-c98c913f6cd8",
+                  "dfb0f132-8a19-4f48-9287-b79e8608dccd",
+                  "eee9bddc-440d-4bd6-ad13-8b75b2d5077e",
+                  "4a77dbb6-8563-4f50-893b-ffd34a3240b3",
+                  "f494674f-05ea-411c-8b64-1632ac5fd13f",
+                  "6d47c9d6-dcfe-4afe-b7d6-ccd4a9314a20",
+                  "0e7e8ba1-6c78-44b1-bc61-39b299f4d162",
+                  "6422949c-641b-4e5e-b4db-feb2ebb7550f",
+                  "4b65feae-8085-44ec-b04d-599455f29c4f",
+                  "8f071bdb-43a2-4877-a750-9f0e538305e8",
+                  "c2defa03-0ba1-45b1-bd45-bc23f6b3e895",
+                  "5815bdeb-43bf-4b01-bfdb-df5108b29945"
+                ]
+              }
+            ],
+            "explicit_paths": {
+              "paths": [
+                {
+                  "name": "main_positive_sense",
+                  "from_pad": "RSH1.2",
+                  "to_pad": "R21.1",
+                  "net": "MAIN_KELVIN_P",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 59.2232,
+                  "copper_track_length_mm": 59.2232,
+                  "via_transitions": 2,
+                  "layers": [
+                    "F.Cu",
+                    "In2.Cu"
+                  ]
+                },
+                {
+                  "name": "main_negative_sense",
+                  "from_pad": "RSH1.3",
+                  "to_pad": "U1.19",
+                  "net": "MAIN_KELVIN_N",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 64.3427,
+                  "copper_track_length_mm": 64.3427,
+                  "via_transitions": 2,
+                  "layers": [
+                    "F.Cu",
+                    "In2.Cu"
+                  ]
+                },
+                {
+                  "name": "main_positive_short_circuit",
+                  "from_pad": "RSH1.2",
+                  "to_pad": "R23.1",
+                  "net": "MAIN_KELVIN_P",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 74.0031,
+                  "copper_track_length_mm": 74.0031,
+                  "via_transitions": 3,
+                  "layers": [
+                    "F.Cu",
+                    "In1.Cu",
+                    "In2.Cu"
+                  ]
+                },
+                {
+                  "name": "ina_positive_kelvin",
+                  "from_pad": "RSH1.2",
+                  "to_pad": "R223.1",
+                  "net": "MAIN_KELVIN_P",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 33.299,
+                  "copper_track_length_mm": 33.299,
+                  "via_transitions": 3,
+                  "layers": [
+                    "F.Cu",
+                    "In1.Cu",
+                    "In2.Cu"
+                  ]
+                },
+                {
+                  "name": "ina_negative_kelvin",
+                  "from_pad": "RSH1.3",
+                  "to_pad": "R224.1",
+                  "net": "MAIN_KELVIN_N",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 32.9763,
+                  "copper_track_length_mm": 32.9763,
+                  "via_transitions": 2,
+                  "layers": [
+                    "F.Cu",
+                    "In1.Cu"
+                  ]
+                },
+                {
+                  "name": "ina_positive_filter",
+                  "from_pad": "R223.2",
+                  "to_pad": "U11.10",
+                  "net": "INA_IN_P",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 6.6922,
+                  "copper_track_length_mm": 6.4624,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "ina_negative_filter",
+                  "from_pad": "R224.2",
+                  "to_pad": "U11.9",
+                  "net": "INA_IN_N",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 10.1848,
+                  "copper_track_length_mm": 9.7075,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "ina_positive_cap",
+                  "from_pad": "C241.1",
+                  "to_pad": "U11.10",
+                  "net": "INA_IN_P",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 3.6249,
+                  "copper_track_length_mm": 3.6249,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "ina_negative_cap",
+                  "from_pad": "C241.2",
+                  "to_pad": "U11.9",
+                  "net": "INA_IN_N",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 3.045,
+                  "copper_track_length_mm": 3.045,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "main_positive_filter",
+                  "from_pad": "C4.1",
+                  "to_pad": "U1.20",
+                  "net": "MAIN_CS_P",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 2.4899,
+                  "copper_track_length_mm": 2.4899,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "main_negative_filter",
+                  "from_pad": "C4.2",
+                  "to_pad": "U1.19",
+                  "net": "MAIN_KELVIN_N",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 2.4899,
+                  "copper_track_length_mm": 2.4899,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "main_iscp_filter",
+                  "from_pad": "C5.1",
+                  "to_pad": "U1.18",
+                  "net": "MAIN_ISCP",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 2.5643,
+                  "copper_track_length_mm": 2.5643,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "motion_positive_sense",
+                  "from_pad": "RSH2.2",
+                  "to_pad": "R30.1",
+                  "net": "MOTION_KELVIN_P",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 85.0292,
+                  "copper_track_length_mm": 85.0292,
+                  "via_transitions": 2,
+                  "layers": [
+                    "F.Cu",
+                    "In2.Cu"
+                  ]
+                },
+                {
+                  "name": "motion_negative_sense",
+                  "from_pad": "RSH2.3",
+                  "to_pad": "U2.17",
+                  "net": "MOTION_KELVIN_N",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 84.6401,
+                  "copper_track_length_mm": 84.6401,
+                  "via_transitions": 2,
+                  "layers": [
+                    "F.Cu",
+                    "In2.Cu"
+                  ]
+                },
+                {
+                  "name": "motion_positive_short_circuit",
+                  "from_pad": "RSH2.2",
+                  "to_pad": "R32.1",
+                  "net": "MOTION_KELVIN_P",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 91.147,
+                  "copper_track_length_mm": 91.147,
+                  "via_transitions": 2,
+                  "layers": [
+                    "F.Cu",
+                    "In2.Cu"
+                  ]
+                },
+                {
+                  "name": "motion_positive_filter",
+                  "from_pad": "C11.1",
+                  "to_pad": "U2.18",
+                  "net": "MOTION_CS_P",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 2.8325,
+                  "copper_track_length_mm": 2.2,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "motion_negative_filter",
+                  "from_pad": "C11.2",
+                  "to_pad": "U2.17",
+                  "net": "MOTION_KELVIN_N",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 3.2971,
+                  "copper_track_length_mm": 2.6971,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "motion_iscp_filter",
+                  "from_pad": "C12.1",
+                  "to_pad": "U2.19",
+                  "net": "MOTION_ISCP",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 4.4314,
+                  "copper_track_length_mm": 4.4314,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "motion_boost_first",
+                  "from_pad": "C9.1",
+                  "to_pad": "U2.12",
+                  "net": "MOTION_BST",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 6.8428,
+                  "copper_track_length_mm": 6.8428,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "motion_boost_second",
+                  "from_pad": "C29.1",
+                  "to_pad": "U2.12",
+                  "net": "MOTION_BST",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 10.8428,
+                  "copper_track_length_mm": 10.8428,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "motion_source_first_boost",
+                  "from_pad": "U2.13",
+                  "to_pad": "C9.2",
+                  "net": "MOTION_COMMON",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 16.3156,
+                  "copper_track_length_mm": 16.3156,
+                  "via_transitions": 2,
+                  "layers": [
+                    "B.Cu",
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "motion_source_second_boost",
+                  "from_pad": "U2.13",
+                  "to_pad": "C29.2",
+                  "net": "MOTION_COMMON",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 20.0345,
+                  "copper_track_length_mm": 20.0345,
+                  "via_transitions": 3,
+                  "layers": [
+                    "B.Cu",
+                    "F.Cu",
+                    "In1.Cu"
+                  ]
+                },
+                {
+                  "name": "ina_supply_decoupling",
+                  "from_pad": "C206.1",
+                  "to_pad": "U11.6",
+                  "net": "V3V3",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 9.5342,
+                  "copper_track_length_mm": 9.5342,
+                  "via_transitions": 2,
+                  "layers": [
+                    "F.Cu",
+                    "In2.Cu"
+                  ]
+                },
+                {
+                  "name": "main_charge_pump_cap",
+                  "from_pad": "C2.1",
+                  "to_pad": "U1.23",
+                  "net": "MAIN_CAP",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 10.0893,
+                  "copper_track_length_mm": 9.8047,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "motion_pu_resistor",
+                  "from_pad": "U2.15",
+                  "to_pad": "R34.1",
+                  "net": "MOTION_PU",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 14.8676,
+                  "copper_track_length_mm": 14.8673,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "motion_pull_down",
+                  "from_pad": "U2.14",
+                  "to_pad": "R34.2",
+                  "net": "MOTION_GATE_DRIVE",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 15.7147,
+                  "copper_track_length_mm": 15.7141,
+                  "via_transitions": 2,
+                  "layers": [
+                    "F.Cu",
+                    "In1.Cu"
+                  ]
+                },
+                {
+                  "name": "main_gate_1",
+                  "from_pad": "U1.14",
+                  "to_pad": "R1.1",
+                  "net": "MAIN_HGATE",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 86.4243,
+                  "copper_track_length_mm": 86.4243,
+                  "via_transitions": 2,
+                  "layers": [
+                    "F.Cu",
+                    "In1.Cu"
+                  ]
+                },
+                {
+                  "name": "main_gate_2",
+                  "from_pad": "U1.14",
+                  "to_pad": "R2.1",
+                  "net": "MAIN_HGATE",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 61.4243,
+                  "copper_track_length_mm": 61.4243,
+                  "via_transitions": 2,
+                  "layers": [
+                    "F.Cu",
+                    "In1.Cu"
+                  ]
+                },
+                {
+                  "name": "main_gate_3",
+                  "from_pad": "U1.14",
+                  "to_pad": "R3.1",
+                  "net": "MAIN_HGATE",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 36.4243,
+                  "copper_track_length_mm": 36.4243,
+                  "via_transitions": 2,
+                  "layers": [
+                    "F.Cu",
+                    "In1.Cu"
+                  ]
+                },
+                {
+                  "name": "main_gate_4",
+                  "from_pad": "U1.1",
+                  "to_pad": "R4.1",
+                  "net": "MAIN_DGATE",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 133.1184,
+                  "copper_track_length_mm": 133.1184,
+                  "via_transitions": 2,
+                  "layers": [
+                    "B.Cu",
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "main_gate_5",
+                  "from_pad": "U1.1",
+                  "to_pad": "R5.1",
+                  "net": "MAIN_DGATE",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 108.1184,
+                  "copper_track_length_mm": 108.1184,
+                  "via_transitions": 2,
+                  "layers": [
+                    "B.Cu",
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "main_gate_6",
+                  "from_pad": "U1.1",
+                  "to_pad": "R6.1",
+                  "net": "MAIN_DGATE",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 83.1184,
+                  "copper_track_length_mm": 83.1184,
+                  "via_transitions": 2,
+                  "layers": [
+                    "B.Cu",
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "motion_gate_7",
+                  "from_pad": "U2.14",
+                  "to_pad": "R7.1",
+                  "net": "MOTION_GATE_DRIVE",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 79.351,
+                  "copper_track_length_mm": 78.9479,
+                  "via_transitions": 4,
+                  "layers": [
+                    "F.Cu",
+                    "In1.Cu"
+                  ]
+                },
+                {
+                  "name": "motion_gate_8",
+                  "from_pad": "U2.14",
+                  "to_pad": "R8.1",
+                  "net": "MOTION_GATE_DRIVE",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 43.0251,
+                  "copper_track_length_mm": 43.0251,
+                  "via_transitions": 4,
+                  "layers": [
+                    "F.Cu",
+                    "In1.Cu"
+                  ]
+                },
+                {
+                  "name": "motion_gate_9",
+                  "from_pad": "U2.14",
+                  "to_pad": "R9.1",
+                  "net": "MOTION_GATE_DRIVE",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 116.3305,
+                  "copper_track_length_mm": 116.3305,
+                  "via_transitions": 4,
+                  "layers": [
+                    "F.Cu",
+                    "In1.Cu"
+                  ]
+                },
+                {
+                  "name": "motion_gate_10",
+                  "from_pad": "U2.14",
+                  "to_pad": "R10.1",
+                  "net": "MOTION_GATE_DRIVE",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 79.0102,
+                  "copper_track_length_mm": 79.0102,
+                  "via_transitions": 5,
+                  "layers": [
+                    "F.Cu",
+                    "In1.Cu",
+                    "In2.Cu"
+                  ]
+                },
+                {
+                  "name": "local_gate_1",
+                  "from_pad": "R1.2",
+                  "to_pad": "Q1.1",
+                  "net": "Q1_G",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 6.0875,
+                  "copper_track_length_mm": 6.0875,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "local_gate_2",
+                  "from_pad": "R2.2",
+                  "to_pad": "Q2.1",
+                  "net": "Q2_G",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 6.0875,
+                  "copper_track_length_mm": 6.0875,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "local_gate_3",
+                  "from_pad": "R3.2",
+                  "to_pad": "Q3.1",
+                  "net": "Q3_G",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 6.0875,
+                  "copper_track_length_mm": 6.0875,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "local_gate_4",
+                  "from_pad": "R4.2",
+                  "to_pad": "Q4.1",
+                  "net": "Q4_G",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 7.9125,
+                  "copper_track_length_mm": 7.9125,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "local_gate_5",
+                  "from_pad": "R5.2",
+                  "to_pad": "Q5.1",
+                  "net": "Q5_G",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 7.9125,
+                  "copper_track_length_mm": 7.9125,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "local_gate_6",
+                  "from_pad": "R6.2",
+                  "to_pad": "Q6.1",
+                  "net": "Q6_G",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 7.9125,
+                  "copper_track_length_mm": 7.9125,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "local_gate_7",
+                  "from_pad": "R7.2",
+                  "to_pad": "Q7.1",
+                  "net": "Q7_G",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 6.0875,
+                  "copper_track_length_mm": 6.0875,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "local_gate_8",
+                  "from_pad": "R8.2",
+                  "to_pad": "Q8.1",
+                  "net": "Q8_G",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 6.0875,
+                  "copper_track_length_mm": 6.0875,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "local_gate_9",
+                  "from_pad": "R9.2",
+                  "to_pad": "Q9.1",
+                  "net": "Q9_G",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 7.9125,
+                  "copper_track_length_mm": 7.9125,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                },
+                {
+                  "name": "local_gate_10",
+                  "from_pad": "R10.2",
+                  "to_pad": "Q10.1",
+                  "net": "Q10_G",
+                  "path_found": true,
+                  "centerline_with_pad_leads_mm": 7.9125,
+                  "copper_track_length_mm": 7.9125,
+                  "via_transitions": 0,
+                  "layers": [
+                    "F.Cu"
+                  ]
+                }
+              ],
+              "total": 46,
+              "passed": 46,
+              "limitations": "Explicit centerlines and actual pad/via links only; excludes plane return paths and EM coupling."
+            },
+            "refill_and_native_pending": true,
+            "existing_copper_removed": 0
+          },
+          "at_utc": "2026-09-11T15:04:35.593734+00:00"
+        }
+      ],
+      "finished_utc": "2026-09-11T15:07:32.115512+00:00",
+      "label_id": "cycle-02",
+      "metrics": {
+        "opens": 126,
+        "counts": {
+          "connection_width": 5,
+          "track_dangling": 8,
+          "via_dangling": 9
+        },
+        "force": 244,
+        "critical": 46,
+        "pcb_sha256": "d6c44c6fb3233af09af3c62d060077a1e0b0a8a34e0e81eeabf495157b3843bc"
+      },
+      "progress": true,
+      "progress_reasons": [
+        "open connection reduction",
+        "critical path restored"
+      ],
+      "lost_paths": [],
+      "eligible": true
+    },
+    {
+      "number": 3,
+      "label": "Phase B: converter returns, required layer paths, reference stitches and neck repairs",
+      "started_utc": "2026-09-11T15:10:58.857401+00:00",
+      "status": "completed",
+      "actions": [
+        {
+          "label": "cycle-03-force",
+          "details": {
+            "input_sha256": "d6c44c6fb3233af09af3c62d060077a1e0b0a8a34e0e81eeabf495157b3843bc",
+            "output_sha256": "8ea7bbc00ea8d63aecf227b8f09b9344d27dd9a095561c08298336fc8102767a",
+            "recipes": [
+              {
+                "label": "Relocate local BATT_N vias without count/diameter reduction",
+                "adopted": true,
+                "moves": [
+                  {
+                    "uuid": "025bd32f-7df1-4ed3-b995-867b31184257",
+                    "from_mm": [
+                      23.2,
+                      143.8
+                    ],
+                    "to_mm": [
+                      25.9,
+                      144.7
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "09851232-c29f-4e3b-925e-cb324931a0b7",
+                    "from_mm": [
+                      21.4,
+                      142.0
+                    ],
+                    "to_mm": [
+                      18.7,
+                      142.9
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "12ceb369-6e15-44f3-b9ba-76b3b810310a",
+                    "from_mm": [
+                      21.4,
+                      140.2
+                    ],
+                    "to_mm": [
+                      18.7,
+                      141.1
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "30a002d5-7e72-4d89-8bb5-5b7c70f9fb9f",
+                    "from_mm": [
+                      23.2,
+                      142.0
+                    ],
+                    "to_mm": [
+                      25.9,
+                      142.9
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "618a9bed-5e94-42b7-9f6e-9e21b60bbed8",
+                    "from_mm": [
+                      21.4,
+                      143.8
+                    ],
+                    "to_mm": [
+                      18.7,
+                      144.7
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "af36d1c6-5e72-4b16-895f-b363d2548037",
+                    "from_mm": [
+                      23.2,
+                      145.6
+                    ],
+                    "to_mm": [
+                      25.9,
+                      146.5
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "c1aad38b-2e97-471f-b8d4-fe3f81a087f3",
+                    "from_mm": [
+                      23.2,
+                      140.2
+                    ],
+                    "to_mm": [
+                      25.9,
+                      141.1
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "fcc5136f-276c-49e3-8bf2-524c10e87a3c",
+                    "from_mm": [
+                      21.4,
+                      145.6
+                    ],
+                    "to_mm": [
+                      18.7,
+                      146.5
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  }
+                ]
+              },
+              {
+                "label": "PC 3A return",
+                "net": "PC_N",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        23.0,
+                        133.0
+                      ],
+                      [
+                        22,
+                        137
+                      ],
+                      [
+                        22,
+                        153
+                      ],
+                      [
+                        17,
+                        158
+                      ],
+                      [
+                        17,
+                        170.08
+                      ],
+                      [
+                        11.0,
+                        170.08
+                      ]
+                    ],
+                    "width_mm": 3,
+                    "layer": "B.Cu"
+                  }
+                ],
+                "vias": [],
+                "added_uuids": [
+                  "093941d2-ec3b-4fdb-a64f-c3c0f554d5f9",
+                  "76bfd3c0-4ed3-45b7-88d4-256cc2a4ff62",
+                  "4a084e5d-1317-46da-a469-4bbe9a884732",
+                  "16e78097-14cd-4459-846b-f294cea784b9",
+                  "2404ff60-f40e-4f35-bffd-48b9e4fb4936"
+                ]
+              },
+              {
+                "label": "Relocate local BATT_N vias without count/diameter reduction",
+                "adopted": true,
+                "moves": [
+                  {
+                    "uuid": "0734c64b-2873-405b-b8d2-29a1d4fe8e8a",
+                    "from_mm": [
+                      46.6,
+                      142.0
+                    ],
+                    "to_mm": [
+                      49.3,
+                      142.9
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "0ccafc2e-d334-4ef7-8642-9b2bde165da3",
+                    "from_mm": [
+                      44.8,
+                      145.6
+                    ],
+                    "to_mm": [
+                      42.1,
+                      146.5
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "0ce82f23-8472-46ec-afc7-bd7cc503ef7a",
+                    "from_mm": [
+                      46.6,
+                      149.2
+                    ],
+                    "to_mm": [
+                      49.3,
+                      150.1
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "405a7129-a107-4b32-bdc4-ff6f28f1f557",
+                    "from_mm": [
+                      46.6,
+                      140.2
+                    ],
+                    "to_mm": [
+                      49.3,
+                      141.1
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "5aa16063-5248-4768-b49d-e267ac1f920e",
+                    "from_mm": [
+                      46.6,
+                      147.4
+                    ],
+                    "to_mm": [
+                      49.3,
+                      148.3
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "7ba171ae-f3e9-48c7-971f-423302a169d8",
+                    "from_mm": [
+                      46.6,
+                      143.8
+                    ],
+                    "to_mm": [
+                      49.3,
+                      144.7
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "9e0454e6-9d5e-47ed-8c60-846bf5b4f7be",
+                    "from_mm": [
+                      44.8,
+                      140.2
+                    ],
+                    "to_mm": [
+                      42.1,
+                      141.1
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "a5ce9eef-38ef-4f5d-87d8-46a877d563b4",
+                    "from_mm": [
+                      44.8,
+                      147.4
+                    ],
+                    "to_mm": [
+                      42.1,
+                      148.3
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "cb5d0b6f-d5a6-438c-9ff6-635cd035e3ea",
+                    "from_mm": [
+                      46.6,
+                      145.6
+                    ],
+                    "to_mm": [
+                      49.3,
+                      146.5
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "e56922d9-69ae-4fcd-9f66-2a51be8f0f54",
+                    "from_mm": [
+                      44.8,
+                      143.8
+                    ],
+                    "to_mm": [
+                      42.1,
+                      144.7
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "f29429f4-7325-4be7-aa91-2266f5c9478d",
+                    "from_mm": [
+                      44.8,
+                      142.0
+                    ],
+                    "to_mm": [
+                      42.1,
+                      142.9
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  },
+                  {
+                    "uuid": "f5066309-faab-4aa9-bec3-acc42b83157c",
+                    "from_mm": [
+                      44.8,
+                      149.2
+                    ],
+                    "to_mm": [
+                      42.1,
+                      150.1
+                    ],
+                    "diameter_mm": 0.8,
+                    "drill_mm": 0.4
+                  }
+                ]
+              },
+              {
+                "label": "Logic converter 2A return",
+                "net": "LOGIC_BUCK_N",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        46.0,
+                        133.0
+                      ],
+                      [
+                        46,
+                        152.5
+                      ],
+                      [
+                        17,
+                        152.5
+                      ],
+                      [
+                        17,
+                        197.08
+                      ],
+                      [
+                        11.0,
+                        197.08
+                      ]
+                    ],
+                    "width_mm": 3,
+                    "layer": "F.Cu"
+                  }
+                ],
+                "vias": [],
+                "added_uuids": [
+                  "70d08d87-b7d4-4c5b-bdf2-ffe98ec65f03",
+                  "887eb1c6-97ad-4f30-b51a-f7402737325f",
+                  "14ab928d-7fef-47ac-a62f-edd1fed3edc2",
+                  "77741326-b60b-4f5c-bcc9-092a816ae1ab"
+                ]
+              },
+              {
+                "label": "Drive F.Cu parallel to retained 8mm B.Cu",
+                "net": "DRIVE_N",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        135.0,
+                        139.0
+                      ],
+                      [
+                        135,
+                        153
+                      ],
+                      [
+                        260,
+                        153
+                      ],
+                      [
+                        264.0,
+                        153.92
+                      ]
+                    ],
+                    "width_mm": 4,
+                    "layer": "F.Cu"
+                  }
+                ],
+                "vias": [],
+                "added_uuids": [
+                  "0b8c819b-169f-4540-b69e-b121d609fbaf",
+                  "39f63bbb-21b4-421a-8f65-e023c8268551",
+                  "e8a7225f-82fe-4bab-a512-fef8d71f2d44"
+                ]
+              },
+              {
+                "label": "In1 lift crossing layer jump MOTION_GATE_EN",
+                "net": "MOTION_GATE_EN",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        175.1488,
+                        157.3594
+                      ],
+                      [
+                        175.1488,
+                        156.0
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        175.1488,
+                        156.0
+                      ],
+                      [
+                        175.1488,
+                        146.5
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In2.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        175.1488,
+                        146.5
+                      ],
+                      [
+                        175.1488,
+                        105.2506
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  }
+                ],
+                "vias": [
+                  {
+                    "xy_mm": [
+                      175.1488,
+                      156.0
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      175.1488,
+                      146.5
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  }
+                ],
+                "added_uuids": [
+                  "1fb86d08-d279-4f7d-80d6-8d21d10bc38b",
+                  "b2019c65-a4e2-460c-b28d-f3e2678c0176",
+                  "aa87c8c8-0cda-432f-9670-6ce99909696a",
+                  "345743d0-4e6a-4557-8112-569f05076fee",
+                  "90cea0e4-ffdb-46d1-a347-d2abf519e0ab"
+                ],
+                "removed_original_uuids": [
+                  "38582090-c9dc-4f30-9ba5-52e984809c17"
+                ]
+              },
+              {
+                "label": "In1 lift crossing layer jump V3V3",
+                "net": "V3V3",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        178.7122,
+                        134.4998
+                      ],
+                      [
+                        178.7122,
+                        146.5
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        178.7122,
+                        146.5
+                      ],
+                      [
+                        178.7122,
+                        156.0
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In2.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        178.7122,
+                        156.0
+                      ],
+                      [
+                        178.7122,
+                        156.1332
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  }
+                ],
+                "vias": [
+                  {
+                    "xy_mm": [
+                      178.7122,
+                      146.5
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      178.7122,
+                      156.0
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  }
+                ],
+                "added_uuids": [
+                  "a61b4bb7-d892-4f39-bbd8-b500fba422ec",
+                  "36e8c392-f250-4e64-ad30-7fa0f8da7e73",
+                  "b335a62a-377b-4e57-a799-5142f19ccc0f",
+                  "4bb1fa9a-5f1f-491b-8a15-85a4e193e661",
+                  "75db1773-6b78-434e-85fa-f6756f7aabb0"
+                ],
+                "removed_original_uuids": [
+                  "f1adf193-8e4d-4c00-9c2b-d4322e9a7d5d"
+                ]
+              },
+              {
+                "label": "In1 lift crossing layer jump MOTION_IMON_INPUT",
+                "net": "MOTION_IMON_INPUT",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        198.3061,
+                        121.5415
+                      ],
+                      [
+                        198.3061,
+                        146.5
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        198.3061,
+                        146.5
+                      ],
+                      [
+                        198.3061,
+                        156.0
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In2.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        198.3061,
+                        156.0
+                      ],
+                      [
+                        198.3061,
+                        158.9517
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  }
+                ],
+                "vias": [
+                  {
+                    "xy_mm": [
+                      198.3061,
+                      146.5
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      198.3061,
+                      156.0
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  }
+                ],
+                "added_uuids": [
+                  "7a9bb451-e23c-4d27-826f-ca8d73b7b5ef",
+                  "510a1681-2535-4de8-872a-ba18c6b10225",
+                  "224499a0-8613-4194-a7f7-7f1f997e55ec",
+                  "724834dc-fbb4-4c91-aa41-ec5a19606b1d",
+                  "24b4be98-bf26-4ed7-bb59-e5b77091e8f2"
+                ],
+                "removed_original_uuids": [
+                  "dd8d34b6-813f-46eb-99dc-6062d93b20ab"
+                ]
+              },
+              {
+                "label": "In1 lift crossing layer jump MOTION_FLT_N",
+                "net": "MOTION_FLT_N",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        204.0479,
+                        163.8302
+                      ],
+                      [
+                        204.0479,
+                        156.0
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        204.0479,
+                        156.0
+                      ],
+                      [
+                        204.0479,
+                        146.5
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In2.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        204.0479,
+                        146.5
+                      ],
+                      [
+                        204.0479,
+                        126.4324
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  }
+                ],
+                "vias": [
+                  {
+                    "xy_mm": [
+                      204.0479,
+                      156.0
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      204.0479,
+                      146.5
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  }
+                ],
+                "added_uuids": [
+                  "e67d276a-ad8e-464e-b2f0-0c1bf0898909",
+                  "9ca17ad3-e16a-4bd3-86d3-9435c33d36f0",
+                  "297abdf6-46f4-4349-a46b-e7299a17cdcf",
+                  "c451f4f5-cc57-4c50-a5bb-7e2b4adadf3f",
+                  "a3d0951e-a79d-4990-af74-0b9d11dc73dd"
+                ],
+                "removed_original_uuids": [
+                  "ecb291a9-e5af-47fd-9b17-b0cfb12ac7ea"
+                ]
+              },
+              {
+                "label": "In1 lift crossing layer jump MOTION_TEMP_FLT_N",
+                "net": "MOTION_TEMP_FLT_N",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        204.8556,
+                        125.8292
+                      ],
+                      [
+                        204.8556,
+                        146.5
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        204.8556,
+                        146.5
+                      ],
+                      [
+                        204.8556,
+                        156.0
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In2.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        204.8556,
+                        156.0
+                      ],
+                      [
+                        204.8556,
+                        163.7705
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  }
+                ],
+                "vias": [
+                  {
+                    "xy_mm": [
+                      204.8556,
+                      146.5
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      204.8556,
+                      156.0
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  }
+                ],
+                "added_uuids": [
+                  "20528be8-159c-4b4b-b0e8-e93769109506",
+                  "ce02192b-3760-4c48-b914-edba93bb891f",
+                  "6c029ebe-0cb4-432c-9120-b6bb9a70637c",
+                  "70a0da26-4745-4a34-8f84-a038819b65b7",
+                  "44818d6d-9796-40c3-ab76-2b4f6f213d63"
+                ],
+                "removed_original_uuids": [
+                  "8af72e67-0e88-40c1-bc5d-957e9c87803b"
+                ]
+              },
+              {
+                "label": "In1 lift crossing layer jump TEMP_MOTION_ADC",
+                "net": "TEMP_MOTION_ADC",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        213.8401,
+                        162.2318
+                      ],
+                      [
+                        213.8401,
+                        156.0
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        213.8401,
+                        156.0
+                      ],
+                      [
+                        213.8401,
+                        146.5
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In2.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        213.8401,
+                        146.5
+                      ],
+                      [
+                        213.8401,
+                        91.3798
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  }
+                ],
+                "vias": [
+                  {
+                    "xy_mm": [
+                      213.8401,
+                      156.0
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      213.8401,
+                      146.5
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  }
+                ],
+                "added_uuids": [
+                  "0106fe99-66ea-4656-89ba-a78e6bb4031c",
+                  "e7d7e58c-1609-427c-b14b-9f959f2008f0",
+                  "a9069f70-8457-4d05-b635-005c41fc4a2f",
+                  "1413fe8d-e63e-475c-801d-b156a72fa18f",
+                  "036dbb63-ea54-4858-8f0e-e4ade396f29b"
+                ],
+                "removed_original_uuids": [
+                  "824647f0-4328-4cd9-a7b5-4bfef46dbe46"
+                ]
+              },
+              {
+                "label": "In1 lift crossing layer jump LOGIC_GND",
+                "net": "LOGIC_GND",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        220.8618,
+                        166.5009
+                      ],
+                      [
+                        220.8618,
+                        156.0
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        220.8618,
+                        156.0
+                      ],
+                      [
+                        220.8618,
+                        153.9013
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In2.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        220.8618,
+                        153.9013
+                      ],
+                      [
+                        219.9535,
+                        152.993
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In2.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        219.9535,
+                        152.993
+                      ],
+                      [
+                        219.9535,
+                        146.5
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In2.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        219.9535,
+                        146.5
+                      ],
+                      [
+                        219.9535,
+                        119.9873
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  }
+                ],
+                "vias": [
+                  {
+                    "xy_mm": [
+                      220.8618,
+                      156.0
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      219.9535,
+                      146.5
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  }
+                ],
+                "added_uuids": [
+                  "cc1e55c5-0238-4d3d-b87b-812eef6586ad",
+                  "185e256d-ba03-4c77-8ab0-e9b673ddf3ea",
+                  "70d018f4-94ee-4c01-ac26-fa6ab52d1538",
+                  "60c7d40b-6840-40af-bc16-57626d3d87b8",
+                  "0139df3d-5085-425a-8f05-a0e4989f13fe",
+                  "bea71f17-0196-4d74-a0b3-f670fe925aee",
+                  "240b949c-f65c-4101-8752-5db65a85700e"
+                ],
+                "removed_original_uuids": [
+                  "26884311-5c34-46d0-a3db-0d6a8892395f",
+                  "34d7b6fa-9fbf-4528-9204-ceb8f51ade1e",
+                  "988c9551-0ca3-4413-b498-48c875b44395"
+                ]
+              },
+              {
+                "label": "In1 lift crossing layer jump CHOP_ACTIVE_N",
+                "net": "CHOP_ACTIVE_N",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        222.0964,
+                        121.4365
+                      ],
+                      [
+                        222.0964,
+                        146.5
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        222.0964,
+                        146.5
+                      ],
+                      [
+                        222.0964,
+                        156.0
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In2.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        222.0964,
+                        156.0
+                      ],
+                      [
+                        222.0964,
+                        160.8912
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  }
+                ],
+                "vias": [
+                  {
+                    "xy_mm": [
+                      222.0964,
+                      146.5
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      222.0964,
+                      156.0
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  }
+                ],
+                "added_uuids": [
+                  "af81dd2f-a9a9-4556-ba04-86198912e04e",
+                  "7063ba9b-421c-4c80-a669-a5f48de03efb",
+                  "591282e6-d506-4534-98cc-ebf2d1fd78c3",
+                  "0d8a6c6a-1162-47b9-97fa-1fdf23f8bb04",
+                  "7acb7145-804a-4426-9087-66ecc96c1ea1"
+                ],
+                "removed_original_uuids": [
+                  "f632ddb1-5b93-4e0d-8edb-e4bcca13f56b"
+                ]
+              },
+              {
+                "label": "In1 lift crossing layer jump INA_ALERT_N",
+                "net": "INA_ALERT_N",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        223.6985,
+                        157.7677
+                      ],
+                      [
+                        223.6985,
+                        156.0
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        223.6985,
+                        156.0
+                      ],
+                      [
+                        223.6985,
+                        146.5
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In2.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        223.6985,
+                        146.5
+                      ],
+                      [
+                        223.6985,
+                        34.9143
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  }
+                ],
+                "vias": [
+                  {
+                    "xy_mm": [
+                      223.6985,
+                      156.0
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      223.6985,
+                      146.5
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  }
+                ],
+                "added_uuids": [
+                  "85dbec85-4f8e-47bf-9436-51acf63f67e9",
+                  "301abade-3da3-4934-a6b2-9b0774f0afaf",
+                  "80b0a868-5577-4329-bc21-4cb0d899935e",
+                  "689a658b-2e01-4641-91a1-159edb3ed91e",
+                  "30958335-02fb-482c-a1f4-5ef5e3388bdc"
+                ],
+                "removed_original_uuids": [
+                  "13e43cf7-683c-4ba0-bc63-61962d64ed19"
+                ]
+              },
+              {
+                "label": "In1 lift crossing layer jump CHOP_FAULT_N",
+                "net": "CHOP_FAULT_N",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        225.4121,
+                        156.9049
+                      ],
+                      [
+                        225.4121,
+                        156.0
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        225.4121,
+                        156.0
+                      ],
+                      [
+                        225.4121,
+                        146.5
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In2.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        225.4121,
+                        146.5
+                      ],
+                      [
+                        225.4121,
+                        135.5546
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  }
+                ],
+                "vias": [
+                  {
+                    "xy_mm": [
+                      225.4121,
+                      156.0
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      225.4121,
+                      146.5
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  }
+                ],
+                "added_uuids": [
+                  "b2e55bc6-6930-4014-866e-4b98ff7c21e3",
+                  "a812e555-16b8-4fb9-8ace-dbf6bfc3a2bb",
+                  "a4f09247-4cef-43e7-a679-553507a2907a",
+                  "beda9632-fae3-4cb2-a594-9278f113ae21",
+                  "8b606639-1a5d-458f-a982-23f70eca2d59"
+                ],
+                "removed_original_uuids": [
+                  "8379f8f0-e645-4083-be45-e0dd9ecbbccd"
+                ]
+              },
+              {
+                "label": "In1 lift crossing layer jump CHOP_TEMP_ADC",
+                "net": "CHOP_TEMP_ADC",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        252.6508,
+                        129.6431
+                      ],
+                      [
+                        252.6508,
+                        146.5
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        252.6508,
+                        146.5
+                      ],
+                      [
+                        252.6508,
+                        156.0
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In2.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        252.6508,
+                        156.0
+                      ],
+                      [
+                        252.6508,
+                        193.8167
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In1.Cu"
+                  }
+                ],
+                "vias": [
+                  {
+                    "xy_mm": [
+                      252.6508,
+                      146.5
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  },
+                  {
+                    "xy_mm": [
+                      252.6508,
+                      156.0
+                    ],
+                    "diameter_mm": 0.6,
+                    "drill_mm": 0.3
+                  }
+                ],
+                "added_uuids": [
+                  "30a72058-17e3-4308-824c-882f13f8e83d",
+                  "d05d2bd2-5f43-4f86-9c70-b8e819c6ca16",
+                  "9c47de44-340e-4a3d-a65a-620161f44bb9",
+                  "30faae3f-4bad-424a-9b08-05ee62385890",
+                  "7e75ad84-94bc-4f00-baee-8050094ef1ff"
+                ],
+                "removed_original_uuids": [
+                  "9e10e097-b351-40a6-aebc-d231ddfe9e1c"
+                ]
+              },
+              {
+                "label": "Lift required In1.Cu corridor",
+                "net": "LIFT_N",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        159.0,
+                        139.0
+                      ],
+                      [
+                        159,
+                        150
+                      ],
+                      [
+                        257,
+                        150
+                      ],
+                      [
+                        257,
+                        159
+                      ]
+                    ],
+                    "width_mm": 4,
+                    "layer": "In1.Cu"
+                  }
+                ],
+                "vias": [],
+                "added_uuids": [
+                  "3a610106-3119-4fd3-b77b-1432bd823b2e",
+                  "b5ecfbf7-2796-414b-98e8-a1a21389a04e",
+                  "74e36dfc-e398-4717-b869-ad7240ee0eee"
+                ]
+              },
+              {
+                "label": "5V return 6mm spine and short 3mm pickups",
+                "net": "LOGIC_5V_N",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        48.08,
+                        199.0
+                      ],
+                      [
+                        48.08,
+                        207
+                      ]
+                    ],
+                    "width_mm": 3,
+                    "layer": "B.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        48.08,
+                        207
+                      ],
+                      [
+                        137,
+                        207
+                      ]
+                    ],
+                    "width_mm": 6,
+                    "layer": "B.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        120.16,
+                        199.0
+                      ],
+                      [
+                        120.16,
+                        207
+                      ]
+                    ],
+                    "width_mm": 3,
+                    "layer": "B.Cu"
+                  },
+                  {
+                    "points_mm": [
+                      [
+                        135.0,
+                        197.0
+                      ],
+                      [
+                        137,
+                        197
+                      ],
+                      [
+                        137,
+                        207
+                      ]
+                    ],
+                    "width_mm": 3,
+                    "layer": "B.Cu"
+                  }
+                ],
+                "vias": [],
+                "added_uuids": [
+                  "6f03b22e-a00b-4f04-8741-f49d2f84dd72",
+                  "8d6f1010-b4af-4f34-917c-829490082a60",
+                  "94a550d8-f999-4210-86fd-21c13e2ebb98",
+                  "bdf1b58c-450f-4030-a461-9c9fed6bbe3d",
+                  "c201d249-d054-4758-9ce2-e338e5ed219b"
+                ]
+              },
+              {
+                "label": "U11 local ground stitches",
+                "net": "LOGIC_GND",
+                "adopted": true,
+                "blocked": [],
+                "parts": [
+                  {
+                    "points_mm": [
+                      [
+                        22.9,
+                        21.5
+                      ],
+                      [
+                        23.9,
+                        22
+                      ],
+                      [
+                        25.6504,
+                        22.1019
+                      ]
+                    ],
+                    "width_mm": 0.2,
+                    "layer": "In2.Cu"
+                  }
+                ],
+                "vias": [],
+                "added_uuids": [
+                  "ed3df271-c003-4fd8-94c9-e174084d55ee",
+                  "8bea272b-9819-4d15-adb7-2ac6f1bcd8bf"
+                ]
+              }
+            ],
+            "refill_and_native_pending": true
+          },
+          "at_utc": "2026-09-11T15:11:01.059959+00:00"
+        },
+        {
+          "label": "cycle-03-necks",
+          "details": [
+            {
+              "label": "ARM_L_N neck at CHOP_DRIVE_H via",
+              "adopted": true,
+              "net": "CHOP_DRIVE_H",
+              "via_uuid": "d868163d-b677-46bc-ba6f-36f1b6ea48ba",
+              "from_mm": [
+                231.7335,
+                93.8937
+              ],
+              "to_mm": [
+                231.3,
+                93.8937
+              ],
+              "preserved_track_uuids": [
+                "b28071ad-8b94-418e-aecb-e4459faa72d1",
+                "9b164103-f7c9-40b8-9b8e-641c4981df6d"
+              ]
+            },
+            {
+              "label": "SYS_BUS_P C8 neck at MOTION_ISCP via",
+              "adopted": true,
+              "net": "MOTION_ISCP",
+              "via_uuid": "dd278165-8c7a-4b1e-8db3-7b5629778e3a",
+              "from_mm": [
+                144.9,
+                83.7
+              ],
+              "to_mm": [
+                144.9,
+                84.2
+              ],
+              "preserved_track_uuids": [
+                "4eb24476-9b5a-4f3b-b344-9eb89f4c90c7",
+                "016cef09-cef5-4252-bcfc-5f1fbcd6f4b5"
+              ]
+            },
+            {
+              "label": "V3V3 measurement supply off main force array",
+              "net": "V3V3",
+              "adopted": true,
+              "blocked": [],
+              "parts": [
+                {
+                  "points_mm": [
+                    [
+                      68.0875,
+                      54.0
+                    ],
+                    [
+                      67.7,
+                      52.9
+                    ]
+                  ],
+                  "width_mm": 0.2,
+                  "layer": "F.Cu"
+                },
+                {
+                  "points_mm": [
+                    [
+                      67.7,
+                      52.9
+                    ],
+                    [
+                      66.7892,
+                      52.7017
+                    ],
+                    [
+                      65.1535,
+                      52.7017
+                    ],
+                    [
+                      64.1597,
+                      51.7079
+                    ]
+                  ],
+                  "width_mm": 0.2,
+                  "layer": "In2.Cu"
+                }
+              ],
+              "vias": [
+                {
+                  "xy_mm": [
+                    67.7,
+                    52.9
+                  ],
+                  "diameter_mm": 0.6,
+                  "drill_mm": 0.3
+                }
+              ],
+              "added_uuids": [
+                "7aa4ef46-45e1-4943-bc48-36fb03df44e4",
+                "b67dc030-750e-4d17-a0fc-4afad31bc919",
+                "cd0149f9-698e-40c3-86ab-17a2fe00363f",
+                "b4dc7bd8-2e35-45fe-933a-05a2582e3a60",
+                "b0ecb3f6-adc0-4b3d-8130-20718033cadf"
+              ],
+              "removed_original_uuids": [
+                "90cd6fa2-2aed-4139-a1d4-11ae910db61f",
+                "c636fe24-b653-44f9-824d-e067fef8da26",
+                "de37dec7-4d5d-43b5-a003-d2ce49826f4e"
+              ]
+            },
+            {
+              "label": "CHOP_FB transfer clear of C300 force pickup",
+              "net": "CHOP_FB",
+              "adopted": true,
+              "blocked": [],
+              "parts": [
+                {
+                  "points_mm": [
+                    [
+                      188.2973,
+                      92.4712
+                    ],
+                    [
+                      188.2973,
+                      92.8
+                    ],
+                    [
+                      188,
+                      92.8
+                    ]
+                  ],
+                  "width_mm": 0.2,
+                  "layer": "F.Cu"
+                },
+                {
+                  "points_mm": [
+                    [
+                      188,
+                      92.8
+                    ],
+                    [
+                      192.9093,
+                      96.0446
+                    ]
+                  ],
+                  "width_mm": 0.2,
+                  "layer": "In2.Cu"
+                }
+              ],
+              "vias": [
+                {
+                  "xy_mm": [
+                    188,
+                    92.8
+                  ],
+                  "diameter_mm": 0.6,
+                  "drill_mm": 0.3
+                }
+              ],
+              "added_uuids": [
+                "dc91163e-4f31-49ac-b816-b10b32a3404c",
+                "d7761114-6846-41c5-ac61-c16caa974502",
+                "acb689d4-430c-4dd7-a74a-2ba1047502ad",
+                "c487fe5e-030e-4d27-be6b-df28333a1d93"
+              ],
+              "removed_original_uuids": [
+                "3860104b-05c5-4654-b24a-71104aeb18ad",
+                "88dd3a13-41a1-49ec-a17e-d2bc426ea2e4",
+                "9796ddb1-9420-4753-869b-a1063246cc7a",
+                "98953e4d-7fb0-4074-b0fb-25874338a946",
+                "d78bec86-7ba6-4094-ba54-ace6faf7bcfd"
+              ]
+            },
+            {
+              "label": "CHOP_ACTIVE_N off battery via field",
+              "net": "CHOP_ACTIVE_N",
+              "adopted": true,
+              "blocked": [],
+              "parts": [
+                {
+                  "points_mm": [
+                    [
+                      222.125,
+                      113.865
+                    ],
+                    [
+                      223,
+                      113.865
+                    ]
+                  ],
+                  "width_mm": 0.2,
+                  "layer": "F.Cu"
+                },
+                {
+                  "points_mm": [
+                    [
+                      229.0,
+                      119.0
+                    ],
+                    [
+                      230.3,
+                      119
+                    ]
+                  ],
+                  "width_mm": 0.2,
+                  "layer": "F.Cu"
+                },
+                {
+                  "points_mm": [
+                    [
+                      223,
+                      113.865
+                    ],
+                    [
+                      223.5,
+                      114.365
+                    ],
+                    [
+                      223.5,
+                      120.8
+                    ],
+                    [
+                      230.3,
+                      120.8
+                    ],
+                    [
+                      230.3,
+                      119
+                    ]
+                  ],
+                  "width_mm": 0.2,
+                  "layer": "In2.Cu"
+                }
+              ],
+              "vias": [
+                {
+                  "xy_mm": [
+                    223,
+                    113.865
+                  ],
+                  "diameter_mm": 0.6,
+                  "drill_mm": 0.3
+                },
+                {
+                  "xy_mm": [
+                    230.3,
+                    119
+                  ],
+                  "diameter_mm": 0.6,
+                  "drill_mm": 0.3
+                }
+              ],
+              "added_uuids": [
+                "45ef34ba-3f65-4b5c-ab66-396d550890ae",
+                "85a5e39f-1a7e-4b9d-8b9f-95bfe97b9231",
+                "da3d244c-5722-4422-b15e-526f2ea19474",
+                "6f86098e-a3d6-4633-b447-fe8ee9550da7",
+                "f90370e2-1b0a-4fbd-84ab-a5fd7e13c0b0",
+                "ac84c4fa-56a2-4391-b4aa-8446b48f985f",
+                "78877dec-8a01-4b0c-a3c3-9ee92b22af89",
+                "e8358ba6-bdf8-435e-80b0-21446983941c"
+              ],
+              "removed_original_uuids": [
+                "3dbb3960-e227-462d-b4cd-1d63fa7b75a2",
+                "66b94d4e-8d7d-4b27-b510-28513e25b991",
+                "80b89755-e63a-4a4c-b39a-360f587d4ef5",
+                "a92f24c0-6caa-442b-bce2-7b825d482dff",
+                "e40613ca-8e54-41a2-97da-4d0f68945cba",
+                "ec13b002-ee6a-40b8-be00-b2c12c3995e7"
+              ]
+            }
+          ],
+          "at_utc": "2026-09-11T15:13:09.589313+00:00"
+        },
+        {
+          "label": "cycle-03-temp-neck",
+          "details": [
+            {
+              "label": "TEMP_MOTION_ADC off motion force array",
+              "net": "TEMP_MOTION_ADC",
+              "adopted": true,
+              "blocked": [],
+              "parts": [
+                {
+                  "points_mm": [
+                    [
+                      164,
+                      65.825
+                    ],
+                    [
+                      163,
+                      65.825
+                    ]
+                  ],
+                  "width_mm": 0.2,
+                  "layer": "F.Cu"
+                },
+                {
+                  "points_mm": [
+                    [
+                      163,
+                      65.825
+                    ],
+                    [
+                      163,
+                      70.4
+                    ],
+                    [
+                      162.6,
+                      70.8
+                    ],
+                    [
+                      162.6,
+                      71.6
+                    ],
+                    [
+                      163,
+                      72
+                    ],
+                    [
+                      163,
+                      77.3367
+                    ],
+                    [
+                      163.9119,
+                      78.2486
+                    ]
+                  ],
+                  "width_mm": 0.2,
+                  "layer": "In1.Cu"
+                }
+              ],
+              "vias": [
+                {
+                  "xy_mm": [
+                    163,
+                    65.825
+                  ],
+                  "diameter_mm": 0.6,
+                  "drill_mm": 0.3
+                }
+              ],
+              "added_uuids": [
+                "6d713da9-6654-4a52-9ea8-1ddf2dd78300",
+                "61d791a6-d82c-47c2-89da-38fc3474f58d",
+                "97a9ea1b-cddc-43fb-b0ab-e3f66bb1af16",
+                "b56dbd92-fc49-4a72-abf9-088b4f107218",
+                "a537518b-5004-4621-a8ec-238c33594a20",
+                "6a5391a1-e85b-4079-893d-1333202626aa",
+                "a9be9a72-4a33-4b36-a7a1-1e294cfadbe2",
+                "d614160d-5531-4a8c-954d-818d418343ad"
+              ],
+              "removed_original_uuids": [
+                "11524797-cc58-49bd-bb3a-106207c55a59",
+                "7bee2f84-1f3b-480f-bbbc-145dd1d3096f",
+                "a6bed821-2884-4e2c-ac6a-12b4c3724bbc",
+                "be3823c8-b7e2-4af9-b2cc-7d230944b587",
+                "c75181ea-5647-4a91-befb-56e54d6872cb",
+                "e171614d-1a30-4314-b18f-f1e567dd56ad"
+              ]
+            }
+          ],
+          "at_utc": "2026-09-11T15:14:29.883520+00:00"
+        }
+      ],
+      "finished_utc": "2026-09-11T15:16:09.149890+00:00",
+      "label_id": "cycle-03",
+      "metrics": {
+        "opens": 122,
+        "counts": {
+          "connection_width": 9,
+          "track_dangling": 8,
+          "via_dangling": 7,
+          "zones_intersect": 27
+        },
+        "force": 246,
+        "critical": 46,
+        "pcb_sha256": "5a395e051ded0caf7cb3bb973a2647e8ecf0f9aa965727157910085bbdc09c6b"
+      },
+      "progress": false,
+      "progress_reasons": [
+        "required force path restored"
+      ],
+      "lost_paths": [
+        {
+          "net": "LIFT_N",
+          "layer": "In2.Cu",
+          "from_pad": "J8.2",
+          "to_pad": "NT4.1",
+          "passed": true
+        }
+      ],
+      "eligible": false
+    },
+    {
+      "number": 4,
+      "label": "Correct same-net zone unions and restore lost lift In2 path; final CHOP_DRIVE_H relocation",
+      "started_utc": "2026-09-11T15:21:09.005618+00:00",
+      "status": "completed",
+      "actions": [
+        {
+          "label": "cycle-04-corrections",
+          "details": [
+            {
+              "label": "Union overlapping same-net return contours",
+              "adopted": true,
+              "nets": [
+                "LOGIC_BUCK_N",
+                "LOGIC_5V_N",
+                "PC_N"
+              ],
+              "removed_redundant_zone_uuids": [
+                "1676310b-efb3-4b08-a24b-11c193dfe677",
+                "3443b47b-1ac6-4335-a314-4a5bb8821d55",
+                "6a07b703-b08b-4023-ae31-2254686bacb4",
+                "9e57f951-a5ce-4a79-ab33-1d7417f3cd0a",
+                "a0d7064f-cdf6-4294-8711-5ffdbeee4b81",
+                "a46e165b-6b2a-4fae-af60-f1c2644f336c",
+                "754df9eb-9ca7-4103-b012-fb1693824c11",
+                "7808af27-02f5-4f80-bf3f-e7132f39316b",
+                "9f377cd3-cd9e-4d09-ab72-cf195a8b386c",
+                "b1056fe0-81ec-42f2-ab20-51b04a8ca110",
+                "e1b9d163-8c14-4793-87cb-ceac323f64ae",
+                "4f6a2828-c6c2-4ee9-9aef-753542ef7255",
+                "63721f1b-4ac6-461c-8dc5-c1d514e9e3b4",
+                "8484261d-f98a-4d22-8c9c-cd8f47cf8109",
+                "8c931942-a5c3-458c-aeec-15ab25e218dd",
+                "ac5f3895-e2ae-4b34-b92f-47bcf71e71a0",
+                "acfedf96-ad65-47f5-a8e0-ca9b90caf6fe",
+                "b31f1497-7c69-4e75-9e75-4318daec321b",
+                "f301ddde-7df1-46ef-a00a-d15b764da561"
+              ],
+              "no_priority_or_rule_change": true
+            },
+            {
+              "label": "V3V3 jump preserves lift In2 bypass",
+              "net": "V3V3",
+              "adopted": true,
+              "blocked": [],
+              "parts": [
+                {
+                  "points_mm": [
+                    [
+                      178.7122,
+                      146.5
+                    ],
+                    [
+                      178.7122,
+                      156.1332
+                    ],
+                    [
+                      180.8797,
+                      158.3007
+                    ]
+                  ],
+                  "width_mm": 0.2,
+                  "layer": "B.Cu"
+                }
+              ],
+              "vias": [],
+              "added_uuids": [
+                "f1319721-9813-4f13-8a9f-e2ce4bb7992c",
+                "74f371e2-459c-44d2-94cb-9745d8fa5b18"
+              ],
+              "removed_original_or_cycle03_uuids": [
+                "75db1773-6b78-434e-85fa-f6756f7aabb0",
+                "7d7615c6-1c27-4097-99dc-145a7d10b940",
+                "b335a62a-377b-4e57-a799-5142f19ccc0f",
+                "36e8c392-f250-4e64-ad30-7fa0f8da7e73"
+              ]
+            },
+            {
+              "label": "ARM_L_N neck at CHOP_DRIVE_H via",
+              "adopted": true,
+              "net": "CHOP_DRIVE_H",
+              "via_uuid": "d868163d-b677-46bc-ba6f-36f1b6ea48ba",
+              "from_mm": [
+                231.3,
+                93.8937
+              ],
+              "to_mm": [
+                229.5,
+                93.8937
+              ],
+              "preserved_track_uuids": [
+                "b28071ad-8b94-418e-aecb-e4459faa72d1",
+                "9b164103-f7c9-40b8-9b8e-641c4981df6d"
+              ]
+            }
+          ],
+          "at_utc": "2026-09-11T15:21:11.661458+00:00"
+        }
+      ],
+      "invalid_native_setup": {
+        "label": "cycle-04",
+        "cause": "KiCad LoadBoard of scratch filename without sibling project caused SaveBoard to serialize defaults into active .kicad_pro. Native result and first geometry audit are invalid as acceptance evidence.",
+        "restored_exact_project_sha256": "c9cc425f7aa83b06e02f5f32c3d2ef97694997c3641e2f4b1984834f6e09b350",
+        "repeat_scope": "Restore identical project inputs and refill/recheck without additional routing or placement edits."
+      },
+      "finished_utc": "2026-09-11T15:27:35.490998+00:00",
+      "label_id": "cycle-04-verified",
+      "metrics": {
+        "opens": 122,
+        "counts": {
+          "connection_width": 3,
+          "track_dangling": 8,
+          "via_dangling": 7
+        },
+        "force": 246,
+        "critical": 46,
+        "pcb_sha256": "dcf72a5233bb9acdccc52c93792eb18fa6aa42db3ac31d233452e4a04b289144"
+      },
+      "progress": false,
+      "progress_reasons": [
+        "required force path restored",
+        "DRC/dangling count reduction"
+      ],
+      "lost_paths": [
+        {
+          "net": "LIFT_N",
+          "layer": "In2.Cu",
+          "from_pad": "J8.2",
+          "to_pad": "NT4.1",
+          "passed": true
+        }
+      ],
+      "eligible": false
+    }
+  ],
+  "native_calls": [
+    {
+      "kind": "erc",
+      "label": "cycle-01",
+      "started_utc": "2026-09-11T14:58:25.895217+00:00",
+      "command": [
+        "C:\\Program Files\\KiCad\\10.0\\bin\\kicad-cli.exe",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\finish-280x220\\cycle-01-erc.json",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\kicad\\HomeMy_PMU_RevA_280x220.kicad_sch"
+      ],
+      "pcb_sha256": "336da2935fae0c6010b44226a2db2255716c3ef720f21f9bc9577b24be88d836",
+      "exit_code": 0,
+      "seconds": 1.172,
+      "report_sha256": "414d5600bc7b089e4559f1c975f5c014de9b3e9d8889f451181372347fdc41da"
+    },
+    {
+      "kind": "drc",
+      "label": "cycle-01",
+      "started_utc": "2026-09-11T14:58:27.070682+00:00",
+      "command": [
+        "C:\\Program Files\\KiCad\\10.0\\bin\\kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\finish-280x220\\cycle-01-drc.json",
+        "--all-track-errors",
+        "--schematic-parity",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\kicad\\HomeMy_PMU_RevA_280x220.kicad_pcb"
+      ],
+      "pcb_sha256": "336da2935fae0c6010b44226a2db2255716c3ef720f21f9bc9577b24be88d836",
+      "exit_code": 5,
+      "seconds": 2.61,
+      "report_sha256": "d74416095b17627bfbda511c60ed45987c65943f099ad0022952b8770f48e9ac"
+    },
+    {
+      "kind": "erc",
+      "label": "cycle-02",
+      "started_utc": "2026-09-11T15:06:25.175159+00:00",
+      "command": [
+        "C:\\Program Files\\KiCad\\10.0\\bin\\kicad-cli.exe",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\finish-280x220\\cycle-02-erc.json",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\kicad\\HomeMy_PMU_RevA_280x220.kicad_sch"
+      ],
+      "pcb_sha256": "d6c44c6fb3233af09af3c62d060077a1e0b0a8a34e0e81eeabf495157b3843bc",
+      "exit_code": 0,
+      "seconds": 1.25,
+      "report_sha256": "9c92d1b3c2d9b97bb464a1590da761566acf38ec296ede8d698a17b8c7d95865"
+    },
+    {
+      "kind": "drc",
+      "label": "cycle-02",
+      "started_utc": "2026-09-11T15:06:26.434680+00:00",
+      "command": [
+        "C:\\Program Files\\KiCad\\10.0\\bin\\kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\finish-280x220\\cycle-02-drc.json",
+        "--all-track-errors",
+        "--schematic-parity",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\kicad\\HomeMy_PMU_RevA_280x220.kicad_pcb"
+      ],
+      "pcb_sha256": "d6c44c6fb3233af09af3c62d060077a1e0b0a8a34e0e81eeabf495157b3843bc",
+      "exit_code": 5,
+      "seconds": 2.594,
+      "report_sha256": "e987142dc3269835758c3569ee6fff07f22f52dae8577b7739ebd6f353dbd616"
+    },
+    {
+      "kind": "erc",
+      "label": "cycle-03",
+      "started_utc": "2026-09-11T15:14:39.262029+00:00",
+      "command": [
+        "C:\\Program Files\\KiCad\\10.0\\bin\\kicad-cli.exe",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\finish-280x220\\cycle-03-erc.json",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\kicad\\HomeMy_PMU_RevA_280x220.kicad_sch"
+      ],
+      "pcb_sha256": "5a395e051ded0caf7cb3bb973a2647e8ecf0f9aa965727157910085bbdc09c6b",
+      "exit_code": 0,
+      "seconds": 1.172,
+      "report_sha256": "dc2a6e1417c490f2811c0a7d5c94f505b7fe577f37991a2d1960b5750918933c"
+    },
+    {
+      "kind": "drc",
+      "label": "cycle-03",
+      "started_utc": "2026-09-11T15:14:40.433227+00:00",
+      "command": [
+        "C:\\Program Files\\KiCad\\10.0\\bin\\kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\finish-280x220\\cycle-03-drc.json",
+        "--all-track-errors",
+        "--schematic-parity",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\kicad\\HomeMy_PMU_RevA_280x220.kicad_pcb"
+      ],
+      "pcb_sha256": "5a395e051ded0caf7cb3bb973a2647e8ecf0f9aa965727157910085bbdc09c6b",
+      "exit_code": 5,
+      "seconds": 2.485,
+      "report_sha256": "097489330f44d9b6111c1f628d3b0a62063fbfd920a3156ad9096401aa8ea6d0"
+    },
+    {
+      "kind": "erc",
+      "label": "cycle-04",
+      "started_utc": "2026-09-11T15:21:40.143717+00:00",
+      "command": [
+        "C:\\Program Files\\KiCad\\10.0\\bin\\kicad-cli.exe",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\finish-280x220\\cycle-04-erc.json",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\kicad\\HomeMy_PMU_RevA_280x220.kicad_sch"
+      ],
+      "pcb_sha256": "dcf72a5233bb9acdccc52c93792eb18fa6aa42db3ac31d233452e4a04b289144",
+      "exit_code": 0,
+      "seconds": 1.157,
+      "report_sha256": "dca97b53585660dfdbdabec8a72771a3d32964517f2bc66b3cac3e11e8d6c084"
+    },
+    {
+      "kind": "drc",
+      "label": "cycle-04",
+      "started_utc": "2026-09-11T15:21:41.317420+00:00",
+      "command": [
+        "C:\\Program Files\\KiCad\\10.0\\bin\\kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\finish-280x220\\cycle-04-drc.json",
+        "--all-track-errors",
+        "--schematic-parity",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\kicad\\HomeMy_PMU_RevA_280x220.kicad_pcb"
+      ],
+      "pcb_sha256": "dcf72a5233bb9acdccc52c93792eb18fa6aa42db3ac31d233452e4a04b289144",
+      "exit_code": 5,
+      "seconds": 2.469,
+      "report_sha256": "93b0e74f63898b8abe647a9795f519232bf0c1a03ddaab69547301e789926dab"
+    },
+    {
+      "kind": "erc",
+      "label": "cycle-04-verified",
+      "started_utc": "2026-09-11T15:25:45.114877+00:00",
+      "command": [
+        "C:\\Program Files\\KiCad\\10.0\\bin\\kicad-cli.exe",
+        "sch",
+        "erc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\finish-280x220\\cycle-04-verified-erc.json",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\kicad\\HomeMy_PMU_RevA_280x220.kicad_sch"
+      ],
+      "pcb_sha256": "dcf72a5233bb9acdccc52c93792eb18fa6aa42db3ac31d233452e4a04b289144",
+      "exit_code": 0,
+      "seconds": 1.188,
+      "report_sha256": "ce7e19aa64220fcfc9280ba8446aab5188432140ea34896e1e649fc3e5f9c745"
+    },
+    {
+      "kind": "drc",
+      "label": "cycle-04-verified",
+      "started_utc": "2026-09-11T15:25:46.303270+00:00",
+      "command": [
+        "C:\\Program Files\\KiCad\\10.0\\bin\\kicad-cli.exe",
+        "pcb",
+        "drc",
+        "--format",
+        "json",
+        "--severity-all",
+        "--exit-code-violations",
+        "--output",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\finish-280x220\\cycle-04-verified-drc.json",
+        "--all-track-errors",
+        "--schematic-parity",
+        "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-rev-a-work\\hardware\\power-management-unit\\rev-a1\\kicad\\HomeMy_PMU_RevA_280x220.kicad_pcb"
+      ],
+      "pcb_sha256": "dcf72a5233bb9acdccc52c93792eb18fa6aa42db3ac31d233452e4a04b289144",
+      "exit_code": 5,
+      "seconds": 2.671,
+      "report_sha256": "bc12e602cefe49ccc02f3ee3a1c0541feeb18accd5e8cb00e664225b57540c9f"
+    }
+  ],
+  "router_calls": [],
+  "repair_attempts": {
+    "MAIN_KELVIN_P|source has no conductors": 1,
+    "MAIN_HGATE|source has no conductors": 1,
+    "MAIN_DGATE|source has no conductors": 1,
+    "PC_N return|275 missing return": 1,
+    "LOGIC_BUCK_N return|275 missing return": 1,
+    "DRIVE_N F.Cu|275 missing required F.Cu path": 1,
+    "LIFT_N In1.Cu|275 missing required In1.Cu path": 2,
+    "LOGIC_5V_N B.Cu|275 missing J11-J18 B.Cu": 1,
+    "U11 LOGIC_GND stitches|two only-F.Cu vias": 1,
+    "ARM_L_N neck at CHOP_DRIVE_H via|[231.7335, 93.8937]": 1,
+    "SYS_BUS_P C8 neck at MOTION_ISCP via|[144.9, 83.7]": 1,
+    "MAIN_COMMON neck V3V3|three original F.Cu snake segments": 1,
+    "C300 MOTION_BUS_P neck CHOP_FB|old front detour beside C300.1": 1,
+    "BATT_N neck CHOP_ACTIVE_N|original six-segment U35.4-TP30 front snake": 1,
+    "MOTION_COMMON neck TEMP_MOTION_ADC|six original TH21-R261 F.Cu segments": 1,
+    "ARM_L_N neck at CHOP_DRIVE_H via|[231.3, 93.8937]": 1
+  },
+  "no_progress_streak": 2,
+  "closed": true,
+  "best": {
+    "label": "cycle-02",
+    "metrics": {
+      "opens": 126,
+      "counts": {
+        "connection_width": 5,
+        "track_dangling": 8,
+        "via_dangling": 9
+      },
+      "force": 244,
+      "critical": 46,
+      "pcb_sha256": "d6c44c6fb3233af09af3c62d060077a1e0b0a8a34e0e81eeabf495157b3843bc"
+    },
+    "saved_utc": "2026-09-11T15:07:32.117512+00:00"
+  },
+  "project_sha256": "c9cc425f7aa83b06e02f5f32c3d2ef97694997c3641e2f4b1984834f6e09b350",
+  "stop_required": "Two successive cycles without safe measurable progress",
+  "documentation_closed_utc": "2026-09-11T15:30:56.161294+00:00",
+  "elapsed_minutes_through_documentation": 42.936,
+  "final_state": "Restored cycle-02; no further automatic routing or repair permitted"
+}

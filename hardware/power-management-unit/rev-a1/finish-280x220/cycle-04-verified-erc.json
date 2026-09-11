@@ -1,0 +1,108 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-11T17:25:46",
+    "ignored_checks": [
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.6",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/b1479d06-bf48-57a0-93b4-20b5002f34bc",
+            "violations": []
+        },
+        {
+            "path": "/02_main_switch_lm74930/",
+            "uuid_path": "/b1479d06-bf48-57a0-93b4-20b5002f34bc/34d9cddf-3b9c-5d46-b2ff-f41e212f3442",
+            "violations": []
+        },
+        {
+            "path": "/03_motion_gate_tps48110/",
+            "uuid_path": "/b1479d06-bf48-57a0-93b4-20b5002f34bc/96e52b78-1552-5ded-87d5-8e4bd60e1487",
+            "violations": []
+        },
+        {
+            "path": "/04_brake_chopper_p1/",
+            "uuid_path": "/b1479d06-bf48-57a0-93b4-20b5002f34bc/578e2672-a779-5cc8-a16c-bcdcd6129bb4",
+            "violations": []
+        },
+        {
+            "path": "/04_brake_chopper_p2/",
+            "uuid_path": "/b1479d06-bf48-57a0-93b4-20b5002f34bc/876fc0b9-3282-54cd-b36e-c53905f85f40",
+            "violations": []
+        },
+        {
+            "path": "/05_pc_and_5v_efuses/",
+            "uuid_path": "/b1479d06-bf48-57a0-93b4-20b5002f34bc/8c19a1ec-da81-59ae-ae8e-5d2f2a3b9962",
+            "violations": []
+        },
+        {
+            "path": "/06a_aon_wake_p1/",
+            "uuid_path": "/b1479d06-bf48-57a0-93b4-20b5002f34bc/8e596a9a-7457-5325-aa5f-f9c51e4405f2",
+            "violations": []
+        },
+        {
+            "path": "/06a_aon_wake_p2/",
+            "uuid_path": "/b1479d06-bf48-57a0-93b4-20b5002f34bc/06268b4b-302d-54c7-af2c-d6db06179463",
+            "violations": []
+        },
+        {
+            "path": "/06b_motion_latches/",
+            "uuid_path": "/b1479d06-bf48-57a0-93b4-20b5002f34bc/3da892df-3b6b-5e19-97b1-5254f2850b5e",
+            "violations": []
+        },
+        {
+            "path": "/06c_esp32_p1/",
+            "uuid_path": "/b1479d06-bf48-57a0-93b4-20b5002f34bc/cb6cc2d5-86de-5703-b834-ed6447f18644",
+            "violations": []
+        },
+        {
+            "path": "/06c_esp32_p2/",
+            "uuid_path": "/b1479d06-bf48-57a0-93b4-20b5002f34bc/5d617709-ff81-5f86-8645-54c57884be25",
+            "violations": []
+        },
+        {
+            "path": "/07_ina228_analog/",
+            "uuid_path": "/b1479d06-bf48-57a0-93b4-20b5002f34bc/dfc2635c-3355-5b0d-b74c-854dfd68ee51",
+            "violations": []
+        },
+        {
+            "path": "/08_can_led_io/",
+            "uuid_path": "/b1479d06-bf48-57a0-93b4-20b5002f34bc/1102ea98-22a3-5de8-803e-e9a59f63899c",
+            "violations": []
+        },
+        {
+            "path": "/09_connectors_testpoints/",
+            "uuid_path": "/b1479d06-bf48-57a0-93b4-20b5002f34bc/b6b2eeb4-5a06-5b01-a0c3-781e50a3b0df",
+            "violations": []
+        },
+        {
+            "path": "/09b_star_and_measurements_p1/",
+            "uuid_path": "/b1479d06-bf48-57a0-93b4-20b5002f34bc/1ce73973-0514-5511-80ec-38d0a1a6ae95",
+            "violations": []
+        },
+        {
+            "path": "/09b_star_and_measurements_p2/",
+            "uuid_path": "/b1479d06-bf48-57a0-93b4-20b5002f34bc/57936caa-cebb-5152-9380-5fc66d9de433",
+            "violations": []
+        }
+    ],
+    "source": "HomeMy_PMU_RevA_280x220.kicad_sch"
+}

@@ -51,7 +51,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - The default execution mode is simulation or motorless validation.
 - PMU Revision-A CAD and engineering evidence are tracked; no systemd unit, actuator/sensor runtime, map, home data, or deployment configuration is introduced.
 - The bounded PMU Rev-A.1 shrink attempt is closed without a passing size (250x200, 275x210, 300x220 mm; three cycles). Its separate WIP sources and [result](hardware/power-management-unit/rev-a1/BOUNDED_SHRINK_RESULT.md) are not orderable; the Rev-A sources and prototype package remain unchanged.
-- The next authorized Rev-A.1 CAD task fixes the board size at 280 × 220 mm and continues only from the 275 × 210-mm candidate under `hardware/power-management-unit/ASTRA_280X220_FINISH.md`. It remains a non-orderable WIP until every stated CAD gate passes and the user grants a separate release.
+- The fixed 280 × 220-mm Rev-A.1 task is closed after two consecutive unsafe/no-progress cycles (four cycles total, no autorouter calls). The restored best from cycle 2 has 126 open connections, five width errors, 244/247 required paths and 46/46 critical paths; ERC exits 0 and full parity has zero findings. It is not orderable; all release flags remain false. See [the final report](hardware/power-management-unit/rev-a1/FINAL_280x220_REPORT.md). No further automatic routing or repair is authorized by the closed task.
 - No capability from roboter_ws has been copied into HomeMy code.
 - The proposed transfer baseline is roboter_ws main commit `05439c7a13d7a92e69b9eb4663e3a2a1b44626a1`.
 - Customer mode is not enabled as the default boot target.

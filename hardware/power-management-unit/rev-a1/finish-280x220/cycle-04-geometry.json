@@ -1,0 +1,4787 @@
+{
+  "pcb_sha256": "dcf72a5233bb9acdccc52c93792eb18fa6aa42db3ac31d233452e4a04b289144",
+  "audit_after_native_reload": true,
+  "outline_exact_mm": [
+    280.0,
+    220.0
+  ],
+  "outline_note": "Physical Edge.Cuts centerlines, excluding the 0.05-mm drawing stroke included in KiCad display bounding box.",
+  "native_ratsnest_connections": 122,
+  "placement": {
+    "footprints": 425,
+    "testpoints": 40,
+    "size_mm": [
+      280.05,
+      220.05
+    ],
+    "identity_errors": [],
+    "courtyard_overlaps": [],
+    "probes": [
+      {
+        "ref": "TP14",
+        "3mm_probe_gap_mm": 1.5049999999999955,
+        "nearest_body": "C10"
+      },
+      {
+        "ref": "TP11",
+        "3mm_probe_gap_mm": 0.8256504466492696,
+        "nearest_body": "R44"
+      },
+      {
+        "ref": "TP5",
+        "3mm_probe_gap_mm": 1.0049999999999955,
+        "nearest_body": "Q6"
+      },
+      {
+        "ref": "TP22",
+        "3mm_probe_gap_mm": 1.0049999999999955,
+        "nearest_body": "C10"
+      },
+      {
+        "ref": "TP33",
+        "3mm_probe_gap_mm": 5.235000000000014,
+        "nearest_body": "J20"
+      },
+      {
+        "ref": "TP2",
+        "3mm_probe_gap_mm": 1.0249999999999986,
+        "nearest_body": "C1"
+      },
+      {
+        "ref": "TP18",
+        "3mm_probe_gap_mm": 6.5049999999999955,
+        "nearest_body": "NT3"
+      },
+      {
+        "ref": "TP12",
+        "3mm_probe_gap_mm": 0.875,
+        "nearest_body": "J10"
+      },
+      {
+        "ref": "TP24",
+        "3mm_probe_gap_mm": 1.2638107749989054,
+        "nearest_body": "C13"
+      },
+      {
+        "ref": "TP16",
+        "3mm_probe_gap_mm": 0.7549999999999955,
+        "nearest_body": "C10"
+      },
+      {
+        "ref": "TP27",
+        "3mm_probe_gap_mm": 4.0959851679574655,
+        "nearest_body": "BC12"
+      },
+      {
+        "ref": "TP17",
+        "3mm_probe_gap_mm": 1.0250000000000057,
+        "nearest_body": "C227"
+      },
+      {
+        "ref": "TP26",
+        "3mm_probe_gap_mm": 0.9050000000000011,
+        "nearest_body": "C301"
+      },
+      {
+        "ref": "TP20",
+        "3mm_probe_gap_mm": 0.8250000000000028,
+        "nearest_body": "R24"
+      },
+      {
+        "ref": "TP13",
+        "3mm_probe_gap_mm": 0.8249999999999886,
+        "nearest_body": "R206"
+      },
+      {
+        "ref": "TP19",
+        "3mm_probe_gap_mm": 4.610241402759789,
+        "nearest_body": "NT9"
+      },
+      {
+        "ref": "TP29",
+        "3mm_probe_gap_mm": 4.207893657033208,
+        "nearest_body": "NT2"
+      },
+      {
+        "ref": "TP39",
+        "3mm_probe_gap_mm": 1.2397085341057625,
+        "nearest_body": "H4"
+      },
+      {
+        "ref": "TP38",
+        "3mm_probe_gap_mm": 1.0549999999999997,
+        "nearest_body": "R48"
+      },
+      {
+        "ref": "TP1",
+        "3mm_probe_gap_mm": 2.3604468653253052,
+        "nearest_body": "RSH1"
+      },
+      {
+        "ref": "TP6",
+        "3mm_probe_gap_mm": 1.0550000000000068,
+        "nearest_body": "R35"
+      },
+      {
+        "ref": "TP30",
+        "3mm_probe_gap_mm": 1.0049999999999955,
+        "nearest_body": "NT2"
+      },
+      {
+        "ref": "TP28",
+        "3mm_probe_gap_mm": 0.7750000000000057,
+        "nearest_body": "C311"
+      },
+      {
+        "ref": "TP10",
+        "3mm_probe_gap_mm": 1.5988788295123855,
+        "nearest_body": "C29"
+      },
+      {
+        "ref": "TP25",
+        "3mm_probe_gap_mm": 1.0049999999999955,
+        "nearest_body": "C10"
+      },
+      {
+        "ref": "TP40",
+        "3mm_probe_gap_mm": 2.365054980204022,
+        "nearest_body": "R54"
+      },
+      {
+        "ref": "TP35",
+        "3mm_probe_gap_mm": 1.0049999999999955,
+        "nearest_body": "J13"
+      },
+      {
+        "ref": "TP36",
+        "3mm_probe_gap_mm": 1.0049999999999955,
+        "nearest_body": "J13"
+      },
+      {
+        "ref": "TP9",
+        "3mm_probe_gap_mm": 0.9549999999999983,
+        "nearest_body": "U2"
+      },
+      {
+        "ref": "TP3",
+        "3mm_probe_gap_mm": 1.0050000000000026,
+        "nearest_body": "BC2"
+      },
+      {
+        "ref": "TP21",
+        "3mm_probe_gap_mm": 1.0049999999999955,
+        "nearest_body": "C10"
+      },
+      {
+        "ref": "TP4",
+        "3mm_probe_gap_mm": 3.4549999999999983,
+        "nearest_body": "D1"
+      },
+      {
+        "ref": "TP15",
+        "3mm_probe_gap_mm": 1.0550000000000068,
+        "nearest_body": "R31"
+      },
+      {
+        "ref": "TP23",
+        "3mm_probe_gap_mm": 1.0049999999999955,
+        "nearest_body": "C10"
+      },
+      {
+        "ref": "TP7",
+        "3mm_probe_gap_mm": 1.6470700659502295,
+        "nearest_body": "Q8"
+      },
+      {
+        "ref": "TP31",
+        "3mm_probe_gap_mm": 1.500908195863397,
+        "nearest_body": "J20"
+      },
+      {
+        "ref": "TP34",
+        "3mm_probe_gap_mm": 1.0226275983585138,
+        "nearest_body": "C258"
+      },
+      {
+        "ref": "TP32",
+        "3mm_probe_gap_mm": 3.621879537825941,
+        "nearest_body": "R208"
+      },
+      {
+        "ref": "TP37",
+        "3mm_probe_gap_mm": 1.0531647028736604,
+        "nearest_body": "R47"
+      },
+      {
+        "ref": "TP8",
+        "3mm_probe_gap_mm": 4.064049784105107,
+        "nearest_body": "R36"
+      }
+    ],
+    "ports": [
+      {
+        "ref": "J18",
+        "corridor_mm": [
+          101.875,
+          209.495,
+          128.275,
+          240.05
+        ],
+        "blocked_by": []
+      },
+      {
+        "ref": "J3",
+        "corridor_mm": [
+          268.5,
+          10.0,
+          305.05,
+          22.0
+        ],
+        "blocked_by": []
+      },
+      {
+        "ref": "J11",
+        "corridor_mm": [
+          34.875,
+          209.495,
+          56.195,
+          240.05
+        ],
+        "blocked_by": []
+      },
+      {
+        "ref": "J7",
+        "corridor_mm": [
+          274.495,
+          145.805,
+          300.05,
+          167.125
+        ],
+        "blocked_by": []
+      },
+      {
+        "ref": "J4",
+        "corridor_mm": [
+          261.5,
+          80.0,
+          305.05,
+          92.0
+        ],
+        "blocked_by": []
+      },
+      {
+        "ref": "J17",
+        "corridor_mm": null,
+        "blocked_by": []
+      },
+      {
+        "ref": "J13",
+        "corridor_mm": [
+          176.875,
+          209.495,
+          198.195,
+          240.05
+        ],
+        "blocked_by": []
+      },
+      {
+        "ref": "J8",
+        "corridor_mm": [
+          274.495,
+          172.805,
+          300.05,
+          194.125
+        ],
+        "blocked_by": []
+      },
+      {
+        "ref": "J15",
+        "corridor_mm": [
+          75.805,
+          -20,
+          97.125,
+          0.505
+        ],
+        "blocked_by": []
+      },
+      {
+        "ref": "J20",
+        "corridor_mm": null,
+        "blocked_by": []
+      },
+      {
+        "ref": "J21",
+        "corridor_mm": null,
+        "blocked_by": []
+      },
+      {
+        "ref": "J23",
+        "corridor_mm": null,
+        "blocked_by": []
+      },
+      {
+        "ref": "J12",
+        "corridor_mm": [
+          274.495,
+          54.805,
+          300.05,
+          76.125
+        ],
+        "blocked_by": []
+      },
+      {
+        "ref": "J6",
+        "corridor_mm": [
+          261.5,
+          106.0,
+          305.05,
+          118.0
+        ],
+        "blocked_by": []
+      },
+      {
+        "ref": "J9",
+        "corridor_mm": [
+          -20,
+          156.875,
+          0.505,
+          178.195
+        ],
+        "blocked_by": []
+      },
+      {
+        "ref": "J22",
+        "corridor_mm": null,
+        "blocked_by": []
+      },
+      {
+        "ref": "J1",
+        "corridor_mm": [
+          -25,
+          39.0,
+          5.5,
+          51.0
+        ],
+        "blocked_by": []
+      },
+      {
+        "ref": "J16",
+        "corridor_mm": null,
+        "blocked_by": []
+      },
+      {
+        "ref": "J10",
+        "corridor_mm": [
+          -20,
+          183.875,
+          0.505,
+          205.195
+        ],
+        "blocked_by": []
+      },
+      {
+        "ref": "J5",
+        "corridor_mm": [
+          268.5,
+          36.0,
+          305.05,
+          48.0
+        ],
+        "blocked_by": []
+      },
+      {
+        "ref": "J14",
+        "corridor_mm": [
+          51.805,
+          -20,
+          73.125,
+          0.505
+        ],
+        "blocked_by": []
+      },
+      {
+        "ref": "J2",
+        "corridor_mm": [
+          -25,
+          114.0,
+          5.5,
+          126.0
+        ],
+        "blocked_by": []
+      }
+    ],
+    "antenna": [
+      {
+        "layers": [
+          "F.Cu",
+          "In1.Cu",
+          "In2.Cu",
+          "B.Cu"
+        ],
+        "bounds_mm": [
+          223.0,
+          203.15,
+          271.0,
+          224.15
+        ],
+        "edge_reached": true,
+        "prohibitions": true,
+        "copper_intersections": [],
+        "foreign_courtyards": []
+      }
+    ],
+    "pressfit": [
+      {
+        "ref": "J1",
+        "pads": 8,
+        "geometry_unchanged": true
+      },
+      {
+        "ref": "J2",
+        "pads": 8,
+        "geometry_unchanged": true
+      },
+      {
+        "ref": "J3",
+        "pads": 8,
+        "geometry_unchanged": true
+      },
+      {
+        "ref": "J4",
+        "pads": 8,
+        "geometry_unchanged": true
+      },
+      {
+        "ref": "J5",
+        "pads": 8,
+        "geometry_unchanged": true
+      },
+      {
+        "ref": "J6",
+        "pads": 8,
+        "geometry_unchanged": true
+      }
+    ],
+    "mounting_holes_mm": {
+      "H1": [
+        23.0,
+        8.0
+      ],
+      "H2": [
+        268.0,
+        31.0
+      ],
+      "H3": [
+        213.0,
+        202.0
+      ],
+      "H4": [
+        23.0,
+        202.0
+      ]
+    },
+    "passed": true,
+    "limitations": [
+      "2D probe/cable/body screens; no measured 3D harness, cover or press-tool model."
+    ]
+  },
+  "invariants": {
+    "passed": false,
+    "errors": [
+      "Project rules/settings differ from source"
+    ],
+    "unchanged_original_taps": 150,
+    "stackup_identical": true,
+    "power_vias": {
+      "ARM_R_N": 83,
+      "BATT_N": 1160,
+      "MAIN_COMMON": 104,
+      "BATT_SENSED_P": 116,
+      "SYS_BUS_P": 189,
+      "MOTION_BUS_P": 298,
+      "MOTION_COMMON": 117,
+      "MOTION_SENSED_P": 175,
+      "ARM_L_N": 46
+    },
+    "minimum_ungrouped_power_tracks_mm": {}
+  },
+  "force": {
+    "original_pair_checks": [
+      {
+        "net": "BATT_FUSED_P",
+        "layer": "F.Cu",
+        "from_pad": "J1.1",
+        "to_pad": "RSH1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "RSH1.4",
+        "to_pad": "Q1.13",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q1.2",
+        "to_pad": "Q4.2",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q4.13",
+        "to_pad": "RSH2.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "RSH2.4",
+        "to_pad": "Q7.13",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q7.2",
+        "to_pad": "Q9.2",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q9.13",
+        "to_pad": "J3.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "J3.1",
+        "to_pad": "J5.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "F.Cu",
+        "from_pad": "J4.1",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "F.Cu",
+        "from_pad": "J6.1",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "DRIVE_N",
+        "layer": "F.Cu",
+        "from_pad": "J7.2",
+        "to_pad": "NT3.1",
+        "passed": true
+      },
+      {
+        "net": "LIFT_N",
+        "layer": "In1.Cu",
+        "from_pad": "J8.2",
+        "to_pad": "NT4.1",
+        "passed": true
+      },
+      {
+        "net": "LIFT_N",
+        "layer": "In2.Cu",
+        "from_pad": "J8.2",
+        "to_pad": "NT4.1",
+        "passed": false
+      },
+      {
+        "net": "CHOP_DRAIN",
+        "layer": "F.Cu",
+        "from_pad": "Q40.3",
+        "to_pad": "J12.2",
+        "passed": true
+      },
+      {
+        "net": "CHOPPER_N",
+        "layer": "B.Cu",
+        "from_pad": "C312.2",
+        "to_pad": "NT7.1",
+        "passed": true
+      },
+      {
+        "net": "CHOPPER_N",
+        "layer": "B.Cu",
+        "from_pad": "C313.2",
+        "to_pad": "NT7.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "J2.1",
+        "to_pad": "NT7.2",
+        "passed": true
+      },
+      {
+        "net": "LOGIC_5V_N",
+        "layer": "B.Cu",
+        "from_pad": "J18.3",
+        "to_pad": "J11.2",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "BC1.1",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "B.Cu",
+        "from_pad": "BC1.1",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "BC10.1",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "B.Cu",
+        "from_pad": "BC10.1",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "BC11.1",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "B.Cu",
+        "from_pad": "BC11.1",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "BC12.1",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "B.Cu",
+        "from_pad": "BC12.1",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "BC13.1",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "B.Cu",
+        "from_pad": "BC13.1",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "BC14.1",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "B.Cu",
+        "from_pad": "BC14.1",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "BC15.1",
+        "to_pad": "BC15.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "BC2.1",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "B.Cu",
+        "from_pad": "BC2.1",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "BC3.1",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "B.Cu",
+        "from_pad": "BC3.1",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "BC4.1",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "B.Cu",
+        "from_pad": "BC4.1",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "BC5.1",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "B.Cu",
+        "from_pad": "BC5.1",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "BC6.1",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "B.Cu",
+        "from_pad": "BC6.1",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "BC7.1",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "B.Cu",
+        "from_pad": "BC7.1",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "BC8.1",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "B.Cu",
+        "from_pad": "BC8.1",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "BC9.1",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "B.Cu",
+        "from_pad": "BC9.1",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_FUSED_P",
+        "layer": "F.Cu",
+        "from_pad": "J1.1",
+        "to_pad": "RSH1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_FUSED_P",
+        "layer": "F.Cu",
+        "from_pad": "J1.2",
+        "to_pad": "RSH1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_FUSED_P",
+        "layer": "F.Cu",
+        "from_pad": "J1.3",
+        "to_pad": "RSH1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_FUSED_P",
+        "layer": "F.Cu",
+        "from_pad": "J1.4",
+        "to_pad": "RSH1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_FUSED_P",
+        "layer": "F.Cu",
+        "from_pad": "J1.5",
+        "to_pad": "RSH1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_FUSED_P",
+        "layer": "F.Cu",
+        "from_pad": "J1.6",
+        "to_pad": "RSH1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_FUSED_P",
+        "layer": "F.Cu",
+        "from_pad": "J1.7",
+        "to_pad": "RSH1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_FUSED_P",
+        "layer": "F.Cu",
+        "from_pad": "J1.8",
+        "to_pad": "RSH1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "J2.1",
+        "to_pad": "BC15.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "J2.2",
+        "to_pad": "BC15.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "J2.3",
+        "to_pad": "BC15.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "J2.4",
+        "to_pad": "BC15.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "J2.5",
+        "to_pad": "BC15.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "J2.6",
+        "to_pad": "BC15.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "J2.7",
+        "to_pad": "BC15.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "J2.8",
+        "to_pad": "BC15.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "J3.1",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "J3.2",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "J3.3",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "J3.4",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "J3.5",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "J3.6",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "J3.7",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "J3.8",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "F.Cu",
+        "from_pad": "J4.1",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "B.Cu",
+        "from_pad": "J4.1",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "F.Cu",
+        "from_pad": "J4.2",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "B.Cu",
+        "from_pad": "J4.2",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "F.Cu",
+        "from_pad": "J4.3",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "B.Cu",
+        "from_pad": "J4.3",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "F.Cu",
+        "from_pad": "J4.4",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "B.Cu",
+        "from_pad": "J4.4",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "F.Cu",
+        "from_pad": "J4.5",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "B.Cu",
+        "from_pad": "J4.5",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "F.Cu",
+        "from_pad": "J4.6",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "B.Cu",
+        "from_pad": "J4.6",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "F.Cu",
+        "from_pad": "J4.7",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "B.Cu",
+        "from_pad": "J4.7",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "F.Cu",
+        "from_pad": "J4.8",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "B.Cu",
+        "from_pad": "J4.8",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "J5.1",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "J5.2",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "J5.3",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "J5.4",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "J5.5",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "J5.6",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "J5.7",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "J5.8",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "F.Cu",
+        "from_pad": "J6.1",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "B.Cu",
+        "from_pad": "J6.1",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "F.Cu",
+        "from_pad": "J6.2",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "B.Cu",
+        "from_pad": "J6.2",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "F.Cu",
+        "from_pad": "J6.3",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "B.Cu",
+        "from_pad": "J6.3",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "F.Cu",
+        "from_pad": "J6.4",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "B.Cu",
+        "from_pad": "J6.4",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "F.Cu",
+        "from_pad": "J6.5",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "B.Cu",
+        "from_pad": "J6.5",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "F.Cu",
+        "from_pad": "J6.6",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "B.Cu",
+        "from_pad": "J6.6",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "F.Cu",
+        "from_pad": "J6.7",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "B.Cu",
+        "from_pad": "J6.7",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "F.Cu",
+        "from_pad": "J6.8",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "B.Cu",
+        "from_pad": "J6.8",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "F.Cu",
+        "from_pad": "NT1.1",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "B.Cu",
+        "from_pad": "NT1.1",
+        "to_pad": "NT1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "NT1.2",
+        "to_pad": "BC15.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "F.Cu",
+        "from_pad": "NT2.1",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "B.Cu",
+        "from_pad": "NT2.1",
+        "to_pad": "NT2.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "NT2.2",
+        "to_pad": "BC15.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "NT3.2",
+        "to_pad": "BC15.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "NT4.2",
+        "to_pad": "BC15.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "NT5.2",
+        "to_pad": "BC15.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "NT6.2",
+        "to_pad": "BC15.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "NT7.2",
+        "to_pad": "BC15.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "from_pad": "NT8.2",
+        "to_pad": "BC15.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q1.2",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q1.3",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q1.4",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q1.5",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q1.6",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q1.7",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q1.8",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q1.9",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q1.10",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q1.11",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q1.12",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q1.13",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q10.2",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q10.3",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q10.4",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q10.5",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q10.6",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q10.7",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q10.8",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q10.9",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q10.10",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q10.11",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q10.12",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q10.13",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q2.2",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q2.3",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q2.4",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q2.5",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q2.6",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q2.7",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q2.8",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q2.9",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q2.10",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q2.11",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q2.12",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q2.13",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q3.2",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q3.3",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q3.4",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q3.5",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q3.6",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q3.7",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q3.8",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q3.9",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q3.10",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q3.11",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q3.12",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q3.13",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q4.2",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q4.3",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q4.4",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q4.5",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q4.6",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q4.7",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q4.8",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q4.9",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q4.10",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q4.11",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q4.12",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q4.13",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q5.2",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q5.3",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q5.4",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q5.5",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q5.6",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q5.7",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q5.8",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q5.9",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q5.10",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q5.11",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q5.12",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q5.13",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q6.2",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q6.3",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q6.4",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q6.5",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q6.6",
+        "to_pad": "BC3.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q6.7",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q6.8",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q6.9",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q6.10",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q6.11",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q6.12",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q6.13",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q7.2",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q7.3",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q7.4",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q7.5",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q7.6",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q7.7",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q7.8",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q7.9",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q7.10",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q7.11",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q7.12",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q7.13",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q8.2",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q8.3",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q8.4",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q8.5",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q8.6",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q8.7",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q8.8",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q8.9",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q8.10",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q8.11",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q8.12",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "Q8.13",
+        "to_pad": "BC7.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q9.2",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q9.3",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q9.4",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q9.5",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "from_pad": "Q9.6",
+        "to_pad": "BC9.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q9.7",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q9.8",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q9.9",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q9.10",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q9.11",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q9.12",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "Q9.13",
+        "to_pad": "BC11.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_FUSED_P",
+        "layer": "F.Cu",
+        "from_pad": "RSH1.1",
+        "to_pad": "RSH1.1",
+        "passed": true
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "RSH1.4",
+        "to_pad": "BC1.1",
+        "passed": true
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "from_pad": "RSH2.1",
+        "to_pad": "BC5.1",
+        "passed": true
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "from_pad": "RSH2.4",
+        "to_pad": "BC7.1",
+        "passed": true
+      }
+    ],
+    "passed_pairs": 246,
+    "total_pairs": 247,
+    "failed_pairs": [
+      {
+        "net": "LIFT_N",
+        "layer": "In2.Cu",
+        "from_pad": "J8.2",
+        "to_pad": "NT4.1",
+        "passed": false
+      }
+    ],
+    "compact_drive_return": {
+      "net": "DRIVE_N",
+      "layer": "B.Cu",
+      "from_pad": "J7.2",
+      "to_pad": "NT3.1",
+      "passed": true,
+      "note": "Additional compact return proof; does not replace original F.Cu result."
+    },
+    "omitted_tap_or_undersized_copper_items": 154,
+    "zones": [
+      {
+        "net": "BATT_FUSED_P",
+        "layer": "F.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 496.3722722734155
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 1313.0170092878666
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 1444.580234577712
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 1827.478826392903
+      },
+      {
+        "net": "BATT_N",
+        "layer": "F.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 6784.297474505799
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 1085.7216556963106
+      },
+      {
+        "net": "CHOP_DRAIN",
+        "layer": "F.Cu",
+        "fill_min_mm": 0.25,
+        "area_mm2": 793.407797855741
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 5892.632355771151
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 83.6806567242805
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "F.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 624.510904773564
+      },
+      {
+        "net": "CHOPPER_N",
+        "layer": "F.Cu",
+        "fill_min_mm": 0.25,
+        "area_mm2": 69.052819731999
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 2633.0804737905046
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "F.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 697.442898415088
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 1851.4318373962885
+      },
+      {
+        "net": "LOGIC_5V_N",
+        "layer": "B.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 598.638462721121
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "layer": "B.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 1893.4380905263
+      },
+      {
+        "net": "SYS_BUS_P",
+        "layer": "B.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 2682.7300476634673
+      },
+      {
+        "net": "CHOPPER_N",
+        "layer": "B.Cu",
+        "fill_min_mm": 0.25,
+        "area_mm2": 1327.7938552075966
+      },
+      {
+        "net": "BATT_SENSED_P",
+        "layer": "B.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 1847.1863726948175
+      },
+      {
+        "net": "ARM_R_N",
+        "layer": "B.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 624.510904773564
+      },
+      {
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 7159.702267579866
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "B.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 5796.778558179409
+      },
+      {
+        "net": "DRIVE_N",
+        "layer": "B.Cu",
+        "fill_min_mm": 0.25,
+        "area_mm2": 1266.9791201988126
+      },
+      {
+        "net": "ARM_L_N",
+        "layer": "B.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 697.442898415088
+      },
+      {
+        "net": "MAIN_COMMON",
+        "layer": "B.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 1370.7723306656485
+      },
+      {
+        "net": "MOTION_COMMON",
+        "layer": "B.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 1271.4706312508024
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "layer": "B.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 1509.479708183991
+      },
+      {
+        "net": "BATT_FUSED_P",
+        "layer": "B.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 503.6595444875705
+      },
+      {
+        "net": "LIFT_N",
+        "layer": "In1.Cu",
+        "fill_min_mm": 0.25,
+        "area_mm2": 534.198994139738
+      },
+      {
+        "net": "BATT_N",
+        "layer": "In2.Cu",
+        "fill_min_mm": 1.2,
+        "area_mm2": 30385.424942699126
+      },
+      {
+        "net": "LIFT_N",
+        "layer": "In2.Cu",
+        "fill_min_mm": 0.25,
+        "area_mm2": 846.3930710588755
+      }
+    ],
+    "thermal_windows": [
+      {
+        "ref": "Q1",
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 429.0848118449575
+      },
+      {
+        "ref": "Q1",
+        "net": "MAIN_COMMON",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 469.4022909821
+      },
+      {
+        "ref": "Q1",
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 706.5065403641624
+      },
+      {
+        "ref": "Q1",
+        "net": "BATT_SENSED_P",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 715.807342994197
+      },
+      {
+        "ref": "Q2",
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 509.2006076321435
+      },
+      {
+        "ref": "Q2",
+        "net": "MAIN_COMMON",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 604.22427258498
+      },
+      {
+        "ref": "Q2",
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 940.610526557162
+      },
+      {
+        "ref": "Q2",
+        "net": "BATT_SENSED_P",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 933.8507647283255
+      },
+      {
+        "ref": "Q3",
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 407.9180708428695
+      },
+      {
+        "ref": "Q3",
+        "net": "MAIN_COMMON",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 483.6644619114055
+      },
+      {
+        "ref": "Q3",
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 745.7706629422285
+      },
+      {
+        "ref": "Q3",
+        "net": "BATT_SENSED_P",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 734.7478678662015
+      },
+      {
+        "ref": "Q4",
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 404.5464009639605
+      },
+      {
+        "ref": "Q4",
+        "net": "MAIN_COMMON",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 400.722737343811
+      },
+      {
+        "ref": "Q4",
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 724.165793438721
+      },
+      {
+        "ref": "Q4",
+        "net": "SYS_BUS_P",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 723.3712811914775
+      },
+      {
+        "ref": "Q5",
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 514.899331899493
+      },
+      {
+        "ref": "Q5",
+        "net": "MAIN_COMMON",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 506.26315161733
+      },
+      {
+        "ref": "Q5",
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 924.8854290227945
+      },
+      {
+        "ref": "Q5",
+        "net": "SYS_BUS_P",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 931.9198523807555
+      },
+      {
+        "ref": "Q6",
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 436.6858213864575
+      },
+      {
+        "ref": "Q6",
+        "net": "MAIN_COMMON",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 404.4877145920725
+      },
+      {
+        "ref": "Q6",
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 714.5582863802865
+      },
+      {
+        "ref": "Q6",
+        "net": "SYS_BUS_P",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 752.057720664985
+      },
+      {
+        "ref": "Q7",
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 722.204076670474
+      },
+      {
+        "ref": "Q7",
+        "net": "MOTION_SENSED_P",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 715.833576670474
+      },
+      {
+        "ref": "Q7",
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 424.044575288919
+      },
+      {
+        "ref": "Q7",
+        "net": "MOTION_COMMON",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 465.0480947788415
+      },
+      {
+        "ref": "Q8",
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 761.5111011801245
+      },
+      {
+        "ref": "Q8",
+        "net": "MOTION_SENSED_P",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 780.3555118934705
+      },
+      {
+        "ref": "Q8",
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 437.367466786718
+      },
+      {
+        "ref": "Q8",
+        "net": "MOTION_COMMON",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 505.0052606821435
+      },
+      {
+        "ref": "Q9",
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 936.508243052885
+      },
+      {
+        "ref": "Q9",
+        "net": "MOTION_BUS_P",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 930.1702956362485
+      },
+      {
+        "ref": "Q9",
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 420.4633596840735
+      },
+      {
+        "ref": "Q9",
+        "net": "MOTION_COMMON",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 467.221477418017
+      },
+      {
+        "ref": "Q10",
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 932.717240849372
+      },
+      {
+        "ref": "Q10",
+        "net": "MOTION_BUS_P",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 926.9313286046435
+      },
+      {
+        "ref": "Q10",
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 427.251894480085
+      },
+      {
+        "ref": "Q10",
+        "net": "MOTION_COMMON",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 505.0707364603795
+      },
+      {
+        "ref": "Q40",
+        "net": "CHOP_DRAIN",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 628.912297026052
+      },
+      {
+        "ref": "Q40",
+        "net": "CHOP_DRAIN",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 0.0
+      },
+      {
+        "ref": "Q40",
+        "net": "CHOPPER_N",
+        "layer": "F.Cu",
+        "area_40mm_window_mm2": 84.9789270064255
+      },
+      {
+        "ref": "Q40",
+        "net": "CHOPPER_N",
+        "layer": "B.Cu",
+        "area_40mm_window_mm2": 652.153901902173
+      }
+    ],
+    "power_vias": {
+      "ARM_R_N": 83,
+      "BATT_N": 1160,
+      "MAIN_COMMON": 104,
+      "BATT_SENSED_P": 116,
+      "SYS_BUS_P": 189,
+      "MOTION_BUS_P": 298,
+      "CHOPPER_N": 10,
+      "MOTION_COMMON": 117,
+      "MOTION_SENSED_P": 175,
+      "ARM_L_N": 46
+    },
+    "fixed_cross_sections": [
+      {
+        "label": "RSH1 input approach",
+        "net": "BATT_FUSED_P",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          22.0,
+          42.9
+        ],
+        "line_to_mm": [
+          22.0,
+          49.0
+        ],
+        "continuous_widths_mm": [
+          6.1
+        ],
+        "total_copper_width_mm": 6.1,
+        "sampling_step_mm": 0.024897959183673476
+      },
+      {
+        "label": "RSH1 input approach",
+        "net": "BATT_FUSED_P",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          22.0,
+          42.9
+        ],
+        "line_to_mm": [
+          22.0,
+          49.0
+        ],
+        "continuous_widths_mm": [
+          6.1
+        ],
+        "total_copper_width_mm": 6.1,
+        "sampling_step_mm": 0.024897959183673476
+      },
+      {
+        "label": "RSH1 output approach",
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          35.5,
+          42.9
+        ],
+        "line_to_mm": [
+          35.5,
+          49.0
+        ],
+        "continuous_widths_mm": [
+          6.1
+        ],
+        "total_copper_width_mm": 6.1,
+        "sampling_step_mm": 0.024897959183673476
+      },
+      {
+        "label": "RSH1 output approach",
+        "net": "BATT_SENSED_P",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          35.5,
+          42.9
+        ],
+        "line_to_mm": [
+          35.5,
+          49.0
+        ],
+        "continuous_widths_mm": [
+          6.1
+        ],
+        "total_copper_width_mm": 6.1,
+        "sampling_step_mm": 0.024897959183673476
+      },
+      {
+        "label": "RSH2 input approach",
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          112.0,
+          42.9
+        ],
+        "line_to_mm": [
+          112.0,
+          49.0
+        ],
+        "continuous_widths_mm": [
+          6.1
+        ],
+        "total_copper_width_mm": 6.1,
+        "sampling_step_mm": 0.024897959183673476
+      },
+      {
+        "label": "RSH2 input approach",
+        "net": "SYS_BUS_P",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          112.0,
+          42.9
+        ],
+        "line_to_mm": [
+          112.0,
+          49.0
+        ],
+        "continuous_widths_mm": [
+          6.1
+        ],
+        "total_copper_width_mm": 6.1,
+        "sampling_step_mm": 0.024897959183673476
+      },
+      {
+        "label": "RSH2 output approach",
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          126.0,
+          42.9
+        ],
+        "line_to_mm": [
+          126.0,
+          49.0
+        ],
+        "continuous_widths_mm": [
+          6.1
+        ],
+        "total_copper_width_mm": 6.1,
+        "sampling_step_mm": 0.024897959183673476
+      },
+      {
+        "label": "RSH2 output approach",
+        "net": "MOTION_SENSED_P",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          126.0,
+          42.9
+        ],
+        "line_to_mm": [
+          126.0,
+          49.0
+        ],
+        "continuous_widths_mm": [
+          6.1
+        ],
+        "total_copper_width_mm": 6.1,
+        "sampling_step_mm": 0.024897959183673476
+      },
+      {
+        "label": "Q1 source outside lead bank",
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          63.0,
+          19.4
+        ],
+        "line_to_mm": [
+          63.0,
+          28.6
+        ],
+        "continuous_widths_mm": [
+          8.8759
+        ],
+        "total_copper_width_mm": 8.8759,
+        "sampling_step_mm": 0.024932249322493234
+      },
+      {
+        "label": "Q1 source outside lead bank",
+        "net": "MAIN_COMMON",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          63.0,
+          19.4
+        ],
+        "line_to_mm": [
+          63.0,
+          28.6
+        ],
+        "continuous_widths_mm": [
+          8.8759
+        ],
+        "total_copper_width_mm": 8.8759,
+        "sampling_step_mm": 0.024932249322493234
+      },
+      {
+        "label": "Q4 source outside lead bank",
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          77.0,
+          21.4
+        ],
+        "line_to_mm": [
+          77.0,
+          30.6
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024932249322493234
+      },
+      {
+        "label": "Q4 source outside lead bank",
+        "net": "MAIN_COMMON",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          77.0,
+          21.4
+        ],
+        "line_to_mm": [
+          77.0,
+          30.6
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024932249322493234
+      },
+      {
+        "label": "Q7 source outside lead bank",
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          158.0,
+          24.4
+        ],
+        "line_to_mm": [
+          158.0,
+          33.6
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024932249322493234
+      },
+      {
+        "label": "Q7 source outside lead bank",
+        "net": "MOTION_COMMON",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          158.0,
+          24.4
+        ],
+        "line_to_mm": [
+          158.0,
+          33.6
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024932249322493234
+      },
+      {
+        "label": "Q9 source outside lead bank",
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          172.0,
+          26.4
+        ],
+        "line_to_mm": [
+          172.0,
+          35.6
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024932249322493234
+      },
+      {
+        "label": "Q9 source outside lead bank",
+        "net": "MOTION_COMMON",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          172.0,
+          26.4
+        ],
+        "line_to_mm": [
+          172.0,
+          35.6
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024932249322493234
+      },
+      {
+        "label": "Q40 source below bank",
+        "net": "CHOPPER_N",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          225.0,
+          78.0
+        ],
+        "line_to_mm": [
+          237.0,
+          78.0
+        ],
+        "continuous_widths_mm": [
+          5.0
+        ],
+        "total_copper_width_mm": 5.0,
+        "sampling_step_mm": 0.025
+      },
+      {
+        "label": "Q40 source below bank",
+        "net": "CHOPPER_N",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          225.0,
+          78.0
+        ],
+        "line_to_mm": [
+          237.0,
+          78.0
+        ],
+        "continuous_widths_mm": [
+          11.0
+        ],
+        "total_copper_width_mm": 11.0,
+        "sampling_step_mm": 0.025
+      },
+      {
+        "label": "Q40 drain exit",
+        "net": "CHOP_DRAIN",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          246.0,
+          67.0
+        ],
+        "line_to_mm": [
+          246.0,
+          79.0
+        ],
+        "continuous_widths_mm": [
+          12.0
+        ],
+        "total_copper_width_mm": 12.0,
+        "sampling_step_mm": 0.025
+      },
+      {
+        "label": "Q40 drain exit",
+        "net": "CHOP_DRAIN",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          246.0,
+          67.0
+        ],
+        "line_to_mm": [
+          246.0,
+          79.0
+        ],
+        "continuous_widths_mm": [],
+        "total_copper_width_mm": 0,
+        "sampling_step_mm": 0.025
+      },
+      {
+        "label": "Q1 source bank exit",
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          63.0,
+          19.4
+        ],
+        "line_to_mm": [
+          63.0,
+          28.599999999999998
+        ],
+        "continuous_widths_mm": [
+          8.875
+        ],
+        "total_copper_width_mm": 8.875,
+        "sampling_step_mm": 0.024999999999999998
+      },
+      {
+        "label": "Q1 drain bank exit",
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          47.0,
+          19.4
+        ],
+        "line_to_mm": [
+          47.0,
+          30.6
+        ],
+        "continuous_widths_mm": [
+          11.2
+        ],
+        "total_copper_width_mm": 11.2,
+        "sampling_step_mm": 0.024944320712694885
+      },
+      {
+        "label": "Q1 source bank exit",
+        "net": "MAIN_COMMON",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          63.0,
+          19.4
+        ],
+        "line_to_mm": [
+          63.0,
+          28.599999999999998
+        ],
+        "continuous_widths_mm": [
+          8.875
+        ],
+        "total_copper_width_mm": 8.875,
+        "sampling_step_mm": 0.024999999999999998
+      },
+      {
+        "label": "Q1 drain bank exit",
+        "net": "BATT_SENSED_P",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          47.0,
+          19.4
+        ],
+        "line_to_mm": [
+          47.0,
+          30.6
+        ],
+        "continuous_widths_mm": [
+          11.2
+        ],
+        "total_copper_width_mm": 11.2,
+        "sampling_step_mm": 0.024944320712694885
+      },
+      {
+        "label": "Q2 source bank exit",
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          63.0,
+          44.4
+        ],
+        "line_to_mm": [
+          63.0,
+          53.599999999999994
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024999999999999988
+      },
+      {
+        "label": "Q2 drain bank exit",
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          47.0,
+          44.4
+        ],
+        "line_to_mm": [
+          47.0,
+          55.6
+        ],
+        "continuous_widths_mm": [
+          11.2
+        ],
+        "total_copper_width_mm": 11.2,
+        "sampling_step_mm": 0.024944320712694885
+      },
+      {
+        "label": "Q2 source bank exit",
+        "net": "MAIN_COMMON",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          63.0,
+          44.4
+        ],
+        "line_to_mm": [
+          63.0,
+          53.599999999999994
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024999999999999988
+      },
+      {
+        "label": "Q2 drain bank exit",
+        "net": "BATT_SENSED_P",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          47.0,
+          44.4
+        ],
+        "line_to_mm": [
+          47.0,
+          55.6
+        ],
+        "continuous_widths_mm": [
+          11.2
+        ],
+        "total_copper_width_mm": 11.2,
+        "sampling_step_mm": 0.024944320712694885
+      },
+      {
+        "label": "Q3 source bank exit",
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          63.0,
+          69.4
+        ],
+        "line_to_mm": [
+          63.0,
+          78.60000000000001
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024932249322493234
+      },
+      {
+        "label": "Q3 drain bank exit",
+        "net": "BATT_SENSED_P",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          47.0,
+          69.4
+        ],
+        "line_to_mm": [
+          47.0,
+          80.6
+        ],
+        "continuous_widths_mm": [
+          11.2
+        ],
+        "total_copper_width_mm": 11.2,
+        "sampling_step_mm": 0.024999999999999974
+      },
+      {
+        "label": "Q3 source bank exit",
+        "net": "MAIN_COMMON",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          63.0,
+          69.4
+        ],
+        "line_to_mm": [
+          63.0,
+          78.60000000000001
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024932249322493234
+      },
+      {
+        "label": "Q3 drain bank exit",
+        "net": "BATT_SENSED_P",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          47.0,
+          69.4
+        ],
+        "line_to_mm": [
+          47.0,
+          80.6
+        ],
+        "continuous_widths_mm": [
+          11.2
+        ],
+        "total_copper_width_mm": 11.2,
+        "sampling_step_mm": 0.024999999999999974
+      },
+      {
+        "label": "Q4 source bank exit",
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          77.0,
+          21.4
+        ],
+        "line_to_mm": [
+          77.0,
+          30.599999999999998
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024999999999999998
+      },
+      {
+        "label": "Q4 drain bank exit",
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          93.0,
+          19.4
+        ],
+        "line_to_mm": [
+          93.0,
+          30.6
+        ],
+        "continuous_widths_mm": [
+          11.2
+        ],
+        "total_copper_width_mm": 11.2,
+        "sampling_step_mm": 0.024944320712694885
+      },
+      {
+        "label": "Q4 source bank exit",
+        "net": "MAIN_COMMON",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          77.0,
+          21.4
+        ],
+        "line_to_mm": [
+          77.0,
+          30.599999999999998
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024999999999999998
+      },
+      {
+        "label": "Q4 drain bank exit",
+        "net": "SYS_BUS_P",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          93.0,
+          19.4
+        ],
+        "line_to_mm": [
+          93.0,
+          30.6
+        ],
+        "continuous_widths_mm": [
+          11.2
+        ],
+        "total_copper_width_mm": 11.2,
+        "sampling_step_mm": 0.024944320712694885
+      },
+      {
+        "label": "Q5 source bank exit",
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          77.0,
+          46.4
+        ],
+        "line_to_mm": [
+          77.0,
+          55.599999999999994
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024999999999999988
+      },
+      {
+        "label": "Q5 drain bank exit",
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          93.0,
+          44.4
+        ],
+        "line_to_mm": [
+          93.0,
+          55.6
+        ],
+        "continuous_widths_mm": [
+          11.2
+        ],
+        "total_copper_width_mm": 11.2,
+        "sampling_step_mm": 0.024944320712694885
+      },
+      {
+        "label": "Q5 source bank exit",
+        "net": "MAIN_COMMON",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          77.0,
+          46.4
+        ],
+        "line_to_mm": [
+          77.0,
+          55.599999999999994
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024999999999999988
+      },
+      {
+        "label": "Q5 drain bank exit",
+        "net": "SYS_BUS_P",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          93.0,
+          44.4
+        ],
+        "line_to_mm": [
+          93.0,
+          55.6
+        ],
+        "continuous_widths_mm": [
+          11.2
+        ],
+        "total_copper_width_mm": 11.2,
+        "sampling_step_mm": 0.024944320712694885
+      },
+      {
+        "label": "Q6 source bank exit",
+        "net": "MAIN_COMMON",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          77.0,
+          71.4
+        ],
+        "line_to_mm": [
+          77.0,
+          80.60000000000001
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024932249322493234
+      },
+      {
+        "label": "Q6 drain bank exit",
+        "net": "SYS_BUS_P",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          93.0,
+          69.4
+        ],
+        "line_to_mm": [
+          93.0,
+          80.6
+        ],
+        "continuous_widths_mm": [
+          11.2
+        ],
+        "total_copper_width_mm": 11.2,
+        "sampling_step_mm": 0.024999999999999974
+      },
+      {
+        "label": "Q6 source bank exit",
+        "net": "MAIN_COMMON",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          77.0,
+          71.4
+        ],
+        "line_to_mm": [
+          77.0,
+          80.60000000000001
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024932249322493234
+      },
+      {
+        "label": "Q6 drain bank exit",
+        "net": "SYS_BUS_P",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          93.0,
+          69.4
+        ],
+        "line_to_mm": [
+          93.0,
+          80.6
+        ],
+        "continuous_widths_mm": [
+          11.2
+        ],
+        "total_copper_width_mm": 11.2,
+        "sampling_step_mm": 0.024999999999999974
+      },
+      {
+        "label": "Q7 source bank exit",
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          158.0,
+          24.4
+        ],
+        "line_to_mm": [
+          158.0,
+          33.599999999999994
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024999999999999988
+      },
+      {
+        "label": "Q7 drain bank exit",
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          142.0,
+          24.4
+        ],
+        "line_to_mm": [
+          142.0,
+          35.6
+        ],
+        "continuous_widths_mm": [
+          1.3969,
+          1.5964,
+          1.5964,
+          1.5964,
+          1.5964,
+          1.3969
+        ],
+        "total_copper_width_mm": 9.1794,
+        "sampling_step_mm": 0.024944320712694885
+      },
+      {
+        "label": "Q7 source bank exit",
+        "net": "MOTION_COMMON",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          158.0,
+          24.4
+        ],
+        "line_to_mm": [
+          158.0,
+          33.599999999999994
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024999999999999988
+      },
+      {
+        "label": "Q7 drain bank exit",
+        "net": "MOTION_SENSED_P",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          142.0,
+          24.4
+        ],
+        "line_to_mm": [
+          142.0,
+          35.6
+        ],
+        "continuous_widths_mm": [
+          1.3969,
+          1.5964,
+          1.5964,
+          1.5964,
+          1.5964,
+          1.3969
+        ],
+        "total_copper_width_mm": 9.1794,
+        "sampling_step_mm": 0.024944320712694885
+      },
+      {
+        "label": "Q8 source bank exit",
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          158.0,
+          59.4
+        ],
+        "line_to_mm": [
+          158.0,
+          68.6
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024999999999999988
+      },
+      {
+        "label": "Q8 drain bank exit",
+        "net": "MOTION_SENSED_P",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          142.0,
+          59.4
+        ],
+        "line_to_mm": [
+          142.0,
+          70.6
+        ],
+        "continuous_widths_mm": [
+          0.4,
+          1.6,
+          1.6,
+          1.6,
+          1.6,
+          1.6,
+          0.4
+        ],
+        "total_copper_width_mm": 8.8,
+        "sampling_step_mm": 0.02499999999999999
+      },
+      {
+        "label": "Q8 source bank exit",
+        "net": "MOTION_COMMON",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          158.0,
+          59.4
+        ],
+        "line_to_mm": [
+          158.0,
+          68.6
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024999999999999988
+      },
+      {
+        "label": "Q8 drain bank exit",
+        "net": "MOTION_SENSED_P",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          142.0,
+          59.4
+        ],
+        "line_to_mm": [
+          142.0,
+          70.6
+        ],
+        "continuous_widths_mm": [
+          0.4,
+          1.6,
+          1.6,
+          1.6,
+          1.6,
+          1.6,
+          0.4
+        ],
+        "total_copper_width_mm": 8.8,
+        "sampling_step_mm": 0.02499999999999999
+      },
+      {
+        "label": "Q9 source bank exit",
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          172.0,
+          26.4
+        ],
+        "line_to_mm": [
+          172.0,
+          35.599999999999994
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024999999999999988
+      },
+      {
+        "label": "Q9 drain bank exit",
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          188.0,
+          24.4
+        ],
+        "line_to_mm": [
+          188.0,
+          35.6
+        ],
+        "continuous_widths_mm": [
+          1.3969,
+          1.5964,
+          1.5964,
+          1.5964,
+          1.5964,
+          1.3969
+        ],
+        "total_copper_width_mm": 9.1794,
+        "sampling_step_mm": 0.024944320712694885
+      },
+      {
+        "label": "Q9 source bank exit",
+        "net": "MOTION_COMMON",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          172.0,
+          26.4
+        ],
+        "line_to_mm": [
+          172.0,
+          35.599999999999994
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024999999999999988
+      },
+      {
+        "label": "Q9 drain bank exit",
+        "net": "MOTION_BUS_P",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          188.0,
+          24.4
+        ],
+        "line_to_mm": [
+          188.0,
+          35.6
+        ],
+        "continuous_widths_mm": [
+          1.3969,
+          1.5964,
+          1.5964,
+          1.5964,
+          1.5964,
+          1.3969
+        ],
+        "total_copper_width_mm": 9.1794,
+        "sampling_step_mm": 0.024944320712694885
+      },
+      {
+        "label": "Q10 source bank exit",
+        "net": "MOTION_COMMON",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          172.0,
+          61.4
+        ],
+        "line_to_mm": [
+          172.0,
+          70.6
+        ],
+        "continuous_widths_mm": [
+          9.0
+        ],
+        "total_copper_width_mm": 9.0,
+        "sampling_step_mm": 0.024999999999999988
+      },
+      {
+        "label": "Q10 drain bank exit",
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          188.0,
+          59.4
+        ],
+        "line_to_mm": [
+          188.0,
+          70.6
+        ],
+        "continuous_widths_mm": [
+          0.4,
+          1.6,
+          1.6,
+          1.6,
+          1.6,
+          1.6,
+          0.4
+        ],
+        "total_copper_width_mm": 8.8,
+        "sampling_step_mm": 0.02499999999999999
+      },
+      {
+        "label": "Q10 source bank exit",
+        "net": "MOTION_COMMON",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          172.0,
+          61.4
+        ],
+        "line_to_mm": [
+          172.0,
+          70.6
+        ],
+        "continuous_widths_mm": [
+          9.2
+        ],
+        "total_copper_width_mm": 9.2,
+        "sampling_step_mm": 0.024999999999999988
+      },
+      {
+        "label": "Q10 drain bank exit",
+        "net": "MOTION_BUS_P",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          188.0,
+          59.4
+        ],
+        "line_to_mm": [
+          188.0,
+          70.6
+        ],
+        "continuous_widths_mm": [
+          0.4,
+          1.6,
+          1.6,
+          1.6,
+          1.6,
+          1.6,
+          0.4
+        ],
+        "total_copper_width_mm": 8.8,
+        "sampling_step_mm": 0.02499999999999999
+      },
+      {
+        "label": "Motion right spine",
+        "net": "MOTION_BUS_P",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          266.05,
+          100
+        ],
+        "line_to_mm": [
+          279.05,
+          100
+        ],
+        "continuous_widths_mm": [
+          8.25
+        ],
+        "total_copper_width_mm": 8.25,
+        "sampling_step_mm": 0.025
+      },
+      {
+        "label": "Battery return under core",
+        "net": "BATT_N",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          110,
+          113
+        ],
+        "line_to_mm": [
+          110,
+          153
+        ],
+        "continuous_widths_mm": [
+          12.95,
+          16.85
+        ],
+        "total_copper_width_mm": 29.8,
+        "sampling_step_mm": 0.025
+      },
+      {
+        "label": "Left arm approach",
+        "net": "ARM_L_N",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          247.05,
+          90
+        ],
+        "line_to_mm": [
+          247.05,
+          116
+        ],
+        "continuous_widths_mm": [
+          21.475
+        ],
+        "total_copper_width_mm": 21.475,
+        "sampling_step_mm": 0.025
+      },
+      {
+        "label": "Right arm approach",
+        "net": "ARM_R_N",
+        "layer": "F.Cu",
+        "line_from_mm": [
+          247.05,
+          113
+        ],
+        "line_to_mm": [
+          247.05,
+          140
+        ],
+        "continuous_widths_mm": [
+          23.0
+        ],
+        "total_copper_width_mm": 23.0,
+        "sampling_step_mm": 0.025
+      },
+      {
+        "label": "Motion right spine",
+        "net": "MOTION_BUS_P",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          266.05,
+          100
+        ],
+        "line_to_mm": [
+          279.05,
+          100
+        ],
+        "continuous_widths_mm": [
+          8.25
+        ],
+        "total_copper_width_mm": 8.25,
+        "sampling_step_mm": 0.025
+      },
+      {
+        "label": "Battery return under core",
+        "net": "BATT_N",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          110,
+          113
+        ],
+        "line_to_mm": [
+          110,
+          153
+        ],
+        "continuous_widths_mm": [
+          31.0
+        ],
+        "total_copper_width_mm": 31.0,
+        "sampling_step_mm": 0.025
+      },
+      {
+        "label": "Left arm approach",
+        "net": "ARM_L_N",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          247.05,
+          90
+        ],
+        "line_to_mm": [
+          247.05,
+          116
+        ],
+        "continuous_widths_mm": [
+          21.475
+        ],
+        "total_copper_width_mm": 21.475,
+        "sampling_step_mm": 0.025
+      },
+      {
+        "label": "Right arm approach",
+        "net": "ARM_R_N",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          247.05,
+          113
+        ],
+        "line_to_mm": [
+          247.05,
+          140
+        ],
+        "continuous_widths_mm": [
+          23.0
+        ],
+        "total_copper_width_mm": 23.0,
+        "sampling_step_mm": 0.025
+      },
+      {
+        "label": "Drive return horizontal",
+        "net": "DRIVE_N",
+        "layer": "B.Cu",
+        "line_from_mm": [
+          180,
+          167.05
+        ],
+        "line_to_mm": [
+          180,
+          179.05
+        ],
+        "continuous_widths_mm": [],
+        "total_copper_width_mm": 0,
+        "sampling_step_mm": 0.025
+      },
+      {
+        "label": "Lift return horizontal",
+        "net": "LIFT_N",
+        "layer": "In1.Cu",
+        "line_from_mm": [
+          180,
+          163.05
+        ],
+        "line_to_mm": [
+          180,
+          175.05
+        ],
+        "continuous_widths_mm": [],
+        "total_copper_width_mm": 0,
+        "sampling_step_mm": 0.025
+      },
+      {
+        "label": "Lift return horizontal",
+        "net": "LIFT_N",
+        "layer": "In2.Cu",
+        "line_from_mm": [
+          180,
+          163.05
+        ],
+        "line_to_mm": [
+          180,
+          175.05
+        ],
+        "continuous_widths_mm": [],
+        "total_copper_width_mm": 0,
+        "sampling_step_mm": 0.025
+      }
+    ],
+    "busbar_contact_spans": [
+      {
+        "net": "BATT_SENSED_P",
+        "contacts": [
+          "BC1",
+          "BC2"
+        ],
+        "center_span_mm": 58.0,
+        "baseline_center_span_mm": 58.0
+      },
+      {
+        "net": "MAIN_COMMON",
+        "contacts": [
+          "BC3",
+          "BC4"
+        ],
+        "center_span_mm": 48.0,
+        "baseline_center_span_mm": 48.0
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "contacts": [
+          "BC11",
+          "BC12"
+        ],
+        "center_span_mm": 30.0,
+        "baseline_center_span_mm": 30.0
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "contacts": [
+          "BC11",
+          "BC13"
+        ],
+        "center_span_mm": 61.7414,
+        "baseline_center_span_mm": 45.6508
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "contacts": [
+          "BC11",
+          "BC14"
+        ],
+        "center_span_mm": 56.376,
+        "baseline_center_span_mm": 80.0812
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "contacts": [
+          "BC12",
+          "BC13"
+        ],
+        "center_span_mm": 79.196,
+        "baseline_center_span_mm": 65.6049
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "contacts": [
+          "BC12",
+          "BC14"
+        ],
+        "center_span_mm": 60.731,
+        "baseline_center_span_mm": 92.9139
+      },
+      {
+        "net": "MOTION_BUS_P",
+        "contacts": [
+          "BC13",
+          "BC14"
+        ],
+        "center_span_mm": 32.5,
+        "baseline_center_span_mm": 37.0
+      },
+      {
+        "net": "MOTION_COMMON",
+        "contacts": [
+          "BC10",
+          "BC9"
+        ],
+        "center_span_mm": 20.0,
+        "baseline_center_span_mm": 20.0
+      },
+      {
+        "net": "MOTION_SENSED_P",
+        "contacts": [
+          "BC7",
+          "BC8"
+        ],
+        "center_span_mm": 40.0,
+        "baseline_center_span_mm": 40.0
+      },
+      {
+        "net": "SYS_BUS_P",
+        "contacts": [
+          "BC5",
+          "BC6"
+        ],
+        "center_span_mm": 30.0,
+        "baseline_center_span_mm": 30.0
+      }
+    ],
+    "limitations": [
+      "Same-layer polygon continuity, not a minimum-cut or current-sharing simulation.",
+      "All grouped and undersized conductors omitted. No busbar credit, no thermal hardware validation."
+    ]
+  },
+  "critical": {
+    "paths": [
+      {
+        "name": "main_positive_sense",
+        "from_pad": "RSH1.2",
+        "to_pad": "R21.1",
+        "net": "MAIN_KELVIN_P",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 59.2232,
+        "copper_track_length_mm": 59.2232,
+        "via_transitions": 2,
+        "layers": [
+          "F.Cu",
+          "In2.Cu"
+        ]
+      },
+      {
+        "name": "main_negative_sense",
+        "from_pad": "RSH1.3",
+        "to_pad": "U1.19",
+        "net": "MAIN_KELVIN_N",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 64.3427,
+        "copper_track_length_mm": 64.3427,
+        "via_transitions": 2,
+        "layers": [
+          "F.Cu",
+          "In2.Cu"
+        ]
+      },
+      {
+        "name": "main_positive_short_circuit",
+        "from_pad": "RSH1.2",
+        "to_pad": "R23.1",
+        "net": "MAIN_KELVIN_P",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 74.0031,
+        "copper_track_length_mm": 74.0031,
+        "via_transitions": 3,
+        "layers": [
+          "F.Cu",
+          "In1.Cu",
+          "In2.Cu"
+        ]
+      },
+      {
+        "name": "ina_positive_kelvin",
+        "from_pad": "RSH1.2",
+        "to_pad": "R223.1",
+        "net": "MAIN_KELVIN_P",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 33.299,
+        "copper_track_length_mm": 33.299,
+        "via_transitions": 3,
+        "layers": [
+          "F.Cu",
+          "In1.Cu",
+          "In2.Cu"
+        ]
+      },
+      {
+        "name": "ina_negative_kelvin",
+        "from_pad": "RSH1.3",
+        "to_pad": "R224.1",
+        "net": "MAIN_KELVIN_N",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 32.9763,
+        "copper_track_length_mm": 32.9763,
+        "via_transitions": 2,
+        "layers": [
+          "F.Cu",
+          "In1.Cu"
+        ]
+      },
+      {
+        "name": "ina_positive_filter",
+        "from_pad": "R223.2",
+        "to_pad": "U11.10",
+        "net": "INA_IN_P",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 6.6922,
+        "copper_track_length_mm": 6.4624,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "ina_negative_filter",
+        "from_pad": "R224.2",
+        "to_pad": "U11.9",
+        "net": "INA_IN_N",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 10.1848,
+        "copper_track_length_mm": 9.7075,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "ina_positive_cap",
+        "from_pad": "C241.1",
+        "to_pad": "U11.10",
+        "net": "INA_IN_P",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 3.6249,
+        "copper_track_length_mm": 3.6249,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "ina_negative_cap",
+        "from_pad": "C241.2",
+        "to_pad": "U11.9",
+        "net": "INA_IN_N",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 3.045,
+        "copper_track_length_mm": 3.045,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "main_positive_filter",
+        "from_pad": "C4.1",
+        "to_pad": "U1.20",
+        "net": "MAIN_CS_P",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 2.4899,
+        "copper_track_length_mm": 2.4899,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "main_negative_filter",
+        "from_pad": "C4.2",
+        "to_pad": "U1.19",
+        "net": "MAIN_KELVIN_N",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 2.4899,
+        "copper_track_length_mm": 2.4899,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "main_iscp_filter",
+        "from_pad": "C5.1",
+        "to_pad": "U1.18",
+        "net": "MAIN_ISCP",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 2.5643,
+        "copper_track_length_mm": 2.5643,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "motion_positive_sense",
+        "from_pad": "RSH2.2",
+        "to_pad": "R30.1",
+        "net": "MOTION_KELVIN_P",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 85.0292,
+        "copper_track_length_mm": 85.0292,
+        "via_transitions": 2,
+        "layers": [
+          "F.Cu",
+          "In2.Cu"
+        ]
+      },
+      {
+        "name": "motion_negative_sense",
+        "from_pad": "RSH2.3",
+        "to_pad": "U2.17",
+        "net": "MOTION_KELVIN_N",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 84.6401,
+        "copper_track_length_mm": 84.6401,
+        "via_transitions": 2,
+        "layers": [
+          "F.Cu",
+          "In2.Cu"
+        ]
+      },
+      {
+        "name": "motion_positive_short_circuit",
+        "from_pad": "RSH2.2",
+        "to_pad": "R32.1",
+        "net": "MOTION_KELVIN_P",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 91.147,
+        "copper_track_length_mm": 91.147,
+        "via_transitions": 2,
+        "layers": [
+          "F.Cu",
+          "In2.Cu"
+        ]
+      },
+      {
+        "name": "motion_positive_filter",
+        "from_pad": "C11.1",
+        "to_pad": "U2.18",
+        "net": "MOTION_CS_P",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 2.8325,
+        "copper_track_length_mm": 2.2,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "motion_negative_filter",
+        "from_pad": "C11.2",
+        "to_pad": "U2.17",
+        "net": "MOTION_KELVIN_N",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 3.2971,
+        "copper_track_length_mm": 2.6971,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "motion_iscp_filter",
+        "from_pad": "C12.1",
+        "to_pad": "U2.19",
+        "net": "MOTION_ISCP",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 4.4314,
+        "copper_track_length_mm": 4.4314,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "motion_boost_first",
+        "from_pad": "C9.1",
+        "to_pad": "U2.12",
+        "net": "MOTION_BST",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 6.8428,
+        "copper_track_length_mm": 6.8428,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "motion_boost_second",
+        "from_pad": "C29.1",
+        "to_pad": "U2.12",
+        "net": "MOTION_BST",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 10.8428,
+        "copper_track_length_mm": 10.8428,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "motion_source_first_boost",
+        "from_pad": "U2.13",
+        "to_pad": "C9.2",
+        "net": "MOTION_COMMON",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 16.3156,
+        "copper_track_length_mm": 16.3156,
+        "via_transitions": 2,
+        "layers": [
+          "B.Cu",
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "motion_source_second_boost",
+        "from_pad": "U2.13",
+        "to_pad": "C29.2",
+        "net": "MOTION_COMMON",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 20.0345,
+        "copper_track_length_mm": 20.0345,
+        "via_transitions": 3,
+        "layers": [
+          "B.Cu",
+          "F.Cu",
+          "In1.Cu"
+        ]
+      },
+      {
+        "name": "ina_supply_decoupling",
+        "from_pad": "C206.1",
+        "to_pad": "U11.6",
+        "net": "V3V3",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 9.5342,
+        "copper_track_length_mm": 9.5342,
+        "via_transitions": 2,
+        "layers": [
+          "F.Cu",
+          "In2.Cu"
+        ]
+      },
+      {
+        "name": "main_charge_pump_cap",
+        "from_pad": "C2.1",
+        "to_pad": "U1.23",
+        "net": "MAIN_CAP",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 10.0893,
+        "copper_track_length_mm": 9.8047,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "motion_pu_resistor",
+        "from_pad": "U2.15",
+        "to_pad": "R34.1",
+        "net": "MOTION_PU",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 14.8676,
+        "copper_track_length_mm": 14.8673,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "motion_pull_down",
+        "from_pad": "U2.14",
+        "to_pad": "R34.2",
+        "net": "MOTION_GATE_DRIVE",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 15.7147,
+        "copper_track_length_mm": 15.7141,
+        "via_transitions": 2,
+        "layers": [
+          "F.Cu",
+          "In1.Cu"
+        ]
+      },
+      {
+        "name": "main_gate_1",
+        "from_pad": "U1.14",
+        "to_pad": "R1.1",
+        "net": "MAIN_HGATE",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 86.4243,
+        "copper_track_length_mm": 86.4243,
+        "via_transitions": 2,
+        "layers": [
+          "F.Cu",
+          "In1.Cu"
+        ]
+      },
+      {
+        "name": "main_gate_2",
+        "from_pad": "U1.14",
+        "to_pad": "R2.1",
+        "net": "MAIN_HGATE",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 61.4243,
+        "copper_track_length_mm": 61.4243,
+        "via_transitions": 2,
+        "layers": [
+          "F.Cu",
+          "In1.Cu"
+        ]
+      },
+      {
+        "name": "main_gate_3",
+        "from_pad": "U1.14",
+        "to_pad": "R3.1",
+        "net": "MAIN_HGATE",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 36.4243,
+        "copper_track_length_mm": 36.4243,
+        "via_transitions": 2,
+        "layers": [
+          "F.Cu",
+          "In1.Cu"
+        ]
+      },
+      {
+        "name": "main_gate_4",
+        "from_pad": "U1.1",
+        "to_pad": "R4.1",
+        "net": "MAIN_DGATE",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 133.1184,
+        "copper_track_length_mm": 133.1184,
+        "via_transitions": 2,
+        "layers": [
+          "B.Cu",
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "main_gate_5",
+        "from_pad": "U1.1",
+        "to_pad": "R5.1",
+        "net": "MAIN_DGATE",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 108.1184,
+        "copper_track_length_mm": 108.1184,
+        "via_transitions": 2,
+        "layers": [
+          "B.Cu",
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "main_gate_6",
+        "from_pad": "U1.1",
+        "to_pad": "R6.1",
+        "net": "MAIN_DGATE",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 83.1184,
+        "copper_track_length_mm": 83.1184,
+        "via_transitions": 2,
+        "layers": [
+          "B.Cu",
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "motion_gate_7",
+        "from_pad": "U2.14",
+        "to_pad": "R7.1",
+        "net": "MOTION_GATE_DRIVE",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 79.351,
+        "copper_track_length_mm": 78.9479,
+        "via_transitions": 4,
+        "layers": [
+          "F.Cu",
+          "In1.Cu"
+        ]
+      },
+      {
+        "name": "motion_gate_8",
+        "from_pad": "U2.14",
+        "to_pad": "R8.1",
+        "net": "MOTION_GATE_DRIVE",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 43.0251,
+        "copper_track_length_mm": 43.0251,
+        "via_transitions": 4,
+        "layers": [
+          "F.Cu",
+          "In1.Cu"
+        ]
+      },
+      {
+        "name": "motion_gate_9",
+        "from_pad": "U2.14",
+        "to_pad": "R9.1",
+        "net": "MOTION_GATE_DRIVE",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 116.3305,
+        "copper_track_length_mm": 116.3305,
+        "via_transitions": 4,
+        "layers": [
+          "F.Cu",
+          "In1.Cu"
+        ]
+      },
+      {
+        "name": "motion_gate_10",
+        "from_pad": "U2.14",
+        "to_pad": "R10.1",
+        "net": "MOTION_GATE_DRIVE",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 79.0102,
+        "copper_track_length_mm": 79.0102,
+        "via_transitions": 5,
+        "layers": [
+          "F.Cu",
+          "In1.Cu",
+          "In2.Cu"
+        ]
+      },
+      {
+        "name": "local_gate_1",
+        "from_pad": "R1.2",
+        "to_pad": "Q1.1",
+        "net": "Q1_G",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 6.0875,
+        "copper_track_length_mm": 6.0875,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "local_gate_2",
+        "from_pad": "R2.2",
+        "to_pad": "Q2.1",
+        "net": "Q2_G",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 6.0875,
+        "copper_track_length_mm": 6.0875,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "local_gate_3",
+        "from_pad": "R3.2",
+        "to_pad": "Q3.1",
+        "net": "Q3_G",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 6.0875,
+        "copper_track_length_mm": 6.0875,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "local_gate_4",
+        "from_pad": "R4.2",
+        "to_pad": "Q4.1",
+        "net": "Q4_G",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 7.9125,
+        "copper_track_length_mm": 7.9125,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "local_gate_5",
+        "from_pad": "R5.2",
+        "to_pad": "Q5.1",
+        "net": "Q5_G",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 7.9125,
+        "copper_track_length_mm": 7.9125,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "local_gate_6",
+        "from_pad": "R6.2",
+        "to_pad": "Q6.1",
+        "net": "Q6_G",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 7.9125,
+        "copper_track_length_mm": 7.9125,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "local_gate_7",
+        "from_pad": "R7.2",
+        "to_pad": "Q7.1",
+        "net": "Q7_G",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 6.0875,
+        "copper_track_length_mm": 6.0875,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "local_gate_8",
+        "from_pad": "R8.2",
+        "to_pad": "Q8.1",
+        "net": "Q8_G",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 6.0875,
+        "copper_track_length_mm": 6.0875,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "local_gate_9",
+        "from_pad": "R9.2",
+        "to_pad": "Q9.1",
+        "net": "Q9_G",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 7.9125,
+        "copper_track_length_mm": 7.9125,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      },
+      {
+        "name": "local_gate_10",
+        "from_pad": "R10.2",
+        "to_pad": "Q10.1",
+        "net": "Q10_G",
+        "path_found": true,
+        "centerline_with_pad_leads_mm": 7.9125,
+        "copper_track_length_mm": 7.9125,
+        "via_transitions": 0,
+        "layers": [
+          "F.Cu"
+        ]
+      }
+    ],
+    "total": 46,
+    "passed": 46,
+    "limitations": "Explicit centerlines and actual pad/via links only; excludes plane return paths and EM coupling."
+  },
+  "reference_stitches": {
+    "stitches_checked": 2,
+    "at_least_two_layers": 2,
+    "lookup_coordinate_rounding_mm": 1e-05,
+    "unproven_stitches": [],
+    "limitation": "Local via-to-copper attachment only. Global reference integrity also requires zero native opens; no inference from a nearby zone outline."
+  }
+}

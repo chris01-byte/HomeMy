@@ -1,12 +1,12 @@
 {
-  "revision": "A.1 bounded WIP",
+  "revision": "A.1 fixed 280x220 WIP",
   "selected_size": null,
   "cad_release": false,
   "fabrication_release": false,
   "assembly_release": false,
   "production_release": false,
   "orderable": false,
-  "state": "bounded_search_failed",
+  "state": "fixed_280x220_stopped_after_two_unsafe_cycles",
   "engineering_prototype_notice": "Engineering prototype – not production qualified",
   "baseline_commit": "d1f97ba64da8717becdcc40eeb3f6bda842252e4",
   "frozen_wip_commit": "014632dd9d8c65689d6f62036c11b4d191d49fb4",
@@ -22,7 +22,16 @@
     "300x220": {
       "pcb_sha256": "330e5b6f61c7e8effd4c65c17f9873c81276f9dfbbdbe08d8d7accd35acf5f0a",
       "report_sha256": "7509de567944c47849cb37d3a2a7d9c669772ae1101cdd1a58edefec8152a13c"
+    },
+    "280x220": {
+      "pcb_sha256": "d6c44c6fb3233af09af3c62d060077a1e0b0a8a34e0e81eeabf495157b3843bc",
+      "final_state_sha256": "c2bc874cfa12651d09a277cae8437e4d202b8376c859e2e74e593116d4c18510",
+      "report": "FINAL_280x220_REPORT.md",
+      "final_state": "finish-280x220/final-state.json"
     }
   },
-  "thermal_hardware_validation_performed": false
+  "thermal_hardware_validation_performed": false,
+  "target_size": "280x220",
+  "cad_complete": false,
+  "wip": true
 }
