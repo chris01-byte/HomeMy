@@ -1,0 +1,18 @@
+{
+  "input_sha256": "3f5bef9aaa8206188bc4125b784b410cb109e7d144a267e79e831ea90d0f6bb5",
+  "output_sha256": "4ddf62b8b87a0698a4044eea57d8ed503deb0f06c1410490cfef6e4fb6053caf",
+  "TP6": {
+    "from_mm": [
+      44.0,
+      152.0
+    ],
+    "to_mm": [
+      92,
+      74
+    ],
+    "reason": "Full pad overlap with broad SYS field and clear 3mm probe access; no inherited anchor moved"
+  },
+  "retired_new_via": "94458d91-04bf-462c-a9a9-1272985ba913",
+  "reason": "No direct pad/track contacts; neighboring vias at35.6/151.2 and35.6/154.4 join same broad F/B return polygons",
+  "rules_unchanged": true
+}

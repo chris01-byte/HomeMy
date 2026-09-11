@@ -1,0 +1,77 @@
+{
+  "recipes": [
+    {
+      "label": "Q4 local gate",
+      "net": "Q4_G",
+      "adopted": true,
+      "blocked": [],
+      "parts": [
+        {
+          "points_mm": [
+            [
+              78.35,
+              12.5875
+            ],
+            [
+              80.5,
+              12.5875
+            ],
+            [
+              80.5,
+              17
+            ],
+            [
+              79.35,
+              17.0
+            ]
+          ],
+          "width_mm": 0.2,
+          "layer": "F.Cu"
+        }
+      ],
+      "vias": [],
+      "added_uuids": [
+        "0a973bcd-fc26-4c1a-81dc-4e30030df38e",
+        "5640d99b-3a3f-46cb-a7fe-e46232db4edd",
+        "457e79b8-e742-4dcb-b738-44f62a85acc2"
+      ]
+    },
+    {
+      "label": "Q9 local gate",
+      "net": "Q9_G",
+      "adopted": true,
+      "blocked": [],
+      "parts": [
+        {
+          "points_mm": [
+            [
+              165.35,
+              12.5875
+            ],
+            [
+              167.5,
+              12.5875
+            ],
+            [
+              167.5,
+              17
+            ],
+            [
+              166.35,
+              17.0
+            ]
+          ],
+          "width_mm": 0.2,
+          "layer": "F.Cu"
+        }
+      ],
+      "vias": [],
+      "added_uuids": [
+        "dbf5bf3a-c924-4546-b101-286eadd90cee",
+        "9be132e0-6a5b-4766-bf90-d62f1e1f2f6f",
+        "c6ed4220-4f2c-43fc-9306-c0516e929187"
+      ]
+    }
+  ],
+  "pcb_sha256": "3f5bef9aaa8206188bc4125b784b410cb109e7d144a267e79e831ea90d0f6bb5"
+}

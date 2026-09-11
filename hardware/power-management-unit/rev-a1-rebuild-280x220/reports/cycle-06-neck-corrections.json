@@ -1,0 +1,19 @@
+{
+  "input_sha256": "0436f86ed62f5541b02a70d9d597a3115398aaa6b4ee00e5ac4ff86f9499c1f7",
+  "pcb_sha256": "7ba0606a7243609ad34321ee6318808f3d7a358dacbc44513750f95dc216624f",
+  "removed_new_redundant_BATT_N_vias": [
+    "01008ba1-3e5c-44c8-840d-67ae58829beb",
+    "05e1d9ab-3387-4966-b92f-ec5c490e61a9",
+    "1aea806f-4a39-420d-ad0f-24c84e1c6471",
+    "4dd9edef-5453-4ce8-83a1-698e9b1d798d",
+    "799bdbb9-45df-4f9e-96ee-60cea2935f69"
+  ],
+  "background_void_B_Cu_mm": [
+    109.5,
+    87.8,
+    116.5,
+    93.5
+  ],
+  "preserved": "All original taps; U5 LOGIC_GND and V3V3 vias; primary BATT_N power-return outlines",
+  "independent_screen": "Five retired vias have no direct pad/track contacts; power/critical identities and actual native DRC rechecked after final fill."
+}

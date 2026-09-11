@@ -1,0 +1,477 @@
+{
+  "started_at": "2026-09-11T16:27:00+00:00",
+  "branch": "codex/pmu-rev-a1-280x220-rebuild",
+  "baseline_pcb_sha256": "13fcae0f58c9a6ac5f85eb721c24b44169a65f628baad6586bcd6002f4c17cfe",
+  "project_sha256": "4f511277fb255fd026cacdc09201534d4394260ae4ce92c05ecb6cf0ead3a723",
+  "rules_sha256": "cd4887d7d46be94dc7e81aa6dfe1a8736eb724fe911910cf9fd99174821278ac",
+  "cycles": [
+    {
+      "number": 1,
+      "objective": "Fresh mechanical placement and power corridors",
+      "started_at": "2026-09-11T16:39:20.996326+00:00",
+      "completed": true,
+      "finished_at": "2026-09-11T16:44:23.386511+00:00",
+      "accepted": true,
+      "note": "Mechanical placement gate passed; pure new layout, 1021 unrouted connections. Native parity and ERC pass; silkscreen warnings remain for assembly annotation.",
+      "pcb_sha256": "49874cc5164749f9184ec024e9e887358ea7fa8fe94cca07bf9eaaa0fa06b61e",
+      "opens": 1021,
+      "force": 18,
+      "critical": 0,
+      "placement": true,
+      "native": {
+        "erc": {
+          "command": [
+            "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe",
+            "sch",
+            "erc",
+            "--format",
+            "json",
+            "--severity-all",
+            "--exit-code-violations",
+            "--output",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\reports\\cycle-01-erc.json",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\kicad\\HomeMy_PMU_RevA1_Rebuild_280x220.kicad_sch"
+          ],
+          "exit": 0,
+          "seconds": 1.520545,
+          "counts": {},
+          "open_connections": 0,
+          "parity": 0,
+          "sha256": "bfa9db6b676ace57552cc4bc8229c2557895e51bd09c31972dfa8d88d2d131d9",
+          "stdout": "0 Verstöße gefunden\r\nERC-Bericht in C:/Users/chrba/Documents/ChatGPT/HomeMy/pmu-280x220-rebuild/hardware/power-management-unit/rev-a1-rebuild-280x220/reports/cycle-01-erc.json gespeichert\r\n",
+          "stderr": ""
+        },
+        "drc": {
+          "command": [
+            "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe",
+            "pcb",
+            "drc",
+            "--format",
+            "json",
+            "--severity-all",
+            "--exit-code-violations",
+            "--output",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\reports\\cycle-01-drc.json",
+            "--schematic-parity",
+            "--all-track-errors",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\kicad\\HomeMy_PMU_RevA1_Rebuild_280x220.kicad_pcb"
+          ],
+          "exit": 5,
+          "seconds": 1.5491,
+          "counts": {
+            "warning:silk_overlap": 72,
+            "warning:silk_over_copper": 112
+          },
+          "open_connections": 499,
+          "parity": 0,
+          "sha256": "0eeb031332068b3ceefafd3078ff264e48995e1f5c5847fd08a66b85224f0cb1",
+          "stdout": "184 Verstöße gefunden\r\nUnverbundene Elemente (499) gefunden\r\n0 Probleme in Schaltplan-Parität gefunden\r\nDRC-Bericht wurde gespeichert in C:/Users/chrba/Documents/ChatGPT/HomeMy/pmu-280x220-rebuild/hardware/power-management-unit/rev-a1-rebuild-280x220/reports/cycle-01-drc.json\r\n",
+          "stderr": ""
+        }
+      }
+    },
+    {
+      "number": 2,
+      "objective": "Establish power copper, local block connections and critical paths",
+      "started_at": "2026-09-11T16:45:08.014270+00:00",
+      "completed": true,
+      "finished_at": "2026-09-11T16:50:07.963689+00:00",
+      "accepted": false,
+      "note": "219 power and 20 critical paths established, but 28 via-hole clearance findings at net-tie copper graphics require one targeted correction. Candidate retained separately; validated placement checkpoint unchanged.",
+      "pcb_sha256": "95fd392339b9c99ccbb7d430e2ab3d035b1561fe3c0a6256a82969fab2864954",
+      "opens": 708,
+      "force": 219,
+      "critical": 20,
+      "placement": true,
+      "native": {
+        "erc": {
+          "command": [
+            "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe",
+            "sch",
+            "erc",
+            "--format",
+            "json",
+            "--severity-all",
+            "--exit-code-violations",
+            "--output",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\reports\\cycle-02-power-erc.json",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\kicad\\HomeMy_PMU_RevA1_Rebuild_280x220.kicad_sch"
+          ],
+          "exit": 0,
+          "seconds": 1.314815,
+          "counts": {},
+          "open_connections": 0,
+          "parity": 0,
+          "sha256": "29996d4b4fec255acfcbe2cbd3c0462becd75910fc9349ea55e82312bf139670",
+          "stdout": "0 Verstöße gefunden\r\nERC-Bericht in C:/Users/chrba/Documents/ChatGPT/HomeMy/pmu-280x220-rebuild/hardware/power-management-unit/rev-a1-rebuild-280x220/reports/cycle-02-power-erc.json gespeichert\r\n",
+          "stderr": ""
+        },
+        "drc": {
+          "command": [
+            "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe",
+            "pcb",
+            "drc",
+            "--format",
+            "json",
+            "--severity-all",
+            "--exit-code-violations",
+            "--output",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\reports\\cycle-02-power-drc.json",
+            "--schematic-parity",
+            "--all-track-errors",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\kicad\\HomeMy_PMU_RevA1_Rebuild_280x220.kicad_pcb"
+          ],
+          "exit": 5,
+          "seconds": 2.330132,
+          "counts": {
+            "error:connection_width": 1,
+            "error:hole_clearance": 28,
+            "warning:via_dangling": 82,
+            "warning:track_dangling": 27,
+            "warning:silk_overlap": 84,
+            "warning:silk_over_copper": 124
+          },
+          "open_connections": 499,
+          "parity": 0,
+          "sha256": "488879709037ca17786111b71e1daa61fa284df392dc4c0460f9f35a3bfae1b5",
+          "stdout": "346 Verstöße gefunden\r\nUnverbundene Elemente (499) gefunden\r\n0 Probleme in Schaltplan-Parität gefunden\r\nDRC-Bericht wurde gespeichert in C:/Users/chrba/Documents/ChatGPT/HomeMy/pmu-280x220-rebuild/hardware/power-management-unit/rev-a1-rebuild-280x220/reports/cycle-02-power-drc.json\r\n",
+          "stderr": ""
+        }
+      }
+    },
+    {
+      "number": 3,
+      "objective": "Correct via keepout conflicts; complete local ground and critical/power connections",
+      "started_at": "2026-09-11T16:50:08.035339+00:00",
+      "completed": true,
+      "finished_at": "2026-09-11T17:06:24.657890+00:00",
+      "accepted": true,
+      "note": "247/247 original force pairs and 38/46 critical paths; 456 opens. Native hole-clearance conflicts removed, no shorts or clearance violations. Three connection-width errors remain explicitly unresolved; ERC/parity pass.",
+      "pcb_sha256": "3f5bef9aaa8206188bc4125b784b410cb109e7d144a267e79e831ea90d0f6bb5",
+      "opens": 456,
+      "force": 247,
+      "critical": 38,
+      "placement": true,
+      "native": {
+        "erc": {
+          "command": [
+            "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe",
+            "sch",
+            "erc",
+            "--format",
+            "json",
+            "--severity-all",
+            "--exit-code-violations",
+            "--output",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\reports\\cycle-03-erc.json",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\kicad\\HomeMy_PMU_RevA1_Rebuild_280x220.kicad_sch"
+          ],
+          "exit": 0,
+          "seconds": 2.00452,
+          "counts": {},
+          "open_connections": 0,
+          "parity": 0,
+          "sha256": "b5e5b240a594a151e05b2e0663fb41b3b2ee0f5ee898e2440312ab27d9f96d7c",
+          "stdout": "0 Verstöße gefunden\r\nERC-Bericht in C:/Users/chrba/Documents/ChatGPT/HomeMy/pmu-280x220-rebuild/hardware/power-management-unit/rev-a1-rebuild-280x220/reports/cycle-03-erc.json gespeichert\r\n",
+          "stderr": ""
+        },
+        "drc": {
+          "command": [
+            "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe",
+            "pcb",
+            "drc",
+            "--format",
+            "json",
+            "--severity-all",
+            "--exit-code-violations",
+            "--output",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\reports\\cycle-03-drc.json",
+            "--schematic-parity",
+            "--all-track-errors",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\kicad\\HomeMy_PMU_RevA1_Rebuild_280x220.kicad_pcb"
+          ],
+          "exit": 5,
+          "seconds": 9.463703,
+          "counts": {
+            "error:connection_width": 3,
+            "warning:track_dangling": 25,
+            "warning:via_dangling": 78,
+            "warning:silk_overlap": 76,
+            "warning:silk_over_copper": 119
+          },
+          "open_connections": 456,
+          "parity": 0,
+          "sha256": "448482e7782cc9304132e6462198ca3fa4da5968cc1282b9435a2bf91aafdb59",
+          "stdout": "301 Verstöße gefunden\r\nUnverbundene Elemente (456) gefunden\r\n0 Probleme in Schaltplan-Parität gefunden\r\nDRC-Bericht wurde gespeichert in C:/Users/chrba/Documents/ChatGPT/HomeMy/pmu-280x220-rebuild/hardware/power-management-unit/rev-a1-rebuild-280x220/reports/cycle-03-drc.json\r\n",
+          "stderr": ""
+        }
+      }
+    },
+    {
+      "number": 4,
+      "objective": "Complete critical Kelvin trees and remove remaining local necks",
+      "started_at": "2026-09-11T17:06:24.718716+00:00",
+      "completed": true,
+      "finished_at": "2026-09-11T17:14:02.994562+00:00",
+      "accepted": true,
+      "note": "All247 force and46 critical paths; nativeERC/parity clean, no native error findings. 442 opens and298 warnings remain. TP6 and redundant return-via necks corrected without rule changes.",
+      "pcb_sha256": "a08ef73a1ceaa3589a923b137ee6e4572db1965e25d62b4497090406c976f3cf",
+      "opens": 442,
+      "force": 247,
+      "critical": 46,
+      "placement": true,
+      "native": {
+        "erc": {
+          "command": [
+            "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe",
+            "sch",
+            "erc",
+            "--format",
+            "json",
+            "--severity-all",
+            "--exit-code-violations",
+            "--output",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\reports\\cycle-04-erc.json",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\kicad\\HomeMy_PMU_RevA1_Rebuild_280x220.kicad_sch"
+          ],
+          "exit": 0,
+          "seconds": 1.352734,
+          "counts": {},
+          "open_connections": 0,
+          "parity": 0,
+          "sha256": "f960af9708215222368c170ddec44d13498ee51ba2cd4b0ac5be2dc6bee51735",
+          "stdout": "0 Verstöße gefunden\r\nERC-Bericht in C:/Users/chrba/Documents/ChatGPT/HomeMy/pmu-280x220-rebuild/hardware/power-management-unit/rev-a1-rebuild-280x220/reports/cycle-04-erc.json gespeichert\r\n",
+          "stderr": ""
+        },
+        "drc": {
+          "command": [
+            "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe",
+            "pcb",
+            "drc",
+            "--format",
+            "json",
+            "--severity-all",
+            "--exit-code-violations",
+            "--output",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\reports\\cycle-04-drc.json",
+            "--schematic-parity",
+            "--all-track-errors",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\kicad\\HomeMy_PMU_RevA1_Rebuild_280x220.kicad_pcb"
+          ],
+          "exit": 5,
+          "seconds": 3.84941,
+          "counts": {
+            "warning:track_dangling": 25,
+            "warning:via_dangling": 78,
+            "warning:silk_overlap": 76,
+            "warning:silk_over_copper": 119
+          },
+          "open_connections": 442,
+          "parity": 0,
+          "sha256": "29c6ea4784d0e1e4adc62c57baec5768ff37e94c47288364039416595c488b2c",
+          "stdout": "298 Verstöße gefunden\r\nUnverbundene Elemente (442) gefunden\r\n0 Probleme in Schaltplan-Parität gefunden\r\nDRC-Bericht wurde gespeichert in C:/Users/chrba/Documents/ChatGPT/HomeMy/pmu-280x220-rebuild/hardware/power-management-unit/rev-a1-rebuild-280x220/reports/cycle-04-drc.json\r\n",
+          "stderr": ""
+        }
+      }
+    },
+    {
+      "number": 5,
+      "objective": "Complete remaining branch supplies and controlled chopper routes, then bounded general signals",
+      "started_at": "2026-09-11T17:14:03.070947+00:00",
+      "completed": true,
+      "finished_at": "2026-09-11T17:42:16.583498+00:00",
+      "accepted": true,
+      "note": "305 opens, all247 force/46 critical paths, placement and frozen-rule/tap audits pass. No shorts/clearance violations. Exactly10 localized connection-width errors (temporary maximum allowed by inherited task) require next-cycle correction; nativeERC/parity pass.",
+      "pcb_sha256": "0436f86ed62f5541b02a70d9d597a3115398aaa6b4ee00e5ac4ff86f9499c1f7",
+      "opens": 305,
+      "force": 247,
+      "critical": 46,
+      "placement": true,
+      "native": {
+        "erc": {
+          "command": [
+            "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe",
+            "sch",
+            "erc",
+            "--format",
+            "json",
+            "--severity-all",
+            "--exit-code-violations",
+            "--output",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\reports\\cycle-05-erc.json",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\kicad\\HomeMy_PMU_RevA1_Rebuild_280x220.kicad_sch"
+          ],
+          "exit": 0,
+          "seconds": 1.352194,
+          "counts": {},
+          "open_connections": 0,
+          "parity": 0,
+          "sha256": "ebef69da12470e58d35fd7eaa6db5b9d268b222b18f8af238af1ee7f3be9c43b",
+          "stdout": "0 Verstöße gefunden\r\nERC-Bericht in C:/Users/chrba/Documents/ChatGPT/HomeMy/pmu-280x220-rebuild/hardware/power-management-unit/rev-a1-rebuild-280x220/reports/cycle-05-erc.json gespeichert\r\n",
+          "stderr": ""
+        },
+        "drc": {
+          "command": [
+            "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe",
+            "pcb",
+            "drc",
+            "--format",
+            "json",
+            "--severity-all",
+            "--exit-code-violations",
+            "--output",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\reports\\cycle-05-drc.json",
+            "--schematic-parity",
+            "--all-track-errors",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\kicad\\HomeMy_PMU_RevA1_Rebuild_280x220.kicad_pcb"
+          ],
+          "exit": 5,
+          "seconds": 5.001155,
+          "counts": {
+            "error:connection_width": 10,
+            "warning:track_dangling": 23,
+            "warning:via_dangling": 38,
+            "warning:silk_overlap": 76,
+            "warning:silk_over_copper": 119
+          },
+          "open_connections": 305,
+          "parity": 0,
+          "sha256": "aaf9e3e873fd96bf32b8893b14666ec2ed774fd26a6d597ea9859621dc282884",
+          "stdout": "266 Verstöße gefunden\r\nUnverbundene Elemente (305) gefunden\r\n0 Probleme in Schaltplan-Parität gefunden\r\nDRC-Bericht wurde gespeichert in C:/Users/chrba/Documents/ChatGPT/HomeMy/pmu-280x220-rebuild/hardware/power-management-unit/rev-a1-rebuild-280x220/reports/cycle-05-drc.json\r\n",
+          "stderr": ""
+        }
+      }
+    },
+    {
+      "number": 6,
+      "objective": "Final bounded cycle: targeted neck corrections, local chopper branches, one digital router call and final checks",
+      "started_at": "2026-09-11T17:42:16.646515+00:00",
+      "completed": true,
+      "finished_at": "2026-09-11T18:07:44.765083+00:00",
+      "accepted": true,
+      "note": "293 opens, all247 force and46 critical paths retained. Frozen rules/taps and placement pass. NativeERC0 and parity0; width errors reduced10 to1, dangling vias38 to35, no shorts/clearance violations. Unsafe10V tree withdrawn and22 vias restored. Single digital router stopped after more than30 stagnant passes; no import. Six-cycle boundary reached: stop all CAD work.",
+      "pcb_sha256": "9f329b44bf0fece059550d2f4a07b94af8fb52cfec7d26c4796aeed230193f99",
+      "opens": 293,
+      "force": 247,
+      "critical": 46,
+      "placement": true,
+      "native": {
+        "erc": {
+          "command": [
+            "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe",
+            "sch",
+            "erc",
+            "--format",
+            "json",
+            "--severity-all",
+            "--exit-code-violations",
+            "--output",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\reports\\cycle-06-erc.json",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\kicad\\HomeMy_PMU_RevA1_Rebuild_280x220.kicad_sch"
+          ],
+          "exit": 0,
+          "seconds": 1.255394,
+          "counts": {},
+          "open_connections": 0,
+          "parity": 0,
+          "sha256": "0963555af08ce625399fa4d14398b1c7eef4616dcbb6e52a57fabf21b483adf9",
+          "stdout": "0 Verstöße gefunden\r\nERC-Bericht in C:/Users/chrba/Documents/ChatGPT/HomeMy/pmu-280x220-rebuild/hardware/power-management-unit/rev-a1-rebuild-280x220/reports/cycle-06-erc.json gespeichert\r\n",
+          "stderr": ""
+        },
+        "drc": {
+          "command": [
+            "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe",
+            "pcb",
+            "drc",
+            "--format",
+            "json",
+            "--severity-all",
+            "--exit-code-violations",
+            "--output",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\reports\\cycle-06-drc.json",
+            "--schematic-parity",
+            "--all-track-errors",
+            "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\kicad\\HomeMy_PMU_RevA1_Rebuild_280x220.kicad_pcb"
+          ],
+          "exit": 5,
+          "seconds": 5.617366,
+          "counts": {
+            "error:connection_width": 1,
+            "warning:track_dangling": 23,
+            "warning:via_dangling": 35,
+            "warning:silk_overlap": 76,
+            "warning:silk_over_copper": 119
+          },
+          "open_connections": 293,
+          "parity": 0,
+          "sha256": "c3333f3d9d7f3cc8464e01556a93f2ec8f409d529f3ba690cd72536f4f7422ff",
+          "stdout": "254 Verstöße gefunden\r\nUnverbundene Elemente (293) gefunden\r\n0 Probleme in Schaltplan-Parität gefunden\r\nDRC-Bericht wurde gespeichert in C:/Users/chrba/Documents/ChatGPT/HomeMy/pmu-280x220-rebuild/hardware/power-management-unit/rev-a1-rebuild-280x220/reports/cycle-06-drc.json\r\n",
+          "stderr": ""
+        }
+      }
+    }
+  ],
+  "router_calls": 1,
+  "closed": true,
+  "stop_required": "Six full cycles exhausted",
+  "actions": [
+    {
+      "name": "Bind renamed project after native metadata serialization",
+      "time": "2026-09-11T16:41:29.651259+00:00",
+      "prior_sha256": "2a251a5abfb190753f4ad199ffc0a4c83147272ed79a480f5ba1357aa794e750",
+      "new_sha256": "4f511277fb255fd026cacdc09201534d4394260ae4ce92c05ecb6cf0ead3a723",
+      "allowed_differences": "Project filename, top-level sheet filename/name, class array order only; priorities and every numerical rule unchanged"
+    },
+    {
+      "name": "Fresh placement construction",
+      "time": "2026-09-11T16:41:31.102671+00:00",
+      "pcb_sha256": "49874cc5164749f9184ec024e9e887358ea7fa8fe94cca07bf9eaaa0fa06b61e",
+      "placement_passed": true,
+      "unplaced": [],
+      "overlaps": []
+    },
+    {
+      "name": "Fresh placement construction",
+      "time": "2026-09-11T16:45:09.493923+00:00",
+      "pcb_sha256": "20d1e0d5a4ea32586d0c0a09b58760f9d62325d8507d47310ee36e01be4ff5d4",
+      "placement_passed": false,
+      "unplaced": [],
+      "overlaps": [
+        [
+          "NT2",
+          "U12"
+        ]
+      ]
+    },
+    {
+      "name": "Fresh placement construction",
+      "time": "2026-09-11T16:47:46.284124+00:00",
+      "pcb_sha256": "5579f4ba64307b655fd713441fd0d0b3708ef52b010fdb5b2e550100a6c0ab67",
+      "placement_passed": true,
+      "unplaced": [],
+      "overlaps": []
+    },
+    {
+      "name": "New power skeleton and exact local blocks",
+      "time": "2026-09-11T16:48:10.589000+00:00",
+      "pcb_sha256": "95fd392339b9c99ccbb7d430e2ab3d035b1561fe3c0a6256a82969fab2864954",
+      "taps_adopted": 361,
+      "power_vias": {
+        "BATT_SENSED_P": 223,
+        "MAIN_COMMON": 213,
+        "SYS_BUS_P": 300,
+        "MOTION_SENSED_P": 228,
+        "MOTION_COMMON": 218,
+        "MOTION_BUS_P": 567,
+        "BATT_N": 2295,
+        "CHOPPER_N": 18
+      }
+    }
+  ],
+  "best_label": "cycle-06",
+  "no_progress": 0,
+  "closed_at": "2026-09-11T18:07:44.870138+00:00",
+  "restored_from_sha256": "9f329b44bf0fece059550d2f4a07b94af8fb52cfec7d26c4796aeed230193f99",
+  "final_pcb_sha256": "9f329b44bf0fece059550d2f4a07b94af8fb52cfec7d26c4796aeed230193f99",
+  "selected_cycle": 6
+}

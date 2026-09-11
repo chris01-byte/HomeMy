@@ -1,0 +1,311 @@
+{
+  "input_sha256": "aa0cdd20feb6fe4687f33e05e33d9e1e40f46fb6a311cb84b063d413a9af53fb",
+  "output_sha256": "88d81f799b581ab33a88cecfd84c85e9aa3500fe3456c74c824351c3b01d106b",
+  "moves": [
+    {
+      "ref": "R319",
+      "from_mm": [
+        216.0,
+        91.0
+      ],
+      "to_mm": [
+        229.5,
+        47
+      ]
+    },
+    {
+      "ref": "R320",
+      "from_mm": [
+        212.0,
+        91.0
+      ],
+      "to_mm": [
+        229.5,
+        49.6
+      ]
+    },
+    {
+      "ref": "R321",
+      "from_mm": [
+        198.0,
+        87.0
+      ],
+      "to_mm": [
+        229,
+        42
+      ]
+    },
+    {
+      "ref": "D62",
+      "from_mm": [
+        228.0,
+        87.0
+      ],
+      "to_mm": [
+        222,
+        43
+      ]
+    }
+  ],
+  "removed_nonpower_local_items": [
+    "59a19c77-a70f-40e3-9f3a-554cd009f524",
+    "7f5fafe9-d685-4e12-82cf-faa3c317c684",
+    "a86d8037-77d2-4b23-aabf-325de40984ae",
+    "f67ede40-f79b-47e6-9eb5-995916e3d569"
+  ],
+  "recipes": [
+    {
+      "label": "Chopper high drive",
+      "net": "CHOP_DRIVE_H",
+      "adopted": false,
+      "blocked": [
+        {
+          "item": 0,
+          "obstacles": [
+            {
+              "uuid": "74d39543-7021-4a57-bd63-31de2cca0078",
+              "net": "CHOP_DRIVE_L",
+              "kind": "pad",
+              "xy": [
+                228.5875,
+                49.6
+              ],
+              "layer": "F.Cu",
+              "locked": false,
+              "pad": "R320.1"
+            }
+          ]
+        },
+        {
+          "item": 1,
+          "obstacles": [
+            {
+              "uuid": "74d39543-7021-4a57-bd63-31de2cca0078",
+              "net": "CHOP_DRIVE_L",
+              "kind": "pad",
+              "xy": [
+                228.5875,
+                49.6
+              ],
+              "layer": "F.Cu",
+              "locked": false,
+              "pad": "R320.1"
+            }
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "points_mm": [
+            [
+              226.1375,
+              49.0
+            ],
+            [
+              228,
+              49
+            ],
+            [
+              228,
+              47
+            ],
+            [
+              228.5875,
+              47.0
+            ]
+          ],
+          "width_mm": 0.2,
+          "layer": "F.Cu"
+        }
+      ],
+      "vias": []
+    },
+    {
+      "label": "Chopper low drive",
+      "net": "CHOP_DRIVE_L",
+      "adopted": true,
+      "blocked": [],
+      "parts": [
+        {
+          "points_mm": [
+            [
+              226.1375,
+              48.05
+            ],
+            [
+              227.2,
+              48.05
+            ],
+            [
+              227.2,
+              50.8
+            ],
+            [
+              228.4,
+              50.8
+            ],
+            [
+              228.5875,
+              49.6
+            ]
+          ],
+          "width_mm": 0.2,
+          "layer": "F.Cu"
+        }
+      ],
+      "vias": [],
+      "added_uuids": [
+        "0c131e56-ee3d-41a1-a595-f721cb29c70b",
+        "bdcb8d02-532e-4d08-9ed6-3197097bc900",
+        "227385f0-2f81-4af9-a9c6-28f2203d23b6",
+        "6bb51dd9-d042-482e-a584-90c77e29280b"
+      ]
+    },
+    {
+      "label": "Chopper gate local",
+      "net": "CHOP_GATE",
+      "adopted": true,
+      "blocked": [],
+      "parts": [
+        {
+          "points_mm": [
+            [
+              230.4125,
+              47.0
+            ],
+            [
+              232,
+              47
+            ],
+            [
+              232,
+              43.8
+            ],
+            [
+              234.75,
+              43.8
+            ]
+          ],
+          "width_mm": 0.3,
+          "layer": "F.Cu"
+        },
+        {
+          "points_mm": [
+            [
+              230.4125,
+              49.6
+            ],
+            [
+              232,
+              49.6
+            ],
+            [
+              232,
+              47
+            ]
+          ],
+          "width_mm": 0.3,
+          "layer": "F.Cu"
+        },
+        {
+          "points_mm": [
+            [
+              228.0875,
+              42.0
+            ],
+            [
+              228.1,
+              43.8
+            ],
+            [
+              232,
+              43.8
+            ]
+          ],
+          "width_mm": 0.2,
+          "layer": "F.Cu"
+        },
+        {
+          "points_mm": [
+            [
+              220.6,
+              43.0
+            ],
+            [
+              220.6,
+              40
+            ],
+            [
+              228.1,
+              40
+            ],
+            [
+              228.0875,
+              42.0
+            ]
+          ],
+          "width_mm": 0.2,
+          "layer": "F.Cu"
+        }
+      ],
+      "vias": [],
+      "added_uuids": [
+        "4405c640-596e-4fa2-8630-d4f786771318",
+        "adacc0c8-a154-4e8d-b54a-861ef957a0e8",
+        "660777e0-1f28-4174-b20e-5e7cb045189c",
+        "d2cba1d3-6047-4c1b-a116-fe030ef6a5ae",
+        "cbf936e1-24f1-4828-8e66-806227609e92",
+        "93049a10-8a1b-48c1-9cf5-dbeb76a0a9ad",
+        "88686934-8912-4c90-bab6-87554eb8c54c",
+        "2b35e174-e421-4f05-bac3-77d4645a56c9",
+        "803d8ccd-52b7-4fdd-8e9c-5861cf8ee7f3",
+        "2b828b94-4537-4d40-bfe4-d01941bec7e8"
+      ]
+    },
+    {
+      "label": "INA local 3V3 decoupling",
+      "net": "V3V3",
+      "adopted": false,
+      "blocked": [
+        {
+          "item": 0,
+          "obstacles": [
+            {
+              "uuid": "20c77e9e-b613-41e3-909e-6e0d88ce3d6a",
+              "net": "INA_VBUS",
+              "kind": "track",
+              "xy": [
+                28.2222,
+                25.6816
+              ],
+              "layer": "F.Cu",
+              "locked": true,
+              "pad": null
+            }
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "points_mm": [
+            [
+              29.05,
+              25.0
+            ],
+            [
+              27.1,
+              25.0
+            ]
+          ],
+          "width_mm": 0.2,
+          "layer": "F.Cu"
+        }
+      ],
+      "vias": []
+    }
+  ],
+  "efuse_output_pads": [
+    "17",
+    "18"
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "input_pcb_sha256": "e9203fd8bf77f63b970ff93411bc75cd667a989e5cd52849c561f9b1fbd9adc3",
+  "pcb_sha256": "9f329b44bf0fece059550d2f4a07b94af8fb52cfec7d26c4796aeed230193f99",
+  "withdrawn_after_return_review": true,
+  "removed_10V_items": [
+    "06066951-287b-4877-868b-c081a3348ff1",
+    "091d418e-20e3-4224-a544-0c85bdbd31ef",
+    "0e6c1833-1f62-4b89-b5eb-d03a5c52f8d3",
+    "1094370a-379d-4fe5-a7b5-507fcbe3611f",
+    "14d5e459-e9ff-4e0d-bf54-f5f37fa00b13",
+    "19dd5be8-64af-4848-a40e-9f0357850a47",
+    "2b97987a-0b97-4a79-ac39-404c8c571ef8",
+    "2c035933-f6a4-4e97-9d7d-be67085e11a1",
+    "2f72ff6f-626e-4d73-a858-ed8aa6e220ea",
+    "308e9aee-41c5-43d2-9762-1d99db8dcdee",
+    "30902dda-1851-4274-a32d-f7ecf4334940",
+    "34273526-1f3b-42d2-8e5a-568ef0cc1c23",
+    "3d36c5cc-3c94-4433-9f06-a8dc4759f005",
+    "3f8bd495-eb79-4e43-8d2d-4e873332db16",
+    "4137ec2f-4cc9-423c-8b0d-26a4dce6bc56",
+    "4818548d-8c48-44de-a507-dda93f127085",
+    "4af9498b-9274-47eb-85c2-3ec937a660a4",
+    "4b2c1257-46e2-46a3-9b8e-1a035e4e7031",
+    "4bdfe33f-b1de-4db9-a1bb-f244ad3f029f",
+    "51b4e27a-06de-4a90-a713-3a57b0fdb4e7",
+    "580490cc-ebe0-4807-be9d-83961771f7dd",
+    "59705e8c-8992-4030-94d9-2617f7051055",
+    "5ca6451a-e423-4faf-ae24-ccd517dfeb7c",
+    "5de1f7d5-9db6-4755-8599-94a583d146de",
+    "5f4b5a3d-7551-44b6-81c0-87641450934d",
+    "658bda9e-00d2-428c-abb9-af178420eaa2",
+    "68a79c22-ddf1-4790-908f-958b48cf7c3c",
+    "771fc65d-b190-428d-935b-fab86f8e06ad",
+    "77d41d30-37b4-45db-b179-1b181e304592",
+    "790d5dc4-52c9-43ab-b090-d857a2e41411",
+    "7e42a6a3-007d-4208-8e04-f68b6cc402c1",
+    "9838454a-39d5-426e-a1b6-fa4b0a9767a6",
+    "997d9eab-12cf-4f82-8606-a3a943b39e49",
+    "a9bad481-29f9-4a78-97f8-ebf91cb1bc7a",
+    "b1b2875e-d950-4406-8a2a-1c965f90f13d",
+    "b268ee86-9acb-4688-8554-ead38eb2eac3",
+    "b3c64542-9b44-4edc-ba5b-42057127a29e",
+    "b48826f0-58c5-423f-ae6c-1bf5e28ce76f",
+    "b7ae143f-1cf2-4e2d-8651-cf7558c9514c",
+    "b843dc77-b3e3-4ae2-bf4e-a105e279edf0",
+    "b8f21fc1-1bee-441f-8f97-39ff66d22a93",
+    "cd50e11b-5b0c-46ae-9511-8b20e462782b",
+    "cf699c4d-4930-46e6-a131-b84fa006420a",
+    "d022438e-0db7-4046-b427-583fc29f4e6f",
+    "d5f1329c-30c2-4970-ac93-c9d9a43cf12e",
+    "d98eaea1-60a5-4ab1-90b1-de5db32494f6",
+    "e0ed2a06-1195-4d6f-9745-7dccd779b4d5",
+    "e3575f6d-ae0f-4245-8127-b83d35df76f9",
+    "e51af902-bb8a-450f-b04e-acedd94b9f70",
+    "e9895508-eb25-43a3-8671-7aa0bb4a285f",
+    "ed6e7f55-7e9a-464a-a83b-4307bf499b3f",
+    "f0f207db-1037-4b95-a2f6-92e56e3d3330",
+    "f21693e9-47a0-49da-a247-75aee47295d6"
+  ],
+  "restored_exact_vias": [
+    {
+      "uuid": "fc907f68-3fa4-45ce-8cfe-07e418f756d9",
+      "xy_mm": [
+        203.2,
+        109.6
+      ]
+    },
+    {
+      "uuid": "fb0fedde-a7f2-431d-9818-c012d65250dc",
+      "xy_mm": [
+        203.2,
+        116.0
+      ]
+    },
+    {
+      "uuid": "75dd7e72-7d58-4d76-97ec-2e6cdb5e2a54",
+      "xy_mm": [
+        203.2,
+        119.2
+      ]
+    },
+    {
+      "uuid": "bc4f108b-dbb3-4e5a-b23c-790fcc0ab4fe",
+      "xy_mm": [
+        203.2,
+        117.6
+      ]
+    },
+    {
+      "uuid": "5ef6dce1-08d6-43a3-8668-4fbe45383fa8",
+      "xy_mm": [
+        203.2,
+        120.8
+      ]
+    },
+    {
+      "uuid": "7fe962c2-7a2d-4a07-8442-19503f008ad2",
+      "xy_mm": [
+        203.2,
+        122.4
+      ]
+    },
+    {
+      "uuid": "0a93172e-eac0-4e77-a8db-bdce6434de14",
+      "xy_mm": [
+        203.2,
+        125.6
+      ]
+    },
+    {
+      "uuid": "14fb4245-dd14-4487-a6ce-89142643fc6c",
+      "xy_mm": [
+        203.2,
+        124.0
+      ]
+    },
+    {
+      "uuid": "5ace9d33-d94b-4a4b-9028-9dde1efbc0ec",
+      "xy_mm": [
+        203.2,
+        127.2
+      ]
+    },
+    {
+      "uuid": "d341f705-018f-42e2-b627-ff18477bbe27",
+      "xy_mm": [
+        203.2,
+        128.8
+      ]
+    },
+    {
+      "uuid": "da7aa69a-7be5-4012-aacd-8a944e8b431a",
+      "xy_mm": [
+        204.8,
+        109.6
+      ]
+    },
+    {
+      "uuid": "b91d8a4b-98e3-41f1-85fb-a09da95d43aa",
+      "xy_mm": [
+        204.8,
+        119.2
+      ]
+    },
+    {
+      "uuid": "46d8c83b-5564-4388-849b-bc81c8d9f8a4",
+      "xy_mm": [
+        204.8,
+        120.8
+      ]
+    },
+    {
+      "uuid": "a6718e70-af22-4fc1-a4ad-97ca01c2a92b",
+      "xy_mm": [
+        204.8,
+        122.4
+      ]
+    },
+    {
+      "uuid": "923d4130-0037-4eef-ac7f-1ec4c7509018",
+      "xy_mm": [
+        204.8,
+        124.0
+      ]
+    },
+    {
+      "uuid": "abd37513-98c1-4731-9870-e4cfeb9516a4",
+      "xy_mm": [
+        204.8,
+        125.6
+      ]
+    },
+    {
+      "uuid": "67785e02-3182-4c6c-9e6c-a63c33e75ad3",
+      "xy_mm": [
+        204.8,
+        128.8
+      ]
+    },
+    {
+      "uuid": "81de820b-0b9a-4701-a64d-a91482bd75fe",
+      "xy_mm": [
+        204.8,
+        127.2
+      ]
+    },
+    {
+      "uuid": "d069b1be-51ac-4670-9165-4fc9f73d7588",
+      "xy_mm": [
+        177.6,
+        104.8
+      ]
+    },
+    {
+      "uuid": "b57aeaad-187c-4847-bcd4-4a0b64fc4d6d",
+      "xy_mm": [
+        177.6,
+        108.0
+      ]
+    },
+    {
+      "uuid": "d3fad617-e410-4a88-9867-21e6e345d9dd",
+      "xy_mm": [
+        177.6,
+        106.4
+      ]
+    },
+    {
+      "uuid": "93f47366-138f-4d34-99f9-e46c8189314e",
+      "xy_mm": [
+        177.6,
+        120.8
+      ]
+    }
+  ],
+  "source_cycle5_sha256": "0436f86ed62f5541b02a70d9d597a3115398aaa6b4ee00e5ac4ff86f9499c1f7",
+  "reference_tree_retained": true,
+  "reason": "10V B.Cu trunk split primary BATT_N return at x204/y84.2..210.5. Fresh fill had241/247 force pairs,46/46 critical; six BATT_N B.Cu pairs failed. Complete10V tree withdrawn rather than accepting a narrow/long detour.",
+  "failed_pairs": [
+    "J2.1->NT7.2",
+    "NT1.2->BC15.1",
+    "NT2.2->BC15.1",
+    "NT3.2->BC15.1",
+    "NT4.2->BC15.1",
+    "NT7.2->BC15.1"
+  ]
+}

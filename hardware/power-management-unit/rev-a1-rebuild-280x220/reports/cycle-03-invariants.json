@@ -1,0 +1,23 @@
+{
+  "pcb_sha256": "3f5bef9aaa8206188bc4125b784b410cb109e7d144a267e79e831ea90d0f6bb5",
+  "receipt_sha256": "f480659f0c0712bbbfd32d37831199084e7918a5d48adf9c82891468800d283d",
+  "capture_sha256": "7235f751be6bf960ab08618c8c6df106b6032dae5555a7d9b12a1cc08ef3dd15",
+  "original_items": 492,
+  "adopted": 362,
+  "retired": 130,
+  "same_transform_components": 40,
+  "new_power_via_counts": {
+    "BATT_N": 2267,
+    "MAIN_COMMON": 213,
+    "BATT_SENSED_P": 223,
+    "SYS_BUS_P": 300,
+    "MOTION_BUS_P": 567,
+    "MOTION_COMMON": 218,
+    "MOTION_SENSED_P": 228
+  },
+  "project_settings_identical": true,
+  "stackup_identical": true,
+  "errors": [],
+  "passed": true,
+  "limitations": "Geometric provenance and frozen rules; no electrical or thermal qualification."
+}

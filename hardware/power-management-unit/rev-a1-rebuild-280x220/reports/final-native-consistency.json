@@ -1,0 +1,43 @@
+{
+  "same_input_hash_manifest": true,
+  "pcb_sha256": "9f329b44bf0fece059550d2f4a07b94af8fb52cfec7d26c4796aeed230193f99",
+  "cycle06_counts": {
+    "error:connection_width": 1,
+    "warning:track_dangling": 23,
+    "warning:via_dangling": 35,
+    "warning:silk_overlap": 76,
+    "warning:silk_over_copper": 119
+  },
+  "final_counts": {
+    "warning:track_dangling": 23,
+    "warning:via_dangling": 35,
+    "warning:silk_overlap": 76,
+    "warning:silk_over_copper": 119
+  },
+  "unresolved_intermittent_findings": [
+    {
+      "description": "Kupferverbindung zu schmal (Regel \"PWR_BATTERY outer power connections\" Mindestverbindungsbreite 1,0000 mm; tatsächlich 0,2012 mm) (F.Cu)",
+      "items": [
+        {
+          "description": "Via [BATT_N] auf F.Cu - B.Cu",
+          "pos": {
+            "x": 184.0,
+            "y": 106.4
+          },
+          "uuid": "3f25db10-a5fc-4042-be5f-f7b44be8e08f"
+        },
+        {
+          "description": "Pad 1 [CHOP_SENSE] von R304 auf F.Cu",
+          "pos": {
+            "x": 182.0,
+            "y": 104.9125
+          },
+          "uuid": "e250d50b-0ffb-40d1-abb0-3ea6750e749b"
+        }
+      ],
+      "severity": "error",
+      "type": "connection_width"
+    }
+  ],
+  "conclusion": "The same native inputs produced one connection_width finding in cycle6 and none in the final frozen read-only run. Treat the reported0.2012mm neck at BATT_N via(184,106.4) as unresolved, not waived. Both runs have293 opens and exit5. No additional routing/repair or repeat-until-clean was performed."
+}

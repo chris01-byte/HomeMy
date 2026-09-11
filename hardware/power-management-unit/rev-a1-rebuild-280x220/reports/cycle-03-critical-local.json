@@ -1,0 +1,181 @@
+{
+  "paths": [
+    {
+      "from": "C4.2",
+      "to": "U1.19",
+      "net": "MAIN_KELVIN_N",
+      "transform": [
+        0.0,
+        0.0,
+        -14.0
+      ],
+      "source_path_length_mm": null,
+      "added": [
+        "3e540d4d-f5e4-4d01-be03-8049b7ac9aec",
+        "291e83a4-8d43-4577-8b7c-5785ea68054b"
+      ],
+      "blocked": []
+    },
+    {
+      "from": "C11.2",
+      "to": "U2.17",
+      "net": "MOTION_KELVIN_N",
+      "transform": [
+        0.0,
+        -8.0,
+        -16.0
+      ],
+      "source_path_length_mm": null,
+      "added": [
+        "bab6b131-2d41-4f03-8ea9-61ed68372eb7",
+        "efb6e387-ceec-423a-99f3-7df7c86f9b5c"
+      ],
+      "blocked": []
+    },
+    {
+      "from": "U2.13",
+      "to": "C9.2",
+      "net": "MOTION_COMMON",
+      "transform": [
+        0.0,
+        -8.0,
+        -16.0
+      ],
+      "source_path_length_mm": null,
+      "added": [
+        "287537e1-f2af-4d87-9a61-00de5cd1db71"
+      ],
+      "blocked": []
+    },
+    {
+      "from": "U2.13",
+      "to": "C29.2",
+      "net": "MOTION_COMMON",
+      "transform": [
+        0.0,
+        -8.0,
+        -16.0
+      ],
+      "source_path_length_mm": null,
+      "added": [],
+      "blocked": []
+    },
+    {
+      "from": "C206.1",
+      "to": "U11.6",
+      "net": "V3V3",
+      "transform": [
+        0.0,
+        0.0,
+        -51.0
+      ],
+      "source_path_length_mm": null,
+      "added": [
+        "68c434d2-0241-40b1-9aa3-04105df79581",
+        "4905cde0-0d43-455c-af4b-e9a6907a9358",
+        "4f496d6c-ef1d-43c1-ad97-d420fa02feae",
+        "48317397-f519-4774-9ce8-c3d2cd6b201d",
+        "f9da5006-a291-469e-9717-ecb526068029",
+        "00b6516f-1537-4765-9960-b252b91662bf"
+      ],
+      "blocked": []
+    }
+  ],
+  "other_recipes": [
+    {
+      "label": "Chopper high-drive corrected escape",
+      "net": "CHOP_DRIVE_H",
+      "adopted": false,
+      "blocked": [
+        {
+          "item": 0,
+          "obstacles": [
+            {
+              "uuid": "bdcb8d02-532e-4d08-9ed6-3197097bc900",
+              "net": "CHOP_DRIVE_L",
+              "kind": "track",
+              "xy": [
+                227.2,
+                48.05
+              ],
+              "layer": "F.Cu",
+              "locked": true,
+              "pad": null
+            }
+          ]
+        },
+        {
+          "item": 1,
+          "obstacles": [
+            {
+              "uuid": "0c131e56-ee3d-41a1-a595-f721cb29c70b",
+              "net": "CHOP_DRIVE_L",
+              "kind": "track",
+              "xy": [
+                226.1375,
+                48.05
+              ],
+              "layer": "F.Cu",
+              "locked": true,
+              "pad": null
+            },
+            {
+              "uuid": "bdcb8d02-532e-4d08-9ed6-3197097bc900",
+              "net": "CHOP_DRIVE_L",
+              "kind": "track",
+              "xy": [
+                227.2,
+                48.05
+              ],
+              "layer": "F.Cu",
+              "locked": true,
+              "pad": null
+            },
+            {
+              "uuid": "b47d8ee0-abf2-4ec6-9730-51e33c88d727",
+              "net": "CHOP_DRIVE_L",
+              "kind": "pad",
+              "xy": [
+                226.1375,
+                48.05
+              ],
+              "layer": "F.Cu",
+              "locked": false,
+              "pad": "U33.3"
+            }
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "points_mm": [
+            [
+              226.1375,
+              49.0
+            ],
+            [
+              227,
+              49
+            ],
+            [
+              227,
+              46
+            ],
+            [
+              228.5875,
+              46
+            ],
+            [
+              228.5875,
+              47.0
+            ]
+          ],
+          "width_mm": 0.2,
+          "layer": "F.Cu"
+        }
+      ],
+      "vias": []
+    }
+  ],
+  "pcb_sha256": "518c4ba763ad7b4d04b26da72d36000255ac4d2b8e20edd31904275ec9d5169d"
+}
