@@ -1,0 +1,24 @@
+{
+  "command": [
+    "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe",
+    "pcb",
+    "drc",
+    "--format",
+    "json",
+    "--severity-all",
+    "--exit-code-violations",
+    "--output",
+    "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\reports\\finish\\basis-refill-drc.json",
+    "--schematic-parity",
+    "--all-track-errors",
+    "--refill-zones",
+    "--save-board",
+    "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\kicad\\HomeMy_PMU_RevA1_Rebuild_280x220.kicad_pcb"
+  ],
+  "started_at": "2026-09-13T11:44:00.564025+00:00",
+  "exit": null,
+  "timed_out": true,
+  "stdout": "257 Verstöße gefunden\r\nUnverbundene Elemente (293) gefunden\r\n0 Probleme in Schaltplan-Parität gefunden\r\nDRC-Bericht wurde gespeichert in C:/Users/chrba/Documents/ChatGPT/HomeMy/pmu-280x220-rebuild/hardware/power-management-unit/rev-a1-rebuild-280x220/reports/finish/basis-refill-drc.json\r\nPlatine gespeichert\r\n",
+  "stderr": "13:44:00: Error: Can't create registry key 'HKCU\\Software\\kicad-cli' (error 5: Zugriff verweigert)\r\n13:44:00: Error: Can't open registry key 'HKCU\\Software\\kicad-cli' (error 2: Das System kann die angegebene Datei nicht finden.)\r\nFontconfig error: \"C:\\Program Files\\KiCad\\10.0\\etc\\fonts\\fonts.conf\", line 28: SHGetFolderPathA failed\r\nFontconfig error: \"C:\\Program Files\\KiCad\\10.0\\etc\\fonts\\fonts.conf\", line 89: SHGetFolderPathA failed\r\nFontconfig error: Cannot load config file from C:\\Program Files\\KiCad\\10.0\\etc\\fonts\\fonts.conf\r\nFontconfig error: \"memory\", line 2: SHGetFolderPathA failed\r\nFontconfig error: \"memory\", line 3: SHGetFolderPathA failed\r\n\r\nFontconfig error: No writable cache directories\r\n\tC:/Users/chrba/.cache/fontconfig\r\n\r\nFontconfig error: No writable cache directories\r\n\tC:/Users/chrba/.cache/fontconfig\r\n",
+  "seconds": 90.111475
+}

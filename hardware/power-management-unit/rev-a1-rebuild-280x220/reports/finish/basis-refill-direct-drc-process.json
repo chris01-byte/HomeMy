@@ -1,0 +1,29 @@
+{
+  "command": [
+    "C:/Program Files/KiCad/10.0/bin/kicad-cli.exe",
+    "pcb",
+    "drc",
+    "--format",
+    "json",
+    "--severity-all",
+    "--exit-code-violations",
+    "--output",
+    "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\reports\\finish\\basis-refill-direct-drc.json",
+    "--schematic-parity",
+    "--all-track-errors",
+    "--refill-zones",
+    "--save-board",
+    "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\pmu-280x220-rebuild\\hardware\\power-management-unit\\rev-a1-rebuild-280x220\\kicad\\HomeMy_PMU_RevA1_Rebuild_280x220.kicad_pcb"
+  ],
+  "started_at": "2026-09-13T11:56:28.363176+00:00",
+  "fontconfig_environment_sha256": "5bd5aa67d6424da87479ed6bd73f331b7ece92290266b1106219454c63518ee6",
+  "pid": 3188,
+  "output_transport": "workspace files; Popen.wait on native process",
+  "exit": null,
+  "timed_out": true,
+  "poll_at_timeout": null,
+  "terminated_returncode": 1,
+  "stdout": "255 Verstöße gefunden\r\nUnverbundene Elemente (293) gefunden\r\n0 Probleme in Schaltplan-Parität gefunden\r\nDRC-Bericht wurde gespeichert in C:/Users/chrba/Documents/ChatGPT/HomeMy/pmu-280x220-rebuild/hardware/power-management-unit/rev-a1-rebuild-280x220/reports/finish/basis-refill-direct-drc.json\r\nPlatine gespeichert\r\n",
+  "stderr": "13:56:28: Error: Can't create registry key 'HKCU\\Software\\kicad-cli' (error 5: Zugriff verweigert)\r\n13:56:28: Error: Can't open registry key 'HKCU\\Software\\kicad-cli' (error 2: Das System kann die angegebene Datei nicht finden.)\r\n",
+  "seconds": 90.157246
+}

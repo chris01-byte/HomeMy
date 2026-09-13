@@ -1,11 +1,11 @@
 # PMU Rev A.1 — 280 × 220 mm rebuild
 
-**WIP — NICHT BESTELLBAR. Engineering prototype – not production qualified.**
+**WIP – NICHT BESTELLBAR. Engineering prototype – not production qualified.**
 
-Neuer Layoutversuch auf `codex/pmu-rev-a1-280x220-rebuild` aus dem ursprünglichen Rev-A-CAD, geschlossen nach sechs vollständigen Prüfzyklen. 293 offene Verbindungen in 112 Netzen. Alle Freigabeflags bleiben false.
+Der neue begrenzte Fertigstellungslauf vom 2026-09-13 ist in Phase 0 geschlossen: native ERC-/DRC-Prozesse schreiben Berichte, enden aber nicht regulär. Keine CAD-Änderung; weiterhin 293 offene Verbindungen in 112 Netzen. Alle Freigabeflags false.
 
-[Abschlussbericht mit Grenzen, offenen Netzen und Hashes](FINAL_REPORT.md).
+[Aktueller Abschlussbericht](FINISH_REPORT.md), [Prüfevidenz](reports/finish/finish-native-summary.json) und [historischer Rebuild-Abschluss](FINAL_REPORT.md).
 
-[KiCad-Projekt öffnen](kicad/HomeMy_PMU_RevA1_Rebuild_280x220.kicad_pro). Die Originalbibliotheken werden über relative Verweise aus `../rev-a/kicad` verwendet; das gesamte Repository gemeinsam behalten.
+[KiCad-Projekt öffnen](kicad/HomeMy_PMU_RevA1_Rebuild_280x220.kicad_pro). Originalbibliotheken werden relativ aus `../rev-a/kicad` eingebunden; das Repository gemeinsam behalten.
 
-CAD-Bearbeitung nach diesem Checkpoint gesperrt. Die Skripte dokumentieren den begrenzten Versuch; sie sind keine selbstlaufende, bestellfähige Leiterplattengenerierung.
+CAD-Bearbeitung nach diesem Checkpoint gesperrt. `FINISH_SHA256SUMS` bezeichnet den aktuellen Nachweissatz; `SHA256SUMS` den historischen Rebuild. Die Skripte dokumentieren den begrenzten Lauf.

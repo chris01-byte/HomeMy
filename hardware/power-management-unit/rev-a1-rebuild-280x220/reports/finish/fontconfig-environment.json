@@ -1,0 +1,11 @@
+{
+  "source": "C:\\Program Files\\KiCad\\10.0\\etc\\fonts\\fonts.conf",
+  "source_sha256": "888ba5feb74b1d6fac06162a01466e6221ebec934be620b6f60b805bb3ce289e",
+  "workspace_config_sha256": "beaa2b37432f43deb700fa4d391614eee81cec5f9bdc2e798265f48138f0eecd",
+  "purpose": "Resolve normal Windows font directories explicitly and place caches in the permitted workspace. No CAD/rule/font substitution; all native stderr remains recorded.",
+  "overrides": {
+    "FONTCONFIG_FILE": "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\.pmu-tools\\finish-rebuild-20260913\\fontconfig\\fonts.conf",
+    "FONTCONFIG_PATH": "C:\\Program Files\\KiCad\\10.0\\etc\\fonts",
+    "XDG_CACHE_HOME": "C:\\Users\\chrba\\Documents\\ChatGPT\\HomeMy\\.pmu-tools\\finish-rebuild-20260913\\fontconfig\\cache"
+  }
+}
