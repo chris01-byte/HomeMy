@@ -1,0 +1,23 @@
+{
+  "status": "wip_not_orderable",
+  "display_status": "WIP – NICHT BESTELLBAR",
+  "cad_complete": false,
+  "orderable": false,
+  "fabrication_release": false,
+  "assembly_release": false,
+  "production_release": false,
+  "pcb_sha256": "c8012eb2cb2495787e9562bbb6dd09944f823c233d16349e7fc7fd0f62e81972",
+  "selected_cycle": 9,
+  "cad_cycles_used": 11,
+  "autorouter_calls": 0,
+  "erc_exit_code": 0,
+  "drc_exit_code": 5,
+  "open_connections": 806,
+  "power_pairs_passed": 246,
+  "power_pairs_required": 247,
+  "critical_paths_passed": 0,
+  "critical_paths_required": 46,
+  "mechanical_acceptance_complete": false,
+  "reason": "Incomplete routing; no-regression stop after two unaccepted supply candidates; mechanical tolerance/3D qualification and silkscreen remain open.",
+  "energization_release": false
+}
