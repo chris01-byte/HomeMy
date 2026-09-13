@@ -1,0 +1,195 @@
+{
+  "pcb_sha256": "2742638d03b884b8b6ac7bf7064ef98b2bd6c5a95377b7617b72999eb2e83bc2",
+  "production_ready": false,
+  "physical_tests_performed": false,
+  "manufacturing_release": false,
+  "assembly_release": false,
+  "energization_release": false,
+  "production_release": false,
+  "independent_review_complete": false,
+  "graphical_final_reload_complete": false,
+  "gate_sources": {
+    "requirements.yaml": "a5a0e0e2eebf4d05d06a730c55521bc1e6db83aae8bc819b350d2b0a7b4ee91e",
+    "REV_B_VALIDATION.md": "a8da5f2a620b920340a5ef73b2f44068198ac3a88c0fb08b4940ad1f5582e860",
+    "verification-plan.md": "bac49cf763c2ce726e3db0dfb88f3af996728d814fe93a39da7041a192132b7c",
+    "rev-a/manufacturing/PCB_STACKUP_PRESSFIT.md": "024aa70c21664b7dcfc36899f9c5ad02c9325fb301b5eba4d1a9664178926021"
+  },
+  "required_production_categories": [
+    {
+      "id": "measured_main_inrush_and_no_precharge_confirmation",
+      "status": "open",
+      "accepted_measurement_evidence": null
+    },
+    {
+      "id": "measured_regenerative_energy_and_chopper_thermal_margin",
+      "status": "open",
+      "accepted_measurement_evidence": null
+    },
+    {
+      "id": "measured_24v_lift_bus_regeneration",
+      "status": "open",
+      "accepted_measurement_evidence": null
+    },
+    {
+      "id": "measured_pc_5v_and_24v_converter_behavior",
+      "status": "open",
+      "accepted_measurement_evidence": null
+    },
+    {
+      "id": "measured_per_arm_current_and_connector_temperature",
+      "status": "open",
+      "accepted_measurement_evidence": null
+    },
+    {
+      "id": "measured_fuse_bms_main_and_motion_selectivity",
+      "status": "open",
+      "accepted_measurement_evidence": null
+    },
+    {
+      "id": "final_enclosure_board_outline_mounting_airflow_and_heat_spreader",
+      "status": "open",
+      "accepted_measurement_evidence": null
+    },
+    {
+      "id": "final_harness_and_connector_derating",
+      "status": "open",
+      "accepted_measurement_evidence": null
+    },
+    {
+      "id": "final_emergency_stop_and_motion_safety_architecture",
+      "status": "open",
+      "accepted_measurement_evidence": null
+    }
+  ],
+  "validation_register_rows": [
+    {
+      "id": "B01",
+      "status": "open",
+      "accepted_raw_evidence": null
+    },
+    {
+      "id": "B02",
+      "status": "open",
+      "accepted_raw_evidence": null
+    },
+    {
+      "id": "B03",
+      "status": "open",
+      "accepted_raw_evidence": null
+    },
+    {
+      "id": "B04",
+      "status": "open",
+      "accepted_raw_evidence": null
+    },
+    {
+      "id": "B05",
+      "status": "open",
+      "accepted_raw_evidence": null
+    },
+    {
+      "id": "B06",
+      "status": "open",
+      "accepted_raw_evidence": null
+    },
+    {
+      "id": "B07",
+      "status": "open",
+      "accepted_raw_evidence": null
+    },
+    {
+      "id": "B08",
+      "status": "open",
+      "accepted_raw_evidence": null
+    },
+    {
+      "id": "B09",
+      "status": "open",
+      "accepted_raw_evidence": null
+    },
+    {
+      "id": "B10",
+      "status": "open",
+      "accepted_raw_evidence": null
+    },
+    {
+      "id": "B11",
+      "status": "open",
+      "accepted_raw_evidence": null
+    },
+    {
+      "id": "B12",
+      "status": "open",
+      "accepted_raw_evidence": null
+    },
+    {
+      "id": "B13",
+      "status": "open",
+      "accepted_raw_evidence": null
+    },
+    {
+      "id": "B14",
+      "status": "open",
+      "accepted_raw_evidence": null
+    }
+  ],
+  "mechanical_qualification_limits": [
+    {
+      "kind": "shim_film",
+      "minimum_shim_mm": 0.23,
+      "accepted_film_stack_max_mm": 0.22,
+      "residual_before_flatness_mm": 0.01,
+      "blocker": "Coupon proof for flatness, deformation and clamp contact remains absent."
+    },
+    {
+      "kind": "BB7_NT5",
+      "pad_x_mm": 31,
+      "cutout_right_x_mm": 26.25,
+      "shim_diameter_mm": 8,
+      "nominal_margin_mm": 0.75,
+      "margin_after_stated_contour_and_hole_tolerances_mm": 0.45,
+      "blocker": "Screw/shim centering and PCB registration not included in a closed assembly budget."
+    },
+    {
+      "kind": "BB6_BC13_BC14",
+      "washer_diameter_mm": 9,
+      "pad_y_mm": 35,
+      "head_lower_edge_y_mm": 41,
+      "nominal_margin_mm": 1.5,
+      "margin_after_stated_tolerances_mm": 1.2,
+      "blocker": "Real screw/tool/PCB registration stack not qualified; old11.6vs12.1 statement superseded."
+    },
+    {
+      "kind": "M3_clamp",
+      "required_force_N": [
+        200,
+        400
+      ],
+      "contact_resistance_limit_microohm": 100,
+      "required_coupons": 3,
+      "required_temperature_cycles": 10,
+      "max_resistance_drift_percent": 25,
+      "blocker": "These actual coupon/contact-force/thermal-cycle measurements remain absent."
+    },
+    {
+      "kind": "pressfit",
+      "blocker": "Actual production drill, finished hole, plating and laminate tolerances; press/support matrix, force-travel limits and push-out coupons not qualified."
+    },
+    {
+      "kind": "assembly_envelopes",
+      "nominal_access_mm": 25,
+      "tool_diameters_mm": [
+        9,
+        10
+      ],
+      "required_underside_room_mm": 15,
+      "blocker": "Exact lugs/crimp systems, cable bends, support/cover and counterhold tools not fully selected; capacitor vent envelope remains mandatory."
+    }
+  ],
+  "distinction": "CAD connectivity/clearance and nominal copper geometry are verified. Hardware measurement, supplier process acceptance and toleranced final integration are not established by those results.",
+  "next_bounded_steps": [
+    "After manual Mac unlock: open this exact PCB hash, close KiCad fully, open again and verify unchanged hashes. Repeat native final suite twice; if clean, set cad_complete true and cad_complete_pending_independent_review, with all release flags still false. No further CAD edits are needed for known routing findings.",
+    "Independent engineering review of the exact draft package and physical qualification plan; review the specified press-fit process and busbar/shim tolerance stack first.",
+    "Close applicable B01–B14 and the nine production categories with versioned raw test evidence and reviewed acceptance; no production or actuator/energization claim before those records exist."
+  ]
+}

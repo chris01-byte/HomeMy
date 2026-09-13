@@ -1,73 +1,69 @@
 # HomeMy PMU Rev A2 – 280 × 260 mm
 
-**WIP – NICHT BESTELLBAR. Das Layout bleibt unvollständig; sämtliche Freigabeflags sind false.**
+**WIP – NICHT BESTELLBAR. Alle nativen CAD-Prüfungen bestanden; die vorgeschriebene grafische Schließen-/Öffnen-Kontrolle und die Produktionsqualifikation sind noch offen.**
 
-Branch: `codex/pmu-rev-a2-280x260-layout`
-Fortsetzung von Commit: `fbfa7675531354aed1ec0358987397bb4b4bddf4`
-PCB: `kicad/HomeMy_PMU_RevA.kicad_pcb`
-PCB-SHA-256: `d4a9420958a3cee69e000600df9e1787f2b3d719b167e1c4359ce758362bd0a6`
+- Branch: `codex/pmu-rev-a2-280x260-layout`
+- Fortsetzung von Commit: `eb2261104dbb95eb9bb6226e4644d3709d0f3eae`
+- PCB: `kicad/HomeMy_PMU_RevA.kicad_pcb`
+- PCB-SHA-256: `2742638d03b884b8b6ac7bf7064ef98b2bd6c5a95377b7617b72999eb2e83bc2`
+- Eingangshash: `d4a9420958a3cee69e000600df9e1787f2b3d719b167e1c4359ce758362bd0a6`
 
-Der ausgewählte, zweimal nativ geprüfte Fortsetzungsstand aus Zyklus 7 reduziert die offenen Verbindungen von **10 auf 3** und die Dangling-Befunde von **34 auf 7**. Der zusätzliche Motion-In2-Unterbruch ist geschlossen und seine HYS-Engstelle verbreitert. Reset, Haupttemperaturmessung, Taster, LED und I²C-SCL sind vollständig verbunden. Die revisionslokale BOM-Herkunftsprüfung besteht nun. **CAN_STB, I2C_SDA und TEMP_MOTION_ADC bleiben offen.** DRC ist nicht bestanden; `cad_complete`, `orderable`, `fabrication_release`, `assembly_release`, `production_release` und `energization_release` bleiben false. Keine Bestellung und kein Gerber-/Bohr-/Pick-and-Place-Fertigungsprüfsatz wurden ausgelöst.
+Die letzten drei Netze **CAN_STB, I2C_SDA und TEMP_MOTION_ADC sind vollständig verbunden**. Alle sieben bisherigen Dangling-Befunde und alle 17 Beschriftungsbefunde sind beseitigt. Es bleiben **keine bekannten Routing-, Kurzschluss-, Kupferregel- oder nominellen 2D-Mechanikbefunde**. Das unveränderte Ergebnis besteht zwei vollständige native Prüfserien.
 
-## Endprüfungen am unveränderten Stand
+`native_cad_checks_complete` ist true. `cad_complete` bleibt wegen der nicht ausgeführten grafischen Abschlusskontrolle false. `orderable`, `fabrication_release`, `assembly_release`, `production_release` und `energization_release` bleiben ebenfalls false. Es wurde weder bestellt noch eine Bestromung oder Fertigung freigegeben. Maßgeblich ist ausschließlich [release-status.json](release-status.json); ältere Freigaben der ursprünglichen Rev A werden nicht auf A2 übertragen.
 
-| Prüfung | Lauf 1 | Lauf 2 |
+## Endprüfung
+
+| Prüfung | `finish-final1` | `finish-final2` |
 |---|---:|---:|
-| Native ERC | Exit 0, keine Befunde | gleich |
-| Native DRC, alle Schweregrade | **Exit 5, nicht bestanden** | gleich |
-| Offene Verbindungen | **3** | **3** |
-| Kurzschluss-/Abstands-/Kupferregelbefunde | 0 | 0 |
-| Freie Leiterbahnenden / einlagige Via | 6 / 1 | 6 / 1 |
-| Beschriftungsüberlappung / über Kupfer | 9 / 8 | 9 / 8 |
+| Native ERC, alle Schweregrade | Exit 0, null Befunde | identisch |
+| Native DRC, alle Trackfehler und Schaltplanparität | Exit 0, null Befunde | identisch |
+| Offene Verbindungen / freie Tracks / freie Vias | 0 / 0 / 0 | 0 / 0 / 0 |
+| Kurzschluss-/Abstands-/Beschriftungsbefunde | 0 | 0 |
 | Native Schaltplan-/PCB-Paritätsbefunde | 0 | 0 |
-| Vollständiger Quellen-/BOM-/Pad-Audit | Exit 0, keine Fehler | gleich |
-| Erforderliche Leistungspfad-Paare | **247/247** | **247/247** |
+| Vollständiger Quellen-/BOM-/Pad-Audit | Exit 0 | Exit 0 |
+| Leistungspfad-Paare | **247/247** | **247/247** |
 | Explizite kritische Pfade | **46/46** | **46/46** |
-| Vollständiger Padgraph gegen Fortsetzungseingang | keine Regression | gleich |
-| Kupferidentität / Geometriebeleg / nominelle Mechanik | Exit 0 | Exit 0 |
+| Vollständiger Padgraph gegenüber dem Eingang | keine Regression | identisch |
+| Kupferherkunft, Geometrie, nominelle Mechanik, Antennenkupfer | bestanden | identisch |
+| Gefüllte Leistungsquerschnitte gegenüber dem Eingang | erhalten | identisch |
 
-KiCad 10.0.6 hat sämtliche Zonen nativ neu gefüllt und gespeichert. Der genaue Projektpfad wurde im grafischen PCB-Editor geöffnet, der Editor vollständig beendet, frisch gestartet und dieselbe Platine erneut geladen. Die PCB blieb dabei unverändert. Beim Schließen sortierte KiCad lediglich das Array der Netzklassen in `.kicad_pro` um; Namen, Prioritäten und Regelwerte blieben gleich. Nach vollständigem Editorende wurde die ursprüngliche Projektdatei byteidentisch wiederhergestellt. Ausschließlich die danach ausgeführten Serien `resume-proof1` und `resume-proof2` sind verbindlich; ein vorläufiger Lauf wurde ersetzt.
+KiCad 10.0.6 füllte alle Zonen erneut und speicherte die Platine; bereits dieser Lauf endete mit DRC Exit 0 und unveränderten CAD-Hashes. Jeder finale Prüfprozess lud den gespeicherten Stand frisch und endete regulär. **24/24 finale Prozesse endeten mit Exit 0**, ohne Timeout, Absturz oder fehlenden Bericht. Alle 70 CAD-Eingaben blieben unverändert. Der vollständige Ergebnisvergleich stimmt überein; nur Zeitstempel und Laufzeiten sind davon ausgenommen. Vorläufige Prüfserien vor der letzten Status-/BOM-Aktualisierung sind ersetzt.
 
-Alle finalen Prozesse endeten regulär, ohne Absturz, Timeout oder fehlenden Bericht. Alle 70 CAD-Eingabedateien blieben während beider Serien unverändert. Die vollständigen Graphen und sämtliche tatsächlichen DRC-Befunde stimmen überein. KiCad wählte beim offenen TEMP_MOTION_ADC-Ziel zwei unterschiedliche repräsentative Trackobjekte derselben unveränderten Komponente. Beide Rohzeugen sind dokumentiert; beide DRC-Läufe bleiben fehlgeschlagen. [verification-processes.json](reports/verification-processes.json) enthält Befehle, Exit-Codes, Hashbezüge und Wiederholungsvergleich; [input-hashes.json](reports/input-hashes.json) die Eingabehashes.
+Die **grafische** Kontrolle dieses endgültigen PCB-Hashes konnte nicht stattfinden: Beide Bedienversuche meldeten einen gesperrten Mac, der sich nicht automatisch entsperren ließ. Eine manuelle Entsperrung wurde angefragt; sie liegt bis zur Berichtserstellung nicht bestätigt vor. Weder eine grafische Sichtkontrolle noch das vollständige Beenden und erneute Öffnen dieses Endstands wird als bestanden ausgegeben. Frühere GUI-Nachweise mit anderem PCB-Hash gelten dafür nicht.
 
-## Elektrische Identität und Änderungen
+[verification-processes.json](reports/verification-processes.json) dokumentiert Befehle, Prozesscodes, Berichts- und Prüferhashes, Wiederholungsvergleich und diese Einschränkung. [input-hashes.json](reports/input-hashes.json) enthält sämtliche CAD-Eingabehashes. Die leeren Restnetz- und Dangling-Listen stehen in [open-connections.json](reports/open-connections.json).
 
-Elektrische Quelle bleibt ausschließlich die ursprüngliche `../rev-a/`, PCB-Referenzhash `13fcae0f58c9a6ac5f85eb721c24b44169a65f628baad6586bcd6002f4c17cfe`. Die neue 280×260-Geometrie aus dem vorherigen Auftrag wird fortgesetzt; keine ältere Revision wurde überschrieben. In diesem Durchlauf wurden keine Bauteile verschoben. Die Edge-Cuts-Mittellinien bleiben exakt `(0,0)–(280,0)–(280,260)–(0,260)` mm.
+## Erhaltene Identität und ausgeführte Änderungen
 
-Erhalten sind 425 Footprints, 1377 physische Pads einschließlich Montagepads, vier Kupferlagen, 40 Testpunkte, 48 Pressfit-Bohrungen und vier Befestigungsbohrungen. Werte, Pad-/Footprint-UUIDs, Netzidentitäten, Stackup, Schutz-, Gate-/Kelvin- und Net-Tie-Konzept bleiben erhalten. DNP: `C244`, `J13`, `R243`, `R244`. **69/69 Nicht-PCB-CAD-Dateien sind byteidentisch zur ursprünglichen Rev A.** Keine Mindestbreite oder Via-Regel wurde abgesenkt; keine pauschale Ausnahme angelegt.
+Elektrische Quelle bleibt die ursprüngliche `../rev-a/`, Referenzhash `13fcae0f58c9a6ac5f85eb721c24b44169a65f628baad6586bcd6002f4c17cfe`. Die zuvor eigenständig aufgebaute 280×260-Revision wurde in ihrem isolierten Worktree fortgesetzt. Keine ältere Revision wurde geändert. Die spätere ausdrückliche 280×260-Anweisung des Nutzers bestimmt die Geometrie dieses Auftrags.
 
-Die finale Kupferprüfung erfasst 5368 Track-/Viaobjekte und 77 Zonen: 4388 erhaltene Quellobjekte und 1057 neue Objekte, ohne unbelegte UUID. Sämtliche ausgewählten Quell-/Zielgeometrien und 973 Padanker stimmen mit dem nativen Stand überein. Entfernte Einzelobjekte aus ursprünglichen Power-Tap-Gruppen sind ausdrücklich als verworfen dokumentiert; diese Gruppen werden nicht pauschal als unverändert ausgegeben. [copper-provenance.json](reports/copper-provenance.json) enthält die vollständigen Zuordnungen.
+Die Edge-Cuts-Mittellinien bilden exakt `(0,0)–(280,0)–(280,260)–(0,260)` mm. Erhalten sind **425 Footprints, 1377 physische Pads einschließlich Montagepads, vier Kupferlagen, 40 Testpunkte, 48 Press-fit-Bohrungen und vier Befestigungen**. Werte, DNP, Pad-/Footprint-UUIDs, Netzidentitäten, Schutzfunktionen, Stackup, Netzklassen, Gate-/Kelvin- und Net-Tie-Konzept bleiben erhalten. DNP: `C244`, `J13`, `R243`, `R244`. **69/69 Nicht-PCB-CAD-Dateien sind byteidentisch zur ursprünglichen Rev A.** Keine Regel wurde abgeschwächt oder neu ausgenommen.
 
-Die zusätzliche Motion-In2-Verteilung wurde durch einen lokalen CHOP_QUALIFY_N-Lagenwechsel und die Verlagerung der neuen HYS-Via geschlossen. Die Reset-Verbindung erhielt einen gezielten B.Cu-Übergang, damit CHOP_GND nach dem Füllen zusammenhängend bleibt. Nur nach nativer Padgraph-Prüfung wurden vollständige unbenutzte Kupferäste entfernt oder bis zum tatsächlichen Anschluss gekürzt.
+Die drei letzten Netze wurden mit gezielten lokalen Leiterzügen und Lagenwechseln geschlossen. CAN erhielt einen lokalen In1-Übergang, der die LOGIC_5V_N-Rückleitung erhält. TEMP umgeht den V5V-Querschnitt mit einem lokalen B.Cu-Übergang; sein Sensorabschnitt wurde aus dem Rand des Motion-Kupfers verlegt. Ausschließlich nach nativer Prüfung der vollständigen Padverbindungen wurden überflüssige Kupferäste entfernt. Die Bauteile selbst blieben an ihren bisherigen Positionen und Orientierungen. Nach Abschluss der Verbindungen wurden 14 Referenzbeschriftungen bei unveränderter Schriftgröße versetzt und der Platinenhinweis auf `DRAFT - NOT RELEASED` geändert.
 
-**Kein neuer Autorouter-Aufruf.** Die zwei historischen Aufrufe bleiben das Gesamtmaximum. 18 bereits erzeugte SCL-Kandidaten des zweiten historischen Laufs wurden selektiv übernommen; eine randnahe Via und zwei anschließende Endpunkte wurden lokal korrigiert. Frische UUIDs und Zuordnung zur historischen Geometrie sind dokumentiert. Die Übernahme senkte offene Verbindungen, ohne neue elektrische DRC-Befunde oder Verlust eines Leistungs-/kritischen Pfades. [autorouter-review.json](reports/autorouter-review.json) trennt historische Läufe und diese spätere Auswahl.
+Die Herkunftsprüfung erfasst **5595 Kupferobjekte: 4379 übernommene und 1216 neue**, mit vollständigem nativem Geometrieabgleich und 973 Padankern. Es gibt keine unbelegte Kupfer-UUID. Der zusätzliche UUID-Vergleich zum Eingang bestätigt 5436 unveränderte bestehende Kupferobjekte, 159 neue Objekte ausschließlich auf den drei geschlossenen Netzen und neun entfernte unbenutzte Signaläste; kein erhaltenes Kupferobjekt wurde geometrisch verändert. Entfernte Quellobjekte und manuelle Änderungen sind einzeln in [copper-provenance.json](reports/copper-provenance.json) erfasst. **Kein neuer Autorouter-Aufruf**; die zwei historischen Aufrufe bleiben das Gesamtmaximum.
 
-Die lokale BOM enthält unverändert 356 Einkaufspositionen, davon 352 bestückt und vier DNP, zusammengefasst in 124 Zeilen sowie 31 externe Zeilen. Alle 13 Eingabe- und vier Ausgabehashes bestehen. Elektrische Stücklisteninhalte wurden nicht geändert; Busbar- und Kontaktgeometrie stammen aus dieser Revision. Historische Material-/Montagequellen sind mit `../rev-a/` abgegrenzt. Die Dateien in [manufacturing](manufacturing/DRAFT_NOT_RELEASED.md) sind ausschließlich **DRAFT / NOT RELEASED**. Historische `source_release`-Felder im Paritätsbericht gelten nicht für diese Revision; maßgeblich ist [release-status.json](release-status.json).
+## Gefülltes Kupfer und Fertigungsentwurf
 
-## Verbleibende Verbindungen und Befunde
+Zwei frische Auswertungen untersuchten das tatsächlich gespeicherte gefüllte Kupfer einschließlich Pads, Leiterbahnen und eigener Bohrungsabzüge in 18 definierten Bereichen. Raster: 0,01 mm; native Polygonisierung: 0,005 mm. Gegenüber dem gesicherten Eingang entsteht kein neuer Nullquerschnitt und keine relevante Verringerung; maximale numerische Rundungsabweichung unter 0,0000011 mm.
 
-Der native Graph enthält 257 Netze, 260 Kupferkomponenten und keine padlose Komponente. Die ungekappte Summe der erforderlichen Zusammenführungen ist drei. [open-connections.json](reports/open-connections.json) enthält alle Padendpunkte, Footprint-/Pad-UUIDs, Koordinaten, Layer und Track-/Via-UUIDs der getrennten Komponenten.
+Beispiele: DRIVE-F-Stamm 8,0995 mm, LIFT-In1 6,1995 mm, CHOPPER-N-Hauptengstelle 4,7656 mm, Motion-In2 am HYS-Übergang 4,5995 mm und am QUALIFY-Übergang 7,2995 mm. SYS-F hat am Lochquerschnitt 4,0003 mm **als Summe getrennter Intervalle**, davon maximal 3,0002 mm in einem Intervall; der horizontale Stamm ist 4,4 mm breit. Diese Stichproben ersetzen keinen globalen allwinkligen Engstellen- oder thermischen Belastungsnachweis. [filled-copper-review.json](reports/filled-copper-review.json) enthält Messbereiche, Intervalle, Vergleichswerte und Grenzen.
 
-| Netz | Repräsentative getrennte Padendpunkte | Konkrete verbleibende Ursache |
-|---|---|---|
-| CAN_STB | R242.2 → U10.34 | Der lokale Weg durch Wake-/ESP-Bereich ist nicht durchgehend frei: Quellenübergänge nahe RESET/BUTTON/GND sowie die Übergänge am UART-/Permit-Anschlussfeld kollidieren mit vorhandenen Leiterbahnen, Pads oder Vias. |
-| I2C_SDA | R226.2 → J23.1 | Lokale Übergänge an INA_ALERT, CHOP_FAULT, MOTION_ARMED und GND-Vias bleiben ungeklärt. Die östlichen Via-Positionen müssen zusätzlich den 0,50-mm-Abstand der Motion-Leistungsfläche erhalten. |
-| TEMP_MOTION_ADC | C253.1 → U10.38 | Sensor-/Westkanal ist nicht vollständig verbunden: vorhandener SYS-Abgriff, AON_RESET und CHIP_EN kreuzen den geplanten Stamm. Eine untersuchte Via bei (113.2,92.6) würde den SYS-F-Stamm von 4,4 auf 2,995 mm verengen und wurde verworfen. |
+Der [DRAFT-Fertigungsprüfsatz](manufacturing/DRAFT_NOT_RELEASED.md) enthält elf native Gerber-Lagen, den Gerber-Job, getrennte PTH-/NPTH-Bohrdateien, 327 SMD-Positionen und die unveränderte elektrische BOM. **1950 metallisierte und vier nicht metallisierte Bohrungen**, darunter sämtliche 48 Press-fit-Bohrungen mit 1,475 mm, wurden vollständig gegen die nativen Koordinaten geprüft. Die maximale Excellon-Koordinatenquantisierung beträgt 0,0005 mm. Das Gerber-Fräsprofil ist exakt 280×260 mm. Der native Job nennt 280,05×260,05 mm als grafische Strichhülle; diese Hülle ist ausdrücklich kein Fräsmaß.
 
-Die verbleibende einlagige TEMP_MOTION_ADC-Via liegt bei `(233.7913,234.9251)`, UUID `e90b1fe4-1210-4f7e-9e54-4e6badf1678c`. Sämtliche sechs freien Trackenden und 17 Beschriftungsbefunde stehen mit UUIDs im [nativen DRC-Bericht](reports/native-drc.json). Sie wurden weder ausgenommen noch verborgen. Nicht vollständig freigeprüfte Routingvorschläge wurden nicht in die PCB geschrieben. Beschriftungsoptimierung wurde entsprechend der vorgegebenen Reihenfolge zurückgestellt.
+Die BOM umfasst 356 Einkaufspositionen, davon 352 bestückt und vier DNP, 124 gruppierte Zeilen und 31 externe Zeilen. Eingabe-/Ausgabehashes und Herkunftsaudit bestehen. Press-fit, THT, Busbars und sonstige manuelle Arbeiten werden über BOM und aktuelle [mechanische Schnittstelle](manufacturing/busbar-pcb-interface.json) beschrieben; die SMD-Positionsdatei ist kein Auftrag für diese Arbeitsgänge.
 
-## Gefülltes Leistungskupfer und Montagegrenzen
+## Noch offene Abnahme und begrenzter nächster Schritt
 
-Zwei unabhängige, frische Kupferauswertungen mit identischem 0,01-mm-Raster stimmen überein. Im zusätzlichen Motion-In2-Balken bleiben **null statt 78 Nullschnitte**; seine drei vorher getrennten Proben liegen nun in einem gemeinsamen Polygon. Das HYS-Minimum steigt von 3,6949 auf **4,5995 mm**, am QUALIFY-Übergang liegen mindestens **7,2995 mm** zusammenhängendes Kupfer vor.
+Die nominellen Courtyard-, Werkzeug-, Anschluss-, Press-fit- und Busbar-Abstände bestehen. Im Antennen-Keepout liegt auf keiner der vier Kupferlagen tatsächliches Kupfer. **Eine tolerierte Montage- und Produktionsqualifikation ist damit nicht nachgewiesen.** Offen bleiben insbesondere:
 
-Die untersuchten übrigen Querschnitte bleiben gegenüber dem Eingang unverändert: DRIVE-F-Stamm 8,0995 mm, LIFT-In1 6,1995 mm, CHOPPER-N-Hauptengstelle 4,7656 mm. SYS-F erreicht am Lochquerschnitt 4,0003 mm **als Summe getrennter Intervalle**; der horizontale Stamm hat 4,4 mm. CHOP_DRAIN-Fläche: 986,372884 mm². Summen sind keine einzelne zusammenhängende Leiterbreite. [filled-copper-review.json](reports/filled-copper-review.json) enthält Rasterbereiche, Bohrungsabzüge, Einzelintervalle, beide Prozesslaufzeiten und Grenzen. Kein globaler allwinkliger Engstellen-, Ampazitäts- oder Thermiknachweis wird behauptet.
+- Shim-/Folienstapel mit nur 0,01 mm Reserve vor Ebenheit und Verformung; reale Kontaktkraft-/Widerstands-/Thermozyklus-Coupons fehlen.
+- Press-fit-Los-, Bohr-/Metallisierungs-, Kraft-Weg- und Ausdrücknachweise; genaue Kabelschuhe, Werkzeuge, Kabelradien und endgültige Träger-/Gehäusestapel fehlen.
+- Reale Einschalt-, Rückspeise-, Chopper-, Temperatur-, Kalibrier-, Selektivitäts- und Schutztests sowie abschließende Firmware-/System-/Sicherheitsvalidierung fehlen.
 
-Nominelle Courtyard-, Pressfit-, Busbar-, Werkzeug- und Anschlussabstände bestehen; im ESP-Antennen-Keepout liegt auf keiner der vier Lagen tatsächliches Kupfer. Eine tolerierte Montagefreigabe bleibt offen: Shim-/Folienüberstand nur **0,01 mm vor Ebenheit**, fehlende Klemmkraft-/Kontaktwiderstands-Coupons und Pressfit-Losnachweise sowie noch nicht vollständig bestimmte Kabelschuhe, Werkzeuge, Kabelradien und Träger. Aktuelle rechnerische Reserven: BB7/NT5 **0,45 mm**, BB6-Washer **1,2 mm** nach den angegebenen Kontur-/Lochtoleranzen. Diese Werte ersetzen kein geschlossenes Montagebudget. Details in [identity-and-mechanics.json](reports/identity-and-mechanics.json).
+[production-readiness.json](reports/production-readiness.json) führt die neun Produktionskategorien, B01–B14 und die konkreten mechanischen Reserven auf. Es wurden keine Messwerte erfunden oder offene Gates durch CAD-Ergebnisse geschlossen.
 
-## Begrenzung und nächster Schritt
+Dieser Durchlauf begann am 13.09.2026 um 21:21:45 UTC nach `git fetch origin` und Lesen des Pflichtkontexts. Grenze: vier Stunden, höchstens zwölf CAD-Zyklen, höchstens zwei Versuche je unveränderter Ursache, Stopp nach zwei erfolglosen Zyklen. **Sieben CAD-Zyklen, davon fünf angenommen und zwei gezielt korrigierte Ablehnungen**; kein globales Rip-up, kein zusätzlicher Router und keine Bauteilverschiebung. Nur der Lead schrieb Dateien; in diesem Durchlauf wurden keine neuen Prüferagenten eingesetzt. Sobald Zyklus 7 nativ vollständig fehlerfrei war, wurden CAD-Änderungen eingestellt. Zwei erfolglose Hilfsprozesse vor dem Speichern sind dokumentiert und wurden nicht als bestandene Prüfungen gezählt.
 
-Fortsetzungsbeginn: 13.09.2026, 19:40:25 UTC. Vor Beginn wurden Origin aktualisiert und die geltenden AGENTS-, CURRENT_STATE-, Rev-A- und Rebuild-Dokumente gelesen. Nur der Lead schrieb Dateien; drei Prüfer arbeiteten ausschließlich lesend. Der isolierte Branch und Worktree wurden beibehalten.
-
-Festgelegt waren höchstens zwölf Editier-/Prüfzyklen, zwei erfolglose Zyklen hintereinander als Stoppkriterium, begrenzte Versuche je unveränderter Ursache sowie vier Stunden einschließlich Abschlussfenster. **Sieben CAD-Zyklen wurden verwendet, fünf Stände angenommen; die zwei verworfenen Stände wurden jeweils gezielt korrigiert.** Kein Zeit- oder Zyklusmaximum wird als erreicht behauptet. Der Durchlauf endet wegen der ungelösten lokalen Routingengstellen nach den begrenzten Korridor- und Übergangsprüfungen; der vollständig geprüfte Zyklus 7 bleibt erhalten. Vorprüfungen ohne CAD-Schreibvorgang sind keine zusätzlichen abgeschlossenen CAD-Zyklen. [cycle-and-stop-record.json](reports/cycle-and-stop-record.json) dokumentiert Fortschritt und Stopp.
-
-**Nächster eng begrenzter Schritt:** ausschließlich den Sensor-/Westkanal für TEMP_MOTION_ADC schließen. Vom bereits vorhandenen Sensor-Via `(170.9448,82.7809)` ausgehen, zunächst das Portal außerhalb des 4,4-mm-SYS-Stamms prüfen und danach die konkreten SYS-/AON_RESET-/CHIP_EN-Kreuzungen mit lokalen Lagenwechseln lösen. Keine weitere Südkorridor-Neuplanung; der bereits untersuchte südliche Anschluss ab `(113.2,251.3)` ist geometrisch frei. Maximal zwei vollständige Kandidaten, jeweils frisches Füllen, DRC, 247/46 und vollständiger Padgraph; bei keinem bestandenen Kandidaten stoppen. Die Platine bleibt bis zum vollständigen Abschluss und separater Freigabe nicht bestellbar.
+**Nächster eng begrenzter Schritt:** Nach manueller Entsperrung genau diesen PCB-Hash grafisch öffnen, KiCad vollständig schließen und frisch erneut öffnen. Unveränderte Eingabehashes prüfen und die native Endprüfung zweimal wiederholen. Wenn sie erneut vollständig besteht, `cad_complete=true` und `cad_complete_pending_independent_review` setzen; sämtliche Bestell-, Fertigungs-, Bestückungs-, Bestromungs- und Produktionsflags bleiben bis zur jeweiligen belegten Freigabe false. Für bekannte Routingbefunde ist keine weitere CAD-Reparatur nötig. Danach folgen die unabhängige Prüfung des exakten Entwurfssatzes und die tatsächlich erforderliche physische Qualifikation.

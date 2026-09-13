@@ -13,7 +13,7 @@
     "rev_a_engineering_prototype": true,
     "rev_b_production": false,
     "state": "DRAFT_NOT_RELEASED_A2_280x260",
-    "date": "2026-09-13",
+    "date": "2026-09-14",
     "stock_verification": "No live stock query or reservation made by builder",
     "quantity_basis": "One PCB assembly, no placement waste or spares; DNP positions retained with zero required quantity",
     "purchased_pcb_positions": 356,

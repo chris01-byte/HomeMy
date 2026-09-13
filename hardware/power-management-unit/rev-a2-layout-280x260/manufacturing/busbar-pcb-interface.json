@@ -6,7 +6,7 @@
     "coordinate_system": "PCB top view; upper left origin; underside geometries are not mirrored",
     "source_interface": "../../rev-a/manufacturing/busbar-pcb-interface.json",
     "source_interface_sha256": "d31d4c18e7cd00ed6910ec9a7c48d871783a5d9ed8ae269eeda9561b7d63acb1",
-    "pcb_sha256": "d4a9420958a3cee69e000600df9e1787f2b3d719b167e1c4359ce758362bd0a6",
+    "pcb_sha256": "2742638d03b884b8b6ac7bf7064ef98b2bd6c5a95377b7617b72999eb2e83bc2",
     "orderable": false,
     "fabrication_release": false,
     "assembly_release": false,
@@ -1817,6 +1817,6 @@
     "scope": "Final report hash must match PCB; nominal 2D only"
   },
   "required_parent_cad_actions": [
-    "No topology, pad, footprint or stackup changes. Complete electrical CAD and independent mechanical qualification before any release."
+    "No topology, pad, footprint or stackup changes. Native CAD checks pass; complete the blocked graphical close/reopen acceptance and independent review. Complete toleranced assembly, supplier and physical qualification before release."
   ]
 }
