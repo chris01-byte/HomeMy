@@ -2,7 +2,7 @@
 
 ## Phase
 
-Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The onboard Linux lifecycle, one-button customer behavior, coarse LED status, battery monitor, electronic main power path, reverse-current blocking, and initial protection thresholds are recorded as accepted architecture. The HomeMy Power Management Unit (PMU) now has a Revision-A engineering implementation under `hardware/power-management-unit/rev-a`: a hierarchical KiCad schematic, routed four-layer laboratory PCB, exact component BOM, calculations, mechanical reinforcement and prototype manufacturing outputs. Native ERC and DRC now both exit normally with code 0, with zero findings, zero open connections and full schematic parity. Dedicated power rules and the actual filled-copper review cover the high-current paths. The versioned RevA-P1 package is released for bare or populated engineering-prototype ordering only. All nine unselected external positions have frozen PCB interfaces and are due before energization. Supplier acceptance of stackup/press-fit requirements, firmware, systemd units, assembly and real-hardware validation remain open. No HomeMy runtime package or source code has been copied. Revision B production remains false.
+Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The accepted PMU electrical reference is retained under `hardware/power-management-unit/rev-a`. The only active PCB layout target is a new 300 × 280 mm engineering prototype under `hardware/power-management-unit/rev-a2-300x280`. Failed compact-layout experiments are no longer part of the working tree. Production, energization, assembly and actuator authorization remain false until their documented review gates are closed.
 
 ## Goal
 
@@ -50,10 +50,6 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - The repository is public; it contains no secrets, home data, maps, camera data, or deployment configuration.
 - The default execution mode is simulation or motorless validation.
 - PMU Revision-A CAD and engineering evidence are tracked; no systemd unit, actuator/sensor runtime, map, home data, or deployment configuration is introduced.
-- The bounded PMU Rev-A.1 shrink attempt is closed without a passing size (250x200, 275x210, 300x220 mm; three cycles). Its separate WIP sources and [result](hardware/power-management-unit/rev-a1/BOUNDED_SHRINK_RESULT.md) are not orderable; the Rev-A sources and prototype package remain unchanged.
-- The fixed 280 × 220-mm Rev-A.1 task is closed after two consecutive unsafe/no-progress cycles (four cycles total, no autorouter calls). The restored best from cycle 2 has 126 open connections, five width errors, 244/247 required paths and 46/46 critical paths; ERC exits 0 and full parity has zero findings. It is not orderable; all release flags remain false. See [the final report](hardware/power-management-unit/rev-a1/FINAL_280x220_REPORT.md). No further automatic routing or repair is authorized by the closed task.
-- The separately authorized new 280 × 220-mm PMU layout is closed after six full cycles on `codex/pmu-rev-a1-280x220-rebuild`. It starts from the original Rev-A circuit, preserves all 425 footprints and frozen rules, and passes 247/247 original power pairs and 46/46 critical paths. It still has 293 open connections across 112 nets. Native ERC exits 0; DRC exits 5 with zero parity findings, 58 dangling items and 195 silkscreen warnings. A width finding varies between two runs with identical input hashes and remains unresolved. The only digital-router run was stopped after more than 30 stagnant passes and was not imported. CAD changes are locked; all releases remain false. See [rebuild closure](hardware/power-management-unit/rev-a1-rebuild-280x220/FINAL_REPORT.md). Original Rev-A CAD/package and earlier variants remain unchanged.
-- The separately authorized 2026-09-13 completion run for the existing 280 × 220-mm rebuild is closed in Phase 0 without CAD edits (0 edit cycles, 0 router calls). Three DRC attempts and one ERC attempt wrote reports but timed out; direct file logging confirms the final native DRC process was still running at the deadline. Fontconfig correction did not resolve native shutdown. PCB and all CAD inputs remain byte-identical to the previous rebuild; 293 opens / 112 nets, variable width findings and the two mechanical issues remain. Earlier 247/247 and 46/46 evidence is preserved, not a new completed audit. All releases remain false. See [completion-run report](hardware/power-management-unit/rev-a1-rebuild-280x220/FINISH_REPORT.md).
 - No capability from roboter_ws has been copied into HomeMy code.
 - The proposed transfer baseline is roboter_ws main commit `05439c7a13d7a92e69b9eb4663e3a2a1b44626a1`.
 - Customer mode is not enabled as the default boot target.
@@ -61,23 +57,18 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 
 ## Next Safe Step
 
-1. Read `hardware/power-management-unit/rev-a/README.md`, its final review evidence and `release.json` for the completed CAD artifact scope and remaining physical gates.
-2. Use the versioned RevA-P1 order package and obtain supplier acceptance of its stackup, press-fit holes/plating and coupons. Its fabrication/assembly release covers engineering prototypes only; it does not authorize energization or production.
-3. Build and bring up Revision A first with a current-limited supply and no actuators; close all energization gates before applying the battery.
-4. Use Revision A to measure the MOSFET path, shunts, inrush without precharge, DC/DC converters, brake-chopper energy, thermal behavior, arm currents, and fuse/BMS coordination. Feed the evidence into a later Revision-B production layout.
-5. Define and simulate the ESP32 power/lifecycle state machine, button timing, heartbeat, hardware latches, event log, and LED behavior before connecting actuators.
-6. Design and test a hardware-independent HomeMy drivebase core using the commissioning contract and synthetic fixtures.
-7. Design and test LiDAR scan normalization and health behavior with synthetic variable-beam inputs.
-8. Assess the smallest hardware-independent `robot_navigation` slice with synthetic maps and a non-moving drivebase profile.
-9. Measure the completed HomeMy chassis, drivebase, mounts, footprint, arm masses, joint speeds, power loads, and safety topology before accepting any real-motion configuration.
-10. Commission obstacle protection and safe-stop behavior with synthetic geometry and fault injection before OAK or LiDAR data can affect movement.
-11. Use synthetic RGB-D fixtures to evaluate semantic perception and grasping before selecting model implementations or enabling manipulation.
+1. Use `hardware/power-management-unit/ASTRA_300X280_LAYOUT.md` to create the new 300 × 280 mm PCB from the retained Rev-A electrical reference.
+2. Complete native ERC, DRC, schematic/PCB parity, high-current continuity and manufacturability review before generating an order package.
+3. Obtain an independent human schematic/layout/BOM review and explicit prototype-order decision. Do not infer energization or production approval from CAD completion.
+4. Bring up the approved prototype with a current-limited source and no actuators; close every energization gate before connecting the battery.
+5. Use the prototype to measure MOSFET paths, shunts, inrush, external converters, chopper energy, thermal behavior, arm currents and fuse/BMS coordination for a later production revision.
+6. Define and simulate the ESP32 lifecycle state machine, button timing, heartbeat, hardware latches, event log and LED behavior before connecting actuators.
+7. Continue non-PMU runtime work only under the existing simulation and commissioning contracts.
 
 ## Context Entry Points
 
 1. `AGENTS.md` for safety and work rules.
 2. `context/index.json` for task-specific files.
-3. `hardware/power-management-unit/ASTRA_280X220_FINISH.md` for the bounded Astra task that finishes the fixed 280 × 220-mm Rev-A.1 prototype layout.
 4. `hardware/power-management-unit/ASTRA_PCB_HANDOFF.md` for the current PMU topology and two-stage release model.
 5. `hardware/power-management-unit/interfaces-and-layout.md` for connectors, layout, component ownership, Astra outputs, and Revision-A/Revision-B gates.
 6. `hardware/power-management-unit/requirements.yaml` for explicit locked, provisional, Revision-A design/assumption/energization, and Revision-B validation requirements.

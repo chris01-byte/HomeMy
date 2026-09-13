@@ -1,5 +1,0 @@
-# Native per-user UI state is not engineering evidence.
-*.kicad_prl
-*.lck
-*-backups/
-__pycache__/

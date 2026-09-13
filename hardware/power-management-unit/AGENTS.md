@@ -1,31 +1,33 @@
 # PMU agent instructions
 
-Diese Anweisungen gelten für alle Dateien unter hardware/power-management-unit/.
+Diese Regeln gelten für `hardware/power-management-unit/`.
 
-## Pflichtkontext für den Rev-A.1-Abschluss auf 280 × 220 mm
+## Pflichtkontext
 
-Vor jeder Analyse oder Änderung an der kompakten PMU Rev A.1 vollständig lesen und befolgen:
+Vor PMU-Arbeiten vollständig lesen:
 
-- ASTRA_280X220_FINISH.md
-- rev-a/README.md
-- rev-a/design/HIGH_CURRENT_RULES.md
-- rev-a/manufacturing/PCB_STACKUP_PRESSFIT.md
-- DESIGN_REVIEW_AND_BRINGUP.md
-- REV_A_ASSUMPTIONS.md
+- `README.md`
+- `requirements.yaml`
+- `ASTRA_PCB_HANDOFF.md`
+- `interfaces-and-layout.md`
+- `rev-a/README.md`
+- `rev-a/design/HIGH_CURRENT_RULES.md`
+- `rev-a/design/POWER_STAGE.md`
+- `rev-a/design/WAKE_IO.md`
+- `rev-a/manufacturing/PCB_STACKUP_PRESSFIT.md`
+- `verification-plan.md`
 
-Die eingefrorene Versuchsevidenz liegt auf Branch codex/pmu-rev-a1-250x200-wip bei Commit 014632dd9d8c65689d6f62036c11b4d191d49fb4. Dieser Branch darf nicht verändert werden.
+Für das neue Layout zusätzlich `ASTRA_300X280_LAYOUT.md`.
 
-## Verbindliche Arbeitsregeln
+## Arbeitsregeln
 
-- Nur auf dem ausdrücklich genannten Arbeitsbranch schreiben.
-- Topologie, Bauteile, Footprints, Schutzfunktionen, Hochstromregeln, Kelvin-/Gate-Konzept, Press-fit- und Busbar-Schnittstellen nicht stillschweigend ändern.
-- Bestehende ERC-/DRC-Regeln nicht abschwächen, unterdrücken oder pauschal ausnehmen.
-- Ein Agent besitzt die KiCad-Schreibverantwortung. Weitere Agenten prüfen nur lesend.
-- Keine unbeschränkten Routing- oder Reparaturschleifen.
-- Die feste Größe sowie die Zeit-, Zyklen-, Prüf- und Abbruchgrenzen aus ASTRA_280X220_FINISH.md sind harte Grenzen.
-- Fehlende oder abgebrochene native Prüfungen gelten niemals als bestanden.
-- Fertigungs-, Bestückungs- und Produktionsfreigaben bleiben false, solange der Nutzer keinen separaten Freigabeauftrag erteilt.
-- Keine temporären Routerdateien, Caches, kompilierten Hilfsdateien oder redundanten Zwischenstände committen.
-- Keine reale Bestromung, Batterie-, Motor- oder Aktorprüfung durch diesen Layoutauftrag.
-
-Bei Widersprüchen zwischen historischen Zwischenständen und den geprüften Rev-A-Anforderungen gelten die Rev-A-Anforderungen. Bei einem notwendigen Topologie- oder Sicherheitskompromiss Arbeit stoppen, den Blocker dokumentieren und den Nutzer entscheiden lassen.
+- Der einzige aktive Zielaufbau ist 300 × 280 mm unter `rev-a2-300x280/`.
+- Keine verworfenen Verkleinerungsstände wiederherstellen oder fortsetzen.
+- Nur ein Agent schreibt KiCad-Dateien; weitere Agenten dürfen parallel ausschließlich lesend prüfen.
+- Topologie, Netze, Bauteile, Footprints und Schutzfunktionen nicht stillschweigend ändern.
+- ERC-/DRC-Regeln nicht abschwächen, unterdrücken oder pauschal ausnehmen.
+- Keine unbeschränkten Routing-, Reparatur- oder Optimierungsschleifen.
+- Fehlende, abgebrochene oder zeitüberschrittene Prüfungen gelten nicht als bestanden.
+- Keine temporären Routerdateien, Caches, Binärduplikate oder Zwischenberichte committen.
+- Fertigungs-, Bestückungs-, Bestromungs- und Produktionsfreigaben bleiben false, solange der Nutzer sie nicht ausdrücklich erteilt.
+- Bei einem notwendigen Sicherheits- oder Topologiekompromiss stoppen, Blocker präzise dokumentieren und den Nutzer entscheiden lassen.

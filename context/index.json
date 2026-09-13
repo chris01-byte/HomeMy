@@ -124,5 +124,12 @@
         "hardware/power-management-unit/ASTRA_280X220_FINISH.md"
       ]
     }
+  },
+  "pmu-astra-layout": {
+    "when": "creating or finishing the canonical 300 x 280 mm PMU engineering-prototype PCB with bounded Astra iterations",
+    "files": [
+      "hardware/power-management-unit/README.md",
+      "hardware/power-management-unit/ASTRA_300X280_LAYOUT.md"
+    ]
   }
 }

@@ -1,6 +1,0 @@
-*.kicad_prl
-__pycache__/
-*.pyc
-*.dsn
-*.ses
-*.class
