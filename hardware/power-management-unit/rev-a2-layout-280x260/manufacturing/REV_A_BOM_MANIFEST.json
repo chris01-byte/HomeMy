@@ -1,0 +1,161 @@
+{
+  "metadata": {
+    "layout_revision": "A2-280x260",
+    "source_root": "../rev-a",
+    "source_record_paths_relative_to": "source_root",
+    "input_paths_relative_to": "A2 revision root",
+    "cad_complete": false,
+    "orderable": false,
+    "fabrication_release": false,
+    "assembly_release": false,
+    "production_release": false,
+    "energization_release": false,
+    "rev_a_engineering_prototype": true,
+    "rev_b_production": false,
+    "state": "DRAFT_NOT_RELEASED_A2_280x260",
+    "date": "2026-09-13",
+    "stock_verification": "No live stock query or reservation made by builder",
+    "quantity_basis": "One PCB assembly, no placement waste or spares; DNP positions retained with zero required quantity",
+    "purchased_pcb_positions": 356,
+    "populated_pcb_quantity": 352,
+    "dnp_pcb_positions": 4,
+    "grouped_pcb_line_count": 124,
+    "excluded_pcb_feature_count": 74,
+    "external_bom_line_count": 31,
+    "external_unselected_line_count": 9,
+    "external_open_before_pcb_order": 0,
+    "external_open_before_energization": 9,
+    "external_custom_drawing_line_count": 10,
+    "mechanical_interface_coverage": {
+      "busbars": 7,
+      "bare_pcb_bc_contacts": 15,
+      "top_nb_bridges": 8,
+      "contact_shims": 23,
+      "separate_cu_branch_backing_washers": 8,
+      "clamp_screws": 31
+    },
+    "validation_passed": true,
+    "errors": [],
+    "warnings": [],
+    "claim_limit": "Identity/coding and source/CAD consistency review; not every individual passive was queried for stock or formal lifecycle"
+  },
+  "builder": {
+    "path": "../rev-a/scripts/build_bom.py",
+    "sha256": "879de13aa6d681e1eeeede28ba83864dbfce3933041a46f434d40580013b7e4f"
+  },
+  "inputs": [
+    {
+      "path": "../rev-a/design/assembled-parts.json",
+      "sha256": "19f61dad0690e63a5b034964c4729a18d664ec3d7118e665c821b3fee7e2a8bf"
+    },
+    {
+      "path": "../rev-a/design/chopper-parts.json",
+      "sha256": "30671c2bf04fdb85dc1e13f7171f0d1687f3d38a911c60d6cabf6fa118fa3d25"
+    },
+    {
+      "path": "../rev-a/design/critical-alternatives.json",
+      "sha256": "ec12824640ee0eb8ae3bfc13da6fc45b993f96ccf2670e68da3c428a7a17ef49"
+    },
+    {
+      "path": "../rev-a/design/external-integration-gates.json",
+      "sha256": "1335685b3057da6503fd694912cbb9a893895119c0425fa5dda89363c0d9345f"
+    },
+    {
+      "path": "../rev-a/design/integration-parts.json",
+      "sha256": "4ed1c18cd120f13efbcdbe18b74458d758511598e864bd0caa71c50f2887765d"
+    },
+    {
+      "path": "../rev-a/design/power-parts.json",
+      "sha256": "3264cd2a412f20ec305749b18b7c5371782764fd9834cf6c41c0d1efced7abda"
+    },
+    {
+      "path": "../rev-a/design/wake-io-parts.json",
+      "sha256": "135bfc584d413c70ac3aa5b1f8a6c189b0dcaae7ecbcd0127df41090d6e3df60"
+    },
+    {
+      "path": "../rev-a/evidence/chopper/cross-review-sources.json",
+      "sha256": "49e764c0a8d28114d4f2e0ae551dc708aceaeb7b39b371b0f2296665c8af4671"
+    },
+    {
+      "path": "../rev-a/evidence/chopper/source_manifest.json",
+      "sha256": "c5fb69bb3b5738a6aa9fb1a48c2551a3025adbec0370e94c3c67ebcfc2bc8047"
+    },
+    {
+      "path": "../rev-a/evidence/power/sources.json",
+      "sha256": "89e84396d293724dcb6c4fb79bdf3a0bbd6caf62e01bec110b3c7ed2ae437d17"
+    },
+    {
+      "path": "../rev-a/evidence/wake-io-sources.json",
+      "sha256": "f7c6a31b5da56eff0d057416a4c469ba657eb62e482790f1f324cf08911b4ac9"
+    },
+    {
+      "path": "../rev-a/manufacturing/MECHANICAL_CATALOG_BOM.json",
+      "sha256": "f16fa2c81319009f8d2ac8fb37753ba294b622156ee063934a12bd4ffaf1aa30"
+    },
+    {
+      "path": "manufacturing/busbar-pcb-interface.json",
+      "sha256": "9dd8282b9f5c7a2085b332597edfacf17290977190a7cc5c62381f10bd1fdf9b"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "REV_A_BOM.csv",
+      "sha256": "297466886d7c85a18c31dca340834988507a82a610ff276c2b2228d1f7ca058e",
+      "bytes": 78421
+    },
+    {
+      "path": "REV_A_BOM.json",
+      "sha256": "130b71b6d2e05b0eb2466349720cb7e2cfc0b2d7659ca37ebba3c109a1ce01d6",
+      "bytes": 582829
+    },
+    {
+      "path": "REV_A_EXTERNAL_BOM.csv",
+      "sha256": "90c1cc83de2936cdce8fdc11dc825d3ca08d37da3d7caf78266c2093c3a7e642",
+      "bytes": 26401
+    },
+    {
+      "path": "REV_A_EXTERNAL_BOM.json",
+      "sha256": "2165dc24fd89ac1e85a9c1942165ecc9f3d753818e84c953271f3c2562527650",
+      "bytes": 42049
+    }
+  ],
+  "adapter": {
+    "source_sha256": "879de13aa6d681e1eeeede28ba83864dbfce3933041a46f434d40580013b7e4f",
+    "adapter_sha256": "4a250c4f88c71d306871a1f61db63104b94025539ad8cd7ba2bf479ad94048a2",
+    "changes": [
+      {
+        "find": "ROOT = Path(__file__).resolve().parents[1]",
+        "replace": "ROOT = Path('/Users/chria9b/Documents/ChatGPT/HomeMy-pmu-rev-a2-280x260/hardware/power-management-unit/rev-a')\nTARGET = Path('/Users/chria9b/Documents/ChatGPT/HomeMy-pmu-rev-a2-280x260/hardware/power-management-unit/rev-a2-layout-280x260')\nimport os"
+      },
+      {
+        "find": "STATE = 'rev_a_prototype_procurement_data'",
+        "replace": "STATE = 'DRAFT_NOT_RELEASED_A2_280x260'"
+      },
+      {
+        "find": "DATE = '2026-09-10'",
+        "replace": "DATE = '2026-09-13'"
+      },
+      {
+        "find": "interface_path=ROOT/'manufacturing/busbar-pcb-interface.json'",
+        "replace": "interface_path=TARGET/'manufacturing/busbar-pcb-interface.json'"
+      },
+      {
+        "find": "path.relative_to(ROOT).as_posix()",
+        "replace": "os.path.relpath(path,TARGET).replace(chr(92),chr(47))"
+      },
+      {
+        "find": "p.relative_to(ROOT).as_posix()",
+        "replace": "os.path.relpath(p,TARGET).replace(chr(92),chr(47))"
+      },
+      {
+        "find": "str(Path(__file__).relative_to(ROOT))",
+        "replace": "os.path.relpath(Path(__file__),TARGET)"
+      },
+      {
+        "find": "metadata=dict(rev_a_engineering_prototype=True,rev_b_production=False,state=STATE,",
+        "replace": "metadata=dict(layout_revision='A2-280x260', source_root='../rev-a', source_record_paths_relative_to='source_root', input_paths_relative_to='A2 revision root', cad_complete=False, orderable=False, fabrication_release=False, assembly_release=False, production_release=False, energization_release=False, rev_a_engineering_prototype=True,rev_b_production=False,state=STATE,"
+      }
+    ],
+    "validation_exit_code": 0
+  }
+}

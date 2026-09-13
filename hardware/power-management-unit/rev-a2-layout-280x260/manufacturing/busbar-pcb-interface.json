@@ -1,0 +1,1822 @@
+{
+  "metadata": {
+    "layout_revision": "A2-280x260",
+    "status": "DRAFT_NOT_RELEASED",
+    "units": "mm",
+    "coordinate_system": "PCB top view; upper left origin; underside geometries are not mirrored",
+    "source_interface": "../../rev-a/manufacturing/busbar-pcb-interface.json",
+    "source_interface_sha256": "d31d4c18e7cd00ed6910ec9a7c48d871783a5d9ed8ae269eeda9561b7d63acb1",
+    "pcb_sha256": "d4a9420958a3cee69e000600df9e1787f2b3d719b167e1c4359ce758362bd0a6",
+    "orderable": false,
+    "fabrication_release": false,
+    "assembly_release": false,
+    "production_release": false,
+    "energization_release": false,
+    "scope": "Current native contact/pad coordinates and unchanged source materials; no CAD mutations and no 3D/contact-force/thermal release"
+  },
+  "contact_shim": {
+    "material": "Cu-ETP",
+    "outer_diameter_mm": 8,
+    "inner_diameter_mm": 3.4,
+    "thickness_mm": 0.25,
+    "thickness_tolerance_mm": 0.02,
+    "quantity": 23,
+    "location": "All15 BC underside contacts and8 NT*.2 underside contacts; mandatory to clear0.20mm insulation sheet"
+  },
+  "mechanical_bom_source": "../../rev-a/manufacturing/MECHANICAL_CATALOG_BOM.json",
+  "film": {
+    "manufacturer": "Goodfellow",
+    "mpn": "IM30-FM-000200",
+    "order_code": "312-663-72",
+    "grade": "DuPont Kapton HN",
+    "sheet_size_mm": [
+      500,
+      500
+    ],
+    "sheet_thickness_mm": 0.05,
+    "layers_under_each_bar": 4,
+    "nominal_stack_mm": 0.2,
+    "incoming_maximum_stack_mm": 0.22,
+    "notes": "Cut all layers continuously per bar; reject overthick stack; Cu shim minimum0.23mm must stand proud."
+  },
+  "board": {
+    "size_mm": [
+      280,
+      260
+    ],
+    "finished_thickness_mm": 1.6,
+    "finished_thickness_tolerance_mm": [
+      0,
+      0.1
+    ],
+    "outer_copper_min_um": 70,
+    "inner_copper_min_um": 35
+  },
+  "new_pcb_contacts": [
+    {
+      "ref": "BC1",
+      "net": "BATT_SENSED_P",
+      "x": 48.0,
+      "y": 25.0,
+      "rotation": 0.0,
+      "bar": "BB1",
+      "pad_number": "1",
+      "pad_type": "thru_hole",
+      "pad_shape": "circle",
+      "pad_diameter_mm": 8.0,
+      "finished_drill_mm": 3.2,
+      "drill_tolerance_mm": 0.1,
+      "minimum_barrel_copper_um": 25,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "mask_opening_diameter_mm": 8.2,
+      "paste": false,
+      "copper_connection": "solid; no thermal relief",
+      "top_fastener_keepout_diameter_mm": 9.0,
+      "notes": "Conductive M3 clamp on own net; annular Cu contact carries current, screw ampacity not credited.",
+      "footprint_uuid": "46b31173-f5f4-4f1c-b26f-3dd00d27a978",
+      "pad_uuid": "e4e21666-1e55-4e08-a483-18dd05e8eed4"
+    },
+    {
+      "ref": "BC2",
+      "net": "BATT_SENSED_P",
+      "x": 48.0,
+      "y": 83.0,
+      "rotation": 0.0,
+      "bar": "BB1",
+      "pad_number": "1",
+      "pad_type": "thru_hole",
+      "pad_shape": "circle",
+      "pad_diameter_mm": 8.0,
+      "finished_drill_mm": 3.2,
+      "drill_tolerance_mm": 0.1,
+      "minimum_barrel_copper_um": 25,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "mask_opening_diameter_mm": 8.2,
+      "paste": false,
+      "copper_connection": "solid; no thermal relief",
+      "top_fastener_keepout_diameter_mm": 9.0,
+      "notes": "Conductive M3 clamp on own net; annular Cu contact carries current, screw ampacity not credited.",
+      "footprint_uuid": "d42be460-18a0-4c79-b9fe-82baa354b004",
+      "pad_uuid": "4221639d-4279-419c-9acf-171864abcb39"
+    },
+    {
+      "ref": "BC3",
+      "net": "MAIN_COMMON",
+      "x": 75.0,
+      "y": 31.0,
+      "rotation": 0.0,
+      "bar": "BB2",
+      "pad_number": "1",
+      "pad_type": "thru_hole",
+      "pad_shape": "circle",
+      "pad_diameter_mm": 8.0,
+      "finished_drill_mm": 3.2,
+      "drill_tolerance_mm": 0.1,
+      "minimum_barrel_copper_um": 25,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "mask_opening_diameter_mm": 8.2,
+      "paste": false,
+      "copper_connection": "solid; no thermal relief",
+      "top_fastener_keepout_diameter_mm": 9.0,
+      "notes": "Conductive M3 clamp on own net; annular Cu contact carries current, screw ampacity not credited.",
+      "footprint_uuid": "ad0356d1-789a-49b0-9e83-02948fee15c5",
+      "pad_uuid": "bf186ca4-22c8-4f83-ac65-ba477c3f457f"
+    },
+    {
+      "ref": "BC4",
+      "net": "MAIN_COMMON",
+      "x": 75.0,
+      "y": 79.0,
+      "rotation": 0.0,
+      "bar": "BB2",
+      "pad_number": "1",
+      "pad_type": "thru_hole",
+      "pad_shape": "circle",
+      "pad_diameter_mm": 8.0,
+      "finished_drill_mm": 3.2,
+      "drill_tolerance_mm": 0.1,
+      "minimum_barrel_copper_um": 25,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "mask_opening_diameter_mm": 8.2,
+      "paste": false,
+      "copper_connection": "solid; no thermal relief",
+      "top_fastener_keepout_diameter_mm": 9.0,
+      "notes": "Conductive M3 clamp on own net; annular Cu contact carries current, screw ampacity not credited.",
+      "footprint_uuid": "17a51afc-65b6-4ec3-9ab6-b32004247b6d",
+      "pad_uuid": "70229dc6-a2fa-4fa9-9ae5-5bc3d9c3af61"
+    },
+    {
+      "ref": "BC5",
+      "net": "SYS_BUS_P",
+      "x": 105.0,
+      "y": 30.0,
+      "rotation": 0.0,
+      "bar": "BB3",
+      "pad_number": "1",
+      "pad_type": "thru_hole",
+      "pad_shape": "circle",
+      "pad_diameter_mm": 8.0,
+      "finished_drill_mm": 3.2,
+      "drill_tolerance_mm": 0.1,
+      "minimum_barrel_copper_um": 25,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "mask_opening_diameter_mm": 8.2,
+      "paste": false,
+      "copper_connection": "solid; no thermal relief",
+      "top_fastener_keepout_diameter_mm": 9.0,
+      "notes": "Conductive M3 clamp on own net; annular Cu contact carries current, screw ampacity not credited.",
+      "footprint_uuid": "6c2af35a-4714-4753-b850-fef3956dde58",
+      "pad_uuid": "7feb042d-4d7d-41bb-9d61-88b125e98e86"
+    },
+    {
+      "ref": "BC6",
+      "net": "SYS_BUS_P",
+      "x": 105.0,
+      "y": 60.0,
+      "rotation": 0.0,
+      "bar": "BB3",
+      "pad_number": "1",
+      "pad_type": "thru_hole",
+      "pad_shape": "circle",
+      "pad_diameter_mm": 8.0,
+      "finished_drill_mm": 3.2,
+      "drill_tolerance_mm": 0.1,
+      "minimum_barrel_copper_um": 25,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "mask_opening_diameter_mm": 8.2,
+      "paste": false,
+      "copper_connection": "solid; no thermal relief",
+      "top_fastener_keepout_diameter_mm": 9.0,
+      "notes": "Conductive M3 clamp on own net; annular Cu contact carries current, screw ampacity not credited.",
+      "footprint_uuid": "380c56b3-fd21-470c-bff4-1e661e697bf4",
+      "pad_uuid": "87313680-6736-4f56-982b-0031063b6379"
+    },
+    {
+      "ref": "BC7",
+      "net": "MOTION_SENSED_P",
+      "x": 140.0,
+      "y": 30.0,
+      "rotation": 0.0,
+      "bar": "BB4",
+      "pad_number": "1",
+      "pad_type": "thru_hole",
+      "pad_shape": "circle",
+      "pad_diameter_mm": 8.0,
+      "finished_drill_mm": 3.2,
+      "drill_tolerance_mm": 0.1,
+      "minimum_barrel_copper_um": 25,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "mask_opening_diameter_mm": 8.2,
+      "paste": false,
+      "copper_connection": "solid; no thermal relief",
+      "top_fastener_keepout_diameter_mm": 9.0,
+      "notes": "Conductive M3 clamp on own net; annular Cu contact carries current, screw ampacity not credited.",
+      "footprint_uuid": "8e142127-9fb9-4a2e-aa17-346a9c58980b",
+      "pad_uuid": "926e2bc5-2270-4f01-aab6-b5359940f257"
+    },
+    {
+      "ref": "BC8",
+      "net": "MOTION_SENSED_P",
+      "x": 140.0,
+      "y": 70.0,
+      "rotation": 0.0,
+      "bar": "BB4",
+      "pad_number": "1",
+      "pad_type": "thru_hole",
+      "pad_shape": "circle",
+      "pad_diameter_mm": 8.0,
+      "finished_drill_mm": 3.2,
+      "drill_tolerance_mm": 0.1,
+      "minimum_barrel_copper_um": 25,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "mask_opening_diameter_mm": 8.2,
+      "paste": false,
+      "copper_connection": "solid; no thermal relief",
+      "top_fastener_keepout_diameter_mm": 9.0,
+      "notes": "Conductive M3 clamp on own net; annular Cu contact carries current, screw ampacity not credited.",
+      "footprint_uuid": "b198d65f-94af-4583-80ca-036930ef1cb7",
+      "pad_uuid": "15ede604-7fe7-4426-8377-798c80cbadd4"
+    },
+    {
+      "ref": "BC9",
+      "net": "MOTION_COMMON",
+      "x": 170.0,
+      "y": 33.0,
+      "rotation": 0.0,
+      "bar": "BB5",
+      "pad_number": "1",
+      "pad_type": "thru_hole",
+      "pad_shape": "circle",
+      "pad_diameter_mm": 8.0,
+      "finished_drill_mm": 3.2,
+      "drill_tolerance_mm": 0.1,
+      "minimum_barrel_copper_um": 25,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "mask_opening_diameter_mm": 8.2,
+      "paste": false,
+      "copper_connection": "solid; no thermal relief",
+      "top_fastener_keepout_diameter_mm": 9.0,
+      "notes": "Conductive M3 clamp on own net; annular Cu contact carries current, screw ampacity not credited.",
+      "footprint_uuid": "dd627834-a5e8-42ab-b48b-53b6edce16ee",
+      "pad_uuid": "923f30d8-1c25-4b1a-9bd6-b0b1f802523c"
+    },
+    {
+      "ref": "BC10",
+      "net": "MOTION_COMMON",
+      "x": 170.0,
+      "y": 53.0,
+      "rotation": 0.0,
+      "bar": "BB5",
+      "pad_number": "1",
+      "pad_type": "thru_hole",
+      "pad_shape": "circle",
+      "pad_diameter_mm": 8.0,
+      "finished_drill_mm": 3.2,
+      "drill_tolerance_mm": 0.1,
+      "minimum_barrel_copper_um": 25,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "mask_opening_diameter_mm": 8.2,
+      "paste": false,
+      "copper_connection": "solid; no thermal relief",
+      "top_fastener_keepout_diameter_mm": 9.0,
+      "notes": "Conductive M3 clamp on own net; annular Cu contact carries current, screw ampacity not credited.",
+      "footprint_uuid": "3b9604de-1824-479a-b8df-4c0e7df96537",
+      "pad_uuid": "c7ef8bb5-40b6-4c94-be24-55274c51fc83"
+    },
+    {
+      "ref": "BC11",
+      "net": "MOTION_BUS_P",
+      "x": 200.0,
+      "y": 47.0,
+      "rotation": 0.0,
+      "bar": "BB6",
+      "pad_number": "1",
+      "pad_type": "thru_hole",
+      "pad_shape": "circle",
+      "pad_diameter_mm": 8.0,
+      "finished_drill_mm": 3.2,
+      "drill_tolerance_mm": 0.1,
+      "minimum_barrel_copper_um": 25,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "mask_opening_diameter_mm": 8.2,
+      "paste": false,
+      "copper_connection": "solid; no thermal relief",
+      "top_fastener_keepout_diameter_mm": 9.0,
+      "notes": "Conductive M3 clamp on own net; annular Cu contact carries current, screw ampacity not credited.",
+      "footprint_uuid": "2eddbe34-eb45-4a3a-836d-3b0409de087b",
+      "pad_uuid": "374a5f39-8ca3-40c4-bac7-1d07a4f33619"
+    },
+    {
+      "ref": "BC12",
+      "net": "MOTION_BUS_P",
+      "x": 200.0,
+      "y": 77.0,
+      "rotation": 0.0,
+      "bar": "BB6",
+      "pad_number": "1",
+      "pad_type": "thru_hole",
+      "pad_shape": "circle",
+      "pad_diameter_mm": 8.0,
+      "finished_drill_mm": 3.2,
+      "drill_tolerance_mm": 0.1,
+      "minimum_barrel_copper_um": 25,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "mask_opening_diameter_mm": 8.2,
+      "paste": false,
+      "copper_connection": "solid; no thermal relief",
+      "top_fastener_keepout_diameter_mm": 9.0,
+      "notes": "Conductive M3 clamp on own net; annular Cu contact carries current, screw ampacity not credited.",
+      "footprint_uuid": "9f14b0c5-7f54-498f-bad4-7aa397a3748d",
+      "pad_uuid": "1886e25b-26be-4e2a-b0f6-344ea087f56a"
+    },
+    {
+      "ref": "BC13",
+      "net": "MOTION_BUS_P",
+      "x": 222.0,
+      "y": 35.0,
+      "rotation": 0.0,
+      "bar": "BB6",
+      "pad_number": "1",
+      "pad_type": "thru_hole",
+      "pad_shape": "circle",
+      "pad_diameter_mm": 8.0,
+      "finished_drill_mm": 3.2,
+      "drill_tolerance_mm": 0.1,
+      "minimum_barrel_copper_um": 25,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "mask_opening_diameter_mm": 8.2,
+      "paste": false,
+      "copper_connection": "solid; no thermal relief",
+      "top_fastener_keepout_diameter_mm": 9.0,
+      "notes": "Conductive M3 clamp on own net; annular Cu contact carries current, screw ampacity not credited.",
+      "footprint_uuid": "7768ef7c-26aa-45a1-b931-e266b4a4edcd",
+      "pad_uuid": "4644c153-1533-4023-9207-8211ad7caa30"
+    },
+    {
+      "ref": "BC14",
+      "net": "MOTION_BUS_P",
+      "x": 252.0,
+      "y": 35.0,
+      "rotation": 0.0,
+      "bar": "BB6",
+      "pad_number": "1",
+      "pad_type": "thru_hole",
+      "pad_shape": "circle",
+      "pad_diameter_mm": 8.0,
+      "finished_drill_mm": 3.2,
+      "drill_tolerance_mm": 0.1,
+      "minimum_barrel_copper_um": 25,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "mask_opening_diameter_mm": 8.2,
+      "paste": false,
+      "copper_connection": "solid; no thermal relief",
+      "top_fastener_keepout_diameter_mm": 9.0,
+      "notes": "Conductive M3 clamp on own net; annular Cu contact carries current, screw ampacity not credited.",
+      "footprint_uuid": "2a859b5d-7601-49a9-aedd-51b3dcf710d3",
+      "pad_uuid": "62ccd7eb-606b-47af-85b8-36476ffe6cb8"
+    },
+    {
+      "ref": "BC15",
+      "net": "BATT_N",
+      "x": 35.0,
+      "y": 122.0,
+      "rotation": 0.0,
+      "bar": "BB7",
+      "pad_number": "1",
+      "pad_type": "thru_hole",
+      "pad_shape": "circle",
+      "pad_diameter_mm": 8.0,
+      "finished_drill_mm": 3.2,
+      "drill_tolerance_mm": 0.1,
+      "minimum_barrel_copper_um": 25,
+      "layers": [
+        "*.Cu",
+        "*.Mask"
+      ],
+      "mask_opening_diameter_mm": 8.2,
+      "paste": false,
+      "copper_connection": "solid; no thermal relief",
+      "top_fastener_keepout_diameter_mm": 9.0,
+      "notes": "Conductive M3 clamp on own net; annular Cu contact carries current, screw ampacity not credited.",
+      "footprint_uuid": "4545e97b-0ac4-4651-963f-c65de954102a",
+      "pad_uuid": "c02f9280-9b33-49f6-ba02-1781a50e919e"
+    }
+  ],
+  "net_tie_modifications": [
+    {
+      "ref": "NT1",
+      "preserve_existing_net_tie_group": "1,2",
+      "position": [
+        218.0,
+        138.0
+      ],
+      "replace_pad_1_and_2_with": [
+        {
+          "number": "1",
+          "net": "ARM_L_N",
+          "x": 213.0,
+          "y": 138.0,
+          "pad_shape": "rect",
+          "pad_size_mm": [
+            10,
+            10
+          ],
+          "finished_drill_mm": 3.2,
+          "drill_tolerance_mm": 0.1,
+          "pad_type": "thru_hole",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ],
+          "minimum_barrel_copper_um": 25,
+          "paste": false,
+          "mask_margin_mm": 0.1,
+          "copper_connection": "solid; retain intentional F.Cu bridge within net-tie footprint",
+          "pad_uuid": "4298dc5f-3119-4d7e-842a-c44b76b71d2a"
+        },
+        {
+          "number": "2",
+          "net": "BATT_N",
+          "x": 223.0,
+          "y": 138.0,
+          "pad_shape": "rect",
+          "pad_size_mm": [
+            10,
+            10
+          ],
+          "finished_drill_mm": 3.2,
+          "drill_tolerance_mm": 0.1,
+          "pad_type": "thru_hole",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ],
+          "minimum_barrel_copper_um": 25,
+          "paste": false,
+          "mask_margin_mm": 0.1,
+          "copper_connection": "solid; retain intentional F.Cu bridge within net-tie footprint",
+          "pad_uuid": "a5dc6a5c-dc51-47fb-8d5a-ce0b32b53877"
+        }
+      ],
+      "top_bridge": {
+        "ref": "NB1",
+        "outline": [
+          [
+            208.0,
+            133.0
+          ],
+          [
+            228.0,
+            133.0
+          ],
+          [
+            228.0,
+            143.0
+          ],
+          [
+            208.0,
+            143.0
+          ]
+        ],
+        "material": "Cu-ETP / CW004A",
+        "thickness_mm": 2,
+        "holes": [
+          {
+            "x": 213.0,
+            "y": 138.0,
+            "diameter_mm": 3.4
+          },
+          {
+            "x": 223.0,
+            "y": 138.0,
+            "diameter_mm": 3.4
+          }
+        ]
+      },
+      "assembly": "Top copper bridge contacts both own net-tie pads. Branch-side screw clamps separate underside Cu washer OD8/ID3.4/thickness1 in BB7 cutout; BATT_N-side screw clamps BB7. No branch-side screw/washer contact to BB7.",
+      "footprint_uuid": "850b5577-2996-4765-b70b-cf94e804a486",
+      "operation_status": "Existing unchanged PCB footprint; coordinates recorded only, no replacement requested"
+    },
+    {
+      "ref": "NT2",
+      "preserve_existing_net_tie_group": "1,2",
+      "position": [
+        248.0,
+        138.0
+      ],
+      "replace_pad_1_and_2_with": [
+        {
+          "number": "1",
+          "net": "ARM_R_N",
+          "x": 243.0,
+          "y": 138.0,
+          "pad_shape": "rect",
+          "pad_size_mm": [
+            10,
+            10
+          ],
+          "finished_drill_mm": 3.2,
+          "drill_tolerance_mm": 0.1,
+          "pad_type": "thru_hole",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ],
+          "minimum_barrel_copper_um": 25,
+          "paste": false,
+          "mask_margin_mm": 0.1,
+          "copper_connection": "solid; retain intentional F.Cu bridge within net-tie footprint",
+          "pad_uuid": "c7915a75-6fb7-4f7a-a2e2-745851e51045"
+        },
+        {
+          "number": "2",
+          "net": "BATT_N",
+          "x": 253.0,
+          "y": 138.0,
+          "pad_shape": "rect",
+          "pad_size_mm": [
+            10,
+            10
+          ],
+          "finished_drill_mm": 3.2,
+          "drill_tolerance_mm": 0.1,
+          "pad_type": "thru_hole",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ],
+          "minimum_barrel_copper_um": 25,
+          "paste": false,
+          "mask_margin_mm": 0.1,
+          "copper_connection": "solid; retain intentional F.Cu bridge within net-tie footprint",
+          "pad_uuid": "96894962-16f3-4e6f-bdd3-e3e0cfa63330"
+        }
+      ],
+      "top_bridge": {
+        "ref": "NB2",
+        "outline": [
+          [
+            238.0,
+            133.0
+          ],
+          [
+            258.0,
+            133.0
+          ],
+          [
+            258.0,
+            143.0
+          ],
+          [
+            238.0,
+            143.0
+          ]
+        ],
+        "material": "Cu-ETP / CW004A",
+        "thickness_mm": 2,
+        "holes": [
+          {
+            "x": 243.0,
+            "y": 138.0,
+            "diameter_mm": 3.4
+          },
+          {
+            "x": 253.0,
+            "y": 138.0,
+            "diameter_mm": 3.4
+          }
+        ]
+      },
+      "assembly": "Top copper bridge contacts both own net-tie pads. Branch-side screw clamps separate underside Cu washer OD8/ID3.4/thickness1 in BB7 cutout; BATT_N-side screw clamps BB7. No branch-side screw/washer contact to BB7.",
+      "footprint_uuid": "0045ba03-457c-4128-bd64-c749c5070c0b",
+      "operation_status": "Existing unchanged PCB footprint; coordinates recorded only, no replacement requested"
+    },
+    {
+      "ref": "NT3",
+      "preserve_existing_net_tie_group": "1,2",
+      "position": [
+        158.0,
+        138.0
+      ],
+      "replace_pad_1_and_2_with": [
+        {
+          "number": "1",
+          "net": "DRIVE_N",
+          "x": 153.0,
+          "y": 138.0,
+          "pad_shape": "rect",
+          "pad_size_mm": [
+            10,
+            10
+          ],
+          "finished_drill_mm": 3.2,
+          "drill_tolerance_mm": 0.1,
+          "pad_type": "thru_hole",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ],
+          "minimum_barrel_copper_um": 25,
+          "paste": false,
+          "mask_margin_mm": 0.1,
+          "copper_connection": "solid; retain intentional F.Cu bridge within net-tie footprint",
+          "pad_uuid": "e457bd3c-179d-4a59-91a8-4f58a19cd902"
+        },
+        {
+          "number": "2",
+          "net": "BATT_N",
+          "x": 163.0,
+          "y": 138.0,
+          "pad_shape": "rect",
+          "pad_size_mm": [
+            10,
+            10
+          ],
+          "finished_drill_mm": 3.2,
+          "drill_tolerance_mm": 0.1,
+          "pad_type": "thru_hole",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ],
+          "minimum_barrel_copper_um": 25,
+          "paste": false,
+          "mask_margin_mm": 0.1,
+          "copper_connection": "solid; retain intentional F.Cu bridge within net-tie footprint",
+          "pad_uuid": "e62b7d0e-ce05-4d5b-b1a1-b78c76f255fb"
+        }
+      ],
+      "top_bridge": {
+        "ref": "NB3",
+        "outline": [
+          [
+            148.0,
+            133.0
+          ],
+          [
+            168.0,
+            133.0
+          ],
+          [
+            168.0,
+            143.0
+          ],
+          [
+            148.0,
+            143.0
+          ]
+        ],
+        "material": "Cu-ETP / CW004A",
+        "thickness_mm": 2,
+        "holes": [
+          {
+            "x": 153.0,
+            "y": 138.0,
+            "diameter_mm": 3.4
+          },
+          {
+            "x": 163.0,
+            "y": 138.0,
+            "diameter_mm": 3.4
+          }
+        ]
+      },
+      "assembly": "Top copper bridge contacts both own net-tie pads. Branch-side screw clamps separate underside Cu washer OD8/ID3.4/thickness1 in BB7 cutout; BATT_N-side screw clamps BB7. No branch-side screw/washer contact to BB7.",
+      "footprint_uuid": "6adfb730-6881-4bb7-a225-4367f66dcaee",
+      "operation_status": "Existing unchanged PCB footprint; coordinates recorded only, no replacement requested"
+    },
+    {
+      "ref": "NT4",
+      "preserve_existing_net_tie_group": "1,2",
+      "position": [
+        188.0,
+        138.0
+      ],
+      "replace_pad_1_and_2_with": [
+        {
+          "number": "1",
+          "net": "LIFT_N",
+          "x": 183.0,
+          "y": 138.0,
+          "pad_shape": "rect",
+          "pad_size_mm": [
+            10,
+            10
+          ],
+          "finished_drill_mm": 3.2,
+          "drill_tolerance_mm": 0.1,
+          "pad_type": "thru_hole",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ],
+          "minimum_barrel_copper_um": 25,
+          "paste": false,
+          "mask_margin_mm": 0.1,
+          "copper_connection": "solid; retain intentional F.Cu bridge within net-tie footprint",
+          "pad_uuid": "08441e96-6473-4a08-8e80-915279c4f216"
+        },
+        {
+          "number": "2",
+          "net": "BATT_N",
+          "x": 193.0,
+          "y": 138.0,
+          "pad_shape": "rect",
+          "pad_size_mm": [
+            10,
+            10
+          ],
+          "finished_drill_mm": 3.2,
+          "drill_tolerance_mm": 0.1,
+          "pad_type": "thru_hole",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ],
+          "minimum_barrel_copper_um": 25,
+          "paste": false,
+          "mask_margin_mm": 0.1,
+          "copper_connection": "solid; retain intentional F.Cu bridge within net-tie footprint",
+          "pad_uuid": "39ef8136-e488-45b2-a39a-0fde86b9f816"
+        }
+      ],
+      "top_bridge": {
+        "ref": "NB4",
+        "outline": [
+          [
+            178.0,
+            133.0
+          ],
+          [
+            198.0,
+            133.0
+          ],
+          [
+            198.0,
+            143.0
+          ],
+          [
+            178.0,
+            143.0
+          ]
+        ],
+        "material": "Cu-ETP / CW004A",
+        "thickness_mm": 2,
+        "holes": [
+          {
+            "x": 183.0,
+            "y": 138.0,
+            "diameter_mm": 3.4
+          },
+          {
+            "x": 193.0,
+            "y": 138.0,
+            "diameter_mm": 3.4
+          }
+        ]
+      },
+      "assembly": "Top copper bridge contacts both own net-tie pads. Branch-side screw clamps separate underside Cu washer OD8/ID3.4/thickness1 in BB7 cutout; BATT_N-side screw clamps BB7. No branch-side screw/washer contact to BB7.",
+      "footprint_uuid": "310bbf88-a38a-4080-8feb-ab70d68c8ff3",
+      "operation_status": "Existing unchanged PCB footprint; coordinates recorded only, no replacement requested"
+    },
+    {
+      "ref": "NT5",
+      "preserve_existing_net_tie_group": "1,2",
+      "position": [
+        26.0,
+        138.0
+      ],
+      "replace_pad_1_and_2_with": [
+        {
+          "number": "1",
+          "net": "PC_N",
+          "x": 21.0,
+          "y": 138.0,
+          "pad_shape": "rect",
+          "pad_size_mm": [
+            10,
+            10
+          ],
+          "finished_drill_mm": 3.2,
+          "drill_tolerance_mm": 0.1,
+          "pad_type": "thru_hole",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ],
+          "minimum_barrel_copper_um": 25,
+          "paste": false,
+          "mask_margin_mm": 0.1,
+          "copper_connection": "solid; retain intentional F.Cu bridge within net-tie footprint",
+          "pad_uuid": "92684af6-6406-4025-bcb3-bcb1ec920a98"
+        },
+        {
+          "number": "2",
+          "net": "BATT_N",
+          "x": 31.0,
+          "y": 138.0,
+          "pad_shape": "rect",
+          "pad_size_mm": [
+            10,
+            10
+          ],
+          "finished_drill_mm": 3.2,
+          "drill_tolerance_mm": 0.1,
+          "pad_type": "thru_hole",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ],
+          "minimum_barrel_copper_um": 25,
+          "paste": false,
+          "mask_margin_mm": 0.1,
+          "copper_connection": "solid; retain intentional F.Cu bridge within net-tie footprint",
+          "pad_uuid": "c284847b-acfe-45ca-b099-0844372c0823"
+        }
+      ],
+      "top_bridge": {
+        "ref": "NB5",
+        "outline": [
+          [
+            16.0,
+            133.0
+          ],
+          [
+            36.0,
+            133.0
+          ],
+          [
+            36.0,
+            143.0
+          ],
+          [
+            16.0,
+            143.0
+          ]
+        ],
+        "material": "Cu-ETP / CW004A",
+        "thickness_mm": 2,
+        "holes": [
+          {
+            "x": 21.0,
+            "y": 138.0,
+            "diameter_mm": 3.4
+          },
+          {
+            "x": 31.0,
+            "y": 138.0,
+            "diameter_mm": 3.4
+          }
+        ]
+      },
+      "assembly": "Top copper bridge contacts both own net-tie pads. Branch-side screw clamps separate underside Cu washer OD8/ID3.4/thickness1 in BB7 cutout; BATT_N-side screw clamps BB7. No branch-side screw/washer contact to BB7.",
+      "footprint_uuid": "39ff519d-2688-445a-bc84-4df7a2c2cae3",
+      "operation_status": "Existing unchanged PCB footprint; coordinates recorded only, no replacement requested"
+    },
+    {
+      "ref": "NT6",
+      "preserve_existing_net_tie_group": "1,2",
+      "position": [
+        56.0,
+        138.0
+      ],
+      "replace_pad_1_and_2_with": [
+        {
+          "number": "1",
+          "net": "LOGIC_BUCK_N",
+          "x": 51.0,
+          "y": 138.0,
+          "pad_shape": "rect",
+          "pad_size_mm": [
+            10,
+            10
+          ],
+          "finished_drill_mm": 3.2,
+          "drill_tolerance_mm": 0.1,
+          "pad_type": "thru_hole",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ],
+          "minimum_barrel_copper_um": 25,
+          "paste": false,
+          "mask_margin_mm": 0.1,
+          "copper_connection": "solid; retain intentional F.Cu bridge within net-tie footprint",
+          "pad_uuid": "70762875-3d00-4979-bd2e-ea131de14585"
+        },
+        {
+          "number": "2",
+          "net": "BATT_N",
+          "x": 61.0,
+          "y": 138.0,
+          "pad_shape": "rect",
+          "pad_size_mm": [
+            10,
+            10
+          ],
+          "finished_drill_mm": 3.2,
+          "drill_tolerance_mm": 0.1,
+          "pad_type": "thru_hole",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ],
+          "minimum_barrel_copper_um": 25,
+          "paste": false,
+          "mask_margin_mm": 0.1,
+          "copper_connection": "solid; retain intentional F.Cu bridge within net-tie footprint",
+          "pad_uuid": "d1257bc6-cf66-4048-bf9a-02a77ac5a347"
+        }
+      ],
+      "top_bridge": {
+        "ref": "NB6",
+        "outline": [
+          [
+            46.0,
+            133.0
+          ],
+          [
+            66.0,
+            133.0
+          ],
+          [
+            66.0,
+            143.0
+          ],
+          [
+            46.0,
+            143.0
+          ]
+        ],
+        "material": "Cu-ETP / CW004A",
+        "thickness_mm": 2,
+        "holes": [
+          {
+            "x": 51.0,
+            "y": 138.0,
+            "diameter_mm": 3.4
+          },
+          {
+            "x": 61.0,
+            "y": 138.0,
+            "diameter_mm": 3.4
+          }
+        ]
+      },
+      "assembly": "Top copper bridge contacts both own net-tie pads. Branch-side screw clamps separate underside Cu washer OD8/ID3.4/thickness1 in BB7 cutout; BATT_N-side screw clamps BB7. No branch-side screw/washer contact to BB7.",
+      "footprint_uuid": "28bae88a-7a9c-4b28-8ccc-f4266710926c",
+      "operation_status": "Existing unchanged PCB footprint; coordinates recorded only, no replacement requested"
+    },
+    {
+      "ref": "NT7",
+      "preserve_existing_net_tie_group": "1,2",
+      "position": [
+        128.0,
+        138.0
+      ],
+      "replace_pad_1_and_2_with": [
+        {
+          "number": "1",
+          "net": "CHOPPER_N",
+          "x": 123.0,
+          "y": 138.0,
+          "pad_shape": "rect",
+          "pad_size_mm": [
+            10,
+            10
+          ],
+          "finished_drill_mm": 3.2,
+          "drill_tolerance_mm": 0.1,
+          "pad_type": "thru_hole",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ],
+          "minimum_barrel_copper_um": 25,
+          "paste": false,
+          "mask_margin_mm": 0.1,
+          "copper_connection": "solid; retain intentional F.Cu bridge within net-tie footprint",
+          "pad_uuid": "a23431c9-0ca4-40f3-962e-baad5a2ef510"
+        },
+        {
+          "number": "2",
+          "net": "BATT_N",
+          "x": 133.0,
+          "y": 138.0,
+          "pad_shape": "rect",
+          "pad_size_mm": [
+            10,
+            10
+          ],
+          "finished_drill_mm": 3.2,
+          "drill_tolerance_mm": 0.1,
+          "pad_type": "thru_hole",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ],
+          "minimum_barrel_copper_um": 25,
+          "paste": false,
+          "mask_margin_mm": 0.1,
+          "copper_connection": "solid; retain intentional F.Cu bridge within net-tie footprint",
+          "pad_uuid": "91f82856-56fe-4da1-adf1-5428223d3d5c"
+        }
+      ],
+      "top_bridge": {
+        "ref": "NB7",
+        "outline": [
+          [
+            118.0,
+            133.0
+          ],
+          [
+            138.0,
+            133.0
+          ],
+          [
+            138.0,
+            143.0
+          ],
+          [
+            118.0,
+            143.0
+          ]
+        ],
+        "material": "Cu-ETP / CW004A",
+        "thickness_mm": 2,
+        "holes": [
+          {
+            "x": 123.0,
+            "y": 138.0,
+            "diameter_mm": 3.4
+          },
+          {
+            "x": 133.0,
+            "y": 138.0,
+            "diameter_mm": 3.4
+          }
+        ]
+      },
+      "assembly": "Top copper bridge contacts both own net-tie pads. Branch-side screw clamps separate underside Cu washer OD8/ID3.4/thickness1 in BB7 cutout; BATT_N-side screw clamps BB7. No branch-side screw/washer contact to BB7.",
+      "footprint_uuid": "cf521ee3-1530-4a99-8cbf-b9f4929ef12a",
+      "operation_status": "Existing unchanged PCB footprint; coordinates recorded only, no replacement requested"
+    },
+    {
+      "ref": "NT8",
+      "preserve_existing_net_tie_group": "1,2",
+      "position": [
+        86.0,
+        138.0
+      ],
+      "replace_pad_1_and_2_with": [
+        {
+          "number": "1",
+          "net": "LOGIC_5V_N",
+          "x": 81.0,
+          "y": 138.0,
+          "pad_shape": "rect",
+          "pad_size_mm": [
+            10,
+            10
+          ],
+          "finished_drill_mm": 3.2,
+          "drill_tolerance_mm": 0.1,
+          "pad_type": "thru_hole",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ],
+          "minimum_barrel_copper_um": 25,
+          "paste": false,
+          "mask_margin_mm": 0.1,
+          "copper_connection": "solid; retain intentional F.Cu bridge within net-tie footprint",
+          "pad_uuid": "76382d74-ac84-4151-bafe-97adcd57c123"
+        },
+        {
+          "number": "2",
+          "net": "BATT_N",
+          "x": 91.0,
+          "y": 138.0,
+          "pad_shape": "rect",
+          "pad_size_mm": [
+            10,
+            10
+          ],
+          "finished_drill_mm": 3.2,
+          "drill_tolerance_mm": 0.1,
+          "pad_type": "thru_hole",
+          "layers": [
+            "*.Cu",
+            "*.Mask"
+          ],
+          "minimum_barrel_copper_um": 25,
+          "paste": false,
+          "mask_margin_mm": 0.1,
+          "copper_connection": "solid; retain intentional F.Cu bridge within net-tie footprint",
+          "pad_uuid": "ea9960fa-2ad4-40c0-8df1-c72dbd17d308"
+        }
+      ],
+      "top_bridge": {
+        "ref": "NB8",
+        "outline": [
+          [
+            76.0,
+            133.0
+          ],
+          [
+            96.0,
+            133.0
+          ],
+          [
+            96.0,
+            143.0
+          ],
+          [
+            76.0,
+            143.0
+          ]
+        ],
+        "material": "Cu-ETP / CW004A",
+        "thickness_mm": 2,
+        "holes": [
+          {
+            "x": 81.0,
+            "y": 138.0,
+            "diameter_mm": 3.4
+          },
+          {
+            "x": 91.0,
+            "y": 138.0,
+            "diameter_mm": 3.4
+          }
+        ]
+      },
+      "assembly": "Top copper bridge contacts both own net-tie pads. Branch-side screw clamps separate underside Cu washer OD8/ID3.4/thickness1 in BB7 cutout; BATT_N-side screw clamps BB7. No branch-side screw/washer contact to BB7.",
+      "footprint_uuid": "e44b7187-128f-4f19-ab32-55d9e43a0f8c",
+      "operation_status": "Existing unchanged PCB footprint; coordinates recorded only, no replacement requested"
+    }
+  ],
+  "busbars": [
+    {
+      "ref": "BB1",
+      "net": "BATT_SENSED_P",
+      "material": "Cu-ETP / CW004A, conductivity certificate required",
+      "thickness_mm": 2.0,
+      "thickness_tolerance_mm": 0.1,
+      "outline": [
+        [
+          42,
+          19
+        ],
+        [
+          54,
+          19
+        ],
+        [
+          54,
+          91
+        ],
+        [
+          42,
+          91
+        ]
+      ],
+      "outline_tolerance_mm": 0.2,
+      "hole_position_tolerance_mm": 0.1,
+      "mounting_side": "B.Cu underside",
+      "contact_refs": [
+        "BC1",
+        "BC2"
+      ],
+      "holes": [
+        {
+          "x": 48.0,
+          "y": 25.0,
+          "diameter_mm": 3.4,
+          "function": "BC1"
+        },
+        {
+          "x": 48.0,
+          "y": 83.0,
+          "diameter_mm": 3.4,
+          "function": "BC2"
+        }
+      ],
+      "cutouts": [],
+      "minimum_unperforated_width_mm": 12,
+      "insulation": "0.20 mm PET/polyimide sheet, no adhesive in contact windows; Cu contact shim OD8/ID3.4/thickness0.25 mm bridges film stand-off; see assembly document"
+    },
+    {
+      "ref": "BB2",
+      "net": "MAIN_COMMON",
+      "material": "Cu-ETP / CW004A, conductivity certificate required",
+      "thickness_mm": 2.0,
+      "thickness_tolerance_mm": 0.1,
+      "outline": [
+        [
+          70,
+          19
+        ],
+        [
+          80,
+          19
+        ],
+        [
+          80,
+          91
+        ],
+        [
+          70,
+          91
+        ]
+      ],
+      "outline_tolerance_mm": 0.2,
+      "hole_position_tolerance_mm": 0.1,
+      "mounting_side": "B.Cu underside",
+      "contact_refs": [
+        "BC3",
+        "BC4"
+      ],
+      "holes": [
+        {
+          "x": 75.0,
+          "y": 31.0,
+          "diameter_mm": 3.4,
+          "function": "BC3"
+        },
+        {
+          "x": 75.0,
+          "y": 79.0,
+          "diameter_mm": 3.4,
+          "function": "BC4"
+        }
+      ],
+      "cutouts": [],
+      "minimum_unperforated_width_mm": 10,
+      "insulation": "0.20 mm PET/polyimide sheet, no adhesive in contact windows; Cu contact shim OD8/ID3.4/thickness0.25 mm bridges film stand-off; see assembly document"
+    },
+    {
+      "ref": "BB3",
+      "net": "SYS_BUS_P",
+      "material": "Cu-ETP / CW004A, conductivity certificate required",
+      "thickness_mm": 2.0,
+      "thickness_tolerance_mm": 0.1,
+      "outline": [
+        [
+          99,
+          19
+        ],
+        [
+          111,
+          19
+        ],
+        [
+          111,
+          79
+        ],
+        [
+          99,
+          79
+        ]
+      ],
+      "outline_tolerance_mm": 0.2,
+      "hole_position_tolerance_mm": 0.1,
+      "mounting_side": "B.Cu underside",
+      "contact_refs": [
+        "BC5",
+        "BC6"
+      ],
+      "holes": [
+        {
+          "x": 105.0,
+          "y": 30.0,
+          "diameter_mm": 3.4,
+          "function": "BC5"
+        },
+        {
+          "x": 105.0,
+          "y": 60.0,
+          "diameter_mm": 3.4,
+          "function": "BC6"
+        }
+      ],
+      "cutouts": [],
+      "minimum_unperforated_width_mm": 12,
+      "insulation": "0.20 mm PET/polyimide sheet, no adhesive in contact windows; Cu contact shim OD8/ID3.4/thickness0.25 mm bridges film stand-off; see assembly document"
+    },
+    {
+      "ref": "BB4",
+      "net": "MOTION_SENSED_P",
+      "material": "Cu-ETP / CW004A, conductivity certificate required",
+      "thickness_mm": 2.0,
+      "thickness_tolerance_mm": 0.1,
+      "outline": [
+        [
+          134,
+          24
+        ],
+        [
+          146,
+          24
+        ],
+        [
+          146,
+          84
+        ],
+        [
+          134,
+          84
+        ]
+      ],
+      "outline_tolerance_mm": 0.2,
+      "hole_position_tolerance_mm": 0.1,
+      "mounting_side": "B.Cu underside",
+      "contact_refs": [
+        "BC7",
+        "BC8"
+      ],
+      "holes": [
+        {
+          "x": 140.0,
+          "y": 30.0,
+          "diameter_mm": 3.4,
+          "function": "BC7"
+        },
+        {
+          "x": 140.0,
+          "y": 70.0,
+          "diameter_mm": 3.4,
+          "function": "BC8"
+        }
+      ],
+      "cutouts": [],
+      "minimum_unperforated_width_mm": 12,
+      "insulation": "0.20 mm PET/polyimide sheet, no adhesive in contact windows; Cu contact shim OD8/ID3.4/thickness0.25 mm bridges film stand-off; see assembly document"
+    },
+    {
+      "ref": "BB5",
+      "net": "MOTION_COMMON",
+      "material": "Cu-ETP / CW004A, conductivity certificate required",
+      "thickness_mm": 2.0,
+      "thickness_tolerance_mm": 0.1,
+      "outline": [
+        [
+          165,
+          24
+        ],
+        [
+          175,
+          24
+        ],
+        [
+          175,
+          84
+        ],
+        [
+          165,
+          84
+        ]
+      ],
+      "outline_tolerance_mm": 0.2,
+      "hole_position_tolerance_mm": 0.1,
+      "mounting_side": "B.Cu underside",
+      "contact_refs": [
+        "BC9",
+        "BC10"
+      ],
+      "holes": [
+        {
+          "x": 170.0,
+          "y": 33.0,
+          "diameter_mm": 3.4,
+          "function": "BC9"
+        },
+        {
+          "x": 170.0,
+          "y": 53.0,
+          "diameter_mm": 3.4,
+          "function": "BC10"
+        }
+      ],
+      "cutouts": [],
+      "minimum_unperforated_width_mm": 10,
+      "insulation": "0.20 mm PET/polyimide sheet, no adhesive in contact windows; Cu contact shim OD8/ID3.4/thickness0.25 mm bridges film stand-off; see assembly document"
+    },
+    {
+      "ref": "BB6",
+      "net": "MOTION_BUS_P",
+      "material": "Cu-ETP / CW004A, conductivity certificate required",
+      "thickness_mm": 2.0,
+      "thickness_tolerance_mm": 0.1,
+      "outline": [
+        [
+          193,
+          25.5
+        ],
+        [
+          259,
+          25.5
+        ],
+        [
+          259,
+          41
+        ],
+        [
+          207,
+          41
+        ],
+        [
+          207,
+          92
+        ],
+        [
+          193,
+          92
+        ]
+      ],
+      "outline_tolerance_mm": 0.2,
+      "hole_position_tolerance_mm": 0.1,
+      "mounting_side": "B.Cu underside",
+      "contact_refs": [
+        "BC11",
+        "BC12",
+        "BC13",
+        "BC14"
+      ],
+      "holes": [
+        {
+          "x": 200.0,
+          "y": 47.0,
+          "diameter_mm": 3.4,
+          "function": "BC11"
+        },
+        {
+          "x": 200.0,
+          "y": 77.0,
+          "diameter_mm": 3.4,
+          "function": "BC12"
+        },
+        {
+          "x": 222.0,
+          "y": 35.0,
+          "diameter_mm": 3.4,
+          "function": "BC13"
+        },
+        {
+          "x": 252.0,
+          "y": 35.0,
+          "diameter_mm": 3.4,
+          "function": "BC14"
+        }
+      ],
+      "cutouts": [],
+      "minimum_unperforated_width_mm": 14,
+      "insulation": "0.20 mm PET/polyimide sheet, no adhesive in contact windows; Cu contact shim OD8/ID3.4/thickness0.25 mm bridges film stand-off; see assembly document"
+    },
+    {
+      "ref": "BB7",
+      "net": "BATT_N",
+      "material": "Cu-ETP / CW004A, conductivity certificate required",
+      "thickness_mm": 2.0,
+      "thickness_tolerance_mm": 0.1,
+      "outline": [
+        [
+          25.5,
+          115
+        ],
+        [
+          259,
+          115
+        ],
+        [
+          259,
+          145
+        ],
+        [
+          25.5,
+          145
+        ]
+      ],
+      "outline_tolerance_mm": 0.2,
+      "hole_position_tolerance_mm": 0.1,
+      "mounting_side": "B.Cu underside",
+      "contact_refs": [
+        "BC15",
+        "NT1.2",
+        "NT2.2",
+        "NT3.2",
+        "NT4.2",
+        "NT5.2",
+        "NT6.2",
+        "NT7.2",
+        "NT8.2"
+      ],
+      "holes": [
+        {
+          "x": 35.0,
+          "y": 122.0,
+          "diameter_mm": 3.4,
+          "function": "BC15"
+        },
+        {
+          "x": 223.0,
+          "y": 138.0,
+          "diameter_mm": 3.4,
+          "function": "NT1.2"
+        },
+        {
+          "x": 253.0,
+          "y": 138.0,
+          "diameter_mm": 3.4,
+          "function": "NT2.2"
+        },
+        {
+          "x": 163.0,
+          "y": 138.0,
+          "diameter_mm": 3.4,
+          "function": "NT3.2"
+        },
+        {
+          "x": 193.0,
+          "y": 138.0,
+          "diameter_mm": 3.4,
+          "function": "NT4.2"
+        },
+        {
+          "x": 31.0,
+          "y": 138.0,
+          "diameter_mm": 3.4,
+          "function": "NT5.2"
+        },
+        {
+          "x": 61.0,
+          "y": 138.0,
+          "diameter_mm": 3.4,
+          "function": "NT6.2"
+        },
+        {
+          "x": 133.0,
+          "y": 138.0,
+          "diameter_mm": 3.4,
+          "function": "NT7.2"
+        },
+        {
+          "x": 91.0,
+          "y": 138.0,
+          "diameter_mm": 3.4,
+          "function": "NT8.2"
+        }
+      ],
+      "cutouts": [
+        {
+          "outline": [
+            [
+              206.25,
+              132.0
+            ],
+            [
+              218.25,
+              132.0
+            ],
+            [
+              218.25,
+              146
+            ],
+            [
+              206.25,
+              146
+            ]
+          ],
+          "reason": "NT1.1: downward-open relief offset -0.75mm, 0.45mm tolerance reserve",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              236.25,
+              132.0
+            ],
+            [
+              248.25,
+              132.0
+            ],
+            [
+              248.25,
+              146
+            ],
+            [
+              236.25,
+              146
+            ]
+          ],
+          "reason": "NT2.1: downward-open relief offset -0.75mm, 0.45mm tolerance reserve",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              146.25,
+              132.0
+            ],
+            [
+              158.25,
+              132.0
+            ],
+            [
+              158.25,
+              146
+            ],
+            [
+              146.25,
+              146
+            ]
+          ],
+          "reason": "NT3.1: downward-open relief offset -0.75mm, 0.45mm tolerance reserve",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              176.25,
+              132.0
+            ],
+            [
+              188.25,
+              132.0
+            ],
+            [
+              188.25,
+              146
+            ],
+            [
+              176.25,
+              146
+            ]
+          ],
+          "reason": "NT4.1: downward-open relief offset -0.75mm, 0.45mm tolerance reserve",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              14.25,
+              132.0
+            ],
+            [
+              26.25,
+              132.0
+            ],
+            [
+              26.25,
+              146
+            ],
+            [
+              14.25,
+              146
+            ]
+          ],
+          "reason": "NT5.1: downward-open relief offset -0.75mm, 0.45mm tolerance reserve",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              44.25,
+              132.0
+            ],
+            [
+              56.25,
+              132.0
+            ],
+            [
+              56.25,
+              146
+            ],
+            [
+              44.25,
+              146
+            ]
+          ],
+          "reason": "NT6.1: downward-open relief offset -0.75mm, 0.45mm tolerance reserve",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              116.25,
+              132.0
+            ],
+            [
+              128.25,
+              132.0
+            ],
+            [
+              128.25,
+              146
+            ],
+            [
+              116.25,
+              146
+            ]
+          ],
+          "reason": "NT7.1: downward-open relief offset -0.75mm, 0.45mm tolerance reserve",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              74.25,
+              132.0
+            ],
+            [
+              86.25,
+              132.0
+            ],
+            [
+              86.25,
+              146
+            ],
+            [
+              74.25,
+              146
+            ]
+          ],
+          "reason": "NT8.1: downward-open relief offset -0.75mm, 0.45mm tolerance reserve",
+          "corner_radius_mm": 1
+        },
+        {
+          "outline": [
+            [
+              14,
+              106
+            ],
+            [
+              26,
+              106
+            ],
+            [
+              26,
+              118
+            ],
+            [
+              14,
+              118
+            ]
+          ],
+          "reason": "J2 foreign pressfit pins/tool envelope"
+        }
+      ],
+      "minimum_unperforated_width_mm": 17,
+      "insulation": "0.20 mm PET/polyimide sheet, no adhesive in contact windows; Cu contact shim OD8/ID3.4/thickness0.25 mm bridges film stand-off; see assembly document"
+    }
+  ],
+  "component_pad_clearance_screen": {
+    "report": "../reports/identity-and-mechanics.json",
+    "scope": "Final report hash must match PCB; nominal 2D only"
+  },
+  "required_parent_cad_actions": [
+    "No topology, pad, footprint or stackup changes. Complete electrical CAD and independent mechanical qualification before any release."
+  ]
+}
