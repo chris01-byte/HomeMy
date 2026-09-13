@@ -118,18 +118,12 @@
         "CURRENT_STATE.md"
       ]
     },
-    "pmu-astra-finish": {
-      "when": "finishing the fixed 280 x 220 mm PMU Rev-A.1 KiCad PCB from the 275 x 210 mm candidate with bounded Astra iterations",
+    "pmu-astra-layout": {
+      "when": "creating or finishing the canonical 300 x 280 mm PMU engineering-prototype PCB with bounded Astra iterations",
       "files": [
-        "hardware/power-management-unit/ASTRA_280X220_FINISH.md"
+        "hardware/power-management-unit/README.md",
+        "hardware/power-management-unit/ASTRA_300X280_LAYOUT.md"
       ]
     }
-  },
-  "pmu-astra-layout": {
-    "when": "creating or finishing the canonical 300 x 280 mm PMU engineering-prototype PCB with bounded Astra iterations",
-    "files": [
-      "hardware/power-management-unit/README.md",
-      "hardware/power-management-unit/ASTRA_300X280_LAYOUT.md"
-    ]
   }
 }
