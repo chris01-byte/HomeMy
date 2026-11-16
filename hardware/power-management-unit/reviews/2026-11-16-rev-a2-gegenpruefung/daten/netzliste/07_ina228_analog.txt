@@ -1,0 +1,24 @@
+C206  100n                       GRM21BR71C104KA01L     1=V3V3 | 2=LOGIC_GND
+C241  100n                       GRM21BR72A104KA01L     1=INA_IN_P | 2=INA_IN_N
+C242  10n                        GRM21BR72A103KA01L     1=INA_VBUS | 2=LOGIC_GND
+C252  100n                       GRM21BR71C104KA01L     1=TEMP_MAIN_ADC | 2=LOGIC_GND
+C253  100n                       GRM21BR71C104KA01L     1=TEMP_MOTION_ADC | 2=LOGIC_GND
+R223  10                         RC0805FR-0710RL        1=MAIN_KELVIN_P | 2=INA_IN_P
+R224  10                         RC0805FR-0710RL        1=MAIN_KELVIN_N | 2=INA_IN_N
+R225  10                         RC0805FR-0710RL        1=BATT_SENSED_P | 2=INA_VBUS
+R226  4.7k                       RC0805FR-074K7L        1=V3V3 | 2=I2C_SDA
+R227  4.7k                       RC0805FR-074K7L        1=V3V3 | 2=I2C_SCL
+R228  10k                        RC0805FR-0710KL        1=V3V3 | 2=INA_ALERT_N
+R260  10k                        RC0805FR-0710KL        1=V3V3 | 2=TEMP_MAIN_ADC
+R261  10k                        RC0805FR-0710KL        1=V3V3 | 2=TEMP_MOTION_ADC
+TH20  10k NTC B3380 1%           NCP18XH103F03RB        1=TEMP_MAIN_ADC | 2=LOGIC_GND
+TH21  10k NTC B3380 1%           NCP18XH103F03RB        1=TEMP_MOTION_ADC | 2=LOGIC_GND
+== U11 INA228AIDGSR [MSOP-10_3x3mm_P0.5mm] mpn=INA228AIDGSR
+  1..7(3p) A1                    LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  3:ALERT_3                      INA_ALERT_N              | R228 U10
+  4:SDA_4                        I2C_SDA                  | J23 R226 U10
+  5:SCL_5                        I2C_SCL                  | J23 R227 U10
+  6:VS_6                         V3V3                     | C30 C205 C206 C208 C221 C222 C223 C224 ..(+40)
+  8:VBUS_8                       INA_VBUS                 | C242 R225
+  9:IN-_9                        INA_IN_N                 | C241 R224
+  10:IN+_10                      INA_IN_P                 | C241 R223

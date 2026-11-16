@@ -1,0 +1,148 @@
+C200  100n                       GRM21BR72A104KA01L     1=AON_LDO_IN | 2=LOGIC_GND
+C201  1u                         GRM21BR71C105KA01L     1=AON_3V3 | 2=LOGIC_GND
+C202  10n                        GRM21BR71H103KA01L     1=PB_RAW_N | 2=LOGIC_GND
+C203  22n                        GRM21B5C1H223JA01L     1=WAKE_ONT | 2=LOGIC_GND
+C204  1u                         GRM21BR71C105KA01L     1=WAKE_PDT | 2=LOGIC_GND
+C210  100n                       GRM21BR71C104KA01L     1=AON_3V3 | 2=LOGIC_GND
+C211  100n                       GRM21BR71C104KA01L     1=AON_3V3 | 2=LOGIC_GND
+C212  100n                       GRM21BR71C104KA01L     1=AON_3V3 | 2=LOGIC_GND
+C213  100n                       GRM21BR71C104KA01L     1=AON_3V3 | 2=LOGIC_GND
+C214  100n                       GRM21BR71C104KA01L     1=AON_3V3 | 2=LOGIC_GND
+C215  100n                       GRM21BR71C104KA01L     1=AON_3V3 | 2=LOGIC_GND
+C216  100n                       GRM21BR71C104KA01L     1=AON_3V3 | 2=LOGIC_GND
+C217  100n                       GRM21BR71C104KA01L     1=AON_3V3 | 2=LOGIC_GND
+C218  100n                       GRM21BR71C104KA01L     1=AON_3V3 | 2=LOGIC_GND
+C219  100n                       GRM21BR71C104KA01L     1=AON_3V3 | 2=LOGIC_GND
+C220  100n                       GRM21BR71C104KA01L     1=AON_3V3 | 2=LOGIC_GND
+C227  100n                       GRM21BR71C104KA01L     1=AON_3V3 | 2=LOGIC_GND
+C229  100n                       GRM21BR71C104KA01L     1=AON_3V3 | 2=LOGIC_GND
+C230  100n                       GRM21BR71C104KA01L     1=AON_3V3 | 2=LOGIC_GND
+Q20   BSS138BK,215               BSS138BK,215           1=MAIN_FAULT_LATCHED | 2=LOGIC_GND | 3=WAKE_KILL
+U17   TPS3839G33DBZR             TPS3839G33DBZR         1=LOGIC_GND | 2=AON_RESET_N | 3=AON_3V3
+== U15 LT3014BIS5#TRPBF [SOT-23-5] mpn=LT3014BIS5#TRPBF
+  1:IN_1                         AON_LDO_IN               | C200 R201
+  2:GND_2                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  3:NC_3                         NC                       | 
+  4:ADJ_4                        AON_FB                   | R202 R203
+  5:OUT_5                        AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+== U16 LTC2954ITS8-1#TRPBF [TSOT-23-8] mpn=LTC2954ITS8-1#TRPBF
+  1:VIN_1                        AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+  2:PB_2                         PB_LTC_N                 | U19
+  3:ONT_3                        WAKE_ONT                 | C203
+  4:GND_4                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  5:INT_5                        BUTTON_INT_N             | R221 U10
+  6:EN_6                         WAKE_EN_OD               | R206 R207 U64
+  7:PDT_7                        WAKE_PDT                 | C204
+  8:KILL_8                       WAKE_KILL                | Q20 R213 R214
+== U18 SN74LVC1G74DCUR [VSSOP-8_2.3x2mm_P0.5mm] mpn=SN74LVC1G74DCUR
+  1..4(3p) CLK                   LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  3:Q_N_3                        NC                       | 
+  5:Q_5                          BUTTON_ARMED             | U19
+  6:CLR_N_6                      AON_RESET_N              | U17 U19 U25 U63
+  7:PRE_N_7                      BUTTON_ARM_SET_N         | U19
+  8:VCC_8                        AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+== U19 SN74LVC2G00DCUR [VSSOP-8_2.3x2mm_P0.5mm] mpn=SN74LVC2G00DCUR
+  1:1A_1                         PB_RELEASED              | U59
+  2:1B_2                         AON_RESET_N              | U17 U18 U25 U63
+  3:2Y_3                         PB_LTC_N                 | U16
+  4:GND_4                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  5:2A_5                         PB_PRESSED               | U20 U59
+  6:2B_6                         BUTTON_ARMED             | U18
+  7:1Y_7                         BUTTON_ARM_SET_N         | U18
+  8:VCC_8                        AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+== U20 SN74LVC1G14DBVR [SOT-23-5] mpn=SN74LVC1G14DBVR
+  1:NC_1                         NC                       | 
+  2:A_2                          PB_RAW_N                 | C202 R204 R205
+  3:GND_3                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  4:Y_4                          PB_PRESSED               | U19 U59
+  5:VCC_5                        AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+== U21 LTC6993IS6-1#TRPBF [TSOT-23-6] mpn=LTC6993IS6-1#TRPBF
+  1:TRIG_1                       WAKE_RAW_EN              | R262 U23 U25 U55 U63 U64
+  2:GND_2                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  3:SET_3                        STARTUP_RSET             | R208
+  4:DIV_4                        STARTUP_DIV              | R209 R210
+  5:V+_5                         AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+  6:OUT_6                        STARTUP_GRANT            | U22
+== U22 SN74LVC1G32DBVR [SOT-23-5] mpn=SN74LVC1G32DBVR
+  1:A_1                          STARTUP_GRANT            | U21
+  2:B_2                          ESP_MAIN_HOLD_AON        | R211 R212
+  3:GND_3                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  4:Y_4                          KILL_HOLD_OR             | R213
+  5:VCC_5                        AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+== U23 SN74LVC1G74DCUR [VSSOP-8_2.3x2mm_P0.5mm] mpn=SN74LVC1G74DCUR
+  1..4(3p) CLK                   LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  3:Q_N_3                        MAIN_LATCH_OK            | U25
+  5:Q_5                          MAIN_FAULT_LATCHED       | Q20
+  6:CLR_N_6                      WAKE_RAW_EN              | R262 U21 U25 U55 U63 U64
+  7:PRE_N_7                      MAIN_FAULT_SET_N         | U24
+  8:VCC_8                        AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+== U24 SN74LVC2G00DCUR [VSSOP-8_2.3x2mm_P0.5mm] mpn=SN74LVC2G00DCUR
+  1:1A_1                         MAIN_CAPTURE_EN          | U63
+  2:1B_2                         MAIN_FAULT_ANY           | U58
+  3:2Y_3                         NC                       | 
+  4..6(3p) GND                   LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  7:1Y_7                         MAIN_FAULT_SET_N         | U23
+  8:VCC_8                        AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+== U25 SN74LVC1G11DBVR [SOT-23-6] mpn=SN74LVC1G11DBVR
+  1:A_1                          WAKE_RAW_EN              | R262 U21 U23 U55 U63 U64
+  2:GND_2                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  3:B_3                          MAIN_LATCH_OK            | U23
+  4:Y_4                          AON_WAKE_EN              | R29 R216 TP18 U1 U50 U54
+  5:VCC_5                        AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+  6:C_6                          AON_RESET_N              | U17 U18 U19 U63
+== U53 SN74LVC1G14DBVR [SOT-23-5] mpn=SN74LVC1G14DBVR
+  1:NC_1                         NC                       | 
+  2:A_2                          MAIN_FAULT_N             | R215 TP19 U1 U60
+  3:GND_3                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  4:Y_4                          MAIN_FAULT_ASSERTED      | U58
+  5:VCC_5                        AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+== U55 SN74LVC1G74DCUR [VSSOP-8_2.3x2mm_P0.5mm] mpn=SN74LVC1G74DCUR
+  1:CLK_1                        SW_RESET_N               | Q21 R217 R218 U26 U56 U60 U65
+  2..8(3p) D                     AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+  3:Q_N_3                        NC                       | 
+  4:GND_4                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  5:Q_5                          SW_POWER_SEEN            | U57
+  6:CLR_N_6                      WAKE_RAW_EN              | R262 U21 U23 U25 U63 U64
+== U56 SN74LVC1G14DBVR [SOT-23-5] mpn=SN74LVC1G14DBVR
+  1:NC_1                         NC                       | 
+  2:A_2                          SW_RESET_N               | Q21 R217 R218 U26 U55 U60 U65
+  3:GND_3                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  4:Y_4                          SW_RESET_ASSERTED        | U57
+  5:VCC_5                        AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+== U57 SN74LVC1G11DBVR [SOT-23-6] mpn=SN74LVC1G11DBVR
+  1:A_1                          SW_POWER_SEEN            | U55
+  2:GND_2                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  3:B_3                          SW_RESET_ASSERTED        | U56
+  4:Y_4                          SW_BROWNOUT              | U58
+  5:VCC_5,6:C_6                  AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+== U58 SN74LVC1G32DBVR [SOT-23-5] mpn=SN74LVC1G32DBVR
+  1:A_1                          MAIN_FAULT_ASSERTED      | U53
+  2:B_2                          SW_BROWNOUT              | U57
+  3:GND_3                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  4:Y_4                          MAIN_FAULT_ANY           | U24
+  5:VCC_5                        AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+== U59 SN74LVC1G14DBVR [SOT-23-5] mpn=SN74LVC1G14DBVR
+  1:NC_1                         NC                       | 
+  2:A_2                          PB_PRESSED               | U19 U20
+  3:GND_3                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  4:Y_4                          PB_RELEASED              | U19
+  5:VCC_5                        AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+== U62 SN74LVC1G17DBVR [SOT-23-5] mpn=SN74LVC1G17DBVR
+  1:NC_1                         NC                       | 
+  2:A_2                          MAIN_CAPTURE_RC          | C254 R262
+  3:GND_3                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  4:Y_4                          MAIN_CAPTURE_DELAYED     | U63
+  5:VCC_5                        AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+== U63 SN74LVC1G11DBVR [SOT-23-6] mpn=SN74LVC1G11DBVR
+  1:A_1                          WAKE_RAW_EN              | R262 U21 U23 U25 U55 U64
+  2:GND_2                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  3:B_3                          MAIN_CAPTURE_DELAYED     | U62
+  4:Y_4                          MAIN_CAPTURE_EN          | U24
+  5:VCC_5                        AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)
+  6:C_6                          AON_RESET_N              | U17 U18 U19 U25
+== U64 SN74LVC1G17DBVR [SOT-23-5] mpn=SN74LVC1G17DBVR
+  1:NC_1                         NC                       | 
+  2:A_2                          WAKE_EN_OD               | R206 R207 U16
+  3:GND_3                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  4:Y_4                          WAKE_RAW_EN              | R262 U21 U23 U25 U55 U63
+  5:VCC_5                        AON_3V3                  | C201 C210 C211 C212 C213 C214 C215 C216 ..(+38)

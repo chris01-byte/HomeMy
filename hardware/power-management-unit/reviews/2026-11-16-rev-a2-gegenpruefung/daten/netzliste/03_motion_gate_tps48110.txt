@@ -1,0 +1,78 @@
+C8    100nF100V X7R              GRM21BR72A104KA01L     1=SYS_BUS_P | 2=BATT_N
+C9    4.7uF25V X7R               C1206C475K3RACTU       1=MOTION_BST | 2=MOTION_COMMON
+C10   33uF63V10% PET film        MKS4C053306D00KSSD     1=MOTION_TMR | 2=BATT_N
+C11   1nF50V5% C0G               C0805C102J5GACTU       1=MOTION_CS_P | 2=MOTION_KELVIN_N
+C12   1nF50V5% C0G               C0805C102J5GACTU       1=MOTION_ISCP | 2=MOTION_KELVIN_N
+C13   1nF50V5% C0G               C0805C102J5GACTU       1=MOTION_TEMP_DIODE | 2=BATT_N
+C28   10nF50V5% C0G              C0805C103J5GACTU       1=MOTION_IMON_INPUT | 2=BATT_N
+C29   4.7uF25V X7R               C1206C475K3RACTU       1=MOTION_BST | 2=MOTION_COMMON
+C30   100nF100V X7R              GRM21BR72A104KA01L     1=V3V3 | 2=LOGIC_GND
+C31   1nF50V5% C0G               C0805C102J5GACTU       1=MOTION_UV_REF | 2=LOGIC_GND
+Q11   Remote temperature diode   MMBT3904,215           1=MOTION_TEMP_DIODE | 2=BATT_N | 3=MOTION_TEMP_DIODE
+R7    10R 1%                     RC0805FR-0710RL        1=MOTION_GATE_DRIVE | 2=Q7_G
+R8    10R 1%                     RC0805FR-0710RL        1=MOTION_GATE_DRIVE | 2=Q8_G
+R9    10R 1%                     RC0805FR-0710RL        1=MOTION_GATE_DRIVE | 2=Q9_G
+R10   10R 1%                     RC0805FR-0710RL        1=MOTION_GATE_DRIVE | 2=Q10_G
+R17   10M 1%                     RC0805FR-0710ML        1=Q7_G | 2=MOTION_COMMON
+R18   10M 1%                     RC0805FR-0710ML        1=Q8_G | 2=MOTION_COMMON
+R19   10M 1%                     RC0805FR-0710ML        1=Q9_G | 2=MOTION_COMMON
+R20   10M 1%                     RC0805FR-0710ML        1=Q10_G | 2=MOTION_COMMON
+R30   100R 0.1% 25ppm/K          RT0805BRD07100RL       1=MOTION_KELVIN_P | 2=MOTION_CS_P
+R31   39K7 0.1% 25ppm/K          RT0805BRD0739K7L       1=MOTION_IWRN | 2=BATT_N
+R32   2K74 0.1% 25ppm/K          RT0805BRD072K74L       1=MOTION_KELVIN_P | 2=MOTION_ISCP
+R33   100K 0.1% 25ppm/K          RT0805BRD07100KL       1=MOTION_TMR | 2=BATT_N
+R34   180K 1%                    RC0805FR-07180KL       1=MOTION_PU | 2=MOTION_GATE_DRIVE
+R35   226K 0.1% 25ppm/K          RT0805BRD07226KL       1=SYS_BUS_P | 2=MOTION_UVLO
+R36   10K 0.1% 25ppm/K           RT0805BRD0710KL        1=MOTION_UVLO | 2=BATT_N
+R39   100K 1%                    RC0805FR-07100KL       1=MOTION_GATE_EN | 2=BATT_N
+R59   10K 0.1% 25ppm/K           RT0805BRD0710KL        1=MOTION_IMON_RAW | 2=BATT_N
+R60   20K 0.1% 25ppm/K           RT0805BRD0720KL        1=MOTION_IMON_RAW | 2=MOTION_IMON_INPUT
+R61   10K 0.1% 25ppm/K           RT0805BRD0710KL        1=MOTION_IMON_INPUT | 2=BATT_N
+R62   226K 0.1% 25ppm/K          RT0805BRD07226KL       1=SYS_BUS_P | 2=MOTION_LATCH_UV_SENSE
+R63   10K 0.1% 25ppm/K           RT0805BRD0710KL        1=MOTION_LATCH_UV_SENSE | 2=LOGIC_GND
+== Q7 100V N-MOS .99mR@25C/2.3mR@175C 10V [CCPAK1212_SOT8000A] mpn=PSMN1R0-100ASFJ
+  1:G_1                          Q7_G                     | R7 R17
+  2..6(5p) S                     MOTION_COMMON            | BC9 BC10 C9 C29 Q8 Q9 Q10 R17 ..(+5)
+  7..13(7p) D                    MOTION_SENSED_P          | BC7 BC8 Q8 RSH2
+== Q8 100V N-MOS .99mR@25C/2.3mR@175C 10V [CCPAK1212_SOT8000A] mpn=PSMN1R0-100ASFJ
+  1:G_1                          Q8_G                     | R8 R18
+  2..6(5p) S                     MOTION_COMMON            | BC9 BC10 C9 C29 Q7 Q9 Q10 R17 ..(+5)
+  7..13(7p) D                    MOTION_SENSED_P          | BC7 BC8 Q7 RSH2
+== Q9 100V N-MOS .99mR@25C/2.3mR@175C 10V [CCPAK1212_SOT8000A] mpn=PSMN1R0-100ASFJ
+  1:G_1                          Q9_G                     | R9 R19
+  2..6(5p) S                     MOTION_COMMON            | BC9 BC10 C9 C29 Q7 Q8 Q10 R17 ..(+5)
+  7..13(7p) D                    MOTION_BUS_P             | BC11 BC12 BC13 BC14 C300 C312 C313 D60 ..(+14)
+== Q10 100V N-MOS .99mR@25C/2.3mR@175C 10V [CCPAK1212_SOT8000A] mpn=PSMN1R0-100ASFJ
+  1:G_1                          Q10_G                    | R10 R20
+  2..6(5p) S                     MOTION_COMMON            | BC9 BC10 C9 C29 Q7 Q8 Q9 R17 ..(+5)
+  7..13(7p) D                    MOTION_BUS_P             | BC11 BC12 BC13 BC14 C300 C312 C313 D60 ..(+14)
+== RSH2 0.5mR 1% four-terminal10W@70C terminal [CSS4J_4026_Kelvin] mpn=CSS4J-4026R-L500F
+  1:FORCE_P_1                    SYS_BUS_P                | BC5 BC6 C8 C21 C26 D2 Q4 Q5 ..(+15)
+  2:SENSE_P_2                    MOTION_KELVIN_P          | R30 R32 TP7
+  3:SENSE_N_3                    MOTION_KELVIN_N          | C11 C12 TP8 U2
+  4:FORCE_N_4                    MOTION_SENSED_P          | BC7 BC8 Q7 Q8
+== U2 TPS48110-Q1 [VSSOP_DGX19_3x5.1_P0.5_Missing] mpn=TPS48110AQDGXRQ1
+  1:EN_UVLO_1                    MOTION_UVLO              | R35 R36
+  2:OV_2,6:GND_6                 BATT_N                   | BC15 C1 C3 C6 C7 C8 C10 C13 ..(+45)
+  3:INP_3                        MOTION_GATE_EN           | R39 R237 TP21 U54
+  4:FLT_T_N_4                    MOTION_TEMP_FLT_N        | R230 TP23 U10 U28
+  5:FLT_I_N_5                    MOTION_FLT_N             | R229 TP22 U5 U10 U28
+  7:IMON_7                       MOTION_IMON_RAW          | R59 R60
+  8:IWRN_8                       MOTION_IWRN              | R31
+  9:TMR_9                        MOTION_TMR               | C10 R33 TP24
+  10:DIODE_10                    MOTION_TEMP_DIODE        | C13 Q11
+  11:NC_11                       NC                       | 
+  12:BST_12                      MOTION_BST               | C9 C29
+  13:SRC_13                      MOTION_COMMON            | BC9 BC10 C9 C29 Q7 Q8 Q9 Q10 ..(+5)
+  14:PD_14                       MOTION_GATE_DRIVE        | R7 R8 R9 R10 R34
+  15:PU_15                       MOTION_PU                | R34
+  17:CS-_17                      MOTION_KELVIN_N          | C11 C12 RSH2 TP8
+  18:CS+_18                      MOTION_CS_P              | C11 R30
+  19:ISCP_19                     MOTION_ISCP              | C12 R32
+  20:VS_20                       SYS_BUS_P                | BC5 BC6 C8 C21 C26 D2 Q4 Q5 ..(+15)
+== U5 Latched motion SYS undervoltage detector [SOT-23-6] mpn=TLV3011BIDBVR
+  1:OUT_OD_1                     MOTION_FLT_N             | R229 TP22 U2 U10 U28
+  2:GND_2                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  3:IN+_3                        MOTION_LATCH_UV_SENSE    | R62 R63
+  4:IN-_4,5:REF_5                MOTION_UV_REF            | C31
+  6:VCC_6                        V3V3                     | C30 C205 C206 C208 C221 C222 C223 C224 ..(+40)

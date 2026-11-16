@@ -1,0 +1,57 @@
+C222  100n                       GRM21BR71C104KA01L     1=V3V3 | 2=LOGIC_GND
+C223  100n                       GRM21BR71C104KA01L     1=V3V3 | 2=LOGIC_GND
+C224  100n                       GRM21BR71C104KA01L     1=V3V3 | 2=LOGIC_GND
+C225  100n                       GRM21BR71C104KA01L     1=V3V3 | 2=LOGIC_GND
+C226  100n                       GRM21BR71C104KA01L     1=V3V3 | 2=LOGIC_GND
+C228  100n                       GRM21BR71C104KA01L     1=V3V3 | 2=LOGIC_GND
+R229  10k                        RC0805FR-0710KL        1=V3V3 | 2=MOTION_FLT_N
+R230  10k                        RC0805FR-0710KL        1=V3V3 | 2=MOTION_TEMP_FLT_N
+R231  10k                        RC0805FR-0710KL        1=V3V3 | 2=CHOP_FAULT_N
+R232  10k                        RC0805FR-0710KL        1=V3V3 | 2=CHOP_ACTIVE_N
+R233  10k                        RC0805FR-0710KL        1=V3V3 | 2=ESP_WDO_N
+R234  100k                       RC0805FR-07100KL       1=ESP_MOTION_REQUEST | 2=LOGIC_GND
+R235  100k                       RC0805FR-07100KL       1=ESP_MOTION_RESET | 2=LOGIC_GND
+R236  100k                       RC0805FR-07100KL       1=ESP_WDI | 2=LOGIC_GND
+R237  10k                        RC0805FR-0710KL        1=MOTION_GATE_EN | 2=LOGIC_GND
+== U27 SN74LVC1G74DCUR [VSSOP-8_2.3x2mm_P0.5mm] mpn=SN74LVC1G74DCUR
+  1:CLK_1                        ESP_MOTION_RESET         | R235 TP34 U10
+  2..8(3p) D                     V3V3                     | C30 C205 C206 C208 C221 C222 C223 C224 ..(+40)
+  3:Q_N_3                        NC                       | 
+  4:GND_4                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  5:Q_5                          MOTION_ARMED             | R240 U54
+  6:CLR_N_6                      MOTION_CLEAR_N           | U50
+== U28 SN74LVC1G11DBVR [SOT-23-6] mpn=SN74LVC1G11DBVR
+  1:A_1                          MOTION_FLT_N             | R229 TP22 U2 U5 U10
+  2:GND_2                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  3:B_3                          MOTION_TEMP_FLT_N        | R230 TP23 U2 U10
+  4:Y_4                          MOTION_FAULTS_OK         | U50
+  5:VCC_5                        V3V3                     | C30 C205 C206 C208 C221 C222 C223 C224 ..(+40)
+  6:C_6                          CHOP_FAULT_N             | R231 TP29 U10 U34
+== U29 SN74LVC1G11DBVR [SOT-23-6] mpn=SN74LVC1G11DBVR
+  1:A_1                          ESP_CHIP_EN              | J21 R218 R219 U10
+  2:GND_2                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  3:B_3                          ESP_WDO_N                | R233 U51
+  4:Y_4                          MOTION_LOCAL_OK          | U50
+  5:VCC_5                        V3V3                     | C30 C205 C206 C208 C221 C222 C223 C224 ..(+40)
+  6:C_6                          MOTION_PERMIT            | U61
+== U50 SN74LVC1G11DBVR [SOT-23-6] mpn=SN74LVC1G11DBVR
+  1:A_1                          MOTION_LOCAL_OK          | U29
+  2:GND_2                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  3:B_3                          MOTION_FAULTS_OK         | U28
+  4:Y_4                          MOTION_CLEAR_N           | U27
+  5:VCC_5                        V3V3                     | C30 C205 C206 C208 C221 C222 C223 C224 ..(+40)
+  6:C_6                          AON_WAKE_EN              | R29 R216 TP18 U1 U25 U54
+== U51 TPS3431SDRBR [TI_DRB0008A_3x3mm_EP1.5x1.75] mpn=TPS3431SDRBR
+  1..5(3p) VDD                   V3V3                     | C30 C205 C206 C208 C221 C222 C223 C224 ..(+40)
+  2:CWD_2                        NC                       | 
+  4:GND_4,9:EP_GND_9             LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  6:WDI_6                        ESP_WDI                  | R236 U10
+  7:WDO_N_7                      ESP_WDO_N                | R233 U29
+  8:ENOUT_8                      NC                       | 
+== U54 SN74LVC1G11DBVR [SOT-23-6] mpn=SN74LVC1G11DBVR
+  1:A_1                          ESP_MOTION_REQUEST       | R234 U10
+  2:GND_2                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  3:B_3                          MOTION_ARMED             | R240 U27
+  4:Y_4                          MOTION_GATE_EN           | R39 R237 TP21 U2
+  5:VCC_5                        V3V3                     | C30 C205 C206 C208 C221 C222 C223 C224 ..(+40)
+  6:C_6                          AON_WAKE_EN              | R29 R216 TP18 U1 U25 U50

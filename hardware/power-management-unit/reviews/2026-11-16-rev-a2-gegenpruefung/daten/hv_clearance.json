@@ -1,0 +1,9535 @@
+{
+ "rule": "42-V-Netze (HVX) zu allen anderen Netzen >= 0.6 mm",
+ "hv_nets": [
+  "AON_FEED_MID",
+  "AON_LDO_IN",
+  "BATT_FUSED_P",
+  "BATT_SENSED_P",
+  "CHOP_DRAIN",
+  "CHOP_SENSE_TOP",
+  "INA_IN_N",
+  "INA_IN_P",
+  "INA_VBUS",
+  "LOGIC_BUCK_IN_P",
+  "MAIN_CAP",
+  "MAIN_COMMON",
+  "MAIN_CS_P",
+  "MAIN_DGATE",
+  "MAIN_HGATE",
+  "MAIN_ISCP",
+  "MAIN_KELVIN_N",
+  "MAIN_KELVIN_P",
+  "MOTION_BST",
+  "MOTION_BUS_P",
+  "MOTION_COMMON",
+  "MOTION_CS_P",
+  "MOTION_GATE_DRIVE",
+  "MOTION_ISCP",
+  "MOTION_KELVIN_N",
+  "MOTION_KELVIN_P",
+  "MOTION_PU",
+  "MOTION_SENSED_P",
+  "MOT_DIV_MID",
+  "PC_BUCK_IN_P",
+  "Q10_G",
+  "Q1_G",
+  "Q2_G",
+  "Q3_G",
+  "Q4_G",
+  "Q5_G",
+  "Q6_G",
+  "Q7_G",
+  "Q8_G",
+  "Q9_G",
+  "SYS_BUS_P",
+  "SYS_DIV_MID"
+ ],
+ "count": 499,
+ "min_mm": 0.2018,
+ "summary": {
+  "0.4-0.6 | pad beteiligt | Aussenlage/Durchkontaktierung": 12,
+  "0.4-0.6 | track+track | Aussenlage/Durchkontaktierung": 9,
+  "0.4-0.6 | track+via | Aussenlage/Durchkontaktierung": 14,
+  "0.4-0.6 | track+zone | Aussenlage/Durchkontaktierung": 17,
+  "0.4-0.6 | track+zone | nur Innenlage": 7,
+  "0.4-0.6 | via+zone | Aussenlage/Durchkontaktierung": 19,
+  "<0.4 | pad beteiligt | Aussenlage/Durchkontaktierung": 27,
+  "<0.4 | track+track | Aussenlage/Durchkontaktierung": 3,
+  "<0.4 | track+via | Aussenlage/Durchkontaktierung": 11,
+  "<0.4 | track+zone | Aussenlage/Durchkontaktierung": 11,
+  "<0.4 | track+zone | nur Innenlage": 49,
+  "<0.4 | via+zone | Aussenlage/Durchkontaktierung": 320
+ },
+ "pad_involved_below_0.4mm": [
+  {
+   "actual_mm": 0.2027,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_SHDN",
+   "at": [
+    23.0,
+    186.4
+   ],
+   "items": [
+    "Track [PC_SHDN] on F.Cu, length 1.0621 mm",
+    "Pad 1 [SYS_BUS_P] of R45 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2027,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_SHDN",
+   "at": [
+    23.0,
+    185.42
+   ],
+   "items": [
+    "Track [PC_SHDN] on F.Cu, length 0.9830 mm",
+    "Pad 1 [SYS_BUS_P] of R45 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2028,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_SHDN",
+   "at": [
+    23.32,
+    185.1
+   ],
+   "items": [
+    "Track [PC_SHDN] on F.Cu, length 0.4581 mm",
+    "Pad 1 [SYS_BUS_P] of R45 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.203,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_SHDN",
+   "at": [
+    24.0,
+    185.91
+   ],
+   "items": [
+    "Pad 1 [SYS_BUS_P] of R45 on F.Cu",
+    "Track [PC_SHDN] on F.Cu, length 0.6788 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.203,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_SHDN",
+   "at": [
+    27.18,
+    185.1
+   ],
+   "items": [
+    "Track [PC_SHDN] on F.Cu, length 3.1848 mm",
+    "Pad 1 [SYS_BUS_P] of R45 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.203,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_SHDN",
+   "at": [
+    24.0,
+    185.1
+   ],
+   "items": [
+    "Track [PC_SHDN] on F.Cu, length 1.0090 mm",
+    "Pad 1 [SYS_BUS_P] of R45 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2047,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "INA_VBUS",
+   "other_net": "V3V3",
+   "at": [
+    34.61,
+    83.07
+   ],
+   "items": [
+    "Track [INA_VBUS] on F.Cu, length 1.9639 mm",
+    "Pad 1 [V3V3] of C206 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2127,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_UVLO",
+   "at": [
+    21.99,
+    171.38
+   ],
+   "items": [
+    "Track [PC_UVLO] on F.Cu, length 1.0840 mm",
+    "Pad 1 [SYS_BUS_P] of R43 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2156,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_EFUSE_PGOOD",
+   "at": [
+    96.0,
+    172.47
+   ],
+   "items": [
+    "Pad 1 [LOGIC_BUCK_IN_P] of C27 on F.Cu",
+    "Track [LOGIC_EFUSE_PGOOD] on F.Cu, length 3.8735 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.2191,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_PGTH",
+   "at": [
+    100.0,
+    171.91
+   ],
+   "items": [
+    "Pad 1 [LOGIC_BUCK_IN_P] of R57 on F.Cu",
+    "Track [LOGIC_PGTH] on F.Cu, length 1.4960 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.225,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "INA_VBUS",
+   "other_net": "LOGIC_GND",
+   "at": [
+    33.0,
+    80.0
+   ],
+   "items": [
+    "Track [INA_VBUS] on F.Cu, length 0.8951 mm",
+    "Pad 7 [LOGIC_GND] of U11 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2278,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "INA_VBUS",
+   "other_net": "V3V3",
+   "at": [
+    33.22,
+    81.68
+   ],
+   "items": [
+    "Track [INA_VBUS] on F.Cu, length 1.4545 mm",
+    "Pad 1 [V3V3] of C206 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2333,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_EFUSE_PGOOD",
+   "at": [
+    96.0,
+    172.47
+   ],
+   "items": [
+    "Pad 1 [LOGIC_BUCK_IN_P] of C27 on F.Cu",
+    "Track [LOGIC_EFUSE_PGOOD] on F.Cu, length 1.2926 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.2367,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_UVLO",
+   "at": [
+    22.37,
+    171.0
+   ],
+   "items": [
+    "Track [PC_UVLO] on F.Cu, length 0.5416 mm",
+    "Pad 1 [SYS_BUS_P] of R43 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2389,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_EFUSE_PGOOD",
+   "at": [
+    96.0,
+    172.47
+   ],
+   "items": [
+    "Pad 1 [LOGIC_BUCK_IN_P] of C27 on F.Cu",
+    "Track [LOGIC_EFUSE_PGOOD] on F.Cu, length 1.0970 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.25,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_BST",
+   "other_net": "unconnected-(U2-NC-Pad11)",
+   "at": [
+    171.2,
+    100.75
+   ],
+   "items": [
+    "Track [MOTION_BST] on F.Cu, length 1.6230 mm",
+    "Pad 11 [unconnected-(U2-NC-Pad11)] of U2 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.25,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_EFUSE_PGOOD",
+   "at": [
+    91.96,
+    175.25
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on F.Cu, length 1.2375 mm",
+    "Pad 16 [LOGIC_EFUSE_PGOOD] of U4 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2543,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_UVLO",
+   "at": [
+    21.99,
+    172.47
+   ],
+   "items": [
+    "Track [PC_UVLO] on F.Cu, length 4.8725 mm",
+    "Pad 1 [SYS_BUS_P] of R43 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2687,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "INA_VBUS",
+   "other_net": "LOGIC_GND",
+   "at": [
+    33.22,
+    80.23
+   ],
+   "items": [
+    "Track [INA_VBUS] on F.Cu, length 0.3212 mm",
+    "Pad 7 [LOGIC_GND] of U11 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2722,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "INA_VBUS",
+   "other_net": "V3V3",
+   "at": [
+    33.22,
+    81.68
+   ],
+   "items": [
+    "Track [INA_VBUS] on F.Cu, length 1.4545 mm",
+    "Pad 6 [V3V3] of U11 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2722,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "INA_VBUS",
+   "other_net": "LOGIC_GND",
+   "at": [
+    33.22,
+    81.68
+   ],
+   "items": [
+    "Track [INA_VBUS] on F.Cu, length 1.4545 mm",
+    "Pad 7 [LOGIC_GND] of U11 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.275,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_EFUSE_PGOOD",
+   "at": [
+    91.96,
+    175.25
+   ],
+   "items": [
+    "Pad 17 [LOGIC_BUCK_IN_P] of U4 on F.Cu",
+    "Track [LOGIC_EFUSE_PGOOD] on F.Cu, length 2.9874 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.275,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_UVLO",
+   "at": [
+    37.59,
+    177.69
+   ],
+   "items": [
+    "Track [PC_UVLO] on F.Cu, length 0.6264 mm",
+    "Pad 5 [SYS_BUS_P] of U3 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.275,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "PC_BUCK_IN_P",
+   "other_net": "PC_EFUSE_PGOOD",
+   "at": [
+    41.96,
+    175.75
+   ],
+   "items": [
+    "Track [PC_EFUSE_PGOOD] on F.Cu, length 4.3594 mm",
+    "Pad 17 [PC_BUCK_IN_P] of U3 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.3,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_UVLO",
+   "at": [
+    26.09,
+    171.0
+   ],
+   "items": [
+    "Track [PC_UVLO] on F.Cu, length 3.7172 mm",
+    "Pad 1 [SYS_BUS_P] of R43 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.3001,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "INA_VBUS",
+   "other_net": "V3V3",
+   "at": [
+    33.22,
+    80.23
+   ],
+   "items": [
+    "Track [INA_VBUS] on F.Cu, length 0.3212 mm",
+    "Pad 1 [V3V3] of C206 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.3551,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_PGTH",
+   "at": [
+    98.98,
+    172.6
+   ],
+   "items": [
+    "Track [LOGIC_PGTH] on F.Cu, length 1.5939 mm",
+    "Pad 1 [LOGIC_BUCK_IN_P] of R57 on F.Cu"
+   ]
+  }
+ ],
+ "all": [
+  {
+   "actual_mm": 0.2018,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_PGTH",
+   "at": [
+    98.98,
+    172.6
+   ],
+   "items": [
+    "Track [LOGIC_PGTH] on F.Cu, length 1.5939 mm",
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2027,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_SHDN",
+   "at": [
+    23.0,
+    186.4
+   ],
+   "items": [
+    "Track [PC_SHDN] on F.Cu, length 1.0621 mm",
+    "Pad 1 [SYS_BUS_P] of R45 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2027,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_SHDN",
+   "at": [
+    23.0,
+    185.42
+   ],
+   "items": [
+    "Track [PC_SHDN] on F.Cu, length 0.9830 mm",
+    "Pad 1 [SYS_BUS_P] of R45 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2028,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_SHDN",
+   "at": [
+    23.32,
+    185.1
+   ],
+   "items": [
+    "Track [PC_SHDN] on F.Cu, length 0.4581 mm",
+    "Pad 1 [SYS_BUS_P] of R45 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.203,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_SHDN",
+   "at": [
+    24.0,
+    185.91
+   ],
+   "items": [
+    "Pad 1 [SYS_BUS_P] of R45 on F.Cu",
+    "Track [PC_SHDN] on F.Cu, length 0.6788 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.203,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_SHDN",
+   "at": [
+    27.18,
+    185.1
+   ],
+   "items": [
+    "Track [PC_SHDN] on F.Cu, length 3.1848 mm",
+    "Pad 1 [SYS_BUS_P] of R45 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.203,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_SHDN",
+   "at": [
+    24.0,
+    185.1
+   ],
+   "items": [
+    "Track [PC_SHDN] on F.Cu, length 1.0090 mm",
+    "Pad 1 [SYS_BUS_P] of R45 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2047,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "INA_VBUS",
+   "other_net": "V3V3",
+   "at": [
+    34.61,
+    83.07
+   ],
+   "items": [
+    "Track [INA_VBUS] on F.Cu, length 1.9639 mm",
+    "Pad 1 [V3V3] of C206 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.207,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_COMMON",
+   "other_net": "TEMP_MAIN_ADC",
+   "at": [
+    75.71,
+    66.82
+   ],
+   "items": [
+    "Track [TEMP_MAIN_ADC] on In1.Cu, length 5.4837 mm",
+    "Via [MAIN_COMMON] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2127,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_UVLO",
+   "at": [
+    21.99,
+    171.38
+   ],
+   "items": [
+    "Track [PC_UVLO] on F.Cu, length 1.0840 mm",
+    "Pad 1 [SYS_BUS_P] of R43 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2145,
+   "kinds": [
+    "track",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_SHDN",
+   "at": [
+    23.75,
+    187.16
+   ],
+   "items": [
+    "Track [PC_SHDN] on F.Cu, length 11.5331 mm",
+    "Track [SYS_BUS_P] on F.Cu, length 2.3340 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.2148,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_COMMON",
+   "other_net": "TEMP_MAIN_ADC",
+   "at": [
+    77.7,
+    68.69
+   ],
+   "items": [
+    "Track [TEMP_MAIN_ADC] on In1.Cu, length 0.5725 mm",
+    "Via [MAIN_COMMON] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2156,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_EFUSE_PGOOD",
+   "at": [
+    96.0,
+    172.47
+   ],
+   "items": [
+    "Pad 1 [LOGIC_BUCK_IN_P] of C27 on F.Cu",
+    "Track [LOGIC_EFUSE_PGOOD] on F.Cu, length 3.8735 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.2191,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_PGTH",
+   "at": [
+    100.0,
+    171.91
+   ],
+   "items": [
+    "Pad 1 [LOGIC_BUCK_IN_P] of R57 on F.Cu",
+    "Track [LOGIC_PGTH] on F.Cu, length 1.4960 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.2207,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_PGTH",
+   "at": [
+    100.11,
+    173.73
+   ],
+   "items": [
+    "Track [LOGIC_PGTH] on F.Cu, length 0.0950 mm",
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2207,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_PGTH",
+   "at": [
+    100.2,
+    173.73
+   ],
+   "items": [
+    "Track [LOGIC_PGTH] on F.Cu, length 1.1335 mm",
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.225,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "INA_VBUS",
+   "other_net": "LOGIC_GND",
+   "at": [
+    33.0,
+    80.0
+   ],
+   "items": [
+    "Track [INA_VBUS] on F.Cu, length 0.8951 mm",
+    "Pad 7 [LOGIC_GND] of U11 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2278,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "INA_VBUS",
+   "other_net": "V3V3",
+   "at": [
+    33.22,
+    81.68
+   ],
+   "items": [
+    "Track [INA_VBUS] on F.Cu, length 1.4545 mm",
+    "Pad 1 [V3V3] of C206 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2293,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_COMMON",
+   "other_net": "TEMP_MAIN_ADC",
+   "at": [
+    75.71,
+    66.82
+   ],
+   "items": [
+    "Track [TEMP_MAIN_ADC] on In1.Cu, length 5.4837 mm",
+    "Via [MAIN_COMMON] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.233,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_COMMON",
+   "other_net": "TEMP_MAIN_ADC",
+   "at": [
+    77.3,
+    68.29
+   ],
+   "items": [
+    "Track [TEMP_MAIN_ADC] on In1.Cu, length 0.1249 mm",
+    "Via [MAIN_COMMON] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2333,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_EFUSE_PGOOD",
+   "at": [
+    96.0,
+    172.47
+   ],
+   "items": [
+    "Pad 1 [LOGIC_BUCK_IN_P] of C27 on F.Cu",
+    "Track [LOGIC_EFUSE_PGOOD] on F.Cu, length 1.2926 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.2335,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_COMMON",
+   "other_net": "TEMP_MAIN_ADC",
+   "at": [
+    80.09,
+    71.18
+   ],
+   "items": [
+    "Track [TEMP_MAIN_ADC] on In1.Cu, length 3.3757 mm",
+    "Via [MAIN_COMMON] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2367,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_UVLO",
+   "at": [
+    22.37,
+    171.0
+   ],
+   "items": [
+    "Track [PC_UVLO] on F.Cu, length 0.5416 mm",
+    "Pad 1 [SYS_BUS_P] of R43 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2389,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_EFUSE_PGOOD",
+   "at": [
+    96.0,
+    172.47
+   ],
+   "items": [
+    "Pad 1 [LOGIC_BUCK_IN_P] of C27 on F.Cu",
+    "Track [LOGIC_EFUSE_PGOOD] on F.Cu, length 1.0970 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.25,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_BST",
+   "other_net": "unconnected-(U2-NC-Pad11)",
+   "at": [
+    171.2,
+    100.75
+   ],
+   "items": [
+    "Track [MOTION_BST] on F.Cu, length 1.6230 mm",
+    "Pad 11 [unconnected-(U2-NC-Pad11)] of U2 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.25,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_EFUSE_PGOOD",
+   "at": [
+    91.96,
+    175.25
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on F.Cu, length 1.2375 mm",
+    "Pad 16 [LOGIC_EFUSE_PGOOD] of U4 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2505,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_EFUSE_PGOOD",
+   "at": [
+    94.95,
+    175.75
+   ],
+   "items": [
+    "Track [LOGIC_EFUSE_PGOOD] on F.Cu, length 3.8735 mm",
+    "Zone 'LOWER_POWER/LOGIC_BUCK_IN_P' [LOGIC_BUCK_IN_P] on F.Cu, priority 20"
+   ]
+  },
+  {
+   "actual_mm": 0.2505,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_EFUSE_PGOOD",
+   "at": [
+    91.96,
+    175.75
+   ],
+   "items": [
+    "Track [LOGIC_EFUSE_PGOOD] on F.Cu, length 2.9874 mm",
+    "Zone 'LOWER_POWER/LOGIC_BUCK_IN_P' [LOGIC_BUCK_IN_P] on F.Cu, priority 20"
+   ]
+  },
+  {
+   "actual_mm": 0.2505,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "PC_BUCK_IN_P",
+   "other_net": "PC_EFUSE_PGOOD",
+   "at": [
+    41.96,
+    175.75
+   ],
+   "items": [
+    "Track [PC_EFUSE_PGOOD] on F.Cu, length 4.3594 mm",
+    "Zone 'LOWER_POWER/PC_BUCK_IN_P' [PC_BUCK_IN_P] on F.Cu, priority 20"
+   ]
+  },
+  {
+   "actual_mm": 0.2543,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_UVLO",
+   "at": [
+    21.99,
+    172.47
+   ],
+   "items": [
+    "Track [PC_UVLO] on F.Cu, length 4.8725 mm",
+    "Pad 1 [SYS_BUS_P] of R43 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2687,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "INA_VBUS",
+   "other_net": "LOGIC_GND",
+   "at": [
+    33.22,
+    80.23
+   ],
+   "items": [
+    "Track [INA_VBUS] on F.Cu, length 0.3212 mm",
+    "Pad 7 [LOGIC_GND] of U11 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2702,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_COMMON",
+   "other_net": "TEMP_MAIN_ADC",
+   "at": [
+    80.09,
+    71.18
+   ],
+   "items": [
+    "Track [TEMP_MAIN_ADC] on In1.Cu, length 3.3757 mm",
+    "Via [MAIN_COMMON] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2718,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "INA_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    33.85,
+    77.25
+   ],
+   "items": [
+    "Track [INA_IN_P] on F.Cu, length 2.4749 mm",
+    "Via [LOGIC_GND] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2722,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "INA_VBUS",
+   "other_net": "V3V3",
+   "at": [
+    33.22,
+    81.68
+   ],
+   "items": [
+    "Track [INA_VBUS] on F.Cu, length 1.4545 mm",
+    "Pad 6 [V3V3] of U11 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.2722,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "INA_VBUS",
+   "other_net": "LOGIC_GND",
+   "at": [
+    33.22,
+    81.68
+   ],
+   "items": [
+    "Track [INA_VBUS] on F.Cu, length 1.4545 mm",
+    "Pad 7 [LOGIC_GND] of U11 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.275,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_EFUSE_PGOOD",
+   "at": [
+    91.96,
+    175.25
+   ],
+   "items": [
+    "Pad 17 [LOGIC_BUCK_IN_P] of U4 on F.Cu",
+    "Track [LOGIC_EFUSE_PGOOD] on F.Cu, length 2.9874 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.275,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_UVLO",
+   "at": [
+    37.59,
+    177.69
+   ],
+   "items": [
+    "Track [PC_UVLO] on F.Cu, length 0.6264 mm",
+    "Pad 5 [SYS_BUS_P] of U3 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.275,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "PC_BUCK_IN_P",
+   "other_net": "PC_EFUSE_PGOOD",
+   "at": [
+    41.96,
+    175.75
+   ],
+   "items": [
+    "Track [PC_EFUSE_PGOOD] on F.Cu, length 4.3594 mm",
+    "Pad 17 [PC_BUCK_IN_P] of U3 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.275,
+   "kinds": [
+    "track",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "PC_BUCK_IN_P",
+   "other_net": "PC_EFUSE_PGOOD",
+   "at": [
+    41.96,
+    175.75
+   ],
+   "items": [
+    "Track [PC_EFUSE_PGOOD] on F.Cu, length 4.3594 mm",
+    "Track [PC_BUCK_IN_P] on F.Cu, length 1.2375 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.275,
+   "kinds": [
+    "track",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_EFUSE_PGOOD",
+   "at": [
+    91.96,
+    175.25
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on F.Cu, length 1.2375 mm",
+    "Track [LOGIC_EFUSE_PGOOD] on F.Cu, length 2.9874 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.2979,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_BUS_P",
+   "other_net": "CHOP_REQUEST",
+   "at": [
+    181.1,
+    168.5
+   ],
+   "items": [
+    "Track [CHOP_REQUEST] on B.Cu, length 40.4000 mm",
+    "Via [MOTION_BUS_P] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.3,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_UVLO",
+   "at": [
+    26.09,
+    171.0
+   ],
+   "items": [
+    "Track [PC_UVLO] on F.Cu, length 3.7172 mm",
+    "Pad 1 [SYS_BUS_P] of R43 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.3001,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "INA_VBUS",
+   "other_net": "V3V3",
+   "at": [
+    33.22,
+    80.23
+   ],
+   "items": [
+    "Track [INA_VBUS] on F.Cu, length 0.3212 mm",
+    "Pad 1 [V3V3] of C206 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    116.9,
+    158.56
+   ],
+   "items": [
+    "Via [SYS_BUS_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_BACK_REFERENCE' [LOGIC_GND] on B.Cu, priority 5"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_BUS_P",
+   "other_net": "CHOP_GND",
+   "at": [
+    247.16,
+    159.0
+   ],
+   "items": [
+    "Track [MOTION_BUS_P] on In1.Cu, length 26.2590 mm",
+    "Zone 'A2/CHOP_REFERENCE' [CHOP_GND] on In1.Cu, priority 30"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_BUS_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    200.0,
+    33.0
+   ],
+   "items": [
+    "Via [MOTION_BUS_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    116.9,
+    158.56
+   ],
+   "items": [
+    "Via [SYS_BUS_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_BUS_P",
+   "other_net": "BATT_N",
+   "at": [
+    200.0,
+    33.0
+   ],
+   "items": [
+    "Via [MOTION_BUS_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    103.0,
+    51.0
+   ],
+   "items": [
+    "Via [SYS_BUS_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "V3V3",
+   "at": [
+    116.9,
+    158.56
+   ],
+   "items": [
+    "Via [SYS_BUS_P] on F.Cu - B.Cu",
+    "Zone 'A2/3V3_LOWER_REFERENCE' [V3V3] on In2.Cu, priority 5"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    167.0,
+    67.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    43.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    124.5,
+    45.0
+   ],
+   "items": [
+    "Track [MOTION_KELVIN_P] on In2.Cu, length 46.4000 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    124.5,
+    91.4
+   ],
+   "items": [
+    "Track [MOTION_KELVIN_P] on In2.Cu, length 2.9698 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    120.97,
+    45.0
+   ],
+   "items": [
+    "Track [MOTION_KELVIN_P] on In2.Cu, length 3.5250 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    126.6,
+    93.5
+   ],
+   "items": [
+    "Track [MOTION_KELVIN_P] on In2.Cu, length 43.4000 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    170.0,
+    93.5
+   ],
+   "items": [
+    "Track [MOTION_KELVIN_P] on In2.Cu, length 11.3137 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    180.3,
+    100.6
+   ],
+   "items": [
+    "Track [MOTION_KELVIN_P] on In2.Cu, length 6.2000 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    155.0,
+    95.1
+   ],
+   "items": [
+    "Via [MOTION_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    180.3,
+    100.6
+   ],
+   "items": [
+    "Via [MOTION_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    180.3,
+    94.4
+   ],
+   "items": [
+    "Via [MOTION_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    180.3,
+    100.6
+   ],
+   "items": [
+    "Via [MOTION_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    120.97,
+    45.0
+   ],
+   "items": [
+    "Via [MOTION_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    180.3,
+    94.4
+   ],
+   "items": [
+    "Via [MOTION_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    120.97,
+    45.0
+   ],
+   "items": [
+    "Via [MOTION_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "BATT_FUSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    32.88,
+    74.85
+   ],
+   "items": [
+    "Via [BATT_FUSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "BATT_FUSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    32.35,
+    60.71
+   ],
+   "items": [
+    "Track [BATT_FUSED_P] on In1.Cu, length 0.7419 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "BATT_FUSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    32.88,
+    61.24
+   ],
+   "items": [
+    "Track [BATT_FUSED_P] on In1.Cu, length 13.6119 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "BATT_FUSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    32.88,
+    74.85
+   ],
+   "items": [
+    "Via [BATT_FUSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "BATT_FUSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    32.35,
+    60.71
+   ],
+   "items": [
+    "Via [BATT_FUSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "BATT_FUSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    32.35,
+    60.71
+   ],
+   "items": [
+    "Via [BATT_FUSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    36.5,
+    93.5
+   ],
+   "items": [
+    "Track [MAIN_KELVIN_P] on In2.Cu, length 29.5000 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    66.0,
+    93.5
+   ],
+   "items": [
+    "Track [MAIN_KELVIN_P] on In2.Cu, length 1.1314 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    35.5,
+    45.0
+   ],
+   "items": [
+    "Track [MAIN_KELVIN_P] on In2.Cu, length 47.5000 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    35.5,
+    92.5
+   ],
+   "items": [
+    "Track [MAIN_KELVIN_P] on In2.Cu, length 1.4142 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    31.5,
+    45.0
+   ],
+   "items": [
+    "Track [MAIN_KELVIN_P] on In2.Cu, length 4.0000 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    66.8,
+    94.3
+   ],
+   "items": [
+    "Track [MAIN_KELVIN_P] on In2.Cu, length 2.3000 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    66.8,
+    96.6
+   ],
+   "items": [
+    "Track [MAIN_KELVIN_P] on In1.Cu, length 6.2000 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    34.3,
+    69.9
+   ],
+   "items": [
+    "Track [MAIN_KELVIN_P] on In1.Cu, length 2.6870 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    76.7,
+    100.3
+   ],
+   "items": [
+    "Track [MAIN_KELVIN_P] on In1.Cu, length 1.5000 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    30.4,
+    45.0
+   ],
+   "items": [
+    "Track [MAIN_KELVIN_P] on In1.Cu, length 3.9000 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    38.0,
+    71.8
+   ],
+   "items": [
+    "Track [MAIN_KELVIN_P] on In1.Cu, length 2.0000 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    38.0,
+    73.8
+   ],
+   "items": [
+    "Track [MAIN_KELVIN_P] on In1.Cu, length 2.1213 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    73.0,
+    96.6
+   ],
+   "items": [
+    "Track [MAIN_KELVIN_P] on In1.Cu, length 5.2326 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    36.2,
+    71.8
+   ],
+   "items": [
+    "Track [MAIN_KELVIN_P] on In1.Cu, length 1.8000 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    30.4,
+    45.0
+   ],
+   "items": [
+    "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    66.8,
+    96.6
+   ],
+   "items": [
+    "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    34.3,
+    45.0
+   ],
+   "items": [
+    "Track [MAIN_KELVIN_P] on In1.Cu, length 24.9000 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    30.4,
+    45.0
+   ],
+   "items": [
+    "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    66.8,
+    96.6
+   ],
+   "items": [
+    "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    39.5,
+    75.3
+   ],
+   "items": [
+    "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    39.5,
+    75.3
+   ],
+   "items": [
+    "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    78.2,
+    100.3
+   ],
+   "items": [
+    "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    31.5,
+    45.0
+   ],
+   "items": [
+    "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    78.2,
+    100.3
+   ],
+   "items": [
+    "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    49.0,
+    95.1
+   ],
+   "items": [
+    "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    31.5,
+    45.0
+   ],
+   "items": [
+    "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    49.0,
+    95.1
+   ],
+   "items": [
+    "Via [MAIN_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "CHOP_DRAIN",
+   "other_net": "CHOP_GND",
+   "at": [
+    232.18,
+    199.92
+   ],
+   "items": [
+    "Track [CHOP_DRAIN] on In1.Cu, length 2.1818 mm",
+    "Zone 'A2/CHOP_REFERENCE' [CHOP_GND] on In1.Cu, priority 30"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "CHOP_DRAIN",
+   "other_net": "LOGIC_GND",
+   "at": [
+    232.23,
+    199.87
+   ],
+   "items": [
+    "Via [CHOP_DRAIN] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_BACK_REFERENCE' [LOGIC_GND] on B.Cu, priority 5"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "CHOP_DRAIN",
+   "other_net": "LOGIC_GND",
+   "at": [
+    226.03,
+    188.15
+   ],
+   "items": [
+    "Via [CHOP_DRAIN] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_BACK_REFERENCE' [LOGIC_GND] on B.Cu, priority 5"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "CHOP_DRAIN",
+   "other_net": "CHOP_GND",
+   "at": [
+    226.03,
+    188.15
+   ],
+   "items": [
+    "Via [CHOP_DRAIN] on F.Cu - B.Cu",
+    "Zone 'A2/CHOP_REFERENCE' [CHOP_GND] on In1.Cu, priority 30"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "CHOP_DRAIN",
+   "other_net": "CHOP_GND",
+   "at": [
+    232.23,
+    199.87
+   ],
+   "items": [
+    "Via [CHOP_DRAIN] on F.Cu - B.Cu",
+    "Zone 'A2/CHOP_REFERENCE' [CHOP_GND] on In1.Cu, priority 30"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "CHOP_DRAIN",
+   "other_net": "LOGIC_GND",
+   "at": [
+    231.98,
+    187.96
+   ],
+   "items": [
+    "Via [CHOP_DRAIN] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_BACK_REFERENCE' [LOGIC_GND] on B.Cu, priority 5"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "CHOP_DRAIN",
+   "other_net": "LOGIC_GND",
+   "at": [
+    231.98,
+    187.96
+   ],
+   "items": [
+    "Track [CHOP_DRAIN] on In1.Cu, length 0.2660 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "CHOP_DRAIN",
+   "other_net": "LOGIC_GND",
+   "at": [
+    231.79,
+    188.15
+   ],
+   "items": [
+    "Track [CHOP_DRAIN] on In1.Cu, length 5.7564 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "CHOP_DRAIN",
+   "other_net": "LOGIC_GND",
+   "at": [
+    231.98,
+    187.96
+   ],
+   "items": [
+    "Via [CHOP_DRAIN] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_CS_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    179.0,
+    96.8
+   ],
+   "items": [
+    "Via [MOTION_CS_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_CS_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    175.0,
+    96.5
+   ],
+   "items": [
+    "Via [MOTION_CS_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_CS_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    179.0,
+    96.8
+   ],
+   "items": [
+    "Track [MOTION_CS_P] on In1.Cu, length 3.7000 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_CS_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    175.3,
+    96.8
+   ],
+   "items": [
+    "Track [MOTION_CS_P] on In1.Cu, length 0.4243 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "BATT_N",
+   "at": [
+    93.2,
+    172.8
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on In2.Cu, length 6.8290 mm",
+    "Zone 'A2/EFUSE_BATTERY_REFERENCE' [BATT_N] on In2.Cu, priority 7"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "BATT_N",
+   "at": [
+    100.03,
+    172.8
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on In2.Cu, length 0.4653 mm",
+    "Zone 'A2/EFUSE_BATTERY_REFERENCE' [BATT_N] on In2.Cu, priority 7"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    76.06,
+    186.58
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on B.Cu, length 1.9830 mm",
+    "Zone 'A2/LOGIC_BACK_REFERENCE' [LOGIC_GND] on B.Cu, priority 5"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    93.2,
+    172.8
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on B.Cu, length 2.0000 mm",
+    "Zone 'A2/LOGIC_BACK_REFERENCE' [LOGIC_GND] on B.Cu, priority 5"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    93.2,
+    174.8
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on B.Cu, length 13.2000 mm",
+    "Zone 'A2/LOGIC_BACK_REFERENCE' [LOGIC_GND] on B.Cu, priority 5"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    26.0,
+    186.24
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on B.Cu, length 4.1866 mm",
+    "Zone 'A2/LOGIC_BACK_REFERENCE' [LOGIC_GND] on B.Cu, priority 5"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    22.0,
+    185.0
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on B.Cu, length 11.0000 mm",
+    "Zone 'A2/LOGIC_BACK_REFERENCE' [LOGIC_GND] on B.Cu, priority 5"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    93.2,
+    189.73
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on B.Cu, length 62.2000 mm",
+    "Zone 'A2/LOGIC_BACK_REFERENCE' [LOGIC_GND] on B.Cu, priority 5"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    31.0,
+    189.73
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on B.Cu, length 6.0987 mm",
+    "Zone 'A2/LOGIC_BACK_REFERENCE' [LOGIC_GND] on B.Cu, priority 5"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    76.06,
+    184.6
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on In1.Cu, length 8.2670 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    100.36,
+    173.13
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_BACK_REFERENCE' [LOGIC_GND] on B.Cu, priority 5"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    76.06,
+    176.33
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on In1.Cu, length 0.5038 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    76.06,
+    184.6
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "BATT_N",
+   "at": [
+    76.06,
+    184.6
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/EFUSE_BATTERY_REFERENCE' [BATT_N] on In2.Cu, priority 7"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    93.2,
+    174.8
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    100.36,
+    173.13
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "BATT_N",
+   "at": [
+    93.2,
+    174.8
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/EFUSE_BATTERY_REFERENCE' [BATT_N] on In2.Cu, priority 7"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    93.2,
+    173.8
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "BATT_N",
+   "at": [
+    100.36,
+    173.13
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/EFUSE_BATTERY_REFERENCE' [BATT_N] on In2.Cu, priority 7"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "BATT_N",
+   "at": [
+    93.2,
+    173.8
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/EFUSE_BATTERY_REFERENCE' [BATT_N] on In2.Cu, priority 7"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    93.2,
+    172.8
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_BACK_REFERENCE' [LOGIC_GND] on B.Cu, priority 5"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "BATT_N",
+   "at": [
+    165.12,
+    42.07
+   ],
+   "items": [
+    "Track [MOTION_GATE_DRIVE] on In2.Cu, length 2.7250 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "BATT_N",
+   "at": [
+    179.79,
+    42.07
+   ],
+   "items": [
+    "Track [MOTION_GATE_DRIVE] on In2.Cu, length 14.6750 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    94.3,
+    174.8
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "BATT_N",
+   "at": [
+    94.3,
+    174.8
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/EFUSE_BATTERY_REFERENCE' [BATT_N] on In2.Cu, priority 7"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    75.7,
+    175.97
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "BATT_N",
+   "at": [
+    75.7,
+    175.97
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/EFUSE_BATTERY_REFERENCE' [BATT_N] on In2.Cu, priority 7"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    93.2,
+    172.8
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "BATT_N",
+   "at": [
+    93.2,
+    172.8
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/EFUSE_BATTERY_REFERENCE' [BATT_N] on In2.Cu, priority 7"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "LOGIC_GND",
+   "at": [
+    176.64,
+    101.64
+   ],
+   "items": [
+    "Track [MOTION_GATE_DRIVE] on In1.Cu, length 6.0561 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "LOGIC_GND",
+   "at": [
+    179.48,
+    104.48
+   ],
+   "items": [
+    "Track [MOTION_GATE_DRIVE] on In1.Cu, length 4.0159 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "LOGIC_GND",
+   "at": [
+    180.92,
+    63.21
+   ],
+   "items": [
+    "Track [MOTION_GATE_DRIVE] on In1.Cu, length 1.5983 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "LOGIC_GND",
+   "at": [
+    176.64,
+    101.64
+   ],
+   "items": [
+    "Track [MOTION_GATE_DRIVE] on In1.Cu, length 1.0678 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "LOGIC_GND",
+   "at": [
+    179.79,
+    42.07
+   ],
+   "items": [
+    "Track [MOTION_GATE_DRIVE] on In1.Cu, length 20.0063 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "LOGIC_GND",
+   "at": [
+    180.92,
+    97.36
+   ],
+   "items": [
+    "Track [MOTION_GATE_DRIVE] on In1.Cu, length 34.1500 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "LOGIC_GND",
+   "at": [
+    160.32,
+    46.86
+   ],
+   "items": [
+    "Track [MOTION_GATE_DRIVE] on In1.Cu, length 32.7016 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "LOGIC_GND",
+   "at": [
+    179.48,
+    110.09
+   ],
+   "items": [
+    "Track [MOTION_GATE_DRIVE] on In1.Cu, length 5.6093 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "LOGIC_GND",
+   "at": [
+    163.19,
+    44.0
+   ],
+   "items": [
+    "Track [MOTION_GATE_DRIVE] on In1.Cu, length 4.0564 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "LOGIC_GND",
+   "at": [
+    179.79,
+    42.07
+   ],
+   "items": [
+    "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "LOGIC_GND",
+   "at": [
+    179.79,
+    27.39
+   ],
+   "items": [
+    "Track [MOTION_GATE_DRIVE] on In1.Cu, length 14.6803 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "BATT_N",
+   "at": [
+    179.79,
+    42.07
+   ],
+   "items": [
+    "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "LOGIC_GND",
+   "at": [
+    175.89,
+    100.88
+   ],
+   "items": [
+    "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "BATT_N",
+   "at": [
+    175.89,
+    100.88
+   ],
+   "items": [
+    "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "LOGIC_GND",
+   "at": [
+    160.32,
+    79.57
+   ],
+   "items": [
+    "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "LOGIC_GND",
+   "at": [
+    163.19,
+    44.0
+   ],
+   "items": [
+    "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "BATT_N",
+   "at": [
+    160.32,
+    79.57
+   ],
+   "items": [
+    "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "LOGIC_GND",
+   "at": [
+    179.79,
+    27.39
+   ],
+   "items": [
+    "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "BATT_N",
+   "at": [
+    163.19,
+    44.0
+   ],
+   "items": [
+    "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "BATT_N",
+   "at": [
+    179.79,
+    27.39
+   ],
+   "items": [
+    "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "LOGIC_GND",
+   "at": [
+    179.48,
+    110.09
+   ],
+   "items": [
+    "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "BATT_N",
+   "at": [
+    179.48,
+    110.09
+   ],
+   "items": [
+    "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "LOGIC_GND",
+   "at": [
+    179.79,
+    62.08
+   ],
+   "items": [
+    "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "BATT_N",
+   "at": [
+    179.79,
+    62.08
+   ],
+   "items": [
+    "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    57.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    59.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    65.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    57.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    55.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    39.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    35.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    79.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    79.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    53.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    59.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    53.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    77.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    67.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    53.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    71.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    41.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    71.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    49.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    49.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    49.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    45.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    53.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    45.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    53.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    45.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    55.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    55.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    73.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    73.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    75.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    141.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    63.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    29.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    59.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    63.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    59.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    81.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    81.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    49.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    63.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    49.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    47.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    81.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    65.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    33.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    53.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    33.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    61.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    61.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    75.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    75.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    37.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    41.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    37.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    55.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    61.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    61.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    41.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    65.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    41.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    57.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    75.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    75.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    75.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    57.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    35.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    47.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    39.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    51.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    83.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    51.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    83.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    69.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    49.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    69.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    31.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    31.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    51.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    63.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    75.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    47.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    83.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    35.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    145.0,
+    83.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    35.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    37.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    37.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    81.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    61.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    41.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    41.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    81.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    47.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    81.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    59.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    47.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    65.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    83.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    43.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    143.0,
+    83.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    43.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    27.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    27.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    33.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    31.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    65.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    65.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    77.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    37.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    41.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    57.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    59.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    83.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    59.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    83.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    61.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    61.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    45.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    39.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    143.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    39.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    29.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    29.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    71.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    57.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    83.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    139.0,
+    83.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    55.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    55.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    79.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    63.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    63.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    73.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    27.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    43.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    77.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    77.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    45.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    35.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    65.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    35.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    65.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    67.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    81.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    67.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    63.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    53.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    59.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    51.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    51.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    79.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    77.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    49.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    77.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    51.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    77.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    69.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    39.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    41.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    35.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    39.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    39.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    57.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    57.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    49.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    79.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    79.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    39.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    47.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    139.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    47.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    43.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    147.0,
+    79.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    147.0,
+    79.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    55.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    83.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    141.0,
+    83.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    43.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    35.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    43.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    77.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    53.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    37.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    37.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    51.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    37.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    45.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    61.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    137.0,
+    45.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    137.0,
+    45.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    51.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    143.0,
+    55.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    141.0,
+    43.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    139.0,
+    63.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    47.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "BATT_N",
+   "at": [
+    145.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    75.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_SENSED_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    145.0,
+    81.0
+   ],
+   "items": [
+    "Via [MOTION_SENSED_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    182.28,
+    101.21
+   ],
+   "items": [
+    "Track [MOTION_COMMON] on In1.Cu, length 3.5202 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    182.27,
+    84.38
+   ],
+   "items": [
+    "Track [MOTION_COMMON] on In1.Cu, length 16.8174 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    167.0,
+    41.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    173.0,
+    41.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    169.0,
+    77.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "BATT_N",
+   "at": [
+    169.0,
+    77.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    167.0,
+    39.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    165.0,
+    41.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "BATT_N",
+   "at": [
+    165.0,
+    41.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    165.0,
+    63.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "BATT_N",
+   "at": [
+    165.0,
+    63.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    171.0,
+    67.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    165.0,
+    71.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "BATT_N",
+   "at": [
+    165.0,
+    71.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    182.27,
+    84.38
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    171.0,
+    69.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    169.0,
+    45.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "BATT_N",
+   "at": [
+    182.27,
+    84.38
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    169.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "BATT_N",
+   "at": [
+    169.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    173.0,
+    43.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    171.0,
+    41.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    171.0,
+    27.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "BATT_N",
+   "at": [
+    170.1,
+    100.25
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "BATT_N",
+   "at": [
+    171.0,
+    27.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    167.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    175.0,
+    45.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "BATT_N",
+   "at": [
+    167.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "BATT_N",
+   "at": [
+    175.0,
+    45.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    173.0,
+    67.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    167.0,
+    61.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    165.0,
+    59.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    175.0,
+    69.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    175.0,
+    43.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "BATT_N",
+   "at": [
+    165.0,
+    59.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    171.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "BATT_N",
+   "at": [
+    175.0,
+    69.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "BATT_N",
+   "at": [
+    175.0,
+    43.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "BATT_N",
+   "at": [
+    171.0,
+    25.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    165.0,
+    39.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    165.0,
+    75.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "BATT_N",
+   "at": [
+    165.0,
+    39.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    182.28,
+    101.21
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "BATT_N",
+   "at": [
+    165.0,
+    75.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3011,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "CHOP_DRAIN",
+   "other_net": "LOGIC_GND",
+   "at": [
+    226.03,
+    188.15
+   ],
+   "items": [
+    "Via [CHOP_DRAIN] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3017,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    155.0,
+    95.1
+   ],
+   "items": [
+    "Via [MOTION_KELVIN_P] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3518,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    155.0,
+    93.5
+   ],
+   "items": [
+    "Track [MOTION_KELVIN_P] on In2.Cu, length 1.6000 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3518,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MAIN_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    49.0,
+    93.5
+   ],
+   "items": [
+    "Track [MAIN_KELVIN_P] on In2.Cu, length 1.6000 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.3551,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_PGTH",
+   "at": [
+    98.98,
+    172.6
+   ],
+   "items": [
+    "Track [LOGIC_PGTH] on F.Cu, length 1.5939 mm",
+    "Pad 1 [LOGIC_BUCK_IN_P] of R57 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.3767,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_GND",
+   "at": [
+    74.64,
+    188.0
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on B.Cu, length 2.0084 mm",
+    "Zone 'A2/LOGIC_BACK_REFERENCE' [LOGIC_GND] on B.Cu, priority 5"
+   ]
+  },
+  {
+   "actual_mm": 0.4005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_BUS_P",
+   "other_net": "MOTION_GATE_EN",
+   "at": [
+    206.5,
+    155.2
+   ],
+   "items": [
+    "Via [MOTION_GATE_EN] on F.Cu - B.Cu",
+    "Zone 'A2/MOTION_AUXILIARY_SPINE' [MOTION_BUS_P] on In2.Cu, priority 64"
+   ]
+  },
+  {
+   "actual_mm": 0.4005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_BUS_P",
+   "other_net": "CHOP_GATE",
+   "at": [
+    226.03,
+    159.82
+   ],
+   "items": [
+    "Track [CHOP_GATE] on In2.Cu, length 3.1764 mm",
+    "Zone 'A2/MOTION_AUXILIARY_SPINE' [MOTION_BUS_P] on In2.Cu, priority 64"
+   ]
+  },
+  {
+   "actual_mm": 0.4005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_BUS_P",
+   "other_net": "CHOP_GATE",
+   "at": [
+    226.03,
+    166.75
+   ],
+   "items": [
+    "Track [CHOP_GATE] on In2.Cu, length 6.9260 mm",
+    "Zone 'A2/MOTION_AUXILIARY_SPINE' [MOTION_BUS_P] on In2.Cu, priority 64"
+   ]
+  },
+  {
+   "actual_mm": 0.4005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_BUS_P",
+   "other_net": "CHOP_GATE",
+   "at": [
+    228.28,
+    162.07
+   ],
+   "items": [
+    "Via [CHOP_GATE] on F.Cu - B.Cu",
+    "Zone 'A2/MOTION_AUXILIARY_SPINE' [MOTION_BUS_P] on In2.Cu, priority 64"
+   ]
+  },
+  {
+   "actual_mm": 0.4005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_BUS_P",
+   "other_net": "CHOP_REQUEST",
+   "at": [
+    239.0,
+    160.86
+   ],
+   "items": [
+    "Via [CHOP_REQUEST] on F.Cu - B.Cu",
+    "Zone 'A2/MOTION_AUXILIARY_SPINE' [MOTION_BUS_P] on In2.Cu, priority 64"
+   ]
+  },
+  {
+   "actual_mm": 0.4005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_5V_N",
+   "at": [
+    76.06,
+    184.6
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC5_N_TOP' [LOGIC_5V_N] on B.Cu, priority 61"
+   ]
+  },
+  {
+   "actual_mm": 0.4005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_5V_N",
+   "at": [
+    75.7,
+    175.97
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Zone 'A2/LOGIC5_N_TOP' [LOGIC_5V_N] on B.Cu, priority 61"
+   ]
+  },
+  {
+   "actual_mm": 0.4006,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "Q2_G",
+   "other_net": "V3V3",
+   "at": [
+    67.9,
+    60.0
+   ],
+   "items": [
+    "Track [Q2_G] on F.Cu, length 2.5875 mm",
+    "Via [V3V3] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.4006,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "Q2_G",
+   "other_net": "V3V3",
+   "at": [
+    65.65,
+    60.0
+   ],
+   "items": [
+    "Track [Q2_G] on F.Cu, length 2.2500 mm",
+    "Via [V3V3] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.4018,
+   "kinds": [
+    "track",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_PGTH",
+   "at": [
+    98.98,
+    172.6
+   ],
+   "items": [
+    "Track [LOGIC_PGTH] on F.Cu, length 1.5939 mm",
+    "Track [LOGIC_BUCK_IN_P] on F.Cu, length 0.5063 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.4018,
+   "kinds": [
+    "track",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_PGTH",
+   "at": [
+    98.98,
+    172.6
+   ],
+   "items": [
+    "Track [LOGIC_PGTH] on F.Cu, length 1.5939 mm",
+    "Track [LOGIC_BUCK_IN_P] on F.Cu, length 0.8585 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.4207,
+   "kinds": [
+    "track",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_PGTH",
+   "at": [
+    100.2,
+    173.73
+   ],
+   "items": [
+    "Track [LOGIC_PGTH] on F.Cu, length 1.1335 mm",
+    "Track [LOGIC_BUCK_IN_P] on F.Cu, length 0.5063 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.4207,
+   "kinds": [
+    "track",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_PGTH",
+   "at": [
+    100.36,
+    173.13
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on F.Cu, length 0.5063 mm",
+    "Track [LOGIC_PGTH] on F.Cu, length 0.0950 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.4232,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "TEMP_MOTION_ADC",
+   "at": [
+    167.92,
+    79.76
+   ],
+   "items": [
+    "Track [TEMP_MOTION_ADC] on In1.Cu, length 5.6825 mm",
+    "Via [MOTION_COMMON] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.4232,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "TEMP_MOTION_ADC",
+   "at": [
+    167.0,
+    73.0
+   ],
+   "items": [
+    "Via [MOTION_COMMON] on F.Cu - B.Cu",
+    "Track [TEMP_MOTION_ADC] on F.Cu, length 2.1750 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.4334,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "CHOP_DRAIN",
+   "other_net": "CHOP_GND",
+   "at": [
+    232.23,
+    199.87
+   ],
+   "items": [
+    "Track [CHOP_DRAIN] on In1.Cu, length 0.0696 mm",
+    "Zone 'A2/CHOP_REFERENCE' [CHOP_GND] on In1.Cu, priority 30"
+   ]
+  },
+  {
+   "actual_mm": 0.4364,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_PGTH",
+   "at": [
+    100.0,
+    171.91
+   ],
+   "items": [
+    "Pad 1 [LOGIC_BUCK_IN_P] of R57 on F.Cu",
+    "Track [LOGIC_PGTH] on F.Cu, length 1.4412 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.4365,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_DIV_MID",
+   "other_net": "SYS_BUS_DIV",
+   "at": [
+    117.0,
+    161.91
+   ],
+   "items": [
+    "Pad 1 [SYS_DIV_MID] of R251 on F.Cu",
+    "Track [SYS_BUS_DIV] on F.Cu, length 3.3811 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.4366,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "CHOP_SENSE_TOP",
+   "other_net": "CHOP_SENSE",
+   "at": [
+    187.41,
+    168.0
+   ],
+   "items": [
+    "Track [CHOP_SENSE_TOP] on F.Cu, length 6.9470 mm",
+    "Pad 2 [CHOP_SENSE] of R303 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.4367,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "LOGIC_SHDN",
+   "at": [
+    74.0,
+    184.09
+   ],
+   "items": [
+    "Track [LOGIC_SHDN] on F.Cu, length 2.5802 mm",
+    "Pad 1 [SYS_BUS_P] of R55 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.4477,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_UVLO",
+   "at": [
+    27.0,
+    171.91
+   ],
+   "items": [
+    "Pad 1 [SYS_BUS_P] of R41 on F.Cu",
+    "Track [PC_UVLO] on F.Cu, length 1.2901 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.4477,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "PC_UVLO",
+   "at": [
+    26.09,
+    171.0
+   ],
+   "items": [
+    "Track [PC_UVLO] on F.Cu, length 3.7172 mm",
+    "Pad 1 [SYS_BUS_P] of R41 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.45,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "PC_BUCK_IN_P",
+   "other_net": "PC_EFUSE_PGOOD",
+   "at": [
+    41.96,
+    175.75
+   ],
+   "items": [
+    "Track [PC_EFUSE_PGOOD] on F.Cu, length 4.3594 mm",
+    "Via [PC_BUCK_IN_P] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.45,
+   "kinds": [
+    "track",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "PC_BUCK_IN_P",
+   "other_net": "PC_EFUSE_PGOOD",
+   "at": [
+    41.96,
+    175.75
+   ],
+   "items": [
+    "Track [PC_EFUSE_PGOOD] on F.Cu, length 4.3594 mm",
+    "Track [PC_BUCK_IN_P] on F.Cu, length 1.1000 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.45,
+   "kinds": [
+    "track",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_PU",
+   "other_net": "MOTION_TEMP_FLT_N",
+   "at": [
+    170.17,
+    99.25
+   ],
+   "items": [
+    "Track [MOTION_PU] on F.Cu, length 1.0932 mm",
+    "Track [MOTION_TEMP_FLT_N] on F.Cu, length 0.8229 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.45,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_EFUSE_PGOOD",
+   "at": [
+    93.2,
+    174.8
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Track [LOGIC_EFUSE_PGOOD] on F.Cu, length 2.9874 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.45,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_EFUSE_PGOOD",
+   "at": [
+    94.3,
+    174.8
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Track [LOGIC_EFUSE_PGOOD] on F.Cu, length 2.9874 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.45,
+   "kinds": [
+    "track",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_EFUSE_PGOOD",
+   "at": [
+    93.2,
+    174.8
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on F.Cu, length 1.1000 mm",
+    "Track [LOGIC_EFUSE_PGOOD] on F.Cu, length 2.9874 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.45,
+   "kinds": [
+    "track",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_EFUSE_PGOOD",
+   "at": [
+    93.2,
+    172.8
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on F.Cu, length 2.0000 mm",
+    "Track [LOGIC_EFUSE_PGOOD] on F.Cu, length 2.9874 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.4526,
+   "kinds": [
+    "track",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_PU",
+   "other_net": "MOTION_TEMP_FLT_N",
+   "at": [
+    171.2,
+    99.25
+   ],
+   "items": [
+    "Track [MOTION_PU] on F.Cu, length 1.0270 mm",
+    "Track [MOTION_TEMP_FLT_N] on F.Cu, length 0.8229 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.4597,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "MOTION_FLT_N",
+   "at": [
+    170.1,
+    100.25
+   ],
+   "items": [
+    "Track [MOTION_COMMON] on B.Cu, length 2.4042 mm",
+    "Via [MOTION_FLT_N] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.475,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "BATT_N",
+   "at": [
+    93.2,
+    172.8
+   ],
+   "items": [
+    "Via [LOGIC_BUCK_IN_P] on F.Cu - B.Cu",
+    "Track [BATT_N] on B.Cu, length 5.5261 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.4807,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "MOTION_FLT_N",
+   "at": [
+    171.8,
+    101.95
+   ],
+   "items": [
+    "Track [MOTION_COMMON] on B.Cu, length 9.2000 mm",
+    "Via [MOTION_FLT_N] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.4809,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "AON_LDO_IN",
+   "other_net": "LOGIC_GND",
+   "at": [
+    28.95,
+    194.0
+   ],
+   "items": [
+    "Track [AON_LDO_IN] on F.Cu, length 6.6295 mm",
+    "Pad 2 [LOGIC_GND] of C200 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.4823,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "LOGIC_GND",
+   "at": [
+    182.27,
+    101.2
+   ],
+   "items": [
+    "Track [MOTION_COMMON] on In1.Cu, length 0.0188 mm",
+    "Zone 'A2/LOGIC_REFERENCE' [LOGIC_GND] on In1.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.4875,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "BATT_N",
+   "at": [
+    91.96,
+    174.75
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on F.Cu, length 1.2375 mm",
+    "Pad 25 [BATT_N] of U4 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.4875,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "BATT_N",
+   "at": [
+    91.96,
+    175.25
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on F.Cu, length 1.2375 mm",
+    "Pad 25 [BATT_N] of U4 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "SYS_BUS_P",
+   "other_net": "CHOPPER_N",
+   "at": [
+    116.9,
+    158.56
+   ],
+   "items": [
+    "Via [SYS_BUS_P] on F.Cu - B.Cu",
+    "Zone 'A2/CHOPPER_RETURN' [CHOPPER_N] on B.Cu, priority 20"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MAIN_COMMON",
+   "other_net": "BATT_N",
+   "at": [
+    65.4,
+    102.52
+   ],
+   "items": [
+    "Track [MAIN_COMMON] on In2.Cu, length 1.2936 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "MOTION_KELVIN_P",
+   "other_net": "BATT_N",
+   "at": [
+    180.3,
+    101.5
+   ],
+   "items": [
+    "Track [MOTION_KELVIN_P] on In2.Cu, length 0.9000 mm",
+    "Zone 'A2/BATTERY_CONTROL_REFERENCE' [BATT_N] on In2.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_PU",
+   "other_net": "BATT_N",
+   "at": [
+    170.17,
+    104.09
+   ],
+   "items": [
+    "Track [MOTION_PU] on F.Cu, length 8.3642 mm",
+    "Zone 'A2/BATTERY_RETURN' [BATT_N] on F.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_PU",
+   "other_net": "BATT_N",
+   "at": [
+    170.17,
+    102.09
+   ],
+   "items": [
+    "Track [MOTION_PU] on F.Cu, length 1.9928 mm",
+    "Zone 'A2/BATTERY_RETURN' [BATT_N] on F.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": true,
+   "hv_net": "CHOP_DRAIN",
+   "other_net": "CHOP_GND",
+   "at": [
+    231.79,
+    188.15
+   ],
+   "items": [
+    "Track [CHOP_DRAIN] on In1.Cu, length 5.7564 mm",
+    "Zone 'A2/CHOP_REFERENCE' [CHOP_GND] on In1.Cu, priority 30"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "CHOP_DRAIN",
+   "other_net": "CHOPPER_N",
+   "at": [
+    226.03,
+    188.15
+   ],
+   "items": [
+    "Via [CHOP_DRAIN] on F.Cu - B.Cu",
+    "Zone 'A2/CHOPPER_RETURN' [CHOPPER_N] on B.Cu, priority 20"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "CHOP_DRAIN",
+   "other_net": "CHOPPER_N",
+   "at": [
+    231.98,
+    187.96
+   ],
+   "items": [
+    "Via [CHOP_DRAIN] on F.Cu - B.Cu",
+    "Zone 'A2/CHOPPER_RETURN' [CHOPPER_N] on B.Cu, priority 20"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_BUS_P",
+   "other_net": "CHOP_TEMP_ADC",
+   "at": [
+    268.0,
+    218.7
+   ],
+   "items": [
+    "Via [CHOP_TEMP_ADC] on F.Cu - B.Cu",
+    "Zone 'A2/CHOPPER_POSITIVE_4' [MOTION_BUS_P] on F.Cu, priority 28"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_COMMON",
+   "other_net": "TEMP_MAIN_ADC",
+   "at": [
+    74.71,
+    60.34
+   ],
+   "items": [
+    "Via [TEMP_MAIN_ADC] on F.Cu - B.Cu",
+    "Zone [MAIN_COMMON] on B.Cu, priority 1"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_COMMON",
+   "other_net": "TEMP_MAIN_ADC",
+   "at": [
+    74.91,
+    59.0
+   ],
+   "items": [
+    "Track [TEMP_MAIN_ADC] on F.Cu, length 2.7047 mm",
+    "Zone [MAIN_COMMON] on F.Cu, priority 1"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_COMMON",
+   "other_net": "TEMP_MAIN_ADC",
+   "at": [
+    73.0,
+    57.09
+   ],
+   "items": [
+    "Track [TEMP_MAIN_ADC] on F.Cu, length 1.2625 mm",
+    "Zone [MAIN_COMMON] on F.Cu, priority 1"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_BUS_P",
+   "other_net": "I2C_SDA",
+   "at": [
+    229.99,
+    214.69
+   ],
+   "items": [
+    "Via [I2C_SDA] on F.Cu - B.Cu",
+    "Zone 'A2/CHOPPER_POSITIVE_5' [MOTION_BUS_P] on F.Cu, priority 29"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_BUS_P",
+   "other_net": "I2C_SDA",
+   "at": [
+    232.4,
+    214.69
+   ],
+   "items": [
+    "Track [I2C_SDA] on F.Cu, length 2.4160 mm",
+    "Zone 'A2/CHOPPER_POSITIVE_5' [MOTION_BUS_P] on F.Cu, priority 29"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_BUS_P",
+   "other_net": "I2C_SDA",
+   "at": [
+    248.44,
+    218.45
+   ],
+   "items": [
+    "Track [I2C_SDA] on F.Cu, length 7.3384 mm",
+    "Zone 'A2/CHOPPER_POSITIVE_4' [MOTION_BUS_P] on F.Cu, priority 28"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "TEMP_MOTION_ADC",
+   "at": [
+    167.92,
+    74.08
+   ],
+   "items": [
+    "Via [TEMP_MOTION_ADC] on F.Cu - B.Cu",
+    "Zone [MOTION_COMMON] on F.Cu, priority 1"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "TEMP_MOTION_ADC",
+   "at": [
+    167.92,
+    74.08
+   ],
+   "items": [
+    "Via [TEMP_MOTION_ADC] on F.Cu - B.Cu",
+    "Zone [MOTION_COMMON] on B.Cu, priority 1"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "TEMP_MOTION_ADC",
+   "at": [
+    170.94,
+    82.78
+   ],
+   "items": [
+    "Via [TEMP_MOTION_ADC] on F.Cu - B.Cu",
+    "Zone [MOTION_COMMON] on F.Cu, priority 1"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "TEMP_MOTION_ADC",
+   "at": [
+    167.92,
+    71.9
+   ],
+   "items": [
+    "Track [TEMP_MOTION_ADC] on F.Cu, length 2.1750 mm",
+    "Zone [MOTION_COMMON] on F.Cu, priority 1"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "TEMP_MOTION_ADC",
+   "at": [
+    170.94,
+    82.78
+   ],
+   "items": [
+    "Via [TEMP_MOTION_ADC] on F.Cu - B.Cu",
+    "Zone [MOTION_COMMON] on B.Cu, priority 1"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "TEMP_MOTION_ADC",
+   "at": [
+    170.94,
+    82.78
+   ],
+   "items": [
+    "Track [TEMP_MOTION_ADC] on F.Cu, length 1.4599 mm",
+    "Zone [MOTION_COMMON] on F.Cu, priority 1"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "TEMP_MOTION_ADC",
+   "at": [
+    169.0,
+    70.83
+   ],
+   "items": [
+    "Track [TEMP_MOTION_ADC] on F.Cu, length 1.5228 mm",
+    "Zone [MOTION_COMMON] on F.Cu, priority 1"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "BATT_N",
+   "at": [
+    179.48,
+    110.09
+   ],
+   "items": [
+    "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_RETURN' [BATT_N] on F.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.5005,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "BATT_N",
+   "at": [
+    179.48,
+    110.09
+   ],
+   "items": [
+    "Via [MOTION_GATE_DRIVE] on F.Cu - B.Cu",
+    "Zone 'A2/BATTERY_RETURN' [BATT_N] on B.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.5006,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_BUS_P",
+   "other_net": "I2C_SDA",
+   "at": [
+    217.75,
+    218.4
+   ],
+   "items": [
+    "Via [I2C_SDA] on F.Cu - B.Cu",
+    "Zone 'A2/CHOPPER_POSITIVE_5' [MOTION_BUS_P] on F.Cu, priority 29"
+   ]
+  },
+  {
+   "actual_mm": 0.5062,
+   "kinds": [
+    "via",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_COMMON",
+   "other_net": "TEMP_MAIN_ADC",
+   "at": [
+    74.71,
+    60.34
+   ],
+   "items": [
+    "Via [TEMP_MAIN_ADC] on F.Cu - B.Cu",
+    "Zone [MAIN_COMMON] on F.Cu, priority 1"
+   ]
+  },
+  {
+   "actual_mm": 0.5336,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_BUS_P",
+   "other_net": "I2C_SDA",
+   "at": [
+    248.44,
+    219.5
+   ],
+   "items": [
+    "Track [I2C_SDA] on F.Cu, length 1.0520 mm",
+    "Zone 'A2/CHOPPER_POSITIVE_4' [MOTION_BUS_P] on F.Cu, priority 28"
+   ]
+  },
+  {
+   "actual_mm": 0.5416,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_COMMON",
+   "other_net": "TEMP_MAIN_ADC",
+   "at": [
+    74.91,
+    60.14
+   ],
+   "items": [
+    "Track [TEMP_MAIN_ADC] on F.Cu, length 0.2865 mm",
+    "Zone [MAIN_COMMON] on F.Cu, priority 1"
+   ]
+  },
+  {
+   "actual_mm": 0.5416,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_COMMON",
+   "other_net": "TEMP_MAIN_ADC",
+   "at": [
+    74.91,
+    59.0
+   ],
+   "items": [
+    "Track [TEMP_MAIN_ADC] on F.Cu, length 1.1376 mm",
+    "Zone [MAIN_COMMON] on F.Cu, priority 1"
+   ]
+  },
+  {
+   "actual_mm": 0.55,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "AON_LDO_IN",
+   "other_net": "LOGIC_GND",
+   "at": [
+    31.86,
+    195.0
+   ],
+   "items": [
+    "Pad 2 [LOGIC_GND] of U15 on F.Cu",
+    "Track [AON_LDO_IN] on F.Cu, length 0.0707 mm"
+   ]
+  },
+  {
+   "actual_mm": 0.5567,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "unconnected-(U4-NC-Pad19)",
+   "at": [
+    91.96,
+    174.75
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on F.Cu, length 1.2375 mm",
+    "Pad 19 [unconnected-(U4-NC-Pad19)] of U4 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.5612,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "INA_VBUS",
+   "other_net": "V3V3",
+   "at": [
+    34.61,
+    83.07
+   ],
+   "items": [
+    "Track [INA_VBUS] on F.Cu, length 1.9639 mm",
+    "Via [V3V3] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.5637,
+   "kinds": [
+    "pad",
+    "track"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "INA_VBUS",
+   "other_net": "V3V3",
+   "at": [
+    34.61,
+    83.07
+   ],
+   "items": [
+    "Track [INA_VBUS] on F.Cu, length 1.9639 mm",
+    "Pad 6 [V3V3] of U11 on F.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.5652,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "TEMP_MOTION_ADC",
+   "at": [
+    170.94,
+    82.78
+   ],
+   "items": [
+    "Track [TEMP_MOTION_ADC] on B.Cu, length 2.0191 mm",
+    "Zone [MOTION_COMMON] on B.Cu, priority 1"
+   ]
+  },
+  {
+   "actual_mm": 0.5655,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "LOGIC_BUCK_IN_P",
+   "other_net": "LOGIC_5V_N",
+   "at": [
+    76.06,
+    186.58
+   ],
+   "items": [
+    "Track [LOGIC_BUCK_IN_P] on B.Cu, length 1.9830 mm",
+    "Zone 'A2/LOGIC5_N_TOP' [LOGIC_5V_N] on B.Cu, priority 61"
+   ]
+  },
+  {
+   "actual_mm": 0.5768,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "TEMP_MOTION_ADC",
+   "at": [
+    167.92,
+    79.76
+   ],
+   "items": [
+    "Track [TEMP_MOTION_ADC] on In1.Cu, length 5.6825 mm",
+    "Via [MOTION_COMMON] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.5768,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "TEMP_MOTION_ADC",
+   "at": [
+    167.92,
+    79.76
+   ],
+   "items": [
+    "Track [TEMP_MOTION_ADC] on In1.Cu, length 5.6825 mm",
+    "Via [MOTION_COMMON] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.5907,
+   "kinds": [
+    "track",
+    "via"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MAIN_COMMON",
+   "other_net": "TEMP_MAIN_ADC",
+   "at": [
+    80.09,
+    98.68
+   ],
+   "items": [
+    "Track [TEMP_MAIN_ADC] on In1.Cu, length 27.5003 mm",
+    "Via [MAIN_COMMON] on F.Cu - B.Cu"
+   ]
+  },
+  {
+   "actual_mm": 0.5959,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "BATT_N",
+   "at": [
+    179.48,
+    110.09
+   ],
+   "items": [
+    "Track [MOTION_GATE_DRIVE] on F.Cu, length 0.1046 mm",
+    "Zone 'A2/BATTERY_RETURN' [BATT_N] on F.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.5959,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_GATE_DRIVE",
+   "other_net": "BATT_N",
+   "at": [
+    179.59,
+    110.09
+   ],
+   "items": [
+    "Track [MOTION_GATE_DRIVE] on F.Cu, length 0.1046 mm",
+    "Zone 'A2/BATTERY_RETURN' [BATT_N] on F.Cu, priority 0"
+   ]
+  },
+  {
+   "actual_mm": 0.5969,
+   "kinds": [
+    "track",
+    "zone"
+   ],
+   "inner_layer_only": false,
+   "hv_net": "MOTION_COMMON",
+   "other_net": "TEMP_MOTION_ADC",
+   "at": [
+    169.91,
+    81.75
+   ],
+   "items": [
+    "Track [TEMP_MOTION_ADC] on F.Cu, length 1.7486 mm",
+    "Zone [MOTION_COMMON] on F.Cu, priority 1"
+   ]
+  }
+ ]
+}

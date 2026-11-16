@@ -1,0 +1,111 @@
+C205  100n                       GRM21BR71C104KA01L     1=V3V3 | 2=LOGIC_GND
+C207  100n                       GRM21BR71C104KA01L     1=V5V | 2=LOGIC_GND
+C221  100n                       GRM21BR71C104KA01L     1=V3V3 | 2=LOGIC_GND
+C234  100n                       GRM21BR71C104KA01L     1=V3V3 | 2=LOGIC_GND
+C235  100n                       GRM21BR71C104KA01L     1=V3V3 | 2=LOGIC_GND
+C236  100n                       GRM21BR71C104KA01L     1=V5V | 2=LOGIC_GND
+C237  10u                        GRM21BR61A106KE19L     1=V5V | 2=LOGIC_GND
+C238  10u                        GRM21BR61A106KE19L     1=V3V3 | 2=LOGIC_GND
+C239  10u                        GRM21BR61A106KE19L     1=V3V3 | 2=LOGIC_GND
+C240  100n                       GRM21BR71C104KA01L     1=V3V3 | 2=LOGIC_GND
+C243  10n                        GRM21BR71H103KA01L     1=MOTION_PERMIT_RAW | 2=LOGIC_GND
+C246  1000u 10V                  EEU-FR1A102            1=V5V | 2=LOGIC_5V_N
+C247  1n                         GRM21B5C1H102JA01L     1=SYS_BUS_DIV | 2=LOGIC_GND
+C248  100n                       GRM21BR71C104KA01L     1=SYS_BUS_ADC | 2=LOGIC_GND
+C249  1n                         GRM21B5C1H102JA01L     1=MOTION_BUS_DIV | 2=LOGIC_GND
+C250  100n                       GRM21BR71C104KA01L     1=MOTION_BUS_ADC | 2=LOGIC_GND
+C251  100n                       GRM21BR71C104KA01L     1=MOTION_IMON_ADC | 2=LOGIC_GND
+C258  100n                       GRM21BR71C104KA01L     1=V3V3 | 2=LOGIC_GND
+J22   TSW-103-07-G-S             TSW-103-07-G-S         1=V3V3 | 2=MOTION_PERMIT_CONNECTOR | 3=LOGIC_GND
+R219  100k                       RC0805FR-07100KL       1=ESP_CHIP_EN | 2=LOGIC_GND
+R220  10k                        RC0805FR-0710KL        1=V3V3 | 2=ESP_BOOT_N
+R221  10k                        RC0805FR-0710KL        1=V3V3 | 2=BUTTON_INT_N
+R238  100k                       RC0805FR-07100KL       1=MOTION_PERMIT_RAW | 2=LOGIC_GND
+R239  1k                         RC0805FR-071KL         1=MOTION_PERMIT_CONNECTOR | 2=MOTION_PERMIT_RAW
+R240  1k                         RC0805FR-071KL         1=MOTION_ARMED | 2=MOTION_ARMED_SENSE
+R250  100k                       RC0805FR-07100KL       1=SYS_BUS_P | 2=SYS_DIV_MID
+R251  100k                       RC0805FR-07100KL       1=SYS_DIV_MID | 2=SYS_BUS_DIV
+R252  10k                        RC0805FR-0710KL        1=SYS_BUS_DIV | 2=LOGIC_GND
+R253  100k                       RC0805FR-07100KL       1=SYS_BUS_ADC | 2=LOGIC_GND
+R254  100k                       RC0805FR-07100KL       1=MOTION_BUS_P | 2=MOT_DIV_MID
+R255  100k                       RC0805FR-07100KL       1=MOT_DIV_MID | 2=MOTION_BUS_DIV
+R256  10k                        RC0805FR-0710KL        1=MOTION_BUS_DIV | 2=LOGIC_GND
+R257  100k                       RC0805FR-07100KL       1=MOTION_BUS_ADC | 2=LOGIC_GND
+U12   TLV1117LV33DCYR            TLV1117LV33DCYR        1=LOGIC_GND | 2=V3V3 | 3=V5V
+U26   TPS3839G33DBZR             TPS3839G33DBZR         1=LOGIC_GND | 2=SW_RESET_N | 3=V3V3
+== J21 TSW-105-07-G-S [PinHeader_1x05_P2.54mm_Vertica] mpn=TSW-105-07-G-S
+  1:LOGIC_GND_1                  LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  2:ESP_UART_RX_2                UART_RX_CONNECTOR        | U65
+  3:ESP_UART_TX_3                UART_TX_CONNECTOR        | U65
+  4:ESP_BOOT_N_4                 ESP_BOOT_N               | R220 U10
+  5:ESP_CHIP_EN_5                ESP_CHIP_EN              | R218 R219 U10 U29
+== U10 ESP32-S3-WROOM-1-N8 [ESP32-S3-WROOM-1] mpn=ESP32-S3-WROOM-1-N8
+  1..41(3p) GND                  LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  2:3V3_2                        V3V3                     | C30 C205 C206 C208 C221 C222 C223 C224 ..(+40)
+  3:EN_3                         ESP_CHIP_EN              | J21 R218 R219 U29
+  4:IO4_4                        CHOP_TEMP_ADC            | C310 J15 R324
+  5:IO5_5                        MOTION_IMON_ADC          | C251 R258 U60
+  6:IO6_6                        MOTION_BUS_ADC           | C250 R257 U60
+  7:IO7_7                        SYS_BUS_ADC              | C248 R253 U60
+  8:IO15_8                       NC                       | 
+  9:IO16_9                       CAN_RX                   | TP32 U13
+  10:IO17_10                     CAN_TX                   | R241 TP31 U13
+  11:IO18_11                     LED_DATA_3V3             | R247 U14
+  12:IO8_12                      NC                       | 
+  13:IO19_USB_DN_13              NC                       | 
+  14:IO20_USB_DP_14              NC                       | 
+  15:IO3_STRAP_15                NC                       | 
+  16:IO46_STRAP_16               NC                       | 
+  17:IO9_17                      I2C_SDA                  | J23 R226 U11
+  18:IO10_18                     I2C_SCL                  | J23 R227 U11
+  19:IO11_19                     ESP_MOTION_REQUEST       | R234 U54
+  20:IO12_20                     ESP_MOTION_RESET         | R235 TP34 U27
+  21:IO13_21                     ESP_WDI                  | R236 U51
+  22:IO14_22                     ESP_MAIN_HOLD            | R211 R222 TP33
+  23:IO21_23                     BUTTON_INT_N             | R221 U16
+  24:IO47_24                     NC                       | 
+  25:IO48_25                     NC                       | 
+  26:IO45_STRAP_26               NC                       | 
+  27:IO0_BOOT_27                 ESP_BOOT_N               | J21 R220
+  28:IO35_28                     MAIN_FAULT_GPIO_N        | R259 U60
+  29:IO36_29                     MOTION_FLT_N             | R229 TP22 U2 U5 U28
+  30:IO37_30                     MOTION_TEMP_FLT_N        | R230 TP23 U2 U28
+  31:IO38_31                     CHOP_FAULT_N             | R231 TP29 U28 U34
+  32:IO39_32                     CHOP_ACTIVE_N            | R232 TP30 U35
+  33:IO40_33                     INA_ALERT_N              | R228 U11
+  34:IO41_34                     CAN_STB                  | R242 U13
+  35:IO42_35                     MOTION_ARMED_SENSE       | R240
+  36:RXD0_IO44_36                ESP_UART_RX              | R263 U65
+  37:TXD0_IO43_37                ESP_UART_TX              | R264 U65
+  38:IO2_38                      TEMP_MOTION_ADC          | C253 R261 TH21
+  39:IO1_39                      TEMP_MAIN_ADC            | C252 R260 TH20
+== U60 TMUX1511PWR [TSSOP-14_4.4x5mm_P0.65mm] mpn=TMUX1511PWR
+  1..13(4p) SEL1                 SW_RESET_N               | Q21 R217 R218 U26 U55 U56 U65
+  2:S1_2                         SYS_BUS_DIV              | C247 R251 R252
+  3:D1_3                         SYS_BUS_ADC              | C248 R253 U10
+  5:S2_5                         MOTION_BUS_DIV           | C249 R255 R256
+  6:D2_6                         MOTION_BUS_ADC           | C250 R257 U10
+  7:GND_7                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  8:D3_8                         MOTION_IMON_ADC          | C251 R258 U10
+  9:S3_9                         MOTION_IMON_INPUT        | C28 R60 R61 TP25
+  11:D4_11                       MAIN_FAULT_GPIO_N        | R259 U10
+  12:S4_12                       MAIN_FAULT_N             | R215 TP19 U1 U53
+  14:VDD_14                      V3V3                     | C30 C205 C206 C208 C221 C222 C223 C224 ..(+40)
+== U61 SN74LVC1G17DBVR [SOT-23-5] mpn=SN74LVC1G17DBVR
+  1:NC_1                         NC                       | 
+  2:A_2                          MOTION_PERMIT_RAW        | C243 R238 R239
+  3:GND_3                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  4:Y_4                          MOTION_PERMIT            | U29
+  5:VCC_5                        V3V3                     | C30 C205 C206 C208 C221 C222 C223 C224 ..(+40)
+== U65 TMUX1511PWR [TSSOP-14_4.4x5mm_P0.65mm] mpn=TMUX1511PWR
+  1:SEL1_1,4:SEL2_4              SW_RESET_N               | Q21 R217 R218 U26 U55 U56 U60
+  2:S1_2                         UART_RX_CONNECTOR        | J21
+  3:D1_3                         ESP_UART_RX              | R263 U10
+  5:S2_5                         UART_TX_CONNECTOR        | J21
+  6:D2_6                         ESP_UART_TX              | R264 U10
+  7..13(3p) GND                  LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  8:D3_8                         NC                       | 
+  9:S3_9                         NC                       | 
+  11:D4_11                       NC                       | 
+  12:S4_12                       NC                       | 
+  14:VDD_14                      V3V3                     | C30 C205 C206 C208 C221 C222 C223 C224 ..(+40)

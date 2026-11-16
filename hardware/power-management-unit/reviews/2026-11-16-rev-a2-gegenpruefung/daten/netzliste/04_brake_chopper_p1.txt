@@ -1,0 +1,85 @@
+C300  1uF 100V                   C3216X7R2A105K160AB    1=MOTION_BUS_P | 2=CHOP_GND
+C301  10uF 25V                   GRM32ER71E106KA12L     1=CHOP_10V | 2=CHOP_GND
+C302  100nF 50V                  GRM188R71H104KA93D     1=CHOP_10V | 2=CHOP_GND
+C303  1uF 25V                    GRM21BR71E105KA99L     1=CHOP_REF2V5 | 2=CHOP_GND
+C304  100nF 50V                  GRM188R71H104KA93D     1=CHOP_10V | 2=CHOP_GND
+C305  100pF 50V C0G              GRM1885C1H101JA01D     1=CHOP_SENSE | 2=CHOP_GND
+C306  100pF 50V C0G              GRM1885C1H101JA01D     1=CHOP_OV_SENSE | 2=CHOP_GND
+C307  100nF 50V                  GRM188R71H104KA93D     1=CHOP_NTC | 2=CHOP_GND
+C308  100nF 50V                  GRM188R71H104KA93D     1=CHOP_10V | 2=CHOP_GND
+C309  1uF 25V                    GRM21BR71E105KA99L     1=CHOP_10V | 2=CHOP_GND
+C310  100nF 50V                  GRM188R71H104KA93D     1=CHOP_TEMP_ADC | 2=LOGIC_GND
+C311  100nF 50V                  GRM188R71H104KA93D     1=CHOP_REF2V5 | 2=CHOP_GND
+C312  470uF 100V20% high-ripple  EKYC101ELL471MK35S     1=MOTION_BUS_P | 2=CHOPPER_N
+C313  470uF 100V20% high-ripple  EKYC101ELL471MK35S     1=MOTION_BUS_P | 2=CHOPPER_N
+D60   43V standoff TVS 1500W     SMCJ43A                1=MOTION_BUS_P | 2=CHOPPER_N
+D61   43V drain spike clamp      SMCJ43A                1=CHOP_DRAIN | 2=CHOPPER_N
+D62   15V gate clamp             BZT52H-C15,115         1=CHOP_GATE | 2=CHOP_GND
+D63   100V 10A resistor cable fr MBR10100-M3/4W         1=MOTION_BUS_P | 2=CHOP_DRAIN
+D64   LDO reverse discharge path 1N4148WS-E3-08         1=MOTION_BUS_P | 2=CHOP_10V
+D65   Analog fault OR            1N4148WS-E3-08         1=CHOP_OV_OK | 2=CHOP_FAULT_LED_K
+D66   Analog fault OR            1N4148WS-E3-08         1=CHOP_THERMAL_OK | 2=CHOP_FAULT_LED_K
+Q40   100V chopper NMOS          IPT015N10N5ATMA1       1=CHOP_GATE | 2=CHOPPER_N | 3=CHOP_DRAIN
+Q41   NTC healthy enables driver 2N7002,215             1=CHOP_THERMAL_OK | 2=CHOP_QUALIFY_N | 3=CHOP_DISABLE
+Q42   Chopper gate status isolat 2N7002,215             1=CHOP_GATE | 2=CHOP_GND | 3=CHOP_ACTIVE_LED_K
+Q43   Qualified fault LED power  BSS84,215              1=CHOP_QUALIFY_N | 2=CHOP_10V | 3=CHOP_FAULT_PWR
+Q44   Qualified local enable     MMBT3904,215           1=CHOP_QUALIFY_BASE | 2=CHOP_GND | 3=CHOP_QUALIFY_N
+R300  75.0k 0.1%                 TNPW080575K0BEEA       1=CHOP_10V | 2=CHOP_FB
+R301  10.0k 0.1%                 TNPW080510K0BEEA       1=CHOP_FB | 2=CHOP_GND
+R302  160k 0.1%                  TNPW0805160KBEEA       1=MOTION_BUS_P | 2=CHOP_SENSE_TOP
+R303  1.40k 0.1%                 TNPW08051K40BEEA       1=CHOP_SENSE_TOP | 2=CHOP_SENSE
+R304  10.0k 0.1%                 TNPW080510K0BEEA       1=CHOP_SENSE | 2=CHOP_GND
+R305  1.00M 0.1%                 TNPW08051M00BEEA       1=CHOP_GATE | 2=CHOP_HYS_MID
+R306  1.00M 0.1%                 TNPW08051M00BEEA       1=CHOP_HYS_MID | 2=CHOP_HYS_MID2
+== U30 100V LDO, nominal 10V [Texas_DGN0008B_VSSOP-8-1EP_3x3] mpn=TPS7A4001DGNR
+  1:OUT_1                        CHOP_10V                 | C301 C302 C304 C308 C309 D64 Q43 R300 ..(+10)
+  2:FB_2                         CHOP_FB                  | R300 R301
+  3:NC_3                         NC                       | 
+  4:GND_4,9:EP_9                 CHOP_GND                 | C300 C301 C302 C303 C304 C305 C306 C307 ..(+21)
+  5:EN_5,8:IN_8                  MOTION_BUS_P             | BC11 BC12 BC13 BC14 C300 C312 C313 D60 ..(+14)
+  6:NC_6                         NC                       | 
+  7:NC_7                         NC                       | 
+== U31 2.5V high-grade reference [SOIC-8_3.9x4.9mm_P1.27mm] mpn=REF5025IDR
+  1:DNC_1                        NC                       | 
+  2:VIN_2                        CHOP_10V                 | C301 C302 C304 C308 C309 D64 Q43 R300 ..(+10)
+  3:TEMP_3                       NC                       | 
+  4:GND_4                        CHOP_GND                 | C300 C301 C302 C303 C304 C305 C306 C307 ..(+21)
+  5:TRIM_NR_5                    NC                       | 
+  6:VOUT_6                       CHOP_REF2V5              | C303 C311 R311 R312 R314 R325 R327 TP28 ..(+2)
+  7:NC_7                         NC                       | 
+  8:DNC_8                        NC                       | 
+== U32 Independent analog chopper/OV/NTC window [TSSOP-14_4.4x5mm_P0.65mm] mpn=LM339BIPWR
+  1:OUT2_1                       CHOP_OV_OK               | D65 R310
+  2:OUT1_2                       CHOP_REQUEST             | R307 U33
+  3:VCC_3                        CHOP_10V                 | C301 C302 C304 C308 C309 D64 Q43 R300 ..(+10)
+  4:IN1-_4,7:IN2+_7              CHOP_REF2V5              | C303 C311 R311 R312 R314 R325 R327 TP28 ..(+2)
+  5:IN1+_5                       CHOP_SENSE               | C305 R303 R304 R331
+  6:IN2-_6                       CHOP_OV_SENSE            | C306 R308 R309
+  8:IN3-_8                       CHOP_TEMP_LOW            | R312 R313
+  9:IN3+_9,10:IN4-_10            CHOP_NTC                 | C307 J14 R311
+  11:IN4+_11                     CHOP_TEMP_HIGH           | R314 R315
+  12:GND_12                      CHOP_GND                 | C300 C301 C302 C303 C304 C305 C306 C307 ..(+21)
+  13:OUT4_13,14:OUT3_14          CHOP_THERMAL_OK          | D66 Q41 R316 R317
+== U33 4A source/8A sink driver [SOT-23-6] mpn=UCC27511DBVR
+  1:VDD_1                        CHOP_10V                 | C301 C302 C304 C308 C309 D64 Q43 R300 ..(+10)
+  2:OUTH_2                       CHOP_DRIVE_H             | R319
+  3:OUTL_3                       CHOP_DRIVE_L             | R320
+  4:GND_4                        CHOP_GND                 | C300 C301 C302 C303 C304 C305 C306 C307 ..(+21)
+  5:IN-_5                        CHOP_DISABLE             | Q41 R318
+  6:IN+_6                        CHOP_REQUEST             | R307 U32
+== U34 Isolated analog fault [SSOP-4_4.4x2.6mm_P1.27mm] mpn=VOS618A-3T
+  1:A_1                          CHOP_FAULT_LED_A         | R322
+  2:K_2                          CHOP_FAULT_LED_K         | D65 D66
+  3:E_3                          LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  4:C_4                          CHOP_FAULT_N             | R231 TP29 U10 U28
+== U35 Isolated chopper active [SSOP-4_4.4x2.6mm_P1.27mm] mpn=VOS618A-3T
+  1:A_1                          CHOP_ACTIVE_LED_A        | R323
+  2:K_2                          CHOP_ACTIVE_LED_K        | Q42
+  3:E_3                          LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  4:C_4                          CHOP_ACTIVE_N            | R232 TP30 U10
+== U36 Reference qualification 12..28ms [SOT-23-6] mpn=TPS3808G01DBVR
+  1:RESET_N_1                    CHOP_REF_READY           | R327 R328
+  2:GND_2                        CHOP_GND                 | C300 C301 C302 C303 C304 C305 C306 C307 ..(+21)
+  3:MR_N_3,6:VDD_6               CHOP_REF2V5              | C303 C311 R311 R312 R314 R325 R327 TP28 ..(+2)
+  4:CT_4                         NC                       | 
+  5:SENSE_5                      CHOP_REF_SENSE           | R325 R326

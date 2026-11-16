@@ -1,0 +1,24 @@
+{
+ "erc": {
+  "kicad": "10.0.8",
+  "sheets": 16,
+  "violations": 0,
+  "ignored_checks": [
+   "four_way_junction",
+   "simulation_model_issue",
+   "footprint_filter"
+  ]
+ },
+ "drc_as_saved": {
+  "kicad": "10.0.8",
+  "violations": 0,
+  "unconnected_items": 0,
+  "schematic_parity": 0
+ },
+ "drc_refilled_zones": {
+  "kicad": "10.0.8",
+  "violations": 0,
+  "unconnected_items": 0,
+  "schematic_parity": 0
+ }
+}

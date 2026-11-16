@@ -1,0 +1,261 @@
+{
+ "review": "Gegenprüfung PMU Rev A2 280x260",
+ "date": "2026-11-16",
+ "reviewed_commit": "d37c7f70536507b69d8bcac9a166c7d541a8984e",
+ "pcb_sha256": "2742638d03b884b8b6ac7bf7064ef98b2bd6c5a95377b7617b72999eb2e83bc2",
+ "reviewer": "Claude (KI-gestützte Gegenprüfung, kein Ersatz für die Prüfung durch eine Fachperson)",
+ "recommendation": "Nicht bestellen; Layout- und Wertrunde für GP-01 bis GP-18, Entscheidung zu GP-19 und GP-20.",
+ "release_flags_changed": false,
+ "findings": [
+  {
+   "id": "GP-01",
+   "title": "Schutzdioden D1/D2/D60/D61 nur über 0,2-mm-Leiterbahnen angebunden; +42-V-Fläche an der Gehäusekante",
+   "severity": "hoch",
+   "category": "Layout",
+   "verified_by": "selbst",
+   "status": "offen",
+   "fix": "Pads breit in die Flächen legen, mehrere Vias, Fremdkupfer >= 0,5 mm vom Gehäuse, aus PWR_TAP_CONTROL nehmen",
+   "details": "BEFUNDE.md#gp-01"
+  },
+  {
+   "id": "GP-02",
+   "title": "LOGIC_GND und BATT_N nur über NT9 verbunden (ein Via, 0,2 mm); bei Unterbrechung lesen EN und INP 'ein'",
+   "severity": "hoch",
+   "category": "Layout/Schaltung",
+   "verified_by": "selbst",
+   "status": "offen",
+   "fix": "Verbindung breit und mehrfach, antiparallele Schottky-Dioden, Pull-downs gegen BATT_N",
+   "details": "BEFUNDE.md#gp-02"
+  },
+  {
+   "id": "GP-03",
+   "title": "Fremdnetz-Vias unter den Kupferschienen (BB1 am ungeschalteten Batterieplus); BB1-BB5 elektrisch wirkungslos; NB-Brücken redundant",
+   "severity": "hoch",
+   "category": "Mechanik/Layout",
+   "verified_by": "Teilprüfung + Stichprobe",
+   "status": "offen",
+   "fix": "BB1-BB6 und NB1-NB8 streichen, BATT_N-Korridor öffnen",
+   "details": "BEFUNDE.md#gp-03"
+  },
+  {
+   "id": "GP-04",
+   "title": "Motion-Gate ohne Gate-Kondensator; PSMN1R0-100ASF mit schwacher SOA; externe Kapazität unbekannt",
+   "severity": "hoch",
+   "category": "Schaltung",
+   "verified_by": "selbst",
+   "status": "offen",
+   "fix": "ASE-Variante, Bestückplatz C1+R2, maximale Lastkapazität festlegen",
+   "details": "BEFUNDE.md#gp-04"
+  },
+  {
+   "id": "GP-05",
+   "title": "eFuse-Überspannung 45,0-47,2 V überlappt Motion-Latch 45,7-46,3 V und Software-Stopp 45 V",
+   "severity": "hoch",
+   "category": "Bestückwert",
+   "verified_by": "selbst",
+   "status": "offen",
+   "fix": "R43/R53 auf 392-407 kOhm",
+   "details": "BEFUNDE.md#gp-05"
+  },
+  {
+   "id": "GP-06",
+   "title": "Hardware-Fehlerleitungen ohne Serienwiderstand an ESP32-GPIOs (IO35-IO38)",
+   "severity": "mittel-hoch",
+   "category": "Schaltung",
+   "verified_by": "selbst",
+   "status": "offen",
+   "fix": "10-47 kOhm in Serie",
+   "details": "BEFUNDE.md#gp-06"
+  },
+  {
+   "id": "GP-07",
+   "title": "5-V-Eingang J11 ohne Überspannungsschutz",
+   "severity": "mittel-hoch",
+   "category": "Schaltung",
+   "verified_by": "selbst",
+   "status": "offen",
+   "fix": "Überspannungsschalter oder Crowbar",
+   "details": "BEFUNDE.md#gp-07"
+  },
+  {
+   "id": "GP-08",
+   "title": "Keine spannungsabhängige Abstandsregel; 27 Pad-Stellen 0,20-0,39 mm zwischen 42 V und Logik; hochohmige Teiler",
+   "severity": "mittel",
+   "category": "Layout/Fertigung",
+   "verified_by": "selbst",
+   "status": "offen",
+   "fix": "Abstandsregel und Schutzlack",
+   "details": "BEFUNDE.md#gp-08"
+  },
+  {
+   "id": "GP-09",
+   "title": "Keine Schottky-Diode gegen negative Spitzen an SYS_BUS_P und den eFuse-Ausgängen",
+   "severity": "mittel",
+   "category": "Schaltung",
+   "verified_by": "selbst",
+   "status": "offen",
+   "fix": "Schottky-Dioden ergänzen",
+   "details": "BEFUNDE.md#gp-09"
+  },
+  {
+   "id": "GP-10",
+   "title": "Batterieklemmen J1/J2 nicht kodiert, Schaltung nicht verpolfest, Werkzeugachse J2 zeigt auf J1",
+   "severity": "mittel",
+   "category": "Mechanik/Schaltung",
+   "verified_by": "selbst / Teilprüfung",
+   "status": "offen",
+   "fix": "Kodierung, J2 drehen, Kappen, Gegenhalter",
+   "details": "BEFUNDE.md#gp-10"
+  },
+  {
+   "id": "GP-11",
+   "title": "ARM_R_N nur 6 mm; BATT_N bei x 207-219 auf Außenlagen 0/2 mm; BATT_N-Vias 723 auf 130",
+   "severity": "mittel",
+   "category": "Layout",
+   "verified_by": "Teilprüfung + Stichprobe",
+   "status": "offen",
+   "fix": "Rückleiter verbreitern und durchgängig führen",
+   "details": "BEFUNDE.md#gp-11"
+  },
+  {
+   "id": "GP-12",
+   "title": "0,15 mm Padabstand bei 70 µm Kupfer (U11, U30, U16, VSSOP-8); fehlende Pin-1-Marken; Pasten- und Bohrdetails; U12 ohne Kühlfläche",
+   "severity": "mittel",
+   "category": "Fertigung",
+   "verified_by": "Teilprüfung + Stichprobe",
+   "status": "offen",
+   "fix": "Hersteller-Landmuster, Marken, Paste nach Datenblatt",
+   "details": "BEFUNDE.md#gp-12"
+  },
+  {
+   "id": "GP-13",
+   "title": "Nur vier M3-Befestigungen; keine Abstützung an den Klemmen; Kupfer 0,25 mm an Montagebohrungen",
+   "severity": "mittel",
+   "category": "Mechanik",
+   "verified_by": "Teilprüfung",
+   "status": "offen",
+   "fix": "Zusätzliche Befestigungen und Trägeraufnahme",
+   "details": "BEFUNDE.md#gp-13"
+  },
+  {
+   "id": "GP-14",
+   "title": "Kleinere Schaltungspunkte: ESD an Taster/J22, V3V3 an J22, Pegel MAIN_FAULT_GPIO_N, eFuse-Status, SHDN-Teiler",
+   "severity": "niedrig",
+   "category": "Schaltung",
+   "verified_by": "selbst",
+   "status": "offen",
+   "fix": "siehe BEFUNDE.md",
+   "details": "BEFUNDE.md#gp-14"
+  },
+  {
+   "id": "GP-15",
+   "title": "Unterspannungsabschaltung ungefiltert (10 µs statt 0,5 s); Software-Schwelle innerhalb der Toleranz",
+   "severity": "mittel",
+   "category": "Bestückwert",
+   "verified_by": "selbst",
+   "status": "offen",
+   "fix": "C6 vergrößern, Schwellen staffeln",
+   "details": "BEFUNDE.md#gp-15"
+  },
+  {
+   "id": "GP-16",
+   "title": "Haupt-Überstrom etwa 48-80 A gegen Motion 57-64 A; gleiche Zeitglieder",
+   "severity": "mittel",
+   "category": "Bestückwert",
+   "verified_by": "selbst",
+   "status": "offen",
+   "fix": "Hauptschalter auf etwa 80 A, Motion-Zeitglied kürzer",
+   "details": "BEFUNDE.md#gp-16"
+  },
+  {
+   "id": "GP-17",
+   "title": "Chopper-Ausschaltschwelle 42,07-42,73 V knapp über Ladeschluss",
+   "severity": "mittel",
+   "category": "Bestückwert",
+   "verified_by": "selbst",
+   "status": "offen",
+   "fix": "Schwellen um etwa 1 V anheben",
+   "details": "BEFUNDE.md#gp-17"
+  },
+  {
+   "id": "GP-18",
+   "title": "Chopper-Überwachung nicht ausfallsicher und nicht prüfbar; gemeinsame Ursache mit 46-V-Abschaltung",
+   "severity": "mittel",
+   "category": "Schaltung/Firmware",
+   "verified_by": "selbst",
+   "status": "offen",
+   "fix": "Bereit-Signal, Firmware-Plausibilität",
+   "details": "BEFUNDE.md#gp-18"
+  },
+  {
+   "id": "GP-19",
+   "title": "Abzweige 1,0-2,5 mm² nur durch gemeinsames Gate 60 A / 100 A geschützt (TOP-005, MOT-005, LIFT-002)",
+   "severity": "hoch (Produkt)",
+   "category": "Anforderung",
+   "verified_by": "selbst",
+   "status": "offen",
+   "fix": "Abzweigsicherungen oder eFuse-Kanäle",
+   "details": "BEFUNDE.md#gp-19"
+  },
+  {
+   "id": "GP-20",
+   "title": "Motion-Stopp einkanalig; Kurzschluss Q7/Q8 hält den Bus versorgt; Arme fallen bei Abschaltung",
+   "severity": "mittel, hoch vor Aktortests",
+   "category": "Anforderung",
+   "verified_by": "selbst",
+   "status": "offen",
+   "fix": "Sicherheitsarchitektur festlegen",
+   "details": "BEFUNDE.md#gp-20"
+  },
+  {
+   "id": "GP-21",
+   "title": "ESP32-Reset schaltet den PC hart ab; Flash-Prozedur fehlt; Rückstromsperre erst ab etwa 32 A",
+   "severity": "niedrig",
+   "category": "Konzept",
+   "verified_by": "selbst",
+   "status": "offen",
+   "fix": "Prozedur dokumentieren",
+   "details": "BEFUNDE.md#gp-21"
+  },
+  {
+   "id": "GP-22",
+   "title": "247/247 und 46/46 sind reine Verbindungsprüfungen; Engstellen-Audit für A2 nicht wiederholt",
+   "severity": "mittel",
+   "category": "Nachweise",
+   "verified_by": "Teilprüfung + Stichprobe",
+   "status": "offen",
+   "fix": "Engstellen- und Querschnittsprüfung für A2 ergänzen",
+   "details": "BEFUNDE.md#gp-22"
+  },
+  {
+   "id": "GP-23",
+   "title": "Altes 360 x 300-Paket war als fertigungsfreigegeben markiert",
+   "severity": "hoch",
+   "category": "Repository",
+   "verified_by": "Teilprüfung + Stichprobe",
+   "status": "erledigt 2026-11-16 (entfernt)",
+   "fix": "-",
+   "details": "BEFUNDE.md#gp-23"
+  },
+  {
+   "id": "GP-24",
+   "title": "Veraltete Pflichtdokumente; A2-Mechanikzeichnungen fehlen; Einpressbohrungen nicht gekennzeichnet; DRAFT-Texte auf der PCB",
+   "severity": "mittel",
+   "category": "Dokumentation",
+   "verified_by": "Teilprüfung + Stichprobe",
+   "status": "teilweise erledigt 2026-11-16",
+   "fix": "Mechanikunterlagen und Bohrkennzeichnung für A2",
+   "details": "BEFUNDE.md#gp-24"
+  },
+  {
+   "id": "GP-25",
+   "title": "Lokale Kontonamen in Berichtspfaden; Routerdateien und Duplikate",
+   "severity": "niedrig",
+   "category": "Repository",
+   "verified_by": "Teilprüfung + Stichprobe",
+   "status": "teilweise erledigt 2026-11-16",
+   "fix": "A2-Berichte enthalten weiter /Users/-Pfade; Historie nur durch Umschreiben bereinigbar",
+   "details": "BEFUNDE.md#gp-25"
+  }
+ ]
+}

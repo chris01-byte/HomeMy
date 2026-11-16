@@ -1,0 +1,31 @@
+C208  100n                       GRM21BR71C104KA01L     1=V3V3 | 2=LOGIC_GND
+C209  100n                       GRM21BR71C104KA01L     1=V5V | 2=LOGIC_GND
+C244  10n                        GRM21BR71H103KA01L     DNP 1=CAN_TERM_MID | 2=LOGIC_GND
+C245  1n                         GRM31A5C3A102JW01D     1=CHASSIS | 2=LOGIC_GND
+D40   ESD2CAN24DBZRQ1            ESD2CAN24DBZRQ1        1=CAN_H | 2=CAN_L | 3=LOGIC_GND
+J23   TSW-103-07-G-S             TSW-103-07-G-S         1=I2C_SDA | 2=I2C_SCL | 3=LOGIC_GND
+Q21   BSS138BK,215               BSS138BK,215           1=SW_RESET_N | 2=LOGIC_GND | 3=LED_OE_N
+R241  10k                        RC0805FR-0710KL        1=V3V3 | 2=CAN_TX
+R242  10k                        RC0805FR-0710KL        1=V3V3 | 2=CAN_STB
+R243  60.4                       RC1206FR-0760R4L       DNP 1=CAN_H | 2=CAN_TERM_MID
+R244  60.4                       RC1206FR-0760R4L       DNP 1=CAN_TERM_MID | 2=CAN_L
+R245  1M                         RC0805FR-071ML         1=CHASSIS | 2=LOGIC_GND
+R246  10k                        RC0805FR-0710KL        1=V5V | 2=LED_OE_N
+R247  100k                       RC0805FR-07100KL       1=LED_DATA_3V3 | 2=LOGIC_GND
+R248  330                        RC0805FR-07330RL       1=LED_BUFFER_OUT | 2=LED_DATA_OUT
+R249  100k                       RC0805FR-07100KL       1=LED_DATA_OUT | 2=LOGIC_GND
+== U13 TCAN1042HGVDRQ1 [SOIC-8_3.9x4.9mm_P1.27mm] mpn=TCAN1042HGVDRQ1
+  1:TXD_1                        CAN_TX                   | R241 TP31 U10
+  2:GND_2                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  3:VCC_3                        V5V                      | C207 C209 C236 C237 C246 J11 J18 R246 ..(+3)
+  4:RXD_4                        CAN_RX                   | TP32 U10
+  5:VIO_5                        V3V3                     | C30 C205 C206 C208 C221 C222 C223 C224 ..(+40)
+  6:CANL_6                       CAN_L                    | D40 J16 J17 R244
+  7:CANH_7                       CAN_H                    | D40 J16 J17 R243
+  8:STB_8                        CAN_STB                  | R242 U10
+== U14 SN74AHCT1G125DBVR [SOT-23-5] mpn=SN74AHCT1G125DBVR
+  1:OE_N_1                       LED_OE_N                 | Q21 R246
+  2:A_2                          LED_DATA_3V3             | R247 U10
+  3:GND_3                        LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  4:Y_4                          LED_BUFFER_OUT           | R248
+  5:VCC_5                        V5V                      | C207 C209 C236 C237 C246 J11 J18 R246 ..(+3)

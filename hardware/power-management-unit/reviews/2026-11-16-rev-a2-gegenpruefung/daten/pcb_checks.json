@@ -1,0 +1,2092 @@
+{
+ "pcb": "HomeMy_PMU_RevA.kicad_pcb",
+ "inventory": {
+  "outline_bbox_mm": [
+   280.05,
+   260.05
+  ],
+  "copper_layers": 4,
+  "footprints": 425,
+  "pads": 1377,
+  "track_segments": 3711,
+  "vias": 1807,
+  "zones": 77,
+  "via_sizes": {
+   "0.6/0.3": 683,
+   "0.8/0.4": 1124
+  }
+ },
+ "pad_connection": {
+  "D1": [
+   {
+    "pads": [
+     "1"
+    ],
+    "net": "BATT_FUSED_P",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "2"
+    ],
+    "net": "BATT_N",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   }
+  ],
+  "D2": [
+   {
+    "pads": [
+     "1"
+    ],
+    "net": "SYS_BUS_P",
+    "zone_at_pad_centre": [
+     "F.Cu"
+    ],
+    "tracks_width_count": [],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "2"
+    ],
+    "net": "BATT_N",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   }
+  ],
+  "D60": [
+   {
+    "pads": [
+     "1"
+    ],
+    "net": "MOTION_BUS_P",
+    "zone_at_pad_centre": [
+     "F.Cu"
+    ],
+    "tracks_width_count": [],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "2"
+    ],
+    "net": "CHOPPER_N",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      2
+     ]
+    ],
+    "vias_in_pad": 0
+   }
+  ],
+  "D61": [
+   {
+    "pads": [
+     "1"
+    ],
+    "net": "CHOP_DRAIN",
+    "zone_at_pad_centre": [
+     "F.Cu"
+    ],
+    "tracks_width_count": [
+     [
+      0.2,
+      2
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "2"
+    ],
+    "net": "CHOPPER_N",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      2
+     ]
+    ],
+    "vias_in_pad": 0
+   }
+  ],
+  "D63": [
+   {
+    "pads": [
+     "1"
+    ],
+    "net": "MOTION_BUS_P",
+    "zone_at_pad_centre": [
+     "F.Cu",
+     "In2.Cu"
+    ],
+    "tracks_width_count": [
+     [
+      0.2,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "2"
+    ],
+    "net": "CHOP_DRAIN",
+    "zone_at_pad_centre": [
+     "F.Cu"
+    ],
+    "tracks_width_count": [
+     [
+      0.2,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   }
+  ],
+  "U12": [
+   {
+    "pads": [
+     "1"
+    ],
+    "net": "LOGIC_GND",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      2
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "2",
+     "2"
+    ],
+    "net": "V3V3",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      2
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "3"
+    ],
+    "net": "V5V",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      1.0,
+      2
+     ]
+    ],
+    "vias_in_pad": 0
+   }
+  ],
+  "NT9": [
+   {
+    "pads": [
+     "1"
+    ],
+    "net": "LOGIC_GND",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "2"
+    ],
+    "net": "BATT_N",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [],
+    "vias_in_pad": 0
+   }
+  ],
+  "NT10": [
+   {
+    "pads": [
+     "1"
+    ],
+    "net": "CHOP_GND",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "2"
+    ],
+    "net": "CHOPPER_N",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.3,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   }
+  ],
+  "U3": [
+   {
+    "pads": [
+     "1",
+     "2",
+     "5"
+    ],
+    "net": "SYS_BUS_P",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.25,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "6"
+    ],
+    "net": "PC_UVLO",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "7"
+    ],
+    "net": "PC_OVP",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      4
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "8"
+    ],
+    "net": "BATT_N",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "9"
+    ],
+    "net": "PC_DVDT",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      2
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "10"
+    ],
+    "net": "PC_ILIM",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      2
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "12"
+    ],
+    "net": "PC_SHDN",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      2
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "14"
+    ],
+    "net": "PC_EFUSE_FAULT_N",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "15"
+    ],
+    "net": "PC_PGTH",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      2
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "16"
+    ],
+    "net": "PC_EFUSE_PGOOD",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "17",
+     "18"
+    ],
+    "net": "PC_BUCK_IN_P",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.25,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "25"
+    ],
+    "net": "BATT_N",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [],
+    "vias_in_pad": 1
+   }
+  ],
+  "U4": [
+   {
+    "pads": [
+     "1",
+     "2",
+     "5"
+    ],
+    "net": "SYS_BUS_P",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.25,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "6"
+    ],
+    "net": "LOGIC_UVLO",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "7"
+    ],
+    "net": "LOGIC_OVP",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      3
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "8"
+    ],
+    "net": "BATT_N",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "9"
+    ],
+    "net": "LOGIC_DVDT",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      2
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "10"
+    ],
+    "net": "LOGIC_ILIM",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      2
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "12"
+    ],
+    "net": "LOGIC_SHDN",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      2
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "14"
+    ],
+    "net": "LOGIC_EFUSE_FAULT_N",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "15"
+    ],
+    "net": "LOGIC_PGTH",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      2
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "16"
+    ],
+    "net": "LOGIC_EFUSE_PGOOD",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "17",
+     "18"
+    ],
+    "net": "LOGIC_BUCK_IN_P",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.25,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "25"
+    ],
+    "net": "BATT_N",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      2
+     ]
+    ],
+    "vias_in_pad": 1
+   }
+  ],
+  "RSH1": [
+   {
+    "pads": [
+     "1"
+    ],
+    "net": "BATT_FUSED_P",
+    "zone_at_pad_centre": [
+     "F.Cu"
+    ],
+    "tracks_width_count": [],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "2"
+    ],
+    "net": "MAIN_KELVIN_P",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      2
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "3"
+    ],
+    "net": "MAIN_KELVIN_N",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      2
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "4"
+    ],
+    "net": "BATT_SENSED_P",
+    "zone_at_pad_centre": [
+     "F.Cu"
+    ],
+    "tracks_width_count": [],
+    "vias_in_pad": 0
+   }
+  ],
+  "RSH2": [
+   {
+    "pads": [
+     "1"
+    ],
+    "net": "SYS_BUS_P",
+    "zone_at_pad_centre": [
+     "F.Cu"
+    ],
+    "tracks_width_count": [],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "2"
+    ],
+    "net": "MOTION_KELVIN_P",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "3"
+    ],
+    "net": "MOTION_KELVIN_N",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.2,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "4"
+    ],
+    "net": "MOTION_SENSED_P",
+    "zone_at_pad_centre": [
+     "F.Cu"
+    ],
+    "tracks_width_count": [
+     [
+      4.0,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   }
+  ],
+  "J1": [
+   {
+    "pads": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "net": "BATT_FUSED_P",
+    "zone_at_pad_centre": [
+     "B.Cu",
+     "F.Cu"
+    ],
+    "tracks_width_count": [],
+    "vias_in_pad": 0
+   }
+  ],
+  "J2": [
+   {
+    "pads": [
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "net": "BATT_N",
+    "zone_at_pad_centre": [
+     "B.Cu",
+     "F.Cu",
+     "In2.Cu"
+    ],
+    "tracks_width_count": [],
+    "vias_in_pad": 0
+   }
+  ],
+  "Q1": [
+   {
+    "pads": [
+     "1"
+    ],
+    "net": "Q1_G",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.3,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ],
+    "net": "MAIN_COMMON",
+    "zone_at_pad_centre": [
+     "F.Cu"
+    ],
+    "tracks_width_count": [],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "7",
+     "8",
+     "9",
+     "10",
+     "11",
+     "12",
+     "13"
+    ],
+    "net": "BATT_SENSED_P",
+    "zone_at_pad_centre": [
+     "F.Cu"
+    ],
+    "tracks_width_count": [],
+    "vias_in_pad": 0
+   }
+  ],
+  "Q7": [
+   {
+    "pads": [
+     "1"
+    ],
+    "net": "Q7_G",
+    "zone_at_pad_centre": [],
+    "tracks_width_count": [
+     [
+      0.3,
+      1
+     ]
+    ],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "2",
+     "3",
+     "4",
+     "5",
+     "6"
+    ],
+    "net": "MOTION_COMMON",
+    "zone_at_pad_centre": [
+     "F.Cu"
+    ],
+    "tracks_width_count": [],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "7",
+     "8",
+     "9",
+     "10",
+     "11",
+     "12",
+     "13"
+    ],
+    "net": "MOTION_SENSED_P",
+    "zone_at_pad_centre": [
+     "F.Cu"
+    ],
+    "tracks_width_count": [],
+    "vias_in_pad": 0
+   }
+  ],
+  "C312": [
+   {
+    "pads": [
+     "1"
+    ],
+    "net": "MOTION_BUS_P",
+    "zone_at_pad_centre": [
+     "F.Cu"
+    ],
+    "tracks_width_count": [],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "2"
+    ],
+    "net": "CHOPPER_N",
+    "zone_at_pad_centre": [
+     "B.Cu"
+    ],
+    "tracks_width_count": [],
+    "vias_in_pad": 0
+   }
+  ],
+  "C313": [
+   {
+    "pads": [
+     "1"
+    ],
+    "net": "MOTION_BUS_P",
+    "zone_at_pad_centre": [
+     "F.Cu",
+     "In2.Cu"
+    ],
+    "tracks_width_count": [],
+    "vias_in_pad": 0
+   },
+   {
+    "pads": [
+     "2"
+    ],
+    "net": "CHOPPER_N",
+    "zone_at_pad_centre": [
+     "B.Cu"
+    ],
+    "tracks_width_count": [
+     [
+      0.2,
+      2
+     ]
+    ],
+    "vias_in_pad": 0
+   }
+  ]
+ },
+ "tvs_d1_net_BATT_FUSED_P": [
+  {
+   "track_w": 0.2,
+   "layer": "F.Cu",
+   "len": 2.77,
+   "from": [
+    32.23,
+    72.87
+   ],
+   "to": [
+    35.0,
+    72.87
+   ]
+  },
+  {
+   "track_w": 0.2,
+   "layer": "F.Cu",
+   "len": 1.34,
+   "from": [
+    32.23,
+    74.21
+   ],
+   "to": [
+    32.23,
+    72.87
+   ]
+  },
+  {
+   "track_w": 0.2,
+   "layer": "F.Cu",
+   "len": 0.91,
+   "from": [
+    32.88,
+    74.85
+   ],
+   "to": [
+    32.23,
+    74.21
+   ]
+  },
+  {
+   "via": [
+    0.6,
+    0.3
+   ],
+   "at": [
+    32.35,
+    60.71
+   ]
+  },
+  {
+   "via": [
+    0.6,
+    0.3
+   ],
+   "at": [
+    32.88,
+    74.85
+   ]
+  },
+  {
+   "track_w": 0.2,
+   "layer": "In1.Cu",
+   "len": 13.61,
+   "from": [
+    32.88,
+    61.24
+   ],
+   "to": [
+    32.88,
+    74.85
+   ]
+  },
+  {
+   "track_w": 0.2,
+   "layer": "In1.Cu",
+   "len": 0.74,
+   "from": [
+    32.35,
+    60.71
+   ],
+   "to": [
+    32.88,
+    61.24
+   ]
+  }
+ ],
+ "tap_groups": {
+  "PWR_SYS_BRANCH_FANOUT": {
+   "items": 6,
+   "by_net": {
+    "SYS_BUS_P": 6
+   }
+  },
+  "PWR_SYS_BRANCH_SPINE": {
+   "items": 6,
+   "by_net": {
+    "SYS_BUS_P": 6
+   }
+  },
+  "PWR_TAP_CONTROL": {
+   "items": 435,
+   "by_net": {
+    "BATT_N": 229,
+    "SYS_BUS_P": 84,
+    "MOTION_BUS_P": 51,
+    "BATT_SENSED_P": 32,
+    "MOTION_COMMON": 17,
+    "MAIN_COMMON": 15,
+    "BATT_FUSED_P": 7
+   }
+  }
+ },
+ "ground_tie_NT9": {
+  "footprint": "NetTie_Logic_2",
+  "at": [
+   108.0,
+   149.0
+  ],
+  "pads": [
+   {
+    "pad": "1",
+    "net": "LOGIC_GND",
+    "at": [
+     107.5,
+     149.0
+    ],
+    "size": [
+     1.0,
+     1.0
+    ]
+   },
+   {
+    "pad": "2",
+    "net": "BATT_N",
+    "at": [
+     108.5,
+     149.0
+    ],
+    "size": [
+     1.0,
+     1.0
+    ]
+   }
+  ],
+  "tracks": [
+   {
+    "net": "LOGIC_GND",
+    "w": 0.2,
+    "layer": "F.Cu",
+    "len": 1.29,
+    "from": [
+     107.5,
+     150.29
+    ],
+    "to": [
+     107.5,
+     149.0
+    ]
+   }
+  ],
+  "vias": [
+   {
+    "net": "LOGIC_GND",
+    "size": [
+     0.6,
+     0.3
+    ],
+    "at": [
+     107.8,
+     150.59
+    ]
+   }
+  ]
+ },
+ "cross_sections": {
+  "ARM_R_N_cut_y": {
+   "86": {
+    "F.Cu": {
+     "total_mm": 21.0,
+     "intervals": [
+      [
+       250.0,
+       271.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 21.0,
+     "intervals": [
+      [
+       250.0,
+       271.0
+      ]
+     ]
+    }
+   },
+   "92": {
+    "F.Cu": {
+     "total_mm": 6.0,
+     "intervals": [
+      [
+       250.0,
+       256.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 6.0,
+     "intervals": [
+      [
+       250.0,
+       256.0
+      ]
+     ]
+    }
+   },
+   "100": {
+    "F.Cu": {
+     "total_mm": 6.0,
+     "intervals": [
+      [
+       250.0,
+       256.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 6.0,
+     "intervals": [
+      [
+       250.0,
+       256.0
+      ]
+     ]
+    }
+   },
+   "110": {
+    "F.Cu": {
+     "total_mm": 6.0,
+     "intervals": [
+      [
+       250.0,
+       256.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 6.0,
+     "intervals": [
+      [
+       250.0,
+       256.0
+      ]
+     ]
+    }
+   },
+   "118": {
+    "F.Cu": {
+     "total_mm": 6.0,
+     "intervals": [
+      [
+       250.0,
+       256.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 6.0,
+     "intervals": [
+      [
+       250.0,
+       256.0
+      ]
+     ]
+    }
+   },
+   "124": {
+    "F.Cu": {
+     "total_mm": 19.0,
+     "intervals": [
+      [
+       237.0,
+       256.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 19.0,
+     "intervals": [
+      [
+       237.0,
+       256.0
+      ]
+     ]
+    }
+   },
+   "132": {
+    "F.Cu": {
+     "total_mm": 12.0,
+     "intervals": [
+      [
+       237.0,
+       249.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 12.0,
+     "intervals": [
+      [
+       237.0,
+       249.0
+      ]
+     ]
+    }
+   }
+  },
+  "ARM_L_N_cut_y": {
+   "60": {
+    "F.Cu": {
+     "total_mm": 12.0,
+     "intervals": [
+      [
+       235.0,
+       247.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 12.0,
+     "intervals": [
+      [
+       235.0,
+       247.0
+      ]
+     ]
+    }
+   },
+   "90": {
+    "F.Cu": {
+     "total_mm": 12.0,
+     "intervals": [
+      [
+       235.0,
+       247.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 12.0,
+     "intervals": [
+      [
+       235.0,
+       247.0
+      ]
+     ]
+    }
+   },
+   "100": {
+    "F.Cu": {
+     "total_mm": 12.0,
+     "intervals": [
+      [
+       235.0,
+       247.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 12.0,
+     "intervals": [
+      [
+       235.0,
+       247.0
+      ]
+     ]
+    }
+   },
+   "112": {
+    "F.Cu": {
+     "total_mm": 40.0,
+     "intervals": [
+      [
+       207.0,
+       247.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 40.0,
+     "intervals": [
+      [
+       207.0,
+       247.0
+      ]
+     ]
+    }
+   },
+   "124": {
+    "F.Cu": {
+     "total_mm": 12.0,
+     "intervals": [
+      [
+       207.0,
+       219.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 12.0,
+     "intervals": [
+      [
+       207.0,
+       219.0
+      ]
+     ]
+    }
+   },
+   "132": {
+    "F.Cu": {
+     "total_mm": 12.0,
+     "intervals": [
+      [
+       207.0,
+       219.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 12.0,
+     "intervals": [
+      [
+       207.0,
+       219.0
+      ]
+     ]
+    }
+   }
+  },
+  "BATT_N_cut_x": {
+   "30": {
+    "F.Cu": {
+     "total_mm": 48.45,
+     "intervals": [
+      [
+       104.0,
+       107.4
+      ],
+      [
+       109.0,
+       154.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 48.45,
+     "intervals": [
+      [
+       104.0,
+       107.4
+      ],
+      [
+       109.0,
+       154.0
+      ]
+     ]
+    },
+    "In2.Cu": {
+     "total_mm": 58.85,
+     "intervals": [
+      [
+       100,
+       107.6
+      ],
+      [
+       108.8,
+       160.0
+      ]
+     ]
+    }
+   },
+   "60": {
+    "F.Cu": {
+     "total_mm": 47.75,
+     "intervals": [
+      [
+       104.0,
+       107.1
+      ],
+      [
+       109.4,
+       154.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 48.45,
+     "intervals": [
+      [
+       104.0,
+       107.5
+      ],
+      [
+       109.1,
+       154.0
+      ]
+     ]
+    },
+    "In2.Cu": {
+     "total_mm": 42.7,
+     "intervals": [
+      [
+       100,
+       107.7
+      ],
+      [
+       108.9,
+       110.9
+      ],
+      [
+       111.7,
+       143.7
+      ],
+      [
+       159.1,
+       160.0
+      ]
+     ]
+    }
+   },
+   "95": {
+    "F.Cu": {
+     "total_mm": 45.3,
+     "intervals": [
+      [
+       104.0,
+       149.3
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 50.0,
+     "intervals": [
+      [
+       104.0,
+       154.0
+      ]
+     ]
+    },
+    "In2.Cu": {
+     "total_mm": 43.05,
+     "intervals": [
+      [
+       100,
+       105.0
+      ],
+      [
+       105.9,
+       117.8
+      ],
+      [
+       118.7,
+       143.7
+      ],
+      [
+       159.1,
+       160.0
+      ]
+     ]
+    }
+   },
+   "110": {
+    "F.Cu": {
+     "total_mm": 49.9,
+     "intervals": [
+      [
+       104.0,
+       153.9
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 48.75,
+     "intervals": [
+      [
+       104.0,
+       110.3
+      ],
+      [
+       111.6,
+       154.0
+      ]
+     ]
+    },
+    "In2.Cu": {
+     "total_mm": 42.1,
+     "intervals": [
+      [
+       100,
+       105.0
+      ],
+      [
+       105.9,
+       117.8
+      ],
+      [
+       118.7,
+       143.7
+      ]
+     ]
+    }
+   },
+   "115": {
+    "F.Cu": {
+     "total_mm": 0.0,
+     "intervals": []
+    },
+    "B.Cu": {
+     "total_mm": 50.0,
+     "intervals": [
+      [
+       104.0,
+       154.0
+      ]
+     ]
+    },
+    "In2.Cu": {
+     "total_mm": 42.1,
+     "intervals": [
+      [
+       100,
+       105.0
+      ],
+      [
+       105.9,
+       117.8
+      ],
+      [
+       118.7,
+       143.7
+      ]
+     ]
+    }
+   },
+   "120": {
+    "F.Cu": {
+     "total_mm": 38.95,
+     "intervals": [
+      [
+       104.0,
+       132.4
+      ],
+      [
+       143.6,
+       154.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 28.45,
+     "intervals": [
+      [
+       104.0,
+       132.4
+      ]
+     ]
+    },
+    "In2.Cu": {
+     "total_mm": 31.1,
+     "intervals": [
+      [
+       100,
+       105.0
+      ],
+      [
+       105.9,
+       117.8
+      ],
+      [
+       118.7,
+       132.6
+      ]
+     ]
+    }
+   },
+   "150": {
+    "F.Cu": {
+     "total_mm": 26.8,
+     "intervals": [
+      [
+       105.7,
+       132.4
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 38.95,
+     "intervals": [
+      [
+       104.0,
+       132.4
+      ],
+      [
+       143.6,
+       154.0
+      ]
+     ]
+    },
+    "In2.Cu": {
+     "total_mm": 32.7,
+     "intervals": [
+      [
+       100,
+       132.6
+      ]
+     ]
+    }
+   },
+   "190": {
+    "F.Cu": {
+     "total_mm": 38.95,
+     "intervals": [
+      [
+       104.0,
+       143.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 48.75,
+     "intervals": [
+      [
+       104.0,
+       110.8
+      ],
+      [
+       112.1,
+       154.0
+      ]
+     ]
+    },
+    "In2.Cu": {
+     "total_mm": 42.35,
+     "intervals": [
+      [
+       100,
+       101.4
+      ],
+      [
+       102.6,
+       143.5
+      ]
+     ]
+    }
+   },
+   "205": {
+    "F.Cu": {
+     "total_mm": 37.35,
+     "intervals": [
+      [
+       104.0,
+       109.3
+      ],
+      [
+       110.9,
+       143.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 47.2,
+     "intervals": [
+      [
+       104.0,
+       109.3
+      ],
+      [
+       112.1,
+       154.0
+      ]
+     ]
+    },
+    "In2.Cu": {
+     "total_mm": 42.35,
+     "intervals": [
+      [
+       100,
+       109.5
+      ],
+      [
+       110.7,
+       143.5
+      ]
+     ]
+    }
+   },
+   "207": {
+    "F.Cu": {
+     "total_mm": 0.0,
+     "intervals": []
+    },
+    "B.Cu": {
+     "total_mm": 2.05,
+     "intervals": [
+      [
+       143.4,
+       145.4
+      ]
+     ]
+    },
+    "In2.Cu": {
+     "total_mm": 43.5,
+     "intervals": [
+      [
+       100,
+       143.5
+      ]
+     ]
+    }
+   },
+   "210": {
+    "F.Cu": {
+     "total_mm": 0.0,
+     "intervals": []
+    },
+    "B.Cu": {
+     "total_mm": 10.5,
+     "intervals": [
+      [
+       143.6,
+       154.0
+      ]
+     ]
+    },
+    "In2.Cu": {
+     "total_mm": 32.7,
+     "intervals": [
+      [
+       100,
+       132.6
+      ]
+     ]
+    }
+   },
+   "215": {
+    "F.Cu": {
+     "total_mm": 0.0,
+     "intervals": []
+    },
+    "B.Cu": {
+     "total_mm": 10.5,
+     "intervals": [
+      [
+       143.6,
+       154.0
+      ]
+     ]
+    },
+    "In2.Cu": {
+     "total_mm": 32.7,
+     "intervals": [
+      [
+       100,
+       132.6
+      ]
+     ]
+    }
+   },
+   "225": {
+    "F.Cu": {
+     "total_mm": 29.45,
+     "intervals": [
+      [
+       113.5,
+       143.0
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 40.5,
+     "intervals": [
+      [
+       113.5,
+       154.0
+      ]
+     ]
+    },
+    "In2.Cu": {
+     "total_mm": 43.5,
+     "intervals": [
+      [
+       100,
+       143.5
+      ]
+     ]
+    }
+   },
+   "245": {
+    "F.Cu": {
+     "total_mm": 5.95,
+     "intervals": [
+      [
+       113.5,
+       119.4
+      ]
+     ]
+    },
+    "B.Cu": {
+     "total_mm": 16.45,
+     "intervals": [
+      [
+       113.5,
+       119.4
+      ],
+      [
+       143.6,
+       154.0
+      ]
+     ]
+    },
+    "In2.Cu": {
+     "total_mm": 32.7,
+     "intervals": [
+      [
+       100,
+       132.6
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "busbar_foreign_vias": {
+  "BB1": {
+   "net": "BATT_SENSED_P",
+   "foreign_vias": {
+    "V3V3": [
+     [
+      44.19,
+      60.09
+     ]
+    ],
+    "LOGIC_GND": [
+     [
+      44.19,
+      75.73
+     ],
+     [
+      42.94,
+      80.23
+     ]
+    ],
+    "MAIN_KELVIN_N": [
+     [
+      42.0,
+      75.9
+     ]
+    ]
+   }
+  },
+  "BB2": {
+   "net": "MAIN_COMMON",
+   "foreign_vias": {
+    "LOGIC_GND": [
+     [
+      71.71,
+      74.66
+     ],
+     [
+      73.02,
+      60.24
+     ],
+     [
+      71.96,
+      54.36
+     ]
+    ],
+    "TEMP_MAIN_ADC": [
+     [
+      74.71,
+      60.34
+     ]
+    ]
+   }
+  },
+  "BB3": {
+   "net": "SYS_BUS_P",
+   "foreign_vias": {}
+  },
+  "BB4": {
+   "net": "MOTION_SENSED_P",
+   "foreign_vias": {}
+  },
+  "BB5": {
+   "net": "MOTION_COMMON",
+   "foreign_vias": {
+    "LOGIC_GND": [
+     [
+      173.52,
+      83.66
+     ],
+     [
+      170.04,
+      69.59
+     ]
+    ],
+    "BATT_N": [
+     [
+      174.0,
+      77.93
+     ]
+    ],
+    "MOTION_TEMP_DIODE": [
+     [
+      166.44,
+      81.63
+     ]
+    ],
+    "TEMP_MOTION_ADC": [
+     [
+      170.94,
+      82.78
+     ],
+     [
+      167.92,
+      74.08
+     ]
+    ]
+   }
+  },
+  "BB6": {
+   "net": "MOTION_BUS_P",
+   "foreign_vias": {
+    "LOGIC_GND": [
+     [
+      199.91,
+      92.25
+     ],
+     [
+      196.91,
+      83.66
+     ]
+    ]
+   }
+  },
+  "BB7": {
+   "net": "BATT_N",
+   "foreign_vias": {
+    "ARM_R_N": [
+     [
+      252.0,
+      116.0
+     ],
+     [
+      254.0,
+      116.0
+     ],
+     [
+      252.0,
+      120.0
+     ],
+     [
+      254.0,
+      120.0
+     ]
+    ],
+    "MAIN_FAULT_N": [
+     [
+      140.5,
+      144.0
+     ]
+    ],
+    "AON_WAKE_EN": [
+     [
+      124.38,
+      118.31
+     ],
+     [
+      68.01,
+      118.3
+     ]
+    ],
+    "MOTION_IMON_INPUT": [
+     [
+      183.03,
+      120.34
+     ],
+     [
+      177.0,
+      126.0
+     ],
+     [
+      167.0,
+      126.0
+     ]
+    ]
+   }
+  }
+ },
+ "pad_gaps": {
+  "U1": {
+   "min_gap_mm": 0.25,
+   "between": [
+    "1",
+    "MAIN_DGATE",
+    "2",
+    "MAIN_COMMON"
+   ]
+  },
+  "U2": {
+   "min_gap_mm": 0.2,
+   "between": [
+    "1",
+    "MOTION_UVLO",
+    "2",
+    "BATT_N"
+   ]
+  },
+  "U11": {
+   "min_gap_mm": 0.15,
+   "between": [
+    "1",
+    "LOGIC_GND",
+    "2",
+    "LOGIC_GND"
+   ]
+  },
+  "U16": {
+   "min_gap_mm": 0.15,
+   "between": [
+    "1",
+    "AON_3V3",
+    "2",
+    "PB_LTC_N"
+   ]
+  },
+  "U18": {
+   "min_gap_mm": 0.15,
+   "between": [
+    "1",
+    "LOGIC_GND",
+    "2",
+    "LOGIC_GND"
+   ]
+  },
+  "U27": {
+   "min_gap_mm": 0.15,
+   "between": [
+    "1",
+    "ESP_MOTION_RESET",
+    "2",
+    "V3V3"
+   ]
+  }
+ },
+ "tvs_body_edge": {
+  "D1_BATT_SENSED_P_fill_x_at_y69 (Gehaeusekante x=38.0)": [
+   38.01,
+   39.5
+  ],
+  "D2_SYS_BUS_P_fill_x_at_y84 (Gehaeusekante x=105.0)": [
+   104.0,
+   105.03
+  ]
+ },
+ "antenna_keepout": [
+  {
+   "keepout_bbox_mm": [
+    220.0,
+    238.8,
+    268.0,
+    259.8
+   ],
+   "tracks_or_vias_inside": 0
+  }
+ ]
+}

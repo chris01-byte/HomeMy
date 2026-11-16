@@ -1,0 +1,172 @@
+{
+ "C=752uF": {
+  "Cload_uF": 752.0,
+  "t_delay_ms": 5.66,
+  "ramp_ms": 4.09,
+  "Ipk_A": 18.1,
+  "Ppk_W": 433,
+  "E_J": 0.66,
+  "worst_ratio_vs_SOA_singleFET": 0.42,
+  "at_ms_Vds_I_lim": [
+   1.58,
+   30.9,
+   13.7,
+   33.0
+  ]
+ },
+ "C=940uF": {
+  "Cload_uF": 940.0,
+  "t_delay_ms": 5.66,
+  "ramp_ms": 4.21,
+  "Ipk_A": 21.3,
+  "Ppk_W": 505,
+  "E_J": 0.83,
+  "worst_ratio_vs_SOA_singleFET": 0.5,
+  "at_ms_Vds_I_lim": [
+   1.72,
+   30.8,
+   16.1,
+   31.9
+  ]
+ },
+ "C=1128uF": {
+  "Cload_uF": 1128.0,
+  "t_delay_ms": 5.66,
+  "ramp_ms": 4.32,
+  "Ipk_A": 24.4,
+  "Ppk_W": 572,
+  "E_J": 0.99,
+  "worst_ratio_vs_SOA_singleFET": 0.59,
+  "at_ms_Vds_I_lim": [
+   1.83,
+   30.7,
+   18.2,
+   31.0
+  ]
+ },
+ "C=2000uF": {
+  "Cload_uF": 2000.0,
+  "t_delay_ms": 5.66,
+  "ramp_ms": 4.78,
+  "Ipk_A": 37.0,
+  "Ppk_W": 844,
+  "E_J": 1.76,
+  "worst_ratio_vs_SOA_singleFET": 0.96,
+  "at_ms_Vds_I_lim": [
+   2.26,
+   30.5,
+   27.1,
+   28.4
+  ]
+ },
+ "C=4000uF": {
+  "Cload_uF": 4000.0,
+  "t_delay_ms": 5.66,
+  "ramp_ms": 5.61,
+  "Ipk_A": 60.6,
+  "Ppk_W": 1340,
+  "E_J": 3.53,
+  "worst_ratio_vs_SOA_singleFET": 1.71,
+  "at_ms_Vds_I_lim": [
+   2.9,
+   30.2,
+   43.4,
+   25.5
+  ]
+ },
+ "C=8000uF": {
+  "Cload_uF": 8000.0,
+  "t_delay_ms": 5.66,
+  "ramp_ms": 6.81,
+  "Ipk_A": 98.0,
+  "Ppk_W": 2109,
+  "E_J": 7.06,
+  "worst_ratio_vs_SOA_singleFET": 3.02,
+  "at_ms_Vds_I_lim": [
+   3.74,
+   30.0,
+   68.9,
+   22.8
+  ]
+ },
+ "940uF_Crss50_min_12pF": {
+  "Cload_uF": 940.0,
+  "t_delay_ms": 5.64,
+  "ramp_ms": 2.74,
+  "Ipk_A": 33.1,
+  "Ppk_W": 567,
+  "E_J": 0.83,
+  "worst_ratio_vs_SOA_singleFET": 0.54,
+  "at_ms_Vds_I_lim": [
+   1.72,
+   29.9,
+   18.3,
+   33.8
+  ]
+ },
+ "940uF_Crss50_max_321pF": {
+  "Cload_uF": 940.0,
+  "t_delay_ms": 5.69,
+  "ramp_ms": 9.31,
+  "Ipk_A": 15.3,
+  "Ppk_W": 427,
+  "E_J": 0.83,
+  "worst_ratio_vs_SOA_singleFET": 0.45,
+  "at_ms_Vds_I_lim": [
+   1.71,
+   32.0,
+   13.3,
+   29.5
+  ]
+ },
+ "940uF_Vth_2V": {
+  "Cload_uF": 940.0,
+  "t_delay_ms": 3.6,
+  "ramp_ms": 3.79,
+  "Ipk_A": 23.4,
+  "Ppk_W": 550,
+  "E_J": 0.83,
+  "worst_ratio_vs_SOA_singleFET": 0.53,
+  "at_ms_Vds_I_lim": [
+   1.59,
+   30.8,
+   17.5,
+   33.1
+  ]
+ },
+ "940uF_Vth_4V": {
+  "Cload_uF": 940.0,
+  "t_delay_ms": 8.0,
+  "ramp_ms": 4.75,
+  "Ipk_A": 19.2,
+  "Ppk_W": 458,
+  "E_J": 0.83,
+  "worst_ratio_vs_SOA_singleFET": 0.48,
+  "at_ms_Vds_I_lim": [
+   1.87,
+   30.8,
+   14.6,
+   30.5
+  ]
+ },
+ "soa_asf_25C_A": {
+  "20V": {
+   "100us": 550.0,
+   "1ms": 102.6,
+   "10ms": 28.5,
+   "100ms": 10.2
+  },
+  "30V": {
+   "100us": 366.7,
+   "1ms": 43.8,
+   "10ms": 14.0,
+   "100ms": 5.6
+  },
+  "42V": {
+   "100us": 261.9,
+   "1ms": 21.6,
+   "10ms": 7.8,
+   "100ms": 3.4
+  }
+ }
+}

@@ -1,0 +1,83 @@
+C1    100nF100V X7R              GRM21BR72A104KA01L     1=BATT_SENSED_P | 2=BATT_N
+C2    1uF25V X7R                 C1206C105K3RACTU       1=MAIN_CAP | 2=BATT_SENSED_P
+C3    33uF63V10% PET film        MKS4C053306D00KSSD     1=MAIN_TMR | 2=BATT_N
+C4    1nF50V5% C0G               C0805C102J5GACTU       1=MAIN_CS_P | 2=MAIN_KELVIN_N
+C5    1nF50V5% C0G               C0805C102J5GACTU       1=MAIN_ISCP | 2=MAIN_KELVIN_N
+C6    1nF50V5% C0G               C0805C102J5GACTU       1=MAIN_UVLO | 2=BATT_N
+C7    1nF50V5% C0G               C0805C102J5GACTU       1=MAIN_OV | 2=BATT_N
+D1    43V bidirectional low-clam PTVS1-043C-H           1=BATT_FUSED_P | 2=BATT_N
+D2    43V bidirectional low-clam PTVS1-043C-H           1=SYS_BUS_P | 2=BATT_N
+R1    10R 1%                     RC0805FR-0710RL        1=MAIN_HGATE | 2=Q1_G
+R2    10R 1%                     RC0805FR-0710RL        1=MAIN_HGATE | 2=Q2_G
+R3    10R 1%                     RC0805FR-0710RL        1=MAIN_HGATE | 2=Q3_G
+R4    10R 1%                     RC0805FR-0710RL        1=MAIN_DGATE | 2=Q4_G
+R5    10R 1%                     RC0805FR-0710RL        1=MAIN_DGATE | 2=Q5_G
+R6    10R 1%                     RC0805FR-0710RL        1=MAIN_DGATE | 2=Q6_G
+R11   10M 1%                     RC0805FR-0710ML        1=Q1_G | 2=MAIN_COMMON
+R12   10M 1%                     RC0805FR-0710ML        1=Q2_G | 2=MAIN_COMMON
+R13   10M 1%                     RC0805FR-0710ML        1=Q3_G | 2=MAIN_COMMON
+R14   10M 1%                     RC0805FR-0710ML        1=Q4_G | 2=MAIN_COMMON
+R15   10M 1%                     RC0805FR-0710ML        1=Q5_G | 2=MAIN_COMMON
+R16   10M 1%                     RC0805FR-0710ML        1=Q6_G | 2=MAIN_COMMON
+R21   49R9 0.1% 25ppm/K          RT0805BRD0749R9L       1=MAIN_KELVIN_P | 2=MAIN_CS_P
+R22   18K2 0.1% 25ppm/K          RT0805BRD0718K2L       1=MAIN_ILIM | 2=MAIN_ILIM_TAIL
+R23   3K65 0.1% 25ppm/K          RT0805BRD073K65L       1=MAIN_KELVIN_P | 2=MAIN_ISCP
+R24   100K 0.1% 25ppm/K          RT0805BRD07100KL       1=MAIN_TMR | 2=BATT_N
+R25   523K 0.1% 25ppm/K          RT0805BRD07523KL       1=BATT_SENSED_P | 2=MAIN_UVLO
+R26   10K1 0.1% 25ppm/K          RT0805BRD0710K1L       1=MAIN_UVLO | 2=BATT_N
+R27   732K 0.1% 25ppm/K          RT0805BRD07732KL       1=BATT_SENSED_P | 2=MAIN_OV
+R28   10K 0.1% 25ppm/K           RT0805BRD0710KL        1=MAIN_OV | 2=BATT_N
+R29   1M 1%                      RC0805FR-071ML         1=AON_WAKE_EN | 2=BATT_N
+R64   200R 0.1% 25ppm/K          RT0805BRD07200RL       1=MAIN_ILIM_TAIL | 2=BATT_N
+== Q1 100V N-MOS .99mR@25C/2.3mR@175C 10V [CCPAK1212_SOT8000A] mpn=PSMN1R0-100ASFJ
+  1:G_1                          Q1_G                     | R1 R11
+  2..6(5p) S                     MAIN_COMMON              | BC3 BC4 Q2 Q3 Q4 Q5 Q6 R11 ..(+7)
+  7..13(7p) D                    BATT_SENSED_P            | BC1 BC2 C1 C2 Q2 Q3 R25 R27 ..(+5)
+== Q2 100V N-MOS .99mR@25C/2.3mR@175C 10V [CCPAK1212_SOT8000A] mpn=PSMN1R0-100ASFJ
+  1:G_1                          Q2_G                     | R2 R12
+  2..6(5p) S                     MAIN_COMMON              | BC3 BC4 Q1 Q3 Q4 Q5 Q6 R11 ..(+7)
+  7..13(7p) D                    BATT_SENSED_P            | BC1 BC2 C1 C2 Q1 Q3 R25 R27 ..(+5)
+== Q3 100V N-MOS .99mR@25C/2.3mR@175C 10V [CCPAK1212_SOT8000A] mpn=PSMN1R0-100ASFJ
+  1:G_1                          Q3_G                     | R3 R13
+  2..6(5p) S                     MAIN_COMMON              | BC3 BC4 Q1 Q2 Q4 Q5 Q6 R11 ..(+7)
+  7..13(7p) D                    BATT_SENSED_P            | BC1 BC2 C1 C2 Q1 Q2 R25 R27 ..(+5)
+== Q4 100V N-MOS .99mR@25C/2.3mR@175C 10V [CCPAK1212_SOT8000A] mpn=PSMN1R0-100ASFJ
+  1:G_1                          Q4_G                     | R4 R14
+  2..6(5p) S                     MAIN_COMMON              | BC3 BC4 Q1 Q2 Q3 Q5 Q6 R11 ..(+7)
+  7..13(7p) D                    SYS_BUS_P                | BC5 BC6 C8 C21 C26 D2 Q5 Q6 ..(+15)
+== Q5 100V N-MOS .99mR@25C/2.3mR@175C 10V [CCPAK1212_SOT8000A] mpn=PSMN1R0-100ASFJ
+  1:G_1                          Q5_G                     | R5 R15
+  2..6(5p) S                     MAIN_COMMON              | BC3 BC4 Q1 Q2 Q3 Q4 Q6 R11 ..(+7)
+  7..13(7p) D                    SYS_BUS_P                | BC5 BC6 C8 C21 C26 D2 Q4 Q6 ..(+15)
+== Q6 100V N-MOS .99mR@25C/2.3mR@175C 10V [CCPAK1212_SOT8000A] mpn=PSMN1R0-100ASFJ
+  1:G_1                          Q6_G                     | R6 R16
+  2..6(5p) S                     MAIN_COMMON              | BC3 BC4 Q1 Q2 Q3 Q4 Q5 R11 ..(+7)
+  7..13(7p) D                    SYS_BUS_P                | BC5 BC6 C8 C21 C26 D2 Q4 Q5 ..(+15)
+== RSH1 0.5mR 1% four-terminal10W@70C terminal [CSS4J_4026_Kelvin] mpn=CSS4J-4026R-L500F
+  1:FORCE_P_1                    BATT_FUSED_P             | D1 J1 TP1
+  2:SENSE_P_2                    MAIN_KELVIN_P            | R21 R23 R223 TP3
+  3:SENSE_N_3                    MAIN_KELVIN_N            | C4 C5 R224 TP4 U1
+  4:FORCE_N_4                    BATT_SENSED_P            | BC1 BC2 C1 C2 Q1 Q2 Q3 R25 ..(+5)
+== U1 LM74930-Q1 [VQFN_RGE24_4x4_P0.5_EP_FLOAT] mpn=LM74930QRGERQ1
+  1:DGATE_1                      MAIN_DGATE               | R4 R5 R6
+  2:A_2,15:OUT_15                MAIN_COMMON              | BC3 BC4 Q1 Q2 Q3 Q4 Q5 Q6 ..(+7)
+  3:SW_3                         NC                       | 
+  4:UVLO_4                       MAIN_UVLO                | C6 R25 R26
+  5:OV_5                         MAIN_OV                  | C7 R27 R28
+  6:EN_6,7:MODE_7                AON_WAKE_EN              | R29 R216 TP18 U25 U50 U54
+  8:NC_8                         NC                       | 
+  9:TMR_9                        MAIN_TMR                 | C3 R24 TP20
+  10:IMON_10                     NC                       | 
+  11:ILIM_11                     MAIN_ILIM                | R22
+  12:FLT_N_12                    MAIN_FAULT_N             | R215 TP19 U53 U60
+  13:GND_13,16:OVCLAMP_16        BATT_N                   | BC15 C1 C3 C6 C7 C8 C10 C13 ..(+45)
+  14:HGATE_14                    MAIN_HGATE               | R1 R2 R3
+  17:NC_17                       NC                       | 
+  18:ISCP_18                     MAIN_ISCP                | C5 R23
+  19:CS-_19                      MAIN_KELVIN_N            | C4 C5 R224 RSH1 TP4
+  20:CS+_20                      MAIN_CS_P                | C4 R21
+  21:NC_21                       NC                       | 
+  22:VS_22                       BATT_SENSED_P            | BC1 BC2 C1 C2 Q1 Q2 Q3 R25 ..(+5)
+  23:CAP_23                      MAIN_CAP                 | C2
+  24:C_24                        SYS_BUS_P                | BC5 BC6 C8 C21 C26 D2 Q4 Q5 ..(+15)
+  25:EP_FLOAT_25                 NC                       | 

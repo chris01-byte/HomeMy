@@ -1,0 +1,68 @@
+C20   22nF50V5% C0G              C0805C223J5GACTU       1=PC_DVDT | 2=BATT_N
+C21   100nF100V X7R              GRM21BR72A104KA01L     1=SYS_BUS_P | 2=BATT_N
+C22   1uF100V X7R                C1210C105K1RACTU       1=PC_BUCK_IN_P | 2=BATT_N
+C25   22nF50V5% C0G              C0805C223J5GACTU       1=LOGIC_DVDT | 2=BATT_N
+C26   100nF100V X7R              GRM21BR72A104KA01L     1=SYS_BUS_P | 2=BATT_N
+C27   1uF100V X7R                C1210C105K1RACTU       1=LOGIC_BUCK_IN_P | 2=BATT_N
+R40   6K04 0.1% 25ppm/K          RT0805BRD076K04L       1=PC_ILIM | 2=BATT_N
+R41   191K 0.1% 25ppm/K          RT0805BRD07191KL       1=SYS_BUS_P | 2=PC_UVLO
+R42   10K 0.1% 25ppm/K           RT0805BRD0710KL        1=PC_UVLO | 2=BATT_N
+R43   374K 0.1% 25ppm/K          RT0805BRD07374KL       1=SYS_BUS_P | 2=PC_OVP
+R44   10K 0.1% 25ppm/K           RT0805BRD0710KL        1=PC_OVP | 2=BATT_N
+R45   1M 1%                      RC0805FR-071ML         1=SYS_BUS_P | 2=PC_SHDN
+R46   68K 1%                     RC0805FR-0768KL        1=PC_SHDN | 2=BATT_N
+R47   191K 0.1% 25ppm/K          RT0805BRD07191KL       1=PC_BUCK_IN_P | 2=PC_PGTH
+R48   10K 0.1% 25ppm/K           RT0805BRD0710KL        1=PC_PGTH | 2=BATT_N
+R50   9K09 0.1% 25ppm/K          RT0805BRD079K09L       1=LOGIC_ILIM | 2=BATT_N
+R51   191K 0.1% 25ppm/K          RT0805BRD07191KL       1=SYS_BUS_P | 2=LOGIC_UVLO
+R52   10K 0.1% 25ppm/K           RT0805BRD0710KL        1=LOGIC_UVLO | 2=BATT_N
+R53   374K 0.1% 25ppm/K          RT0805BRD07374KL       1=SYS_BUS_P | 2=LOGIC_OVP
+R54   10K 0.1% 25ppm/K           RT0805BRD0710KL        1=LOGIC_OVP | 2=BATT_N
+R55   1M 1%                      RC0805FR-071ML         1=SYS_BUS_P | 2=LOGIC_SHDN
+R56   68K 1%                     RC0805FR-0768KL        1=LOGIC_SHDN | 2=BATT_N
+R57   191K 0.1% 25ppm/K          RT0805BRD07191KL       1=LOGIC_BUCK_IN_P | 2=LOGIC_PGTH
+R58   10K 0.1% 25ppm/K           RT0805BRD0710KL        1=LOGIC_PGTH | 2=BATT_N
+== U3 TPS26631 eFuse latch-off [Texas_RGE0024H_VQFN-24-1EP_4x4] mpn=TPS26631RGER
+  1..5(3p) IN                    SYS_BUS_P                | BC5 BC6 C8 C21 C26 D2 Q4 Q5 ..(+15)
+  3:B_GATE_3                     NC                       | 
+  4:DRV_4                        NC                       | 
+  6:UVLO_6                       PC_UVLO                  | R41 R42
+  7:OVP_7                        PC_OVP                   | R43 R44
+  8:GND_8,25:EP_GND_25           BATT_N                   | BC15 C1 C3 C6 C7 C8 C10 C13 ..(+45)
+  9:DVDT_9                       PC_DVDT                  | C20
+  10:ILIM_10                     PC_ILIM                  | R40
+  11:MODE_11                     NC                       | 
+  12:SHDN_12                     PC_SHDN                  | R45 R46
+  13:IMON_13                     NC                       | 
+  14:FLT_N_14                    PC_EFUSE_FAULT_N         | TP37
+  15:PGTH_15                     PC_PGTH                  | R47 R48
+  16:PGOOD_16                    PC_EFUSE_PGOOD           | TP38
+  17:OUT_17,18:OUT_18            PC_BUCK_IN_P             | C22 J9 R47 TP11
+  19:NC_19                       NC                       | 
+  20:NC_20                       NC                       | 
+  21:NC_21                       NC                       | 
+  22:NC_22                       NC                       | 
+  23:NC_23                       NC                       | 
+  24:NC_24                       NC                       | 
+== U4 TPS26631 eFuse latch-off [Texas_RGE0024H_VQFN-24-1EP_4x4] mpn=TPS26631RGER
+  1..5(3p) IN                    SYS_BUS_P                | BC5 BC6 C8 C21 C26 D2 Q4 Q5 ..(+15)
+  3:B_GATE_3                     NC                       | 
+  4:DRV_4                        NC                       | 
+  6:UVLO_6                       LOGIC_UVLO               | R51 R52
+  7:OVP_7                        LOGIC_OVP                | R53 R54
+  8:GND_8,25:EP_GND_25           BATT_N                   | BC15 C1 C3 C6 C7 C8 C10 C13 ..(+45)
+  9:DVDT_9                       LOGIC_DVDT               | C25
+  10:ILIM_10                     LOGIC_ILIM               | R50
+  11:MODE_11                     NC                       | 
+  12:SHDN_12                     LOGIC_SHDN               | R55 R56
+  13:IMON_13                     NC                       | 
+  14:FLT_N_14                    LOGIC_EFUSE_FAULT_N      | TP39
+  15:PGTH_15                     LOGIC_PGTH               | R57 R58
+  16:PGOOD_16                    LOGIC_EFUSE_PGOOD        | TP40
+  17:OUT_17,18:OUT_18            LOGIC_BUCK_IN_P          | C27 J10 R57 TP12
+  19:NC_19                       NC                       | 
+  20:NC_20                       NC                       | 
+  21:NC_21                       NC                       | 
+  22:NC_22                       NC                       | 
+  23:NC_23                       NC                       | 
+  24:NC_24                       NC                       | 

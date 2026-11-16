@@ -1,0 +1,32 @@
+J7    Drive 8A peak              1776508                1=MOTION_BUS_P | 2=DRIVE_N
+J8    24V lift-buck INPUT        1776508                1=MOTION_BUS_P | 2=LIFT_N
+J9    12V PC-buck INPUT          1776508                1=PC_BUCK_IN_P | 2=PC_N
+J10   5V logic-buck INPUT        1776508                1=LOGIC_BUCK_IN_P | 2=LOGIC_BUCK_N
+J11   5V converter OUTPUT return 1776508                1=V5V | 2=LOGIC_5V_N
+J12   External resistor bank     1776508                1=MOTION_BUS_P | 2=CHOP_DRAIN
+J13   24V lift clamp DNP         1776508                DNP 1=LIFT_24V_SAMPLE | 2=LIFT_24V_N
+J14   Analog bank NTC            1776508                1=CHOP_NTC | 2=CHOP_GND
+J15   Telemetry bank NTC         1776508                1=CHOP_TEMP_ADC | 2=LOGIC_GND
+J18   5V LED strip 5A            1776511                1=V5V | 2=LED_DATA_OUT | 3=LOGIC_5V_N
+== J1 Battery M5 160A class [Wurth_7461103] mpn=7461103
+  1..8(8p) BATT_FUSED_P          BATT_FUSED_P             | D1 RSH1 TP1
+== J2 Battery M5 160A class [Wurth_7461103] mpn=7461103
+  1..8(8p) BATT_N                BATT_N                   | BC15 C1 C3 C6 C7 C8 C10 C13 ..(+45)
+== J3 Left arm + M5 160A class [Wurth_7461103] mpn=7461103
+  1..8(8p) MOTION_BUS_P          MOTION_BUS_P             | BC11 BC12 BC13 BC14 C300 C312 C313 D60 ..(+14)
+== J4 Left arm return M5 160A class [Wurth_7461103] mpn=7461103
+  1..8(8p) ARM_L_N               ARM_L_N                  | NT1
+== J5 Right arm + M5 160A class [Wurth_7461103] mpn=7461103
+  1..8(8p) MOTION_BUS_P          MOTION_BUS_P             | BC11 BC12 BC13 BC14 C300 C312 C313 D60 ..(+14)
+== J6 Right arm return M5 160A class [Wurth_7461103] mpn=7461103
+  1..8(8p) ARM_R_N               ARM_R_N                  | NT2
+== J16 CAN backbone IN [JST_GH_BM04B-GHS-TBT_1x04-1MP_] mpn=BM04B-GHS-TBT(LF)(SN)
+  1:CAN_H_1                      CAN_H                    | D40 J17 R243 U13
+  2:CAN_L_2                      CAN_L                    | D40 J17 R244 U13
+  3:LOGIC_GND_3                  LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  4:CHASSIS_4                    CHASSIS                  | C245 J17 R245
+== J17 CAN backbone OUT [JST_GH_BM04B-GHS-TBT_1x04-1MP_] mpn=BM04B-GHS-TBT(LF)(SN)
+  1:CAN_H_1                      CAN_H                    | D40 J16 R243 U13
+  2:CAN_L_2                      CAN_L                    | D40 J16 R244 U13
+  3:LOGIC_GND_3                  LOGIC_GND                | C30 C31 C200 C201 C202 C203 C204 C205 ..(+130)
+  4:CHASSIS_4                    CHASSIS                  | C245 J16 R245

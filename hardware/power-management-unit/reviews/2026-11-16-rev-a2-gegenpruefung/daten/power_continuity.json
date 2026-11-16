@@ -1,0 +1,217 @@
+{
+ "removed": {
+  "BATT_N track<1.0": 184,
+  "BATT_N via<0.8/0.4": 45,
+  "MAIN_COMMON track<1.0": 11,
+  "MAIN_COMMON via<0.8/0.4": 4,
+  "BATT_SENSED_P track<1.0": 25,
+  "BATT_SENSED_P via<0.8/0.4": 7,
+  "SYS_BUS_P track<1.0": 77,
+  "SYS_BUS_P via<0.8/0.4": 17,
+  "MOTION_BUS_P track<1.0": 41,
+  "MOTION_BUS_P via<0.8/0.4": 10,
+  "MOTION_COMMON track<1.0": 13,
+  "MOTION_COMMON via<0.8/0.4": 4,
+  "BATT_FUSED_P track<1.0": 5,
+  "BATT_FUSED_P via<0.8/0.4": 2
+ },
+ "unconnected_items": 79,
+ "components_fed_only_through_thin_copper": {
+  "C1": [
+   "1/BATT_SENSED_P",
+   "2/BATT_N"
+  ],
+  "C2": [
+   "2/BATT_SENSED_P"
+  ],
+  "C6": [
+   "2/BATT_N"
+  ],
+  "C7": [
+   "2/BATT_N"
+  ],
+  "C8": [
+   "1/SYS_BUS_P",
+   "2/BATT_N"
+  ],
+  "C9": [
+   "2/MOTION_COMMON"
+  ],
+  "C20": [
+   "2/BATT_N"
+  ],
+  "C21": [
+   "1/SYS_BUS_P",
+   "2/BATT_N"
+  ],
+  "C22": [
+   "2/BATT_N"
+  ],
+  "C25": [
+   "2/BATT_N"
+  ],
+  "C26": [
+   "1/SYS_BUS_P",
+   "2/BATT_N"
+  ],
+  "C27": [
+   "2/BATT_N"
+  ],
+  "C28": [
+   "2/BATT_N"
+  ],
+  "C29": [
+   "2/MOTION_COMMON"
+  ],
+  "C300": [
+   "1/MOTION_BUS_P"
+  ],
+  "D1": [
+   "1/BATT_FUSED_P",
+   "2/BATT_N"
+  ],
+  "D2": [
+   "2/BATT_N"
+  ],
+  "D64": [
+   "1/MOTION_BUS_P"
+  ],
+  "Q11": [
+   "2/BATT_N"
+  ],
+  "R25": [
+   "1/BATT_SENSED_P"
+  ],
+  "R26": [
+   "2/BATT_N"
+  ],
+  "R27": [
+   "1/BATT_SENSED_P"
+  ],
+  "R28": [
+   "2/BATT_N"
+  ],
+  "R31": [
+   "2/BATT_N"
+  ],
+  "R35": [
+   "1/SYS_BUS_P"
+  ],
+  "R36": [
+   "2/BATT_N"
+  ],
+  "R39": [
+   "2/BATT_N"
+  ],
+  "R40": [
+   "2/BATT_N"
+  ],
+  "R41": [
+   "1/SYS_BUS_P"
+  ],
+  "R42": [
+   "2/BATT_N"
+  ],
+  "R43": [
+   "1/SYS_BUS_P"
+  ],
+  "R44": [
+   "2/BATT_N"
+  ],
+  "R45": [
+   "1/SYS_BUS_P"
+  ],
+  "R46": [
+   "2/BATT_N"
+  ],
+  "R48": [
+   "2/BATT_N"
+  ],
+  "R50": [
+   "2/BATT_N"
+  ],
+  "R51": [
+   "1/SYS_BUS_P"
+  ],
+  "R52": [
+   "2/BATT_N"
+  ],
+  "R53": [
+   "1/SYS_BUS_P"
+  ],
+  "R54": [
+   "2/BATT_N"
+  ],
+  "R55": [
+   "1/SYS_BUS_P"
+  ],
+  "R56": [
+   "2/BATT_N"
+  ],
+  "R58": [
+   "2/BATT_N"
+  ],
+  "R59": [
+   "2/BATT_N"
+  ],
+  "R61": [
+   "2/BATT_N"
+  ],
+  "R62": [
+   "1/SYS_BUS_P"
+  ],
+  "R200": [
+   "1/BATT_SENSED_P"
+  ],
+  "R250": [
+   "1/SYS_BUS_P"
+  ],
+  "R254": [
+   "1/MOTION_BUS_P"
+  ],
+  "R302": [
+   "1/MOTION_BUS_P"
+  ],
+  "R308": [
+   "1/MOTION_BUS_P"
+  ],
+  "TP6": [
+   "1/SYS_BUS_P"
+  ],
+  "TP10": [
+   "1/MOTION_BUS_P"
+  ],
+  "U1": [
+   "13/BATT_N",
+   "15/MAIN_COMMON",
+   "16/BATT_N",
+   "2/MAIN_COMMON",
+   "22/BATT_SENSED_P",
+   "24/SYS_BUS_P"
+  ],
+  "U2": [
+   "13/MOTION_COMMON",
+   "2/BATT_N",
+   "20/SYS_BUS_P",
+   "6/BATT_N"
+  ],
+  "U3": [
+   "1/SYS_BUS_P",
+   "2/SYS_BUS_P",
+   "5/SYS_BUS_P",
+   "8/BATT_N"
+  ],
+  "U4": [
+   "1/SYS_BUS_P",
+   "2/SYS_BUS_P",
+   "25/BATT_N",
+   "5/SYS_BUS_P",
+   "8/BATT_N"
+  ],
+  "U30": [
+   "5/MOTION_BUS_P",
+   "8/MOTION_BUS_P"
+  ]
+ },
+ "note": "Q1-Q10, RSH1/2-Kraftpads, J1-J6, BC1-15 und NT1-8 fehlen in dieser Liste: sie bleiben ueber Flaechen verbunden."
+}

@@ -1,0 +1,1978 @@
+[
+ {
+  "net": "BATT_FUSED_P",
+  "layer": "F.Cu",
+  "from_pad": "J1.1",
+  "to_pad": "RSH1.1",
+  "A": 6.5,
+  "B": 6.5
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "RSH1.4",
+  "to_pad": "Q1.13",
+  "A": 4.5,
+  "B": 20.0
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q1.2",
+  "to_pad": "Q4.2",
+  "A": 5.1,
+  "B": 9.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q4.13",
+  "to_pad": "RSH2.1",
+  "A": 2.4,
+  "B": 18.8
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "RSH2.4",
+  "to_pad": "Q7.13",
+  "A": 2.4,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q7.2",
+  "to_pad": "Q9.2",
+  "A": 4.7,
+  "B": 9.2
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q9.13",
+  "to_pad": "J3.1",
+  "A": 4.0,
+  "B": 13.5
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "J3.1",
+  "to_pad": "J5.1",
+  "A": 8.2,
+  "B": 13.5
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "F.Cu",
+  "from_pad": "J4.1",
+  "to_pad": "NT1.1",
+  "A": 5.5,
+  "B": 11.9
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "F.Cu",
+  "from_pad": "J6.1",
+  "to_pad": "NT2.1",
+  "A": 4.0,
+  "B": 5.9
+ },
+ {
+  "net": "DRIVE_N",
+  "layer": "F.Cu",
+  "from_pad": "J7.2",
+  "to_pad": "NT3.1",
+  "A": 8.3,
+  "B": 8.3
+ },
+ {
+  "net": "LIFT_N",
+  "layer": "In1.Cu",
+  "from_pad": "J8.2",
+  "to_pad": "NT4.1",
+  "A": 8.5,
+  "B": 8.5
+ },
+ {
+  "net": "LIFT_N",
+  "layer": "In2.Cu",
+  "from_pad": "J8.2",
+  "to_pad": "NT4.1",
+  "A": 8.5,
+  "B": 8.5
+ },
+ {
+  "net": "CHOP_DRAIN",
+  "layer": "F.Cu",
+  "from_pad": "Q40.3",
+  "to_pad": "J12.2",
+  "A": 2.8,
+  "B": 2.8
+ },
+ {
+  "net": "CHOPPER_N",
+  "layer": "B.Cu",
+  "from_pad": "C312.2",
+  "to_pad": "NT7.1",
+  "A": 2.9,
+  "B": 2.9
+ },
+ {
+  "net": "CHOPPER_N",
+  "layer": "B.Cu",
+  "from_pad": "C313.2",
+  "to_pad": "NT7.1",
+  "A": 2.9,
+  "B": 2.9
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "J2.1",
+  "to_pad": "NT7.2",
+  "A": 6.0,
+  "B": 7.6
+ },
+ {
+  "net": "LOGIC_5V_N",
+  "layer": "B.Cu",
+  "from_pad": "J18.3",
+  "to_pad": "J11.2",
+  "A": 5.0,
+  "B": 5.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "BC1.1",
+  "to_pad": "BC1.1",
+  "A": 13.2,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "B.Cu",
+  "from_pad": "BC1.1",
+  "to_pad": "BC1.1",
+  "A": 13.0,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "BC10.1",
+  "to_pad": "BC9.1",
+  "A": 4.7,
+  "B": 13.3
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "B.Cu",
+  "from_pad": "BC10.1",
+  "to_pad": "BC9.1",
+  "A": 4.7,
+  "B": 15.2
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "BC11.1",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "B.Cu",
+  "from_pad": "BC11.1",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "BC12.1",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "B.Cu",
+  "from_pad": "BC12.1",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "BC13.1",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "B.Cu",
+  "from_pad": "BC13.1",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "BC14.1",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 16.5
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "B.Cu",
+  "from_pad": "BC14.1",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 16.5
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "BC15.1",
+  "to_pad": "BC15.1",
+  "A": 12.3,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "BC2.1",
+  "to_pad": "BC1.1",
+  "A": 10.7,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "B.Cu",
+  "from_pad": "BC2.1",
+  "to_pad": "BC1.1",
+  "A": 10.5,
+  "B": 20.0
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "BC3.1",
+  "to_pad": "BC3.1",
+  "A": 9.2,
+  "B": 14.0
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "B.Cu",
+  "from_pad": "BC3.1",
+  "to_pad": "BC3.1",
+  "A": 9.8,
+  "B": 19.4
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "BC4.1",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 8.9
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "B.Cu",
+  "from_pad": "BC4.1",
+  "to_pad": "BC3.1",
+  "A": 6.5,
+  "B": 13.1
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "BC5.1",
+  "to_pad": "BC5.1",
+  "A": 16.3,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "B.Cu",
+  "from_pad": "BC5.1",
+  "to_pad": "BC5.1",
+  "A": 16.1,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "BC6.1",
+  "to_pad": "BC5.1",
+  "A": 14.7,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "B.Cu",
+  "from_pad": "BC6.1",
+  "to_pad": "BC5.1",
+  "A": 14.6,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "BC7.1",
+  "to_pad": "BC7.1",
+  "A": 11.4,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "B.Cu",
+  "from_pad": "BC7.1",
+  "to_pad": "BC7.1",
+  "A": 11.4,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "BC8.1",
+  "to_pad": "BC7.1",
+  "A": 7.5,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "B.Cu",
+  "from_pad": "BC8.1",
+  "to_pad": "BC7.1",
+  "A": 9.8,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "BC9.1",
+  "to_pad": "BC9.1",
+  "A": 5.0,
+  "B": 13.4
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "B.Cu",
+  "from_pad": "BC9.1",
+  "to_pad": "BC9.1",
+  "A": 5.0,
+  "B": 15.2
+ },
+ {
+  "net": "BATT_FUSED_P",
+  "layer": "F.Cu",
+  "from_pad": "J1.1",
+  "to_pad": "RSH1.1",
+  "A": 6.5,
+  "B": 6.5
+ },
+ {
+  "net": "BATT_FUSED_P",
+  "layer": "F.Cu",
+  "from_pad": "J1.2",
+  "to_pad": "RSH1.1",
+  "A": 6.5,
+  "B": 6.5
+ },
+ {
+  "net": "BATT_FUSED_P",
+  "layer": "F.Cu",
+  "from_pad": "J1.3",
+  "to_pad": "RSH1.1",
+  "A": 6.5,
+  "B": 6.5
+ },
+ {
+  "net": "BATT_FUSED_P",
+  "layer": "F.Cu",
+  "from_pad": "J1.4",
+  "to_pad": "RSH1.1",
+  "A": 8.2,
+  "B": 8.2
+ },
+ {
+  "net": "BATT_FUSED_P",
+  "layer": "F.Cu",
+  "from_pad": "J1.5",
+  "to_pad": "RSH1.1",
+  "A": 6.5,
+  "B": 6.5
+ },
+ {
+  "net": "BATT_FUSED_P",
+  "layer": "F.Cu",
+  "from_pad": "J1.6",
+  "to_pad": "RSH1.1",
+  "A": 6.6,
+  "B": 6.6
+ },
+ {
+  "net": "BATT_FUSED_P",
+  "layer": "F.Cu",
+  "from_pad": "J1.7",
+  "to_pad": "RSH1.1",
+  "A": 8.6,
+  "B": 8.6
+ },
+ {
+  "net": "BATT_FUSED_P",
+  "layer": "F.Cu",
+  "from_pad": "J1.8",
+  "to_pad": "RSH1.1",
+  "A": 9.1,
+  "B": 9.1
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "J2.1",
+  "to_pad": "BC15.1",
+  "A": 7.6,
+  "B": 7.6
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "J2.2",
+  "to_pad": "BC15.1",
+  "A": 7.6,
+  "B": 7.6
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "J2.3",
+  "to_pad": "BC15.1",
+  "A": 7.6,
+  "B": 7.6
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "J2.4",
+  "to_pad": "BC15.1",
+  "A": 8.2,
+  "B": 16.1
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "J2.5",
+  "to_pad": "BC15.1",
+  "A": 6.5,
+  "B": 6.5
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "J2.6",
+  "to_pad": "BC15.1",
+  "A": 6.5,
+  "B": 7.7
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "J2.7",
+  "to_pad": "BC15.1",
+  "A": 6.5,
+  "B": 12.5
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "J2.8",
+  "to_pad": "BC15.1",
+  "A": 8.2,
+  "B": 16.1
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "J3.1",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 13.5
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "J3.2",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 13.7
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "J3.3",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 14.9
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "J3.4",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "J3.5",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 16.5
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "J3.6",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 16.5
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "J3.7",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 16.5
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "J3.8",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 16.5
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "F.Cu",
+  "from_pad": "J4.1",
+  "to_pad": "NT1.1",
+  "A": 5.5,
+  "B": 11.9
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "B.Cu",
+  "from_pad": "J4.1",
+  "to_pad": "NT1.1",
+  "A": 5.5,
+  "B": 11.9
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "F.Cu",
+  "from_pad": "J4.2",
+  "to_pad": "NT1.1",
+  "A": 5.5,
+  "B": 6.5
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "B.Cu",
+  "from_pad": "J4.2",
+  "to_pad": "NT1.1",
+  "A": 5.5,
+  "B": 6.5
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "F.Cu",
+  "from_pad": "J4.3",
+  "to_pad": "NT1.1",
+  "A": 5.5,
+  "B": 6.5
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "B.Cu",
+  "from_pad": "J4.3",
+  "to_pad": "NT1.1",
+  "A": 5.5,
+  "B": 6.5
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "F.Cu",
+  "from_pad": "J4.4",
+  "to_pad": "NT1.1",
+  "A": 5.5,
+  "B": 6.5
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "B.Cu",
+  "from_pad": "J4.4",
+  "to_pad": "NT1.1",
+  "A": 5.5,
+  "B": 6.5
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "F.Cu",
+  "from_pad": "J4.5",
+  "to_pad": "NT1.1",
+  "A": 5.5,
+  "B": 11.9
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "B.Cu",
+  "from_pad": "J4.5",
+  "to_pad": "NT1.1",
+  "A": 5.5,
+  "B": 11.9
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "F.Cu",
+  "from_pad": "J4.6",
+  "to_pad": "NT1.1",
+  "A": 5.5,
+  "B": 6.5
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "B.Cu",
+  "from_pad": "J4.6",
+  "to_pad": "NT1.1",
+  "A": 5.5,
+  "B": 6.5
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "F.Cu",
+  "from_pad": "J4.7",
+  "to_pad": "NT1.1",
+  "A": 5.5,
+  "B": 6.5
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "B.Cu",
+  "from_pad": "J4.7",
+  "to_pad": "NT1.1",
+  "A": 5.5,
+  "B": 6.5
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "F.Cu",
+  "from_pad": "J4.8",
+  "to_pad": "NT1.1",
+  "A": 5.5,
+  "B": 6.5
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "B.Cu",
+  "from_pad": "J4.8",
+  "to_pad": "NT1.1",
+  "A": 5.5,
+  "B": 6.5
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "J5.1",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 16.5
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "J5.2",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 16.5
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "J5.3",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 16.5
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "J5.4",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 16.5
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "J5.5",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 8.2
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "J5.6",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 6.5
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "J5.7",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 6.5
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "J5.8",
+  "to_pad": "BC11.1",
+  "A": 4.0,
+  "B": 12.1
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "F.Cu",
+  "from_pad": "J6.1",
+  "to_pad": "NT2.1",
+  "A": 4.0,
+  "B": 5.9
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "B.Cu",
+  "from_pad": "J6.1",
+  "to_pad": "NT2.1",
+  "A": 4.0,
+  "B": 5.9
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "F.Cu",
+  "from_pad": "J6.2",
+  "to_pad": "NT2.1",
+  "A": 4.0,
+  "B": 5.9
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "B.Cu",
+  "from_pad": "J6.2",
+  "to_pad": "NT2.1",
+  "A": 4.0,
+  "B": 5.9
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "F.Cu",
+  "from_pad": "J6.3",
+  "to_pad": "NT2.1",
+  "A": 4.0,
+  "B": 5.9
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "B.Cu",
+  "from_pad": "J6.3",
+  "to_pad": "NT2.1",
+  "A": 4.0,
+  "B": 5.9
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "F.Cu",
+  "from_pad": "J6.4",
+  "to_pad": "NT2.1",
+  "A": 4.0,
+  "B": 5.9
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "B.Cu",
+  "from_pad": "J6.4",
+  "to_pad": "NT2.1",
+  "A": 4.0,
+  "B": 5.9
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "F.Cu",
+  "from_pad": "J6.5",
+  "to_pad": "NT2.1",
+  "A": 4.0,
+  "B": 5.9
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "B.Cu",
+  "from_pad": "J6.5",
+  "to_pad": "NT2.1",
+  "A": 4.0,
+  "B": 5.9
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "F.Cu",
+  "from_pad": "J6.6",
+  "to_pad": "NT2.1",
+  "A": 4.0,
+  "B": 5.9
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "B.Cu",
+  "from_pad": "J6.6",
+  "to_pad": "NT2.1",
+  "A": 4.0,
+  "B": 5.9
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "F.Cu",
+  "from_pad": "J6.7",
+  "to_pad": "NT2.1",
+  "A": 4.0,
+  "B": 5.9
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "B.Cu",
+  "from_pad": "J6.7",
+  "to_pad": "NT2.1",
+  "A": 4.0,
+  "B": 5.9
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "F.Cu",
+  "from_pad": "J6.8",
+  "to_pad": "NT2.1",
+  "A": 4.0,
+  "B": 5.9
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "B.Cu",
+  "from_pad": "J6.8",
+  "to_pad": "NT2.1",
+  "A": 4.0,
+  "B": 5.9
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "F.Cu",
+  "from_pad": "NT1.1",
+  "to_pad": "NT1.1",
+  "A": 11.9,
+  "B": 11.9
+ },
+ {
+  "net": "ARM_L_N",
+  "layer": "B.Cu",
+  "from_pad": "NT1.1",
+  "to_pad": "NT1.1",
+  "A": 11.9,
+  "B": 11.9
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "NT1.2",
+  "to_pad": "BC15.1",
+  "A": 2.6,
+  "B": 2.6
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "F.Cu",
+  "from_pad": "NT2.1",
+  "to_pad": "NT2.1",
+  "A": 11.9,
+  "B": 11.9
+ },
+ {
+  "net": "ARM_R_N",
+  "layer": "B.Cu",
+  "from_pad": "NT2.1",
+  "to_pad": "NT2.1",
+  "A": 11.9,
+  "B": 11.9
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "NT2.2",
+  "to_pad": "BC15.1",
+  "A": 2.6,
+  "B": 2.6
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "NT3.2",
+  "to_pad": "BC15.1",
+  "A": 6.0,
+  "B": 14.0
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "NT4.2",
+  "to_pad": "BC15.1",
+  "A": 6.0,
+  "B": 11.9
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "NT5.2",
+  "to_pad": "BC15.1",
+  "A": 8.2,
+  "B": 13.3
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "NT6.2",
+  "to_pad": "BC15.1",
+  "A": 6.0,
+  "B": 18.9
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "NT7.2",
+  "to_pad": "BC15.1",
+  "A": 6.0,
+  "B": 19.3
+ },
+ {
+  "net": "BATT_N",
+  "layer": "B.Cu",
+  "from_pad": "NT8.2",
+  "to_pad": "BC15.1",
+  "A": 7.3,
+  "B": 19.3
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q1.2",
+  "to_pad": "BC3.1",
+  "A": 9.2,
+  "B": 9.5
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q1.3",
+  "to_pad": "BC3.1",
+  "A": 9.2,
+  "B": 10.9
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q1.4",
+  "to_pad": "BC3.1",
+  "A": 9.2,
+  "B": 11.9
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q1.5",
+  "to_pad": "BC3.1",
+  "A": 9.2,
+  "B": 11.9
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q1.6",
+  "to_pad": "BC3.1",
+  "A": 9.2,
+  "B": 11.9
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q1.7",
+  "to_pad": "BC1.1",
+  "A": 13.2,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q1.8",
+  "to_pad": "BC1.1",
+  "A": 13.2,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q1.9",
+  "to_pad": "BC1.1",
+  "A": 13.2,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q1.10",
+  "to_pad": "BC1.1",
+  "A": 13.2,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q1.11",
+  "to_pad": "BC1.1",
+  "A": 13.2,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q1.12",
+  "to_pad": "BC1.1",
+  "A": 13.2,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q1.13",
+  "to_pad": "BC1.1",
+  "A": 13.2,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q10.2",
+  "to_pad": "BC9.1",
+  "A": 2.4,
+  "B": 8.9
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q10.3",
+  "to_pad": "BC9.1",
+  "A": 2.4,
+  "B": 8.9
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q10.4",
+  "to_pad": "BC9.1",
+  "A": 2.4,
+  "B": 8.9
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q10.5",
+  "to_pad": "BC9.1",
+  "A": 2.4,
+  "B": 8.9
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q10.6",
+  "to_pad": "BC9.1",
+  "A": 2.4,
+  "B": 7.4
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q10.7",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q10.8",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q10.9",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q10.10",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q10.11",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q10.12",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q10.13",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q2.2",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 6.7
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q2.3",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 7.3
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q2.4",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 9.5
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q2.5",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 13.0
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q2.6",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 13.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q2.7",
+  "to_pad": "BC1.1",
+  "A": 10.7,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q2.8",
+  "to_pad": "BC1.1",
+  "A": 10.7,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q2.9",
+  "to_pad": "BC1.1",
+  "A": 10.7,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q2.10",
+  "to_pad": "BC1.1",
+  "A": 10.7,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q2.11",
+  "to_pad": "BC1.1",
+  "A": 10.7,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q2.12",
+  "to_pad": "BC1.1",
+  "A": 10.7,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q2.13",
+  "to_pad": "BC1.1",
+  "A": 10.7,
+  "B": 20.0
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q3.2",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 8.9
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q3.3",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 8.9
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q3.4",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 8.9
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q3.5",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 8.9
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q3.6",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 8.9
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q3.7",
+  "to_pad": "BC1.1",
+  "A": 10.7,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q3.8",
+  "to_pad": "BC1.1",
+  "A": 10.7,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q3.9",
+  "to_pad": "BC1.1",
+  "A": 10.7,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q3.10",
+  "to_pad": "BC1.1",
+  "A": 10.7,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q3.11",
+  "to_pad": "BC1.1",
+  "A": 10.7,
+  "B": 19.3
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q3.12",
+  "to_pad": "BC1.1",
+  "A": 10.7,
+  "B": 17.2
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q3.13",
+  "to_pad": "BC1.1",
+  "A": 10.7,
+  "B": 20.0
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q4.2",
+  "to_pad": "BC3.1",
+  "A": 9.0,
+  "B": 9.0
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q4.3",
+  "to_pad": "BC3.1",
+  "A": 9.2,
+  "B": 9.5
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q4.4",
+  "to_pad": "BC3.1",
+  "A": 9.2,
+  "B": 10.9
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q4.5",
+  "to_pad": "BC3.1",
+  "A": 9.2,
+  "B": 13.5
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q4.6",
+  "to_pad": "BC3.1",
+  "A": 9.2,
+  "B": 14.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q4.7",
+  "to_pad": "BC5.1",
+  "A": 16.3,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q4.8",
+  "to_pad": "BC5.1",
+  "A": 16.3,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q4.9",
+  "to_pad": "BC5.1",
+  "A": 16.3,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q4.10",
+  "to_pad": "BC5.1",
+  "A": 16.3,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q4.11",
+  "to_pad": "BC5.1",
+  "A": 16.3,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q4.12",
+  "to_pad": "BC5.1",
+  "A": 16.3,
+  "B": 18.4
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q4.13",
+  "to_pad": "BC5.1",
+  "A": 16.3,
+  "B": 20.0
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q5.2",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 10.4
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q5.3",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 10.4
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q5.4",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 10.4
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q5.5",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 10.4
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q5.6",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 10.4
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q5.7",
+  "to_pad": "BC5.1",
+  "A": 14.7,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q5.8",
+  "to_pad": "BC5.1",
+  "A": 14.7,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q5.9",
+  "to_pad": "BC5.1",
+  "A": 14.7,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q5.10",
+  "to_pad": "BC5.1",
+  "A": 14.7,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q5.11",
+  "to_pad": "BC5.1",
+  "A": 14.7,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q5.12",
+  "to_pad": "BC5.1",
+  "A": 14.7,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q5.13",
+  "to_pad": "BC5.1",
+  "A": 14.7,
+  "B": 20.0
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q6.2",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 8.9
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q6.3",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 8.9
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q6.4",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 8.9
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q6.5",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 8.9
+ },
+ {
+  "net": "MAIN_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q6.6",
+  "to_pad": "BC3.1",
+  "A": 2.4,
+  "B": 8.9
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q6.7",
+  "to_pad": "BC5.1",
+  "A": 14.7,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q6.8",
+  "to_pad": "BC5.1",
+  "A": 14.7,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q6.9",
+  "to_pad": "BC5.1",
+  "A": 14.7,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q6.10",
+  "to_pad": "BC5.1",
+  "A": 14.7,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q6.11",
+  "to_pad": "BC5.1",
+  "A": 14.7,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q6.12",
+  "to_pad": "BC5.1",
+  "A": 14.7,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q6.13",
+  "to_pad": "BC5.1",
+  "A": 14.7,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q7.2",
+  "to_pad": "BC9.1",
+  "A": 4.7,
+  "B": 9.2
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q7.3",
+  "to_pad": "BC9.1",
+  "A": 4.7,
+  "B": 9.2
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q7.4",
+  "to_pad": "BC9.1",
+  "A": 4.7,
+  "B": 10.0
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q7.5",
+  "to_pad": "BC9.1",
+  "A": 4.7,
+  "B": 10.2
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q7.6",
+  "to_pad": "BC9.1",
+  "A": 4.7,
+  "B": 10.2
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q7.7",
+  "to_pad": "BC7.1",
+  "A": 2.4,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q7.8",
+  "to_pad": "BC7.1",
+  "A": 2.4,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q7.9",
+  "to_pad": "BC7.1",
+  "A": 2.4,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q7.10",
+  "to_pad": "BC7.1",
+  "A": 2.4,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q7.11",
+  "to_pad": "BC7.1",
+  "A": 2.4,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q7.12",
+  "to_pad": "BC7.1",
+  "A": 2.4,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q7.13",
+  "to_pad": "BC7.1",
+  "A": 2.4,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q8.2",
+  "to_pad": "BC9.1",
+  "A": 4.7,
+  "B": 8.6
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q8.3",
+  "to_pad": "BC9.1",
+  "A": 4.7,
+  "B": 9.1
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q8.4",
+  "to_pad": "BC9.1",
+  "A": 4.7,
+  "B": 9.6
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q8.5",
+  "to_pad": "BC9.1",
+  "A": 4.7,
+  "B": 9.6
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q8.6",
+  "to_pad": "BC9.1",
+  "A": 4.7,
+  "B": 9.6
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q8.7",
+  "to_pad": "BC7.1",
+  "A": 2.4,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q8.8",
+  "to_pad": "BC7.1",
+  "A": 2.4,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q8.9",
+  "to_pad": "BC7.1",
+  "A": 2.4,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q8.10",
+  "to_pad": "BC7.1",
+  "A": 2.4,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q8.11",
+  "to_pad": "BC7.1",
+  "A": 2.4,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q8.12",
+  "to_pad": "BC7.1",
+  "A": 2.4,
+  "B": 18.4
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "Q8.13",
+  "to_pad": "BC7.1",
+  "A": 2.4,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q9.2",
+  "to_pad": "BC9.1",
+  "A": 4.7,
+  "B": 10.0
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q9.3",
+  "to_pad": "BC9.1",
+  "A": 4.7,
+  "B": 11.0
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q9.4",
+  "to_pad": "BC9.1",
+  "A": 4.7,
+  "B": 11.9
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q9.5",
+  "to_pad": "BC9.1",
+  "A": 4.7,
+  "B": 13.4
+ },
+ {
+  "net": "MOTION_COMMON",
+  "layer": "F.Cu",
+  "from_pad": "Q9.6",
+  "to_pad": "BC9.1",
+  "A": 4.7,
+  "B": 13.4
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q9.7",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q9.8",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q9.9",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q9.10",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q9.11",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q9.12",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "MOTION_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "Q9.13",
+  "to_pad": "BC11.1",
+  "A": 18.7,
+  "B": 20.0
+ },
+ {
+  "net": "BATT_FUSED_P",
+  "layer": "F.Cu",
+  "from_pad": "RSH1.1",
+  "to_pad": "RSH1.1",
+  "A": 9.1,
+  "B": 9.1
+ },
+ {
+  "net": "BATT_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "RSH1.4",
+  "to_pad": "BC1.1",
+  "A": 4.5,
+  "B": 20.0
+ },
+ {
+  "net": "SYS_BUS_P",
+  "layer": "F.Cu",
+  "from_pad": "RSH2.1",
+  "to_pad": "BC5.1",
+  "A": 2.4,
+  "B": 18.8
+ },
+ {
+  "net": "MOTION_SENSED_P",
+  "layer": "F.Cu",
+  "from_pad": "RSH2.4",
+  "to_pad": "BC7.1",
+  "A": 7.5,
+  "B": 20.0
+ }
+]

@@ -1,0 +1,25 @@
+BC1   BB1 copper clamp contact                          1=BATT_SENSED_P
+BC2   BB1 copper clamp contact                          1=BATT_SENSED_P
+BC3   BB2 copper clamp contact                          1=MAIN_COMMON
+BC4   BB2 copper clamp contact                          1=MAIN_COMMON
+BC5   BB3 copper clamp contact                          1=SYS_BUS_P
+BC6   BB3 copper clamp contact                          1=SYS_BUS_P
+BC7   BB4 copper clamp contact                          1=MOTION_SENSED_P
+BC8   BB4 copper clamp contact                          1=MOTION_SENSED_P
+BC9   BB5 copper clamp contact                          1=MOTION_COMMON
+BC10  BB5 copper clamp contact                          1=MOTION_COMMON
+BC11  BB6 copper clamp contact                          1=MOTION_BUS_P
+BC12  BB6 copper clamp contact                          1=MOTION_BUS_P
+BC13  BB6 copper clamp contact                          1=MOTION_BUS_P
+BC14  BB6 copper clamp contact                          1=MOTION_BUS_P
+BC15  BB7 copper clamp contact                          1=BATT_N
+NT1   ARM_L_N to BATT_N at star                         1=ARM_L_N | 2=BATT_N
+NT2   ARM_R_N to BATT_N at star                         1=ARM_R_N | 2=BATT_N
+NT3   DRIVE_N to BATT_N at star                         1=DRIVE_N | 2=BATT_N
+NT4   LIFT_N to BATT_N at star                          1=LIFT_N | 2=BATT_N
+NT5   PC_N to BATT_N at star                            1=PC_N | 2=BATT_N
+NT6   LOGIC_BUCK_N to BATT_N at                         1=LOGIC_BUCK_N | 2=BATT_N
+NT7   CHOPPER_N to BATT_N at sta                        1=CHOPPER_N | 2=BATT_N
+NT8   LOGIC_5V_N to BATT_N at st                        1=LOGIC_5V_N | 2=BATT_N
+NT9   LOGIC_GND to BATT_N at sta                        1=LOGIC_GND | 2=BATT_N
+NT10  Chopper local analog refer                        1=CHOP_GND | 2=CHOPPER_N

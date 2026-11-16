@@ -1,0 +1,4 @@
+R258  100k                       RC0805FR-07100KL       1=MOTION_IMON_ADC | 2=LOGIC_GND
+R259  100k                       RC0805FR-07100KL       1=MAIN_FAULT_GPIO_N | 2=LOGIC_GND
+R263  100k                       RC0805FR-07100KL       1=ESP_UART_RX | 2=LOGIC_GND
+R264  100k                       RC0805FR-07100KL       1=ESP_UART_TX | 2=LOGIC_GND
