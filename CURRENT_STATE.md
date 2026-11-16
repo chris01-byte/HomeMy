@@ -2,7 +2,7 @@
 
 ## Phase
 
-Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The accepted PMU electrical reference is retained under `hardware/power-management-unit/rev-a`. The only active PCB layout target is a new 300 × 280 mm engineering prototype under `hardware/power-management-unit/rev-a2-300x280`. Failed compact-layout experiments are no longer part of the working tree. Production, energization, assembly and actuator authorization remain false until their documented review gates are closed.
+Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The only current PMU board is Revision A2, 280 × 260 mm, under `hardware/power-management-unit/rev-a2-layout-280x260`: CAD complete, draft, not orderable. All earlier boards (360 × 300 Rev A, 300 × 280 A1) and the old order package were removed on 2026-11-16. The circuit design records, calculations and datasheets remain under `hardware/power-management-unit/rev-a`. A cross-review of 2026-11-16 found 25 open findings (GP-01 to GP-25) and recommends not ordering this state; see `hardware/power-management-unit/reviews/2026-11-16-rev-a2-gegenpruefung`. Production, fabrication, assembly, energization and actuator authorization remain false.
 
 ## Goal
 
@@ -57,9 +57,9 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 
 ## Next Safe Step
 
-1. Use `hardware/power-management-unit/ASTRA_300X280_LAYOUT.md` to create the new 300 × 280 mm PCB from the retained Rev-A electrical reference.
-2. Complete native ERC, DRC, schematic/PCB parity, high-current continuity and manufacturability review before generating an order package.
-3. Obtain an independent human schematic/layout/BOM review and explicit prototype-order decision. Do not infer energization or production approval from CAD completion.
+1. Decide on the cross-review findings: layout round for GP-01 to GP-04 and GP-06 to GP-13, component values for GP-05 and GP-15 to GP-17, and the two requirement-level questions GP-19 (branch protection) and GP-20 (motion-stop architecture).
+2. Apply the accepted changes in one KiCad revision of the A2 board; then rerun native ERC/DRC/parity and the review scripts in `reviews/2026-11-16-rev-a2-gegenpruefung/werkzeuge` and compare with the archived data.
+3. Obtain an independent human schematic/layout/BOM review, the fabricator's confirmation for 70 µm copper, spacing and press-fit, and an explicit prototype-order decision. Do not infer energization or production approval from CAD completion.
 4. Bring up the approved prototype with a current-limited source and no actuators; close every energization gate before connecting the battery.
 5. Use the prototype to measure MOSFET paths, shunts, inrush, external converters, chopper energy, thermal behavior, arm currents and fuse/BMS coordination for a later production revision.
 6. Define and simulate the ESP32 lifecycle state machine, button timing, heartbeat, hardware latches, event log and LED behavior before connecting actuators.
@@ -69,6 +69,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 
 1. `AGENTS.md` for safety and work rules.
 2. `context/index.json` for task-specific files.
+3. `hardware/power-management-unit/README.md` for the current PMU board, directory layout and review status.
 4. `hardware/power-management-unit/ASTRA_PCB_HANDOFF.md` for the current PMU topology and two-stage release model.
 5. `hardware/power-management-unit/interfaces-and-layout.md` for connectors, layout, component ownership, Astra outputs, and Revision-A/Revision-B gates.
 6. `hardware/power-management-unit/requirements.yaml` for explicit locked, provisional, Revision-A design/assumption/energization, and Revision-B validation requirements.
@@ -85,7 +86,8 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 
 ## Open Decisions
 
-- Revision-A CAD choices are implemented and documented in the RevA-P1 package. Physical component behavior, thermal/current assumptions and external integration remain to be validated.
+- PMU cross-review findings GP-01 to GP-25 (2026-11-16), in particular branch conductor protection (GP-19, touches locked TOP-005/MOT-005/LIFT-002), motion-stop architecture (GP-20) and whether the bolted busbars are dropped (GP-03).
+- Revision-A circuit choices are implemented in the A2 board. Physical component behavior, thermal/current assumptions and external integration remain to be validated.
 - Conservative Revision-A prototype assumptions to document: generous board outline and mounting, connector directions, external converter pinouts, busbar/heat-spreader provisions, and initial test limits.
 - Revision-B measurements: main inrush/no-precharge proof, regenerative energy, 24 V lift-bus behavior, converter capability, per-arm current, connector/cable temperature, full-load thermal behavior, and fuse/BMS/electronic-trip selectivity.
 - Final production mechanics: enclosure, component-height envelope, airflow, service access, busbar geometry, battery enclosure/venting, and chassis heat-spreader interface.

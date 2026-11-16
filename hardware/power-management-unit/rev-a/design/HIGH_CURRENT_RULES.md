@@ -1,5 +1,7 @@
 # Rev A-P1 Hochstromregeln und Engstellen
 
+> **Stand 2026-11-16:** Die Netzklassen und Regeln dieser Unterlage sind unverändert in den Design-Regeln der aktuellen Platine Rev A2 (280 × 260 mm) aktiv. **Die Zahlen und Ortsangaben (492 Abgriffe, 85 Querschnittsmessungen, Via-Felder, Y-Koordinaten, Bestellpaket) stammen von der entfernten 360 × 300-mm-Platine.** Auf A2 enthalten die Ausnahmegruppen 447 Elemente; das Engstellen-Audit wurde für A2 nicht wiederholt. Die Gegenprüfung vom 2026-11-16 zeigt, dass die Ausnahmegruppe `PWR_TAP_CONTROL` auch die Anbindung der Schutzdiode D1 enthält (GP-01), dass Rückleiter schmaler geworden sind (GP-11) und dass „247/247" nur Verbindung prüft (GP-22): `../../reviews/2026-11-16-rev-a2-gegenpruefung/BEFUNDE.md`.
+
 Engineering prototype – not production qualified.
 
 Die Regeln sichern die überprüfte Prototypgeometrie. Sie erklären die Platine

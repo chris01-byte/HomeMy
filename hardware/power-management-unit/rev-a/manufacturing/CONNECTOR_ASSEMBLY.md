@@ -2,7 +2,7 @@
 
 Diese Unterlage ergänzt die exakten Pin-Netze in `../design/chopper-parts.json` und die Herstellerquellen in `../evidence/chopper/source_manifest.json`. Die Leiterplatte ist ein Engineering-Prototyp. Montage- und Kabelartikel, die als Auswahlpunkt gekennzeichnet sind, dürfen nicht ohne passende mechanische Prüfung als bereits beschafft oder qualifiziert gelten.
 
-Die verbindlichen Bauteilrichtungen, Gate-/Pin-1-Koordinaten und M5-Anschlussflächen sind in [ASSEMBLY_ORIENTATION.md](ASSEMBLY_ORIENTATION.md) mit einer vergrößerten Padansicht dokumentiert.
+Die verbindlichen Bauteilrichtungen, Gate-/Pin-1-Koordinaten und M5-Anschlussflächen waren für die entfernte 360 × 300-Platine in `ASSEMBLY_ORIENTATION.md` dokumentiert. Für Revision A2 gibt es diese Unterlage noch nicht; die Ausrichtung der M5-Klemmen ist offen (Befund GP-10 und GP-24 der Gegenprüfung vom 2026-11-16).
 
 ## Hochstrom J1..J6
 
@@ -21,7 +21,7 @@ Passende M5-Ringkabelschuhe sind für genau den jeweiligen Leiteraufbau/Querschn
 
 Ringkabelschuh flach auf die verzinnte Anschlussfläche legen. Geeignete glatte Unterlegscheibe und Schraubenlänge passend zur tatsächlichen Gewindetiefe auswählen; vollständiger Eingriff ohne Aufsetzen am Anschlag oder Kollision hinter dem Gewindeflansch. M5-Befestigungsdrehmoment **höchstens2.2 Nm** nach Hersteller; Zielwert durch die gewählte Schrauben-/Ringkabelschuh-Kombination festlegen. Rechtwinkligen Anschluss während des Anziehens mechanisch gegenhalten, damit das Drehmoment nicht über Pressfit-Pins in die Platine gelangt. Keinen Stromtragfähigkeitsnachweis aus dem160-A-Datenblattwert@20°C ableiten: Hersteller nennt ausdrücklich PCB, Kabelschuh und Kabelquerschnitt als begrenzende Einflüsse.
 
-Für die Gehäuseanordnung je M5-Fläche zunächst mindestens 25 mm freien axialen Schraub-/Werkzeugzugang und einen Kabelbiegeraum nach dem ausgewählten Kabeldatenblatt vorsehen. Diese 25 mm sind Montageplanungsreserve, keine verifizierte Werkzeughülle. Die Richtungstabelle in ASSEMBLY_ORIENTATION.md ist am realen Muster mit Gehäuse und Werkzeug abzugleichen. Die 9 × 9 mm Körperkontur allein beschreibt keine Kabelhülle. Separate Kabelklemmen am Träger oder Gehäuse so anordnen, dass Zug, Biegung und Servicekräfte nicht vom Terminal aufgenommen werden.
+Für die Gehäuseanordnung je M5-Fläche zunächst mindestens 25 mm freien axialen Schraub-/Werkzeugzugang und einen Kabelbiegeraum nach dem ausgewählten Kabeldatenblatt vorsehen. Diese 25 mm sind Montageplanungsreserve, keine verifizierte Werkzeughülle. Eine für A2 neu zu erstellende Richtungstabelle ist am realen Muster mit Gehäuse und Werkzeug abzugleichen. Die 9 × 9 mm Körperkontur allein beschreibt keine Kabelhülle. Separate Kabelklemmen am Träger oder Gehäuse so anordnen, dass Zug, Biegung und Servicekräfte nicht vom Terminal aufgenommen werden.
 
 ## Schraubklemmverbinder und Pinfolge
 

@@ -1,5 +1,7 @@
 # Revision A BOM
 
+> **Status 2026-11-16:** The Rev A-P1 order package, its ZIP and `release.json` described below were removed together with the 360 × 300 mm board; that board was never approved for ordering by the owner. The current BOM for Revision A2 (280 × 260 mm) is `../../rev-a2-layout-280x260/manufacturing/REV_A_BOM.csv` / `.json` with `REV_A_EXTERNAL_BOM.*`. The BOM rules in this file still apply; references to the package are historical.
+
 State: `rev_a_prototype_procurement_data`.
 `rev_a_engineering_prototype = true`; `rev_b_production = false`.
 

@@ -1,5 +1,7 @@
 # Revision A CAD and evidence workflow
 
+> **Status 2026-11-16:** These generators and checkers belong to the original Rev A workflow for the removed 360 × 300 mm board. Directories they read or write (`../kicad/`, `../reports/`, the order package, `release.json`, router runs) no longer exist. They are kept only as the source of the check methods that the A2 reports reference. For the current board use the runnable scripts in `../../reviews/2026-11-16-rev-a2-gegenpruefung/werkzeuge/`.
+
 rev_a_engineering_prototype: true  
 rev_b_production: false
 

@@ -67,7 +67,7 @@
       ]
     },
     "pmu": {
-      "when": "GPT Astra PMU core schematic capture, Revision-A prototype, power topology, protection coordination, power controller, or regeneration design",
+      "when": "PMU topology, protection coordination, power controller, regeneration design, or the original Revision-A design brief",
       "files": [
         "hardware/power-management-unit/ASTRA_PCB_HANDOFF.md"
       ]
@@ -118,11 +118,16 @@
         "CURRENT_STATE.md"
       ]
     },
-    "pmu-astra-layout": {
-      "when": "creating or finishing the canonical 300 x 280 mm PMU engineering-prototype PCB with bounded Astra iterations",
+    "pmu-board": {
+      "when": "current PMU board (Revision A2, 280 x 260 mm), directory layout, release status, or which PMU files are authoritative",
       "files": [
-        "hardware/power-management-unit/README.md",
-        "hardware/power-management-unit/ASTRA_300X280_LAYOUT.md"
+        "hardware/power-management-unit/README.md"
+      ]
+    },
+    "pmu-review": {
+      "when": "PMU cross-review findings GP-01 to GP-25, open layout or circuit corrections, review calculations, or review scripts",
+      "files": [
+        "hardware/power-management-unit/reviews/2026-11-16-rev-a2-gegenpruefung/README.md"
       ]
     }
   }

@@ -1,5 +1,7 @@
 # Mechanischer Fertigungsstand PMU Rev A
 
+> **Stand 2026-11-16:** Diese Unterlage wurde für die entfernte 360 × 300-mm-Platine geschrieben. Klemmstapel, Werkstoffe, Folie und Prüfvorbehalte gelten weiter; **alle Koordinaten, Schienenkonturen, Ausschnitte und die genannten Zeichnungen (`BUSBAR_TOP_VIEW_1to1.svg`, `busbar-pcb-interface.json` in diesem Verzeichnis, Bestellpaket) gelten nicht für die aktuelle Platine Rev A2 (280 × 260 mm)**. Die A2-Geometrie steht in `../../rev-a2-layout-280x260/manufacturing/busbar-pcb-interface.json`; Zeichnungen für A2 gibt es nicht. Die Gegenprüfung vom 2026-11-16 empfiehlt, die Schienen BB1–BB6 und die Brücken NB1–NB8 zu streichen (Befunde GP-03, GP-11, GP-24 in `../../reviews/2026-11-16-rev-a2-gegenpruefung/BEFUNDE.md`).
+
 **Verbindliche Montageanforderung für den Rev-A-P1-Engineering-Prototyp. Engineering prototype – not production qualified.** Der Paket-Manifest legt den freigegebenen PCB-Stand fest. Die Busbar-Bohrkoordinaten und Netze sind gegen die tatsächlichen PCB-Kontakte geprüft. Dies ist keine Strombelastbarkeits-, Betriebs- oder Serienfreigabe; Coupon- und Losprüfungen bleiben erforderlich.
 
 ## Dateien und Bezugssystem

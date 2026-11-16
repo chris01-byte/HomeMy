@@ -1,10 +1,10 @@
 # Lagenaufbau und Pressfit-Prozess
 
-Status: verbindliche **Fertigungsanforderung für Rev A-P1**. Engineering prototype – not production qualified. Schichtdicken, Laminatartikel, Mikroschliff und Einpresskraftkurve müssen am bestellten Fertigungslos bestätigt werden. Quelle: Würth7461103, Revision001.005 vom2025-09-11, Seiten1 und3; archivierte Herstellerquelle und SHA-256 im Quellprojekt unter `evidence/chopper/source_manifest.json`. Die 48 endgültigen Bohrkoordinaten stehen im Bestellpaket in `PRESSFIT_HOLES.csv`.
+Status: verbindliche **Fertigungsanforderung für Rev A-P1**. Engineering prototype – not production qualified. Schichtdicken, Laminatartikel, Mikroschliff und Einpresskraftkurve müssen am bestellten Fertigungslos bestätigt werden. Quelle: Würth7461103, Revision001.005 vom2025-09-11, Seiten1 und3; archivierte Herstellerquelle und SHA-256 im Quellprojekt unter `evidence/chopper/source_manifest.json`. Für Rev A2 gibt es noch keine `PRESSFIT_HOLES.csv`; die 48 Einpressbohrungen sind in den Bohrdaten nur als eigenes Werkzeug 1,475 mm erkennbar (Befund GP-24 der Gegenprüfung vom 2026-11-16). Die A2-Bohrdaten enthalten außerdem 683 Bohrungen 0,30 mm und 18 Bohrungen 0,20 mm, die in den drei Bohrklassen unten nicht aufgeführt sind.
 
 ## Leiterplatte
 
-Außenkontur360.00×300.00 mm, Fertigungsziel mechanische Gesamtdicke zwischen den äußeren Kupferoberflächen **1.60 +0.10/−0.00 mm**, ohne aufgedruckte Lötstoppdicke. 1.6 mm±10% ist wegen des Hersteller-Mindestwertes1.6 mm für7461103 unzulässig. Der Fertiger darf seine interne Sollmitte1.65 mm wählen, muss die obere/untere Grenze über das ganze Los einhalten. Für Hülsen-Widerstände wird konservativ1.70 mm Länge gerechnet.
+Außenkontur der aktuellen Leiterplatte Rev A2: 280.00×260.00 mm (ursprünglich für 360×300 mm geschrieben), Fertigungsziel mechanische Gesamtdicke zwischen den äußeren Kupferoberflächen **1.60 +0.10/−0.00 mm**, ohne aufgedruckte Lötstoppdicke. 1.6 mm±10% ist wegen des Hersteller-Mindestwertes1.6 mm für7461103 unzulässig. Der Fertiger darf seine interne Sollmitte1.65 mm wählen, muss die obere/untere Grenze über das ganze Los einhalten. Für Hülsen-Widerstände wird konservativ1.70 mm Länge gerechnet.
 
 | Reihenfolge oben nach unten | Fertigungsanforderung | Funktion |
 |---|---|---|

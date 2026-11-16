@@ -1,93 +1,39 @@
-# HomeMy PMU Revision A
+# PMU Schaltungsauslegung Rev A
 
 rev_a_engineering_prototype: true  
 rev_b_production: false
 
-This directory contains the engineering implementation of the PMU requirements
-at repository baseline `1a70bec1de092db8a2d101e67e9e882622992003`. Open
-[`kicad/HomeMy_PMU_RevA.kicad_pro`](kicad/HomeMy_PMU_RevA.kicad_pro) in KiCad 10.
-The root schematic has fifteen hierarchical child sheets. The 360 × 300 mm
-laboratory PCB contains four copper layers, 425 footprints including four
-mounting holes, 40 test points, and an all-layer ESP32 antenna keepout.
+Dieses Verzeichnis enthält die elektrische Auslegung der PMU: Schaltungsbeschreibungen, Bauteilwahl, Berechnungen, Datenblätter und Prozessunterlagen. Sie gilt unverändert für die aktuelle Leiterplatte **Rev A2, 280 × 260 mm** unter [`../rev-a2-layout-280x260/`](../rev-a2-layout-280x260/README.md), weil A2 denselben Schaltplan verwendet.
 
-The authoritative requirements and staged verification plan remain in the
-parent directory. Component calculations are design evidence, not measurements.
+**Hier liegt keine Leiterplatte mehr.** Die ursprüngliche 360 × 300-mm-Platine, ihr Bestellpaket Rev A-P1 und alle platinenbezogenen Berichte wurden am 2026-11-16 entfernt (Git-Historie bis Commit `d37c7f7`). Aussagen in den Unterlagen zu Koordinaten, Via-Zahlen, Querschnittsmessungen oder dem Bestellpaket der 360 × 300-Platine sind historisch; für A2 gelten die Dateien unter `../rev-a2-layout-280x260/` und die Befunde der [Gegenprüfung](../reviews/2026-11-16-rev-a2-gegenpruefung/README.md).
 
-The [final review](evidence/FINAL_REVIEW.md) records zero native ERC findings,
-zero DRC findings, zero open connections and zero schematic-parity differences.
-Strict source/PCB/BOM reconciliation and final manufacturing file coverage also
-pass. Those results are bound to the final PCB and output hashes.
+Berechnungen sind Auslegungsnachweise, keine Messungen.
 
-Completion and release are tracked in [`release.json`](release.json). A missing
-or failed CAD check must never be interpreted as a pass. The final Rev A-P1 ERC
-and DRC both exited normally with code **0** in the installed KiCad 10.0.6 user
-session. All current CAD input hashes match. Earlier sandbox timeout reports
-are retained as historical evidence.
+## Inhalt
 
-The versioned [Rev A-P1 order package](manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/README.md)
-and [ZIP](manufacturing/HomeMy_PMU_RevA-P1_2026-09-10.zip) cover the bare or
-populated PCB engineering prototype. **Engineering prototype – not production
-qualified.** Fabrication/assembly release is confined to that scope. The supplier
-must accept the specified stackup and press-fit process. No board has been
-ordered, built or energized by this work; no series-production release exists.
-All nine unresolved external items are required before their powered use,
-with the PCB interfaces frozen. The external 60 A fuse remains the only melting
-fuse, and motion remains OFF until explicit rearming.
+| Pfad | Inhalt |
+|---|---|
+| [design/POWER_STAGE.md](design/POWER_STAGE.md) | Haupt- und Motion-Schalter, Shunts, eFuses, Zeitglieder, Schutzschwellen |
+| [design/WAKE_IO.md](design/WAKE_IO.md) | Always-on-Domäne, Taster, Selbsthaltung, Latches, ESP32, CAN, LED |
+| [design/CHOPPER_MECHANICS.md](design/CHOPPER_MECHANICS.md) | Bremschopper, Steckverbinder, Leiter |
+| [design/HIGH_CURRENT_RULES.md](design/HIGH_CURRENT_RULES.md) | Hochstromregeln und Ausnahmegruppen der Design-Regeln |
+| [design/CIRCUIT_CROSS_REVIEW.md](design/CIRCUIT_CROSS_REVIEW.md), [design/CRITICAL_ROUTING_REVIEW.md](design/CRITICAL_ROUTING_REVIEW.md) | frühere Schaltungs- und Routingprüfung |
+| [design/CRITICAL_ALTERNATIVES.md](design/CRITICAL_ALTERNATIVES.md), [design/CHOPPER_PROCUREMENT.md](design/CHOPPER_PROCUREMENT.md) | Alternativen und Beschaffung kritischer Teile |
+| `design/*-parts.json`, `design/*.py` | maschinenlesbare Bauteilanschlüsse und Rechenskripte |
+| `evidence/power/`, `evidence/chopper/`, `evidence/*.pdf` | Datenblätter, Quellenlisten, berechnete Werte |
+| [evidence/REVIEWED_DEFAULT_ERC_DRC.md](evidence/REVIEWED_DEFAULT_ERC_DRC.md) | geprüfte ERC-/DRC-Regelkonfiguration |
+| `evidence/high-current-tap-capture.json`, `evidence/review_filled_power.py` | Grundlage der Leistungspfadprüfung (auch für A2 verwendet) |
+| [manufacturing/PCB_STACKUP_PRESSFIT.md](manufacturing/PCB_STACKUP_PRESSFIT.md) | Lagenaufbau, Bohrklassen, Einpressprozess |
+| [manufacturing/MECHANICAL_BUILD.md](manufacturing/MECHANICAL_BUILD.md), [manufacturing/CONNECTOR_ASSEMBLY.md](manufacturing/CONNECTOR_ASSEMBLY.md) | Schienen-/Klemmkonzept und Anschlussmontage |
+| `manufacturing/MECHANICAL_CATALOG_BOM.json`, `busbar-calculations.json`, `build_mechanical.py`, `BOM_README.md` | Mechanik-Stückliste und Rechenwerte |
+| `scripts/` | Generatoren und Prüfer des ursprünglichen Ablaufs. Pfadgebunden an die damalige Arbeitsumgebung; nur als Quelle der Prüfmethoden aufbewahrt |
 
-Four enforced power netclasses, explicit reviewed low-current tap groups,
-refined power pours and a wider battery-return corridor are documented in
-[HIGH_CURRENT_RULES.md](design/HIGH_CURRENT_RULES.md). All 247 checked power-pad
-connections remain continuous without crediting 492 control/tap copper items.
+## Gewählte Architektur
 
-## Review entry points
+LM74930QRGERQ1 steuert drei plus drei PSMN1R0-100ASFJ als Hauptschalter. TPS48110AQDGXRQ1 steuert zwei plus zwei als Motion-Gate. Beide Strompfade nutzen CSS4J-4026R-L500F (0,5 mΩ, vierpolig); INA228AIDGSR misst am Hauptshunt. Zwei TPS26631RGER schützen die Eingänge von PC- und 5-V-Wandler. Der analoge Bremschopper verwendet IPT015N10N5ATMA1, LM339BIPWR und UCC27511DBVR mit zwei externen 10-Ω-Widerständen.
 
-| Artifact | Content |
-| --- | --- |
-| [Final review](evidence/FINAL_REVIEW.md) | Final findings, file identities, visual inspection and unresolved physical gates |
-| [Requirements traceability](../REQUIREMENTS_TRACEABILITY.md) | All 55 numbered requirements, implementation and verification disposition |
-| [Revision A assumptions](../REV_A_ASSUMPTIONS.md) | Provisional thresholds, component tolerances, test points and initial settings |
-| [Design review and bring-up](../DESIGN_REVIEW_AND_BRINGUP.md) | Ordered motorless tests and mandatory energization gates |
-| [Revision B validation](../REV_B_VALIDATION.md) | Measurements that control later production decisions |
-| [Power-stage record](design/POWER_STAGE.md) | Main/motion FET banks, shunts, eFuses, timer and protection calculations |
-| [BOM](manufacturing/REV_A_BOM.csv) | 356 purchased PCB positions; 352 populated and four DNP |
-| [External BOM](manufacturing/REV_A_EXTERNAL_BOM.csv) | Harness/mating parts, braking resistors and specified mechanical hardware |
-| [Mechanical build](manufacturing/MECHANICAL_BUILD.md) | Seven underside copper bars, eight star bridges, clamp/insulation details |
-| [Stackup and press-fit](manufacturing/PCB_STACKUP_PRESSFIT.md) | Minimum finished 70/35/35/70 µm copper, 1.60–1.70 mm between outer copper faces excluding masks, and controlled finished holes |
-| [Connector assembly](manufacturing/CONNECTOR_ASSEMBLY.md) | Pin assignments, cable sizes, mating parts and assembly process |
-| [Reviewed ERC/DRC rules](evidence/REVIEWED_DEFAULT_ERC_DRC.md) | Enabled checks, applicable defaults and narrowly scoped pad rules |
-| [Rev A-P1 order package](manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/README.md) | Gerbers, drills, complete BOM, placements, DNP, 48 press-fit holes, busbar and polarity drawings, ZIP and hashes |
-| [Open external positions](manufacturing/HomeMy_PMU_RevA-P1_2026-09-10/integration/OPEN_ORDER_ITEMS.md) | None before PCB ordering; nine before energization, with frozen interfaces |
-| [Reproduction workflow](scripts/README.md) | Source capture, native CAD generation, routing, checks and exports |
+LT3014B, LTC2954 und LTC6993 bilden Wecken, Startfenster, Selbsthaltung und Zwangsabschaltung. ESP32-S3-WROOM-1-N8, TCAN1042HGVDRQ1, Hardware-Watchdog, Fehler-Latches und Analogschalter ergänzen Überwachung und Kommunikation. Die Hardware-Unterlagen enthalten keine Firmware und keine Bewegungsfreigabe.
 
-## Selected architecture
+## Grenzen der Nachweise
 
-LM74930QRGERQ1 controls three-plus-three PSMN1R0-100ASFJ main MOSFETs.
-TPS48110AQDGXRQ1 controls the two-plus-two motion bank. Both current paths use
-CSS4J-4026R-L500F four-terminal 0.5 mΩ shunts; INA228AIDGSR monitors the main
-shunt through separate Kelvin filters. Two TPS26631RGER devices protect the PC
-and external 5 V converter inputs. The analog motor-side chopper uses
-IPT015N10N5ATMA1, LM339BIPWR and UCC27511DBVR with two external RH100 10 Ω resistors.
-
-The always-on LT3014B/LTC2954/LTC6993 hardware implements wake, startup grant,
-self-hold and forced-off behavior. The ESP32-S3-WROOM-1-N8, TCAN1042HGVDRQ1,
-hardware watchdog/fault latches and power-off signal isolation complete the
-supervision and communication interface. No firmware or real-motion permission
-is implied by the hardware artifacts.
-
-## Evidence limits
-
-The calculations expose the main-controller minimum gate-drive resistance gap,
-timer leakage/temperature limits, motion inrush/SOA envelope, chopper threshold
-corners, single-pulse resistor energy, and uncertain fuse/BMS selectivity.
-Measured contact resistance, temperature, transient peaks, repetitive braking,
-converter behavior and system stop behavior remain physical validation work.
-ERC/DRC cannot close those measurements.
-
-`design/` records circuit decisions and machine-readable component connections;
-`evidence/` stores manufacturer sources and review records; `reports/` stores
-native CAD results and routing candidates. Historical reports retain their
-original findings and are superseded only by the contemporaneous final manifest.
-
-The local checkout is on `codex/pmu-rev-a`. Revert its individual commits to roll
-back the engineering artifacts; this work does not change robot runtime or
-customer-mode defaults.
+Die Rechnungen benennen offen: Gate-Spannung des Hauptschalters, Leckströme und Temperaturgrenzen der Zeitglieder, Einschaltstrom und SOA des Motion-Gates, Chopper-Schwellen, Einzelimpulsenergie der Widerstände und die unsichere Selektivität von Sicherung und BMS. Kontaktwiderstände, Temperaturen, Transienten, wiederholtes Bremsen, Wandlerverhalten und das Stoppverhalten des Gesamtsystems sind physische Validierung. Die Gegenprüfung vom 2026-11-16 ergänzt weitere Punkte (GP-01 bis GP-25).
