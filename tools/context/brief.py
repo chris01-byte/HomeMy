@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a bounded, task-specific context packet for an agent."""
+"""Build a task-specific context packet for an agent."""
 
 from __future__ import annotations
 
@@ -31,7 +31,7 @@ def selected_paths(index: dict, area: str | None) -> list[str]:
     return list(dict.fromkeys(paths))
 
 
-def read_packet(paths: list[str], limit: int) -> tuple[str, list[str]]:
+def read_packet(paths: list[str]) -> tuple[str, list[str]]:
     sections: list[str] = []
     errors: list[str] = []
 
@@ -42,17 +42,13 @@ def read_packet(paths: list[str], limit: int) -> tuple[str, list[str]]:
             continue
         sections.append(f"# {relative_path}\n\n{path.read_text(encoding='utf-8').rstrip()}\n")
 
-    packet = "\n".join(sections)
-    if len(packet) > limit:
-        errors.append(f"context packet has {len(packet)} characters; limit is {limit}")
-    return packet, errors
+    return "\n".join(sections), errors
 
 
 def check_index(index: dict) -> list[str]:
     errors: list[str] = []
-    limit = index["max_bundle_characters"]
     for area in index["areas"]:
-        _, area_errors = read_packet(selected_paths(index, area), limit)
+        _, area_errors = read_packet(selected_paths(index, area))
         errors.extend(f"{area}: {error}" for error in area_errors)
     return errors
 
@@ -68,9 +64,7 @@ def main() -> int:
         errors = check_index(index) if args.check else []
         if errors:
             raise ValueError("\n".join(errors))
-        packet, errors = read_packet(
-            selected_paths(index, args.area), index["max_bundle_characters"]
-        )
+        packet, errors = read_packet(selected_paths(index, args.area))
         if errors:
             raise ValueError("\n".join(errors))
     except (KeyError, ValueError, json.JSONDecodeError) as error:

@@ -4,7 +4,6 @@
     "AGENTS.md",
     "CURRENT_STATE.md"
   ],
-  "max_bundle_characters": 36000,
   "areas": {
     "architecture": {
       "when": "package boundaries, system design, or ownership",

@@ -27,7 +27,7 @@ The current decision and contracts are [the appliance architecture decision](doc
 | [deployment/systemd/](deployment/systemd/README.md) | Versioned systemd target and unit templates, not yet enabled |
 | [integration/roboter_ws/](integration/roboter_ws/TRANSFER_MANIFEST.md) | Controlled transfers from roboter_ws |
 | [docs/](docs/README.md) | Decisions, transfers, runbooks, and archived evidence |
-| [context/](context/index.json) | Token-bounded context routing for agents |
+| [context/](context/index.json) | Task-specific context routing for agents |
 | [tools/context/](tools/context/brief.py) | Context packet generator and validator |
 
 ## Transfer Policy
