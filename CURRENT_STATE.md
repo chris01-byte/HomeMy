@@ -32,6 +32,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - The external AI server remains remote and optional. Its failure maps to READY_LIMITED only after local mandatory checks pass.
 - STL-27L is the primary planned local 2D source for the validated floor and near-field operating envelope. A future OAK 4D provides complementary local 3D depth geometry.
 - An HWT601-AGV-485 six-axis IMU is planned for yaw-rate-aided odometry on its own read-only RS485 port. It has no absolute heading and is never a movement authority.
+- The STL-27L sits inside the base at the front and scans through an open slot in the structural acrylic ring, about 164 mm above the floor in the CAD model. Two struts and four slot webs give six predicted blind sectors, 34 degrees in total. A closed acrylic window failed the owner's test.
 - A future semantic perception and grasping path selects YOLO or Grounding DINO on demand, uses SAM2 plus local OAK depth, and treats every model output only as a candidate, never as movement authority.
 - Power-on, restart, ready state, and fault recovery never authorize motion automatically.
 
@@ -90,6 +91,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 15. `integration/roboter_ws/TRANSFER_MANIFEST.md` for incoming transfers.
 16. `docs/decisions/2026-08-31-semantic-perception-and-grasping.md` for the proposed semantic perception and grasping pipeline.
 17. `docs/transfers/roboter_ws/2026-11-16-hwt601-imu-state-estimation.md` for the HWT601 IMU candidate.
+18. `docs/decisions/2026-11-16-lidar-slot-and-support-webs.md` for the LiDAR slot, web positions, and the sectors to mask.
 
 ## Open Decisions
 
@@ -103,6 +105,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - Exact HomeMy chassis, wheel, drive-train, LiDAR-frame, OAK-frame, sensor-mount, protection-volume, arm-mass, joint-speed, and footprint measurements.
 - Final RobStride joint selection/reduction, USB-CAN adapter, CAN identifiers/message contract, and RS485 addressing/update rates.
 - HWT601 mount location, supply, third serial adapter, axis mapping, and behavior on IMU loss.
+- Measured LiDAR mask sectors and margins for the slotted base ring (L4); the recorded values are CAD predictions.
 - Exact local model implementations, accelerator, ROS interfaces, and validation thresholds for semantic perception and grasping.
 - External AI health endpoint, authentication storage, and capability protocol.
 - Whether HomeMy includes `robot_interfaces`, `safety_monitor`, mission-gate and behavior-tree patterns, semantic maps, or app functions from roboter_ws.

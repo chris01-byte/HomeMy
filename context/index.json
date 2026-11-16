@@ -34,9 +34,10 @@
       ]
     },
     "lidar": {
-      "when": "STL-27L LiDAR, scan normalization, LiDAR frames, masks, or LiDAR commissioning",
+      "when": "STL-27L LiDAR, scan normalization, LiDAR frames, masks, blind sectors, slot webs, or LiDAR commissioning",
       "files": [
         "contracts/hardware/lidar-commissioning.md",
+        "docs/decisions/2026-11-16-lidar-slot-and-support-webs.md",
         "integration/roboter_ws/TRANSFER_MANIFEST.md"
       ]
     },

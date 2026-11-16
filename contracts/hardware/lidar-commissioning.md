@@ -36,13 +36,17 @@ Record these values only after the LiDAR is installed on the finished HomeMy cha
 
 The source pairing laser_scan_dir=true and tf_yaw=+1.5708 is evidence about the source installation only. It must not be copied as a HomeMy calibration constant and may only be accepted or replaced as one coupled, measured result.
 
+## Design Prediction for Masking
+
+HomeMy mounts the LiDAR inside the base behind an open slot. The CAD-derived blind sectors of the two struts and the slot webs are recorded in `docs/decisions/2026-11-16-lidar-slot-and-support-webs.md`. They are the expected starting point for L4, not accepted mask values. L4 passes only when live scans confirm each sector and its margin.
+
 ## Commissioning Sequence
 
 1. L0: with motion disabled, verify USB identity, permissions, driver provenance, and clean start and stop behavior.
 2. L1: verify raw scans, timestamps, range data, and the actual beam-count distribution while stationary.
 3. L2: verify normalized output on a fixed angle grid and test masked-return handling with synthetic input.
 4. L3: use a physical directional target to validate scan direction and the complete LiDAR-to-base frame transform together.
-5. L4: characterize chassis and mast occlusion, then verify the intended mask against live scans.
+5. L4: characterize chassis, strut, and slot-web occlusion, then verify the intended mask against live scans.
 6. L5: test reconnect, stale-data detection, and a controlled sensor-loss fault without enabling motion.
 7. L6: only after the drivebase, footprint, and safety contracts are commissioned, validate the LiDAR in a separate navigation integration test.
 
