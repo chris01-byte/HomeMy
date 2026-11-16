@@ -26,6 +26,8 @@ Implements `docs/decisions/2026-11-16-manual-mapping-and-app-room-management.md`
 | Room overlay | future `src/homemy_room_manager/` |
 | App | future HomeMy app, starting from the map, room, connection, and status parts of the Amadeus app |
 
+New for HomeMy, with no source to adapt: a mapping-mode switch in the app and a robot-side mode manager that accepts it. The source started its mapping stack from a terminal. The HomeMy controller link is wireless.
+
 ## 3. Interface and Incompatible Assumptions
 
 Source behavior worth keeping:

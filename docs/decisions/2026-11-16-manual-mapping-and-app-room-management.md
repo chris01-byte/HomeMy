@@ -50,6 +50,8 @@ Manual driving is the first planned use of real HomeMy motion. It needs its own 
 - **Controller:** the same DualShock model as Amadeus. The Amadeus button assignment is kept: direction pad up and down drives, left and right turns, R1 selects the faster mode.
 - **No dead-man button.** The robot drives as soon as a direction is pressed. This is an owner decision against the recommendation in the first version of this record.
 - **Who maps:** a technician or the customer. Manual driving must therefore work in customer mode, without an Ubuntu login or terminal.
+- **Controller link:** wireless.
+- **Mapping mode is switched on and off in the app,** so that a customer can activate it.
 
 Consequences the manual-drive contract must cover because there is no dead-man button:
 
@@ -57,7 +59,22 @@ Consequences the manual-drive contract must cover because there is no dead-man b
 - the stop on controller disconnect, on an empty controller battery, and on command timeout must be proven with a direction held down;
 - mapping mode is entered and left explicitly, so that a controller lying around cannot move the robot outside that mode.
 
-Still open: how a customer enters mapping mode and connects the controller without an Ubuntu login, and whether the controller is wired or wireless.
+Consequences of the wireless link and the app switch:
+
+- The app gains a function that Amadeus did not have. On Amadeus the mapping stack was started from a terminal; the app could show the map, save it, and edit rooms, but not start mapping. HomeMy also needs a robot-side mode manager that accepts the switch.
+- Switching mapping mode on never moves the robot. Motion additionally needs input from the connected controller. The app still sends no motor commands.
+- The contract must define from which lifecycle states mapping mode is accepted. Proposed: only READY or READY_LIMITED, counted as OPERATING while active, and never surviving a fault, shutdown, or restart.
+- The mode switch arrives over the app bridge. Access control for that bridge is therefore required before customer use, not optional.
+- A wireless link can drop at any time through range, interference, or an empty battery. The proven stop on link loss is a release condition for the first drive.
+- The onboard computer needs a wireless receiver for the controller, and its reception from inside the base must be checked.
+
+Still open:
+
+- how the controller is paired with the robot in customer mode: delivered paired, or paired through the app;
+- whether mapping mode ends by itself after a period without controller input;
+- what happens when the app disconnects while mapping mode is active;
+- whether mapping mode gets its own LED pattern or uses the OPERATING pattern;
+- whether the app keeps a stop button on the mapping screen. The Amadeus app had a stop request.
 
 The button and axis numbers come from the operating-system driver and the joystick node, not only from the controller. They are expected to carry over, but must be checked once on the HomeMy computer before the first drive.
 
