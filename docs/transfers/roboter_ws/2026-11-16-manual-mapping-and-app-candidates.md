@@ -34,11 +34,11 @@ Source behavior worth keeping:
 - **Room overlay:** rooms are polygons with ID, name, optional colour, and optional navigation goal. Every write needs the current map fingerprint and base revision. The overlay locks itself when the map manager is silent or the fingerprint changes. It has no drive interface; a navigation goal is stored data, never a command.
 - **App:** connects over a rosbridge WebSocket, shows the map, the robot pose, and a three-step room editor (draw area, save, optional goal). It sends no direct motor commands.
 - **Gamepad driving:** `joy` plus `teleop_twist_joy`, commands sent through the collision path instead of directly to the base, a 20 Hz repeat for the base watchdog, slow default speeds, and a faster mode on a second button.
+- **Controller assignment:** HomeMy uses the same DualShock model, so the source assignment is kept by owner decision: direction pad for driving and turning, R1 for the faster mode, and no dead-man button (`require_enable_button: false`). The axis and button numbers must be checked once on the HomeMy computer.
 
 Not portable as is:
 
-- the controller mapping and dead zone, measured on a DualShock;
-- the disabled dead-man button (`require_enable_button: false`) and the second control branch that sends directly to the base and bypasses the collision monitor;
+- the second control branch that sends directly to the base and bypasses the collision monitor;
 - the source command topic chain (`cmd_vel_smoothed`, `nav2_collision_monitor`, VL53 sources), which HomeMy replaces with its own movement gate and obstacle protection;
 - storage paths and names containing `amadeus`, the app's default bridge host, and every map, room, or home data file;
 - the app's mission, exploration, grasping, and AI views, and the browser app (`src/smartphone_gui/`), which centres on missions and exploration;
@@ -56,7 +56,7 @@ The map store, room overlay, and app have no motion effect. Gamepad driving move
 
 ## 6. Risks and Rollback
 
-Risks: adopting the source's disabled dead-man and bypass branch by accident, a different DualSense layout, invalid rooms after remapping, and an open bridge on the home network.
+Risks: driving without a dead-man button, adopting the source bypass branch by accident, changed axis numbering on a different computer, invalid rooms after remapping, and an open bridge on the home network.
 
 Rollback: remove the manual-drive profile and the bridge from composition; the map store and room overlay can stay as non-moving services. Do not restore source controller mappings, storage paths, or home data.
 

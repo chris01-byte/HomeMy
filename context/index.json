@@ -49,14 +49,14 @@
       ]
     },
     "mapping-app": {
-      "when": "manual mapping, gamepad or PS5 controller driving, teleoperation, map saving, map versions, rooms, room overlay, or the HomeMy app",
+      "when": "manual mapping, gamepad or DualShock driving, teleoperation, map saving, map versions, rooms, room overlay, or the HomeMy app",
       "files": [
         "docs/decisions/2026-11-16-manual-mapping-and-app-room-management.md",
         "docs/transfers/roboter_ws/2026-11-16-manual-mapping-and-app-candidates.md"
       ]
     },
     "imu": {
-      "when": "HWT601 IMU, yaw rate, gyro bias, encoder and IMU fusion, EKF odometry, or IMU commissioning",
+      "when": "HWT601 IMU, yaw rate, gyro bias, tile joints, encoder and IMU fusion, EKF odometry, or IMU commissioning",
       "files": [
         "docs/transfers/roboter_ws/2026-11-16-hwt601-imu-state-estimation.md",
         "integration/roboter_ws/TRANSFER_MANIFEST.md"

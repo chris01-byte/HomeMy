@@ -52,6 +52,21 @@ HomeMy consequences that are not yet reflected elsewhere:
 - The CAD model contains no IMU mounting location yet.
 - The source ran on ROS 2 Humble. Dependency compatibility must be checked once the HomeMy ROS distribution is fixed.
 
+## Why HomeMy Needs It: Tile Joints
+
+Source evidence, recorded in the source project log at the reference commit `1d91229`:
+
+- 2026-08-24: a manual remap on a tiled floor produced fan-shaped, offset walls and was discarded. The robot visibly rocked on larger tile joints. Encoders and the motor bus reported no fault.
+- 2026-09-10: a measured run over one joint was stopped after 8.5 cm. In that window the encoders reported +0.006 degrees of yaw, the HWT601 -3.21 degrees, and a wheel-independent LiDAR matcher -3.00 degrees. The joint turned the chassis and the wheel encoders could not see it.
+- In the same run the tilt was small: at most 0.019 rad change of the gravity direction, far below the tilt limits.
+- 2026-09-10: over a full turn in place the totals were HWT 362.09, LiDAR 361.75, and encoders 358.03 degrees.
+
+The source therefore fuses encoder forward speed with gyro yaw rate and keeps encoder yaw out of the estimate. HomeMy adopts that principle.
+
+A second source mechanism is a scan gate that withholds LiDAR scans during tilt or impact. Its node exists at `1d91229` and on `feature/modulare-sensorfusion`, but **not** at the pinned commit `08a4b9a`, which kept only its core logic. If HomeMy needs the gate, it is a separate candidate from `1d91229`.
+
+Whether HomeMy needs it is a measurement, not an assumption. Two differences from the source robot point in opposite directions: the HomeMy LiDAR sits about 0.16 m above the floor instead of 0.66 m, so a downward tilt of 1 degree reaches the floor at about 9 m and 3 degrees at about 3 m; and the CAD shows support castors of only 30 mm diameter.
+
 ## 4. Tests and Results Actually Run
 
 None for HomeMy. This record is a source review only.

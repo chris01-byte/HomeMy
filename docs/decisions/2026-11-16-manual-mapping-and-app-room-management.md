@@ -15,7 +15,8 @@ HomeMy gets **no autonomous exploration mode**.
 
 Instead:
 
-1. A person drives HomeMy once through all rooms with a gamepad, for example a PS5 DualSense, while the robot builds the map.
+1. A person drives HomeMy once through all rooms with a gamepad while the robot builds the map. The gamepad is the same DualShock model that Amadeus uses.
+   Either a technician or the customer may do this.
 2. The finished map is saved as a version.
 3. Rooms are then defined and managed in the HomeMy app, following the Amadeus app concept.
 
@@ -26,7 +27,7 @@ The Amadeus concept, which HomeMy adopts:
 - **Room overlay bound to one map version.** Each room is a polygon with a name, an optional colour, and an optional navigation goal. If the map changes, the overlay is no longer editable or usable until it is bound to the new version.
 - **App over a WebSocket bridge.** The app shows the map, the robot position, and the rooms, and sends commands to the map and room managers. It sends no direct motor commands.
 
-Navigation to a room's goal remains in scope. It is governed by the navigation and obstacle-protection contracts and is not changed by this decision.
+Navigation to a room's goal remains in scope; the owner confirmed this explicitly. It is governed by the navigation and obstacle-protection contracts and is not changed by this decision.
 
 ### Not Selected
 
@@ -44,17 +45,28 @@ Manual driving is the first planned use of real HomeMy motion. It needs its own 
 - manual driving is a deliberate, visible operating state; power-on or READY never enables it;
 - a defined way to back out of a protection stop. Amadeus used a second control branch that bypassed its collision monitor; that bypass is not a HomeMy default.
 
-Open owner decisions for that contract:
+### Owner Decisions on Manual Driving (2026-11-16)
 
-- **Dead-man button.** Recommended: drive only while a button is held. Amadeus ran without one by owner choice and observed self-starting from stick drift before switching to the digital direction pad.
-- **Who maps.** A technician during setup, or the customer. This decides whether manual driving must exist in customer mode.
+- **Controller:** the same DualShock model as Amadeus. The Amadeus button assignment is kept: direction pad up and down drives, left and right turns, R1 selects the faster mode.
+- **No dead-man button.** The robot drives as soon as a direction is pressed. This is an owner decision against the recommendation in the first version of this record.
+- **Who maps:** a technician or the customer. Manual driving must therefore work in customer mode, without an Ubuntu login or terminal.
+
+Consequences the manual-drive contract must cover because there is no dead-man button:
+
+- only the digital direction pad may command motion. Amadeus observed self-starting from analogue stick drift;
+- the stop on controller disconnect, on an empty controller battery, and on command timeout must be proven with a direction held down;
+- mapping mode is entered and left explicitly, so that a controller lying around cannot move the robot outside that mode.
+
+Still open: how a customer enters mapping mode and connects the controller without an Ubuntu login, and whether the controller is wired or wireless.
+
+The button and axis numbers come from the operating-system driver and the joystick node, not only from the controller. They are expected to carry over, but must be checked once on the HomeMy computer before the first drive.
 
 ## Lessons From Amadeus to Keep
 
 - Drive slowly, especially in turns. Fast turns degraded the map.
 - Use the digital direction pad rather than the analogue sticks. The sticks did not return to an exact zero.
 - The LiDAR scan normalizer and the pinned slam_toolbox rotation fix were the decisive map-quality fixes. They belong to the LiDAR transfer candidate.
-- Amadeus button and axis numbers were measured on a DualShock. A DualSense has a different layout; HomeMy must measure its own controller.
+- Tile joints matter. On Amadeus a single joint turned the chassis by about 3 degrees within 8.5 cm of travel while the wheel encoders saw none of it; the HWT601 gyro and the LiDAR both measured it. A map driven over tiles on encoder heading alone showed fan-shaped, offset walls. HomeMy therefore maps with gyro yaw rate in the odometry; see the HWT601 transfer record.
 
 ## Evidence
 

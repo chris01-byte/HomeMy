@@ -31,9 +31,9 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - The external 5 V converter is to provide at least 5 V/5 A continuous; no software current limit is credited as its protection.
 - The external AI server remains remote and optional. Its failure maps to READY_LIMITED only after local mandatory checks pass.
 - STL-27L is the primary planned local 2D source for the validated floor and near-field operating envelope. A future OAK 4D provides complementary local 3D depth geometry.
-- An HWT601-AGV-485 six-axis IMU is planned for yaw-rate-aided odometry on its own read-only RS485 port. It has no absolute heading and is never a movement authority.
+- An HWT601-AGV-485 six-axis IMU is planned for yaw-rate-aided odometry on its own read-only RS485 port. It has no absolute heading and is never a movement authority. Its main purpose is heading on tile joints, where Amadeus measured chassis yaw that wheel encoders did not see.
 - The STL-27L sits inside the base at the front and scans through an open slot in the structural acrylic ring, about 164 mm above the floor in the CAD model. Two struts and four slot webs give six predicted blind sectors, 34 degrees in total. A closed acrylic window failed the owner's test.
-- HomeMy has no autonomous exploration. A person drives it once through all rooms with a gamepad (for example a PS5 DualSense) to build one map of the home; rooms are then managed in the app as named areas on that saved map, following the Amadeus app concept.
+- HomeMy has no autonomous exploration. A technician or the customer drives it once through all rooms with the same DualShock gamepad as Amadeus, without a dead-man button by owner decision, to build one map of the home; rooms are then managed in the app as named areas on that saved map, following the Amadeus app concept.
 - A future semantic perception and grasping path selects YOLO or Grounding DINO on demand, uses SAM2 plus local OAK depth, and treats every model output only as a candidate, never as movement authority.
 - Power-on, restart, ready state, and fault recovery never authorize motion automatically.
 
@@ -108,7 +108,8 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - Exact HomeMy chassis, wheel, drive-train, LiDAR-frame, OAK-frame, sensor-mount, protection-volume, arm-mass, joint-speed, and footprint measurements.
 - Final RobStride joint selection/reduction, USB-CAN adapter, CAN identifiers/message contract, and RS485 addressing/update rates.
 - HWT601 mount location, supply, third serial adapter, axis mapping, and behavior on IMU loss.
-- Manual-drive contract: dead-man button, stop on controller loss, mapping speeds, backing out of a protection stop, and whether the customer or a technician maps.
+- Manual-drive contract: proven stop on controller loss with a direction held, mapping speeds, backing out of a protection stop, and how a customer enters mapping mode and connects the controller without an Ubuntu login.
+- Whether HomeMy needs a tilt-based scan gate on tile joints; to be measured on the built chassis.
 - App bridge access control, customer network setup, and moving rooms to a new map version after remapping.
 - Measured LiDAR mask sectors and margins for the slotted base ring (L4); the recorded values are CAD predictions.
 - Exact local model implementations, accelerator, ROS interfaces, and validation thresholds for semantic perception and grasping.

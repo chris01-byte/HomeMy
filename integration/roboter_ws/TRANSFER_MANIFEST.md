@@ -23,7 +23,7 @@ Exception: the HWT601 candidate is not on roboter_ws main. It is pinned to devel
 | Local OAK 4D depth obstacle-protection foundation | local bring-up portions of src/robot_bringup/ | future src/homemy_oak_bringup/ | proposed; local 3D complement to STL-27L under the HomeMy obstacle-protection contract; no server, relay, inference, or network work |
 | Navigation algorithms and dry-run foundation | src/robot_navigation/ | future src/homemy_navigation/ | proposed; user-approved for simulation and algorithm adaptation after HomeMy geometry and safety commissioning |
 | HWT601 IMU and yaw-rate state estimation | src/robot_state_estimation/ at commit 08a4b9a | future src/homemy_state_estimation/ | proposed; user-approved for staged adaptation after a HomeMy IMU commissioning contract; read-only sensor on a dedicated third serial bus |
-| Gamepad driving for manual mapping | src/robot_bringup/ teleop_joy launch and config | future homemy_bringup manual-drive profile | proposed; requires a HomeMy manual-drive contract; DualSense mapping to be measured; source bypass branch excluded |
+| Gamepad driving for manual mapping | src/robot_bringup/ teleop_joy launch and config | future homemy_bringup manual-drive profile | proposed; requires a HomeMy manual-drive contract; same DualShock model and assignment as the source, no dead-man button by owner decision; source bypass branch excluded |
 | Versioned map store | src/robot_map_manager/ | future src/homemy_map_manager/ | proposed; no motion effect |
 | Room overlay on a saved map | src/semantic_map_manager/ | future src/homemy_room_manager/ | proposed; no motion effect |
 | App for map and room management | ios/Robotersteuerung/ | future HomeMy app | proposed; map, room, connection, and status parts only |
