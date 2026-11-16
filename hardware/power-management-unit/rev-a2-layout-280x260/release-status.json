@@ -1,7 +1,7 @@
 {
-  "status": "wip_not_orderable",
-  "display_status": "WIP – NICHT BESTELLBAR; native CAD-Prüfungen vollständig bestanden",
-  "cad_complete": false,
+  "status": "cad_complete_pending_independent_review",
+  "display_status": "CAD VOLLSTÄNDIG – DRAFT / NOT RELEASED",
+  "cad_complete": true,
   "orderable": false,
   "fabrication_release": false,
   "assembly_release": false,
@@ -21,9 +21,9 @@
   "silkscreen_warnings": 0,
   "nominal_2d_mechanical_screen_passed": true,
   "mechanical_acceptance_complete": false,
-  "reason": "All native CAD acceptance checks pass twice on the unchanged PCB: ERC0/DRC0,0open,0dangling,247/247 power,46/46critical,source/BOM parity and nominal mechanics. Required graphical close/reopen verification could not be performed because the Mac is locked. CAD completion remains formally unaccepted until that step; production also requires the unperformed physical and toleranced assembly qualification gates. No release or order.",
+  "reason": "Exact PCB unchanged. Graphical close/reopen completed twice, followed by identical fresh native ERC/DRC0,247/247 power,46/46critical,zero open/dangling and nominal mechanical/antenna checks. Independent human review and physical/manufacturing qualification remain open. No order or energization.",
   "native_cad_checks_complete": true,
-  "gui_close_reopen_verified": false,
+  "gui_close_reopen_verified": true,
   "continuation_cad_cycles_used": 7,
   "continuation_cad_cycle_limit": 12,
   "selected_continuation_cycle": 7,
@@ -32,5 +32,7 @@
   "native_schematic_parity_findings": 0,
   "full_source_bom_audit_exit_code": 0,
   "physical_tests_performed": false,
-  "independent_review_complete": false
+  "independent_review_complete": false,
+  "last_verified_date": "2026-11-16",
+  "latest_verification_report": "reports/retest-2026-11-16.json"
 }

@@ -1817,6 +1817,6 @@
     "scope": "Final report hash must match PCB; nominal 2D only"
   },
   "required_parent_cad_actions": [
-    "No topology, pad, footprint or stackup changes. Native CAD checks pass; complete the blocked graphical close/reopen acceptance and independent review. Complete toleranced assembly, supplier and physical qualification before release."
+    "CAD checks and graphical reload complete. Independent engineering review and toleranced assembly/supplier/physical qualification are required before any release. No topology, footprint, pad or stackup change in this retest."
   ]
 }

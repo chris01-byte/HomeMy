@@ -1,1 +1,40 @@
-{"pcb_sha256":"2742638d03b884b8b6ac7bf7064ef98b2bd6c5a95377b7617b72999eb2e83bc2","remaining_routing_blockers":[],"remaining_open_nets":[],"remaining_drc_findings":[],"closed_previous_blockers":[{"net":"CAN_STB","former_representative_endpoints":["R242.2","U10.34"],"status":"closed","proof":"Full native same-net pad/copper graph has one component; native DRC reports0unconnected."},{"net":"I2C_SDA","former_representative_endpoints":["R226.2","J23.1"],"status":"closed","proof":"Full native same-net pad/copper graph has one component; native DRC reports0unconnected."},{"net":"TEMP_MOTION_ADC","former_representative_endpoints":["C253.1","U10.38"],"status":"closed","proof":"Full native same-net pad/copper graph has one component; native DRC reports0unconnected."}],"no_further_cad_repair_required_for_known_findings":true,"non_routing_acceptance_blockers":["Graphical final board close/reopen blocked by locked Mac","Independent review and physical/manufacturing qualification remain open; see production-readiness.json"]}
+{
+  "pcb_sha256": "2742638d03b884b8b6ac7bf7064ef98b2bd6c5a95377b7617b72999eb2e83bc2",
+  "remaining_routing_blockers": [],
+  "remaining_open_nets": [],
+  "remaining_drc_findings": [],
+  "closed_previous_blockers": [
+    {
+      "net": "CAN_STB",
+      "former_representative_endpoints": [
+        "R242.2",
+        "U10.34"
+      ],
+      "status": "closed",
+      "proof": "Full native same-net pad/copper graph has one component; native DRC reports0unconnected."
+    },
+    {
+      "net": "I2C_SDA",
+      "former_representative_endpoints": [
+        "R226.2",
+        "J23.1"
+      ],
+      "status": "closed",
+      "proof": "Full native same-net pad/copper graph has one component; native DRC reports0unconnected."
+    },
+    {
+      "net": "TEMP_MOTION_ADC",
+      "former_representative_endpoints": [
+        "C253.1",
+        "U10.38"
+      ],
+      "status": "closed",
+      "proof": "Full native same-net pad/copper graph has one component; native DRC reports0unconnected."
+    }
+  ],
+  "no_further_cad_repair_required_for_known_findings": true,
+  "non_routing_acceptance_blockers": [
+    "Independent human review and physical/manufacturing qualification remain open; see production-readiness.json"
+  ],
+  "last_cad_verification_date": "2026-11-16"
+}

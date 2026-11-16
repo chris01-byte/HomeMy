@@ -7,7 +7,7 @@
   "energization_release": false,
   "production_release": false,
   "independent_review_complete": false,
-  "graphical_final_reload_complete": false,
+  "graphical_final_reload_complete": true,
   "gate_sources": {
     "requirements.yaml": "a5a0e0e2eebf4d05d06a730c55521bc1e6db83aae8bc819b350d2b0a7b4ee91e",
     "REV_B_VALIDATION.md": "a8da5f2a620b920340a5ef73b2f44068198ac3a88c0fb08b4940ad1f5582e860",
@@ -188,8 +188,9 @@
   ],
   "distinction": "CAD connectivity/clearance and nominal copper geometry are verified. Hardware measurement, supplier process acceptance and toleranced final integration are not established by those results.",
   "next_bounded_steps": [
-    "After manual Mac unlock: open this exact PCB hash, close KiCad fully, open again and verify unchanged hashes. Repeat native final suite twice; if clean, set cad_complete true and cad_complete_pending_independent_review, with all release flags still false. No further CAD edits are needed for known routing findings.",
     "Independent engineering review of the exact draft package and physical qualification plan; review the specified press-fit process and busbar/shim tolerance stack first.",
     "Close applicable B01–B14 and the nine production categories with versioned raw test evidence and reviewed acceptance; no production or actuator/energization claim before those records exist."
-  ]
+  ],
+  "cad_complete": true,
+  "last_cad_verification_date": "2026-11-16"
 }

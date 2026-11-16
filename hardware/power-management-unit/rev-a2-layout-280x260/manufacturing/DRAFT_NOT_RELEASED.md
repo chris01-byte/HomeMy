@@ -1,8 +1,8 @@
 # DRAFT / NOT RELEASED – PMU A2 280 × 260 mm
 
-**NICHT BESTELLBAR. Keine Fertigungs-, Bestückungs-, Bestromungs- oder Produktionsfreigabe.** Alle nativen CAD-Prüfungen sind fehlerfrei; grafische Abschlusskontrolle, unabhängige Prüfung und physische Qualifikation bleiben offen. Siehe [FINAL_REPORT.md](../FINAL_REPORT.md) und [release-status.json](../release-status.json).
+**NICHT BESTELLBAR. Keine Fertigungs-, Bestückungs-, Bestromungs- oder Produktionsfreigabe.** CAD und grafische Abschlusskontrolle sind vollständig geprüft (`cad_complete_pending_independent_review`, 16.11.2026). Unabhängige Prüfung und physische Qualifikation bleiben offen. Siehe [FINAL_REPORT.md](../FINAL_REPORT.md) und [release-status.json](../release-status.json).
 
-[DRAFT_NOT_RELEASED/DRAFT_MANIFEST.json](DRAFT_NOT_RELEASED/DRAFT_MANIFEST.json) bindet Gerber, Bohrungen und Bestückungspositionen sowie die lokale BOM über SHA-256 an die geprüfte PCB `2742638d03b884b8b6ac7bf7064ef98b2bd6c5a95377b7617b72999eb2e83bc2`. Alle drei nativen Exportprozesse endeten regulär mit Exit 0 und veränderten die Platine nicht.
+[DRAFT_NOT_RELEASED/DRAFT_MANIFEST.json](DRAFT_NOT_RELEASED/DRAFT_MANIFEST.json) bindet Gerber, Bohrungen und Bestückungspositionen sowie die lokale BOM über SHA-256 an die geprüfte PCB `2742638d03b884b8b6ac7bf7064ef98b2bd6c5a95377b7617b72999eb2e83bc2`. Die drei ursprünglichen nativen Exportprozesse endeten regulär mit Exit 0 und veränderten die Platine nicht. Am 16.11.2026 wurden die unveränderten Exportdateien zweimal erneut gegen Hashes und native Geometrie geprüft; ausschließlich Status-/Prüfmetadaten und die zugehörigen Manifesthashes wurden aktualisiert.
 
 - Elf Gerber-Dateien: vier Kupferlagen, beidseitig Lötstopp, Paste und Bestückungsdruck sowie Edge.Cuts. Native X2-Attribute und Jobdatei sind erhalten.
 - **Fertiges Fräsprofil exakt 280 × 260 mm entlang der Edge.Cuts-Mittellinien.** Die native Jobangabe 280,05 × 260,05 mm umfasst die 0,05-mm-Zeichenstrichbreite und ist kein Fertigmaß.

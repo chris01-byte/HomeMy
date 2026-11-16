@@ -466,16 +466,19 @@
   },
   "bom_files": {
     "REV_A_BOM.csv": "297466886d7c85a18c31dca340834988507a82a610ff276c2b2228d1f7ca058e",
-    "REV_A_BOM.json": "fd16c27a98ef32ae44b01a50573d9b9f9c3247d78933d7a99af14ac79625b2b0",
-    "REV_A_BOM_MANIFEST.json": "554ecc6448e8d86c6fbf3165dab54f3ec980023c28709823cf533c0770192d04",
+    "REV_A_BOM.json": "26ebd931211efc0ad55b32a0aca6ec0e51e258370e035927310a9ac18d8ec35f",
+    "REV_A_BOM_MANIFEST.json": "804c11f4e0d71ba34eb6285f8df8e2cc35941a5c0aade137185cb80ad69e8d86",
     "REV_A_EXTERNAL_BOM.csv": "90c1cc83de2936cdce8fdc11dc825d3ca08d37da3d7caf78266c2093c3a7e642",
-    "REV_A_EXTERNAL_BOM.json": "a38cdcdf0006fa03026596467d0fc1c016eeba7ab33aa7e4646369d71e3a86c8"
+    "REV_A_EXTERNAL_BOM.json": "b63083501096e87f49ce783e66f1b1e7e85c7ce7ad36ee9baa8a1079802850ae"
   },
-  "interface_sha256": "c40e0c580f2aa6ea1e681504b977b4fdc60070cdfaca7a8c7cfa6db0adca3cfc",
+  "interface_sha256": "c18d1162a0a05bb7482f52431c40a8e04cc2c4bd770667727aa9a6d8fd25c348",
   "limits": [
     "Native export review set only; no order, manufacturing or assembly release.",
     "Gerber profile centerlines define exactly280x260mm. The native gbrjob Size280.05x260.05mm is the graphic-stroke envelope, not a machining dimension.",
     "Original full KiCad rules and PCB_STACKUP_PRESSFIT.md remain authoritative; gbrjob generic rule summary does not encode every custom power rule.",
     "Press-fit tools specify finished1.475mm holes. The supplier must separately approve raw1.6mm drill, plating, laminate and insertion process together; do not replace finished-hole coordinates/tool size."
-  ]
+  ],
+  "cad_complete": true,
+  "latest_verification_date": "2026-11-16",
+  "latest_verification_report": "../../reports/retest-2026-11-16.json"
 }

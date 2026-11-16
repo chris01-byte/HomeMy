@@ -4,7 +4,7 @@
     "source_root": "../rev-a",
     "source_record_paths_relative_to": "source_root",
     "input_paths_relative_to": "A2 revision root",
-    "cad_complete": false,
+    "cad_complete": true,
     "orderable": false,
     "fabrication_release": false,
     "assembly_release": false,
@@ -13,7 +13,7 @@
     "rev_a_engineering_prototype": true,
     "rev_b_production": false,
     "state": "DRAFT_NOT_RELEASED_A2_280x260",
-    "date": "2026-09-14",
+    "date": "2026-11-16",
     "stock_verification": "No live stock query or reservation made by builder",
     "quantity_basis": "One PCB assembly, no placement waste or spares; DNP positions retained with zero required quantity",
     "purchased_pcb_positions": 356,
@@ -94,7 +94,7 @@
     },
     {
       "path": "manufacturing/busbar-pcb-interface.json",
-      "sha256": "c40e0c580f2aa6ea1e681504b977b4fdc60070cdfaca7a8c7cfa6db0adca3cfc"
+      "sha256": "c18d1162a0a05bb7482f52431c40a8e04cc2c4bd770667727aa9a6d8fd25c348"
     }
   ],
   "outputs": [
@@ -105,8 +105,8 @@
     },
     {
       "path": "REV_A_BOM.json",
-      "sha256": "fd16c27a98ef32ae44b01a50573d9b9f9c3247d78933d7a99af14ac79625b2b0",
-      "bytes": 582829
+      "sha256": "26ebd931211efc0ad55b32a0aca6ec0e51e258370e035927310a9ac18d8ec35f",
+      "bytes": 582828
     },
     {
       "path": "REV_A_EXTERNAL_BOM.csv",
@@ -115,8 +115,8 @@
     },
     {
       "path": "REV_A_EXTERNAL_BOM.json",
-      "sha256": "a38cdcdf0006fa03026596467d0fc1c016eeba7ab33aa7e4646369d71e3a86c8",
-      "bytes": 42049
+      "sha256": "b63083501096e87f49ce783e66f1b1e7e85c7ce7ad36ee9baa8a1079802850ae",
+      "bytes": 42048
     }
   ],
   "adapter": {
@@ -157,5 +157,13 @@
       }
     ],
     "validation_exit_code": 0
+  },
+  "post_generation_metadata_refresh": {
+    "date": "2026-11-16",
+    "cad_complete": true,
+    "release_flags_changed": false,
+    "electrical_bom_rows_changed": false,
+    "reason": "All CAD/GUI acceptance checks complete; independent/physical release gates unchanged",
+    "source_adapter_record_retained": true
   }
 }
