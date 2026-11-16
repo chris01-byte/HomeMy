@@ -2,7 +2,7 @@
 
 ## Phase
 
-Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The onboard Linux lifecycle, one-button customer behavior, coarse LED status, battery monitor, electronic main power path, reverse-current blocking, and initial protection thresholds are recorded as accepted architecture. This central subsystem is named the HomeMy Power Management Unit (PMU). A consolidated GPT Astra handoff now authorizes a complete Revision-A engineering prototype and separates its design/order gates from the measurements that gate a later Revision-B production design. The KiCad design, exact Revision-A component selections, firmware, systemd units, and real-hardware validation remain pending. No HomeMy runtime package or source code has been copied.
+Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The onboard Linux lifecycle, one-button customer behavior, coarse LED status, battery monitor, electronic main power path, reverse-current blocking, and initial protection thresholds are recorded as accepted architecture. This central subsystem is named the HomeMy Power Management Unit (PMU). A consolidated GPT Astra handoff now authorizes a complete Revision-A engineering prototype and separates its design/order gates from the measurements that gate a later Revision-B production design. The KiCad design, exact Revision-A component selections, firmware, systemd units, and real-hardware validation remain pending. No HomeMy robot runtime package has been copied. The iPhone app in `ios/HomeMy/` is the only ported code and is tested against a mock.
 
 ## Goal
 
@@ -55,7 +55,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - The repository is public; it contains no secrets, home data, maps, camera data, or deployment configuration.
 - The default execution mode is simulation or motorless validation.
 - No systemd unit, actuator, sensor, PMU KiCad design, map, home data, or deployment configuration is tracked here.
-- No capability from roboter_ws has been copied into HomeMy code.
+- The only ported code is the iPhone app in `ios/HomeMy/`. It talks to a mock; no robot-side software exists and it cannot move anything.
 - The proposed transfer baseline is roboter_ws main commit `05439c7a13d7a92e69b9eb4663e3a2a1b44626a1`.
 - Customer mode is not enabled as the default boot target.
 - Battery/power values are architecture and initial commissioning thresholds only; no hardware protection validation has been performed.
@@ -95,6 +95,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 17. `docs/transfers/roboter_ws/2026-11-16-hwt601-imu-state-estimation.md` for the HWT601 IMU candidate.
 18. `docs/decisions/2026-11-16-lidar-slot-and-support-webs.md` for the LiDAR slot, web positions, and the sectors to mask.
 19. `docs/decisions/2026-11-16-manual-mapping-and-app-room-management.md` for manual mapping and app room management.
+20. `contracts/api/app-bridge.md` and `ios/HomeMy/README.md` for the app and its interface to the robot.
 
 ## Open Decisions
 
@@ -110,7 +111,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - HWT601 mount location, supply, third serial adapter, axis mapping, and behavior on IMU loss.
 - Manual-drive contract: proven stop on controller loss with a direction held, mapping speeds, backing out of a protection stop, controller pairing in customer mode, automatic end of mapping mode, and behavior when the app disconnects.
 - Whether HomeMy needs a tilt-based scan gate on tile joints; to be measured on the built chassis.
-- App bridge access control, customer network setup, and moving rooms to a new map version after remapping.
+- App bridge access control, customer network setup, and moving rooms to a new map version after remapping. The app cannot yet save a second map once rooms exist.
 - Measured LiDAR mask sectors and margins for the slotted base ring (L4); the recorded values are CAD predictions.
 - Exact local model implementations, accelerator, ROS interfaces, and validation thresholds for semantic perception and grasping.
 - External AI health endpoint, authentication storage, and capability protocol.

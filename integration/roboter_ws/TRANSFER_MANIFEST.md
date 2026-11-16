@@ -8,7 +8,7 @@ Do not copy whole packages, local deployment files, home data, maps, bags, crede
 
 ## Current Status
 
-Nine user-approved candidates are recorded for staged adaptation. The local OAK 4D obstacle-protection boundary is documented, but no HomeMy runtime code, real-hardware configuration, or deployment file has been copied.
+Nine user-approved candidates are recorded for staged adaptation. The local OAK 4D obstacle-protection boundary is documented. The iPhone app is the first ported code; no HomeMy robot runtime code, real-hardware configuration, or deployment file has been copied.
 
 Source baseline: chris01-byte/Roboter_ws main at commit 05439c7a13d7a92e69b9eb4663e3a2a1b44626a1.
 
@@ -26,7 +26,7 @@ Exception: the HWT601 candidate is not on roboter_ws main. It is pinned to devel
 | Gamepad driving for manual mapping | src/robot_bringup/ teleop_joy launch and config | future homemy_bringup manual-drive profile | proposed; requires a HomeMy manual-drive contract; same DualShock model and assignment as the source, no dead-man button by owner decision; source bypass branch excluded |
 | Versioned map store | src/robot_map_manager/ | future src/homemy_map_manager/ | proposed; no motion effect |
 | Room overlay on a saved map | src/semantic_map_manager/ | future src/homemy_room_manager/ | proposed; no motion effect |
-| App for map and room management | ios/Robotersteuerung/ | future HomeMy app | proposed; map, room, connection, and status parts only |
+| App for map and room management | ios/Robotersteuerung/ | ios/HomeMy/ | adapting; app side ported and tested against a mock under contracts/api/app-bridge.md; mission, exploration, and e-stop parts removed; mapping mode and stop added; no robot-side counterpart yet |
 
 Detailed constraints, excluded scope, and deferred candidates are in docs/transfers/roboter_ws/2026-08-28-hardware-foundation-candidates.md.
 

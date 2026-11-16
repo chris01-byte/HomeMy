@@ -24,6 +24,7 @@ The current decision and contracts are [the appliance architecture decision](doc
 | [src/](src/README.md) | HomeMy-owned ROS 2 packages |
 | [contracts/](contracts/README.md) | Stable ROS, hardware, API, and data boundaries |
 | [simulation/](simulation/README.md) | Synthetic fixtures and deterministic scenarios |
+| [ios/HomeMy/](ios/HomeMy/README.md) | iPhone app for mapping mode, map saving, and room management, with a mock bridge |
 | [deployment/systemd/](deployment/systemd/README.md) | Versioned systemd target and unit templates, not yet enabled |
 | [integration/roboter_ws/](integration/roboter_ws/TRANSFER_MANIFEST.md) | Controlled transfers from roboter_ws |
 | [docs/](docs/README.md) | Decisions, transfers, runbooks, and archived evidence |

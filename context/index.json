@@ -55,6 +55,13 @@
         "docs/transfers/roboter_ws/2026-11-16-manual-mapping-and-app-candidates.md"
       ]
     },
+    "app": {
+      "when": "iPhone app, Swift, SwiftUI, rosbridge, app bridge contract, mapping-mode switch, stop button, or the mock bridge",
+      "files": [
+        "contracts/api/app-bridge.md",
+        "ios/HomeMy/README.md"
+      ]
+    },
     "imu": {
       "when": "HWT601 IMU, yaw rate, gyro bias, tile joints, encoder and IMU fusion, EKF odometry, or IMU commissioning",
       "files": [

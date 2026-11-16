@@ -1,6 +1,6 @@
 # Manual Mapping, Map Store, Room Overlay, and App Transfer Candidates
 
-Status: proposed for staged adaptation; no HomeMy code copied.
+Status: the app is ported to `ios/HomeMy/` and tested against a mock; gamepad driving, map store, and room overlay remain proposed with no HomeMy code.
 
 ## 1. Source
 
@@ -48,7 +48,14 @@ Not portable as is:
 
 ## 4. Tests and Results Actually Run
 
-None for HomeMy. Source review only.
+App, 2026-11-16, on Linux with Swift 6.2 and Python 3:
+
+- baseline before any change: the 44 source Swift tests and 7 source mock tests passed unchanged;
+- after the port: 63 Swift tests passed (31 kept map and room tests, 32 new mapping-mode tests), and 19 Python mock tests passed, including a flow over a real WebSocket connection.
+
+The SwiftUI views and the two connection services cannot be compiled on Linux. Their build is checked by the macOS job in `.github/workflows/app-checks.yml`. No test has run on an iPhone or against a robot.
+
+Gamepad driving, map store, and room overlay: none for HomeMy. Source review only.
 
 At the source commit: 51 Python tests for the map store, 51 for the room overlay, and 44 Swift tests in the app (counted, not executed here). The gamepad launch has no automated tests. Source results are regression evidence, not HomeMy acceptance.
 

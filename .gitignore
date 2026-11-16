@@ -34,6 +34,13 @@ rosbags/
 *.db3
 *.mcap
 
+# Swift and Xcode build output
+.build/
+.swiftpm/
+DerivedData/
+xcuserdata/
+*.xcuserstate
+
 # Local editor and operating-system files
 .vscode/*.code-workspace
 .DS_Store

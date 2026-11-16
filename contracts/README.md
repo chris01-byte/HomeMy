@@ -11,6 +11,7 @@ Contracts define boundaries before package code is accepted. They are the compat
 - [Obstacle protection](hardware/obstacle-protection.md): STL-27L primary 2D coverage, local OAK 4D depth complement, fail-closed behavior, and O0-O5 evidence without external AI.
 - [Navigation geometry and safety commissioning](hardware/navigation-commissioning.md): HomeMy footprint, movement gate, and N0-N5 navigation evidence without VL53.
 - [External AI health](api/ai-server-health.md): bounded remote health checks, READY_LIMITED behavior, and customer-visible AI outage handling.
+- [App bridge](api/app-bridge.md): mapping-mode switch, stop request, live map, map store, and room overlay between the app and the robot.
 
 ## Contract Areas
 
