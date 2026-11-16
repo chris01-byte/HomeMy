@@ -31,6 +31,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - The external 5 V converter is to provide at least 5 V/5 A continuous; no software current limit is credited as its protection.
 - The external AI server remains remote and optional. Its failure maps to READY_LIMITED only after local mandatory checks pass.
 - STL-27L is the primary planned local 2D source for the validated floor and near-field operating envelope. A future OAK 4D provides complementary local 3D depth geometry.
+- An HWT601-AGV-485 six-axis IMU is planned for yaw-rate-aided odometry on its own read-only RS485 port. It has no absolute heading and is never a movement authority.
 - A future semantic perception and grasping path selects YOLO or Grounding DINO on demand, uses SAM2 plus local OAK depth, and treats every model output only as a candidate, never as movement authority.
 - Power-on, restart, ready state, and fault recovery never authorize motion automatically.
 
@@ -41,6 +42,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - robot_navigation may be adapted only as a hardware-independent Nav2 and simulation candidate. Its real profile awaits HomeMy footprint, LiDAR, obstacle protection, movement gate, and safety commissioning.
 - Local OAK 4D depth is a proposed complementary obstacle-protection candidate governed by `contracts/hardware/obstacle-protection.md`. It remains local; no camera bring-up or protection code has been copied.
 - Semantic perception and grasping are architecture-only. No YOLO, Grounding DINO, SAM2, grasp model, local camera bring-up, or manipulation code is selected for transfer.
+- HWT601 reading and yaw-rate fusion may be adapted from roboter_ws development commit `08a4b9a` (not on main) after a HomeMy IMU contract exists. Mount, axes, bias, noise, timing, and tuning are HomeMy measurements.
 - VL53 near-field hardware, `vl53_near_field`, CH341/DKMS support, and source VL53-driven collision configuration are excluded from HomeMy.
 - `robot_interfaces` and `safety_monitor` are deferred until HomeMy has a separate need and contract for them.
 - The external AI server, network transport, remote relay, inference backend, LLM planner, and deployment are explicitly deferred and must not be modified.
@@ -87,6 +89,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 14. `contracts/hardware/navigation-commissioning.md` for `robot_navigation` assessment.
 15. `integration/roboter_ws/TRANSFER_MANIFEST.md` for incoming transfers.
 16. `docs/decisions/2026-08-31-semantic-perception-and-grasping.md` for the proposed semantic perception and grasping pipeline.
+17. `docs/transfers/roboter_ws/2026-11-16-hwt601-imu-state-estimation.md` for the HWT601 IMU candidate.
 
 ## Open Decisions
 
@@ -99,6 +102,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - Final onboard Linux computer specification and measured ROS power budget.
 - Exact HomeMy chassis, wheel, drive-train, LiDAR-frame, OAK-frame, sensor-mount, protection-volume, arm-mass, joint-speed, and footprint measurements.
 - Final RobStride joint selection/reduction, USB-CAN adapter, CAN identifiers/message contract, and RS485 addressing/update rates.
+- HWT601 mount location, supply, third serial adapter, axis mapping, and behavior on IMU loss.
 - Exact local model implementations, accelerator, ROS interfaces, and validation thresholds for semantic perception and grasping.
 - External AI health endpoint, authentication storage, and capability protocol.
 - Whether HomeMy includes `robot_interfaces`, `safety_monitor`, mission-gate and behavior-tree patterns, semantic maps, or app functions from roboter_ws.
