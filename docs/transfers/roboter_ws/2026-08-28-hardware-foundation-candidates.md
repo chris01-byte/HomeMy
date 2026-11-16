@@ -113,6 +113,7 @@ Do not copy the Amadeus footprint, robot radius, local or global costmaps, stati
 - safety_monitor observes safety state in the source project. It is not selected until the HomeMy physical safety and motion-gate topology are decided.
 - mission-gate and behavior-tree patterns remain deferred until the HomeMy safety chain and customer workflow are defined.
 - map managers, semantic rooms, app, and UI functions remain deferred until the HomeMy customer workflow needs them.
+  Update 2026-11-16: the customer workflow now needs them; see 2026-11-16-manual-mapping-and-app-candidates.md.
 
 ## Next Safe Step
 

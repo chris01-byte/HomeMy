@@ -33,6 +33,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - STL-27L is the primary planned local 2D source for the validated floor and near-field operating envelope. A future OAK 4D provides complementary local 3D depth geometry.
 - An HWT601-AGV-485 six-axis IMU is planned for yaw-rate-aided odometry on its own read-only RS485 port. It has no absolute heading and is never a movement authority.
 - The STL-27L sits inside the base at the front and scans through an open slot in the structural acrylic ring, about 164 mm above the floor in the CAD model. Two struts and four slot webs give six predicted blind sectors, 34 degrees in total. A closed acrylic window failed the owner's test.
+- HomeMy has no autonomous exploration. A person drives it once through all rooms with a gamepad (for example a PS5 DualSense) to build one map of the home; rooms are then managed in the app as named areas on that saved map, following the Amadeus app concept.
 - A future semantic perception and grasping path selects YOLO or Grounding DINO on demand, uses SAM2 plus local OAK depth, and treats every model output only as a candidate, never as movement authority.
 - Power-on, restart, ready state, and fault recovery never authorize motion automatically.
 
@@ -44,6 +45,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - Local OAK 4D depth is a proposed complementary obstacle-protection candidate governed by `contracts/hardware/obstacle-protection.md`. It remains local; no camera bring-up or protection code has been copied.
 - Semantic perception and grasping are architecture-only. No YOLO, Grounding DINO, SAM2, grasp model, local camera bring-up, or manipulation code is selected for transfer.
 - HWT601 reading and yaw-rate fusion may be adapted from roboter_ws development commit `08a4b9a` (not on main) after a HomeMy IMU contract exists. Mount, axes, bias, noise, timing, and tuning are HomeMy measurements.
+- Gamepad driving, the versioned map store, the room overlay, and the map and room parts of the Amadeus iOS app may be adapted from `05439c7`. Gamepad driving needs a HomeMy manual-drive contract first. Autonomous exploration is excluded.
 - VL53 near-field hardware, `vl53_near_field`, CH341/DKMS support, and source VL53-driven collision configuration are excluded from HomeMy.
 - `robot_interfaces` and `safety_monitor` are deferred until HomeMy has a separate need and contract for them.
 - The external AI server, network transport, remote relay, inference backend, LLM planner, and deployment are explicitly deferred and must not be modified.
@@ -92,6 +94,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 16. `docs/decisions/2026-08-31-semantic-perception-and-grasping.md` for the proposed semantic perception and grasping pipeline.
 17. `docs/transfers/roboter_ws/2026-11-16-hwt601-imu-state-estimation.md` for the HWT601 IMU candidate.
 18. `docs/decisions/2026-11-16-lidar-slot-and-support-webs.md` for the LiDAR slot, web positions, and the sectors to mask.
+19. `docs/decisions/2026-11-16-manual-mapping-and-app-room-management.md` for manual mapping and app room management.
 
 ## Open Decisions
 
@@ -105,6 +108,8 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - Exact HomeMy chassis, wheel, drive-train, LiDAR-frame, OAK-frame, sensor-mount, protection-volume, arm-mass, joint-speed, and footprint measurements.
 - Final RobStride joint selection/reduction, USB-CAN adapter, CAN identifiers/message contract, and RS485 addressing/update rates.
 - HWT601 mount location, supply, third serial adapter, axis mapping, and behavior on IMU loss.
+- Manual-drive contract: dead-man button, stop on controller loss, mapping speeds, backing out of a protection stop, and whether the customer or a technician maps.
+- App bridge access control, customer network setup, and moving rooms to a new map version after remapping.
 - Measured LiDAR mask sectors and margins for the slotted base ring (L4); the recorded values are CAD predictions.
 - Exact local model implementations, accelerator, ROS interfaces, and validation thresholds for semantic perception and grasping.
 - External AI health endpoint, authentication storage, and capability protocol.

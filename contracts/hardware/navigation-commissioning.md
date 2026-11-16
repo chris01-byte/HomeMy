@@ -10,6 +10,8 @@ Source reference: chris01-byte/Roboter_ws src/robot_navigation/ at commit 05439c
 
 HomeMy may assess hardware-independent Nav2, localization, and dry-run behavior from the source navigation package. The source vehicle geometry, LiDAR mounting, obstacle layers, costmaps, map data, command chain, and live parameters are not HomeMy defaults.
 
+HomeMy has no autonomous exploration. A person maps the home once by manual driving, and rooms are defined in the app on the saved map; see `docs/decisions/2026-11-16-manual-mapping-and-app-room-management.md`. Source exploration behavior is not portable.
+
 HomeMy does not use VL53 near-field hardware. Therefore the source VL53 obstacle layers and VL53-driven collision-monitor configuration are not portable. Removing those files is not a replacement for a HomeMy obstacle-detection and safe-stop design.
 
 The separate [Obstacle protection contract](obstacle-protection.md) assigns the local protection roles: STL-27L is the primary 2D source for the validated floor and near-field envelope, while OAK 4D depth may cover separately commissioned larger or higher obstacles. OAK protection uses local depth geometry, not remote AI or semantic classification.
