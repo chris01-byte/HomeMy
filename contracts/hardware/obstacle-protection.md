@@ -8,7 +8,7 @@ Owner: HomeMy navigation and safety integration.
 
 This contract defines the HomeMy obstacle-protection boundary after removal of the source VL53 assumptions. It assigns local sensing roles before real navigation or motion is accepted.
 
-The STL-27L is the primary local 2D protection input for the validated floor and near-field operating envelope. A future OAK 4D is a complementary local 3D depth input for larger or higher obstacles that can lie outside the STL scan plane. The OAK role is based on measured geometry, not object classification.
+The STL-27L is the primary local 2D protection input for the validated floor and near-field operating envelope. An OAK-D-S2 is a complementary local 3D depth input for larger or higher obstacles that can lie outside the STL scan plane. The OAK role is based on measured geometry, not object classification.
 
 This is an operational protection contract, not a claim that a camera or LiDAR is a certified functional-safety device. The independent emergency-stop and any required hardware safety controller remain separate from the ROS perception path.
 
@@ -17,13 +17,13 @@ This is an operational protection contract, not a claim that a camera or LiDAR i
 In scope:
 
 - local STL-27L scan health and protected floor/near-field geometry;
-- local OAK 4D depth health and protected 3D geometry above or outside the STL scan plane;
+- local OAK-D-S2 depth health and protected 3D geometry above or outside the STL scan plane;
 - HomeMy movement-gate inputs, conservative stop behavior, degraded operation, and test evidence.
 
 Out of scope:
 
 - external AI server, network transport, remote image relay, off-board inference, LLM planning, and semantic object classification;
-- source VL53 layers, collision-monitor configuration, OAK-D-S2 calibration, chassis geometry, or live navigation tuning;
+- source VL53 layers, collision-monitor configuration, calibration and mounting values of the source robot's OAK-D-S2, chassis geometry, or live navigation tuning;
 - automatic motion authorization. A healthy sensor or a clear volume never starts motion by itself; it only lets an already active mission or operating mode continue.
 
 ## Local Protection Model
@@ -35,7 +35,7 @@ The intended local inputs are:
 | Input | Intended role | Required condition |
 | --- | --- | --- |
 | STL-27L scan | Primary 2D floor and near-field obstacle protection | Commissioned frame, masks, direction, timestamp, diagnostics, and known blind zones |
-| OAK 4D depth | Complementary 3D protection for larger or higher obstacles | Commissioned mount, depth quality, camera-to-base_link transform, timestamp, and protected volume |
+| OAK-D-S2 depth | Complementary 3D protection for larger or higher obstacles | Commissioned mount, depth quality, camera-to-base_link transform, timestamp, and protected volume |
 | Independent emergency stop | Independent final hardware boundary | Available without ROS, camera, LiDAR, external AI, or network |
 
 The monitor evaluates local obstacle geometry inside measured HomeMy protection volumes. It must not require a model to identify an object before reacting. Unknown but valid occupied geometry inside an active protection volume is treated conservatively.
@@ -64,7 +64,7 @@ The following conditions keep movement closed in any operating region that depen
 
 The system may not silently continue using cached scans, cached depth frames, permissive defaults, or source calibration. A LiDAR-only degraded mode is valid only after its geometry, speed, blind zones, obstacle cases, and stop behavior have been separately demonstrated for HomeMy.
 
-## OAK 4D Commissioning Evidence
+## OAK Commissioning Evidence
 
 1. O0: use synthetic depth geometry and a closed movement gate to test volume occupancy, stop requests, timestamp bounds, and fault reporting.
 2. O1: measure the OAK mount, field of view, camera-to-base_link transform, chassis occlusion, and overlap or boundary with the STL-proven envelope.

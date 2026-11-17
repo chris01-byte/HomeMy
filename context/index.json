@@ -76,9 +76,10 @@
       ]
     },
     "obstacle-protection": {
-      "when": "STL-27L obstacle protection, OAK 4D depth, protection volumes, local safe stop, or OAK commissioning",
+      "when": "STL-27L obstacle protection, OAK-D-S2 depth, protection volumes, local safe stop, or OAK commissioning",
       "files": [
-        "contracts/hardware/obstacle-protection.md"
+        "contracts/hardware/obstacle-protection.md",
+        "docs/decisions/2026-11-17-oak-d-s2-camera.md"
       ]
     },
     "semantic-perception": {

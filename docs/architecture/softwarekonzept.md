@@ -1,6 +1,6 @@
 # Softwarekonzept HomeMy
 
-Status: Entwurf zur Abstimmung mit dem Projektinhaber. Die Grundsatzfragen sind entschieden (Abschnitt 10). Offen ist nur noch das OAK-Modell. Programmiert ist noch nichts.
+Status: Entwurf zur Abstimmung mit dem Projektinhaber. Die Grundsatzfragen sind entschieden (Abschnitt 10). Offen ist nur noch, ob die OAK fest oder neigbar montiert wird. Programmiert ist noch nichts.
 Stand: 17.11.2026.
 
 Dieses Dokument ist bewusst auf Deutsch geschrieben, weil es die Referenz für den Projektinhaber ist. Die Verträge unter `contracts/` bleiben englisch und legen später jede Schnittstelle im Detail fest. Das Konzept gibt die Richtung vor, die Verträge die Regeln.
@@ -192,10 +192,11 @@ Regeln:
 ### 5.8 Wahrnehmen
 
 - **Aufgabe:** Einen benannten Gegenstand finden und seine Lage relativ zum Roboter liefern, mit Zeitstempel und Vertrauenswert.
-- **Zwei Kameras mit getrennten Aufgaben:** Die OAK oben am Roboter sieht den Raum, findet den Gegenstand und liefert seine Lage grob. Die Kamera am Handgelenk, eine Orbbec Gemini 305 wie bei Amadeus, liefert beim Annähern die genaue Lage. Das hast du am 17.11.2026 entschieden.
+- **Zwei Kameras mit getrennten Aufgaben:** Die OAK-D-S2 oben am Roboter sieht den Raum, findet den Gegenstand und liefert seine Lage grob. Die Kamera am Handgelenk, eine Orbbec Gemini 305 wie bei Amadeus, liefert beim Annähern die genaue Lage. Das hast du am 17.11.2026 entschieden.
 - **Grund für die zweite Kamera:** Bei Amadeus ergab die Rechnung, dass eine feste Kamera nicht zugleich den Raum und den Greifbereich sehen kann und dass der ausgestreckte Arm einen Teil des Bildes verdeckt.
 - **Erkennung:** Startpunkt ist der Weg von Amadeus: YOLO-World auf dem KI-Rechner, der zwei Bildpaare pro Sekunde komprimiert erhält. Der Baustein steckt hinter einer festen Schnittstelle, damit der Ort der Berechnung später wechseln kann.
 - **Verbesserung gegenüber Amadeus:** Dort wurde die Tiefe an einem einzigen Bildpunkt gelesen. HomeMy mittelt über die Fläche des Gegenstands und prüft, ob er auf der bekannten Fläche des Ortes liegt.
+- **Gleiches Kameramodell wie Amadeus:** Dessen Lösungen für Bildgröße, Entzerrung, Synchronisierung und Übertragung gelten direkt.
 - **Schärfe der Farbkamera:** Hat die OAK Autofokus, wird der Fokus fest auf die Linsenstellung gesetzt, mit der die Kamera im Werk kalibriert wurde. Nur dann passen Farbbild und Tiefe genau zusammen; so macht es auch das Beispiel des Herstellers. Die Tiefe selbst kommt von den beiden Schwarz-Weiß-Kameras mit festem Fokus und ist vom Autofokus nicht betroffen.
 - **Belegt bei Amadeus:** Eine Tasse wurde relativ zum Roboter geortet, bei elf Messungen mit höchstens 7,2 mm Streuung. Die Genauigkeit gegen ein Maßband wurde nie gemessen.
 - **Lehren aus Amadeus:** Englische Suchbegriffe erkennen viel besser als deutsche. Rohbilder dürfen nie direkt über WLAN gesendet werden. Kamera- und Übertragungsdienste fielen in Dauerläufen still aus und brauchen Überwachung. Glänzende und durchsichtige Gegenstände haben Lücken in der Tiefe.
@@ -331,7 +332,7 @@ S0 bis S4 können sofort beginnen und brauchen weder Fahrgestell noch PMU. S1 is
 | E8 | Zuerst nur der rechte Arm. Der zweite folgt in V4. |
 | E9 | ROS 2 Jazzy auf Ubuntu 24.04. |
 | E10 | Entwickelt und simuliert wird in Cloud-Sitzungen. Ein eigener Rechner mit Ubuntu 24.04 wird erst für die Arbeit am Roboter nötig. |
-| E11 | Das OAK-Modell und ob die Kamera fest oder neigbar ist, wird vor S7 festgelegt. |
+| E11 | Oben am Roboter sitzt eine OAK-D-S2 wie bei Amadeus, weil die OAK 4D nicht lieferbar ist (`docs/decisions/2026-11-17-oak-d-s2-camera.md`). Ob sie fest oder neigbar montiert wird, wird vor S7 festgelegt. |
 
 ## 11. Risiken und offene Messungen
 

@@ -39,7 +39,7 @@ The pipeline is conditional, not a mandatory per-frame sequence. Detection runs 
 
 ## Safety and Availability Boundary
 
-Semantic perception and manipulation are not the primary obstacle-protection path. STL-27L floor and near-field coverage, the local OAK 4D protection role, the movement gate, and the independent emergency stop remain governed by the obstacle-protection and navigation contracts.
+Semantic perception and manipulation are not the primary obstacle-protection path. STL-27L floor and near-field coverage, the local OAK-D-S2 protection role, the movement gate, and the independent emergency stop remain governed by the obstacle-protection and navigation contracts.
 
 A semantic result must never delay, suppress, or veto an immediate local protection response. Remote AI, network availability, image relays, LLM planning, and off-board inference are not required for an immediate stop or for the basic validity checks before a local grasp.
 

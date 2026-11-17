@@ -30,7 +30,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - The battery's external 60 A fuse is the only melting fuse. TPS26631 devices protect the PC and 5 V converter inputs; one TPS48110-Q1 motion gate protects passive arm, drive, and lift-converter outputs.
 - The external 5 V converter is to provide at least 5 V/5 A continuous; no software current limit is credited as its protection.
 - The external AI server remains remote and optional. Its failure maps to READY_LIMITED only after local mandatory checks pass.
-- STL-27L is the primary planned local 2D source for the validated floor and near-field operating envelope. A future OAK 4D provides complementary local 3D depth geometry.
+- STL-27L is the primary planned local 2D source for the validated floor and near-field operating envelope. An OAK-D-S2, the same model as on Amadeus, provides complementary local 3D depth geometry; the OAK 4D is not available.
 - An HWT601-AGV-485 six-axis IMU is planned for yaw-rate-aided odometry on its own read-only RS485 port. It has no absolute heading and is never a movement authority. Its main purpose is heading on tile joints, where Amadeus measured chassis yaw that wheel encoders did not see.
 - The STL-27L sits inside the base at the front and scans through an open slot in the structural acrylic ring, about 164 mm above the floor in the CAD model. Two struts and four slot webs give six predicted blind sectors, 34 degrees in total. A closed acrylic window failed the owner's test.
 - HomeMy has no autonomous exploration. A technician or the customer drives it once through all rooms with the same DualShock gamepad as Amadeus, without a dead-man button by owner decision, to build one map of the home. The controller is wireless and mapping mode is switched on in the app; rooms are then managed in the app as named areas on that saved map, following the Amadeus app concept.
@@ -42,7 +42,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - ESS23-RS drivebase behavior may be adapted from roboter_ws only through the non-moving HomeMy commissioning contract. All HomeMy vehicle measurements remain open.
 - STL-27L driver, scan normalization, and diagnostics may be adapted after new LiDAR frame and mount commissioning.
 - robot_navigation may be adapted only as a hardware-independent Nav2 and simulation candidate. Its real profile awaits HomeMy footprint, LiDAR, obstacle protection, movement gate, and safety commissioning.
-- Local OAK 4D depth is a proposed complementary obstacle-protection candidate governed by `contracts/hardware/obstacle-protection.md`. It remains local; no camera bring-up or protection code has been copied.
+- Local OAK-D-S2 depth is a proposed complementary obstacle-protection candidate governed by `contracts/hardware/obstacle-protection.md`. It remains local; no camera bring-up or protection code has been copied.
 - Semantic perception and grasping are architecture-only. No YOLO, Grounding DINO, SAM2, grasp model, local camera bring-up, or manipulation code is selected for transfer.
 - HWT601 reading and yaw-rate fusion may be adapted from roboter_ws development commit `08a4b9a` (not on main) after a HomeMy IMU contract exists. Mount, axes, bias, noise, timing, and tuning are HomeMy measurements.
 - Gamepad driving, the versioned map store, the room overlay, and the map and room parts of the Amadeus iOS app may be adapted from `05439c7`. Gamepad driving needs a HomeMy manual-drive contract first. Autonomous exploration is excluded.
@@ -88,7 +88,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 10. `contracts/ros/system-lifecycle.md` for appliance behavior.
 11. `contracts/hardware/drivebase-commissioning.md` for ESS23-RS adaptation.
 12. `contracts/hardware/lidar-commissioning.md` for STL-27L adaptation.
-13. `contracts/hardware/obstacle-protection.md` for STL-27L/OAK 4D protection roles and O0-O5 evidence.
+13. `contracts/hardware/obstacle-protection.md` for STL-27L/OAK-D-S2 protection roles and O0-O5 evidence.
 14. `contracts/hardware/navigation-commissioning.md` for `robot_navigation` assessment.
 15. `integration/roboter_ws/TRANSFER_MANIFEST.md` for incoming transfers.
 16. `docs/decisions/2026-08-31-semantic-perception-and-grasping.md` for the proposed semantic perception and grasping pipeline.
@@ -98,6 +98,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 20. `contracts/api/app-bridge.md` and `ios/HomeMy/README.md` for the app and its interface to the robot.
 21. `docs/architecture/softwarekonzept.md` for the draft software concept (German): drive to rooms, fetch and bring objects on command from the app.
 22. `docs/decisions/2026-11-17-self-healing-and-latching.md` for what latches the robot and what heals by itself.
+23. `docs/decisions/2026-11-17-oak-d-s2-camera.md` for the camera on top of the robot.
 
 ## Open Decisions
 
@@ -115,7 +116,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - Whether HomeMy needs a tilt-based scan gate on tile joints; to be measured on the built chassis.
 - App bridge access control, customer network setup, and moving rooms to a new map version after remapping. The app cannot yet save a second map once rooms exist.
 - Measured LiDAR mask sectors and margins for the slotted base ring (L4); the recorded values are CAD predictions.
-- OAK model for HomeMy and whether it is fixed or tiltable; to be decided before stage S7. The concept's other owner decisions were made on 2026-11-17.
+- Whether the OAK-D-S2 is mounted fixed or tiltable; to be decided before stage S7. The concept's other owner decisions were made on 2026-11-17.
 - Gripper details: a two-jaw parallel gripper is decided; drive, sensors, and interface are open.
 - Bounds of each healing step and the clear time before motion continues after a protection stop.
 - Exact local model implementations, accelerator, ROS interfaces, and validation thresholds for semantic perception and grasping.

@@ -8,7 +8,7 @@ Do not copy whole packages, local deployment files, home data, maps, bags, crede
 
 ## Current Status
 
-Nine user-approved candidates are recorded for staged adaptation. The local OAK 4D obstacle-protection boundary is documented. The iPhone app is the first ported code; no HomeMy robot runtime code, real-hardware configuration, or deployment file has been copied.
+Nine user-approved candidates are recorded for staged adaptation. The local OAK-D-S2 obstacle-protection boundary is documented. The iPhone app is the first ported code; no HomeMy robot runtime code, real-hardware configuration, or deployment file has been copied.
 
 Source baseline: chris01-byte/Roboter_ws main at commit 05439c7a13d7a92e69b9eb4663e3a2a1b44626a1.
 
@@ -20,7 +20,7 @@ Exception: the HWT601 candidate is not on roboter_ws main. It is pinned to devel
 | --- | --- | --- | --- |
 | ESS23-RS drive-base foundation | src/base_hardware/ | src/homemy_drivebase/ | proposed; user-approved for staged adaptation after HomeMy chassis commissioning |
 | STL-27L LiDAR foundation | src/amadeus_lidar_bringup/ and pinned vendor manifest | src/homemy_lidar_bringup/ | proposed; user-approved for staged adaptation after new mount validation |
-| Local OAK 4D depth obstacle-protection foundation | local bring-up portions of src/robot_bringup/ | future src/homemy_oak_bringup/ | proposed; local 3D complement to STL-27L under the HomeMy obstacle-protection contract; no server, relay, inference, or network work |
+| Local OAK-D-S2 depth obstacle-protection foundation | local bring-up portions of src/robot_bringup/ | future src/homemy_oak_bringup/ | proposed; same camera model as the source, so bring-up fixes transfer, unit calibration and mount do not; local 3D complement to STL-27L under the HomeMy obstacle-protection contract; no server, relay, inference, or network work |
 | Navigation algorithms and dry-run foundation | src/robot_navigation/ | future src/homemy_navigation/ | proposed; user-approved for simulation and algorithm adaptation after HomeMy geometry and safety commissioning |
 | HWT601 IMU and yaw-rate state estimation | src/robot_state_estimation/ at commit 08a4b9a | future src/homemy_state_estimation/ | proposed; user-approved for staged adaptation after a HomeMy IMU commissioning contract; read-only sensor on a dedicated third serial bus |
 | Gamepad driving for manual mapping | src/robot_bringup/ teleop_joy launch and config | future homemy_bringup manual-drive profile | proposed; requires a HomeMy manual-drive contract; same DualShock model and assignment as the source, no dead-man button by owner decision; source bypass branch excluded |

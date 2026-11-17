@@ -59,6 +59,8 @@ Planned HomeMy destination: a future homemy_oak_bringup package.
 
 Status: proposed local 3D complement to the STL-27L floor and near-field envelope; no HomeMy camera or protection code copied.
 
+Update 2026-11-17: the OAK 4D is not available. HomeMy uses the OAK-D-S2, the same model as the source robot; see `docs/decisions/2026-11-17-oak-d-s2-camera.md`. The source bring-up fixes become direct candidates. Calibration, mount, and threshold values of the source unit still do not transfer.
+
 The HomeMy OAK role is local depth geometry for larger or higher obstacles that may lie outside the STL scan plane. It must not rely on object classification, the external AI server, relay services, network transport, or off-board inference. The HomeMy obstacle-protection contract governs the role, fail-closed behavior, degraded operation, and O0-O5 evidence.
 
 Portable candidates:

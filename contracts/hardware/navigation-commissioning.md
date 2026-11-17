@@ -14,7 +14,7 @@ HomeMy has no autonomous exploration. A person maps the home once by manual driv
 
 HomeMy does not use VL53 near-field hardware. Therefore the source VL53 obstacle layers and VL53-driven collision-monitor configuration are not portable. Removing those files is not a replacement for a HomeMy obstacle-detection and safe-stop design.
 
-The separate [Obstacle protection contract](obstacle-protection.md) assigns the local protection roles: STL-27L is the primary 2D source for the validated floor and near-field envelope, while OAK 4D depth may cover separately commissioned larger or higher obstacles. OAK protection uses local depth geometry, not remote AI or semantic classification.
+The separate [Obstacle protection contract](obstacle-protection.md) assigns the local protection roles: STL-27L is the primary 2D source for the validated floor and near-field envelope, while OAK-D-S2 depth may cover separately commissioned larger or higher obstacles. OAK protection uses local depth geometry, not remote AI or semantic classification.
 
 ## Safe Default
 
@@ -28,7 +28,7 @@ Navigation starts in simulation or a non-moving drivebase profile. A successful 
 | Padding | documented safety margin derived from measurements and the intended environment; no source robot radius or footprint is reused |
 | LiDAR installation | commissioned LiDAR pose, direction, masks, normalized scan, timestamp limits, and known blind zones |
 | Drivebase | commissioned ESS23-RS odometry, acceleration, braking, speed limits, and verified stop behavior |
-| Obstacle protection | separate HomeMy obstacle-protection contract with STL-27L floor/near-field coverage, any OAK 4D protection volume, stale-data behavior, response path, degraded envelope, and safe-stop evidence; source VL53 assumptions are absent |
+| Obstacle protection | separate HomeMy obstacle-protection contract with STL-27L floor/near-field coverage, any OAK-D-S2 protection volume, stale-data behavior, response path, degraded envelope, and safe-stop evidence; source VL53 assumptions are absent |
 | Safety path | independent emergency stop, movement gate, command ownership, zero-command behavior, restart behavior, and fault behavior |
 | Navigation configuration | HomeMy costmaps, planner/controller settings, map policy, localization criteria, and synthetic plus physical tests |
 
@@ -51,7 +51,7 @@ A source robot_navigation test or a valid Nav2 plan is not HomeMy hardware accep
 - Amadeus chassis footprint, robot radius, clearance, padding, and door assumptions.
 - Source map files, map fingerprints, static map transforms, semantic targets, and environmental data.
 - Source velocity-smoother values, progress thresholds, timeouts, costmaps, planner/controller tuning, and real-navigation launch profiles.
-- Source OAK-D-S2 calibration, camera mounting, depth thresholds, device aliases, and protection assumptions.
+- Calibration, camera mounting, depth thresholds, device aliases, and protection assumptions of the source robot's OAK-D-S2. HomeMy uses the same model, but these values belong to the source unit and its mount.
 - Any source mission or behavior-tree integration whose HomeMy safety and customer-workflow contract is not yet selected.
 
 ## Validation
