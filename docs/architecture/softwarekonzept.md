@@ -1,6 +1,6 @@
 # Softwarekonzept HomeMy
 
-Status: Entwurf zur Abstimmung mit dem Projektinhaber. Sechs Punkte sind entschieden (Abschnitt 10), der Rest ist offen. Programmiert ist noch nichts.
+Status: Entwurf zur Abstimmung mit dem Projektinhaber. Die Grundsatzfragen sind entschieden (Abschnitt 10). Offen ist nur noch das OAK-Modell. Programmiert ist noch nichts.
 Stand: 17.11.2026.
 
 Dieses Dokument ist bewusst auf Deutsch geschrieben, weil es die Referenz für den Projektinhaber ist. Die Verträge unter `contracts/` bleiben englisch und legen später jede Schnittstelle im Detail fest. Das Konzept gibt die Richtung vor, die Verträge die Regeln.
@@ -196,6 +196,7 @@ Regeln:
 - **Grund für die zweite Kamera:** Bei Amadeus ergab die Rechnung, dass eine feste Kamera nicht zugleich den Raum und den Greifbereich sehen kann und dass der ausgestreckte Arm einen Teil des Bildes verdeckt.
 - **Erkennung:** Startpunkt ist der Weg von Amadeus: YOLO-World auf dem KI-Rechner, der zwei Bildpaare pro Sekunde komprimiert erhält. Der Baustein steckt hinter einer festen Schnittstelle, damit der Ort der Berechnung später wechseln kann.
 - **Verbesserung gegenüber Amadeus:** Dort wurde die Tiefe an einem einzigen Bildpunkt gelesen. HomeMy mittelt über die Fläche des Gegenstands und prüft, ob er auf der bekannten Fläche des Ortes liegt.
+- **Schärfe der Farbkamera:** Hat die OAK Autofokus, wird der Fokus fest auf die Linsenstellung gesetzt, mit der die Kamera im Werk kalibriert wurde. Nur dann passen Farbbild und Tiefe genau zusammen; so macht es auch das Beispiel des Herstellers. Die Tiefe selbst kommt von den beiden Schwarz-Weiß-Kameras mit festem Fokus und ist vom Autofokus nicht betroffen.
 - **Belegt bei Amadeus:** Eine Tasse wurde relativ zum Roboter geortet, bei elf Messungen mit höchstens 7,2 mm Streuung. Die Genauigkeit gegen ein Maßband wurde nie gemessen.
 - **Lehren aus Amadeus:** Englische Suchbegriffe erkennen viel besser als deutsche. Rohbilder dürfen nie direkt über WLAN gesendet werden. Kamera- und Übertragungsdienste fielen in Dauerläufen still aus und brauchen Überwachung. Glänzende und durchsichtige Gegenstände haben Lücken in der Tiefe.
 
@@ -321,16 +322,16 @@ S0 bis S4 können sofort beginnen und brauchen weder Fahrgestell noch PMU. S1 is
 | E2 | Orte werden für V2 mit dem Controller eingelernt. Dass der Roboter seinen Standplatz selbst findet, kommt in einer späteren Stufe. |
 | E12 | Vor der freien Wahl des Standplatzes kommt die Zwischenstufe V3a: Eine Tischkante wird durch zwei eingelernte Orte festgelegt, und der Roboter wählt nur, wo entlang dieser Kante er steht. |
 
-### Noch offen
+### Entschieden am 17.11.2026 nach den Empfehlungen
 
-| Nr. | Frage | Empfehlung |
-| --- | --- | --- |
-| E5 | Läuft die Erkennung zuerst auf dem KI-Rechner wie bei Amadeus? | Ja. Dann ist das Holen ohne KI-Rechner nicht verfügbar, das Fahren schon. |
-| E6 | Mit welchen drei bis fünf Gegenständen beginnt HomeMy, und wie schwer dürfen sie sein? | Matte, griffige Gegenstände wie Tasse und Dose; keine durchsichtigen oder glänzenden. |
-| E8 | Zuerst nur ein Arm? | Ja, der rechte. Der zweite folgt in V4. |
-| E9 | ROS 2 Jazzy auf Ubuntu 24.04? | Ja. |
-| E10 | Wo wird entwickelt und simuliert? | In Cloud-Sitzungen wie bei Amadeus; der Prüfstand braucht keine Grafikkarte. Ein eigener Rechner mit Ubuntu 24.04 wird erst für die Arbeit am Roboter nötig. |
-| E11 | Welches OAK-Modell wird verbaut, und ist die Kamera fest oder neigbar? | Vor S7 festlegen. |
+| Nr. | Entscheidung |
+| --- | --- |
+| E5 | Die Objekterkennung läuft zuerst auf dem KI-Rechner wie bei Amadeus. Ohne KI-Rechner ist das Holen nicht verfügbar, das Fahren schon. |
+| E6 | HomeMy beginnt mit drei bis fünf matten, griffigen Gegenständen wie Tasse und Dose; keine durchsichtigen oder glänzenden. Die genaue Liste folgt vor S4. |
+| E8 | Zuerst nur der rechte Arm. Der zweite folgt in V4. |
+| E9 | ROS 2 Jazzy auf Ubuntu 24.04. |
+| E10 | Entwickelt und simuliert wird in Cloud-Sitzungen. Ein eigener Rechner mit Ubuntu 24.04 wird erst für die Arbeit am Roboter nötig. |
+| E11 | Das OAK-Modell und ob die Kamera fest oder neigbar ist, wird vor S7 festgelegt. |
 
 ## 11. Risiken und offene Messungen
 
