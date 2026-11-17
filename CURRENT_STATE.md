@@ -35,7 +35,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - The STL-27L sits inside the base at the front and scans through an open slot in the structural acrylic ring, about 164 mm above the floor in the CAD model. Two struts and four slot webs give six predicted blind sectors, 34 degrees in total. A closed acrylic window failed the owner's test.
 - HomeMy has no autonomous exploration. A technician or the customer drives it once through all rooms with the same DualShock gamepad as Amadeus, without a dead-man button by owner decision, to build one map of the home. The controller is wireless and mapping mode is switched on in the app; rooms are then managed in the app as named areas on that saved map, following the Amadeus app concept.
 - A future semantic perception and grasping path selects YOLO or Grounding DINO on demand, uses SAM2 plus local OAK depth, and treats every model output only as a candidate, never as movement authority.
-- Power-on, restart, ready state, and fault recovery never authorize motion automatically.
+- Power-on, restart, and ready state never start motion by themselves. Within an active mission or mode a stop is a pause: only an emergency stop or a hardware fault latches, everything else heals by itself within fixed limits (owner decision 2026-11-17).
 
 ## Active Transfer Scope
 
@@ -97,6 +97,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 19. `docs/decisions/2026-11-16-manual-mapping-and-app-room-management.md` for manual mapping and app room management.
 20. `contracts/api/app-bridge.md` and `ios/HomeMy/README.md` for the app and its interface to the robot.
 21. `docs/architecture/softwarekonzept.md` for the draft software concept (German): drive to rooms, fetch and bring objects on command from the app.
+22. `docs/decisions/2026-11-17-self-healing-and-latching.md` for what latches the robot and what heals by itself.
 
 ## Open Decisions
 
@@ -114,7 +115,9 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - Whether HomeMy needs a tilt-based scan gate on tile joints; to be measured on the built chassis.
 - App bridge access control, customer network setup, and moving rooms to a new map version after remapping. The app cannot yet save a second map once rooms exist.
 - Measured LiDAR mask sectors and margins for the slotted base ring (L4); the recorded values are CAD predictions.
-- The eleven owner decisions E1 to E11 in the draft software concept, first of all whether a protection stop is a pause that ends by itself (E1), which contradicts the current obstacle-protection and navigation contracts.
+- The remaining owner decisions in the draft software concept: taught-in places (E2), where detection runs (E5), first objects (E6), one arm first (E8), ROS version (E9), development environment (E10), OAK model (E11).
+- Gripper details: a two-jaw parallel gripper is decided; drive, sensors, and interface are open.
+- Bounds of each healing step and the clear time before motion continues after a protection stop.
 - Exact local model implementations, accelerator, ROS interfaces, and validation thresholds for semantic perception and grasping.
 - External AI health endpoint, authentication storage, and capability protocol.
 - Whether HomeMy includes `robot_interfaces`, `safety_monitor`, mission-gate and behavior-tree patterns, semantic maps, or app functions from roboter_ws.

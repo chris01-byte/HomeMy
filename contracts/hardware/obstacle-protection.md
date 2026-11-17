@@ -24,11 +24,11 @@ Out of scope:
 
 - external AI server, network transport, remote image relay, off-board inference, LLM planning, and semantic object classification;
 - source VL53 layers, collision-monitor configuration, OAK-D-S2 calibration, chassis geometry, or live navigation tuning;
-- automatic motion authorization or automatic resume after a stop.
+- automatic motion authorization. A healthy sensor or a clear volume never starts motion by itself; it only lets an already active mission or operating mode continue.
 
 ## Local Protection Model
 
-A HomeMy motion command must pass through the local movement gate. The gate accepts only fresh, commissioned inputs and remains closed after boot, restart, configuration change, or protection fault until separately authorized.
+A HomeMy motion command must pass through the local movement gate. The gate accepts only fresh, commissioned inputs. After boot, restart, or a configuration change it stays closed until a mission or operating mode is active. During an active mission or mode a protection event closes it only for as long as the cause lasts.
 
 The intended local inputs are:
 
@@ -45,7 +45,7 @@ Protection volumes, response distance, speed limits, and braking allowance must 
 ## Required Behavior
 
 - A detected obstacle in an active protected volume requests a zero-motion response and closes the movement gate according to the verified stop path.
-- A protection event does not resume motion automatically. A separate, explicit recovery path must confirm that inputs are healthy and the route is clear.
+- A protection event is a pause, not the end of the mission. Motion continues by itself once the inputs are fresh and healthy and the protected volume has been clear for a defined time. Only an emergency stop or a hardware fault latches and needs a deliberate reset. See `docs/decisions/2026-11-17-self-healing-and-latching.md`.
 - OAK depth processing runs locally on the on-board Linux computer. Remote AI availability cannot delay, permit, or veto an immediate protection response.
 - External AI remains optional under the existing AI-health contract. Its outage is not an obstacle-protection input.
 - The STL and OAK roles must have a documented boundary with no unexamined gap between the STL-proven floor/near-field envelope and the OAK-proven 3D envelope.

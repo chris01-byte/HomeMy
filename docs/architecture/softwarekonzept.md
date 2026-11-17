@@ -1,6 +1,6 @@
 # Softwarekonzept HomeMy
 
-Status: Entwurf zur Abstimmung mit dem Projektinhaber. Noch nichts davon ist beschlossen oder programmiert.
+Status: Entwurf zur Abstimmung mit dem Projektinhaber. Vier Punkte sind entschieden (Abschnitt 10), der Rest ist offen. Programmiert ist noch nichts.
 Stand: 17.11.2026.
 
 Dieses Dokument ist bewusst auf Deutsch geschrieben, weil es die Referenz für den Projektinhaber ist. Die Verträge unter `contracts/` bleiben englisch und legen später jede Schnittstelle im Detail fest. Das Konzept gibt die Richtung vor, die Verträge die Regeln.
@@ -32,7 +32,7 @@ Dieses Konzept beschreibt V1 und V2 genau und V3 und V4 nur so weit, dass der We
 
 Die Leitsätze stammen aus den Erfahrungen mit Amadeus und aus den Regeln dieses Repos.
 
-1. **Selbst heilen statt abbrechen.** Das ist dein Leitsatz vom 15.10.2026 für Amadeus: Ein Kundenroboter muss sich selbst helfen und darf den Gesamtablauf nur in Ausnahmen beenden. Anhalten ist sicher, Abbrechen ist teuer.
+1. **Nur Not-Halt und Hardwarefehler verriegeln den Roboter.** In allen anderen Fällen bringt eine starke Selbstheilung ihn von selbst in den normalen Betrieb zurück. Das hast du am 17.11.2026 für HomeMy entschieden; es schärft deinen Amadeus-Leitsatz vom 15.10.2026. Anhalten ist sicher, Abbrechen ist teuer.
 2. **Fehlende oder alte Sensordaten erlauben nie eine Bewegung, beenden aber auch keinen Auftrag.** Der Roboter wartet, bis die Daten wieder da sind.
 3. **Erkennung, KI und App erteilen keine Bewegungsfreigabe.** Ein erkannter Gegenstand ist ein Vorschlag. Ob sich etwas bewegen darf, entscheidet allein die Bewegungsfreigabe auf dem Roboter.
 4. **Entweder fahren oder greifen.** Bis einschließlich V3 bewegen sich Fahrwerk und Arme nie gleichzeitig. Gefahren wird nur mit den Armen in Fahrhaltung, gegriffen nur im nachgewiesenen Stillstand.
@@ -42,7 +42,7 @@ Die Leitsätze stammen aus den Erfahrungen mit Amadeus und aus den Regeln dieses
 8. **Erst Simulation mit dem echten Programmcode, dann ohne Motoren, dann beaufsichtigt am Roboter.**
 9. **Jedes Gerät hat genau einen Besitzer.** Ein Erfolg gegen eine Attrappe wird nie als echter Erfolg gemeldet.
 
-Leitsatz 1 steht in Spannung zu den HomeMy-Verträgen vom August und September. Siehe Entscheidung E1 in Abschnitt 10.
+Leitsatz 1 ist als eigene Entscheidung festgehalten: `docs/decisions/2026-11-17-self-healing-and-latching.md`. Die Verträge, die vorher das Gegenteil sagten, sind angepasst.
 
 ## 3. Der Hol-Auftrag Schritt für Schritt
 
@@ -61,16 +61,17 @@ Ein Ort speichert die Stellung des Roboters auf der Karte, die Art (Greifort, Ab
 | --- | --- | --- | --- |
 | 1 | Auftrag | In der App Gegenstand, Greifort und Ablageort wählen | – |
 | 2 | Annahme | Roboter prüft: bereit, Standort bekannt, Akku ausreichend, Arm in Fahrhaltung, Erkennung erreichbar | Ablehnung mit Grund in der App |
-| 3 | Hinfahren | Fahrt zum Greifort, Arme verriegelt | warten, neu planen, sonst Hilfe |
+| 3 | Hinfahren | Fahrt zum Greifort, Arme in Fahrhaltung gesperrt | warten, neu planen |
 | 4 | Ausrichten | Stellung am Ort gegen die eingelernte Stellung prüfen und nachsetzen | erneut anfahren |
 | 5 | Umschalten | Stillstand nachweisen, Fahrwerk sperren, Arm freigeben, Hub auf Arbeitshöhe | warten |
-| 6 | Finden | Kamera sucht den Gegenstand und bestimmt seine Lage relativ zum Roboter | erneut hinsehen, sonst „nicht gefunden“ |
-| 7 | Planen | Griff und Armbewegung berechnen und prüfen: erreichbar, kollisionsfrei, innerhalb der Grenzen | anderen Griff versuchen |
-| 8 | Greifen | Vorposition, annähern, schließen, anheben, Griff prüfen | lösen und neu versuchen, höchstens dreimal |
-| 9 | Tragen | Arm in Tragehaltung, Hub auf Fahrhöhe, Fahrwerk freigeben | – |
-| 10 | Bringen | Fahrt zum Ablageort mit vergrößertem Fahrumriss | warten, neu planen, sonst Hilfe |
-| 11 | Abstellen | Fläche frei? Absetzen, öffnen, zurückziehen | andere Stelle auf der Fläche |
-| 12 | Abschluss | Arm in Fahrhaltung, Ergebnis an die App | – |
+| 6 | Finden | Die OAK oben am Roboter sucht den Gegenstand und bestimmt seine Lage grob, relativ zum Roboter | erneut hinsehen, sonst „nicht gefunden“ |
+| 7 | Fein orten | Der Arm bringt die Kamera am Handgelenk vor den Gegenstand; sie bestimmt die Lage genau | Blickwinkel ändern |
+| 8 | Planen | Griff und Armbewegung berechnen und prüfen: erreichbar, kollisionsfrei, innerhalb der Grenzen | anderen Griff versuchen |
+| 9 | Greifen | in Schritten annähern („sehen, bewegen, wieder sehen“), schließen, anheben, Griff prüfen | lösen und neu versuchen, höchstens dreimal |
+| 10 | Tragen | Arm in Tragehaltung, Hub auf Fahrhöhe, Fahrwerk freigeben | – |
+| 11 | Bringen | Fahrt zum Ablageort mit vergrößertem Fahrumriss | warten, neu planen |
+| 12 | Abstellen | Fläche frei? Absetzen, öffnen, zurückziehen | andere Stelle auf der Fläche |
+| 13 | Abschluss | Arm in Fahrhaltung, Ergebnis an die App | – |
 
 ### Wenn etwas schiefgeht
 
@@ -81,13 +82,15 @@ Jeder Fehler durchläuft dieselbe begrenzte Leiter. Sie ist von der Heilungsleit
 | H0 Warten | stillstehen, bis Daten oder Weg wieder frei sind | einige Sekunden |
 | H1 Wiederholen | denselben Schritt mit frischen Daten neu rechnen | zweimal je Schritt |
 | H2 Anders versuchen | anderer Weg, anderer Blick, anderer Griff | dreimal je Schritt |
-| H3 Sicher beenden | Schritt aufgeben und in einen sicheren Zustand gehen | einmal |
-| H4 Hilfe | stillstehen, Grund und Vorschlag in der App, „Weiter“ möglich | – |
+| H3 Sicher beenden | den Auftrag mit einer klaren Meldung beenden; der Roboter ist danach von selbst wieder bereit | einmal |
+| H4 Hilfe | Meldung in der App mit Grund und Vorschlag, „Weiter“ möglich; das ist eine Auskunft und keine Sperre | – |
 
 Zwei feste Regeln:
 
 - **Ein Gegenstand in der Hand wird nie fallen gelassen.** Scheitert der Auftrag nach dem Greifen, bleibt der Roboter stehen und bittet um Hilfe, oder er stellt den Gegenstand am nächsten erreichbaren Ablageort ab.
-- **Nur echte Ausnahmen beenden einen Auftrag ohne Rückfrage:** Not-Halt, erkannte Kollision, dauerhafter Ausfall eines Pflichtsensors oder Antriebs, verlorener Standort ohne Wiederfinden, erschöpftes Heilungsbudget, Abbruch durch den Nutzer.
+- **Verriegelt wird nur bei Not-Halt und Hardwarefehler.** Zu den Hardwarefehlern zählen ausgelöste Schutzabschaltungen der PMU und Antriebe, die einen Fehler melden oder nach begrenzten Verbindungsversuchen nicht antworten.
+- **Alles andere heilt:** Hindernis im Weg, fehlende Sensordaten, unsicherer Standort, versperrter Weg, nicht gefundener Gegenstand, Fehlgriff, unerwartete Berührung, nicht erreichbarer KI-Rechner. Ein Sensor, der schweigt, braucht keine Sperre: Ohne seine Daten bewegt sich nichts, und wenn er wieder da ist, geht es weiter.
+- **Nach einem Halt geht es erst weiter, wenn die Ursache eine festgelegte Zeit lang weg ist,** und immer aus dem gemessenen Stillstand.
 
 ## 4. Aufbau
 
@@ -135,7 +138,7 @@ Zu jedem Baustein stehen Aufgabe, Herkunft und der wichtigste offene Punkt.
 
 ### 5.3 Ablaufsteuerung
 
-- **Aufgabe:** Die zwölf Schritte aus Abschnitt 3 abarbeiten, mit Wiederholungen und der Heilungsleiter.
+- **Aufgabe:** Die Schritte aus Abschnitt 3 abarbeiten, mit Wiederholungen und der Heilungsleiter.
 - **Technik:** Verhaltensbaum (Behavior Tree), wie bei Amadeus im `bt_orchestrator`. Der Baum für das Holen existiert dort als Vorlage.
 - **Lehre aus Amadeus:** Dem Baum fehlten Wiederholungsknoten, und die Erkundung übersprang die Prüfung der Fahrhaltung. HomeMy prüft die Fahrhaltung zentral in der Bewegungsfreigabe und nicht im Baum.
 
@@ -185,7 +188,8 @@ Regeln:
 ### 5.8 Wahrnehmen
 
 - **Aufgabe:** Einen benannten Gegenstand finden und seine Lage relativ zum Roboter liefern, mit Zeitstempel und Vertrauenswert.
-- **Kamera:** OAK oben am Roboter. Die Tiefe wird in der Kamera berechnet.
+- **Zwei Kameras mit getrennten Aufgaben:** Die OAK oben am Roboter sieht den Raum, findet den Gegenstand und liefert seine Lage grob. Die Kamera am Handgelenk, eine Orbbec Gemini 305 wie bei Amadeus, liefert beim Annähern die genaue Lage. Das hast du am 17.11.2026 entschieden.
+- **Grund für die zweite Kamera:** Bei Amadeus ergab die Rechnung, dass eine feste Kamera nicht zugleich den Raum und den Greifbereich sehen kann und dass der ausgestreckte Arm einen Teil des Bildes verdeckt.
 - **Erkennung:** Startpunkt ist der Weg von Amadeus: YOLO-World auf dem KI-Rechner, der zwei Bildpaare pro Sekunde komprimiert erhält. Der Baustein steckt hinter einer festen Schnittstelle, damit der Ort der Berechnung später wechseln kann.
 - **Verbesserung gegenüber Amadeus:** Dort wurde die Tiefe an einem einzigen Bildpunkt gelesen. HomeMy mittelt über die Fläche des Gegenstands und prüft, ob er auf der bekannten Fläche des Ortes liegt.
 - **Belegt bei Amadeus:** Eine Tasse wurde relativ zum Roboter geortet, bei elf Messungen mit höchstens 7,2 mm Streuung. Die Genauigkeit gegen ein Maßband wurde nie gemessen.
@@ -198,7 +202,8 @@ Regeln:
 - **Herkunft:** Neu. Bei Amadeus gibt es für RobStride-Antriebe keine Software, und der dortige Arm wurde nie per Software bewegt. Übernommen werden die Zustände (offline, nur lesen, bereit, in Bewegung, hält, Fehler) und die Stufen der Inbetriebnahme.
 - **Benannte Haltungen:** Parkhaltung (stromlos sicher), Fahrhaltung, Tragehaltung, Bereit.
 - **Keine Bremsen:** Die Arme haben laut Planung keine Bremsen. Vor jedem Abschalten der Antriebe fährt der Arm in die Parkhaltung.
-- **Offen:** Greifer, Nullpunkt der Gelenke nach dem Einschalten, Reichweite, Hubweg und Traglast.
+- **Greifer:** ein Parallelgreifer mit zwei Backen (entschieden 17.11.2026). Antrieb, Sensoren und Anschluss sind noch in Planung. Bei Amadeus waren ein kleiner Servo, zwei Kraftsensoren und eine Lichtschranke vorgesehen.
+- **Offen:** Einzelheiten des Greifers, Nullpunkt der Gelenke nach dem Einschalten, Reichweite, Hubweg und Traglast.
 
 ### 5.10 Griff planen und prüfen
 
@@ -208,8 +213,9 @@ Regeln:
 
 ### 5.11 Kamera und Arm aufeinander einmessen
 
-- **Aufgabe:** Bestimmen, wo die Kamera relativ zum Arm sitzt. Ohne das greift der Arm daneben.
-- **Herkunft:** Konzept und Programme von Amadeus (`handeye_calibration`). Sie liefen dort nie an Hardware.
+- **Aufgabe:** Bestimmen, wo jede Kamera relativ zum Arm sitzt. Ohne das greift der Arm daneben.
+- **Zwei Einmessungen:** die OAK gegenüber dem Roboter und die Handgelenk-Kamera gegenüber dem Greifer.
+- **Herkunft:** Konzept und Programme von Amadeus (`handeye_calibration`). Sie liefen dort nie an Hardware und können die Handgelenk-Kamera noch nicht einmessen.
 
 ### 5.12 Systemstart und Diagnose
 
@@ -227,7 +233,7 @@ Regeln:
 | Rechner | Aufgaben | Fällt er aus |
 | --- | --- | --- |
 | Bordrechner | alles, was Bewegung auslöst oder verhindert: Freigabe, Schutz, Standort, Wegplanung, Armplanung, Treiber, App-Brücke | Roboter steht |
-| OAK | Bild und Tiefe | kein Greifen |
+| OAK und Handgelenk-Kamera | Bild und Tiefe | kein Greifen |
 | KI-Rechner im Heimnetz | Objekterkennung | kein Holen; Fahren geht weiter („eingeschränkt bereit“) |
 | ESP32 in der PMU | Stromversorgung, LED, Hardware-Gate für Bewegung | Roboter aus |
 | iPhone | Bedienung | Roboter arbeitet weiter; Stopp nur noch am Roboter |
@@ -291,23 +297,31 @@ S0 bis S4 können sofort beginnen und brauchen weder Fahrgestell noch PMU. S1 is
 | Standort mit Suche beim Start | wenige erfolgreiche Läufe | übernehmen, Wiederholbarkeit nachweisen |
 | Fahrantrieb, LiDAR, HWT-601 | in Betrieb | wie im Transfer-Manifest festgehalten |
 | Objekterkennung über den KI-Rechner | Lage im Stand gemessen, nie gegriffen | übernehmen, Tiefenmessung verbessern |
-| Einmessen Kamera–Arm | Programme vorhanden, nie an Hardware | übernehmen |
+| Einmessen Kamera–Arm | Programme vorhanden, nie an Hardware | übernehmen, um die Handgelenk-Kamera erweitern |
+| Handgelenk-Kamera | am 12.11.2026 entschieden, noch keine Software | Entscheidung übernehmen, Software neu |
 | Arm-Software | nur lesendes Prüfwerkzeug, für andere Motoren | nur Zustände und Stufen übernehmen |
 | Prüfstand | in Betrieb | übernehmen und auf HomeMy-Maße umstellen |
-| Leitsatz Selbstheilung und Heilungsleiter | beschlossen, in der Simulation geprüft | übernehmen (Entscheidung E1) |
+| Leitsatz Selbstheilung und Heilungsleiter | beschlossen, in der Simulation geprüft | übernommen und verschärft (17.11.2026) |
 | Autonome Erkundung, VL53 | – | nicht übernehmen |
 
-## 10. Entscheidungen, die du treffen musst
+## 10. Entscheidungen
+
+### Entschieden am 17.11.2026
+
+| Nr. | Entscheidung |
+| --- | --- |
+| E1 | Nur Not-Halt und Hardwarefehler verriegeln den Roboter. Alles andere heilt von selbst. Festgehalten in `docs/decisions/2026-11-17-self-healing-and-latching.md`. |
+| E3 | Der Greifer wird ein Parallelgreifer mit zwei Backen. Die Einzelheiten sind in Planung. |
+| E4 | Am Handgelenk sitzt dieselbe Kamera wie bei Amadeus, eine Orbbec Gemini 305. |
+| E7 | „Zurückbringen“ heißt zuerst: auf einer Fläche abstellen. Die Übergabe an eine Person folgt später. |
+
+### Noch offen
 
 | Nr. | Frage | Empfehlung |
 | --- | --- | --- |
-| E1 | Gilt „Stopp ist Pause“ auch für HomeMy? Die Verträge vom August und September sagen, dass nach einem Schutzhalt nie von selbst weitergefahren wird. Dein Leitsatz vom 15.10. sagt das Gegenteil. | Ja, mit festen Grenzen. Not-Halt und Hardwarefehler bleiben verriegelt. Hindernisschutz- und Navigationsvertrag werden angepasst. |
 | E2 | Orte mit dem Controller einlernen statt den Roboter selbst einen Standplatz suchen lassen? | Ja, für V2. |
-| E3 | Welcher Greifer? Bisher ist keiner festgelegt. Bei Amadeus war ein Parallelgreifer mit kleinem Servo und Kraftsensoren geplant. | Früh entscheiden; ohne Greifer kein V2. |
-| E4 | Bekommt der Arm eine zweite Kamera am Handgelenk? Bei Amadeus hast du das am 12.11. entschieden, weil die feste OAK Raum und Greifbereich nicht zugleich sieht. | Für HomeMy rechnerisch prüfen, sobald Armmaße und OAK-Neigung feststehen. |
 | E5 | Läuft die Erkennung zuerst auf dem KI-Rechner wie bei Amadeus? | Ja. Dann ist das Holen ohne KI-Rechner nicht verfügbar, das Fahren schon. |
 | E6 | Mit welchen drei bis fünf Gegenständen beginnt HomeMy, und wie schwer dürfen sie sein? | Matte, griffige Gegenstände wie Tasse und Dose; keine durchsichtigen oder glänzenden. |
-| E7 | Was heißt „zurückbringen“: auf einer Fläche abstellen oder einer Person übergeben? | Zuerst abstellen. Übergabe an eine Person erst in V4. |
 | E8 | Zuerst nur ein Arm? | Ja, der rechte. Der zweite folgt in V4. |
 | E9 | ROS 2 Jazzy auf Ubuntu 24.04? | Ja. |
 | E10 | Wo wird entwickelt und simuliert? | In Cloud-Sitzungen wie bei Amadeus; der Prüfstand braucht keine Grafikkarte. Ein eigener Rechner mit Ubuntu 24.04 wird erst für die Arbeit am Roboter nötig. |
@@ -318,7 +332,8 @@ S0 bis S4 können sofort beginnen und brauchen weder Fahrgestell noch PMU. S1 is
 - **Kippen beim Greifen nach vorn.** Die Antriebsachse liegt 108 mm hinter der Vorderkante, vorn gibt es keine Stützrolle. Die Grenzen des Arbeitsraums müssen aus Gewichten und Schwerpunkt berechnet werden.
 - **Arm ohne Bremsen.** Bei Stromausfall fällt der Arm. Mit Gegenstand in der Hand fällt auch dieser.
 - **Reichweite, Hubweg und Traglast** sind nicht festgelegt. Davon hängt ab, welche Höhen erreichbar sind.
-- **Sicht der Kamera auf den Greifbereich.** Der eigene Körper und der Arm verdecken einen Teil.
+- **Zwei Tiefenkameras an einem Rechner** und die Leitung der Handgelenk-Kamera durch den bewegten Arm. Bandbreite und Haltbarkeit der Leitung sind zu prüfen.
+- **Selbstständiges Weiterfahren.** Der Roboter fährt nach einem Halt von selbst wieder an, zum Beispiel wenn jemand aus dem Weg geht. Wartezeit und Grenzen der Heilung müssen gemessen und in der Simulation mit Störungen geprüft werden.
 - **Standort in ähnlich aussehenden Räumen** war bei Amadeus mehrdeutig.
 - **Funkverbindung zum KI-Rechner.** Etwa zwei Sekunden Antwortzeit bei Amadeus. Für das Finden reicht das, für eine Regelung während der Armbewegung nicht.
 - **PMU und Fahrgestell** sind noch nicht gebaut. S5 und später hängen davon ab.

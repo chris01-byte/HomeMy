@@ -2,6 +2,8 @@
 
 Status: proposed for HomeMy; no perception, manipulation, or source runtime code has been copied.
 
+Update 2026-11-17: superseded in one point by `2026-11-17-self-healing-and-latching.md`. Where this record says that recovery never resumes motion automatically, the robot now observes again and retries by itself within fixed limits.
+
 ## Context
 
 HomeMy needs a future perception path that can find a requested household object, derive usable local 3D geometry, propose a grasp, and reject unsafe or uncertain execution. The path must remain compatible with the existing rule that local obstacle protection, the movement gate, and the independent emergency stop are separate from semantic perception.

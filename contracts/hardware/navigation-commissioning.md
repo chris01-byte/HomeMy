@@ -18,7 +18,7 @@ The separate [Obstacle protection contract](obstacle-protection.md) assigns the 
 
 ## Safe Default
 
-Navigation starts in simulation or a non-moving drivebase profile. A successful plan, valid map, ready LiDAR, valid depth image, or localization result never authorizes movement. Any missing, stale, ambiguous, or uncommissioned safety dependency keeps the movement path closed.
+Navigation starts in simulation or a non-moving drivebase profile. A successful plan, valid map, ready LiDAR, valid depth image, or localization result never authorizes movement. Any missing, stale, ambiguous, or uncommissioned safety dependency keeps the movement path closed. During an active mission this is a pause: motion continues by itself when the dependency is healthy again, as decided in `docs/decisions/2026-11-17-self-healing-and-latching.md`.
 
 ## Required HomeMy Evidence
 
