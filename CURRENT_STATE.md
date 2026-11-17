@@ -115,7 +115,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - Whether HomeMy needs a tilt-based scan gate on tile joints; to be measured on the built chassis.
 - App bridge access control, customer network setup, and moving rooms to a new map version after remapping. The app cannot yet save a second map once rooms exist.
 - Measured LiDAR mask sectors and margins for the slotted base ring (L4); the recorded values are CAD predictions.
-- The remaining owner decisions in the draft software concept: taught-in places (E2), where detection runs (E5), first objects (E6), one arm first (E8), ROS version (E9), development environment (E10), OAK model (E11).
+- The remaining owner decisions in the draft software concept: where detection runs (E5), first objects (E6), one arm first (E8), ROS version (E9), development environment (E10), OAK model (E11).
 - Gripper details: a two-jaw parallel gripper is decided; drive, sensors, and interface are open.
 - Bounds of each healing step and the clear time before motion continues after a protection stop.
 - Exact local model implementations, accelerator, ROS interfaces, and validation thresholds for semantic perception and grasping.

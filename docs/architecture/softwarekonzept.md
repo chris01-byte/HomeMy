@@ -1,6 +1,6 @@
 # Softwarekonzept HomeMy
 
-Status: Entwurf zur Abstimmung mit dem Projektinhaber. Vier Punkte sind entschieden (Abschnitt 10), der Rest ist offen. Programmiert ist noch nichts.
+Status: Entwurf zur Abstimmung mit dem Projektinhaber. Fünf Punkte sind entschieden (Abschnitt 10), der Rest ist offen. Programmiert ist noch nichts.
 Stand: 17.11.2026.
 
 Dieses Dokument ist bewusst auf Deutsch geschrieben, weil es die Referenz für den Projektinhaber ist. Die Verträge unter `contracts/` bleiben englisch und legen später jede Schnittstelle im Detail fest. Das Konzept gibt die Richtung vor, die Verträge die Regeln.
@@ -23,7 +23,8 @@ Das Ziel wird in vier Ausbaustufen erreicht. Jede Stufe ist für sich nutzbar un
 | --- | --- | --- |
 | V1 Fahren | Räume und Orte anfahren | Lokalisierung, Navigation, Aufträge aus der App |
 | V2 Holen am bekannten Ort | einen bekannten Gegenstand an einem eingelernten Ort greifen und an einem eingelernten Ort abstellen, mit einem Arm | Objekterkennung, Armsteuerung, Greifer |
-| V3 Suchen im Raum | einen Gegenstand irgendwo im Raum finden und sich selbst davor stellen | automatische Wahl des Standplatzes |
+| V3a Standplatz entlang einer Kante | sich an einer eingelernten Tischkante selbst vor den Gegenstand stellen | Wahl des Standplatzes in einer Richtung (Vorschlag als Zwischenstufe) |
+| V3b Suchen im Raum | einen Gegenstand irgendwo im Raum finden und sich selbst davor stellen | freie Wahl des Standplatzes, Erkennen von Tischkanten |
 | V4 Erweitert | zwei Arme, Übergabe an eine Person, neue Gegenstände per Beschreibung | Koordination beider Arme, offene Erkennung |
 
 Dieses Konzept beschreibt V1 und V2 genau und V3 und V4 nur so weit, dass der Weg dorthin nicht verbaut wird.
@@ -41,6 +42,7 @@ Die Leitsätze stammen aus den Erfahrungen mit Amadeus und aus den Regeln dieses
 7. **Wenige gemessene Prüfungen statt vieler ungemessener.** Bei Amadeus gab es am Ende 76 verschiedene Abbruchgründe, und reale Läufe scheiterten an Zeitgrenzen, die nie gegen die Hardware gemessen waren. Jede Sperre in HomeMy braucht eine gemessene Reserve und einen festgelegten Weg, wie es danach weitergeht.
 8. **Erst Simulation mit dem echten Programmcode, dann ohne Motoren, dann beaufsichtigt am Roboter.**
 9. **Jedes Gerät hat genau einen Besitzer.** Ein Erfolg gegen eine Attrappe wird nie als echter Erfolg gemeldet.
+10. **Vom Einfachen zum Schwierigen.** Jede Stufe muss am Roboter funktionieren, bevor die nächste beginnt. Bei Amadeus wurde gleich mit dem Schwierigsten begonnen, und das Projekt hat sich darin verloren. Das hast du am 17.11.2026 als Grundsatz festgelegt.
 
 Leitsatz 1 ist als eigene Entscheidung festgehalten: `docs/decisions/2026-11-17-self-healing-and-latching.md`. Die Verträge, die vorher das Gegenteil sagten, sind angepasst.
 
@@ -183,7 +185,9 @@ Regeln:
 
 - **Aufgabe:** Benannte Stellungen des Roboters auf der Karte speichern, an denen gegriffen oder abgestellt wird.
 - **Herkunft:** Neu. Die Speicherung folgt der Raumverwaltung: Orte sind an genau eine Kartenversion gebunden.
-- **Warum:** Sich selbst einen guten Standplatz vor einem Tisch zu suchen ist schwer und fehleranfällig. Das Einlernen verschiebt diese Aufgabe auf V3.
+- **Warum:** Sich selbst einen guten Standplatz vor einem Tisch zu suchen ist der Schritt, der in V3 dazukommt. Das Einlernen verschiebt ihn dorthin.
+- **Was V3 zusätzlich braucht:** eine vorab berechnete Tabelle, von welchen Standplätzen aus der Arm einen Punkt erreicht; die Tischkante aus der Tiefe der Kamera, weil der LiDAR nur die Tischbeine sieht; ein feines Heranfahren an die Kante; die Prüfung, ob der Standplatz frei und anfahrbar ist.
+- **Zwischenstufe V3a:** Statt eines Punktes wird eine Kante eingelernt, zum Beispiel durch zwei Orte an den Enden eines Tisches. Der Roboter wählt dann nur noch, wo entlang dieser Kante er steht.
 
 ### 5.8 Wahrnehmen
 
@@ -314,12 +318,12 @@ S0 bis S4 können sofort beginnen und brauchen weder Fahrgestell noch PMU. S1 is
 | E3 | Der Greifer wird ein Parallelgreifer mit zwei Backen. Die Einzelheiten sind in Planung. |
 | E4 | Am Handgelenk sitzt dieselbe Kamera wie bei Amadeus, eine Orbbec Gemini 305. |
 | E7 | „Zurückbringen“ heißt zuerst: auf einer Fläche abstellen. Die Übergabe an eine Person folgt später. |
+| E2 | Orte werden für V2 mit dem Controller eingelernt. Dass der Roboter seinen Standplatz selbst findet, kommt in einer späteren Stufe. |
 
 ### Noch offen
 
 | Nr. | Frage | Empfehlung |
 | --- | --- | --- |
-| E2 | Orte mit dem Controller einlernen statt den Roboter selbst einen Standplatz suchen lassen? | Ja, für V2. |
 | E5 | Läuft die Erkennung zuerst auf dem KI-Rechner wie bei Amadeus? | Ja. Dann ist das Holen ohne KI-Rechner nicht verfügbar, das Fahren schon. |
 | E6 | Mit welchen drei bis fünf Gegenständen beginnt HomeMy, und wie schwer dürfen sie sein? | Matte, griffige Gegenstände wie Tasse und Dose; keine durchsichtigen oder glänzenden. |
 | E8 | Zuerst nur ein Arm? | Ja, der rechte. Der zweite folgt in V4. |
