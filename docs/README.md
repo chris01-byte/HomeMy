@@ -8,6 +8,7 @@
 
 ## Focused Records
 
+- architecture/: the software concept, the German reference for what the robot software is to do and in which order it is built. A draft until the owner accepts it.
 - decisions/: small evidence-backed design decisions with a rollback path.
 - transfers/roboter_ws/: detailed records for individual source transfers.
 - runbooks/: repeatable operational procedures once a component exists.

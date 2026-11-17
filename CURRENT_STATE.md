@@ -96,6 +96,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 18. `docs/decisions/2026-11-16-lidar-slot-and-support-webs.md` for the LiDAR slot, web positions, and the sectors to mask.
 19. `docs/decisions/2026-11-16-manual-mapping-and-app-room-management.md` for manual mapping and app room management.
 20. `contracts/api/app-bridge.md` and `ios/HomeMy/README.md` for the app and its interface to the robot.
+21. `docs/architecture/softwarekonzept.md` for the draft software concept (German): drive to rooms, fetch and bring objects on command from the app.
 
 ## Open Decisions
 
@@ -113,6 +114,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - Whether HomeMy needs a tilt-based scan gate on tile joints; to be measured on the built chassis.
 - App bridge access control, customer network setup, and moving rooms to a new map version after remapping. The app cannot yet save a second map once rooms exist.
 - Measured LiDAR mask sectors and margins for the slotted base ring (L4); the recorded values are CAD predictions.
+- The eleven owner decisions E1 to E11 in the draft software concept, first of all whether a protection stop is a pause that ends by itself (E1), which contradicts the current obstacle-protection and navigation contracts.
 - Exact local model implementations, accelerator, ROS interfaces, and validation thresholds for semantic perception and grasping.
 - External AI health endpoint, authentication storage, and capability protocol.
 - Whether HomeMy includes `robot_interfaces`, `safety_monitor`, mission-gate and behavior-tree patterns, semantic maps, or app functions from roboter_ws.

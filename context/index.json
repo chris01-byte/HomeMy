@@ -13,6 +13,12 @@
         "docs/README.md"
       ]
     },
+    "software-concept": {
+      "when": "overall robot software concept, missions, fetch and bring, drive to room, places, operating modes, movement authority, stage plan, or what to build next",
+      "files": [
+        "docs/architecture/softwarekonzept.md"
+      ]
+    },
     "transfers": {
       "when": "moving a capability from roboter_ws",
       "files": [
