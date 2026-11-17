@@ -1,0 +1,1 @@
+"""Semantischer Kartenmanager für HomeMy."""

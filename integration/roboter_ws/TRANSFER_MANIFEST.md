@@ -8,7 +8,7 @@ Do not copy whole packages, local deployment files, home data, maps, bags, crede
 
 ## Current Status
 
-Nine user-approved candidates are recorded for staged adaptation. The local OAK-D-S2 obstacle-protection boundary is documented. The iPhone app is the first ported code; no HomeMy robot runtime code, real-hardware configuration, or deployment file has been copied.
+Nine user-approved candidates are recorded for staged adaptation. The local OAK-D-S2 obstacle-protection boundary is documented. Ported so far: the iPhone app, the versioned map store, and the room overlay, all tested in simulation. No driver, real-hardware configuration, or deployment file has been copied.
 
 Source baseline: chris01-byte/Roboter_ws main at commit 05439c7a13d7a92e69b9eb4663e3a2a1b44626a1.
 
@@ -24,8 +24,8 @@ Exception: the HWT601 candidate is not on roboter_ws main. It is pinned to devel
 | Navigation algorithms and dry-run foundation | src/robot_navigation/ | future src/homemy_navigation/ | proposed; user-approved for simulation and algorithm adaptation after HomeMy geometry and safety commissioning |
 | HWT601 IMU and yaw-rate state estimation | src/robot_state_estimation/ at commit 08a4b9a | future src/homemy_state_estimation/ | proposed; user-approved for staged adaptation after a HomeMy IMU commissioning contract; read-only sensor on a dedicated third serial bus |
 | Gamepad driving for manual mapping | src/robot_bringup/ teleop_joy launch and config | future homemy_bringup manual-drive profile | proposed; requires a HomeMy manual-drive contract; same DualShock model and assignment as the source, no dead-man button by owner decision; source bypass branch excluded |
-| Versioned map store | src/robot_map_manager/ | future src/homemy_map_manager/ | proposed; no motion effect |
-| Room overlay on a saved map | src/semantic_map_manager/ | future src/homemy_room_manager/ | proposed; no motion effect |
+| Versioned map store | src/robot_map_manager/ | src/homemy_map_manager/ | adapting; ported with HomeMy topics and storage path, source unit tests pass under Jazzy, end-to-end test in simulation; no motion effect |
+| Room overlay on a saved map | src/semantic_map_manager/ | src/homemy_room_manager/ | adapting; ported with HomeMy topics and storage path, source unit tests pass under Jazzy, end-to-end test in simulation; no motion effect |
 | App for map and room management | ios/Robotersteuerung/ | ios/HomeMy/ | adapting; app side ported and tested against a mock under contracts/api/app-bridge.md; mission, exploration, and e-stop parts removed; mapping mode and stop added; no robot-side counterpart yet |
 
 Detailed constraints, excluded scope, and deferred candidates are in docs/transfers/roboter_ws/2026-08-28-hardware-foundation-candidates.md.

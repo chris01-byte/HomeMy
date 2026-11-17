@@ -1,6 +1,6 @@
 # Manual Mapping, Map Store, Room Overlay, and App Transfer Candidates
 
-Status: the app is ported to `ios/HomeMy/` and tested against a mock; gamepad driving, map store, and room overlay remain proposed with no HomeMy code.
+Status: the app (`ios/HomeMy/`), the map store (`src/homemy_map_manager`), and the room overlay (`src/homemy_room_manager`) are ported and tested in simulation; gamepad driving remains proposed with no HomeMy code.
 
 ## 1. Source
 
@@ -57,7 +57,9 @@ The SwiftUI views and the two connection services cannot be compiled on Linux. T
 
 The app has not been operated by a person, neither in the simulator nor on an iPhone, and has never talked to a robot.
 
-Gamepad driving, map store, and room overlay: none for HomeMy. Source review only.
+Map store and room overlay, 2026-11-17, ROS 2 Jazzy on Linux: ported to `src/homemy_map_manager` and `src/homemy_room_manager`. Changed are package names, topics (`/homemy/map_manager/...`, `/homemy/room_manager/...`), storage paths (`~/.local/share/homemy/...`), the default map name `wohnung`, and Amadeus wording; the core logic is unchanged. All 51 + 51 source unit tests pass, and the end-to-end test in `src/homemy_bringup` saves a map and creates a room over the real bridge.
+
+Gamepad driving: none for HomeMy. Source review only.
 
 At the source commit: 51 Python tests for the map store, 51 for the room overlay, and 44 Swift tests in the app (counted, not executed here). The gamepad launch has no automated tests. Source results are regression evidence, not HomeMy acceptance.
 
