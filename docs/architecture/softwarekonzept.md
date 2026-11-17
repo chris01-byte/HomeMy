@@ -1,6 +1,6 @@
 # Softwarekonzept HomeMy
 
-Status: Entwurf zur Abstimmung mit dem Projektinhaber. Fünf Punkte sind entschieden (Abschnitt 10), der Rest ist offen. Programmiert ist noch nichts.
+Status: Entwurf zur Abstimmung mit dem Projektinhaber. Sechs Punkte sind entschieden (Abschnitt 10), der Rest ist offen. Programmiert ist noch nichts.
 Stand: 17.11.2026.
 
 Dieses Dokument ist bewusst auf Deutsch geschrieben, weil es die Referenz für den Projektinhaber ist. Die Verträge unter `contracts/` bleiben englisch und legen später jede Schnittstelle im Detail fest. Das Konzept gibt die Richtung vor, die Verträge die Regeln.
@@ -23,7 +23,7 @@ Das Ziel wird in vier Ausbaustufen erreicht. Jede Stufe ist für sich nutzbar un
 | --- | --- | --- |
 | V1 Fahren | Räume und Orte anfahren | Lokalisierung, Navigation, Aufträge aus der App |
 | V2 Holen am bekannten Ort | einen bekannten Gegenstand an einem eingelernten Ort greifen und an einem eingelernten Ort abstellen, mit einem Arm | Objekterkennung, Armsteuerung, Greifer |
-| V3a Standplatz entlang einer Kante | sich an einer eingelernten Tischkante selbst vor den Gegenstand stellen | Wahl des Standplatzes in einer Richtung (Vorschlag als Zwischenstufe) |
+| V3a Standplatz entlang einer Kante | sich an einer eingelernten Tischkante selbst vor den Gegenstand stellen | Wahl des Standplatzes in einer Richtung |
 | V3b Suchen im Raum | einen Gegenstand irgendwo im Raum finden und sich selbst davor stellen | freie Wahl des Standplatzes, Erkennen von Tischkanten |
 | V4 Erweitert | zwei Arme, Übergabe an eine Person, neue Gegenstände per Beschreibung | Koordination beider Arme, offene Erkennung |
 
@@ -319,6 +319,7 @@ S0 bis S4 können sofort beginnen und brauchen weder Fahrgestell noch PMU. S1 is
 | E4 | Am Handgelenk sitzt dieselbe Kamera wie bei Amadeus, eine Orbbec Gemini 305. |
 | E7 | „Zurückbringen“ heißt zuerst: auf einer Fläche abstellen. Die Übergabe an eine Person folgt später. |
 | E2 | Orte werden für V2 mit dem Controller eingelernt. Dass der Roboter seinen Standplatz selbst findet, kommt in einer späteren Stufe. |
+| E12 | Vor der freien Wahl des Standplatzes kommt die Zwischenstufe V3a: Eine Tischkante wird durch zwei eingelernte Orte festgelegt, und der Roboter wählt nur, wo entlang dieser Kante er steht. |
 
 ### Noch offen
 
