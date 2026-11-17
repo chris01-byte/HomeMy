@@ -22,6 +22,7 @@
 		A1000000000000000000000D /* HomeMyRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000010 /* HomeMyRootView.swift */; };
 		A1000000000000000000000E /* RobotMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000011 /* RobotMapView.swift */; };
 		A1000000000000000000000F /* RobotMapProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000012 /* RobotMapProtocolTests.swift */; };
+		A10000000000000000000010 /* BackendFixtureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000013 /* BackendFixtureTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		B10000000000000000000010 /* HomeMyRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMyRootView.swift; sourceTree = "<group>"; };
 		B10000000000000000000011 /* RobotMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotMapView.swift; sourceTree = "<group>"; };
 		B10000000000000000000012 /* RobotMapProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotMapProtocolTests.swift; sourceTree = "<group>"; };
+		B10000000000000000000013 /* BackendFixtureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendFixtureTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			children = (
 				B10000000000000000000009 /* RosbridgeProtocolTests.swift */,
 				B10000000000000000000012 /* RobotMapProtocolTests.swift */,
+				B10000000000000000000013 /* BackendFixtureTests.swift */,
 			);
 			path = HomeMyTests;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			files = (
 				A10000000000000000000009 /* RosbridgeProtocolTests.swift in Sources */,
 				A1000000000000000000000F /* RobotMapProtocolTests.swift in Sources */,
+				A10000000000000000000010 /* BackendFixtureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

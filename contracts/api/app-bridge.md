@@ -1,20 +1,22 @@
 # App Bridge Contract
 
-Status: proposed. The app side is implemented in `ios/HomeMy/` and tested against a mock. No robot-side implementation exists.
+Status: proposed. Both sides are implemented and tested in simulation: the app in `ios/HomeMy/`, the robot side in `src/homemy_map_manager`, `src/homemy_room_manager`, `src/homemy_mapping_mode`, and `src/homemy_bringup`. Nothing has run on robot hardware.
 Owner: HomeMy platform and app.
 
 ## Scope
 
 This contract defines what the HomeMy app and the robot exchange. It covers mapping mode, the stop request, the live map, the map store, and the room overlay.
 
-It does not define manual driving itself. Controller input, speed limits, the movement gate, and the proven stop on controller loss belong to the manual-drive contract, which does not exist yet. Until it does, the mapping-mode part of this contract may only run against the mock.
+It does not define manual driving itself. Controller input, speed limits, the movement gate, and the proven stop on controller loss belong to the manual-drive contract, which does not exist yet. Until it does, the mapping-mode part of this contract may only run in simulation or against the mock.
 
 ## Transport
 
 - rosbridge v2 protocol over WebSocket, JSON text frames, default `ws://<robot>:9090/`.
 - The app opens two connections: one for control (mapping mode and stop) and one for the map and rooms. Large map messages can then never delay a stop request.
 - The app sends no motor commands and publishes to no velocity topic.
-- This version has no authentication and no encryption. It is for a trusted laboratory network only. Access control is required before customer use, because the mapping-mode switch travels over this bridge.
+- The bridge listens on the loopback interface by default. Opening it to the network is an explicit launch argument.
+- The bridge accepts only the topics in the table below: the app may publish to the three command topics and subscribe to the three status topics and `/map`. Services and actions are refused. A velocity command cannot pass the bridge.
+- This version has no authentication and no encryption. It is for a trusted laboratory network only. Authentication is required before customer use, because the mapping-mode switch travels over this bridge.
 
 ## Topics
 
@@ -27,6 +29,14 @@ It does not define manual driving itself. Controller input, speed limits, the mo
 | `/homemy/map_manager/status_json` | `std_msgs/String` | robot to app | map store state |
 | `/homemy/room_manager/command_json` | `std_msgs/String` | app to robot | create, change, delete rooms |
 | `/homemy/room_manager/status_json` | `std_msgs/String` | robot to app | room overlay state |
+
+Robot-internal topics of the mapping-mode manager, not reachable over the bridge:
+
+| Topic | Type | Direction | Purpose |
+| --- | --- | --- | --- |
+| `/homemy/mapping_mode/active` | `std_msgs/Bool` | output, latched | mapping mode active, for the movement gate and mapping |
+| `/homemy/lifecycle/state` | `std_msgs/String` | input, latched | lifecycle state name, republished at least every 3 s |
+| `/joy` | `sensor_msgs/Joy` | input | controller connection and activity |
 
 Every `std_msgs/String` carries exactly one JSON object in `data`.
 
@@ -46,7 +56,7 @@ Mapping mode is new for HomeMy. Amadeus started its mapping stack from a termina
 
 - `enable` switches mapping mode on. It never moves the robot. Motion additionally needs input from the connected controller.
 - `disable` ends mapping mode in the normal way.
-- `stop` ends mapping mode and commands zero motion. It is always accepted, in every state, and is idempotent. The app repeats it until the status confirms `off`.
+- `stop` ends mapping mode at once. It is always accepted, in every state, and is idempotent. The app repeats it until the status confirms `off`. The mode manager itself commands no motion; it publishes `off`, and the movement gate turns that into zero motion.
 
 `stop` is a software request. It is not an emergency stop and does not replace any hardware stop path.
 
@@ -89,11 +99,11 @@ Published at least once per second and on every change, reliable and latched for
 ### Rules for the Robot
 
 - Mapping mode is `off` after every power-on and restart.
-- `enable` is accepted only in the lifecycle states READY and READY_LIMITED. While active, the lifecycle state is OPERATING.
+- `enable` is accepted only in the lifecycle states READY and READY_LIMITED. A missing lifecycle state, or one older than 3 s, counts as not ready. While active, the lifecycle state is OPERATING.
 - A fault or a shutdown ends mapping mode at once.
 - Mapping mode ends by itself after `auto_end_timeout_s` without controller input. The proposed value is 300 seconds.
 - A lost app connection does not end mapping mode. The app is never part of the stop path.
-- A disconnected controller does not end mapping mode by itself, but the robot must stand still while no controller is connected.
+- A disconnected controller does not end mapping mode by itself, but the robot must stand still while no controller is connected. The controller counts as connected while `/joy` messages are at most 0.5 s old; this assumes the joystick driver republishes its state while connected, which must be confirmed on the HomeMy computer.
 - While mapping mode is active the growing map is published on `/map`. After it ends, the last map stays available on `/map` and in the map store status until it is saved or a new mapping run begins.
 
 ### Rules for the App
@@ -135,7 +145,9 @@ Not yet covered: saving a second map after rooms exist, and moving rooms to a ne
 
 - `ios/HomeMy/Tools/mock_rosbridge.py` implements this contract without ROS, with synthetic data only.
 - Swift tests cover frame encoding, status decoding, rejection of invalid payloads, and the app rules above. Python tests cover the mock.
-- No robot-side validation exists. Tests run against the mock are not robot acceptance.
+- The robot side has unit and ROS-level tests per package, and an end-to-end test (`src/homemy_bringup/test/test_app_bridge_e2e.py`) that starts the simulation profile and talks to it over the real bridge with the app's frames: mapping run, saving, rooms, stop, the bridge allowlist, the automatic end, a disconnected controller, and a lifecycle fault.
+- Frames recorded from that test are decoded by the app's own Swift code (`ios/HomeMy/HomeMyTests/BackendFixtureTests.swift`); the app computes the same map fingerprint as the map store and unlocks room editing.
+- Nothing has run on robot hardware. Simulation results are not robot acceptance.
 
 ## Rollback
 

@@ -1,6 +1,23 @@
 # ROS 2 Source Packages
 
-This directory will contain HomeMy-owned ROS 2 packages. It starts deliberately empty: package names and boundaries follow accepted contracts, not a bulk import.
+HomeMy-owned ROS 2 packages for ROS 2 Jazzy. Package names and boundaries follow accepted contracts, not a bulk import.
+
+## Existing Packages
+
+| Package | Purpose | Origin |
+| --- | --- | --- |
+| `homemy_map_manager` | versioned map store for the app | ported from Amadeus `robot_map_manager` at `05439c7` |
+| `homemy_room_manager` | rooms drawn in the app, bound to one map version | ported from Amadeus `semantic_map_manager` at `05439c7` |
+| `homemy_mapping_mode` | mapping mode switched from the app | new |
+| `homemy_simulation` | stand-ins for SLAM, controller, and lifecycle; simulation only | new |
+| `homemy_bringup` | launch profiles `app_backend` and `app_sim`, end-to-end test | new |
+
+None of them drives a motor or publishes a velocity command. They implement `contracts/api/app-bridge.md`.
+
+```bash
+colcon build --base-paths src
+colcon test --base-paths src
+```
 
 ## Intended Roles
 

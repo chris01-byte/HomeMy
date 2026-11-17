@@ -1,0 +1,7 @@
+{
+ "msg": {
+  "data": "{\"schema_version\":1,\"event\":\"status\",\"ok\":true,\"request_id\":null,\"message\":\"Kartiermodus ist aus.\",\"mapping_mode\":{\"state\":\"off\",\"controller_connected\":true,\"auto_end_timeout_s\":4.0,\"auto_end_remaining_s\":null,\"last_end_reason\":\"inactivity_timeout\",\"enable_block_reason\":null},\"time\":1794927066.0050638}"
+ },
+ "op": "publish",
+ "topic": "/homemy/mapping_mode/status_json"
+}

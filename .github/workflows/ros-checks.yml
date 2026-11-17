@@ -1,0 +1,41 @@
+name: ROS checks
+
+on:
+  push:
+    paths:
+      - 'src/**'
+      - 'contracts/api/app-bridge.md'
+      - '.github/workflows/ros-checks.yml'
+  pull_request:
+    paths:
+      - 'src/**'
+      - 'contracts/api/app-bridge.md'
+      - '.github/workflows/ros-checks.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  jazzy:
+    runs-on: ubuntu-24.04
+    container: ros:jazzy-ros-base
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install dependencies
+        run: |
+          apt-get update
+          rosdep update --rosdistro jazzy
+          rosdep install --from-paths src --ignore-src -y --rosdistro jazzy
+      - name: Build
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          colcon build --base-paths src --event-handlers console_cohesion+
+      - name: Test, including the end-to-end bridge test in simulation
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          colcon test --base-paths src --event-handlers console_cohesion+
+          colcon test-result --all --verbose

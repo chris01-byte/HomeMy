@@ -1,0 +1,7 @@
+{
+ "msg": {
+  "data": "{\"schema_version\":1,\"event\":\"enable_result\",\"ok\":false,\"request_id\":\"ios-mode-fault-2\",\"message\":\"Kartiermodus nicht möglich: fault\",\"mapping_mode\":{\"state\":\"off\",\"controller_connected\":true,\"auto_end_timeout_s\":4.0,\"auto_end_remaining_s\":null,\"last_end_reason\":\"fault\",\"enable_block_reason\":\"fault\"},\"time\":1794927067.5074139}"
+ },
+ "op": "publish",
+ "topic": "/homemy/mapping_mode/status_json"
+}

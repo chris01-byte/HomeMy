@@ -1,0 +1,7 @@
+{
+ "msg": {
+  "data": "{\"schema_version\":1,\"event\":\"stop_result\",\"ok\":true,\"request_id\":\"ios-stop-1\",\"message\":\"Stopp ausgeführt. Kartiermodus ist aus.\",\"mapping_mode\":{\"state\":\"off\",\"controller_connected\":true,\"auto_end_timeout_s\":4.0,\"auto_end_remaining_s\":null,\"last_end_reason\":\"app_stop\",\"enable_block_reason\":null},\"time\":1794927059.8848033}"
+ },
+ "op": "publish",
+ "topic": "/homemy/mapping_mode/status_json"
+}

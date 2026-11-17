@@ -1,0 +1,7 @@
+{
+ "msg": {
+  "data": "{\"command\":null,\"counters\":{\"commands_accepted\":0,\"commands_rejected\":0,\"idempotent_replays\":0,\"map_status_accepted\":4,\"map_status_rejected\":0},\"event\":\"map_bound\",\"last_error\":null,\"last_operation\":\"map_bound\",\"map_manager\":{\"confirmed_versions\":[{\"fingerprint\":\"dca8d5f6488154bc7f5fdc5f5cde287c20c4efe08a6110e559dc0af9ddeb0cb7\",\"name\":\"wohnung\",\"version\":\"20261117T145058880284Z-dca8d5f64881\"}],\"last_status_time\":1794927058.8835979,\"observed_fingerprint\":\"dca8d5f6488154bc7f5fdc5f5cde287c20c4efe08a6110e559dc0af9ddeb0cb7\",\"stale_timeout_seconds\":6.0,\"status_age_seconds\":0.0022765600000411723,\"status_topic\":\"/homemy/map_manager/status_json\"},\"message\":\"Semantische Karte an 'wohnung' Revision 0 gebunden.\",\"ok\":true,\"request_id\":null,\"schema_version\":1,\"semantic_map\":{\"edit_block_reason\":null,\"editable\":true,\"map_ref\":{\"fingerprint\":\"dca8d5f6488154bc7f5fdc5f5cde287c20c4efe08a6110e559dc0af9ddeb0cb7\",\"frame_id\":\"map\",\"height\":36,\"name\":\"wohnung\",\"origin\":{\"orientation\":{\"w\":1.0,\"x\":0.0,\"y\":0.0,\"z\":0.0},\"position\":{\"x\":-2.4,\"y\":-1.8,\"z\":0.0},\"yaw\":0.0},\"resolution\":0.10000000149011612,\"version\":\"20261117T145058880284Z-dca8d5f64881\",\"width\":48},\"revision\":0,\"rooms\":[],\"updated_at\":\"2026-11-17T14:50:58.883719Z\"},\"storage\":{\"root\":\"/tmp/homemy-e2e-sviewo1b/room_maps\"},\"time\":1794927058.8858786}"
+ },
+ "op": "publish",
+ "topic": "/homemy/room_manager/status_json"
+}

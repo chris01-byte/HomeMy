@@ -1,0 +1,20 @@
+# Kartiermodus laut contracts/api/app-bridge.md.
+homemy_mapping_mode:
+  ros__parameters:
+    command_topic: "/homemy/mapping_mode/command_json"
+    status_topic: "/homemy/mapping_mode/status_json"
+    # Bool für die übrigen Teile des Roboters (Bewegungsfreigabe, Kartierung).
+    active_topic: "/homemy/mapping_mode/active"
+    joy_topic: "/joy"
+    # Zustand des Lebenszyklus als Text, z. B. READY. Der Sender muss ihn
+    # latched (transient local) und mindestens alle lifecycle_timeout_s senden.
+    lifecycle_state_topic: "/homemy/lifecycle/state"
+
+    # Vorschlag aus dem Vertrag; vom Projektinhaber als "einige Minuten" bestätigt.
+    auto_end_timeout_s: 300.0
+    # Annahme: joy_node sendet bei verbundenem Controller fortlaufend (autorepeat).
+    controller_timeout_s: 0.5
+    controller_deadzone: 0.2
+    lifecycle_timeout_s: 3.0
+    status_period_s: 0.5
+    tick_period_s: 0.1

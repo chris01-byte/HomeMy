@@ -1,0 +1,7 @@
+{
+ "msg": {
+  "data": "{\"schema_version\":1,\"event\":\"enable_result\",\"ok\":true,\"request_id\":\"ios-mode-1\",\"message\":\"Kartiermodus ist aktiv.\",\"mapping_mode\":{\"state\":\"active\",\"controller_connected\":true,\"auto_end_timeout_s\":4.0,\"auto_end_remaining_s\":3.999534201000074,\"last_end_reason\":null,\"enable_block_reason\":null},\"time\":1794927057.8488955}"
+ },
+ "op": "publish",
+ "topic": "/homemy/mapping_mode/status_json"
+}

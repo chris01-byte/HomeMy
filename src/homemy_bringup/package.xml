@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>homemy_bringup</name>
+  <version>0.1.0</version>
+  <description>
+    Launch profiles for HomeMy. app_backend starts the robot side of the app;
+    app_sim adds simulation stand-ins for hardware and SLAM.
+  </description>
+  <maintainer email="homemy@example.com">HomeMy</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
+  <exec_depend>rosbridge_server</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>homemy_map_manager</exec_depend>
+  <exec_depend>homemy_room_manager</exec_depend>
+  <exec_depend>homemy_mapping_mode</exec_depend>
+  <exec_depend>homemy_simulation</exec_depend>
+
+  <test_depend>python3-pytest</test_depend>
+  <test_depend>rclpy</test_depend>
+  <test_depend>rcl_interfaces</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

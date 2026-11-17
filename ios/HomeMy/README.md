@@ -4,7 +4,7 @@ Native SwiftUI-App für HomeMy. Sie schaltet den Kartiermodus, zeigt die Karte, 
 
 Die App beruht auf der Amadeus-App (`ios/Robotersteuerung` in roboter_ws, Commit `05439c7`).
 
-**Stand:** Die App ist gegen den mitgelieferten Mock getestet. Auf der Roboterseite gibt es die Schnittstelle noch nicht.
+**Stand:** Die App ist gegen den mitgelieferten Mock und gegen die Roboterseite in der Simulation getestet. Am echten Roboter lief sie noch nie.
 
 ## Was die App kann
 
@@ -43,7 +43,17 @@ Die App beruht auf der Amadeus-App (`ios/Robotersteuerung` in roboter_ws, Commit
 
 Die zuletzt erfolgreich verwendete Adresse wird nur lokal in den App-Einstellungen gespeichert.
 
-## Ohne Roboter ausprobieren
+## Gegen die Roboterseite in der Simulation
+
+Die echte Roboterseite läuft ohne Hardware mit ROS 2 Jazzy (siehe `src/homemy_bringup/README.md`):
+
+```bash
+ros2 launch homemy_bringup app_sim.launch.py
+```
+
+Danach in der App `ws://127.0.0.1:9090/` eintragen. Der Ablauf ist derselbe wie beim Mock unten.
+
+## Ohne ROS ausprobieren
 
 Der Mock braucht weder ROS noch zusätzliche Python-Pakete und verwendet nur künstliche Daten.
 
@@ -97,6 +107,8 @@ swift test --package-path ios/HomeMy
 ```
 
 Unter Linux ersetzt `Tools/LinuxShims/CryptoKit` Apples CryptoKit durch eine kleine SHA-256-Umsetzung. Die App selbst verwendet immer das CryptoKit des Systems.
+
+`HomeMyTests/BackendFixtureTests.swift` liest Antworten, die der Ende-zu-Ende-Test von der echten Roboterseite aufgezeichnet hat (`HomeMyTests/Fixtures/backend/`). Damit ist geprüft, dass die App diese Antworten versteht, denselben Karten-Fingerabdruck berechnet und die Raumbearbeitung freigibt.
 
 Die Tests des Mocks, einschließlich eines Ablaufs über eine echte WebSocket-Verbindung:
 
