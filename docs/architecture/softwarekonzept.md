@@ -1,6 +1,6 @@
 # Softwarekonzept HomeMy
 
-Status: Entwurf zur Abstimmung mit dem Projektinhaber. Die Grundsatzfragen sind entschieden (Abschnitt 10). Offen ist nur noch, ob die OAK fest oder neigbar montiert wird. Programmiert ist noch nichts.
+Status: Entwurf zur Abstimmung mit dem Projektinhaber. Die Grundsatzfragen sind entschieden (Abschnitt 10). Programmiert ist Stufe S1 (Roboterseite der App), in der Simulation getestet.
 Stand: 17.11.2026.
 
 Dieses Dokument ist bewusst auf Deutsch geschrieben, weil es die Referenz für den Projektinhaber ist. Die Verträge unter `contracts/` bleiben englisch und legen später jede Schnittstelle im Detail fest. Das Konzept gibt die Richtung vor, die Verträge die Regeln.
@@ -279,7 +279,7 @@ Geplante Pakete:
 | Stufe | Inhalt | Braucht Hardware | Ergebnis |
 | --- | --- | --- | --- |
 | S0 | Arbeitsumgebung, Schnittstellenpaket, Robotermodell, Prüfstand | nein | leeres System startet in der Simulation |
-| S1 | Roboterseite der App: Kartenspeicher, Räume, Kartiermodus | nein | App läuft gegen echtes ROS statt gegen den Mock |
+| S1 | Roboterseite der App: Kartenspeicher, Räume, Kartiermodus | nein | App läuft gegen echtes ROS statt gegen den Mock. **In der Simulation erledigt am 17.11.2026.** |
 | S2 | Fahren in der Simulation: Antrieb, Standort, Wegplanung, Freigabe, Auftrag „Fahre zu“ | nein | V1 in der Simulation |
 | S3 | Arm in der Simulation: Modell, Bewegungsplanung, Haltungen, Greifen an bekannter Lage | nein | Arm greift simuliert |
 | S4 | Hol-Auftrag in der Simulation mit künstlichen Bildern | nein | V2 in der Simulation |
@@ -332,7 +332,7 @@ S0 bis S4 können sofort beginnen und brauchen weder Fahrgestell noch PMU. S1 is
 | E8 | Zuerst nur der rechte Arm. Der zweite folgt in V4. |
 | E9 | ROS 2 Jazzy auf Ubuntu 24.04. |
 | E10 | Entwickelt und simuliert wird in Cloud-Sitzungen. Ein eigener Rechner mit Ubuntu 24.04 wird erst für die Arbeit am Roboter nötig. |
-| E11 | Oben am Roboter sitzt eine OAK-D-S2 wie bei Amadeus, weil die OAK 4D nicht lieferbar ist (`docs/decisions/2026-11-17-oak-d-s2-camera.md`). Ob sie fest oder neigbar montiert wird, wird vor S7 festgelegt. |
+| E11 | Oben am Roboter sitzt eine OAK-D-S2 wie bei Amadeus, weil die OAK 4D nicht lieferbar ist (`docs/decisions/2026-11-17-oak-d-s2-camera.md`). Sie ist neigbar montiert. Ob von Hand oder mit Motor geneigt, ist offen. |
 
 ## 11. Risiken und offene Messungen
 

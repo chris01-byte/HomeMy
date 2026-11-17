@@ -2,7 +2,7 @@
 
 ## Phase
 
-Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The onboard Linux lifecycle, one-button customer behavior, coarse LED status, battery monitor, electronic main power path, reverse-current blocking, and initial protection thresholds are recorded as accepted architecture. This central subsystem is named the HomeMy Power Management Unit (PMU). A consolidated GPT Astra handoff now authorizes a complete Revision-A engineering prototype and separates its design/order gates from the measurements that gate a later Revision-B production design. The KiCad design, exact Revision-A component selections, firmware, systemd units, and real-hardware validation remain pending. No HomeMy robot runtime package has been copied. The iPhone app in `ios/HomeMy/` is the only ported code and is tested against a mock.
+Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The onboard Linux lifecycle, one-button customer behavior, coarse LED status, battery monitor, electronic main power path, reverse-current blocking, and initial protection thresholds are recorded as accepted architecture. This central subsystem is named the HomeMy Power Management Unit (PMU). A consolidated GPT Astra handoff now authorizes a complete Revision-A engineering prototype and separates its design/order gates from the measurements that gate a later Revision-B production design. The KiCad design, exact Revision-A component selections, firmware, systemd units, and real-hardware validation remain pending. The robot side of the app runs in simulation under ROS 2 Jazzy (`src/`): map store and room overlay ported from Amadeus, a new mapping-mode manager, simulation stand-ins, and an end-to-end test over the real bridge. No driver exists and nothing can move.
 
 ## Goal
 
@@ -55,12 +55,14 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - The repository is public; it contains no secrets, home data, maps, camera data, or deployment configuration.
 - The default execution mode is simulation or motorless validation.
 - No systemd unit, actuator, sensor, PMU KiCad design, map, home data, or deployment configuration is tracked here.
-- The only ported code is the iPhone app in `ios/HomeMy/`. It talks to a mock; no robot-side software exists and it cannot move anything.
+- Ported or written code: the iPhone app (`ios/HomeMy/`) and five ROS 2 packages in `src/` for the robot side of the app. None of them drives a motor or publishes a velocity command, and the app bridge refuses every topic outside the app contract.
 - The proposed transfer baseline is roboter_ws main commit `05439c7a13d7a92e69b9eb4663e3a2a1b44626a1`.
 - Customer mode is not enabled as the default boot target.
 - Battery/power values are architecture and initial commissioning thresholds only; no hardware protection validation has been performed.
 
 ## Next Safe Step
+
+Software stage S1 of the concept (robot side of the app) is done in simulation. The next software stages S2 to S4 also need no hardware; the PMU steps below need the hardware.
 
 1. Start GPT Astra with `hardware/power-management-unit/ASTRA_START_PROMPT.md` and have it complete the Revision-A hierarchical KiCad schematic, exact prototype-part selection, routed PCB, BOM, calculations, assumptions record, and prototype fabrication package.
 2. Review Astra's schematic, BOM, layout, ERC/DRC, component data, current-path calculations, and conservative Revision-A assumptions before ordering the prototype. Missing post-build measurements do not block this step.
@@ -95,7 +97,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 17. `docs/transfers/roboter_ws/2026-11-16-hwt601-imu-state-estimation.md` for the HWT601 IMU candidate.
 18. `docs/decisions/2026-11-16-lidar-slot-and-support-webs.md` for the LiDAR slot, web positions, and the sectors to mask.
 19. `docs/decisions/2026-11-16-manual-mapping-and-app-room-management.md` for manual mapping and app room management.
-20. `contracts/api/app-bridge.md` and `ios/HomeMy/README.md` for the app and its interface to the robot.
+20. `contracts/api/app-bridge.md`, `ios/HomeMy/README.md`, and `src/homemy_bringup/README.md` for the app, its interface, and the robot side in simulation.
 21. `docs/architecture/softwarekonzept.md` for the draft software concept (German): drive to rooms, fetch and bring objects on command from the app.
 22. `docs/decisions/2026-11-17-self-healing-and-latching.md` for what latches the robot and what heals by itself.
 23. `docs/decisions/2026-11-17-oak-d-s2-camera.md` for the camera on top of the robot.
@@ -116,7 +118,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - Whether HomeMy needs a tilt-based scan gate on tile joints; to be measured on the built chassis.
 - App bridge access control, customer network setup, and moving rooms to a new map version after remapping. The app cannot yet save a second map once rooms exist.
 - Measured LiDAR mask sectors and margins for the slotted base ring (L4); the recorded values are CAD predictions.
-- Whether the OAK-D-S2 is mounted fixed or tiltable; to be decided before stage S7. The concept's other owner decisions were made on 2026-11-17.
+- The OAK-D-S2 is mounted tiltable. Whether the tilt is set by hand or by a motor is open; it decides whether the camera transform is a calibrated constant or a measured joint.
 - Gripper details: a two-jaw parallel gripper is decided; drive, sensors, and interface are open.
 - Bounds of each healing step and the clear time before motion continues after a protection stop.
 - Exact local model implementations, accelerator, ROS interfaces, and validation thresholds for semantic perception and grasping.

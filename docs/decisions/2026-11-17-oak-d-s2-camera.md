@@ -17,13 +17,14 @@ Unchanged:
 - the wrist camera, an Orbbec Gemini 305, which does the fine localization during the grasp;
 - object detection on the external AI computer first (software concept, decision E5).
 
-Still open, to be decided before stage S7 of the software concept: whether the camera is mounted fixed or tiltable.
+Mounting (owner decision of 2026-11-17): tiltable, as on Amadeus. Still open: whether the tilt is set by hand or by a motor.
 
 ## Consequences
 
 - **Amadeus experience applies directly.** Amadeus ran this model in long tests and recorded fixes: the image size must be set through the ISP scale, rectification runs outside the DepthAI container, on-device RGB-depth synchronization stays off, raw images never go over WLAN, and silent stream losses need watchdogs.
 - **Unit values still do not carry over.** Calibration, mounting position and tilt, depth thresholds, and device aliases of the Amadeus camera remain HomeMy measurements, as the contracts already require.
 - **Autofocus.** If the unit has the autofocus colour camera, its focus is fixed at the lens position stored in the factory calibration, so that colour image and depth stay aligned. Depth comes from the fixed-focus stereo pair and is not affected.
+- **Tilt.** Every tilt angle changes the transform from the camera to the robot. Set by hand, the angle is a calibrated constant that must be measured again after each change; the software must not trust a stale value. Set by a motor, the angle must be measured and published continuously, like a joint.
 - **On-camera compute.** The OAK 4D would have offered considerably more compute on the camera. With the OAK-D-S2, detection stays on the external AI computer, as already decided.
 
 ## Evidence

@@ -62,10 +62,11 @@
       ]
     },
     "app": {
-      "when": "iPhone app, Swift, SwiftUI, rosbridge, app bridge contract, mapping-mode switch, stop button, or the mock bridge",
+      "when": "iPhone app, Swift, SwiftUI, rosbridge, app bridge contract, mapping-mode switch, stop button, mock bridge, robot side of the app, map store, room manager, or app simulation",
       "files": [
         "contracts/api/app-bridge.md",
-        "ios/HomeMy/README.md"
+        "ios/HomeMy/README.md",
+        "src/homemy_bringup/README.md"
       ]
     },
     "imu": {
