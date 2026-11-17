@@ -53,7 +53,9 @@ App, 2026-11-16, on Linux with Swift 6.2 and Python 3:
 - baseline before any change: the 44 source Swift tests and 7 source mock tests passed unchanged;
 - after the port: 63 Swift tests passed (31 kept map and room tests, 32 new mapping-mode tests), and 19 Python mock tests passed, including a flow over a real WebSocket connection.
 
-The SwiftUI views and the two connection services cannot be compiled on Linux. Their build is checked by the macOS job in `.github/workflows/app-checks.yml`. No test has run on an iPhone or against a robot.
+The SwiftUI views and the two connection services cannot be compiled on Linux. Their build is checked by the macOS job in `.github/workflows/app-checks.yml`. For commit `ecbfa22` that job passed on 2026-11-16: the Swift tests on macOS and an unsigned iOS Simulator build with Xcode 16.4.
+
+The app has not been operated by a person, neither in the simulator nor on an iPhone, and has never talked to a robot.
 
 Gamepad driving, map store, and room overlay: none for HomeMy. Source review only.
 
