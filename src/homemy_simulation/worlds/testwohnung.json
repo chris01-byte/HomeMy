@@ -1,0 +1,39 @@
+{
+  "description": "Synthetic test apartment for the HomeMy test stand. Not a real home. Four rooms, 0.85 m doors, furniture as boxes; the coffee table is four legs because the LiDAR scans below its top. Deliberately asymmetric (Amadeus lesson: symmetric worlds caused false loop closures).",
+  "units": "metres, world frame; x east, y north",
+  "start": [1.6, 0.7, 0.0],
+  "drive": {"tau_up_s": 0.15, "tau_down_s": 0.15},
+  "floor_plan": {
+    "rooms": {
+      "wohnzimmer": [0.0, 4.6, 0.0, 4.0],
+      "flur": [4.7, 6.1, 1.6, 4.0],
+      "kueche": [4.7, 7.6, -0.8, 1.5],
+      "schlafzimmer": [6.2, 9.4, 1.6, 4.6]
+    },
+    "doors": [
+      [4.6, 4.7, 2.6, 3.45],
+      [5.0, 5.85, 1.5, 1.6],
+      [6.1, 6.2, 2.9, 3.75]
+    ],
+    "furniture": [
+      [0.0, 0.9, 1.2, 3.2],
+      [1.8, 1.84, 1.8, 1.84],
+      [2.56, 2.6, 1.8, 1.84],
+      [1.8, 1.84, 2.36, 2.4],
+      [2.56, 2.6, 2.36, 2.4],
+      [3.2, 4.6, 3.6, 4.0],
+      [4.7, 7.6, -0.8, -0.2],
+      [7.6, 9.4, 2.8, 4.4],
+      [6.2, 6.8, 4.0, 4.6]
+    ],
+    "legend": "sofa, four coffee-table legs, shelf, kitchen counter, bed, wardrobe"
+  },
+  "mapping_route": {
+    "description": "The route a person would drive with the controller: every room once.",
+    "waypoints": [
+      [3.6, 0.8], [3.6, 3.0], [1.6, 3.4], [3.9, 3.0], [4.2, 3.03], [5.4, 3.03],
+      [5.43, 2.4], [5.43, 1.0], [7.0, 0.6], [5.43, 0.8], [5.43, 2.4], [5.6, 3.33],
+      [6.9, 3.33], [6.9, 2.2], [8.8, 2.2]
+    ]
+  }
+}

@@ -5,9 +5,20 @@ Startprofile für HomeMy.
 | Profil | Startet | Wofür |
 | --- | --- | --- |
 | `app_backend.launch.py` | Kartenspeicher, Raumverwaltung, Kartiermodus, App-Brücke | die Roboterseite der App |
-| `app_sim.launch.py` | dasselbe plus Ersatz für SLAM, Controller und Lebenszyklus aus `homemy_simulation` | die App ohne Hardware ausprobieren und testen |
+| `app_sim.launch.py` | dasselbe plus Ersatz für SLAM, Controller und Lebenszyklus aus `homemy_simulation` | die App ohne Hardware ausprobieren und testen (Stufe S1) |
+| `drive_sim.launch.py` | die Roboterseite der App plus Robotermodell, LiDAR-Maske, Bewegungsfreigabe, Controller-Profil, slam_toolbox mit Koordinator, und den Prüfstand mit simuliertem Bediener | Fahren und Kartieren in der Simulation (Stufe S2) |
 
-Keines der Profile startet einen Treiber oder sendet einen Fahrbefehl.
+Keines der Profile startet einen echten Treiber. Nur in `drive_sim` gibt es einen Fahrbefehl, und der geht an den simulierten Antrieb.
+
+## Fahren und Kartieren in der Simulation
+
+```bash
+ros2 launch homemy_bringup drive_sim.launch.py operator_route:=true
+```
+
+Dann in der App den Kartiermodus einschalten. Der simulierte Bediener fährt die Kartierroute durch alle vier Räume der Testwohnung; slam_toolbox baut dabei die Karte, die die App live zeigt. Nach dem Ausschalten des Kartiermodus lässt sie sich speichern. Ohne `operator_route` ist der simulierte Controller verbunden, drückt aber nichts.
+
+Weitere Argumente: `world_file`, `bridge_address`, `bridge_port`, `storage_root`, `auto_end_timeout_s`.
 
 ## Die App gegen die Simulation laufen lassen
 
@@ -33,7 +44,17 @@ Weitere Argumente: `bridge_port`, `storage_root`, `auto_end_timeout_s`, `control
 - Sie hat keine Anmeldung und keine Verschlüsselung. Nur in einem vertrauenswürdigen Labornetz öffnen.
 - Sie lässt nur die Topics des App-Vertrags zu. Senden darf die App nur auf die drei Befehls-Topics, lesen nur die drei Status-Topics und `/map`. Dienste und Aktionen sind gesperrt. Ein Fahrbefehl über die Brücke ist damit nicht möglich.
 
-## Ende-zu-Ende-Test
+## Ende-zu-Ende-Tests
+
+`test/test_drive_sim_e2e.py` startet `drive_sim.launch.py` und fährt die ganze Kartierroute durch den echten Code (etwa drei Minuten). Geprüft werden:
+
+1. Bei ausgeschaltetem Kartiermodus bewegt der gedrückte Controller nichts.
+2. Eingefrorene Funkverbindung, während `/joy` weiter „vorwärts“ wiederholt: Der Roboter hält innerhalb einer Sekunde und nach weniger als 15 cm; der Kartiermodus bleibt aktiv; mit zurückkehrender Verbindung fährt er weiter.
+3. Not-Halt gedrückt: Stillstand; gelöst: weiter.
+4. Die Route endet ohne Berührung im Schlafzimmer.
+5. Die Karte von slam_toolbox stimmt mit der Welt überein: nach starrer Ausrichtung liegen 95 % der Wandzellen innerhalb von 5 cm und keine weiter als 15 cm entfernt, die ganze Karte ist um höchstens 2° verdreht, mindestens 85 % der freien Fläche sind bekannt.
+6. Die Karte wird mit der Nachricht der App gespeichert, mit dem Fingerabdruck der Live-Karte.
+7. Über die Brücke kommt kein Fahrbefehl herein; die Bewegungsfreigabe bleibt der einzige Sender auf `/cmd_vel`.
 
 `test/test_app_bridge_e2e.py` startet `app_sim.launch.py` in einem eigenen Prozess und spricht über einen WebSocket mit genau den Nachrichten, die die App sendet. Geprüft werden:
 

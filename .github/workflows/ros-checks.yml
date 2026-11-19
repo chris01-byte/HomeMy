@@ -5,11 +5,15 @@ on:
     paths:
       - 'src/**'
       - 'contracts/api/app-bridge.md'
+      - 'contracts/ros/motion-gate.md'
+      - 'contracts/hardware/manual-drive.md'
       - '.github/workflows/ros-checks.yml'
   pull_request:
     paths:
       - 'src/**'
       - 'contracts/api/app-bridge.md'
+      - 'contracts/ros/motion-gate.md'
+      - 'contracts/hardware/manual-drive.md'
       - '.github/workflows/ros-checks.yml'
 
 permissions:
@@ -34,7 +38,7 @@ jobs:
         run: |
           source /opt/ros/jazzy/setup.bash
           colcon build --base-paths src --event-handlers console_cohesion+
-      - name: Test, including the end-to-end bridge test in simulation
+      - name: Test, including the end-to-end tests in simulation (bridge, mapping drive)
         run: |
           source /opt/ros/jazzy/setup.bash
           colcon test --base-paths src --event-handlers console_cohesion+

@@ -2,14 +2,27 @@
 
 Schaltet den Kartiermodus von HomeMy. Die App schaltet ihn ein und aus, der Roboter beendet ihn bei Fehler, beim Ausschalten oder nach einer Zeit ohne Controller-Eingabe von selbst. Die Regeln stehen in [`contracts/api/app-bridge.md`](../../contracts/api/app-bridge.md).
 
-Der Knoten bewegt nichts. Er sendet keinen Fahrbefehl und öffnet keinen Antrieb. Er meldet nur, ob der Kartiermodus aktiv ist. Dass „aus“ zu Stillstand führt, ist Aufgabe der Bewegungsfreigabe, die es noch nicht gibt.
+Der Knoten bewegt nichts. Er sendet keinen Fahrbefehl und öffnet keinen Antrieb. Er meldet nur, ob der Kartiermodus aktiv ist. Dass „aus“ zu Stillstand führt, ist Aufgabe der Bewegungsfreigabe (`src/homemy_motion_gate`).
+
+„Controller verbunden“ kommt von der Funküberwachung (`/homemy/controller/link`, siehe `contracts/hardware/manual-drive.md`), nicht vom Alter der `/joy`-Nachrichten. Der Joystick-Treiber wiederholt seinen letzten Zustand nämlich auch nach einem stillen Funkabriss. `/joy` zählt nur als Eingabe, die das automatische Ende aufschiebt.
+
+## Koordinator für slam_toolbox
+
+`mapping_run_coordinator` verbindet den Kartiermodus mit slam_toolbox:
+
+- Beginnt der Kartiermodus, setzt er die Karte zurück und lässt slam_toolbox messen. Jede Kartierfahrt beginnt damit eine neue Karte.
+- Ist der Kartiermodus aus oder sein Signal veraltet, hält er slam_toolbox an. Die letzte Karte bleibt auf `/map`, damit die App sie zeigen und speichern kann.
+- Weil der Pausendienst von slam_toolbox umschaltet statt zu setzen, liest der Koordinator vor jedem Umschalten den Parameter `paused_new_measurements`.
+
+Er meldet seinen Stand auf `/homemy/mapping_run/status_json`.
 
 ## Schnittstellen
 
 | Richtung | Topic | Typ | Zweck |
 | --- | --- | --- | --- |
 | Eingang | `/homemy/mapping_mode/command_json` | `std_msgs/String` | `enable`, `disable`, `stop` aus der App |
-| Eingang | `/joy` | `sensor_msgs/Joy` | Controller: Verbindung und Eingabe |
+| Eingang | `/joy` | `sensor_msgs/Joy` | Controller-Eingabe |
+| Eingang | `/homemy/controller/link` | `std_msgs/Bool` | Funkverbindung des Controllers |
 | Eingang | `/homemy/lifecycle/state` | `std_msgs/String` | Zustand des Roboters, z. B. `READY` |
 | Ausgang | `/homemy/mapping_mode/status_json` | `std_msgs/String` | Status für die App, latched, alle 0,5 s und bei jeder Änderung |
 | Ausgang | `/homemy/mapping_mode/active` | `std_msgs/Bool` | Kartiermodus aktiv, für Bewegungsfreigabe und Kartierung |

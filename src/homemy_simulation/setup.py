@@ -1,3 +1,5 @@
+from glob import glob
+
 from setuptools import setup
 
 
@@ -13,19 +15,21 @@ setup(
             ["resource/" + package_name],
         ),
         ("share/" + package_name, ["package.xml", "README.md"]),
+        ("share/" + package_name + "/worlds", glob("worlds/*.json")),
     ],
     install_requires=["setuptools"],
     extras_require={"test": ["pytest"]},
     zip_safe=True,
     maintainer="HomeMy",
     maintainer_email="homemy@example.com",
-    description="Simulation stand-ins for HomeMy. Simulation only.",
+    description="HomeMy test stand and simulation stand-ins. Simulation only.",
     license="MIT",
     entry_points={
         "console_scripts": [
             "synthetic_map = homemy_simulation.synthetic_map_node:main",
             "sim_controller = homemy_simulation.sim_controller_node:main",
             "lifecycle_stub = homemy_simulation.lifecycle_stub_node:main",
+            "sim_base = homemy_simulation.sim_base_node:main",
         ],
     },
 )

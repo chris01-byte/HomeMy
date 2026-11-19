@@ -5,7 +5,8 @@
   <version>0.1.0</version>
   <description>
     Launch profiles for HomeMy. app_backend starts the robot side of the app;
-    app_sim adds simulation stand-ins for hardware and SLAM.
+    app_sim adds simulation stand-ins for hardware and SLAM; drive_sim runs
+    the real driving and mapping code in the test stand (stage S2).
   </description>
   <maintainer email="homemy@example.com">HomeMy</maintainer>
   <license>MIT</license>
@@ -19,10 +20,20 @@
   <exec_depend>homemy_room_manager</exec_depend>
   <exec_depend>homemy_mapping_mode</exec_depend>
   <exec_depend>homemy_simulation</exec_depend>
+  <exec_depend>homemy_description</exec_depend>
+  <exec_depend>homemy_lidar_bringup</exec_depend>
+  <exec_depend>homemy_motion_gate</exec_depend>
+  <exec_depend>homemy_manual_drive</exec_depend>
+  <exec_depend>homemy_navigation</exec_depend>
+  <exec_depend>teleop_twist_joy</exec_depend>
 
   <test_depend>python3-pytest</test_depend>
   <test_depend>rclpy</test_depend>
   <test_depend>rcl_interfaces</test_depend>
+  <test_depend>python3-numpy</test_depend>
+  <test_depend>python3-yaml</test_depend>
+  <test_depend>geometry_msgs</test_depend>
+  <test_depend>nav_msgs</test_depend>
 
   <export>
     <build_type>ament_python</build_type>

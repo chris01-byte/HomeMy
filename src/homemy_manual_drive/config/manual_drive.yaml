@@ -1,0 +1,42 @@
+# Manual driving with the DualShock 4 (CUH-ZCT2E) over Bluetooth.
+# Contract: contracts/hardware/manual-drive.md. Proposal values; the axis and
+# button numbers must be confirmed once on the HomeMy computer (step M1).
+#
+# Ported from Amadeus src/robot_bringup/config/teleop_joy.yaml at 05439c7.
+# Kept: the direction pad instead of the stick (no rest-position drift),
+# R1 for the faster speed, and no dead-man button (owner decision).
+# Changed: commands go to the HomeMy motion gate, never to the drive.
+
+joy_node:
+  ros__parameters:
+    device_id: 0
+    deadzone: 0.20          # Amadeus: 0.10 let the robot creep (2026-07-28)
+    autorepeat_rate: 20.0   # repeats the last state while the device exists
+    # The repeat continues after a silent radio loss until Linux removes the
+    # device. The radio-link watchdog below is therefore required.
+
+teleop_twist_joy_node:
+  ros__parameters:
+    axis_linear:
+      x: 7                  # direction pad up/down: drive
+    axis_angular:
+      yaw: 6                # direction pad left/right: turn
+    scale_linear:
+      x: 0.12
+    scale_angular:
+      yaw: 0.40
+    scale_linear_turbo:
+      x: 0.20
+    scale_angular_turbo:
+      yaw: 0.70
+    enable_button: 4        # without effect while require_enable_button is false
+    enable_turbo_button: 5  # R1: faster speed
+    require_enable_button: false  # no dead-man button (owner decision 2026-11-16)
+    publish_stamped_twist: false
+
+controller_link:
+  ros__parameters:
+    link_topic: /homemy/controller/link
+    device_name_pattern: "Wireless Controller Motion Sensors$"
+    link_timeout_s: 0.15    # to be measured: report interval on the HomeMy computer
+    publish_period_s: 0.05

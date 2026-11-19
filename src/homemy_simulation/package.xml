@@ -4,9 +4,10 @@
   <name>homemy_simulation</name>
   <version>0.1.0</version>
   <description>
-    Simulation stand-ins for HomeMy hardware and services: a synthetic map that
-    grows while mapping, a simulated controller, and a lifecycle state stub.
-    Simulation only; never start these on the robot.
+    HomeMy test stand and simulation stand-ins: a floor-plan world with the
+    simulated drive, LiDAR, odometry, and IMU (ported from the Amadeus test
+    stand), a simulated controller and operator, a lifecycle and emergency-stop
+    stub, and a synthetic map. Simulation only; never start these on the robot.
   </description>
   <maintainer email="homemy@example.com">HomeMy</maintainer>
   <license>MIT</license>
@@ -15,8 +16,14 @@
   <depend>std_msgs</depend>
   <depend>sensor_msgs</depend>
   <depend>nav_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>tf2_ros</depend>
+  <depend>python3-numpy</depend>
+  <depend>python3-yaml</depend>
 
   <test_depend>python3-pytest</test_depend>
+  <test_depend>homemy_description</test_depend>
+  <test_depend>homemy_lidar_bringup</test_depend>
 
   <export>
     <build_type>ament_python</build_type>

@@ -254,12 +254,21 @@ def test_timeout_must_be_positive_and_finite(value):
 # ---------------------------------------------------------------- controller
 
 
-def test_controller_connection_follows_message_age():
+def test_controller_connection_follows_the_radio_link():
     tracker = ControllerTracker(timeout_s=0.5, deadzone=0.2)
     assert not tracker.connected(0.0)
-    tracker.update([0.0] * 8, [0] * 13, now=10.0)
+    tracker.update_link(True, now=10.0)
     assert tracker.connected(10.4)
     assert not tracker.connected(10.6)
+    tracker.update_link(True, now=11.0)
+    tracker.update_link(False, now=11.1)
+    assert not tracker.connected(11.1)
+
+
+def test_repeated_joy_messages_do_not_mean_connected():
+    tracker = ControllerTracker(timeout_s=0.5, deadzone=0.2)
+    tracker.update([0.0] * 8, [0] * 13, now=10.0)
+    assert not tracker.connected(10.1)
     assert tracker.last_input_at is None
 
 

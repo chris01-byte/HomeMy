@@ -29,6 +29,7 @@ setup(
     entry_points={
         "console_scripts": [
             "mapping_mode_manager = homemy_mapping_mode.mapping_mode_node:main",
+            "mapping_run_coordinator = homemy_mapping_mode.mapping_run_node:main",
         ],
     },
 )

@@ -7,7 +7,7 @@ Owner: HomeMy platform and app.
 
 This contract defines what the HomeMy app and the robot exchange. It covers mapping mode, the stop request, the live map, the map store, and the room overlay.
 
-It does not define manual driving itself. Controller input, speed limits, the movement gate, and the proven stop on controller loss belong to the manual-drive contract, which does not exist yet. Until it does, the mapping-mode part of this contract may only run in simulation or against the mock.
+It does not define manual driving itself. Controller input, speed limits, and the stop on controller loss belong to `contracts/hardware/manual-drive.md`; whether a command reaches the drive is decided by the motion gate (`contracts/ros/motion-gate.md`). Both are proposed and tested in simulation only, so the mapping-mode part of this contract may only run in simulation or against the mock until the manual-drive commissioning steps have passed.
 
 ## Transport
 
@@ -36,7 +36,8 @@ Robot-internal topics of the mapping-mode manager, not reachable over the bridge
 | --- | --- | --- | --- |
 | `/homemy/mapping_mode/active` | `std_msgs/Bool` | output, latched | mapping mode active, for the movement gate and mapping |
 | `/homemy/lifecycle/state` | `std_msgs/String` | input, latched | lifecycle state name, republished at least every 3 s |
-| `/joy` | `sensor_msgs/Joy` | input | controller connection and activity |
+| `/joy` | `sensor_msgs/Joy` | input | controller activity |
+| `/homemy/controller/link` | `std_msgs/Bool` | input | radio link of the controller, from the link watchdog |
 
 Every `std_msgs/String` carries exactly one JSON object in `data`.
 
@@ -103,7 +104,7 @@ Published at least once per second and on every change, reliable and latched for
 - A fault or a shutdown ends mapping mode at once.
 - Mapping mode ends by itself after `auto_end_timeout_s` without controller input. The proposed value is 300 seconds.
 - A lost app connection does not end mapping mode. The app is never part of the stop path.
-- A disconnected controller does not end mapping mode by itself, but the robot must stand still while no controller is connected. The controller counts as connected while `/joy` messages are at most 0.5 s old; this assumes the joystick driver republishes its state while connected, which must be confirmed on the HomeMy computer.
+- A disconnected controller does not end mapping mode by itself, but the robot must stand still while no controller is connected; the motion gate enforces this. The controller counts as connected while the radio-link watchdog reported the link up within 0.5 s (`contracts/hardware/manual-drive.md`). Repeated `/joy` messages do not count, because the joystick driver keeps repeating its last state after a silent radio loss.
 - While mapping mode is active the growing map is published on `/map`. After it ends, the last map stays available on `/map` and in the map store status until it is saved or a new mapping run begins.
 
 ### Rules for the App
