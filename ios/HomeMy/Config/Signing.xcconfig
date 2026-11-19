@@ -1,0 +1,12 @@
+// Signatur der App. Diese Datei gehört zum Repository und enthält nur
+// neutrale Platzhalter.
+//
+// Eigene Werte NICHT hier eintragen, sondern in einer Datei "Local.xcconfig"
+// im selben Ordner (Vorlage: Local.xcconfig.example). Sie wird von Git
+// ignoriert und überschreibt die Platzhalter. So bleiben Team und Bundle-ID
+// auf dem eigenen Mac, und Updates aus dem Repository überschreiben sie nicht.
+
+PRODUCT_BUNDLE_IDENTIFIER = com.example.HomeMy
+DEVELOPMENT_TEAM =
+
+#include? "Local.xcconfig"

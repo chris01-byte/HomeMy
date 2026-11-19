@@ -43,3 +43,18 @@ jobs:
           -destination 'generic/platform=iOS Simulator'
           CODE_SIGNING_ALLOWED=NO
           build
+      - name: Signing settings come from the xcconfig, and a local file overrides them
+        run: |
+          set -euo pipefail
+          settings() {
+            xcodebuild -project ios/HomeMy/HomeMy.xcodeproj -scheme HomeMy \
+              -configuration Debug -showBuildSettings 2>/dev/null
+          }
+          settings > default.txt
+          grep -q '^ *PRODUCT_BUNDLE_IDENTIFIER = com.example.HomeMy$' default.txt
+          printf 'DEVELOPMENT_TEAM = ABCDE12345\nPRODUCT_BUNDLE_IDENTIFIER = org.example.ci.HomeMy\n' \
+            > ios/HomeMy/Config/Local.xcconfig
+          settings > local.txt
+          grep -q '^ *PRODUCT_BUNDLE_IDENTIFIER = org.example.ci.HomeMy$' local.txt
+          grep -q '^ *DEVELOPMENT_TEAM = ABCDE12345$' local.txt
+          rm ios/HomeMy/Config/Local.xcconfig

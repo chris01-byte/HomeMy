@@ -1,0 +1,8 @@
+// Vorlage. Als "Local.xcconfig" in diesen Ordner kopieren und beide Werte
+// eintragen. Die Kopie wird von Git ignoriert.
+//
+// DEVELOPMENT_TEAM: die zehnstellige Team-ID des eigenen Apple-Kontos.
+// PRODUCT_BUNDLE_IDENTIFIER: eine eigene, eindeutige Kennung für die App.
+
+DEVELOPMENT_TEAM = ABCDE12345
+PRODUCT_BUNDLE_IDENTIFIER = de.beispiel.HomeMy

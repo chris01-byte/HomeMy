@@ -40,6 +40,8 @@ rosbags/
 DerivedData/
 xcuserdata/
 *.xcuserstate
+# Own signing settings (team, bundle identifier) stay on the developer's Mac
+ios/**/Config/Local.xcconfig
 
 # Local editor and operating-system files
 .vscode/*.code-workspace

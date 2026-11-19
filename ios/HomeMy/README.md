@@ -33,15 +33,66 @@ Die App beruht auf der Amadeus-App (`ios/Robotersteuerung` in roboter_ws, Commit
 
 ## Auf dem iPhone installieren
 
-1. `HomeMy.xcodeproj` in Xcode öffnen.
-2. Target **HomeMy** → **Signing & Capabilities** öffnen.
-3. Bei **Team** das eigene Apple-Konto auswählen. Im Projekt ist bewusst kein Team hinterlegt.
-4. Die Bundle-ID `com.example.HomeMy` durch eine eigene, eindeutige ID ersetzen.
-5. iPhone verbinden, als Ziel wählen und **Run** drücken.
-6. Beim ersten Verbinden den iOS-Dialog für das lokale Netzwerk mit **Erlauben** bestätigen.
-7. In der App die Adresse des Roboters eintragen, zum Beispiel `ws://192.168.1.50:9090/`.
+Das geht nur mit Xcode auf einem Mac. Das iPhone ist per Kabel verbunden, und der Entwicklermodus ist eingeschaltet (Einstellungen → Datenschutz & Sicherheit → Entwicklermodus).
+
+1. Den Stand mit der App auf den Mac holen. Solange er nicht auf `main` liegt, ist das der Arbeits-Branch:
+
+   ```bash
+   git clone https://github.com/chris01-byte/HomeMy.git
+   ```
+
+   ```bash
+   cd HomeMy && git checkout claude/eager-shannon-yfyfpf
+   ```
+
+   Ist das Repository schon da, genügt im Ordner `HomeMy`:
+
+   ```bash
+   git fetch origin && git checkout claude/eager-shannon-yfyfpf && git pull
+   ```
+
+2. Einmalig die eigene Signatur eintragen. Dazu die Vorlage kopieren:
+
+   ```bash
+   cp ios/HomeMy/Config/Local.xcconfig.example ios/HomeMy/Config/Local.xcconfig
+   ```
+
+   In `Local.xcconfig` zwei Werte eintragen:
+   - `DEVELOPMENT_TEAM`: die zehnstellige Team-ID des eigenen Apple-Kontos. Es ist dieselbe wie bei der Amadeus-App. Aus deren Projekt lässt sie sich auslesen (Pfad anpassen):
+
+     ```bash
+     grep -m1 -o 'DEVELOPMENT_TEAM = [A-Z0-9]*' ~/Roboter_ws/ios/Robotersteuerung/Robotersteuerung.xcodeproj/project.pbxproj
+     ```
+
+   - `PRODUCT_BUNDLE_IDENTIFIER`: eine eigene, eindeutige Kennung, zum Beispiel `de.deinname.HomeMy`.
+
+   Die Datei bleibt auf dem Mac; Git ignoriert sie. Spätere Updates aus dem Repository überschreiben sie nicht.
+
+3. `ios/HomeMy/HomeMy.xcodeproj` in Xcode öffnen, oben das iPhone als Ziel wählen und **Run** (▶) drücken.
+4. Beim ersten Start am iPhone, falls verlangt, dem Entwickler vertrauen (Einstellungen → Allgemein → VPN & Geräteverwaltung) und den Dialog für das lokale Netzwerk mit **Erlauben** bestätigen.
+5. In der App die Adresse der Gegenstelle eintragen (siehe unten).
+
+Wer lieber klickt: Statt Schritt 2 lässt sich das Team auch in Xcode wählen (Target **HomeMy** → **Signing & Capabilities** → **Team**). Das ändert aber die Projektdatei auf dem Mac und kann sich mit späteren Updates beißen.
+
+Mit einem kostenlosen Apple-Konto läuft die App sieben Tage und muss dann mit **Run** neu aufgespielt werden.
 
 Die zuletzt erfolgreich verwendete Adresse wird nur lokal in den App-Einstellungen gespeichert.
+
+## Mit dem iPhone testen, ohne Roboter
+
+Der Mock läuft auf dem Mac und braucht nur Python 3. Mac und iPhone sind im selben WLAN.
+
+```bash
+python3 ios/HomeMy/Tools/mock_rosbridge.py --host 0.0.0.0
+```
+
+Die Adresse des Mac im WLAN:
+
+```bash
+ipconfig getifaddr en0
+```
+
+In der App dann `ws://<Adresse des Mac>:9090/` eintragen, zum Beispiel `ws://192.168.1.23:9090/`. Fragt die Firewall des Mac, ob Python Verbindungen annehmen darf: erlauben. Der Ablauf zum Durchspielen steht unter „Ohne ROS ausprobieren“.
 
 ## Gegen die Roboterseite in der Simulation
 
