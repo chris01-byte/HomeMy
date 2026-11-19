@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<!--
+  HomeMy robot model for simulation, visualisation, and navigation.
+  Dimensions come from config/geometry.yaml (CAD values, not measurements).
+  base_link: on the floor below the midpoint of the drive axle, X forward,
+  Y left, Z up. The arms are not modelled yet (stage S3).
+-->
+<robot name="homemy" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:arg name="geometry_file" default="$(find homemy_description)/config/geometry.yaml"/>
+  <xacro:arg name="oak_tilt_deg" default="0.0"/>
+
+  <xacro:property name="g" value="${xacro.load_yaml('$(arg geometry_file)')}"/>
+  <xacro:property name="bo" value="${g['base_outline']}"/>
+  <xacro:property name="wh" value="${g['drive_wheels']}"/>
+  <xacro:property name="ca" value="${g['casters']}"/>
+  <xacro:property name="st" value="${g['struts']}"/>
+  <xacro:property name="ub" value="${g['upper_body']}"/>
+  <xacro:property name="li" value="${g['lidar']}"/>
+  <xacro:property name="im" value="${g['imu']}"/>
+  <xacro:property name="oa" value="${g['oak']}"/>
+  <xacro:property name="oak_tilt" value="${radians(float('$(arg oak_tilt_deg)'))}"/>
+
+  <material name="body"><color rgba="0.85 0.85 0.85 1.0"/></material>
+  <material name="dark"><color rgba="0.15 0.15 0.15 1.0"/></material>
+  <material name="alu"><color rgba="0.6 0.62 0.65 1.0"/></material>
+  <material name="sensor"><color rgba="0.1 0.3 0.6 1.0"/></material>
+
+  <xacro:macro name="box_link" params="name sx sy sz material">
+    <link name="${name}">
+      <visual>
+        <geometry><box size="${sx} ${sy} ${sz}"/></geometry>
+        <material name="${material}"/>
+      </visual>
+      <collision>
+        <geometry><box size="${sx} ${sy} ${sz}"/></geometry>
+      </collision>
+    </link>
+  </xacro:macro>
+
+  <link name="base_link"/>
+
+  <!-- Lower housing below the LiDAR slot. Rounded corners are not modelled
+       here; the navigation footprint uses the rounded outline. -->
+  <xacro:box_link name="lower_housing_link"
+      sx="${bo['x_max'] - bo['x_min']}" sy="${2 * bo['y_half']}"
+      sz="${bo['z_slot_bottom'] - bo['z_bottom']}" material="body"/>
+  <joint name="lower_housing_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lower_housing_link"/>
+    <origin xyz="${(bo['x_max'] + bo['x_min']) / 2} 0 ${(bo['z_slot_bottom'] + bo['z_bottom']) / 2}"/>
+  </joint>
+
+  <xacro:box_link name="upper_body_link"
+      sx="${ub['x_max'] - ub['x_min']}" sy="${2 * ub['y_half']}"
+      sz="${ub['z_top'] - ub['z_bottom']}" material="body"/>
+  <joint name="upper_body_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="upper_body_link"/>
+    <origin xyz="${(ub['x_max'] + ub['x_min']) / 2} 0 ${(ub['z_top'] + ub['z_bottom']) / 2}"/>
+  </joint>
+
+  <xacro:macro name="strut" params="side sign">
+    <xacro:box_link name="${side}_strut_link"
+        sx="${st['x_max'] - st['x_min']}" sy="${st['y_outer'] - st['y_inner']}"
+        sz="${st['z_top'] - bo['z_bottom']}" material="alu"/>
+    <joint name="${side}_strut_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="${side}_strut_link"/>
+      <origin xyz="${(st['x_max'] + st['x_min']) / 2} ${sign * (st['y_outer'] + st['y_inner']) / 2} ${(st['z_top'] + bo['z_bottom']) / 2}"/>
+    </joint>
+  </xacro:macro>
+  <xacro:strut side="left" sign="1"/>
+  <xacro:strut side="right" sign="-1"/>
+
+  <xacro:macro name="drive_wheel" params="side sign">
+    <link name="${side}_wheel_link">
+      <visual>
+        <origin rpy="${pi / 2} 0 0"/>
+        <geometry><cylinder radius="${wh['radius']}" length="${wh['width']}"/></geometry>
+        <material name="dark"/>
+      </visual>
+      <collision>
+        <origin rpy="${pi / 2} 0 0"/>
+        <geometry><cylinder radius="${wh['radius']}" length="${wh['width']}"/></geometry>
+      </collision>
+    </link>
+    <joint name="${side}_wheel_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="${side}_wheel_link"/>
+      <origin xyz="0 ${sign * wh['separation'] / 2} ${wh['radius']}"/>
+      <axis xyz="0 1 0"/>
+    </joint>
+  </xacro:macro>
+  <xacro:drive_wheel side="left" sign="1"/>
+  <xacro:drive_wheel side="right" sign="-1"/>
+
+  <xacro:macro name="caster" params="side sign">
+    <link name="${side}_caster_link">
+      <visual>
+        <geometry><sphere radius="${ca['radius']}"/></geometry>
+        <material name="dark"/>
+      </visual>
+    </link>
+    <joint name="${side}_caster_joint" type="fixed">
+      <parent link="base_link"/>
+      <child link="${side}_caster_link"/>
+      <origin xyz="${ca['x']} ${sign * ca['y_half']} ${ca['radius']}"/>
+    </joint>
+  </xacro:macro>
+  <xacro:caster side="left" sign="1"/>
+  <xacro:caster side="right" sign="-1"/>
+
+  <!-- STL-27L: origin on the rotation axis in the scan plane. Its zero
+       direction and rotation sense are fixed only by commissioning step L3. -->
+  <link name="lidar_link">
+    <visual>
+      <geometry><cylinder radius="0.027" length="0.035"/></geometry>
+      <material name="sensor"/>
+    </visual>
+  </link>
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="lidar_link"/>
+    <origin xyz="${li['x']} ${li['y']} ${li['z']}"/>
+  </joint>
+
+  <!-- HWT601: mount location still open; placeholder pose. -->
+  <link name="imu_link"/>
+  <joint name="imu_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+    <origin xyz="${im['x']} ${im['y']} ${im['z']}"/>
+  </joint>
+
+  <!-- OAK-D-S2 on a hand-tilted mount. oak_tilt_deg > 0 looks down. -->
+  <link name="oak_mount_link"/>
+  <joint name="oak_mount_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="oak_mount_link"/>
+    <origin xyz="${oa['x']} ${oa['y']} ${oa['z']}"/>
+  </joint>
+  <link name="oak_link">
+    <visual>
+      <geometry><box size="0.0175 0.091 0.028"/></geometry>
+      <material name="sensor"/>
+    </visual>
+  </link>
+  <joint name="oak_tilt_joint" type="fixed">
+    <parent link="oak_mount_link"/>
+    <child link="oak_link"/>
+    <origin rpy="0 ${oak_tilt} 0"/>
+  </joint>
+  <link name="oak_optical_frame"/>
+  <joint name="oak_optical_joint" type="fixed">
+    <parent link="oak_link"/>
+    <child link="oak_optical_frame"/>
+    <origin rpy="${-pi / 2} 0 ${-pi / 2}"/>
+  </joint>
+</robot>

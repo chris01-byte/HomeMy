@@ -1,0 +1,73 @@
+# HomeMy geometry from the CAD design (hardware/cad/homemy.step, analysed
+# 2026-11-16). These are CAD values, not measurements. Every value must be
+# replaced by a measured value during commissioning
+# (contracts/hardware/drivebase-commissioning.md, lidar-commissioning.md).
+#
+# Frame base_link: origin on the floor below the midpoint of the drive axle,
+# X forward, Y left, Z up, metres. The design frame of the LiDAR slot decision
+# (origin at the centre of the base outline) is shifted by
+# design_to_base_link_x: base_link X = design X - 0.0906.
+
+design_to_base_link_x: 0.0906
+
+base_outline:            # 400 mm long, 500 mm wide, rounded corners
+  x_min: -0.2906
+  x_max: 0.1094
+  y_half: 0.250
+  corner_radius: 0.100
+  z_bottom: 0.042        # underside of the base plate (motor blocks)
+  z_slot_bottom: 0.144   # lower edge of the LiDAR slot
+  z_slot_top: 0.184      # upper edge of the LiDAR slot
+
+drive_wheels:            # differential drive, AndyMark HiGrip 6 in class
+  radius: 0.0762
+  width: 0.025
+  separation: 0.3994     # left wheel at Y +0.2000, right at Y -0.1994 in CAD
+  # The two CAD wheel models differ by 2 mm in X; the axle is their mean.
+
+casters:                 # two rear swivel casters, 30 mm wheel, 37 mm high
+  x: -0.2326
+  y_half: 0.170
+  radius: 0.015
+
+struts:                  # two 40 x 40 aluminium profiles carrying the upper body
+  x_min: -0.1368
+  x_max: -0.0968
+  y_inner: 0.1842
+  y_outer: 0.2242
+  z_top: 0.2218
+
+upper_body:              # housing above the slot, 350 mm wide
+  x_min: -0.2281
+  x_max: 0.0894
+  y_half: 0.175
+  z_bottom: 0.184
+  z_top: 1.198
+
+slot_webs:               # webs left in the slotted acrylic ring
+  # [x_min, x_max, y_min, y_max] in base_link; each web is a wall piece
+  front_left: [0.1094, 0.1094, 0.130, 0.150]
+  front_right: [0.1094, 0.1094, -0.150, -0.130]
+  side_left: [-0.2006, -0.1206, 0.250, 0.250]
+  side_right: [-0.2006, -0.1206, -0.250, -0.250]
+  rear_left: [-0.2906, -0.2906, 0.130, 0.150]
+  rear_right: [-0.2906, -0.2906, -0.150, -0.130]
+
+lidar:                   # STL-27L rotation axis and scan plane
+  x: 0.0694
+  y: 0.0
+  z: 0.1638
+  self_return_radius: 0.40   # returns closer than this in a masked sector are the robot
+
+imu:                     # HWT601: mount location still open; placeholder
+  x: 0.0
+  y: 0.0
+  z: 0.100
+
+oak:                     # OAK-D-S2 with its tilt mount: centre of the CAD bounding box
+  x: -0.0729
+  y: -0.0026
+  z: 1.244
+  # The tilt is set by hand (owner decision 2026-11-19). The angle is passed
+  # to the model as oak_tilt_deg (positive = looking down) from the
+  # calibration record. 0 is only a placeholder for visualisation.
