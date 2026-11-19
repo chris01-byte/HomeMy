@@ -14,10 +14,10 @@ from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
     params = PathJoinSubstitution([FindPackageShare("homemy_manual_drive"), "config", "manual_drive.yaml"])
-    params_file = LaunchConfiguration("params_file")
+    params_file = LaunchConfiguration("manual_drive_params_file")
     return LaunchDescription(
         [
-            DeclareLaunchArgument("params_file", default_value=params),
+            DeclareLaunchArgument("manual_drive_params_file", default_value=params),
             Node(package="joy", executable="joy_node", name="joy_node", parameters=[params_file]),
             Node(
                 package="teleop_twist_joy",

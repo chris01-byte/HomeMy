@@ -11,12 +11,12 @@ def generate_launch_description():
     params = PathJoinSubstitution([FindPackageShare("homemy_lidar_bringup"), "config", "scan_mask.yaml"])
     return LaunchDescription(
         [
-            DeclareLaunchArgument("params_file", default_value=params),
+            DeclareLaunchArgument("scan_mask_params_file", default_value=params),
             Node(
                 package="homemy_lidar_bringup",
                 executable="scan_mask",
                 name="scan_mask",
-                parameters=[LaunchConfiguration("params_file")],
+                parameters=[LaunchConfiguration("scan_mask_params_file")],
             ),
         ]
     )

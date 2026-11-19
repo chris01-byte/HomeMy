@@ -12,12 +12,12 @@ def generate_launch_description():
     geometry = PathJoinSubstitution([FindPackageShare("homemy_description"), "config", "geometry.yaml"])
     return LaunchDescription(
         [
-            DeclareLaunchArgument("params_file", default_value=params),
+            DeclareLaunchArgument("motion_gate_params_file", default_value=params),
             Node(
                 package="homemy_motion_gate",
                 executable="motion_gate",
                 name="motion_gate",
-                parameters=[LaunchConfiguration("params_file"), {"geometry_file": geometry}],
+                parameters=[LaunchConfiguration("motion_gate_params_file"), {"geometry_file": geometry}],
                 output="screen",
             ),
         ]
