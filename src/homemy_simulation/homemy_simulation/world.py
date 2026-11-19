@@ -251,6 +251,18 @@ class FloorPlanWorld:
             tau_down_s=drive.get("tau_down_s", 0.15),
         )
 
+    def place(self, pose: Sequence[float]) -> None:
+        """Put the robot at another free pose in a room (simulation restarts)."""
+
+        pose = np.asarray(pose, dtype=float)
+        if self.room_of(pose[:2]) is None:
+            raise ValueError("the pose lies in no room")
+        if body_clearance(pose, self.obstacles, self.geometry, 0.0) <= 0.0:
+            raise ValueError("the robot would touch an obstacle at that pose")
+        self.pose = pose.copy()
+        self.velocity = np.zeros(2)
+        self.checked_pose = None
+
     def room_of(self, point: Sequence[float]) -> Optional[str]:
         x, y = float(point[0]), float(point[1])
         for name, (x0, x1, y0, y1) in self.rooms.items():

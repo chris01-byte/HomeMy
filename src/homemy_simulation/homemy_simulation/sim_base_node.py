@@ -67,6 +67,9 @@ class SimBase(Node):
         declare("imu_bias_rps", 0.001)
         declare("imu_noise_rps", 0.002)
         declare("seed", 7)
+        # Optional start pose [x, y, yaw] in the world, e.g. to restart where
+        # the robot stood before; empty means the world file's start pose.
+        declare("start_pose", [0.0])
 
         def value(name):
             return self.get_parameter(name).value
@@ -79,6 +82,11 @@ class SimBase(Node):
         self.geometry = RobotGeometry.from_yaml_dict(geometry)
         self.wheel_radius = float(geometry["drive_wheels"]["radius"])
         self.world = FloorPlanWorld.from_file(world_file, self.geometry)
+        start_pose = [float(v) for v in value("start_pose")]
+        if len(start_pose) == 3:
+            self.world.place(start_pose)
+        elif start_pose != [0.0]:
+            raise ValueError("start_pose must be [x, y, yaw]")
         self.cmd_timeout_s = float(value("cmd_timeout_s"))
         self.beams = int(value("beams"))
         self.range_max = float(value("range_max_m"))

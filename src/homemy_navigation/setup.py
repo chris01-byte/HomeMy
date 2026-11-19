@@ -25,5 +25,9 @@ setup(
     maintainer_email="homemy@example.com",
     description="HomeMy localization and path planning profiles.",
     license="MIT",
-    entry_points={"console_scripts": []},
+    entry_points={
+        "console_scripts": [
+            "localization_manager = homemy_navigation.localization_manager_node:main",
+        ],
+    },
 )

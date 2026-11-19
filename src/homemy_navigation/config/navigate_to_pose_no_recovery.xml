@@ -1,0 +1,29 @@
+<!--
+  Drive to a pose without recovery behaviours (no spin, no backing up, no
+  costmap clearing). Recoveries would move the robot in ways the mission
+  did not ask for; HomeMy heals at the mission level instead: wait, plan
+  again, retry within fixed limits (software concept, healing ladder).
+  Ported from Amadeus mission_manager/behavior_trees/
+  navigate_to_pose_no_recovery.xml (roboter_ws 05439c7), BehaviorTree.CPP v4.
+-->
+<root BTCPP_format="4" main_tree_to_execute="NavigateToPoseNoRecovery">
+  <BehaviorTree ID="NavigateToPoseNoRecovery">
+    <PipelineSequence name="NavigateWithReplanning">
+      <RateController hz="1.0">
+        <Fallback name="KeepValidPathOrPlan">
+          <ReactiveSequence>
+            <Inverter>
+              <GlobalUpdatedGoal/>
+            </Inverter>
+            <IsPathValid path="{path}" server_timeout="2000"/>
+          </ReactiveSequence>
+          <ComputePathToPose goal="{goal}" path="{path}" planner_id="GridBased"
+                             server_timeout="2000"
+                             error_code_id="{compute_path_error_code}"/>
+        </Fallback>
+      </RateController>
+      <FollowPath path="{path}" controller_id="FollowPath" server_timeout="2000"
+                  error_code_id="{follow_path_error_code}"/>
+    </PipelineSequence>
+  </BehaviorTree>
+</root>

@@ -163,7 +163,8 @@ def _free_port() -> int:
 
 
 @contextmanager
-def launched(launch_file: str, arguments: list[str], ready_timeout: float = 40.0):
+def launched(launch_file: str, arguments: list[str], ready_timeout: float = 40.0,
+             storage_root: str | None = None):
     """Start ``ros2 launch homemy_bringup <launch_file>`` in its own domain.
 
     Yields a dict with the bridge port, a probe node in the same domain, its
@@ -172,13 +173,14 @@ def launched(launch_file: str, arguments: list[str], ready_timeout: float = 40.0
 
     domain = random.randint(101, 199)
     port = _free_port()
-    storage = tempfile.TemporaryDirectory(prefix="homemy-e2e-")
+    storage = None if storage_root else tempfile.TemporaryDirectory(prefix="homemy-e2e-")
+    storage_path = storage_root or storage.name
     env = dict(os.environ, ROS_DOMAIN_ID=str(domain), ROS_AUTOMATIC_DISCOVERY_RANGE="LOCALHOST")
     env.pop("ROS_LOCALHOST_ONLY", None)
     log = tempfile.NamedTemporaryFile(prefix="homemy-e2e-launch-", suffix=".log", delete=False)
     process = subprocess.Popen(
         ["ros2", "launch", "homemy_bringup", launch_file,
-         f"bridge_port:={port}", f"storage_root:={storage.name}", *arguments],
+         f"bridge_port:={port}", f"storage_root:={storage_path}", *arguments],
         env=env,
         stdout=log,
         stderr=subprocess.STDOUT,
@@ -203,7 +205,7 @@ def launched(launch_file: str, arguments: list[str], ready_timeout: float = 40.0
     rclpy.init(context=context, domain_id=domain)
     node = Node("homemy_e2e_probe", context=context)
     try:
-        yield {"port": port, "node": node, "context": context, "log": log.name, "storage": storage.name}
+        yield {"port": port, "node": node, "context": context, "log": log.name, "storage": storage_path}
     finally:
         node.destroy_node()
         rclpy.shutdown(context=context)
@@ -213,7 +215,8 @@ def launched(launch_file: str, arguments: list[str], ready_timeout: float = 40.0
         except subprocess.TimeoutExpired:
             os.killpg(process.pid, signal.SIGKILL)
             process.wait()
-        storage.cleanup()
+        if storage is not None:
+            storage.cleanup()
 
 
 def set_parameter(stack, node_name: str, name: str, value) -> None:

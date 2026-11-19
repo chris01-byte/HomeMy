@@ -22,12 +22,14 @@ from launch_ros.parameter_descriptions import ParameterValue
 APP_PUBLISH_TOPICS = (
     "['/homemy/mapping_mode/command_json', "
     "'/homemy/map_manager/command_json', "
-    "'/homemy/room_manager/command_json']"
+    "'/homemy/room_manager/command_json', "
+    "'/homemy/mission/command_json']"
 )
 APP_SUBSCRIBE_TOPICS = (
     "['/homemy/mapping_mode/status_json', "
     "'/homemy/map_manager/status_json', "
     "'/homemy/room_manager/status_json', "
+    "'/homemy/mission/status_json', "
     "'/map']"
 )
 

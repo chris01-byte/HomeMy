@@ -28,6 +28,8 @@ Er ersetzt nur die Geräte; alles dahinter ist der echte HomeMy-Code. Übernomme
 | `/joint_states` | die beiden Radgelenke |
 | `/homemy/sim/ground_truth`, `/homemy/sim/status_json` | nur für Tests: wahre Lage, Berührung, Abstand, Fahrstrecke, Raum |
 
+Mit dem Parameter `start_pose` (`[x, y, yaw]` in der Welt) beginnt der Roboter woanders als in der Weltdatei, zum Beispiel dort, wo er vor einem Neustart stand.
+
 Die Fahrphysik läuft in einem eigenen Thread mit 100 Hz. Jeder Antrieb ist eine Verzögerung erster Ordnung wie bei Amadeus gemessen. Eine Berührung zählt, sobald der rechteckige Umriss plus 2 cm ein Hindernis berührt.
 
 ## Die Testwohnung `worlds/testwohnung.json`

@@ -1,21 +1,21 @@
 # App Bridge Contract
 
-Status: proposed. Both sides are implemented and tested in simulation: the app in `ios/HomeMy/`, the robot side in `src/homemy_map_manager`, `src/homemy_room_manager`, `src/homemy_mapping_mode`, and `src/homemy_bringup`. Nothing has run on robot hardware.
+Status: proposed. Both sides are implemented and tested in simulation: the app in `ios/HomeMy/`, the robot side in `src/homemy_map_manager`, `src/homemy_room_manager`, `src/homemy_mapping_mode`, `src/homemy_mission`, and `src/homemy_bringup`. Nothing has run on robot hardware.
 Owner: HomeMy platform and app.
 
 ## Scope
 
-This contract defines what the HomeMy app and the robot exchange. It covers mapping mode, the stop request, the live map, the map store, and the room overlay.
+This contract defines what the HomeMy app and the robot exchange. It covers mapping mode, the stop request, the live map, the map store, the room overlay, and missions (drive to a room).
 
 It does not define manual driving itself. Controller input, speed limits, and the stop on controller loss belong to `contracts/hardware/manual-drive.md`; whether a command reaches the drive is decided by the motion gate (`contracts/ros/motion-gate.md`). Both are proposed and tested in simulation only, so the mapping-mode part of this contract may only run in simulation or against the mock until the manual-drive commissioning steps have passed.
 
 ## Transport
 
 - rosbridge v2 protocol over WebSocket, JSON text frames, default `ws://<robot>:9090/`.
-- The app opens two connections: one for control (mapping mode and stop) and one for the map and rooms. Large map messages can then never delay a stop request.
+- The app opens two connections: one for control (mapping mode, missions, and stop) and one for the map and rooms. Large map messages can then never delay a stop request.
 - The app sends no motor commands and publishes to no velocity topic.
 - The bridge listens on the loopback interface by default. Opening it to the network is an explicit launch argument.
-- The bridge accepts only the topics in the table below: the app may publish to the three command topics and subscribe to the three status topics and `/map`. Services and actions are refused. A velocity command cannot pass the bridge.
+- The bridge accepts only the topics in the table below: the app may publish to the four command topics and subscribe to the four status topics and `/map`. Services and actions are refused. A velocity command cannot pass the bridge.
 - This version has no authentication and no encryption. By owner decision of 2026-11-19 the laboratory prototype runs without access control, on a trusted laboratory network only. Authentication is required before customer use, because the mapping-mode switch travels over this bridge.
 
 ## Topics
@@ -29,6 +29,8 @@ It does not define manual driving itself. Controller input, speed limits, and th
 | `/homemy/map_manager/status_json` | `std_msgs/String` | robot to app | map store state |
 | `/homemy/room_manager/command_json` | `std_msgs/String` | app to robot | create, change, delete rooms |
 | `/homemy/room_manager/status_json` | `std_msgs/String` | robot to app | room overlay state |
+| `/homemy/mission/command_json` | `std_msgs/String` | app to robot | drive to a room, cancel |
+| `/homemy/mission/status_json` | `std_msgs/String` | robot to app | mission state |
 
 Robot-internal topics of the mapping-mode manager, not reachable over the bridge:
 
@@ -136,6 +138,72 @@ The app binds rooms fail-closed: live map, map store, and room overlay must repo
 
 Not yet covered: saving a second map after rooms exist, and moving rooms to a new map version. The owner accepted this limit for the prototype on 2026-11-19.
 
+## Missions
+
+V1 knows one mission: drive to a room. The robot drives to the room's stored navigation goal. The motion gate decides whether navigation commands reach the drive (`contracts/ros/motion-gate.md`).
+
+### Commands
+
+```json
+{"command": "go_to_room", "room_id": "kueche", "request_id": "ios-go-1"}
+{"command": "cancel", "request_id": "ios-cancel-2"}
+```
+
+- `go_to_room` names a room of the room overlay by `room_id` (or, for tools, by `room` name). The room must have a navigation goal.
+- `cancel` ends the running mission. It is always accepted and idempotent. The app repeats it until the status no longer reports `running`, for at most four seconds. The app's stop button sends `cancel` as well as the mapping-mode `stop`.
+
+### Status
+
+Published at least twice per second and on every change, reliable and latched.
+
+```json
+{
+  "schema_version": 1,
+  "event": "status",
+  "ok": true,
+  "request_id": null,
+  "message": "Auftrag läuft.",
+  "mission": {
+    "state": "running",
+    "command": "go_to_room",
+    "room_id": "kueche",
+    "room_name": "Küche",
+    "phase": "driving",
+    "attempt": 1,
+    "max_attempts": 3,
+    "distance_remaining_m": 2.4,
+    "result": null
+  },
+  "start_block_reason": "busy",
+  "time": 1731790000.0
+}
+```
+
+| Field | Values |
+| --- | --- |
+| `event` | `status`, `go_to_room_result`, `cancel_result`, `command_result` (a refused, malformed command) |
+| `mission.state` | `idle`, `running`, `succeeded`, `failed`, `canceled` |
+| `mission.phase` | while running: `starting`, `driving`, `waiting_retry`; afterwards `arrived`, `failed`, `canceled` |
+| `mission.result` | null, `arrived`, `app_cancel`, `mapping_started`, `localization_lost`, `navigation_failed:<code>`, `goal_rejected`, `lifecycle_fault`, `lifecycle_shutting_down` |
+| `start_block_reason` | null when `go_to_room` would be accepted now; otherwise `busy`, `mapping_active`, `not_ready`, `no_map`, `rooms_not_bound`, `not_localized`, `navigation_unavailable`; on a refused `go_to_room_result` also `room_invalid` |
+
+In the idle state `command`, `room_id`, `room_name`, `phase`, and `result` are null, and `attempt` and `max_attempts` are 0.
+
+### Rules for the Robot
+
+- One mission at a time.
+- `go_to_room` is accepted only with mapping mode off, a lifecycle state of READY or READY_LIMITED, a trusted position on the saved map (`/homemy/localization/ready`), rooms bound to exactly the loaded map (same fingerprint), and navigation available.
+- A failed drive is a pause: the robot waits 3 s and tries again, up to three attempts. Only then the mission ends as `failed`, and the robot is ready for the next command.
+- A lost position stops the robot through the motion gate; the mission waits up to 15 s for it to come back, then ends as `failed` with `localization_lost`.
+- Starting mapping mode cancels a running mission. A fault or shutdown ends it.
+- After a restart no mission continues by itself.
+
+### Rules for the App
+
+- A mission status older than 2.5 seconds is unknown.
+- "Drive there" is offered only for a room with a navigation goal, when the control connection is up, the mission status is fresh, no mission is running, and `start_block_reason` is null.
+- Cancel is offered while a mission runs or its state is unknown, once the robot has reported any mission status.
+
 ## Failure Behavior
 
 - Missing, malformed, or stale status never enables an action in the app. It only disables.
@@ -145,8 +213,8 @@ Not yet covered: saving a second map after rooms exist, and moving rooms to a ne
 ## Validation
 
 - `ios/HomeMy/Tools/mock_rosbridge.py` implements this contract without ROS, with synthetic data only.
-- Swift tests cover frame encoding, status decoding, rejection of invalid payloads, and the app rules above. Python tests cover the mock.
-- The robot side has unit and ROS-level tests per package, and an end-to-end test (`src/homemy_bringup/test/test_app_bridge_e2e.py`) that starts the simulation profile and talks to it over the real bridge with the app's frames: mapping run, saving, rooms, stop, the bridge allowlist, the automatic end, a disconnected controller, and a lifecycle fault.
+- Swift tests cover frame encoding, status decoding, rejection of invalid payloads, and the app rules above, for mapping mode and missions. Python tests cover the mock, including missions.
+- The robot side has unit and ROS-level tests per package, and two end-to-end tests that talk to the simulation over the real bridge with the app's frames. `test_app_bridge_e2e.py`: mapping run, saving, rooms, stop, the bridge allowlist, the automatic end, a disconnected controller, and a lifecycle fault. `test_drive_sim_e2e.py`: a real mapping run in the test stand, saving, rooms, drive to a room, cancel, refusal while mapping, and restarts with a correct and with a wrong stored position.
 - Frames recorded from that test are decoded by the app's own Swift code (`ios/HomeMy/HomeMyTests/BackendFixtureTests.swift`); the app computes the same map fingerprint as the map store and unlocks room editing.
 - Nothing has run on robot hardware. Simulation results are not robot acceptance.
 

@@ -43,6 +43,11 @@ def generate_launch_description():
                 "world_file", default_value=share("homemy_simulation", "worlds", "testwohnung.json")
             ),
             DeclareLaunchArgument(
+                "start_pose",
+                default_value="[0.0]",
+                description="Optional robot pose [x, y, yaw] in the world at start; default: the world's start.",
+            ),
+            DeclareLaunchArgument(
                 "operator_route",
                 default_value="false",
                 description="The simulated person drives the mapping route of the world file.",
@@ -68,11 +73,12 @@ def generate_launch_description():
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(share("homemy_navigation", "launch", "slam.launch.py"))
             ),
-            Node(
-                package="homemy_mapping_mode",
-                executable="mapping_run_coordinator",
-                name="mapping_run_coordinator",
-                output="screen",
+            IncludeLaunchDescription(
+                PythonLaunchDescriptionSource(share("homemy_navigation", "launch", "navigation.launch.py")),
+                launch_arguments={"storage_root": LaunchConfiguration("storage_root")}.items(),
+            ),
+            IncludeLaunchDescription(
+                PythonLaunchDescriptionSource(share("homemy_mission", "launch", "mission.launch.py"))
             ),
             # The real teleop profile; only joy_node and the radio-link
             # watchdog are replaced by the simulated controller.
@@ -88,7 +94,13 @@ def generate_launch_description():
                 executable="sim_base",
                 name="homemy_sim_base",
                 output="screen",
-                parameters=[{"world_file": world, "geometry_file": geometry}],
+                parameters=[
+                    {
+                        "world_file": world,
+                        "geometry_file": geometry,
+                        "start_pose": ParameterValue(LaunchConfiguration("start_pose")),  # YAML list of floats
+                    }
+                ],
             ),
             Node(
                 package="homemy_simulation",

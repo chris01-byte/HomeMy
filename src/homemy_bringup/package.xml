@@ -25,6 +25,7 @@
   <exec_depend>homemy_motion_gate</exec_depend>
   <exec_depend>homemy_manual_drive</exec_depend>
   <exec_depend>homemy_navigation</exec_depend>
+  <exec_depend>homemy_mission</exec_depend>
   <exec_depend>teleop_twist_joy</exec_depend>
 
   <test_depend>python3-pytest</test_depend>

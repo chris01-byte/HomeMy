@@ -17,7 +17,14 @@ contracts/ros/motion-gate.md):
   the wall cells lie within 5 cm and none beyond 15 cm (5 cm grid), and the
   whole map is rotated by at most 2 degrees; it is saved
   through the app's frame with the live map's fingerprint;
-- no velocity command can enter through the bridge.
+- no velocity command can enter through the bridge;
+- after saving, localization switches to the saved map with AMCL and
+  reports a trusted position; rooms drawn with the app's frames stay bound;
+- "drive to a room" from the app reaches the living room through two doors;
+  a cancelled drive stops the robot; missions are refused while mapping;
+- after a restart where the robot stood, it trusts its stored pose and
+  drives to the bedroom; after a restart where it was secretly moved, it
+  does not trust the stored pose and refuses to drive.
 
 Everything is simulated: no hardware, no real home data.
 """
@@ -26,6 +33,7 @@ from __future__ import annotations
 
 import json
 import math
+import tempfile
 import time
 
 import numpy as np
@@ -45,6 +53,19 @@ MODE_COMMAND = "/homemy/mapping_mode/command_json"
 MODE_STATUS = "/homemy/mapping_mode/status_json"
 MAP_COMMAND = "/homemy/map_manager/command_json"
 MAP_STATUS = "/homemy/map_manager/status_json"
+ROOM_COMMAND = "/homemy/room_manager/command_json"
+ROOM_STATUS = "/homemy/room_manager/status_json"
+MISSION_COMMAND = "/homemy/mission/command_json"
+MISSION_STATUS = "/homemy/mission/status_json"
+START = (1.6, 0.7)  # world start pose; the map frame begins here (yaw 0)
+
+# Rooms of the test apartment in world coordinates: interior and drive goal.
+ROOMS = {
+    "wohnzimmer": ("Wohnzimmer", (0.0, 4.6, 0.0, 4.0), (3.0, 1.0, math.pi)),
+    "kueche": ("Küche", (4.7, 7.6, -0.8, 1.5), (6.2, 0.6, 0.0)),
+    "schlafzimmer": ("Schlafzimmer", (6.2, 9.4, 1.6, 4.6), (8.3, 2.2, 0.0)),
+}
+SHARED = {}
 LATCHED = QoSProfile(depth=1, reliability=ReliabilityPolicy.RELIABLE, durability=DurabilityPolicy.TRANSIENT_LOCAL)
 ROUTE_TIMEOUT_S = 420.0
 
@@ -61,6 +82,8 @@ class Probe:
         self.sim = None
         self.gate = None
         self.map = None
+        self.localization = None
+        self.node.create_subscription(String, "/homemy/localization/status_json", self._setter("localization"), LATCHED)
         self.node.create_subscription(PoseStamped, "/homemy/sim/ground_truth", self._on_truth, 10)
         self.node.create_subscription(String, "/homemy/sim/operator_status", self._setter("operator"), 10)
         self.node.create_subscription(String, "/homemy/sim/status_json", self._setter("sim"), 10)
@@ -98,6 +121,9 @@ class Probe:
             return 0.0
         return math.hypot(points[-1][0] - points[0][0], points[-1][1] - points[0][1])
 
+    def pose(self):
+        return (self.truth[-1][1], self.truth[-1][2]) if self.truth else None
+
     def travel(self) -> float:
         return float(self.sim["travel_m"]) if self.sim else 0.0
 
@@ -107,9 +133,56 @@ class Probe:
 
 
 @pytest.fixture(scope="module")
-def stack():
-    with launched("drive_sim.launch.py", ["operator_route:=true"], ready_timeout=60.0) as running:
-        yield running
+def storage_dir():
+    with tempfile.TemporaryDirectory(prefix="homemy-e2e-drive-") as directory:
+        yield directory
+
+
+def to_map(x, y):
+    return x - START[0], y - START[1]
+
+
+def room_payload(room_id, grid_info):
+    """The room as the app draws it: a rectangle inside the room and on the map."""
+
+    name, (x0, x1, y0, y1), (gx, gy, gyaw) = ROOMS[room_id]
+    left, bottom = grid_info.origin.position.x + 0.05, grid_info.origin.position.y + 0.05
+    right = grid_info.origin.position.x + grid_info.width * grid_info.resolution - 0.05
+    top = grid_info.origin.position.y + grid_info.height * grid_info.resolution - 0.05
+    (ax, ay), (bx, by) = to_map(x0 + 0.05, y0 + 0.05), to_map(x1 - 0.05, y1 - 0.05)
+    ax, bx = max(ax, left), min(bx, right)
+    ay, by = max(ay, bottom), min(by, top)
+    corners = [(ax, ay), (bx, ay), (bx, by), (ax, by)]
+    mx, my = to_map(gx, gy)
+    return {"id": room_id, "name": name, "color": "#31A8FF",
+            "polygon": [{"x": round(x, 3), "y": round(y, 3)} for x, y in corners],
+            "navigation_goal": {"x": round(mx, 3), "y": round(my, 3), "yaw": gyaw}}
+
+
+def mission_link(port):
+    link = WebSocketClient(port)
+    link.send({"op": "advertise", "topic": MISSION_COMMAND, "type": "std_msgs/String"})
+    link.send({"op": "subscribe", "topic": MISSION_STATUS, "type": "std_msgs/String"})
+    return link
+
+
+def go_to_room(link, room_id, request_id, record_as=None):
+    publish_json(link, MISSION_COMMAND, {"command": "go_to_room", "room_id": room_id, "request_id": request_id})
+    return link.wait_status(MISSION_STATUS, lambda s: s.get("request_id") == request_id, timeout=20,
+                            record_as=record_as)
+
+
+def wait_mission(link, predicate, timeout, record_as=None):
+    return link.wait_status(MISSION_STATUS, lambda s: predicate(s["mission"]), timeout=timeout,
+                            record_as=record_as)
+
+
+def assert_arrived(probe, room_id):
+    name, (x0, x1, y0, y1), (gx, gy, _) = ROOMS[room_id]
+    probe.spin(1.0)
+    x, y = probe.pose()
+    assert x0 <= x <= x1 and y0 <= y <= y1, (room_id, x, y)
+    assert math.hypot(x - gx, y - gy) <= 0.35, (room_id, x, y)
 
 
 def mode_command(client: WebSocketClient, kind: str, request_id: str) -> dict:
@@ -117,7 +190,13 @@ def mode_command(client: WebSocketClient, kind: str, request_id: str) -> dict:
     return client.wait_status(MODE_STATUS, lambda s: s.get("request_id") == request_id)
 
 
-def test_mapping_run_through_the_whole_apartment(stack):
+def test_mapping_run_then_drive_to_rooms(storage_dir):
+    with launched("drive_sim.launch.py", ["operator_route:=true"], ready_timeout=60.0,
+                  storage_root=storage_dir) as stack:
+        mapping_run_then_drive_to_rooms(stack)
+
+
+def mapping_run_then_drive_to_rooms(stack):
     control = WebSocketClient(stack["port"])
     control.send({"op": "advertise", "topic": MODE_COMMAND, "type": "std_msgs/String"})
     control.send({"op": "subscribe", "topic": MODE_STATUS, "type": "std_msgs/String"})
@@ -215,6 +294,116 @@ def test_mapping_run_through_the_whole_apartment(stack):
         probe.spin(2.0)
         publishers = probe.node.get_publishers_info_by_topic("/cmd_vel")
         assert [info.node_name for info in publishers] == ["motion_gate"]
+
+        # Saving switches localization to the saved map; the position is trusted.
+        probe.spin_until(lambda: probe.localization and probe.localization["mode"] == "navigation"
+                         and probe.localization["ready"], 60, "localization on the saved map")
+        assert probe.localization["map"]["fingerprint"] == fingerprint
+        assert probe.localization["initial_pose_source"] == "slam_handover"
+
+        # Rooms drawn as the app does, bound to the saved map.
+        rooms_link = WebSocketClient(stack["port"])
+        try:
+            rooms_link.send({"op": "advertise", "topic": ROOM_COMMAND, "type": "std_msgs/String"})
+            rooms_link.send({"op": "subscribe", "topic": ROOM_STATUS, "type": "std_msgs/String"})
+            status = rooms_link.wait_status(ROOM_STATUS, lambda s: (s.get("semantic_map") or {}).get("editable") is True)
+            assert status["semantic_map"]["map_ref"]["fingerprint"] == fingerprint
+            revision = status["semantic_map"]["revision"]
+            for number, room_id in enumerate(ROOMS):
+                publish_json(rooms_link, ROOM_COMMAND, {
+                    "command": "upsert_room", "request_id": f"ios-room-{number}",
+                    "map_fingerprint": fingerprint, "base_revision": revision,
+                    "room": room_payload(room_id, probe.map.info)})
+                created = rooms_link.wait_status(ROOM_STATUS, lambda s, n=number: s.get("request_id") == f"ios-room-{n}")
+                assert created["ok"], created["message"]
+                revision = created["semantic_map"]["revision"]
+        finally:
+            rooms_link.close()
+
+        # Drive to the living room: through the hall and two doors.
+        missions = mission_link(stack["port"])
+        try:
+            started = go_to_room(missions, "wohnzimmer", "ios-go-1", record_as="mission_go_to_room_result")
+            assert started["ok"], started["message"]
+            wait_mission(missions, lambda m: m["state"] == "running" and m["distance_remaining_m"] is not None,
+                         timeout=60, record_as="mission_running")
+            done = wait_mission(missions, lambda m: m["state"] in ("succeeded", "failed", "canceled"), timeout=240,
+                                record_as="mission_finished")
+            assert done["mission"]["state"] == "succeeded", done
+            assert_arrived(probe, "wohnzimmer")
+            assert probe.sim["collision"] is False
+
+            # A cancelled drive stops the robot.
+            started = go_to_room(missions, "kueche", "ios-go-2")
+            assert started["ok"], started["message"]
+            probe.spin_until(lambda: probe.gate["mode"] == "mission" and probe.gate["open"], 30, "mission drives")
+            probe.spin(3.0)
+            publish_json(missions, MISSION_COMMAND, {"command": "cancel", "request_id": "ios-cancel-1"})
+            canceled = missions.wait_status(MISSION_STATUS, lambda s: s.get("request_id") == "ios-cancel-1",
+                                            record_as="mission_cancel_result")
+            assert canceled["ok"] and canceled["mission"]["state"] == "canceled"
+            probe.spin(1.5)
+            held = time.monotonic()
+            probe.spin(1.5)
+            assert probe.moved_since(held) < 0.01
+            assert "mode_off" in probe.gate["reasons"]
+
+            # Missions are refused while mapping mode is on.
+            assert mode_command(control, "enable", "ios-mode-3")["ok"]
+            refused = go_to_room(missions, "schlafzimmer", "ios-go-3", record_as="mission_refused_mapping")
+            assert not refused["ok"] and refused["start_block_reason"] == "mapping_active"
+            assert mode_command(control, "disable", "ios-mode-4")["ok"]
+        finally:
+            missions.close()
+        x, y = probe.pose()
+        yaw_truth = probe.sim["pose"][2]
+        SHARED["final_pose"] = (x, y, yaw_truth)
     finally:
         probe.close()
         control.close()
+
+
+def restart(storage_dir, pose):
+    argument = "start_pose:=[{:.4f}, {:.4f}, {:.4f}]".format(*pose)
+    return launched("drive_sim.launch.py", [argument], ready_timeout=60.0, storage_root=storage_dir)
+
+
+def test_restart_where_the_robot_stood_trusts_the_stored_pose(storage_dir):
+    if "final_pose" not in SHARED:
+        pytest.skip("needs the mapping run of the first test")
+    with restart(storage_dir, SHARED["final_pose"]) as stack:
+        probe = Probe(stack)
+        missions = mission_link(stack["port"])
+        try:
+            probe.spin_until(lambda: probe.localization and probe.localization["ready"], 60, "trusted after restart")
+            assert probe.localization["initial_pose_source"] == "stored"
+            started = go_to_room(missions, "schlafzimmer", "ios-go-4")
+            assert started["ok"], started["message"]
+            done = wait_mission(missions, lambda m: m["state"] in ("succeeded", "failed", "canceled"), timeout=240)
+            assert done["mission"]["state"] == "succeeded", done
+            assert_arrived(probe, "schlafzimmer")
+            assert probe.sim["collision"] is False
+        finally:
+            missions.close()
+            probe.close()
+
+
+def test_restart_after_the_robot_was_moved_is_not_trusted(storage_dir):
+    if "final_pose" not in SHARED:
+        pytest.skip("needs the mapping run of the first test")
+    # The robot was carried into the kitchen while switched off.
+    with restart(storage_dir, (6.2, 0.6, 0.0)) as stack:
+        probe = Probe(stack)
+        missions = mission_link(stack["port"])
+        try:
+            probe.spin_until(lambda: probe.localization and probe.localization["mode"] == "navigation", 60,
+                             "navigation mode after restart")
+            probe.spin(15.0)
+            assert probe.localization["ready"] is False
+            refused = go_to_room(missions, "wohnzimmer", "ios-go-5", record_as="mission_refused_not_localized")
+            assert not refused["ok"] and refused["start_block_reason"] == "not_localized"
+            probe.spin(2.0)
+            assert probe.travel() == 0.0
+        finally:
+            missions.close()
+            probe.close()

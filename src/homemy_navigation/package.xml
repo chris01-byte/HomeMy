@@ -10,13 +10,36 @@
   <maintainer email="homemy@example.com">HomeMy</maintainer>
   <license>MIT</license>
 
-  <exec_depend>slam_toolbox</exec_depend>
-  <exec_depend>lifecycle_msgs</exec_depend>
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>nav2_msgs</depend>
+  <depend>lifecycle_msgs</depend>
+  <depend>rcl_interfaces</depend>
+  <depend>std_srvs</depend>
+  <depend>tf2_ros</depend>
+  <depend>slam_toolbox</depend>
+  <depend>python3-numpy</depend>
+  <depend>homemy_map_manager</depend>
+  <exec_depend>nav2_map_server</exec_depend>
+  <exec_depend>nav2_amcl</exec_depend>
+  <exec_depend>nav2_planner</exec_depend>
+  <exec_depend>nav2_navfn_planner</exec_depend>
+  <exec_depend>nav2_controller</exec_depend>
+  <exec_depend>nav2_regulated_pure_pursuit_controller</exec_depend>
+  <exec_depend>nav2_velocity_smoother</exec_depend>
+  <exec_depend>nav2_bt_navigator</exec_depend>
+  <exec_depend>nav2_behavior_tree</exec_depend>
+  <exec_depend>nav2_lifecycle_manager</exec_depend>
   <exec_depend>launch</exec_depend>
   <exec_depend>launch_ros</exec_depend>
 
   <test_depend>python3-pytest</test_depend>
   <test_depend>python3-yaml</test_depend>
+  <test_depend>homemy_description</test_depend>
+  <test_depend>homemy_motion_gate</test_depend>
 
   <export>
     <build_type>ament_python</build_type>
