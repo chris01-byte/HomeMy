@@ -22,6 +22,7 @@
   <depend>tf2_ros</depend>
   <depend>slam_toolbox</depend>
   <depend>python3-numpy</depend>
+  <depend>python3-scipy</depend>
   <depend>homemy_map_manager</depend>
   <exec_depend>nav2_map_server</exec_depend>
   <exec_depend>nav2_amcl</exec_depend>
@@ -40,6 +41,8 @@
   <test_depend>python3-yaml</test_depend>
   <test_depend>homemy_description</test_depend>
   <test_depend>homemy_motion_gate</test_depend>
+  <test_depend>homemy_simulation</test_depend>
+  <test_depend>homemy_lidar_bringup</test_depend>
 
   <export>
     <build_type>ament_python</build_type>

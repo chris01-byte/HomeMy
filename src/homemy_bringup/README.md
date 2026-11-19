@@ -48,7 +48,7 @@ Weitere Argumente: `bridge_port`, `storage_root`, `auto_end_timeout_s`, `control
 
 ## Ende-zu-Ende-Tests
 
-`test/test_drive_sim_e2e.py` startet `drive_sim.launch.py` dreimal und fährt die ganze Kartierroute und mehrere Aufträge durch den echten Code (etwa acht Minuten). Geprüft werden:
+`test/test_drive_sim_e2e.py` startet `drive_sim.launch.py` dreimal und fährt die ganze Kartierroute und mehrere Aufträge durch den echten Code (etwa sechs Minuten). Geprüft werden:
 
 1. Bei ausgeschaltetem Kartiermodus bewegt der gedrückte Controller nichts.
 2. Lässt die Person das Steuerkreuz los, steht der Roboter; drückt sie wieder, fährt er weiter. Wird der Controller ausgeschaltet, hält der Roboter innerhalb einer Sekunde und nach weniger als 15 cm; der Kartiermodus bleibt aktiv.
@@ -61,7 +61,7 @@ Weitere Argumente: `bridge_port`, `storage_root`, `auto_end_timeout_s`, `control
 9. Drei Räume werden mit den Nachrichten der App angelegt; „Fahre zu Wohnzimmer“ führt vom Schlafzimmer durch Flur und zwei Türen ins Wohnzimmer, ohne Berührung, höchstens 35 cm neben dem Fahrziel.
 10. Eine abgebrochene Fahrt hält den Roboter an; während des Kartiermodus wird eine Fahrt abgelehnt.
 11. Neustart dort, wo der Roboter stand: Er übernimmt die gesicherte Lage und fährt ins Schlafzimmer.
-12. Neustart, nachdem der Roboter heimlich in die Küche getragen wurde: Er traut der gesicherten Lage nicht, meldet „nicht lokalisiert“ und lehnt die Fahrt ab.
+12. Neustart, nachdem der Roboter heimlich in die Küche getragen wurde: Er traut der gesicherten Lage nicht und lehnt eine Fahrt zunächst ab („nicht lokalisiert“). Dann findet er sich im Stand über die Suche in der ganzen Karte wieder, auf höchstens 30 cm genau, und fährt ins Wohnzimmer.
 
 `test/test_app_bridge_e2e.py` startet `app_sim.launch.py` in einem eigenen Prozess und spricht über einen WebSocket mit genau den Nachrichten, die die App sendet. Geprüft werden:
 

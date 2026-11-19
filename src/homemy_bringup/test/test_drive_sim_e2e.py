@@ -24,8 +24,10 @@ contracts/ros/motion-gate.md):
 - "drive to a room" from the app reaches the living room through two doors;
   a cancelled drive stops the robot; missions are refused while mapping;
 - after a restart where the robot stood, it trusts its stored pose and
-  drives to the bedroom; after a restart where it was secretly moved, it
-  does not trust the stored pose and refuses to drive.
+  drives to the bedroom;
+- after a restart where it was secretly carried into the kitchen, it does
+  not trust the stored pose and refuses to drive; it then finds itself by
+  searching the whole map, without moving, and drives to the living room.
 
 Everything is simulated: no hardware, no real home data.
 """
@@ -402,22 +404,54 @@ def test_restart_where_the_robot_stood_trusts_the_stored_pose(storage_dir):
             probe.close()
 
 
-def test_restart_after_the_robot_was_moved_is_not_trusted(storage_dir):
+def test_restart_after_the_robot_was_moved_finds_itself_again(storage_dir):
     if "final_pose" not in SHARED:
         pytest.skip("needs the mapping run of the first test")
     # The robot was carried into the kitchen while switched off.
-    with restart(storage_dir, (6.2, 0.6, 0.0)) as stack:
+    moved_to = (6.2, 0.6, 0.0)
+    with restart(storage_dir, moved_to) as stack:
         probe = Probe(stack)
         missions = mission_link(stack["port"])
         try:
             probe.spin_until(lambda: probe.localization and probe.localization["mode"] == "navigation", 60,
                              "navigation mode after restart")
-            probe.spin(15.0)
-            assert probe.localization["ready"] is False
-            refused = go_to_room(missions, "wohnzimmer", "ios-go-5", record_as="mission_refused_not_localized")
-            assert not refused["ok"] and refused["start_block_reason"] == "not_localized"
-            probe.spin(2.0)
+            assert probe.localization["initial_pose_source"] == "stored"
+
+            # The stored pose (bedroom) does not fit what the LiDAR sees: no
+            # drive is accepted while the position is not trusted.
+            saw_not_localized = False
+            for number in range(12):
+                if probe.localization["ready"]:
+                    break
+                publish_json(missions, MISSION_COMMAND,
+                             {"command": "go_to_room", "room_id": "wohnzimmer", "request_id": f"ios-go-5-{number}"})
+                refused = missions.wait_status(
+                    MISSION_STATUS, lambda s, n=number: s.get("request_id") == f"ios-go-5-{n}", timeout=20,
+                    record_as="mission_refused_not_localized",
+                    record_if=lambda s: s["start_block_reason"] == "not_localized")
+                assert not refused["ok"], refused
+                saw_not_localized |= refused["start_block_reason"] == "not_localized"
+                if saw_not_localized:
+                    break
+                probe.spin(1.0)
+            assert saw_not_localized
+
+            # It finds itself by searching the whole map, standing still.
+            probe.spin_until(lambda: probe.localization["ready"] and probe.localization["pose"] is not None, 150,
+                             "found itself after being moved")
+            assert probe.localization["initial_pose_source"] == "global_search"
             assert probe.travel() == 0.0
+            estimate = probe.localization["pose"]
+            error = math.hypot(estimate["x"] + START[0] - moved_to[0], estimate["y"] + START[1] - moved_to[1])
+            print("relocalization error m:", round(error, 3), "search:", probe.localization["search"])
+            assert error <= 0.30
+
+            started = go_to_room(missions, "wohnzimmer", "ios-go-6")
+            assert started["ok"], started["message"]
+            done = wait_mission(missions, lambda m: m["state"] in ("succeeded", "failed", "canceled"), timeout=240)
+            assert done["mission"]["state"] == "succeeded", done
+            assert_arrived(probe, "wohnzimmer")
+            assert probe.sim["collision"] is False
         finally:
             missions.close()
             probe.close()

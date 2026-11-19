@@ -55,7 +55,7 @@ class MissionManager(Node):
         declare("bt_xml", "")
         declare("max_attempts", 3)
         declare("retry_wait_s", 3.0)
-        declare("localization_grace_s", 15.0)
+        declare("localization_grace_s", 30.0)
         declare("room_status_timeout_s", 6.0)
         declare("input_timeout_s", 3.0)
         declare("status_period_s", 0.5)

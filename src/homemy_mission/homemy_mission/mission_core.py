@@ -116,7 +116,9 @@ def start_block_reason(running: bool, pre: Preconditions) -> Optional[str]:
 class MissionPolicy:
     max_attempts: int = 3
     retry_wait_s: float = 3.0
-    localization_grace_s: float = 15.0
+    # Long enough for a search of the whole map: two searches on different
+    # scans, then the scan check.
+    localization_grace_s: float = 30.0
 
     def __post_init__(self) -> None:
         if self.max_attempts < 1:

@@ -193,7 +193,7 @@ In the idle state `command`, `room_id`, `room_name`, `phase`, and `result` are n
 - One mission at a time.
 - `go_to_room` is accepted only with mapping mode off, a lifecycle state of READY or READY_LIMITED, a trusted position on the saved map (`/homemy/localization/ready`), rooms bound to exactly the loaded map (same fingerprint), and navigation available.
 - A failed drive is a pause: the robot waits 3 s and tries again, up to three attempts. Only then the mission ends as `failed`, and the robot is ready for the next command.
-- A lost position stops the robot through the motion gate; the mission waits up to 15 s for it to come back, then ends as `failed` with `localization_lost`.
+- A lost position stops the robot through the motion gate. While it stands, the robot searches the whole map for its position. The mission waits up to 30 s for the position to come back, then ends as `failed` with `localization_lost`.
 - Starting mapping mode cancels a running mission. A fault or shutdown ends it.
 - After a restart no mission continues by itself.
 
@@ -213,7 +213,7 @@ In the idle state `command`, `room_id`, `room_name`, `phase`, and `result` are n
 
 - `ios/HomeMy/Tools/mock_rosbridge.py` implements this contract without ROS, with synthetic data only.
 - Swift tests cover frame encoding, status decoding, rejection of invalid payloads, and the app rules above, for mapping mode and missions. Python tests cover the mock, including missions.
-- The robot side has unit and ROS-level tests per package, and two end-to-end tests that talk to the simulation over the real bridge with the app's frames. `test_app_bridge_e2e.py`: mapping run, saving, rooms, stop, the bridge allowlist, the automatic end, a disconnected controller, and a lifecycle fault. `test_drive_sim_e2e.py`: a real mapping run in the test stand, saving, rooms, drive to a room, cancel, refusal while mapping, and restarts with a correct and with a wrong stored position.
+- The robot side has unit and ROS-level tests per package, and two end-to-end tests that talk to the simulation over the real bridge with the app's frames. `test_app_bridge_e2e.py`: mapping run, saving, rooms, stop, the bridge allowlist, the automatic end, a disconnected controller, and a lifecycle fault. `test_drive_sim_e2e.py`: a real mapping run in the test stand, saving, rooms, drive to a room, cancel, refusal while mapping, a restart where the robot stood, and a restart after the robot was carried elsewhere, where it finds itself by searching the map and then drives.
 - Frames recorded from that test are decoded by the app's own Swift code (`ios/HomeMy/HomeMyTests/BackendFixtureTests.swift`); the app computes the same map fingerprint as the map store and unlocks room editing.
 - Nothing has run on robot hardware. Simulation results are not robot acceptance.
 

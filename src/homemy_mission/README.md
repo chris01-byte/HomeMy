@@ -15,7 +15,7 @@ Auftragssteuerung von HomeMy. Version 1 kennt einen Auftrag: **zu einem Raum fah
 ## Selbstheilung
 
 - Scheitert eine Fahrt, wartet der Knoten 3 s und versucht es erneut, höchstens dreimal. Erst dann endet der Auftrag als „nicht erfüllt“, und der Roboter ist wieder bereit.
-- Ist der Standort nicht mehr sicher, hält die Bewegungsfreigabe den Roboter an. Der Auftrag wartet bis zu 15 s, dass der Standort zurückkommt.
+- Ist der Standort nicht mehr sicher, hält die Bewegungsfreigabe den Roboter an. Der Auftrag wartet bis zu 30 s, dass der Roboter sich wiederfindet; so lange braucht höchstens eine Suche über die ganze Karte.
 - Beginnt der Kartiermodus, wird der Auftrag abgebrochen. Ein Fehler oder das Ausschalten beenden ihn.
 - Nach einem Neustart läuft kein Auftrag von selbst weiter.
 

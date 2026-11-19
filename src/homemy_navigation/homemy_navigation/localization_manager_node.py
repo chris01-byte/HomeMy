@@ -9,8 +9,13 @@ The one owner of slam_toolbox, map_server, and AMCL (all lifecycle nodes):
   map's fingerprint): slam_toolbox inactive, map_server loads that version,
   AMCL starts at the robot's last SLAM pose;
 - start-up with a saved map: navigation on the newest saved version, starting
-  at the last trusted pose stored for exactly that map. Without one the
-  robot is not localized (a global search is a later step).
+  at the last trusted pose stored for exactly that map;
+- whenever the position is not trusted while the robot stands still, for
+  example because it was carried elsewhere, the whole map is searched for
+  the place where the current scan fits (global_scan_matcher, ported from
+  Amadeus). Two searches on different scans must agree; then AMCL starts
+  there. A search without a result is repeated after a pause; nothing
+  latches.
 
 It publishes ``/homemy/localization/ready`` (std_msgs/Bool, 5 Hz) only while
 navigating, with AMCL confident and the scan agreeing with the map
@@ -24,6 +29,7 @@ import math
 import os
 import time
 from collections import deque
+from concurrent.futures import Future, ThreadPoolExecutor
 from pathlib import Path
 from typing import Callable, Deque, Optional, Tuple
 
@@ -33,7 +39,7 @@ from geometry_msgs.msg import PoseWithCovarianceStamped
 from lifecycle_msgs.msg import State, Transition
 from lifecycle_msgs.srv import ChangeState, GetState
 from nav2_msgs.srv import LoadMap
-from nav_msgs.msg import OccupancyGrid
+from nav_msgs.msg import OccupancyGrid, Odometry
 from rcl_interfaces.srv import GetParameters
 from rclpy.node import Node
 from rclpy.qos import DurabilityPolicy, QoSProfile, ReliabilityPolicy, qos_profile_sensor_data
@@ -43,6 +49,8 @@ from std_msgs.msg import Bool, String
 from std_srvs.srv import Empty
 from tf2_ros import Buffer, TransformException, TransformListener
 
+from homemy_navigation.global_scan_matcher import MapScorer, SearchResult, search_global_pose
+from homemy_navigation.relocalization_core import STATE_SEARCHING, SearchConfig, SearchPlanner
 from homemy_navigation.localization_core import (
     MODE_IDLE,
     MODE_MAPPING,
@@ -102,6 +110,20 @@ class LocalizationManager(Node):
         # it is asked repeatedly, so that the scan confirms or rejects it.
         declare("nomotion_updates", 30)
         declare("nomotion_period_s", 0.5)
+        # Global search (relocalization_core.SearchConfig).
+        declare("odom_topic", "/odom")
+        declare("search_start_after_s", 5.0)
+        declare("search_minimum_scan_points", 200)
+        declare("search_minimum_score", 0.85)
+        declare("search_minimum_endpoint_ratio", 0.85)
+        declare("search_minimum_score_ratio", 1.05)
+        declare("search_pause_after_failure_s", 10.0)
+        declare("search_sigma_xy_m", 0.15)
+        declare("search_sigma_yaw_deg", 5.0)
+        declare("search_max_range_m", 12.0)
+        declare("standstill_linear_mps", 0.01)
+        declare("standstill_angular_rps", 0.02)
+        declare("standstill_time_s", 1.0)
 
         def value(name):
             return self.get_parameter(name).value
@@ -122,6 +144,29 @@ class LocalizationManager(Node):
         self.nomotion_period_s = float(value("nomotion_period_s"))
         self.nomotion_left = 0
         self.nomotion_at = 0.0
+        self.planner = SearchPlanner(SearchConfig(
+            start_after_s=float(value("search_start_after_s")),
+            minimum_scan_points=int(value("search_minimum_scan_points")),
+            minimum_score=float(value("search_minimum_score")),
+            minimum_endpoint_ratio=float(value("search_minimum_endpoint_ratio")),
+            minimum_score_ratio=float(value("search_minimum_score_ratio")),
+            pause_after_failure_s=float(value("search_pause_after_failure_s")),
+        ))
+        self.search_sigma = (float(value("search_sigma_xy_m")), float(value("search_sigma_yaw_deg")))
+        self.search_max_range_m = float(value("search_max_range_m"))
+        self.standstill = (float(value("standstill_linear_mps")), float(value("standstill_angular_rps")),
+                           float(value("standstill_time_s")))
+        self.search_pool = ThreadPoolExecutor(max_workers=1, thread_name_prefix="global_search")
+        self.search_future: Optional[Future] = None
+        self.search_scan_stamp: Optional[Tuple[int, int]] = None
+        self.scorer: Optional[MapScorer] = None
+        self.scorer_map: Optional[OccupancyGrid] = None
+        self.latest_scan: Optional[LaserScan] = None
+        self.latest_scan_at: Optional[float] = None
+        self.odom_at: Optional[float] = None
+        self.moving_at: Optional[float] = None
+        self.not_trusted_since: Optional[float] = None
+        self.searches_done = 0
         self.guard = ReadinessGuard(ReadinessConfig())
 
         slam = str(value("slam_node")).rstrip("/")
@@ -177,6 +222,7 @@ class LocalizationManager(Node):
         self.create_subscription(OccupancyGrid, str(value("map_topic")), self._on_map, LATCHED)
         self.create_subscription(PoseWithCovarianceStamped, str(value("amcl_pose_topic")), self._on_amcl_pose, 10)
         self.create_subscription(LaserScan, str(value("scan_topic")), self._on_scan, qos_profile_sensor_data)
+        self.create_subscription(Odometry, str(value("odom_topic")), self._on_odom, 10)
         self.create_timer(0.2, self._tick)
 
     # ------------------------------------------------------------ inputs
@@ -223,8 +269,23 @@ class LocalizationManager(Node):
         sigma_xy, sigma_yaw = sigmas_from_covariance(message.pose.covariance)
         self.amcl_cov = (time.monotonic(), sigma_xy, sigma_yaw)
 
+    def _on_odom(self, message: Odometry) -> None:
+        now = time.monotonic()
+        self.odom_at = now
+        twist = message.twist.twist
+        if (self.moving_at is None or abs(twist.linear.x) > self.standstill[0]
+                or abs(twist.angular.z) > self.standstill[1]):
+            self.moving_at = now
+
+    def _standing_still(self, now: float) -> bool:
+        if self.odom_at is None or self.moving_at is None or now - self.odom_at > 1.0:
+            return False
+        return now - self.moving_at >= self.standstill[2]
+
     def _on_scan(self, message: LaserScan) -> None:
         now = time.monotonic()
+        self.latest_scan = message
+        self.latest_scan_at = now
         if self.mode != MODE_NAVIGATION or self.target is not None or self._ensure_index() is None:
             return
         if now - self.last_check_at < self.check_period_s:
@@ -278,6 +339,101 @@ class LocalizationManager(Node):
         t = transform.transform.translation
         q = transform.transform.rotation
         return t.x, t.y, yaw_from_quaternion(q.x, q.y, q.z, q.w)
+
+    # ------------------------------------------------------------ global search
+
+    def _scan_points_in_laser_frame(self, message: LaserScan) -> np.ndarray:
+        ranges = np.asarray(message.ranges, dtype=float)
+        angles = message.angle_min + np.arange(len(ranges)) * message.angle_increment
+        limit = min(message.range_max, self.search_max_range_m)
+        valid = np.isfinite(ranges) & (ranges >= max(message.range_min, 0.1)) & (ranges <= limit)
+        return np.stack((ranges[valid] * np.cos(angles[valid]), ranges[valid] * np.sin(angles[valid])), axis=1)
+
+    def _ensure_scorer(self) -> Optional[MapScorer]:
+        if self.latest_map is None:
+            return None
+        if self.scorer is None or self.scorer_map is not self.latest_map:
+            info = self.latest_map.info
+            q = info.origin.orientation
+            try:
+                grid = np.asarray(self.latest_map.data, dtype=np.int16).reshape(info.height, info.width)
+                self.scorer = MapScorer(grid, info.resolution, info.origin.position.x, info.origin.position.y,
+                                        yaw_from_quaternion(q.x, q.y, q.z, q.w))
+                self.scorer_map = self.latest_map
+            except ValueError as error:
+                self.get_logger().error(f"Map unusable for the global search: {error}")
+                self.scorer = None
+                self.scorer_map = self.latest_map
+        return self.scorer
+
+    def _search_tick(self, now: float, ready: bool) -> None:
+        """Start, or collect, a search of the whole map while the position is not trusted."""
+
+        navigating = self.mode == MODE_NAVIGATION and self.target is None
+        if not navigating or ready:
+            self.not_trusted_since = None
+            if self.planner.state != STATE_SEARCHING:
+                self.planner.reset()
+            if self.search_future is not None and self.search_future.done():
+                self.search_future = None  # a late result for a situation that is over
+            return
+        if self.not_trusted_since is None:
+            self.not_trusted_since = now
+
+        if self.search_future is not None:
+            if not self.search_future.done():
+                return
+            future, self.search_future = self.search_future, None
+            self.searches_done += 1
+            result: Optional[SearchResult] = None
+            error: Optional[str] = None
+            try:
+                result = future.result()
+            except Exception as exception:  # noqa: BLE001 - any failure of the search is "no result"
+                error = f"search_failed: {exception}"
+            found = self.planner.note_result(now, result, error)
+            if result is not None:
+                best = result.best
+                self.get_logger().info(
+                    f"Global search: best x={best.x_m:.2f} y={best.y_m:.2f} yaw={math.degrees(best.yaw_rad):.0f} deg, "
+                    f"score {best.score:.3f}, wall share {best.endpoint_within_0_15_m_ratio:.2f}, "
+                    f"margin {result.score_ratio:.2f}; {self.planner.last_reason}.")
+            else:
+                self.get_logger().warning(f"Global search without result: {error}.")
+            if found is not None:
+                self._send_initial_pose((found.x_m, found.y_m, found.yaw_rad), self.search_sigma, "global_search")
+                self.not_trusted_since = now
+            return
+
+        scan = self.latest_scan
+        if scan is None or self.latest_scan_at is None or now - self.latest_scan_at > 1.0:
+            return
+        stamp = (scan.header.stamp.sec, scan.header.stamp.nanosec)
+        if stamp == self.search_scan_stamp:
+            return  # every attempt needs a new scan
+        scorer = self._ensure_scorer()
+        if scorer is None:
+            return
+        try:
+            transform = self.tf_buffer.lookup_transform(self.base_frame, scan.header.frame_id, rclpy.time.Time())
+        except TransformException:
+            return
+        points = self._scan_points_in_laser_frame(scan)
+        reference = self.not_trusted_since
+        if self.initial_pose_sent_at is not None:
+            reference = max(reference, self.initial_pose_sent_at)
+        not_trusted_for = None if self.initial_pose_sent_at is None else now - reference
+        if not self.planner.may_start(now, not_trusted_for, self._standing_still(now), len(points)):
+            return
+        t = transform.transform.translation
+        q = transform.transform.rotation
+        laser_yaw = yaw_from_quaternion(q.x, q.y, q.z, q.w)
+        self.planner.note_started()
+        self.search_scan_stamp = stamp
+        self.get_logger().info(f"Position not trusted; searching the whole map (attempt {self.planner.attempts}).")
+        self.search_future = self.search_pool.submit(
+            search_global_pose, scorer, points,
+            laser_translation_x=float(t.x), laser_translation_y=float(t.y), laser_yaw_rad=laser_yaw)
 
     # ------------------------------------------------------------ steps
 
@@ -385,6 +541,8 @@ class LocalizationManager(Node):
         self.target = target
         self.steps = deque(steps)
         self.guard.reset("switching")
+        self.initial_pose_source = None
+        self.initial_pose_sent_at = None
         self.get_logger().info(f"Localization: {self.mode} -> {target}.")
 
     def _set_loaded(self, ref: SavedMapRef, handover: Optional[Tuple[float, float, float]]) -> None:
@@ -398,7 +556,7 @@ class LocalizationManager(Node):
         else:
             self.initial_pose_source = None
             self.initial_pose_sent_at = None
-            self.get_logger().warning("No pose known on the saved map; the robot is not localized.")
+            self.get_logger().info("No pose known on the saved map; the whole map will be searched.")
 
     def _send_initial_pose(self, pose, sigmas, source: str) -> None:
         message = PoseWithCovarianceStamped()
@@ -413,6 +571,7 @@ class LocalizationManager(Node):
         self.initial_pose_source = source
         self.initial_pose_sent_at = time.monotonic()
         self.nomotion_left = self.nomotion_updates
+        self.guard.reset("initial_pose_set")
         self.get_logger().info(f"Initial pose from {source}: x={pose[0]:.2f} y={pose[1]:.2f} yaw={math.degrees(pose[2]):.1f} deg.")
 
     # ------------------------------------------------------------ main loop
@@ -440,6 +599,7 @@ class LocalizationManager(Node):
             self.nomotion_at = now
             self.nomotion_client.call_async(Empty.Request())
         self.ready_pub.publish(Bool(data=bool(ready)))
+        self._search_tick(now, ready)
         if ready and self.loaded is not None and now - self.last_pose_saved_at >= self.save_pose_period_s:
             pose = self._robot_pose()
             if pose is not None:
@@ -481,6 +641,16 @@ class LocalizationManager(Node):
             self.target = None
             self.retry_after = now + 2.0
 
+    def _status_pose(self) -> Optional[dict]:
+        pose = self._robot_pose()
+        if pose is None:
+            return None
+        return {"x": round(pose[0], 2), "y": round(pose[1], 2), "yaw": round(pose[2], 2)}
+
+    def destroy_node(self):
+        self.search_pool.shutdown(wait=False, cancel_futures=True)
+        return super().destroy_node()
+
     def _publish_status(self, now: float, ready: bool) -> None:
         last = self.guard.last
         status = {
@@ -494,6 +664,14 @@ class LocalizationManager(Node):
                 ("no_initial_pose" if self.initial_pose_sent_at is None else self.guard.reason)),
             "map": None if self.loaded is None else {"fingerprint": self.loaded.fingerprint, "version": self.loaded.version},
             "initial_pose_source": self.initial_pose_source,
+            "pose": self._status_pose() if ready else None,
+            "search": {
+                "state": self.planner.state,
+                "attempt": self.planner.attempts,
+                "rounds_without_result": self.planner.rounds_failed,
+                "last_reason": self.planner.last_reason,
+                "searches_done": self.searches_done,
+            },
             "agreement": None if last is None else round(last.agreement, 3),
             "sigma_xy_m": None if last is None or not math.isfinite(last.sigma_xy_m) else round(last.sigma_xy_m, 3),
             "sigma_yaw_deg": None if last is None or not math.isfinite(last.sigma_yaw_deg) else round(last.sigma_yaw_deg, 2),

@@ -128,16 +128,17 @@ class WebSocketClient:
         raise AssertionError("expected message not received")
 
     def wait_status(self, topic: str, predicate=lambda s: True, timeout: float = 15.0,
-                    record_as: str | None = None) -> dict:
+                    record_as: str | None = None, record_if=lambda s: True) -> dict:
         def matches(message):
             if message.get("op") != "publish" or message.get("topic") != topic:
                 return False
             return predicate(json.loads(message["msg"]["data"]))
 
         frame = self.wait_for(matches, timeout)
-        if record_as:
+        status = json.loads(frame["msg"]["data"])
+        if record_as and record_if(status):
             record(record_as, frame)
-        return json.loads(frame["msg"]["data"])
+        return status
 
     def drain(self) -> None:
         self.inbox.clear()
