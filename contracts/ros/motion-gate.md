@@ -19,7 +19,6 @@ Inputs:
 | `/homemy/mission/drive_active` | `std_msgs/Bool`, latched | a drive mission is active | 1.5 s |
 | `/homemy/lifecycle/state` | `std_msgs/String`, latched | lifecycle state | 3.0 s |
 | `/homemy/safety/estop` | `std_msgs/Bool` | emergency stop pressed | 1.0 s |
-| `/homemy/controller/link` | `std_msgs/Bool` | radio link of the controller up | 0.2 s |
 | `/homemy/localization/ready` | `std_msgs/Bool` | position on the map is trusted | 1.0 s |
 | `/homemy/cmd_vel/teleop` | `geometry_msgs/Twist` | commands from the controller | 0.25 s |
 | `/homemy/cmd_vel/nav` | `geometry_msgs/Twist` | commands from navigation | 0.25 s |
@@ -40,7 +39,7 @@ The gate is the only publisher of `/cmd_vel`. The app bridge refuses `/cmd_vel`,
 
    | Mode | Condition | Commands from | Additionally required |
    | --- | --- | --- | --- |
-   | mapping | mapping mode active | `/homemy/cmd_vel/teleop` | controller link up |
+   | mapping | mapping mode active | `/homemy/cmd_vel/teleop` | nothing; a released or silent controller gives zero |
    | mission | drive mission active | `/homemy/cmd_vel/nav` | localization ready |
 
    Neither mode active means `mode_off`; both active means `mode_conflict`. Both keep the gate closed.
@@ -74,9 +73,9 @@ Known gaps:
 
 Simulation only, 2026-11-19:
 
-- 32 unit tests of the decision logic: each mode, each missing or stale input, lifecycle states, emergency stop, frozen radio link, clamping, non-finite commands, block and clear time, no latching;
+- 32 unit tests of the decision logic: each mode, each missing or stale input, lifecycle states, emergency stop, released and silent controller, clamping, non-finite commands, block and clear time, no latching;
 - 17 unit tests of the protection: outline distances, rounded corners, wall ahead with and without reverse, rotation near a rear obstacle, moving away from a touching point, creeping speed, invalid configuration;
-- a ROS test of the node: command passes; link loss closes; link return heals; a wall stops forward and allows reverse; zero at a fixed rate without inputs; the outline file is required;
+- a ROS test of the node: command passes; a released direction pad and missing controller messages stop; returning messages heal; a wall stops forward and allows reverse; zero at a fixed rate without inputs; the outline file is required;
 - the S2 end-to-end test (`src/homemy_bringup/test/test_drive_sim_e2e.py`), see the manual-drive contract.
 
 ## Open Points

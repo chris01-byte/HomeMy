@@ -111,16 +111,15 @@ def end_reason_for_lifecycle(state: Optional[str]) -> Optional[str]:
 
 
 class ControllerTracker:
-    """Connection and activity of the wireless controller.
+    """Connection and activity of the wireless controller, from Joy messages.
 
-    Connection comes from the radio-link watchdog (``/homemy/controller/link``,
-    contracts/hardware/manual-drive.md): the controller counts as connected
-    while the watchdog reported the link up within ``timeout_s``. Repeated
-    Joy messages are no proof of connection, because the joystick driver keeps
-    repeating the last state after a silent radio loss.
+    The controller counts as connected while Joy messages keep arriving; the
+    joystick driver republishes its state at a fixed rate while Linux has the
+    controller (``autorepeat_rate`` of ``joy_node``). As on Amadeus there is
+    no separate supervision of the radio link (owner decision 2026-11-19).
 
-    Activity comes from Joy messages: any axis beyond the dead zone or any
-    pressed button counts as input and keeps mapping mode from ending.
+    Any axis beyond the dead zone or any pressed button counts as input and
+    keeps mapping mode from ending.
     """
 
     def __init__(self, timeout_s: float, deadzone: float) -> None:
@@ -130,17 +129,13 @@ class ControllerTracker:
             raise ValueError("deadzone must be in [0, 1)")
         self.timeout_s = timeout_s
         self.deadzone = deadzone
-        self.last_link_up_at: Optional[float] = None
+        self.last_message_at: Optional[float] = None
         self.last_input_at: Optional[float] = None
-
-    def update_link(self, up: bool, now: float) -> None:
-        """Record one message of the radio-link watchdog."""
-
-        self.last_link_up_at = now if up else None
 
     def update(self, axes: Sequence[float], buttons: Sequence[int], now: float) -> bool:
         """Record one Joy message. Returns True when it carried any input."""
 
+        self.last_message_at = now
         active = any(
             math.isfinite(value) and abs(value) > self.deadzone for value in axes
         ) or any(button != 0 for button in buttons)
@@ -150,8 +145,8 @@ class ControllerTracker:
 
     def connected(self, now: float) -> bool:
         return (
-            self.last_link_up_at is not None
-            and 0 <= now - self.last_link_up_at <= self.timeout_s
+            self.last_message_at is not None
+            and 0 <= now - self.last_message_at <= self.timeout_s
         )
 
 

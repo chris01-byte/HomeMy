@@ -155,7 +155,7 @@
       ]
     },
     "manual-drive": {
-      "when": "driving with the DualShock 4 controller, teleop, radio-link watchdog, joy_node, controller loss, motion gate, reactive protection, or cmd_vel ownership",
+      "when": "driving with the DualShock 4 controller, teleop, joy_node, controller loss, motion gate, reactive protection, or cmd_vel ownership",
       "files": [
         "contracts/hardware/manual-drive.md",
         "contracts/ros/motion-gate.md",

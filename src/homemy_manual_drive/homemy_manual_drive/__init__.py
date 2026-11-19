@@ -1,1 +1,1 @@
-"""Manual driving with the wireless controller: radio-link watchdog and teleop profile."""
+"""Manual driving with the wireless controller: the teleop profile."""

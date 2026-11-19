@@ -118,7 +118,7 @@ Software stages S1 (robot side of the app) and S2 (driving in simulation: mappin
 - Exact HomeMy chassis, wheel, drive-train, LiDAR-frame, OAK-frame, sensor-mount, protection-volume, arm-mass, joint-speed, and footprint measurements.
 - Final RobStride joint selection/reduction, USB-CAN adapter, CAN identifiers/message contract, and RS485 addressing/update rates.
 - HWT601 mount location, supply, third serial adapter, axis mapping, and behavior on IMU loss.
-- Manual driving (`contracts/hardware/manual-drive.md`, proposed): the radio-link watchdog's report rate and timeout on the real DualShock 4, stopping distance on radio loss, mapping speeds, and re-pairing for the customer (steps M1 to M5).
+- Manual driving (`contracts/hardware/manual-drive.md`, proposed): as simple as on Amadeus, without radio-link supervision (owner decision 2026-11-19). Open: axis numbers, mapping speeds, stopping distances, how long the robot keeps driving after a silent radio loss with a direction held, and re-pairing for the customer (steps M1 to M4).
 - Localization at start-up when the robot was moved while off: the stored pose is then rejected (scan check) and the robot reports "not localized"; a global search over the map is still to be ported from Amadeus.
 - Motion gate (`contracts/ros/motion-gate.md`, proposed): margins, horizon, and clear time of the reactive protection; an obstacle memory for the blind sectors; the arm side; the link to the PMU motion gate.
 - Whether HomeMy needs a tilt-based scan gate on tile joints; to be measured on the built chassis.

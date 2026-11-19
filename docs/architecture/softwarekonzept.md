@@ -343,6 +343,10 @@ S0 bis S4 können sofort beginnen und brauchen weder Fahrgestell noch PMU. S1 is
 | E15 | Eine zweite Karte nach dem Anlegen von Räumen ist für den Prototyp nicht nötig. |
 | E16 | Den Zustand des Roboters zeigt das LED-Band. Ein Bildschirm ist nicht vorgesehen. |
 | E17 | Der Controller ist ein DualShock 4 (CUH-ZCT2E) über Bluetooth. Die Software sieht von ihm nur Änderungen; der ROS-Treiber wiederholt den letzten Zustand, auch nachdem die Funkverbindung abgerissen ist, bis Linux den Abriss bemerkt. Die Fahrt mit dem Controller braucht deshalb eine eigene Funküberwachung (`contracts/hardware/manual-drive.md`). |
+| E18 | E17 ist aufgehoben: Die Controller-Fahrt bleibt für den ersten Prototyp und das Testlabor so einfach wie bei Amadeus. Gedrückt fährt, losgelassen steht; keine eigene Funküberwachung. Die gebaute Überwachung ist wieder entfernt und steht in der Git-Historie. |
+| E19 | Solange die PMU fehlt, wird der Baustein für den Roboterzustand überbrückt: Ein kleiner Knoten meldet „bereit“ und „Not-Halt nicht gedrückt“ als feste Werte (`contracts/ros/system-lifecycle.md`). |
+| E20 | Der Roboter muss sich in der Karte selbst wiederfinden, weil er jederzeit verschoben werden kann. Die Suche über die ganze Karte gehört damit zu S2. |
+| E21 | Reihenfolge: erst Selbstfinden in der Karte, danach die Treiber für Antrieb, LiDAR und IMU. |
 
 ## 11. Risiken und offene Messungen
 

@@ -1,15 +1,11 @@
 #!/usr/bin/env python3
-"""Stand-in for the wireless controller, its radio link, and the person using it.
+"""Stand-in for the wireless controller, joy_node, and the person using it.
 
-Simulation only. Publishes, at ``rate_hz`` while ``connected`` is true:
-
-- ``sensor_msgs/Joy`` on ``/joy`` in the DualShock 4 layout of the ROS
-  joystick driver (axis 6 direction pad left/right, left = +1; axis 7 up/down,
-  up = +1; button 5 = R1);
-- ``std_msgs/Bool`` on ``/homemy/controller/link``, the radio-link watchdog.
-
-With ``link_frozen`` true the Joy messages keep repeating while the link
-reports down, which is what a silent radio loss looks like on the robot.
+Simulation only. Publishes ``sensor_msgs/Joy`` on ``/joy`` at ``rate_hz``
+while ``connected`` is true, in the DualShock 4 layout of the ROS joystick
+driver (axis 6 direction pad left/right, left = +1; axis 7 up/down, up = +1;
+button 5 = R1). With ``connected`` false nothing is published, as when the
+controller is switched off.
 
 What is pressed:
 
@@ -18,12 +14,13 @@ What is pressed:
   waypoint, then drive straight, using the simulated ground-truth pose
   (``/homemy/sim/ground_truth``). Progress is published on
   ``/homemy/sim/operator_status``.
-- otherwise ``driving`` true holds "forward" (the S1 behaviour), and false
-  presses nothing.
+- otherwise ``driving`` true holds "forward" (the S1 behaviour).
+
+``driving`` false presses nothing in both cases: the person lets go.
 
 Parameters can be changed at runtime, e.g.:
 
-    ros2 param set /homemy_sim_controller link_frozen true
+    ros2 param set /homemy_sim_controller driving false
 """
 
 from __future__ import annotations
@@ -36,7 +33,7 @@ import rclpy
 from geometry_msgs.msg import PoseStamped
 from rclpy.node import Node
 from sensor_msgs.msg import Joy
-from std_msgs.msg import Bool, String
+from std_msgs.msg import String
 
 AXIS_TURN = 6
 AXIS_DRIVE = 7
@@ -93,12 +90,10 @@ class SimController(Node):
         super().__init__("homemy_sim_controller", **node_options)
         declare = self.declare_parameter
         declare("joy_topic", "/joy")
-        declare("link_topic", "/homemy/controller/link")
         declare("ground_truth_topic", "/homemy/sim/ground_truth")
         declare("status_topic", "/homemy/sim/operator_status")
         declare("rate_hz", 20.0)
         declare("connected", True)
-        declare("link_frozen", False)
         declare("driving", True)
         declare("follow_route", False)
         declare("world_file", "")
@@ -117,7 +112,6 @@ class SimController(Node):
 
         rate = float(self.get_parameter("rate_hz").value)
         self.joy_pub = self.create_publisher(Joy, self.get_parameter("joy_topic").value, 10)
-        self.link_pub = self.create_publisher(Bool, self.get_parameter("link_topic").value, 10)
         self.status_pub = self.create_publisher(String, self.get_parameter("status_topic").value, 10)
         self.create_subscription(PoseStamped, self.get_parameter("ground_truth_topic").value, self._on_pose, 10)
         self.create_timer(1.0 / rate, self._on_tick)
@@ -131,8 +125,6 @@ class SimController(Node):
     def _on_tick(self) -> None:
         if not self.get_parameter("connected").value:
             return
-        frozen = bool(self.get_parameter("link_frozen").value)
-        self.link_pub.publish(Bool(data=not frozen))
 
         message = Joy()
         message.header.stamp = self.get_clock().now().to_msg()

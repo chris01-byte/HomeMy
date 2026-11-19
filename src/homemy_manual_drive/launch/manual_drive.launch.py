@@ -1,8 +1,8 @@
-"""Controller driving on the real robot: joystick driver, teleop, radio-link watchdog.
+"""Controller driving on the real robot: joystick driver and teleop.
 
 The teleop output goes to the motion gate (/homemy/cmd_vel/teleop), never to
-the drive. Without mapping mode, a fresh radio link, and the other gate
-conditions, nothing moves. Not used in simulation (see homemy_simulation).
+the drive. Without mapping mode and the other gate conditions, nothing moves.
+In simulation the joystick driver is replaced (see homemy_simulation).
 """
 
 from launch import LaunchDescription
@@ -25,12 +25,6 @@ def generate_launch_description():
                 name="teleop_twist_joy_node",
                 parameters=[params_file],
                 remappings=[("/cmd_vel", "/homemy/cmd_vel/teleop"), ("cmd_vel", "/homemy/cmd_vel/teleop")],
-            ),
-            Node(
-                package="homemy_manual_drive",
-                executable="controller_link",
-                name="controller_link",
-                parameters=[params_file],
             ),
         ]
     )

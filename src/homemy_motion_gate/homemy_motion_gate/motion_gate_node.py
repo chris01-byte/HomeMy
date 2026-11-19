@@ -70,7 +70,6 @@ class MotionGateNode(Node):
         declare("mission_drive_active_topic", "/homemy/mission/drive_active")
         declare("lifecycle_state_topic", "/homemy/lifecycle/state")
         declare("estop_topic", "/homemy/safety/estop")
-        declare("controller_link_topic", "/homemy/controller/link")
         declare("localization_ready_topic", "/homemy/localization/ready")
         declare("scan_topic", "/scan_masked")
         declare("publish_rate_hz", 20.0)
@@ -82,7 +81,6 @@ class MotionGateNode(Node):
         declare("mode_timeout_s", 1.5)
         declare("lifecycle_timeout_s", 3.0)
         declare("estop_timeout_s", 1.0)
-        declare("controller_link_timeout_s", 0.2)
         declare("command_timeout_s", 0.25)
         declare("localization_timeout_s", 1.0)
         declare("scan_timeout_s", 0.3)
@@ -114,7 +112,6 @@ class MotionGateNode(Node):
                 mode_timeout_s=float(value("mode_timeout_s")),
                 lifecycle_timeout_s=float(value("lifecycle_timeout_s")),
                 estop_timeout_s=float(value("estop_timeout_s")),
-                controller_link_timeout_s=float(value("controller_link_timeout_s")),
                 command_timeout_s=float(value("command_timeout_s")),
                 localization_timeout_s=float(value("localization_timeout_s")),
                 scan_timeout_s=float(value("scan_timeout_s")),
@@ -142,7 +139,6 @@ class MotionGateNode(Node):
         )
         self.create_subscription(String, str(value("lifecycle_state_topic")), self._on_lifecycle, LATCHED)
         self.create_subscription(Bool, str(value("estop_topic")), self._setter("estop_pressed"), 10)
-        self.create_subscription(Bool, str(value("controller_link_topic")), self._setter("controller_link"), 10)
         self.create_subscription(
             Bool, str(value("localization_ready_topic")), self._setter("localization_ready"), 10
         )

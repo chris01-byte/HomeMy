@@ -57,7 +57,6 @@ class MappingModeManager(Node):
         self.declare_parameter("status_topic", "/homemy/mapping_mode/status_json")
         self.declare_parameter("active_topic", "/homemy/mapping_mode/active")
         self.declare_parameter("joy_topic", "/joy")
-        self.declare_parameter("controller_link_topic", "/homemy/controller/link")
         self.declare_parameter("lifecycle_state_topic", "/homemy/lifecycle/state")
         self.declare_parameter("auto_end_timeout_s", 300.0)
         self.declare_parameter("controller_timeout_s", 0.5)
@@ -85,7 +84,6 @@ class MappingModeManager(Node):
         self.active_publisher = self.create_publisher(Bool, value("active_topic"), LATCHED_QOS)
         self.create_subscription(String, value("command_topic"), self._on_command, COMMAND_QOS)
         self.create_subscription(Joy, value("joy_topic"), self._on_joy, qos_profile_sensor_data)
-        self.create_subscription(Bool, value("controller_link_topic"), self._on_link, 10)
         self.create_subscription(
             String, value("lifecycle_state_topic"), self._on_lifecycle, LATCHED_QOS
         )
@@ -119,9 +117,6 @@ class MappingModeManager(Node):
         state = message.data.strip().upper()
         self.lifecycle_state = state or None
         self.lifecycle_received_at = time.monotonic()
-
-    def _on_link(self, message: Bool) -> None:
-        self.controller.update_link(bool(message.data), time.monotonic())
 
     def _on_joy(self, message: Joy) -> None:
         now = time.monotonic()

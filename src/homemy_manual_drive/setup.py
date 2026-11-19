@@ -23,11 +23,6 @@ setup(
     zip_safe=True,
     maintainer="HomeMy",
     maintainer_email="homemy@example.com",
-    description="Manual driving with the wireless controller: radio-link watchdog and teleop profile.",
+    description="Manual driving with the wireless controller: the teleop profile.",
     license="MIT",
-    entry_points={
-        "console_scripts": [
-            "controller_link = homemy_manual_drive.controller_link_node:main",
-        ],
-    },
 )

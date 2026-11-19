@@ -80,8 +80,8 @@ def generate_launch_description():
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(share("homemy_mission", "launch", "mission.launch.py"))
             ),
-            # The real teleop profile; only joy_node and the radio-link
-            # watchdog are replaced by the simulated controller.
+            # The real teleop profile; only joy_node is replaced by the
+            # simulated controller.
             Node(
                 package="teleop_twist_joy",
                 executable="teleop_node",

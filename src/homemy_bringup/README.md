@@ -51,7 +51,7 @@ Weitere Argumente: `bridge_port`, `storage_root`, `auto_end_timeout_s`, `control
 `test/test_drive_sim_e2e.py` startet `drive_sim.launch.py` dreimal und fährt die ganze Kartierroute und mehrere Aufträge durch den echten Code (etwa acht Minuten). Geprüft werden:
 
 1. Bei ausgeschaltetem Kartiermodus bewegt der gedrückte Controller nichts.
-2. Eingefrorene Funkverbindung, während `/joy` weiter „vorwärts“ wiederholt: Der Roboter hält innerhalb einer Sekunde und nach weniger als 15 cm; der Kartiermodus bleibt aktiv; mit zurückkehrender Verbindung fährt er weiter.
+2. Lässt die Person das Steuerkreuz los, steht der Roboter; drückt sie wieder, fährt er weiter. Wird der Controller ausgeschaltet, hält der Roboter innerhalb einer Sekunde und nach weniger als 15 cm; der Kartiermodus bleibt aktiv.
 3. Not-Halt gedrückt: Stillstand; gelöst: weiter.
 4. Die Route endet ohne Berührung im Schlafzimmer.
 5. Die Karte von slam_toolbox stimmt mit der Welt überein: nach starrer Ausrichtung liegen 95 % der Wandzellen innerhalb von 5 cm und keine weiter als 15 cm entfernt, die ganze Karte ist um höchstens 2° verdreht, mindestens 85 % der freien Fläche sind bekannt.

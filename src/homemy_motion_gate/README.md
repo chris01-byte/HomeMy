@@ -10,7 +10,7 @@ Er entscheidet 20-mal je Sekunde neu und sendet auf `/cmd_vel` immer einen Befeh
 
 | Betriebsart | Befehle kommen von | zusätzlich nötig |
 | --- | --- | --- |
-| Kartieren (`/homemy/mapping_mode/active`) | Controller, `/homemy/cmd_vel/teleop` | Funkverbindung des Controllers |
+| Kartieren (`/homemy/mapping_mode/active`) | Controller, `/homemy/cmd_vel/teleop` | nichts weiter: gedrückt fährt, losgelassen oder stumm steht |
 | Fahr-Auftrag (`/homemy/mission/drive_active`) | Navigation, `/homemy/cmd_vel/nav` | Standort sicher (`/homemy/localization/ready`) |
 
 Immer nötig: genau eine Betriebsart aktiv, Lebenszyklus READY, READY_LIMITED oder OPERATING, Not-Halt frisch als gelöst gemeldet, frischer Scan, frischer Befehl. Fehlt etwas oder ist es veraltet, bleibt das Gate zu. Nichts davon rastet ein: Sobald die Bedingungen wieder erfüllt sind, geht es weiter.

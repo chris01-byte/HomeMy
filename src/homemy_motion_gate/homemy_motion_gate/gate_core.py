@@ -15,7 +15,9 @@ Rules (contracts/ros/motion-gate.md):
   closes the gate; it never opens it.
 - The lifecycle state must be READY, READY_LIMITED, or OPERATING, and the
   emergency stop must be reported released.
-- In mapping mode the controller's radio link must be up.
+- In mapping mode the controller command itself is the only controller
+  condition: pressed drives, released stops (owner decision 2026-11-19, as
+  on Amadeus; no separate supervision of the radio link).
 - In a drive mission the localization must be reported ready.
 - The command is clamped to the mode's speed limits.
 - The reactive protection may block the command; after a block the command
@@ -62,7 +64,6 @@ class GateConfig:
     mode_timeout_s: float = 1.5
     lifecycle_timeout_s: float = 3.0
     estop_timeout_s: float = 1.0
-    controller_link_timeout_s: float = 0.2
     command_timeout_s: float = 0.25
     localization_timeout_s: float = 1.0
     scan_timeout_s: float = 0.3
@@ -73,7 +74,6 @@ class GateConfig:
             "mode_timeout_s",
             "lifecycle_timeout_s",
             "estop_timeout_s",
-            "controller_link_timeout_s",
             "command_timeout_s",
             "localization_timeout_s",
             "scan_timeout_s",
@@ -91,7 +91,6 @@ class GateInputs:
     mission_drive_active: Optional[Stamped[bool]] = None
     lifecycle_state: Optional[Stamped[str]] = None
     estop_pressed: Optional[Stamped[bool]] = None
-    controller_link: Optional[Stamped[bool]] = None
     localization_ready: Optional[Stamped[bool]] = None
     teleop_command: Optional[Stamped[Tuple[float, float]]] = None
     nav_command: Optional[Stamped[Tuple[float, float]]] = None
@@ -165,9 +164,6 @@ def precondition_reasons(inputs: GateInputs, now: float, config: GateConfig, mod
         reasons.append("scan_stale")
 
     if mode == MODE_MAPPING:
-        if not (fresh(inputs.controller_link, now, config.controller_link_timeout_s)
-                and inputs.controller_link.value):
-            reasons.append("controller_link_down")
         if not fresh(inputs.teleop_command, now, config.command_timeout_s):
             reasons.append("command_stale")
     elif mode == MODE_MISSION:

@@ -53,7 +53,6 @@ class Harness:
             String, "/homemy/mapping_mode/command_json", COMMANDS)
         self.lifecycle = self.helper.create_publisher(String, "/homemy/lifecycle/state", LATCHED)
         self.joy = self.helper.create_publisher(Joy, "/joy", 10)
-        self.link = self.helper.create_publisher(Bool, "/homemy/controller/link", 10)
         self.executor = SingleThreadedExecutor(context=self.context)
         self.executor.add_node(self.node)
         self.executor.add_node(self.helper)
@@ -87,9 +86,7 @@ class Harness:
     def ready(self, state="READY"):
         self.lifecycle.publish(String(data=state))
 
-    def joy_message(self, pressed=False, link=True):
-        """One controller sample: radio-link watchdog plus joystick state."""
-        self.link.publish(Bool(data=link))
+    def joy_message(self, pressed=False):
         message = Joy()
         message.axes = [0.0] * 8
         message.buttons = [0] * 13
@@ -152,22 +149,8 @@ def test_controller_connection_and_input(harness):
         lambda: h.statuses and h.statuses[-1]["mapping_mode"]["controller_connected"],
         feed=h.joy_message,
     )
-    # No more link messages: the controller counts as disconnected again.
+    # No more Joy messages: the controller counts as disconnected again.
     h.spin_until(lambda: h.statuses and not h.statuses[-1]["mapping_mode"]["controller_connected"])
-
-
-def test_repeated_joy_without_radio_link_is_not_connected(harness):
-    h = harness(controller_timeout_s=0.3)
-    h.ready()
-    h.spin_until(
-        lambda: h.statuses and h.statuses[-1]["mapping_mode"]["controller_connected"],
-        feed=h.joy_message,
-    )
-    # Frozen radio link: the joystick driver keeps repeating, the watchdog says down.
-    h.spin_until(
-        lambda: h.statuses and not h.statuses[-1]["mapping_mode"]["controller_connected"],
-        feed=lambda: h.joy_message(pressed=True, link=False),
-    )
 
 
 def test_stop_ends_mapping_mode_from_any_state(harness):

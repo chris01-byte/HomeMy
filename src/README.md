@@ -10,7 +10,7 @@ HomeMy-owned ROS 2 packages for ROS 2 Jazzy. Package names and boundaries follow
 | `homemy_room_manager` | rooms drawn in the app, bound to one map version | ported from Amadeus `semantic_map_manager` at `05439c7` |
 | `homemy_mapping_mode` | mapping mode switched from the app | new |
 | `homemy_description` | robot model (URDF) with CAD dimensions | new |
-| `homemy_manual_drive` | controller profile and radio-link watchdog | profile ported from Amadeus `robot_bringup` at `05439c7`; watchdog new |
+| `homemy_manual_drive` | controller profile: pressed drives, released stops | ported from Amadeus `robot_bringup` at `05439c7` |
 | `homemy_motion_gate` | the one place that lets drive commands through, with reactive obstacle protection | rewritten after Amadeus `cmd_vel_mission_gate` at `05439c7` |
 | `homemy_lidar_bringup` | blind-sector mask for the STL-27L scan | new |
 | `homemy_navigation` | slam_toolbox profile for the mapping run | settings from Amadeus at `05439c7` and `940a748` |

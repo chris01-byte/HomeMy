@@ -59,12 +59,11 @@ def harness():
         "mission": driver.create_publisher(Bool, "/homemy/mission/drive_active", LATCHED),
         "lifecycle": driver.create_publisher(String, "/homemy/lifecycle/state", LATCHED),
         "estop": driver.create_publisher(Bool, "/homemy/safety/estop", 10),
-        "link": driver.create_publisher(Bool, "/homemy/controller/link", 10),
         "teleop": driver.create_publisher(Twist, "/homemy/cmd_vel/teleop", 10),
         "scan": driver.create_publisher(LaserScan, "/scan_masked", qos_profile_sensor_data),
     }
     h.wall_at = None
-    h.link = True
+    h.silent = False
     h.command = (0.15, 0.0)
 
     def publish_inputs():
@@ -72,10 +71,10 @@ def harness():
         pubs["mission"].publish(Bool(data=False))
         pubs["lifecycle"].publish(String(data="READY"))
         pubs["estop"].publish(Bool(data=False))
-        pubs["link"].publish(Bool(data=h.link))
-        twist = Twist()
-        twist.linear.x, twist.angular.z = h.command
-        pubs["teleop"].publish(twist)
+        if not h.silent:
+            twist = Twist()
+            twist.linear.x, twist.angular.z = h.command
+            pubs["teleop"].publish(twist)
         scan = LaserScan()
         scan.header.frame_id = "lidar_link"
         scan.angle_min = -math.pi
@@ -107,20 +106,28 @@ def harness():
     rclpy.shutdown(context=context)
 
 
-def test_mapping_command_passes_and_stops_on_link_loss_and_obstacle(harness):
+def test_mapping_command_passes_and_stops_on_release_silence_and_obstacle(harness):
     harness.run(1.5)
     assert harness.out[-1] == pytest.approx((0.15, 0.0))
     assert harness.status[-1]["open"] is True
     assert harness.status[-1]["mode"] == "mapping"
 
-    # Frozen radio link: the same command keeps arriving, the gate closes.
-    harness.link = False
+    # Released direction pad: teleop sends zero, the robot stops.
+    harness.command = (0.0, 0.0)
+    harness.run(0.4)
+    assert harness.out[-1] == (0.0, 0.0)
+
+    # No controller messages at all: the last command goes stale, the gate closes.
+    harness.command = (0.15, 0.0)
+    harness.run(0.4)
+    assert harness.out[-1] == pytest.approx((0.15, 0.0))
+    harness.silent = True
     harness.run(0.6)
     assert harness.out[-1] == (0.0, 0.0)
-    assert "controller_link_down" in harness.status[-1]["reasons"]
+    assert "command_stale" in harness.status[-1]["reasons"]
 
-    # The link heals by itself.
-    harness.link = True
+    # Messages return: driving continues by itself.
+    harness.silent = False
     harness.run(0.6)
     assert harness.out[-1] == pytest.approx((0.15, 0.0))
 

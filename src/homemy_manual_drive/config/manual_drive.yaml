@@ -6,14 +6,14 @@
 # Kept: the direction pad instead of the stick (no rest-position drift),
 # R1 for the faster speed, and no dead-man button (owner decision).
 # Changed: commands go to the HomeMy motion gate, never to the drive.
+# As on Amadeus there is no separate supervision of the radio link (owner
+# decision 2026-11-19): pressed drives, released stops.
 
 joy_node:
   ros__parameters:
     device_id: 0
     deadzone: 0.20          # Amadeus: 0.10 let the robot creep (2026-07-28)
-    autorepeat_rate: 20.0   # repeats the last state while the device exists
-    # The repeat continues after a silent radio loss until Linux removes the
-    # device. The radio-link watchdog below is therefore required.
+    autorepeat_rate: 20.0   # repeats the last state, so a held direction keeps driving
 
 teleop_twist_joy_node:
   ros__parameters:
@@ -33,10 +33,3 @@ teleop_twist_joy_node:
     enable_turbo_button: 5  # R1: faster speed
     require_enable_button: false  # no dead-man button (owner decision 2026-11-16)
     publish_stamped_twist: false
-
-controller_link:
-  ros__parameters:
-    link_topic: /homemy/controller/link
-    device_name_pattern: "Wireless Controller Motion Sensors$"
-    link_timeout_s: 0.15    # to be measured: report interval on the HomeMy computer
-    publish_period_s: 0.05

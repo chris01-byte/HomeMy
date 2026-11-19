@@ -6,7 +6,7 @@ Ersatzteile für die Simulation. **Nie auf dem Roboter starten.** Jeder Knoten m
 | --- | --- | --- |
 | `synthetic_map` | SLAM | Veröffentlicht `/map` erst nach dem ersten Einschalten des Kartiermodus. Jede neue Kartierfahrt beginnt klein und mit neuem Fingerabdruck. Solange der Controller „fährt“, wird jede Sekunde mehr von der Testwohnung sichtbar. Nach der Fahrt bleibt die letzte Karte veröffentlicht. |
 | `sim_base` | Fahrantrieb, LiDAR, Odometrie, IMU: der **Prüfstand** | siehe unten |
-| `sim_controller` | Funk-Controller, `joy_node`, Funküberwachung und die Person am Controller | Sendet `/joy` und `/homemy/controller/link` mit 20 Hz. Mit `follow_route` fährt eine sorgfältige Person die Kartierroute der Welt mit dem Steuerkreuz ab: erst auf der Stelle zum nächsten Wegpunkt drehen, dann geradeaus. Mit `link_frozen` wiederholt `/joy` weiter, während die Funküberwachung „getrennt“ meldet, wie bei einem stillen Funkabriss. Ohne Route meldet das Steuerkreuz bei `driving` „vorwärts“ (Achse 7). |
+| `sim_controller` | Funk-Controller, `joy_node` und die Person am Controller | Sendet `/joy` mit 20 Hz. Mit `follow_route` fährt eine sorgfältige Person die Kartierroute der Welt mit dem Steuerkreuz ab: erst auf der Stelle zum nächsten Wegpunkt drehen, dann geradeaus. Ohne Route meldet das Steuerkreuz „vorwärts“ (Achse 7). Mit `driving` false lässt die Person los; mit `connected` false ist der Controller aus und sendet nichts. |
 | `lifecycle_stub` | Lebenszyklus-Manager und Not-Halt-Signal | Sendet den Zustand, Standard `READY`, latched und jede Sekunde, und `/homemy/safety/estop` fünfmal je Sekunde, Standard „gelöst“. |
 
 Die Testwohnung von `synthetic_map` ist dieselbe wie im Mock der App: 48 × 36 Zellen zu 10 cm. Sie ist erfunden und keine echte Wohnung, und sie ist zu klein zum Fahren.
@@ -45,7 +45,6 @@ Die Kartierroute führt durch alle Räume. Ein Test prüft, dass jede Strecke 5 
 ```bash
 ros2 param set /homemy_sim_controller driving false
 ros2 param set /homemy_sim_controller connected false
-ros2 param set /homemy_sim_controller link_frozen true
 ros2 param set /homemy_lifecycle_stub state FAULT
 ros2 param set /homemy_lifecycle_stub estop_pressed true
 ```

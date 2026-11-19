@@ -14,7 +14,6 @@ motion_gate:
     mode_timeout_s: 1.5
     lifecycle_timeout_s: 3.0
     estop_timeout_s: 1.0
-    controller_link_timeout_s: 0.2
     command_timeout_s: 0.25
     localization_timeout_s: 1.0
     scan_timeout_s: 0.3

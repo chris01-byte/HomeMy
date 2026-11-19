@@ -4,15 +4,12 @@
   <name>homemy_manual_drive</name>
   <version>0.1.0</version>
   <description>
-    Manual driving with the wireless DualShock 4: a radio-link watchdog that
-    reads the controller's motion-sensor reports, and the teleop profile that
+    Manual driving with the wireless DualShock 4: the teleop profile that
     sends direction-pad commands to the motion gate.
   </description>
   <maintainer email="homemy@example.com">HomeMy</maintainer>
   <license>MIT</license>
 
-  <depend>rclpy</depend>
-  <depend>std_msgs</depend>
   <exec_depend>joy</exec_depend>
   <exec_depend>teleop_twist_joy</exec_depend>
   <exec_depend>launch</exec_depend>

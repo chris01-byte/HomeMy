@@ -6,7 +6,7 @@
   <description>
     The one place on HomeMy that lets drive commands reach the drive: selects
     the controller in mapping mode or navigation in a drive mission, checks
-    lifecycle state, emergency stop, radio link, localization, and freshness,
+    lifecycle state, emergency stop, localization, and freshness,
     clamps speeds, and applies the reactive obstacle protection.
   </description>
   <maintainer email="homemy@example.com">HomeMy</maintainer>

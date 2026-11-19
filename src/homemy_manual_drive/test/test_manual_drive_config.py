@@ -43,7 +43,13 @@ def test_joystick_repeats_and_ignores_small_deflections():
     assert joy["deadzone"] >= 0.2
 
 
-def test_link_timeout_is_tighter_than_the_gate_timeout():
-    link = CONFIG["controller_link"]["ros__parameters"]
-    assert link["link_timeout_s"] <= GATE["controller_link_timeout_s"]
-    assert link["publish_period_s"] < GATE["controller_link_timeout_s"]
+def test_a_held_direction_outlasts_the_gate_command_timeout():
+    # The joystick repeats faster than the gate lets a command go stale, so a
+    # held direction keeps driving and a released one stops.
+    joy = CONFIG["joy_node"]["ros__parameters"]
+    assert 1.0 / joy["autorepeat_rate"] < GATE["command_timeout_s"] / 2
+
+
+def test_the_profile_starts_only_joystick_and_teleop():
+    assert LAUNCH.count("Node(") == 2
+    assert 'package="joy"' in LAUNCH and 'package="teleop_twist_joy"' in LAUNCH

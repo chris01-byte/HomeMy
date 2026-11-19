@@ -4,7 +4,7 @@ Schaltet den Kartiermodus von HomeMy. Die App schaltet ihn ein und aus, der Robo
 
 Der Knoten bewegt nichts. Er sendet keinen Fahrbefehl und öffnet keinen Antrieb. Er meldet nur, ob der Kartiermodus aktiv ist. Dass „aus“ zu Stillstand führt, ist Aufgabe der Bewegungsfreigabe (`src/homemy_motion_gate`).
 
-„Controller verbunden“ kommt von der Funküberwachung (`/homemy/controller/link`, siehe `contracts/hardware/manual-drive.md`), nicht vom Alter der `/joy`-Nachrichten. Der Joystick-Treiber wiederholt seinen letzten Zustand nämlich auch nach einem stillen Funkabriss. `/joy` zählt nur als Eingabe, die das automatische Ende aufschiebt.
+„Controller verbunden“ heißt: In den letzten 0,5 s kam eine `/joy`-Nachricht. Eine eigene Überwachung der Funkverbindung gibt es nicht (Entscheidung vom 19.11.2026, siehe `contracts/hardware/manual-drive.md`).
 
 ## slam_toolbox
 
@@ -15,8 +15,7 @@ Ob slam_toolbox misst, entscheidet der Lokalisierungs-Manager in `homemy_navigat
 | Richtung | Topic | Typ | Zweck |
 | --- | --- | --- | --- |
 | Eingang | `/homemy/mapping_mode/command_json` | `std_msgs/String` | `enable`, `disable`, `stop` aus der App |
-| Eingang | `/joy` | `sensor_msgs/Joy` | Controller-Eingabe |
-| Eingang | `/homemy/controller/link` | `std_msgs/Bool` | Funkverbindung des Controllers |
+| Eingang | `/joy` | `sensor_msgs/Joy` | Controller: Verbindung und Eingabe |
 | Eingang | `/homemy/lifecycle/state` | `std_msgs/String` | Zustand des Roboters, z. B. `READY` |
 | Ausgang | `/homemy/mapping_mode/status_json` | `std_msgs/String` | Status für die App, latched, alle 0,5 s und bei jeder Änderung |
 | Ausgang | `/homemy/mapping_mode/active` | `std_msgs/Bool` | Kartiermodus aktiv, für Bewegungsfreigabe und Kartierung |

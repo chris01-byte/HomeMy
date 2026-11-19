@@ -9,8 +9,9 @@ Checks along the way (contracts/hardware/manual-drive.md,
 contracts/ros/motion-gate.md):
 
 - with mapping mode off, a pressed controller moves nothing;
-- a frozen radio link stops the robot although the joystick driver keeps
-  repeating "forward"; when the link returns, driving continues;
+- letting go of the direction pad stops the robot, pressing again drives on;
+  a controller that is switched off stops the robot too, and mapping mode
+  stays active;
 - a pressed emergency stop stops the robot; released, driving continues;
 - the route ends without contact;
 - the map from slam_toolbox matches the world: after a rigid fit 95 % of
@@ -215,20 +216,33 @@ def mapping_run_then_drive_to_rooms(stack):
         assert enabled["ok"] and enabled["mapping_mode"]["state"] == "active"
         probe.spin_until(lambda: probe.travel() > 0.8, 40, "robot drives")
 
-        # A frozen radio link: the joystick keeps repeating, the robot stops.
-        set_parameter(stack, "homemy_sim_controller", "link_frozen", True)
-        frozen_at = time.monotonic()
+        # The person lets go of the direction pad: the robot stops.
+        set_parameter(stack, "homemy_sim_controller", "driving", False)
+        probe.spin(1.0)
+        released_at = time.monotonic()
+        probe.spin(1.0)
+        assert probe.moved_since(released_at) < 0.005
+        assert probe.gate["open"] and probe.gate["mode"] == "mapping"  # open, with a zero command
+        set_parameter(stack, "homemy_sim_controller", "driving", True)
+        resumed_at = time.monotonic()
+        probe.spin(2.0)
+        assert probe.moved_since(resumed_at) > 0.05 or probe.travel() > 0.8
+
+        # The controller is switched off: no more messages, the robot stops.
+        # Mapping mode stays active (owner decision).
+        set_parameter(stack, "homemy_sim_controller", "connected", False)
+        off_at = time.monotonic()
         probe.spin(1.0)
         stopped_at = time.monotonic()
         probe.spin(1.0)
         assert probe.moved_since(stopped_at) < 0.005
-        assert probe.moved_since(frozen_at) < 0.15  # stopping distance in the simulation
-        assert "controller_link_down" in probe.gate["reasons"]
-        control.drain()  # only statuses from after the freeze count
+        assert probe.moved_since(off_at) < 0.15  # stopping distance in the simulation
+        assert "command_stale" in probe.gate["reasons"]
+        control.drain()  # only statuses from after the switch-off count
         status = control.wait_status(MODE_STATUS, lambda s: not s["mapping_mode"]["controller_connected"])
-        assert status["mapping_mode"]["state"] == "active"  # a lost link does not end mapping mode
-        set_parameter(stack, "homemy_sim_controller", "link_frozen", False)
-        probe.spin_until(lambda: probe.gate["open"], 10, "driving heals after the link returns")
+        assert status["mapping_mode"]["state"] == "active"
+        set_parameter(stack, "homemy_sim_controller", "connected", True)
+        probe.spin_until(lambda: probe.gate["open"], 10, "driving continues when the controller is back")
 
         # Emergency stop pressed and released.
         set_parameter(stack, "homemy_lifecycle_stub", "estop_pressed", True)

@@ -2,21 +2,19 @@
 
 Fahren mit dem Funk-Controller DualShock 4 (CUH-ZCT2E) beim Kartieren. Der Vertrag steht in [`contracts/hardware/manual-drive.md`](../../contracts/hardware/manual-drive.md).
 
-**Stand:** in der Simulation und mit einem nachgebildeten Eingabegerät getestet. Am echten Controller und am Roboter nie gelaufen.
+**Stand:** in der Simulation getestet. An HomeMy nie gelaufen; bei Amadeus fuhr der Projektinhaber mit demselben Controller und derselben Belegung.
 
-## Funküberwachung `controller_link`
+## Gedrückt fährt, losgelassen steht
 
-Der Joystick-Treiber von ROS (`joy_node`) wiederholt den letzten Zustand 20-mal je Sekunde, solange Linux den Controller als Gerät führt. Reißt die Funkverbindung ab, ohne dass sich der Controller abmeldet, behält Linux das Gerät noch eine Weile. In dieser Zeit wiederholt der Treiber zum Beispiel „vorwärts“ weiter. Die `/joy`-Nachrichten beweisen also nicht, dass der Controller noch da ist.
+So einfach wie bei Amadeus (Entscheidung des Projektinhabers vom 19.11.2026, für den ersten Prototyp und das Testlabor): Steuerkreuz drücken fährt, loslassen hält an. Eine eigene Überwachung der Funkverbindung gibt es nicht.
 
-Der DualShock 4 sendet bei bestehender Funkverbindung laufend Berichte, auch wenn niemand etwas drückt. Linux stellt seine Bewegungssensoren als eigenes Gerät bereit („Wireless Controller Motion Sensors“), das mit jedem Funkpaket einen Bericht liefert. `controller_link` liest dieses Gerät und meldet auf `/homemy/controller/link` (`std_msgs/Bool`, 20 Hz), ob in den letzten 0,15 s ein Bericht kam. Die Bewegungsfreigabe fährt beim Kartieren nur, solange diese Meldung frisch und wahr ist.
+Der Roboter hält auch an, wenn keine Controller-Nachrichten mehr kommen: Dann ist der letzte Befehl nach 0,25 s veraltet, und die Bewegungsfreigabe sendet null.
 
-Sind zwei Controller gekoppelt, kann der Knoten sie nicht unterscheiden und meldet „getrennt“.
-
-Der Dienst braucht Lesezugriff auf `/dev/input/event*` (Gruppe `input`).
+Bewusst in Kauf genommen: Reißt der Funk still ab, während eine Richtung gehalten wird, wiederholt der Joystick-Treiber diese Richtung, bis Linux den Controller abmeldet. So lange fährt der Roboter mit Kartiergeschwindigkeit weiter; es bleiben der Hindernisschutz, der Stopp in der App und der Halt am Roboter. Wie lange das am HomeMy-Rechner dauert, wird bei der Inbetriebnahme einmal gemessen (Schritt M2 im Vertrag).
 
 ## Controller-Profil
 
-`launch/manual_drive.launch.py` startet `joy_node`, `teleop_twist_joy` und `controller_link`. Die Befehle gehen an `/homemy/cmd_vel/teleop`, also an die Bewegungsfreigabe, nie direkt an den Antrieb.
+`launch/manual_drive.launch.py` startet `joy_node` und `teleop_twist_joy`. Die Befehle gehen an `/homemy/cmd_vel/teleop`, also an die Bewegungsfreigabe, nie direkt an den Antrieb.
 
 | Taste | Wirkung |
 | --- | --- |

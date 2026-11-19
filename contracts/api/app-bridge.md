@@ -38,8 +38,7 @@ Robot-internal topics of the mapping-mode manager, not reachable over the bridge
 | --- | --- | --- | --- |
 | `/homemy/mapping_mode/active` | `std_msgs/Bool` | output, latched | mapping mode active, for the movement gate and mapping |
 | `/homemy/lifecycle/state` | `std_msgs/String` | input, latched | lifecycle state name, republished at least every 3 s |
-| `/joy` | `sensor_msgs/Joy` | input | controller activity |
-| `/homemy/controller/link` | `std_msgs/Bool` | input | radio link of the controller, from the link watchdog |
+| `/joy` | `sensor_msgs/Joy` | input | controller connection and activity |
 
 Every `std_msgs/String` carries exactly one JSON object in `data`.
 
@@ -106,7 +105,7 @@ Published at least once per second and on every change, reliable and latched for
 - A fault or a shutdown ends mapping mode at once.
 - Mapping mode ends by itself after `auto_end_timeout_s` without controller input. The proposed value is 300 seconds.
 - A lost app connection does not end mapping mode. The app is never part of the stop path.
-- A disconnected controller does not end mapping mode by itself, but the robot must stand still while no controller is connected; the motion gate enforces this. The controller counts as connected while the radio-link watchdog reported the link up within 0.5 s (`contracts/hardware/manual-drive.md`). Repeated `/joy` messages do not count, because the joystick driver keeps repeating its last state after a silent radio loss.
+- A disconnected controller does not end mapping mode by itself, but the robot stands still while no controller messages arrive; the motion gate enforces this. The controller counts as connected while `/joy` messages are at most 0.5 s old. There is no separate supervision of the radio link (owner decision 2026-11-19, `contracts/hardware/manual-drive.md`).
 - While mapping mode is active the growing map is published on `/map`. After it ends, the last map stays available on `/map` and in the map store status until it is saved or a new mapping run begins.
 
 ### Rules for the App

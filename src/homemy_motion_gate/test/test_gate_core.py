@@ -38,7 +38,6 @@ def mapping_inputs(command=(0.12, 0.0), now=NOW):
         mission_drive_active=Stamped(False, now - 0.2),
         lifecycle_state=Stamped("READY", now - 0.5),
         estop_pressed=Stamped(False, now - 0.1),
-        controller_link=Stamped(True, now - 0.05),
         teleop_command=Stamped(command, now - 0.05),
         scan_received_at=now - 0.1,
     )
@@ -154,20 +153,21 @@ def test_emergency_stop_pressed_missing_or_stale_closes():
         assert reason in decision.reasons
 
 
-def test_frozen_radio_link_stops_a_held_direction():
-    # The joystick driver keeps repeating "forward", but the link is down.
+def test_released_direction_pad_stops():
+    # Released: teleop sends zero, and the gate passes the zero.
+    decision = step(mapping_inputs((0.0, 0.0)))
+    assert decision.open
+    assert decision.command == (0.0, 0.0)
+
+
+def test_silent_controller_stops():
+    # No controller messages at all: the last command goes stale.
     inputs = mapping_inputs((0.2, 0.0))
-    inputs.controller_link = Stamped(False, NOW - 0.05)
+    inputs.teleop_command = Stamped((0.2, 0.0), NOW - 0.3)
     decision = step(inputs)
     assert not decision.open
     assert decision.command == (0.0, 0.0)
-    assert "controller_link_down" in decision.reasons
-
-
-def test_silent_link_watchdog_counts_as_link_down():
-    inputs = mapping_inputs()
-    inputs.controller_link = Stamped(True, NOW - 0.5)
-    assert "controller_link_down" in step(inputs).reasons
+    assert "command_stale" in decision.reasons
 
 
 def test_stale_command_closes():
