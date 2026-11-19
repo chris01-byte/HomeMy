@@ -1,0 +1,13 @@
+# Blind sectors of the STL-27L behind the struts and slot webs.
+# Source: docs/decisions/2026-11-16-lidar-slot-and-support-webs.md (CAD
+# prediction). Bearings at the LiDAR axis: 0 = straight ahead, positive =
+# counter-clockwise seen from above (towards the robot's left), degrees.
+# The margin and the final sectors are commissioning results (LiDAR contract
+# step L4); until then the margin is a proposal.
+scan_mask:
+  ros__parameters:
+    input_topic: /scan
+    output_topic: /scan_masked
+    sector_start_deg: [72.9, 126.9, 157.2, -76.1, -137.9, -160.1]
+    sector_end_deg: [76.1, 137.9, 160.1, -72.9, -126.9, -157.2]
+    margin_deg: 1.5
