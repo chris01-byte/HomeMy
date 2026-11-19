@@ -176,6 +176,14 @@
         "src/homemy_description/README.md",
         "src/homemy_description/config/geometry.yaml"
       ]
+    },
+    "missions": {
+      "when": "drive to a room, go_to_room, mission manager, Nav2, AMCL, localization on the saved map, localization ready, room navigation goals, or mission app UI",
+      "files": [
+        "contracts/api/app-bridge.md",
+        "src/homemy_mission/README.md",
+        "src/homemy_navigation/README.md"
+      ]
     }
   }
 }

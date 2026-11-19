@@ -1,6 +1,6 @@
 # Softwarekonzept HomeMy
 
-Status: Entwurf zur Abstimmung mit dem Projektinhaber. Die Grundsatzfragen sind entschieden (Abschnitt 10). Programmiert und in der Simulation getestet sind Stufe S1 (Roboterseite der App) und der Kartier-Teil von Stufe S2.
+Status: Entwurf zur Abstimmung mit dem Projektinhaber. Die Grundsatzfragen sind entschieden (Abschnitt 10). Programmiert und in der Simulation getestet sind die Stufen S1 (Roboterseite der App) und S2 (Fahren in der Simulation).
 Stand: 17.11.2026.
 
 Dieses Dokument ist bewusst auf Deutsch geschrieben, weil es die Referenz für den Projektinhaber ist. Die Verträge unter `contracts/` bleiben englisch und legen später jede Schnittstelle im Detail fest. Das Konzept gibt die Richtung vor, die Verträge die Regeln.
@@ -135,7 +135,7 @@ Zu jedem Baustein stehen Aufgabe, Herkunft und der wichtigste offene Punkt.
 ### 5.2 Auftragssteuerung
 
 - **Aufgabe:** Genau einen Auftrag zur Zeit annehmen, prüfen, ausführen lassen und den Stand melden. Sie merkt sich den Fortschritt, damit „Weiter“ nach einer Hilfe-Pause funktioniert.
-- **Herkunft:** `mission_manager` von Amadeus. Dort lief `go_to_room` am echten Roboter, das Holen nur gegen Attrappen.
+- **Herkunft:** `mission_manager` von Amadeus. Dort lief `go_to_room` am echten Roboter, das Holen nur gegen Attrappen. **Umgesetzt (19.11.2026, Simulation):** `src/homemy_mission` mit „Fahre zu Raum“ und Abbrechen; die Auflösung des Raumziels ist aus Amadeus übernommen, Wiederholungen nach einer Pause sind neu.
 - **Offen:** Liste der Gegenstände, die HomeMy kennt.
 
 ### 5.3 Ablaufsteuerung
@@ -175,7 +175,7 @@ Regeln:
 ### 5.6 Standort und Fahren
 
 - **Bewegungsschätzung:** Vorwärtsgeschwindigkeit aus den Radencodern, Drehung aus dem HWT-601. Grund ist der Fugen-Befund bei Amadeus.
-- **Standort auf der gespeicherten Karte:** AMCL, dazu beim Start eine Suche über die ganze Karte im Stand und ein Wächter, der „Standort sicher“ meldet. So hat es bei Amadeus funktioniert.
+- **Standort auf der gespeicherten Karte:** AMCL, dazu beim Start eine Suche über die ganze Karte im Stand und ein Wächter, der „Standort sicher“ meldet. So hat es bei Amadeus funktioniert. **Umgesetzt (19.11.2026, Simulation):** AMCL startet an der letzten SLAM-Lage oder an der zuletzt gesicherten Lage; der Wächter verlangt zusätzlich, dass die LiDAR-Punkte auf die Wände der Karte passen. Die Suche über die ganze Karte fehlt noch.
 - **Wegplanung:** Nav2 mit denselben Planern wie bei Amadeus als Startpunkt (A* und Regulated Pure Pursuit).
 - **Fahrumriss:** 500 × 400 mm Grundfläche, zuzüglich Arme in Fahrhaltung und beim Tragen zuzüglich Gegenstand.
 - **Vorteil von HomeMy:** 326° freie LiDAR-Sicht statt 292° bei Amadeus.
@@ -280,7 +280,7 @@ Geplante Pakete:
 | --- | --- | --- | --- |
 | S0 | Arbeitsumgebung, Schnittstellenpaket, Robotermodell, Prüfstand | nein | leeres System startet in der Simulation |
 | S1 | Roboterseite der App: Kartenspeicher, Räume, Kartiermodus | nein | App läuft gegen echtes ROS statt gegen den Mock. **In der Simulation erledigt am 17.11.2026.** |
-| S2 | Fahren in der Simulation: Antrieb, Standort, Wegplanung, Freigabe, Auftrag „Fahre zu“ | nein | V1 in der Simulation. **Teil Kartieren erledigt am 19.11.2026:** Robotermodell, Prüfstand, Controller-Fahrt über die Bewegungsfreigabe, Kartierfahrt mit slam_toolbox. |
+| S2 | Fahren in der Simulation: Antrieb, Standort, Wegplanung, Freigabe, Auftrag „Fahre zu“ | nein | V1 in der Simulation. **Erledigt am 19.11.2026:** Robotermodell, Prüfstand, Controller-Fahrt über die Bewegungsfreigabe, Kartierfahrt mit slam_toolbox, Umschalten auf die gespeicherte Karte mit AMCL, „Fahre zu Raum“ aus der App. Offen: Suche über die ganze Karte beim Start. |
 | S3 | Arm in der Simulation: Modell, Bewegungsplanung, Haltungen, Greifen an bekannter Lage | nein | Arm greift simuliert |
 | S4 | Hol-Auftrag in der Simulation mit künstlichen Bildern | nein | V2 in der Simulation |
 | S5 | Fahrwerk in Betrieb: Antrieb, LiDAR, IMU, Controller-Fahrt, Kartieren | Fahrgestell, PMU | echte Karte |
