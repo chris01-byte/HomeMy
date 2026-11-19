@@ -451,6 +451,96 @@ class MappingModeMockTests(unittest.TestCase):
         self.assertFalse(self.state.end_mapping('fault'))
 
 
+class MissionMockTests(unittest.TestCase):
+    """Drive to a room and cancel, as defined in contracts/api/app-bridge.md."""
+
+    def setUp(self):
+        self.state = mock.RobotState()
+
+    def prepare_room(self, with_goal=True):
+        self.state.save_map_for_rooms({'command': 'save', 'name': 'wohnung', 'request_id': 'ios-map-1'})
+        room = {
+            'id': 'kueche',
+            'name': 'Küche',
+            'polygon': [{'x': -2.0, 'y': -1.0}, {'x': 0.0, 'y': -1.0}, {'x': 0.0, 'y': 1.0}],
+        }
+        if with_goal:
+            room['navigation_goal'] = {'x': -1.0, 'y': -0.5, 'yaw': 0.0}
+        result = self.state.apply_semantic_command({
+            'command': 'upsert_room', 'request_id': 'ios-room-1',
+            'map_fingerprint': self.state.semantic_map['map_ref']['fingerprint'],
+            'base_revision': 0, 'room': room,
+        })
+        self.assertTrue(result['ok'], result)
+
+    def go(self, request_id='ios-go-1', room_id='kueche'):
+        return self.state.apply_mission_command(
+            {'command': 'go_to_room', 'room_id': room_id, 'request_id': request_id})
+
+    def test_idle_status_says_why_driving_is_not_possible(self):
+        status = self.state.mission_status()
+        self.assertEqual(status['mission']['state'], 'idle')
+        self.assertEqual(status['start_block_reason'], 'no_map')
+        self.assertEqual(set(status), {'schema_version', 'event', 'ok', 'request_id', 'message',
+                                       'mission', 'start_block_reason', 'time'})
+
+    def test_drive_to_a_room_runs_and_arrives(self):
+        self.prepare_room()
+        self.assertIsNone(self.state.mission_start_block_reason())
+        started = self.go()
+        self.assertTrue(started['ok'])
+        self.assertEqual(started['event'], 'go_to_room_result')
+        self.assertEqual(started['mission']['state'], 'running')
+        self.assertEqual(started['start_block_reason'], 'busy')
+        self.state.mission_started_at -= mock.MOCK_MISSION_DURATION_S / 2
+        self.state.tick_mission()
+        self.assertLess(self.state.mission['distance_remaining_m'], mock.MOCK_MISSION_DISTANCE_M)
+        self.state.mission_started_at -= mock.MOCK_MISSION_DURATION_S
+        self.state.tick_mission()
+        self.assertEqual(self.state.mission_status()['mission']['state'], 'succeeded')
+
+    def test_cancel_is_always_accepted_and_idempotent(self):
+        self.prepare_room()
+        self.go()
+        for request_id in ('ios-cancel-1', 'ios-cancel-2'):
+            result = self.state.apply_mission_command({'command': 'cancel', 'request_id': request_id})
+            self.assertTrue(result['ok'])
+            self.assertEqual(result['mission']['state'], 'canceled')
+            self.assertEqual(result['mission']['result'], 'app_cancel')
+
+    def test_refused_while_mapping_or_blocked_or_without_goal(self):
+        self.prepare_room(with_goal=False)
+        refused = self.go()
+        self.assertFalse(refused['ok'])
+        self.assertEqual(refused['start_block_reason'], 'room_invalid')
+
+        self.state.mission_block_override = 'not_localized'
+        refused = self.go('ios-go-2')
+        self.assertFalse(refused['ok'])
+        self.assertEqual(refused['start_block_reason'], 'not_localized')
+
+        self.state.mission_block_override = None
+        self.state.apply_mapping_command({'command': 'enable', 'request_id': 'ios-mode-1'})
+        refused = self.go('ios-go-3')
+        self.assertEqual(refused['start_block_reason'], 'mapping_active')
+
+    def test_starting_mapping_cancels_a_running_mission(self):
+        self.prepare_room()
+        self.go()
+        self.state.apply_mapping_command({'command': 'enable', 'request_id': 'ios-mode-1'})
+        self.state.tick_mission()
+        self.assertEqual(self.state.mission['state'], 'canceled')
+        self.assertEqual(self.state.mission['result'], 'mapping_started')
+
+    def test_invalid_mission_commands_are_refused(self):
+        for command in (None, {'command': 'explore', 'request_id': 'ios-1'},
+                        {'command': 'cancel', 'request_id': 'bad id'},
+                        {'command': 'go_to_room', 'request_id': 'ios-1', 'room_id': 'k', 'speed': 2}):
+            result = self.state.apply_mission_command(command)
+            self.assertFalse(result['ok'])
+        self.assertIsNone(self.state.mission)
+
+
 class WebSocketClient:
     """Minimal RFC 6455 text client, enough to drive the mock in a test."""
 

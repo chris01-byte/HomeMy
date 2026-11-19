@@ -23,6 +23,8 @@
 		A1000000000000000000000E /* RobotMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000011 /* RobotMapView.swift */; };
 		A1000000000000000000000F /* RobotMapProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000012 /* RobotMapProtocolTests.swift */; };
 		A10000000000000000000010 /* BackendFixtureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000013 /* BackendFixtureTests.swift */; };
+		A10000000000000000000011 /* MissionModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000014 /* MissionModels.swift */; };
+		A10000000000000000000012 /* MissionProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000015 /* MissionProtocolTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		B10000000000000000000011 /* RobotMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotMapView.swift; sourceTree = "<group>"; };
 		B10000000000000000000012 /* RobotMapProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotMapProtocolTests.swift; sourceTree = "<group>"; };
 		B10000000000000000000013 /* BackendFixtureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendFixtureTests.swift; sourceTree = "<group>"; };
+		B10000000000000000000014 /* MissionModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionModels.swift; sourceTree = "<group>"; };
+		B10000000000000000000015 /* MissionProtocolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionProtocolTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				B10000000000000000000002 /* RobotModels.swift */,
+				B10000000000000000000014 /* MissionModels.swift */,
 				B1000000000000000000000D /* RobotMapModels.swift */,
 			);
 			path = Models;
@@ -135,6 +140,7 @@
 				B10000000000000000000009 /* RosbridgeProtocolTests.swift */,
 				B10000000000000000000012 /* RobotMapProtocolTests.swift */,
 				B10000000000000000000013 /* BackendFixtureTests.swift */,
+				B10000000000000000000015 /* MissionProtocolTests.swift */,
 			);
 			path = HomeMyTests;
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 			files = (
 				A10000000000000000000001 /* HomeMyApp.swift in Sources */,
 				A10000000000000000000002 /* RobotModels.swift in Sources */,
+				A10000000000000000000011 /* MissionModels.swift in Sources */,
 				A1000000000000000000000A /* RobotMapModels.swift in Sources */,
 				A10000000000000000000003 /* RosbridgeProtocol.swift in Sources */,
 				A1000000000000000000000B /* MapRosbridgeProtocol.swift in Sources */,
@@ -270,6 +277,7 @@
 				A10000000000000000000009 /* RosbridgeProtocolTests.swift in Sources */,
 				A1000000000000000000000F /* RobotMapProtocolTests.swift in Sources */,
 				A10000000000000000000010 /* BackendFixtureTests.swift in Sources */,
+				A10000000000000000000012 /* MissionProtocolTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,7 @@
+{
+ "msg": {
+  "data": "{\"schema_version\": 1, \"event\": \"go_to_room_result\", \"ok\": false, \"request_id\": \"ios-go-5\", \"message\": \"Fahrt nicht möglich: not_localized\", \"mission\": {\"state\": \"idle\", \"command\": null, \"room_id\": null, \"room_name\": null, \"phase\": null, \"attempt\": 0, \"max_attempts\": 0, \"distance_remaining_m\": null, \"result\": null}, \"start_block_reason\": \"not_localized\", \"time\": 1795110916.5724418}"
+ },
+ "op": "publish",
+ "topic": "/homemy/mission/status_json"
+}

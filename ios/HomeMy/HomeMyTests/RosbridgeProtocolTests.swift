@@ -8,7 +8,7 @@ struct RosbridgeProtocolTests {
     @Test
     func setupFramesAdvertiseCommandAndSubscribeStatus() throws {
         let frames = try RosbridgeProtocol.setupFrames().map(jsonObject)
-        #expect(frames.count == 2)
+        #expect(frames.count == 4)
 
         #expect(frames[0]["op"] as? String == "advertise")
         #expect(frames[0]["topic"] as? String == "/homemy/mapping_mode/command_json")
@@ -17,6 +17,11 @@ struct RosbridgeProtocolTests {
         #expect(frames[1]["op"] as? String == "subscribe")
         #expect(frames[1]["topic"] as? String == "/homemy/mapping_mode/status_json")
         #expect(frames[1]["type"] as? String == "std_msgs/String")
+
+        #expect(frames[2]["op"] as? String == "advertise")
+        #expect(frames[2]["topic"] as? String == "/homemy/mission/command_json")
+        #expect(frames[3]["op"] as? String == "subscribe")
+        #expect(frames[3]["topic"] as? String == "/homemy/mission/status_json")
     }
 
     @Test

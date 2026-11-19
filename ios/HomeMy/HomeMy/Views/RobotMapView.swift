@@ -245,6 +245,19 @@ struct RobotMapView: View {
                         .foregroundStyle(RobotPalette.muted)
                 }
                 Spacer()
+                Button {
+                    robotController.goToRoom(
+                        roomID: room.id,
+                        roomName: room.name,
+                        hasNavigationGoal: room.navigationGoal != nil
+                    )
+                } label: {
+                    Label("Hinfahren", systemImage: "location.fill")
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(RobotPalette.accent)
+                .disabled(!robotController.canGoToRoom(hasNavigationGoal: room.navigationGoal != nil))
+                .accessibilityLabel("Zu \(room.name) fahren")
                 Button(role: .destructive) {
                     roomPendingDeletion = room
                 } label: {
@@ -265,7 +278,7 @@ struct RobotMapView: View {
                 .foregroundStyle(RobotPalette.highlight)
         } else {
             Label(
-                "Raumflächen sind Beschriftungen. Sie lösen keine Fahrt aus.",
+                "Eine Fahrt startet nur mit „Hinfahren“. Ob der Roboter fährt, entscheidet seine Bewegungsfreigabe.",
                 systemImage: "checkmark.shield"
             )
             .font(.caption)

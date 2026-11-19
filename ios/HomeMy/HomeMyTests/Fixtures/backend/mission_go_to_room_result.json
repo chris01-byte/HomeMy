@@ -1,0 +1,7 @@
+{
+ "msg": {
+  "data": "{\"schema_version\": 1, \"event\": \"go_to_room_result\", \"ok\": true, \"request_id\": \"ios-go-1\", \"message\": \"Fahrt zu Wohnzimmer gestartet.\", \"mission\": {\"state\": \"running\", \"command\": \"go_to_room\", \"room_id\": \"wohnzimmer\", \"room_name\": \"Wohnzimmer\", \"phase\": \"starting\", \"attempt\": 1, \"max_attempts\": 3, \"distance_remaining_m\": null, \"result\": null}, \"start_block_reason\": \"busy\", \"time\": 1795110789.315685}"
+ },
+ "op": "publish",
+ "topic": "/homemy/mission/status_json"
+}

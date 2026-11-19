@@ -5,7 +5,7 @@ struct HomeMyRootView: View {
         TabView {
             DashboardView()
                 .tabItem {
-                    Label("Kartieren", systemImage: "gamecontroller.fill")
+                    Label("Roboter", systemImage: "gamecontroller.fill")
                 }
 
             RobotMapView()

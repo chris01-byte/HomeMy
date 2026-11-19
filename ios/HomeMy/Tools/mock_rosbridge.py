@@ -35,6 +35,10 @@ SEMANTIC_COMMAND_TOPIC = '/homemy/room_manager/command_json'
 MAPPING_MODE_STATUS_TOPIC = '/homemy/mapping_mode/status_json'
 MAPPING_MODE_COMMAND_TOPIC = '/homemy/mapping_mode/command_json'
 MAPPING_MODE_COMMANDS = ('enable', 'disable', 'stop')
+MISSION_STATUS_TOPIC = '/homemy/mission/status_json'
+MISSION_COMMAND_TOPIC = '/homemy/mission/command_json'
+MOCK_MISSION_DURATION_S = 12.0
+MOCK_MISSION_DISTANCE_M = 4.0
 DEFAULT_AUTO_END_TIMEOUT_S = 300.0
 MAPPING_REVEAL_START_COLUMNS = 14
 MAPPING_REVEAL_STEP_COLUMNS = 4
@@ -270,6 +274,9 @@ class RobotState:
             self.mapping_block_reason = None
             self.controller_connected = True
             self.controller_in_use = True
+            self.mission = None
+            self.mission_started_at = None
+            self.mission_block_override = None
 
     def advance_map(self):
         with self.lock:
@@ -786,6 +793,110 @@ class RobotState:
                 return 'ended'
             return None
 
+    # ------------------------------------------------------------- missions
+
+    def _mission_dict(self):
+        if self.mission is None:
+            return {
+                'state': 'idle', 'command': None, 'room_id': None, 'room_name': None,
+                'phase': None, 'attempt': 0, 'max_attempts': 0,
+                'distance_remaining_m': None, 'result': None,
+            }
+        return dict(self.mission)
+
+    def mission_start_block_reason(self):
+        with self.lock:
+            if self.mission is not None and self.mission['state'] == 'running':
+                return 'busy'
+            if self.mapping_state == 'active':
+                return 'mapping_active'
+            if self.last_saved_map is None:
+                return 'no_map'
+            if self.semantic_map is None:
+                return 'rooms_not_bound'
+            return self.mission_block_override
+
+    def mission_status(self, event='status', ok=True, request_id=None, message=None, block_reason=None):
+        with self.lock:
+            mission = self._mission_dict()
+            if message is None:
+                message = {
+                    'idle': 'Kein Auftrag (Simulator-Mock).',
+                    'running': 'Auftrag läuft (Simulator-Mock).',
+                    'succeeded': 'Ziel erreicht (Simulator-Mock).',
+                    'failed': 'Auftrag nicht erfüllt (Simulator-Mock).',
+                    'canceled': 'Auftrag abgebrochen (Simulator-Mock).',
+                }[mission['state']]
+            return {
+                'schema_version': 1,
+                'event': event,
+                'ok': ok,
+                'request_id': request_id,
+                'message': message,
+                'mission': mission,
+                'start_block_reason': block_reason if block_reason else self.mission_start_block_reason(),
+                'time': time.time(),
+            }
+
+    def apply_mission_command(self, command):
+        """go_to_room or cancel, as contracts/api/app-bridge.md defines them."""
+        with self.lock:
+            request_id = command.get('request_id') if isinstance(command, dict) else None
+            valid_id = request_id if _valid_request_id(request_id) else None
+            kind = command.get('command') if isinstance(command, dict) else None
+            if valid_id is None or kind not in ('go_to_room', 'cancel'):
+                return self.mission_status(event='command_result', ok=False, request_id=valid_id,
+                                           message='Ungültiger Auftragsbefehl')
+            if kind == 'cancel':
+                if set(command) != {'command', 'request_id'}:
+                    return self.mission_status(event='command_result', ok=False, request_id=request_id,
+                                               message='Ungültiger Auftragsbefehl')
+                if self.mission is not None and self.mission['state'] == 'running':
+                    self.mission.update(state='canceled', phase='canceled', result='app_cancel')
+                return self.mission_status(event='cancel_result', request_id=request_id,
+                                           message='Auftrag abgebrochen.')
+            if set(command) - {'command', 'request_id', 'room_id', 'room'}:
+                return self.mission_status(event='command_result', ok=False, request_id=request_id,
+                                           message='Ungültiger Auftragsbefehl')
+            reason = self.mission_start_block_reason()
+            if reason is not None:
+                return self.mission_status(event='go_to_room_result', ok=False, request_id=request_id,
+                                           message=f'Fahrt nicht möglich: {reason}', block_reason=reason)
+            room_id = command.get('room_id')
+            room = next((value for value in self.semantic_map['rooms'] if value.get('id') == room_id), None)
+            if room is None or room.get('navigation_goal') is None:
+                return self.mission_status(event='go_to_room_result', ok=False, request_id=request_id,
+                                           message='Raum nicht anfahrbar', block_reason='room_invalid')
+            self.mission = {
+                'state': 'running', 'command': 'go_to_room', 'room_id': room['id'],
+                'room_name': room.get('name') or room['id'], 'phase': 'driving', 'attempt': 1,
+                'max_attempts': 3, 'distance_remaining_m': MOCK_MISSION_DISTANCE_M, 'result': None,
+            }
+            self.mission_started_at = time.monotonic()
+            return self.mission_status(event='go_to_room_result', request_id=request_id,
+                                       message=f"Fahrt zu {self.mission['room_name']} gestartet.")
+
+    def tick_mission(self):
+        with self.lock:
+            if self.mission is None or self.mission['state'] != 'running':
+                return
+            if self.mapping_state == 'active':
+                self.mission.update(state='canceled', phase='canceled', result='mapping_started')
+                return
+            elapsed = time.monotonic() - self.mission_started_at
+            if elapsed >= MOCK_MISSION_DURATION_S:
+                self.mission.update(state='succeeded', phase='arrived', result='arrived', distance_remaining_m=0.0)
+            else:
+                remaining = MOCK_MISSION_DISTANCE_M * (1.0 - elapsed / MOCK_MISSION_DURATION_S)
+                self.mission['distance_remaining_m'] = round(remaining, 2)
+
+    def fail_mission(self):
+        with self.lock:
+            if self.mission is None or self.mission['state'] != 'running':
+                return False
+            self.mission.update(state='failed', phase='failed', result='navigation_failed:0')
+            return True
+
     def close_clients(self):
         with self.lock:
             clients = list(self.clients)
@@ -820,6 +931,7 @@ class WebSocketHandler(socketserver.BaseRequestHandler):
         self.map_subscription_ids = set()
         self.map_manager_status_subscribed = False
         self.semantic_status_subscribed = False
+        self.mission_status_subscribed = False
 
     @property
     def map_subscribed(self):
@@ -959,6 +1071,12 @@ class WebSocketHandler(socketserver.BaseRequestHandler):
                         separators=(',', ':'),
                     ),
                 ))
+            if topic == MISSION_STATUS_TOPIC:
+                self.mission_status_subscribed = True
+                self.send_text(ros_publish(
+                    MISSION_STATUS_TOPIC,
+                    json.dumps(STATE.mission_status(), ensure_ascii=False, separators=(',', ':')),
+                ))
             if topic == MAP_TOPIC:
                 subscription_id = frame.get('id') or MAP_TOPIC
                 if STATE.is_map_available():
@@ -979,6 +1097,8 @@ class WebSocketHandler(socketserver.BaseRequestHandler):
                 self.map_manager_status_subscribed = False
             if topic == SEMANTIC_STATUS_TOPIC:
                 self.semantic_status_subscribed = False
+            if topic == MISSION_STATUS_TOPIC:
+                self.mission_status_subscribed = False
             if topic == MAP_TOPIC and subscription_id is None:
                 self.map_subscription_ids.clear()
             elif subscription_id in self.map_subscription_ids:
@@ -1017,6 +1137,13 @@ class WebSocketHandler(socketserver.BaseRequestHandler):
             response = STATE.apply_semantic_command(command)
             STATE.record('semantic_command', command)
             broadcast_semantic_status(response)
+        elif topic == MISSION_COMMAND_TOPIC and isinstance(data, str):
+            try:
+                command = json.loads(data)
+            except json.JSONDecodeError:
+                command = None
+            STATE.record('mission_command', command)
+            broadcast_mission_status(STATE.apply_mission_command(command))
 
     def close(self):
         if self.closed:
@@ -1054,6 +1181,24 @@ class ControlHandler(BaseHTTPRequestHandler):
             broadcast_semantic_status(STATE.semantic_status())
             broadcast_mapping_status(STATE.mapping_mode_status())
             self._json({'ok': True})
+            return
+        if parsed.path == '/mission-block':
+            reason = (query.get('reason') or ['not_localized'])[0]
+            with STATE.lock:
+                STATE.mission_block_override = reason
+            broadcast_mission_status(STATE.mission_status())
+            self._json({'ok': True, 'start_block_reason': reason})
+            return
+        if parsed.path == '/mission-unblock':
+            with STATE.lock:
+                STATE.mission_block_override = None
+            broadcast_mission_status(STATE.mission_status())
+            self._json({'ok': True})
+            return
+        if parsed.path == '/mission-fail':
+            failed = STATE.fail_mission()
+            broadcast_mission_status(STATE.mission_status())
+            self._json({'ok': failed})
             return
         if parsed.path in ('/controller-connect', '/controller-disconnect'):
             with STATE.lock:
@@ -1255,8 +1400,21 @@ def broadcast_semantic_status(payload):
             client.send_text(text)
 
 
+def broadcast_mission_status(payload):
+    text = ros_publish(
+        MISSION_STATUS_TOPIC,
+        json.dumps(payload, ensure_ascii=False, separators=(',', ':')),
+    )
+    with STATE.lock:
+        clients = list(STATE.clients)
+    for client in clients:
+        if client.mission_status_subscribed:
+            client.send_text(text)
+
+
 def telemetry_loop():
     while True:
+        STATE.tick_mission()
         outcome = STATE.tick_mapping()
         if outcome == 'map':
             broadcast_map()
@@ -1269,6 +1427,7 @@ def telemetry_loop():
             status_paused = now < STATE.pause_status_until
         if not status_paused:
             broadcast_mapping_status(STATE.mapping_mode_status())
+            broadcast_mission_status(STATE.mission_status())
         time.sleep(0.35)
 
 
@@ -1283,6 +1442,10 @@ def main():
             '  GET /mapping-timeout?seconds=20  shorten the automatic end\n'
             '  GET /mapping-block?reason=not_ready  refuse enable\n'
             '  GET /mapping-fault          end mapping mode with a fault\n'
+            'Mission controls:\n'
+            '  GET /mission-block?reason=not_localized  refuse go_to_room\n'
+            '  GET /mission-unblock        allow go_to_room again\n'
+            '  GET /mission-fail           let the running mission fail\n'
             'Map test controls:\n'
             '  GET /map-update  publish the next deterministic map revision\n'
             '  GET /map-reset   restore and publish the initial test apartment\n'

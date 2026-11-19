@@ -1,0 +1,7 @@
+{
+ "msg": {
+  "data": "{\"schema_version\": 1, \"event\": \"status\", \"ok\": true, \"request_id\": null, \"message\": \"Auftrag läuft.\", \"mission\": {\"state\": \"running\", \"command\": \"go_to_room\", \"room_id\": \"wohnzimmer\", \"room_name\": \"Wohnzimmer\", \"phase\": \"driving\", \"attempt\": 1, \"max_attempts\": 3, \"distance_remaining_m\": 7.53, \"result\": null}, \"start_block_reason\": \"busy\", \"time\": 1795110789.364144}"
+ },
+ "op": "publish",
+ "topic": "/homemy/mission/status_json"
+}

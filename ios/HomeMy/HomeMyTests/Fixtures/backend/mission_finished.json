@@ -1,0 +1,7 @@
+{
+ "msg": {
+  "data": "{\"schema_version\": 1, \"event\": \"status\", \"ok\": true, \"request_id\": null, \"message\": \"Ziel erreicht.\", \"mission\": {\"state\": \"succeeded\", \"command\": \"go_to_room\", \"room_id\": \"wohnzimmer\", \"room_name\": \"Wohnzimmer\", \"phase\": \"arrived\", \"attempt\": 1, \"max_attempts\": 3, \"distance_remaining_m\": 0.0, \"result\": \"arrived\"}, \"start_block_reason\": null, \"time\": 1795110834.417407}"
+ },
+ "op": "publish",
+ "topic": "/homemy/mission/status_json"
+}

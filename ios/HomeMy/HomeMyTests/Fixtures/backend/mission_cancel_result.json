@@ -1,0 +1,7 @@
+{
+ "msg": {
+  "data": "{\"schema_version\": 1, \"event\": \"cancel_result\", \"ok\": true, \"request_id\": \"ios-cancel-1\", \"message\": \"Auftrag abgebrochen.\", \"mission\": {\"state\": \"canceled\", \"command\": \"go_to_room\", \"room_id\": \"kueche\", \"room_name\": \"Küche\", \"phase\": \"canceled\", \"attempt\": 1, \"max_attempts\": 3, \"distance_remaining_m\": 6.09, \"result\": \"app_cancel\"}, \"start_block_reason\": null, \"time\": 1795110838.503926}"
+ },
+ "op": "publish",
+ "topic": "/homemy/mission/status_json"
+}

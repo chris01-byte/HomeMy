@@ -16,6 +16,11 @@ final class RobotController: NSObject, ObservableObject {
     @Published private(set) var mappingStatusIsFresh = false
     @Published private(set) var pendingCommand: PendingMappingCommand?
     @Published private(set) var pendingStop: PendingMappingCommand?
+    @Published private(set) var missionStatus: MissionStatus?
+    @Published private(set) var missionStatusIsFresh = false
+    @Published private(set) var missionStatusEverReceived = false
+    @Published private(set) var pendingMissionCommand: PendingMissionCommand?
+    @Published private(set) var pendingMissionCancel: PendingMissionCommand?
     @Published private(set) var lastConnectionError: String?
     @Published private(set) var logEntries: [RobotLogEntry] = []
 
@@ -27,6 +32,8 @@ final class RobotController: NSObject, ObservableObject {
     private var reconnectTask: Task<Void, Never>?
     private var staleMonitorTask: Task<Void, Never>?
     private var stopLoopTask: Task<Void, Never>?
+    private var missionCancelTask: Task<Void, Never>?
+    private var lastMissionStatusAt: Date?
     private var lastStatusReceivedAt: Date?
     private var lastProtocolErrorAt: Date?
     private var reconnectAttempt = 0
@@ -101,6 +108,31 @@ final class RobotController: NSObject, ObservableObject {
             connected: connectionState.isConnected,
             statusIsFresh: mappingStatusIsFresh,
             snapshot: mappingSnapshot
+        )
+    }
+
+    // MARK: Aufträge
+
+    var missionSnapshot: MissionSnapshot? {
+        missionStatus?.mission
+    }
+
+    func canGoToRoom(hasNavigationGoal: Bool) -> Bool {
+        MissionPolicy.canGoToRoom(
+            connected: connectionState.isConnected,
+            statusIsFresh: missionStatusIsFresh,
+            status: missionStatus,
+            roomHasGoal: hasNavigationGoal,
+            commandPending: pendingMissionCommand != nil || pendingMissionCancel != nil
+        )
+    }
+
+    var missionCancelIsOffered: Bool {
+        MissionPolicy.cancelIsOffered(
+            connected: connectionState.isConnected,
+            statusIsFresh: missionStatusIsFresh,
+            everReceived: missionStatusEverReceived,
+            snapshot: missionSnapshot
         )
     }
 
@@ -180,9 +212,145 @@ final class RobotController: NSObject, ObservableObject {
         sendModeCommand(.disable, logMessage: "Kartiermodus beenden – warte auf Bestätigung")
     }
 
+    // MARK: - Aufträge
+
+    func goToRoom(roomID: String, roomName: String, hasNavigationGoal: Bool) {
+        guard canGoToRoom(hasNavigationGoal: hasNavigationGoal) else {
+            addLog("Fahrt zu \(roomName) ist gerade nicht möglich", kind: .warning)
+            return
+        }
+        guard let task = readySocket() else { return }
+        let command = PendingMissionCommand(
+            kind: .goToRoom(roomID: roomID),
+            requestID: RobotController.makeRequestID(prefix: "ios-go"),
+            sentAt: Date()
+        )
+        do {
+            let frame = try RosbridgeProtocol.missionCommandFrame(command.kind, requestID: command.requestID)
+            pendingMissionCommand = command
+            Task { [weak self, task, command] in
+                do {
+                    try await task.send(.string(frame))
+                    guard let self, self.socketTask === task else { return }
+                    self.addLog("Fahrt zu \(roomName) angefordert", kind: .info)
+                } catch {
+                    guard let self else { return }
+                    if self.pendingMissionCommand == command {
+                        self.pendingMissionCommand = nil
+                    }
+                    self.handleSocketFailure(task, error: error)
+                }
+            }
+        } catch {
+            addLog(error.localizedDescription, kind: .error)
+        }
+    }
+
+    /// Bricht den laufenden Auftrag ab und wiederholt die Anforderung, bis der
+    /// Roboter meldet, dass kein Auftrag mehr läuft, höchstens vier Sekunden.
+    func cancelMission() {
+        guard pendingMissionCancel == nil, missionCancelIsOffered else { return }
+        guard let task = readySocket() else { return }
+        let cancel = PendingMissionCommand(
+            kind: .cancel,
+            requestID: RobotController.makeRequestID(prefix: "ios-cancel"),
+            sentAt: Date()
+        )
+        pendingMissionCommand = nil
+        pendingMissionCancel = cancel
+        addLog("Auftrag abbrechen", kind: .emergency)
+        missionCancelTask?.cancel()
+        missionCancelTask = Task { [weak self, task, cancel] in
+            let interval = UInt64(MissionPolicy.cancelResendInterval * 1_000_000_000)
+            while !Task.isCancelled {
+                guard let self, self.pendingMissionCancel == cancel, self.socketTask === task else {
+                    return
+                }
+                if Date().timeIntervalSince(cancel.sentAt) > MissionPolicy.cancelConfirmationTimeout {
+                    self.pendingMissionCancel = nil
+                    self.addLog(
+                        "Der Roboter hat den Abbruch nicht bestätigt. Bitte direkt am Roboter prüfen.",
+                        kind: .error
+                    )
+                    return
+                }
+                do {
+                    try await task.send(.string(
+                        try RosbridgeProtocol.missionCommandFrame(.cancel, requestID: cancel.requestID)
+                    ))
+                    try await Task.sleep(nanoseconds: interval)
+                } catch is CancellationError {
+                    return
+                } catch {
+                    self.handleSocketFailure(task, error: error)
+                    return
+                }
+            }
+        }
+    }
+
+    private func apply(_ status: MissionStatus) {
+        let previous = missionStatusIsFresh ? missionSnapshot : nil
+        missionStatus = status
+        lastMissionStatusAt = Date()
+        missionStatusIsFresh = true
+        missionStatusEverReceived = true
+
+        if let cancel = pendingMissionCancel {
+            switch MissionPolicy.resolution(of: cancel, with: status) {
+            case .confirmed:
+                clearPendingMissionCancel()
+                addLog("Abbruch bestätigt – kein Auftrag läuft", kind: .success)
+            case let .refused(message):
+                clearPendingMissionCancel()
+                addLog("Abbruch abgelehnt: \(message)", kind: .error)
+            case .stillPending:
+                break
+            }
+        }
+        if let command = pendingMissionCommand {
+            switch MissionPolicy.resolution(of: command, with: status) {
+            case .confirmed:
+                pendingMissionCommand = nil
+            case let .refused(message):
+                pendingMissionCommand = nil
+                addLog("Fahrt abgelehnt: \(message)", kind: .warning)
+            case .stillPending:
+                break
+            }
+        }
+
+        let current = status.mission
+        guard let previous, previous.state != current.state else { return }
+        let text = MissionText.state(current)
+        switch current.state {
+        case .running:
+            addLog(text, kind: .info)
+        case .succeeded:
+            addLog(text, kind: .success)
+        case .failed, .canceled:
+            let reason = MissionText.result(current.result).map { " – \($0)" } ?? ""
+            addLog(text + reason, kind: current.state == .failed ? .warning : .info)
+        case .idle:
+            break
+        }
+    }
+
+    private func clearPendingMissionCancel() {
+        pendingMissionCancel = nil
+        missionCancelTask?.cancel()
+        missionCancelTask = nil
+    }
+
+    // MARK: - Stopp
+
     /// Fordert das Anhalten und Beenden des Kartiermodus an und wiederholt die
     /// Anforderung, bis der Roboter „aus“ bestätigt oder die Frist abläuft.
+    /// Läuft ein Auftrag, wird er ebenfalls abgebrochen.
     func requestStop() {
+        if missionCancelIsOffered {
+            cancelMission()
+        }
         guard pendingStop == nil else { return }
         guard let task = readySocket() else { return }
 
@@ -489,6 +657,8 @@ final class RobotController: NSObject, ObservableObject {
             switch event {
             case let .mappingModeStatus(status):
                 apply(status)
+            case let .missionStatus(status):
+                apply(status)
             }
         } catch {
             addProtocolError(error.localizedDescription)
@@ -523,12 +693,34 @@ final class RobotController: NSObject, ObservableObject {
             mappingStatusIsFresh = false
             addLog("Der Status des Kartiermodus ist veraltet", kind: .warning)
         }
+
+        if let command = pendingMissionCommand,
+           now.timeIntervalSince(command.sentAt) > MissionPolicy.commandConfirmationTimeout {
+            pendingMissionCommand = nil
+            addLog("Keine Bestätigung für die Fahrt erhalten", kind: .warning)
+        }
+
+        if missionStatusIsFresh,
+           now.timeIntervalSince(lastMissionStatusAt ?? .distantPast) > MissionPolicy.staleAfter {
+            missionStatusIsFresh = false
+            addLog("Der Auftragsstatus ist veraltet", kind: .warning)
+        }
     }
 
     private func markTelemetryUnknown() {
         mappingStatusIsFresh = false
         lastStatusReceivedAt = nil
         pendingCommand = nil
+        missionStatusIsFresh = false
+        lastMissionStatusAt = nil
+        pendingMissionCommand = nil
+        if pendingMissionCancel != nil {
+            clearPendingMissionCancel()
+            addLog(
+                "Verbindung verloren, bevor der Abbruch bestätigt wurde. Bitte direkt am Roboter prüfen.",
+                kind: .error
+            )
+        }
         if pendingStop != nil {
             clearPendingStop()
             addLog(

@@ -17,6 +17,9 @@ struct DashboardView: View {
                     header
                     connectionCard
                     mappingCard
+                    if controller.missionStatusEverReceived {
+                        missionCard
+                    }
                     stopSection
                     stepsCard
                     logCard
@@ -225,11 +228,76 @@ struct DashboardView: View {
         }
     }
 
+    // MARK: - Auftrag
+
+    private var missionCard: some View {
+        RobotCard {
+            VStack(alignment: .leading, spacing: 10) {
+                HStack {
+                    Label("Auftrag", systemImage: "location.fill")
+                        .font(.subheadline.weight(.semibold))
+                    Spacer()
+                    Label(
+                        controller.missionStatusIsFresh ? "live" : "unbekannt",
+                        systemImage: controller.missionStatusIsFresh
+                            ? "checkmark.circle.fill"
+                            : "clock.badge.exclamationmark"
+                    )
+                    .font(.caption)
+                    .foregroundStyle(
+                        controller.missionStatusIsFresh ? RobotPalette.success : RobotPalette.muted
+                    )
+                }
+
+                if controller.missionStatusIsFresh, let snapshot = controller.missionSnapshot {
+                    Text(MissionText.state(snapshot))
+                        .font(.headline)
+                    if let phase = MissionText.phase(snapshot) {
+                        Text(phase)
+                            .font(.caption)
+                            .foregroundStyle(RobotPalette.muted)
+                    }
+                    if let result = MissionText.result(snapshot.result) {
+                        Text(result)
+                            .font(.caption)
+                            .foregroundStyle(RobotPalette.highlight)
+                    }
+                    if snapshot.state != .running,
+                       let reason = MissionText.blockReason(controller.missionStatus?.startBlockReason) {
+                        Label(reason, systemImage: "info.circle")
+                            .font(.caption)
+                            .foregroundStyle(RobotPalette.highlight)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                } else {
+                    Text("Zustand unbekannt")
+                        .font(.headline)
+                        .foregroundStyle(RobotPalette.muted)
+                }
+
+                if controller.missionCancelIsOffered {
+                    PrimaryActionButton(
+                        title: controller.pendingMissionCancel != nil ? "Wird abgebrochen …" : "Auftrag abbrechen",
+                        systemImage: "xmark.circle.fill",
+                        enabled: controller.pendingMissionCancel == nil
+                    ) {
+                        emergencyHaptic()
+                        controller.cancelMission()
+                    }
+                } else {
+                    Text("Fahrziele wählen Sie im Tab Karte an einem Raum mit Fahrziel.")
+                        .font(.caption)
+                        .foregroundStyle(RobotPalette.muted)
+                }
+            }
+        }
+    }
+
     private var stopSection: some View {
         VStack(spacing: 7) {
             StopButton(
-                pending: controller.stopIsPending,
-                enabled: controller.stopIsOffered
+                pending: controller.stopIsPending || controller.pendingMissionCancel != nil,
+                enabled: controller.stopIsOffered || controller.missionCancelIsOffered
             ) {
                 emergencyHaptic()
                 controller.requestStop()

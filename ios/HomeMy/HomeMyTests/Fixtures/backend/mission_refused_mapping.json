@@ -1,0 +1,7 @@
+{
+ "msg": {
+  "data": "{\"schema_version\": 1, \"event\": \"go_to_room_result\", \"ok\": false, \"request_id\": \"ios-go-3\", \"message\": \"Fahrt nicht möglich: mapping_active\", \"mission\": {\"state\": \"canceled\", \"command\": \"go_to_room\", \"room_id\": \"kueche\", \"room_name\": \"Küche\", \"phase\": \"canceled\", \"attempt\": 1, \"max_attempts\": 3, \"distance_remaining_m\": 6.09, \"result\": \"app_cancel\"}, \"start_block_reason\": \"mapping_active\", \"time\": 1795110841.5338204}"
+ },
+ "op": "publish",
+ "topic": "/homemy/mission/status_json"
+}

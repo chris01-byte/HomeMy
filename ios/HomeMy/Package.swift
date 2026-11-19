@@ -41,6 +41,7 @@ let package = Package(
             ],
             sources: [
                 "Models/RobotModels.swift",
+                "Models/MissionModels.swift",
                 "Models/RobotMapModels.swift",
                 "Services/RosbridgeProtocol.swift",
                 "Services/MapRosbridgeProtocol.swift"
