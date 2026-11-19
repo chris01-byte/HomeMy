@@ -116,9 +116,10 @@ Software stage S1 of the concept (robot side of the app) is done in simulation. 
 - HWT601 mount location, supply, third serial adapter, axis mapping, and behavior on IMU loss.
 - Manual-drive contract: proven stop on controller loss with a direction held, mapping speeds, backing out of a protection stop, controller pairing in customer mode, automatic end of mapping mode, and behavior when the app disconnects.
 - Whether HomeMy needs a tilt-based scan gate on tile joints; to be measured on the built chassis.
-- App bridge access control, customer network setup, and moving rooms to a new map version after remapping. The app cannot yet save a second map once rooms exist.
+- App bridge access control and customer network setup before customer use. The laboratory prototype runs without access control by owner decision (2026-11-19).
+- Moving rooms to a new map version after remapping. The app cannot save a second map once rooms exist; the owner accepted this for the prototype (2026-11-19).
 - Measured LiDAR mask sectors and margins for the slotted base ring (L4); the recorded values are CAD predictions.
-- The OAK-D-S2 is mounted tiltable. Whether the tilt is set by hand or by a motor is open; it decides whether the camera transform is a calibrated constant or a measured joint.
+- OAK-D-S2 tilt check: the tilt is set by hand (owner decision 2026-11-19), so the camera transform is a calibrated constant. The threshold of the proposed start-up floor-plane check is open.
 - Gripper details: a two-jaw parallel gripper is decided; drive, sensors, and interface are open.
 - Bounds of each healing step and the clear time before motion continues after a protection stop.
 - Exact local model implementations, accelerator, ROS interfaces, and validation thresholds for semantic perception and grasping.

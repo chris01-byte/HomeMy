@@ -16,7 +16,7 @@ It does not define manual driving itself. Controller input, speed limits, the mo
 - The app sends no motor commands and publishes to no velocity topic.
 - The bridge listens on the loopback interface by default. Opening it to the network is an explicit launch argument.
 - The bridge accepts only the topics in the table below: the app may publish to the three command topics and subscribe to the three status topics and `/map`. Services and actions are refused. A velocity command cannot pass the bridge.
-- This version has no authentication and no encryption. It is for a trusted laboratory network only. Authentication is required before customer use, because the mapping-mode switch travels over this bridge.
+- This version has no authentication and no encryption. By owner decision of 2026-11-19 the laboratory prototype runs without access control, on a trusted laboratory network only. Authentication is required before customer use, because the mapping-mode switch travels over this bridge.
 
 ## Topics
 
@@ -133,7 +133,7 @@ Commands the app sends:
 
 The app binds rooms fail-closed: live map, map store, and room overlay must report the same map fingerprint, otherwise room editing stays locked.
 
-Not yet covered: saving a second map after rooms exist, and moving rooms to a new map version.
+Not yet covered: saving a second map after rooms exist, and moving rooms to a new map version. The owner accepted this limit for the prototype on 2026-11-19.
 
 ## Failure Behavior
 

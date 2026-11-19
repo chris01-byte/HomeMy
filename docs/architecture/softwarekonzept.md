@@ -332,7 +332,17 @@ S0 bis S4 können sofort beginnen und brauchen weder Fahrgestell noch PMU. S1 is
 | E8 | Zuerst nur der rechte Arm. Der zweite folgt in V4. |
 | E9 | ROS 2 Jazzy auf Ubuntu 24.04. |
 | E10 | Entwickelt und simuliert wird in Cloud-Sitzungen. Ein eigener Rechner mit Ubuntu 24.04 wird erst für die Arbeit am Roboter nötig. |
-| E11 | Oben am Roboter sitzt eine OAK-D-S2 wie bei Amadeus, weil die OAK 4D nicht lieferbar ist (`docs/decisions/2026-11-17-oak-d-s2-camera.md`). Sie ist neigbar montiert. Ob von Hand oder mit Motor geneigt, ist offen. |
+| E11 | Oben am Roboter sitzt eine OAK-D-S2 wie bei Amadeus, weil die OAK 4D nicht lieferbar ist (`docs/decisions/2026-11-17-oak-d-s2-camera.md`). Sie ist neigbar montiert. |
+
+### Entschieden am 19.11.2026
+
+| Nr. | Entscheidung |
+| --- | --- |
+| E13 | Die Neigung der OAK wird von Hand eingestellt. Der Winkel ist ein eingemessener Wert im Robotermodell und wird nach jeder Änderung neu gemessen. |
+| E14 | Der Prototyp im Labor läuft ohne Zugriffsschutz der App-Verbindung. Vor dem Einsatz beim Kunden kommt er dazu. |
+| E15 | Eine zweite Karte nach dem Anlegen von Räumen ist für den Prototyp nicht nötig. |
+| E16 | Den Zustand des Roboters zeigt das LED-Band. Ein Bildschirm ist nicht vorgesehen. |
+| E17 | Der Controller ist ein DualShock 4 (CUH-ZCT2E) über Bluetooth. Die Software sieht von ihm nur Änderungen; der ROS-Treiber wiederholt den letzten Zustand, auch nachdem die Funkverbindung abgerissen ist, bis Linux den Abriss bemerkt. Die Fahrt mit dem Controller braucht deshalb eine eigene Funküberwachung (`contracts/hardware/manual-drive.md`). |
 
 ## 11. Risiken und offene Messungen
 

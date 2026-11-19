@@ -28,8 +28,8 @@ colcon test --base-paths src
 
 ## Appliance Roles Planned
 
-- homemy_boot_manager: lifecycle state machine, bounded health checks, and customer-mode readiness decision.
-- homemy_status_display: customer-visible state, error code, message, and next action.
+- homemy_boot_manager: lifecycle state machine, bounded health checks, and customer-mode readiness decision. It publishes the lifecycle state that the ESP32 shows on the LED strip.
+- homemy_power_link: heartbeat and lifecycle state to the ESP32 in the power management unit, which drives the LED strip. Error code, message, and next action reach the app, not a display.
 - homemy_bringup: local stack composition for developer and customer profiles; it must begin in a safe state.
 
 ROS packages expose explicit startup, readiness, failure, and shutdown behavior. They must not require a desktop session, shell startup file, open terminal, or interactive input.

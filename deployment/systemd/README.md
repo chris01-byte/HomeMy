@@ -8,7 +8,7 @@ This directory will hold HomeMy-owned systemd unit and target templates once the
 
 - homemy.target: customer appliance target.
 - homemy-boot-manager.service: lifecycle state machine and self-test coordinator.
-- homemy-status-display.service: customer-visible state and fault display.
+- homemy-power-link.service: heartbeat and lifecycle state to the ESP32, which shows the state on the LED strip.
 - homemy-local-stack.target: local ROS 2 and hardware services.
 - homemy-ai-health.service: bounded external AI health supervision.
 
@@ -16,7 +16,7 @@ This directory will hold HomeMy-owned systemd unit and target templates once the
 
 Unit files must use explicit paths, a non-interactive service account, deterministic environment files, restart policy, ordered dependencies, and journald logging. They must not depend on a desktop login, shell startup files, a developer terminal, or embedded credentials.
 
-Developer mode stays on graphical.target. Customer mode remains inactive until simulation, cold boot, fault display, safe shutdown, and hardware safety checks have been proven.
+Developer mode stays on graphical.target. Customer mode remains inactive until simulation, cold boot, the LED state, fault reporting, safe shutdown, and hardware safety checks have been proven.
 
 ## Installation Boundary
 

@@ -3,6 +3,8 @@
 Status: accepted.
 Date: 2026-08-28.
 
+> **Update 2026-11-19:** The status display named below was replaced on 2026-09-10 by an addressable LED strip driven by the ESP32 in the PMU (`docs/decisions/2026-09-10-battery-monitor-and-power-architecture.md`); the owner confirmed on 2026-11-19 that HomeMy shows its state on that LED strip. Error codes and plain-language explanations are read through the app and the service interfaces. The text below is kept as recorded.
+
 ## Context
 
 HomeMy must behave as a customer appliance. A customer must be able to use one physical power control without starting a Jetson, Windows host, Ubuntu desktop, terminal, or ROS process. Development still requires the normal Ubuntu desktop, login, VS Code, and diagnostic tools. An external AI server remains in use for now.
