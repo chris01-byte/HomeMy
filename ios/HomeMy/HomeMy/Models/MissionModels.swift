@@ -266,7 +266,7 @@ enum MissionText {
         case "rooms_not_bound":
             return "Die Räume gehören nicht zur geladenen Karte."
         case "not_localized":
-            return "Der Roboter weiß nicht sicher, wo er ist."
+            return "Der Roboter weiß noch nicht sicher, wo er ist. Er sucht seine Position in der Karte; das dauert einige Sekunden."
         case "navigation_unavailable":
             return "Die Wegplanung ist nicht bereit."
         case "room_invalid":

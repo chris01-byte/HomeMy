@@ -175,7 +175,7 @@ Regeln:
 ### 5.6 Standort und Fahren
 
 - **Bewegungsschätzung:** Vorwärtsgeschwindigkeit aus den Radencodern, Drehung aus dem HWT-601. Grund ist der Fugen-Befund bei Amadeus.
-- **Standort auf der gespeicherten Karte:** AMCL, dazu beim Start eine Suche über die ganze Karte im Stand und ein Wächter, der „Standort sicher“ meldet. So hat es bei Amadeus funktioniert. **Umgesetzt (19.11.2026, Simulation):** AMCL startet an der letzten SLAM-Lage oder an der zuletzt gesicherten Lage; der Wächter verlangt zusätzlich, dass die LiDAR-Punkte auf die Wände der Karte passen. Die Suche über die ganze Karte fehlt noch.
+- **Standort auf der gespeicherten Karte:** AMCL, dazu beim Start eine Suche über die ganze Karte im Stand und ein Wächter, der „Standort sicher“ meldet. So hat es bei Amadeus funktioniert. **Umgesetzt (19.11.2026, Simulation):** AMCL startet an der letzten SLAM-Lage oder an der zuletzt gesicherten Lage; der Wächter verlangt zusätzlich, dass die LiDAR-Punkte auf die Wände der Karte passen. Seit dem 19.11.2026 sucht der Roboter die ganze Karte ab, wenn der Scan nicht zur vermuteten Lage passt oder keine Lage bekannt ist (Code aus Amadeus, `src/homemy_navigation`).
 - **Wegplanung:** Nav2 mit denselben Planern wie bei Amadeus als Startpunkt (A* und Regulated Pure Pursuit).
 - **Fahrumriss:** 500 × 400 mm Grundfläche, zuzüglich Arme in Fahrhaltung und beim Tragen zuzüglich Gegenstand.
 - **Vorteil von HomeMy:** 326° freie LiDAR-Sicht statt 292° bei Amadeus.
@@ -280,7 +280,7 @@ Geplante Pakete:
 | --- | --- | --- | --- |
 | S0 | Arbeitsumgebung, Schnittstellenpaket, Robotermodell, Prüfstand | nein | leeres System startet in der Simulation |
 | S1 | Roboterseite der App: Kartenspeicher, Räume, Kartiermodus | nein | App läuft gegen echtes ROS statt gegen den Mock. **In der Simulation erledigt am 17.11.2026.** |
-| S2 | Fahren in der Simulation: Antrieb, Standort, Wegplanung, Freigabe, Auftrag „Fahre zu“ | nein | V1 in der Simulation. **Erledigt am 19.11.2026:** Robotermodell, Prüfstand, Controller-Fahrt über die Bewegungsfreigabe, Kartierfahrt mit slam_toolbox, Umschalten auf die gespeicherte Karte mit AMCL, „Fahre zu Raum“ aus der App. Offen: Suche über die ganze Karte beim Start. |
+| S2 | Fahren in der Simulation: Antrieb, Standort, Wegplanung, Freigabe, Auftrag „Fahre zu“ | nein | V1 in der Simulation. **Erledigt am 19.11.2026:** Robotermodell, Prüfstand, Controller-Fahrt über die Bewegungsfreigabe, Kartierfahrt mit slam_toolbox, Umschalten auf die gespeicherte Karte mit AMCL, „Fahre zu Raum“ aus der App, Selbstfinden in der Karte nach dem Versetzen. |
 | S3 | Arm in der Simulation: Modell, Bewegungsplanung, Haltungen, Greifen an bekannter Lage | nein | Arm greift simuliert |
 | S4 | Hol-Auftrag in der Simulation mit künstlichen Bildern | nein | V2 in der Simulation |
 | S5 | Fahrwerk in Betrieb: Antrieb, LiDAR, IMU, Controller-Fahrt, Kartieren | Fahrgestell, PMU | echte Karte |

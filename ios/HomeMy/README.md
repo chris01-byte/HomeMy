@@ -15,7 +15,7 @@ Die App beruht auf der Amadeus-App (`ios/Robotersteuerung` in roboter_ws, Commit
 - Live-Karte mit Zoom, Verschieben und Drehen.
 - Karte speichern, sobald der Kartiermodus beendet ist.
 - Räume als Flächen einzeichnen, benennen, optional mit Fahrziel und Blickrichtung, und wieder löschen.
-- Zu einem Raum fahren lassen: „Hinfahren“ am gewählten Raum mit Fahrziel. Die Auftragskarte im Tab **Roboter** zeigt Ziel, Fortschritt und Ergebnis und bietet „Auftrag abbrechen“. Ist eine Fahrt nicht möglich, nennt sie den Grund, zum Beispiel „Der Roboter weiß nicht sicher, wo er ist.“
+- Zu einem Raum fahren lassen: „Hinfahren“ am gewählten Raum mit Fahrziel. Die Auftragskarte im Tab **Roboter** zeigt Ziel, Fortschritt und Ergebnis und bietet „Auftrag abbrechen“. Ist eine Fahrt nicht möglich, nennt sie den Grund, zum Beispiel dass der Roboter seine Position in der Karte noch sucht.
 
 ## Was die App nicht kann
 

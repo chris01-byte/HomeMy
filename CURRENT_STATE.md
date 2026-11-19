@@ -63,7 +63,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 
 ## Next Safe Step
 
-Software stages S1 (robot side of the app) and S2 (driving in simulation: mapping with the controller, localization on the saved map, drive to a room from the app) are done in simulation. Open in S2: a global position search at start-up like Amadeus' scan localizer, and repeatability over several starts and rooms. Stages S3 (arm in simulation) and S4 (fetch mission in simulation) also need no hardware; the PMU steps below need the hardware.
+Software stages S1 (robot side of the app) and S2 (driving in simulation: mapping with the controller, localization on the saved map, drive to a room from the app) are done in simulation. The robot finds itself on the saved map after it was moved, by a search over the whole map ported from Amadeus. Open in S2: repeatability over several starts and rooms on a real map. Next, by owner decision: the drivers for drive, LiDAR, and IMU. Stages S3 (arm in simulation) and S4 (fetch mission in simulation) also need no hardware; the PMU steps below need the hardware.
 
 1. Start GPT Astra with `hardware/power-management-unit/ASTRA_START_PROMPT.md` and have it complete the Revision-A hierarchical KiCad schematic, exact prototype-part selection, routed PCB, BOM, calculations, assumptions record, and prototype fabrication package.
 2. Review Astra's schematic, BOM, layout, ERC/DRC, component data, current-path calculations, and conservative Revision-A assumptions before ordering the prototype. Missing post-build measurements do not block this step.
@@ -120,7 +120,7 @@ Software stages S1 (robot side of the app) and S2 (driving in simulation: mappin
 - Final RobStride joint selection/reduction, USB-CAN adapter, CAN identifiers/message contract, and RS485 addressing/update rates.
 - HWT601 mount location, supply, third serial adapter, axis mapping, and behavior on IMU loss.
 - Manual driving (`contracts/hardware/manual-drive.md`, proposed): as simple as on Amadeus, without radio-link supervision (owner decision 2026-11-19). Open: axis numbers, mapping speeds, stopping distances, how long the robot keeps driving after a silent radio loss with a direction held, and re-pairing for the customer (steps M1 to M4).
-- Localization at start-up when the robot was moved while off: the stored pose is then rejected (scan check) and the robot reports "not localized"; a global search over the map is still to be ported from Amadeus.
+- Global position search: the uniqueness margin (5 % instead of Amadeus' 15 %) and the other thresholds are simulation values, to be confirmed on a real map; rooms that look the same from everywhere stay ambiguous.
 - Motion gate (`contracts/ros/motion-gate.md`, proposed): margins, horizon, and clear time of the reactive protection; an obstacle memory for the blind sectors; the arm side; the link to the PMU motion gate.
 - Whether HomeMy needs a tilt-based scan gate on tile joints; to be measured on the built chassis.
 - App bridge access control and customer network setup before customer use. The laboratory prototype runs without access control by owner decision (2026-11-19).
