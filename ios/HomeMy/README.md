@@ -33,7 +33,7 @@ Die App beruht auf der Amadeus-App (`ios/Robotersteuerung` in roboter_ws, Commit
 
 ## Auf dem iPhone installieren
 
-Das geht nur mit Xcode auf einem Mac. Das iPhone ist per Kabel verbunden, und der Entwicklermodus ist eingeschaltet (Einstellungen → Datenschutz & Sicherheit → Entwicklermodus).
+Das geht nur mit Xcode auf einem Mac. Ein Agent auf dem Mac kann das übernehmen: `docs/runbooks/install-app-on-iphone.md`. Das iPhone ist per Kabel verbunden, und der Entwicklermodus ist eingeschaltet (Einstellungen → Datenschutz & Sicherheit → Entwicklermodus).
 
 1. Den Stand mit der App auf den Mac holen. Solange er nicht auf `main` liegt, ist das der Arbeits-Branch:
 
