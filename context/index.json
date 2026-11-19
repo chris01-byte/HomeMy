@@ -44,7 +44,8 @@
       "files": [
         "contracts/hardware/lidar-commissioning.md",
         "docs/decisions/2026-11-16-lidar-slot-and-support-webs.md",
-        "integration/roboter_ws/TRANSFER_MANIFEST.md"
+        "integration/roboter_ws/TRANSFER_MANIFEST.md",
+        "src/homemy_lidar_bringup/README.md"
       ]
     },
     "navigation": {
@@ -151,6 +152,29 @@
       "files": [
         "docs/decisions/README.md",
         "CURRENT_STATE.md"
+      ]
+    },
+    "manual-drive": {
+      "when": "driving with the DualShock 4 controller, teleop, radio-link watchdog, joy_node, controller loss, motion gate, reactive protection, or cmd_vel ownership",
+      "files": [
+        "contracts/hardware/manual-drive.md",
+        "contracts/ros/motion-gate.md",
+        "src/homemy_motion_gate/README.md"
+      ]
+    },
+    "simulation": {
+      "when": "test stand, simulated drive, LiDAR or IMU, test apartment world, simulated operator, drive_sim profile, SLAM mapping in simulation, or end-to-end driving tests",
+      "files": [
+        "src/homemy_simulation/README.md",
+        "src/homemy_bringup/README.md",
+        "src/homemy_navigation/README.md"
+      ]
+    },
+    "robot-model": {
+      "when": "robot model, URDF, frames, base_link, CAD dimensions, footprint, OAK tilt in the model",
+      "files": [
+        "src/homemy_description/README.md",
+        "src/homemy_description/config/geometry.yaml"
       ]
     }
   }

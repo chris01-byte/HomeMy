@@ -2,7 +2,7 @@
 
 ## Phase
 
-Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The onboard Linux lifecycle, one-button customer behavior, coarse LED status, battery monitor, electronic main power path, reverse-current blocking, and initial protection thresholds are recorded as accepted architecture. This central subsystem is named the HomeMy Power Management Unit (PMU). A consolidated GPT Astra handoff now authorizes a complete Revision-A engineering prototype and separates its design/order gates from the measurements that gate a later Revision-B production design. The KiCad design, exact Revision-A component selections, firmware, systemd units, and real-hardware validation remain pending. The robot side of the app runs in simulation under ROS 2 Jazzy (`src/`): map store and room overlay ported from Amadeus, a new mapping-mode manager, simulation stand-ins, and an end-to-end test over the real bridge. No driver exists and nothing can move.
+Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The onboard Linux lifecycle, one-button customer behavior, coarse LED status, battery monitor, electronic main power path, reverse-current blocking, and initial protection thresholds are recorded as accepted architecture. This central subsystem is named the HomeMy Power Management Unit (PMU). A consolidated GPT Astra handoff now authorizes a complete Revision-A engineering prototype and separates its design/order gates from the measurements that gate a later Revision-B production design. The KiCad design, exact Revision-A component selections, firmware, systemd units, and real-hardware validation remain pending. The robot side of the app runs in simulation under ROS 2 Jazzy (`src/`). Software stage S2 has begun: in a test stand ported from Amadeus, HomeMy is driven with the simulated controller through the real teleop profile, motion gate, and blind-sector mask, and maps a synthetic four-room apartment with slam_toolbox. No hardware driver exists; nothing can move a real motor.
 
 ## Goal
 
@@ -55,14 +55,14 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - The repository is public; it contains no secrets, home data, maps, camera data, or deployment configuration.
 - The default execution mode is simulation or motorless validation.
 - No systemd unit, actuator, sensor, PMU KiCad design, map, home data, or deployment configuration is tracked here.
-- Ported or written code: the iPhone app (`ios/HomeMy/`) and five ROS 2 packages in `src/` for the robot side of the app. None of them drives a motor or publishes a velocity command, and the app bridge refuses every topic outside the app contract.
+- Ported or written code: the iPhone app (`ios/HomeMy/`) and ten ROS 2 packages in `src/`. None contains a hardware driver. The motion gate is the only velocity publisher; in the `drive_sim` profile its commands reach the simulated drive. The app bridge refuses every topic outside the app contract.
 - The proposed transfer baseline is roboter_ws main commit `05439c7a13d7a92e69b9eb4663e3a2a1b44626a1`.
 - Customer mode is not enabled as the default boot target.
 - Battery/power values are architecture and initial commissioning thresholds only; no hardware protection validation has been performed.
 
 ## Next Safe Step
 
-Software stage S1 of the concept (robot side of the app) is done in simulation. The next software stages S2 to S4 also need no hardware; the PMU steps below need the hardware.
+Software stage S1 (robot side of the app) is done in simulation. Stage S2 (driving in simulation) has its mapping part done: robot model, test stand, manual-drive and motion-gate contracts, and a full mapping run in simulation. Its remaining part is driving to a room from the app: localization on the saved map, Nav2, and the drive mission. Stages S3 and S4 also need no hardware; the PMU steps below need the hardware.
 
 1. Start GPT Astra with `hardware/power-management-unit/ASTRA_START_PROMPT.md` and have it complete the Revision-A hierarchical KiCad schematic, exact prototype-part selection, routed PCB, BOM, calculations, assumptions record, and prototype fabrication package.
 2. Review Astra's schematic, BOM, layout, ERC/DRC, component data, current-path calculations, and conservative Revision-A assumptions before ordering the prototype. Missing post-build measurements do not block this step.
@@ -101,6 +101,9 @@ Software stage S1 of the concept (robot side of the app) is done in simulation. 
 21. `docs/architecture/softwarekonzept.md` for the draft software concept (German): drive to rooms, fetch and bring objects on command from the app.
 22. `docs/decisions/2026-11-17-self-healing-and-latching.md` for what latches the robot and what heals by itself.
 23. `docs/decisions/2026-11-17-oak-d-s2-camera.md` for the camera on top of the robot.
+24. `contracts/hardware/manual-drive.md` and `contracts/ros/motion-gate.md` for driving with the controller and the one place that lets drive commands through.
+25. `src/homemy_simulation/README.md` and `src/homemy_bringup/README.md` for the test stand and the `drive_sim` profile.
+26. `src/homemy_description/README.md` for the robot model and its frames.
 
 ## Open Decisions
 
@@ -114,7 +117,8 @@ Software stage S1 of the concept (robot side of the app) is done in simulation. 
 - Exact HomeMy chassis, wheel, drive-train, LiDAR-frame, OAK-frame, sensor-mount, protection-volume, arm-mass, joint-speed, and footprint measurements.
 - Final RobStride joint selection/reduction, USB-CAN adapter, CAN identifiers/message contract, and RS485 addressing/update rates.
 - HWT601 mount location, supply, third serial adapter, axis mapping, and behavior on IMU loss.
-- Manual-drive contract: proven stop on controller loss with a direction held, mapping speeds, backing out of a protection stop, controller pairing in customer mode, automatic end of mapping mode, and behavior when the app disconnects.
+- Manual driving (`contracts/hardware/manual-drive.md`, proposed): the radio-link watchdog's report rate and timeout on the real DualShock 4, stopping distance on radio loss, mapping speeds, and re-pairing for the customer (steps M1 to M5).
+- Motion gate (`contracts/ros/motion-gate.md`, proposed): margins, horizon, and clear time of the reactive protection; an obstacle memory for the blind sectors; the arm side; the link to the PMU motion gate.
 - Whether HomeMy needs a tilt-based scan gate on tile joints; to be measured on the built chassis.
 - App bridge access control and customer network setup before customer use. The laboratory prototype runs without access control by owner decision (2026-11-19).
 - Moving rooms to a new map version after remapping. The app cannot save a second map once rooms exist; the owner accepted this for the prototype (2026-11-19).

@@ -9,10 +9,15 @@ HomeMy-owned ROS 2 packages for ROS 2 Jazzy. Package names and boundaries follow
 | `homemy_map_manager` | versioned map store for the app | ported from Amadeus `robot_map_manager` at `05439c7` |
 | `homemy_room_manager` | rooms drawn in the app, bound to one map version | ported from Amadeus `semantic_map_manager` at `05439c7` |
 | `homemy_mapping_mode` | mapping mode switched from the app | new |
-| `homemy_simulation` | stand-ins for SLAM, controller, and lifecycle; simulation only | new |
-| `homemy_bringup` | launch profiles `app_backend` and `app_sim`, end-to-end test | new |
+| `homemy_description` | robot model (URDF) with CAD dimensions | new |
+| `homemy_manual_drive` | controller profile and radio-link watchdog | profile ported from Amadeus `robot_bringup` at `05439c7`; watchdog new |
+| `homemy_motion_gate` | the one place that lets drive commands through, with reactive obstacle protection | rewritten after Amadeus `cmd_vel_mission_gate` at `05439c7` |
+| `homemy_lidar_bringup` | blind-sector mask for the STL-27L scan | new |
+| `homemy_navigation` | slam_toolbox profile for the mapping run | settings from Amadeus at `05439c7` and `940a748` |
+| `homemy_simulation` | test stand (simulated drive, LiDAR, odometry, IMU), simulated controller and operator, lifecycle and emergency-stop stub, synthetic map; simulation only | test stand ported from the Amadeus test stand at `940a748`; rest new |
+| `homemy_bringup` | launch profiles `app_backend`, `app_sim`, `drive_sim`; end-to-end tests | new |
 
-None of them drives a motor or publishes a velocity command. They implement `contracts/api/app-bridge.md`.
+No package contains a hardware driver. The only velocity publisher is the motion gate; in the `drive_sim` profile its commands reach the simulated drive. Contracts: `contracts/api/app-bridge.md`, `contracts/hardware/manual-drive.md`, `contracts/ros/motion-gate.md`.
 
 ```bash
 colcon build --base-paths src

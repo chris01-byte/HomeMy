@@ -1,6 +1,6 @@
 # Softwarekonzept HomeMy
 
-Status: Entwurf zur Abstimmung mit dem Projektinhaber. Die Grundsatzfragen sind entschieden (Abschnitt 10). Programmiert ist Stufe S1 (Roboterseite der App), in der Simulation getestet.
+Status: Entwurf zur Abstimmung mit dem Projektinhaber. Die Grundsatzfragen sind entschieden (Abschnitt 10). Programmiert und in der Simulation getestet sind Stufe S1 (Roboterseite der App) und der Kartier-Teil von Stufe S2.
 Stand: 17.11.2026.
 
 Dieses Dokument ist bewusst auf Deutsch geschrieben, weil es die Referenz für den Projektinhaber ist. Die Verträge unter `contracts/` bleiben englisch und legen später jede Schnittstelle im Detail fest. Das Konzept gibt die Richtung vor, die Verträge die Regeln.
@@ -163,14 +163,14 @@ Regeln:
 - Die Freigabe wirkt doppelt: in der Software und über das Bewegungs-Gate der PMU.
 - Ein Leistungswächter hält den Batteriestrom unter 45 A, wie in der PMU-Planung vorgesehen. „Entweder fahren oder greifen“ erleichtert das.
 
-**Herkunft:** `cmd_vel_mission_gate` von Amadeus für das Fahrwerk. Die Arm-Seite ist neu.
+**Herkunft:** `cmd_vel_mission_gate` von Amadeus für das Fahrwerk, neu geschrieben für HomeMy: Bei Amadeus lief der Controller nie über die Freigabe. Die Arm-Seite ist neu. Umgesetzt und in der Simulation geprüft ist die Fahrwerk-Seite (`src/homemy_motion_gate`, 19.11.2026).
 
 ### 5.5 Reaktiver Schutz
 
 - **Aufgabe:** Anhalten, wenn etwas im Weg ist, und weiterfahren lassen, wenn der Weg wieder frei ist.
 - **Quellen:** LiDAR durch den Schlitz mit sechs bekannten blinden Sektoren, dazu die Tiefe der OAK für höhere Hindernisse.
 - **Bekannte Lücken:** Hindernisse unter der Scanebene von 164 mm sieht der LiDAR nicht. Auf Armhöhe gibt es beim Fahren keinen Sensor. Für Labor und Prototyp ist das nach deiner Aussage akzeptiert.
-- **Herkunft:** `nav2_collision_monitor` wie bei Amadeus, aber ohne VL53.
+- **Herkunft:** Geplant war `nav2_collision_monitor` wie bei Amadeus. Umgesetzt ist eine eigene Prüfung in der Bewegungsfreigabe (19.11.2026): Sie fährt den Umriss eine Sekunde entlang des Befehls voraus und sperrt nur Bewegung auf ein Hindernis zu. Zurücksetzen bleibt so möglich, und die Wartezeit vor dem Weiterfahren liegt an einer Stelle (`contracts/ros/motion-gate.md`). Bei Amadeus sperrte die feste Stopp-Zone des Kollisionsmonitors auch das Zurücksetzen, und der Roboter steckte fest.
 
 ### 5.6 Standort und Fahren
 
@@ -280,7 +280,7 @@ Geplante Pakete:
 | --- | --- | --- | --- |
 | S0 | Arbeitsumgebung, Schnittstellenpaket, Robotermodell, Prüfstand | nein | leeres System startet in der Simulation |
 | S1 | Roboterseite der App: Kartenspeicher, Räume, Kartiermodus | nein | App läuft gegen echtes ROS statt gegen den Mock. **In der Simulation erledigt am 17.11.2026.** |
-| S2 | Fahren in der Simulation: Antrieb, Standort, Wegplanung, Freigabe, Auftrag „Fahre zu“ | nein | V1 in der Simulation |
+| S2 | Fahren in der Simulation: Antrieb, Standort, Wegplanung, Freigabe, Auftrag „Fahre zu“ | nein | V1 in der Simulation. **Teil Kartieren erledigt am 19.11.2026:** Robotermodell, Prüfstand, Controller-Fahrt über die Bewegungsfreigabe, Kartierfahrt mit slam_toolbox. |
 | S3 | Arm in der Simulation: Modell, Bewegungsplanung, Haltungen, Greifen an bekannter Lage | nein | Arm greift simuliert |
 | S4 | Hol-Auftrag in der Simulation mit künstlichen Bildern | nein | V2 in der Simulation |
 | S5 | Fahrwerk in Betrieb: Antrieb, LiDAR, IMU, Controller-Fahrt, Kartieren | Fahrgestell, PMU | echte Karte |
