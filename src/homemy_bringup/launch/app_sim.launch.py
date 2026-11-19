@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """The robot side of the app in simulation, without any hardware.
 
-Adds stand-ins for SLAM, the controller, and the lifecycle manager. Maps and
+Adds stand-ins for SLAM and the controller, and the lifecycle bridge. Maps and
 rooms are stored in a separate simulation folder by default.
 
     ros2 launch homemy_bringup app_sim.launch.py
@@ -75,10 +75,12 @@ def generate_launch_description():
                     }
                 ],
             ),
+            # The lifecycle state and the emergency-stop signal are bridged with
+            # fixed values while the PMU does not exist (homemy_boot_manager).
             Node(
-                package="homemy_simulation",
-                executable="lifecycle_stub",
-                name="homemy_lifecycle_stub",
+                package="homemy_boot_manager",
+                executable="lifecycle_bridge",
+                name="lifecycle_bridge",
                 output="screen",
             ),
             # The map manager reports the robot pose from map -> base_link.

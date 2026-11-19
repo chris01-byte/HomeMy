@@ -28,7 +28,6 @@ setup(
         "console_scripts": [
             "synthetic_map = homemy_simulation.synthetic_map_node:main",
             "sim_controller = homemy_simulation.sim_controller_node:main",
-            "lifecycle_stub = homemy_simulation.lifecycle_stub_node:main",
             "sim_base = homemy_simulation.sim_base_node:main",
         ],
     },

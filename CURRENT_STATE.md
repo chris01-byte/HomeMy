@@ -35,6 +35,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - The STL-27L sits inside the base at the front and scans through an open slot in the structural acrylic ring, about 164 mm above the floor in the CAD model. Two struts and four slot webs give six predicted blind sectors, 34 degrees in total. A closed acrylic window failed the owner's test.
 - HomeMy has no autonomous exploration. A technician or the customer drives it once through all rooms with the same DualShock gamepad as Amadeus, without a dead-man button by owner decision, to build one map of the home. The controller is wireless and mapping mode is switched on in the app; rooms are then managed in the app as named areas on that saved map, following the Amadeus app concept.
 - A future semantic perception and grasping path selects YOLO or Grounding DINO on demand, uses SAM2 plus local OAK depth, and treats every model output only as a candidate, never as movement authority.
+- Until the PMU exists, the lifecycle manager is bridged: a node reports READY and "emergency stop not pressed" as fixed values and checks nothing (owner decision 2026-11-19, `contracts/ros/system-lifecycle.md`). The stop at the prototype must act on the drive without software.
 - Power-on, restart, and ready state never start motion by themselves. Within an active mission or mode a stop is a pause: only an emergency stop or a hardware fault latches, everything else heals by itself within fixed limits (owner decision 2026-11-17).
 
 ## Active Transfer Scope

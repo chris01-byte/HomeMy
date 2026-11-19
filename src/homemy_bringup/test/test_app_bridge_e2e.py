@@ -247,7 +247,7 @@ def test_disconnected_controller_is_reported(stack, control):
 def test_lifecycle_fault_blocks_and_ends_mapping_mode(stack, control):
     ensure_off(control, "fault")
     assert command(control, "enable", "ios-mode-fault")["mapping_mode"]["state"] == "active"
-    set_parameter(stack, "homemy_lifecycle_stub", "state", "FAULT")
+    set_parameter(stack, "lifecycle_bridge", "state", "FAULT")
     try:
         ended = control.wait_status(
             MODE_STATUS, lambda s: s["mapping_mode"]["last_end_reason"] == "fault"
@@ -257,5 +257,5 @@ def test_lifecycle_fault_blocks_and_ends_mapping_mode(stack, control):
         assert refused["ok"] is False
         assert refused["mapping_mode"]["enable_block_reason"] == "fault"
     finally:
-        set_parameter(stack, "homemy_lifecycle_stub", "state", "READY")
+        set_parameter(stack, "lifecycle_bridge", "state", "READY")
     control.wait_status(MODE_STATUS, lambda s: s["mapping_mode"]["enable_block_reason"] is None)

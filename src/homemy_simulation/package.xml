@@ -6,8 +6,8 @@
   <description>
     HomeMy test stand and simulation stand-ins: a floor-plan world with the
     simulated drive, LiDAR, odometry, and IMU (ported from the Amadeus test
-    stand), a simulated controller and operator, a lifecycle and emergency-stop
-    stub, and a synthetic map. Simulation only; never start these on the robot.
+    stand), a simulated controller and operator, and a synthetic map.
+    Simulation only; never start these on the robot.
   </description>
   <maintainer email="homemy@example.com">HomeMy</maintainer>
   <license>MIT</license>

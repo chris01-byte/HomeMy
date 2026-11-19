@@ -14,7 +14,8 @@ HomeMy-owned ROS 2 packages for ROS 2 Jazzy. Package names and boundaries follow
 | `homemy_motion_gate` | the one place that lets drive commands through, with reactive obstacle protection | rewritten after Amadeus `cmd_vel_mission_gate` at `05439c7` |
 | `homemy_lidar_bringup` | blind-sector mask for the STL-27L scan | new |
 | `homemy_navigation` | slam_toolbox profile for the mapping run | settings from Amadeus at `05439c7` and `940a748` |
-| `homemy_simulation` | test stand (simulated drive, LiDAR, odometry, IMU), simulated controller and operator, lifecycle and emergency-stop stub, synthetic map; simulation only | test stand ported from the Amadeus test stand at `940a748`; rest new |
+| `homemy_boot_manager` | until the PMU exists: a bridge that reports a fixed lifecycle state and a fixed emergency-stop signal | new |
+| `homemy_simulation` | test stand (simulated drive, LiDAR, odometry, IMU), simulated controller and operator, synthetic map; simulation only | test stand ported from the Amadeus test stand at `940a748`; rest new |
 | `homemy_bringup` | launch profiles `app_backend`, `app_sim`, `drive_sim`; end-to-end tests | new |
 
 No package contains a hardware driver. The only velocity publisher is the motion gate; in the `drive_sim` profile its commands reach the simulated drive. Contracts: `contracts/api/app-bridge.md`, `contracts/hardware/manual-drive.md`, `contracts/ros/motion-gate.md`.
@@ -33,7 +34,7 @@ colcon test --base-paths src
 
 ## Appliance Roles Planned
 
-- homemy_boot_manager: lifecycle state machine, bounded health checks, and customer-mode readiness decision. It publishes the lifecycle state that the ESP32 shows on the LED strip.
+- homemy_boot_manager: lifecycle state machine, bounded health checks, and customer-mode readiness decision. It publishes the lifecycle state that the ESP32 shows on the LED strip. Today the package holds only the bridge.
 - homemy_power_link: heartbeat and lifecycle state to the ESP32 in the power management unit, which drives the LED strip. Error code, message, and next action reach the app, not a display.
 - homemy_bringup: local stack composition for developer and customer profiles; it must begin in a safe state.
 

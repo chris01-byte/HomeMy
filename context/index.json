@@ -138,7 +138,8 @@
       "when": "systemd, customer boot, developer mode, status LED, or power-on",
       "files": [
         "contracts/ros/system-lifecycle.md",
-        "contracts/hardware/customer-power-on.md"
+        "contracts/hardware/customer-power-on.md",
+        "src/homemy_boot_manager/README.md"
       ]
     },
     "ai-health": {

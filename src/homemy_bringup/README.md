@@ -5,7 +5,7 @@ Startprofile für HomeMy.
 | Profil | Startet | Wofür |
 | --- | --- | --- |
 | `app_backend.launch.py` | Kartenspeicher, Raumverwaltung, Kartiermodus, App-Brücke | die Roboterseite der App |
-| `app_sim.launch.py` | dasselbe plus Ersatz für SLAM, Controller und Lebenszyklus aus `homemy_simulation` | die App ohne Hardware ausprobieren und testen (Stufe S1) |
+| `app_sim.launch.py` | dasselbe plus Ersatz für SLAM und Controller aus `homemy_simulation` und die Überbrückung des Roboterzustands | die App ohne Hardware ausprobieren und testen (Stufe S1) |
 | `drive_sim.launch.py` | die Roboterseite der App plus Robotermodell, LiDAR-Maske, Bewegungsfreigabe, Controller-Profil, slam_toolbox, Lokalisierungs-Manager mit AMCL, Nav2, Auftragssteuerung, und den Prüfstand mit simuliertem Bediener | Fahren, Kartieren und „Fahre zu Raum“ in der Simulation (Stufe S2) |
 
 Keines der Profile startet einen echten Treiber. Nur in `drive_sim` gibt es einen Fahrbefehl, und der geht an den simulierten Antrieb.

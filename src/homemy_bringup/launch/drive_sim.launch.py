@@ -116,10 +116,12 @@ def generate_launch_description():
                     }
                 ],
             ),
+            # The lifecycle state and the emergency-stop signal are bridged with
+            # fixed values while the PMU does not exist (homemy_boot_manager).
             Node(
-                package="homemy_simulation",
-                executable="lifecycle_stub",
-                name="homemy_lifecycle_stub",
+                package="homemy_boot_manager",
+                executable="lifecycle_bridge",
+                name="lifecycle_bridge",
                 output="screen",
             ),
         ]

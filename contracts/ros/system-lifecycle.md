@@ -1,6 +1,6 @@
 # System Lifecycle Contract
 
-Status: accepted architecture; implementation pending.  
+Status: accepted architecture; implementation pending. Until the PMU exists a bridge with fixed values stands in (section "Bridge Until the PMU Exists").  
 Owner: HomeMy platform.
 
 ## Scope
@@ -50,6 +50,32 @@ The ESP32 owns the physical LED output. Linux reports lifecycle and diagnostic s
 Allowed startup transitions are BOOTING -> SELF_TEST -> READY, BOOTING -> SELF_TEST -> READY_LIMITED, or BOOTING -> SELF_TEST -> FAULT. Any safety-critical loss while running closes the motion gate before recovery, restart, or shutdown is attempted.
 
 READY and READY_LIMITED never imply automatic actuator activation.
+
+## Bridge Until the PMU Exists
+
+Owner decision of 2026-11-19: while the power management unit is not built, the lifecycle manager is bridged, so that the laboratory prototype and the simulation can run.
+
+The node `lifecycle_bridge` (`src/homemy_boot_manager`) publishes two fixed values:
+
+| Topic | Type | Value |
+| --- | --- | --- |
+| `/homemy/lifecycle/state` | `std_msgs/String`, latched, once per second | `READY` |
+| `/homemy/safety/estop` | `std_msgs/Bool`, five times per second | `false`: emergency stop not pressed |
+
+What the bridge does not do:
+
+- It runs no self-test and checks no battery, drive, sensor, or temperature.
+- It exchanges no heartbeat, and the LED strip shows nothing, because both need the ESP32.
+- It reports no real emergency stop: without the PMU the software receives no such signal. The stop at the robot must therefore act on the drive without software.
+- It never reports OPERATING by itself; mapping mode, the motion gate, and missions accept READY.
+
+What still holds with the bridge:
+
+- If the bridge stops, both values go stale and the motion gate closes.
+- A person can block all motion by hand: `ros2 param set /lifecycle_bridge state FAULT`, or `estop_pressed true`.
+- Unknown state names are refused.
+
+The bridge is for the laboratory only. It ends when the PMU delivers the lifecycle state and the emergency-stop signal; removing it without a replacement leaves the motion gate closed.
 
 ## Fault Contract
 

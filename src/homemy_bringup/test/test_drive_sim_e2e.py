@@ -245,13 +245,13 @@ def mapping_run_then_drive_to_rooms(stack):
         probe.spin_until(lambda: probe.gate["open"], 10, "driving continues when the controller is back")
 
         # Emergency stop pressed and released.
-        set_parameter(stack, "homemy_lifecycle_stub", "estop_pressed", True)
+        set_parameter(stack, "lifecycle_bridge", "estop_pressed", True)
         probe.spin(1.0)
         held = time.monotonic()
         probe.spin(1.0)
         assert probe.moved_since(held) < 0.005
         assert "estop_pressed" in probe.gate["reasons"]
-        set_parameter(stack, "homemy_lifecycle_stub", "estop_pressed", False)
+        set_parameter(stack, "lifecycle_bridge", "estop_pressed", False)
         probe.spin_until(lambda: probe.gate["open"], 10, "driving continues after release")
 
         # The rest of the route, through all four rooms.
