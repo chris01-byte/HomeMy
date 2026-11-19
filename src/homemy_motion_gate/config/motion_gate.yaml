@@ -1,0 +1,24 @@
+# Motion gate parameters (contracts/ros/motion-gate.md). Simulation and
+# proposal values: speeds, timeouts, margins, and the clear time are
+# commissioning results on the real robot.
+motion_gate:
+  ros__parameters:
+    output_topic: /cmd_vel
+    scan_topic: /scan_masked
+    publish_rate_hz: 20.0
+    # Mapping with the controller: owner decision 2026-11-16, Amadeus values.
+    mapping_max_linear_mps: 0.20
+    mapping_max_angular_rps: 0.70
+    mission_max_linear_mps: 0.25
+    mission_max_angular_rps: 0.60
+    mode_timeout_s: 1.5
+    lifecycle_timeout_s: 3.0
+    estop_timeout_s: 1.0
+    controller_link_timeout_s: 0.2
+    command_timeout_s: 0.25
+    localization_timeout_s: 1.0
+    scan_timeout_s: 0.3
+    clear_time_s: 0.5
+    protection_margin_m: 0.05
+    protection_horizon_s: 1.0
+    protection_min_lookahead_m: 0.05

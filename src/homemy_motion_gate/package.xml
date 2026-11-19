@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>homemy_motion_gate</name>
+  <version>0.1.0</version>
+  <description>
+    The one place on HomeMy that lets drive commands reach the drive: selects
+    the controller in mapping mode or navigation in a drive mission, checks
+    lifecycle state, emergency stop, radio link, localization, and freshness,
+    clamps speeds, and applies the reactive obstacle protection.
+  </description>
+  <maintainer email="homemy@example.com">HomeMy</maintainer>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>std_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>tf2_ros</depend>
+  <depend>python3-numpy</depend>
+  <depend>python3-yaml</depend>
+  <exec_depend>homemy_description</exec_depend>
+
+  <test_depend>python3-pytest</test_depend>
+  <test_depend>homemy_description</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
