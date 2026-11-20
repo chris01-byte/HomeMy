@@ -9,6 +9,7 @@ on:
       - 'contracts/hardware/manual-drive.md'
       - 'contracts/hardware/drivebase-commissioning.md'
       - 'contracts/hardware/lidar-commissioning.md'
+      - 'contracts/hardware/imu-commissioning.md'
       - '.github/workflows/ros-checks.yml'
   pull_request:
     paths:
@@ -18,6 +19,7 @@ on:
       - 'contracts/hardware/manual-drive.md'
       - 'contracts/hardware/drivebase-commissioning.md'
       - 'contracts/hardware/lidar-commissioning.md'
+      - 'contracts/hardware/imu-commissioning.md'
       - '.github/workflows/ros-checks.yml'
 
 permissions:
@@ -49,7 +51,7 @@ jobs:
         run: |
           source /opt/ros/jazzy/setup.bash
           colcon build --base-paths src --event-handlers console_cohesion+
-      - name: Test, including the end-to-end tests in simulation (bridge, drive driver, LiDAR driver, mapping drive)
+      - name: Test, including the end-to-end tests in simulation (bridge, drive driver, LiDAR driver, IMU reader, mapping drive)
         run: |
           source /opt/ros/jazzy/setup.bash
           source "$RUNNER_TEMP/homemy_lidar_ws/install/setup.bash"

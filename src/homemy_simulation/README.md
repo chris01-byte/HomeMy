@@ -26,7 +26,8 @@ Er ersetzt nur die Geräte; alles dahinter ist der echte HomeMy-Code. Übernomme
 | LiDAR, Form `raw` | `/scan_raw`, wie der Herstellertreiber des STL-27L ihn sendet: je Scan 2146 bis 2176 Strahlen, 0 bis 360°, Frame `lidar_raw`, Sensor schief eingebaut, NaN ohne Messung. Die **echte Vereinheitlichung** macht daraus `/scan`. |
 | LiDAR, Form `serial` | Ein simulierter STL-27L an einer nachgebildeten seriellen Leitung (`stl27l_sim.py`): Er sendet die Datenpakete des Geräts, 21 600 Messpunkte je Sekunde, mit leicht schwankender Drehzahl. So liest der **unveränderte Herstellertreiber** sie und sendet `/scan_raw` selbst. |
 | `/odom`, TF `odom → base_link` | nur in der Form `cmd_vel`: 50 Hz, mit Maßstabsfehlern von 2 % beim Drehen und −1 % bei der Strecke. In der Form `modbus` weicht stattdessen der simulierte Roboter leicht von den Nennmaßen ab (Radradius −1 %, Spurweite +2 %), sodass die Odometrie des Treibers ähnlich danebenliegt. |
-| `/imu/data` | Drehrate wie der HWT601, mit Nullpunktfehler und Rauschen, ohne Lage |
+| IMU, Form `topic` | `/imu/data`: Drehrate mit Nullpunktfehler und Rauschen, ohne Lage |
+| IMU, Form `modbus` | Ein simulierter HWT601 an einer eigenen simulierten RS485-Leitung (`hwt601_sim.py`), kopfüber eingebaut. So liest das **echte Leseprogramm** ihn aus, und die Aufbereitung muss das Vorzeichen der Einbaulage anwenden. Der simulierte Sensor zählt jede Anfrage, die kein reines Lesen ist. |
 | `/joint_states` | die beiden Radgelenke |
 | `/homemy/sim/ground_truth`, `/homemy/sim/status_json` | nur für Tests: wahre Lage, Berührung, Abstand, Fahrstrecke, Raum |
 
@@ -53,6 +54,8 @@ ros2 param set /lifecycle_bridge state FAULT
 ros2 param set /lifecycle_bridge estop_pressed true
 ros2 param set /homemy_sim_base bus_silent true
 ros2 param set /homemy_sim_base lidar_silent true
+ros2 param set /homemy_sim_base imu_silent true
+ros2 param set /homemy_sim_base yaw_kick_deg 5.0
 ros2 param set /homemy_sim_base encoder_jump_counts 500000
 ```
 

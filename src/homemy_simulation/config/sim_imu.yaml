@@ -1,0 +1,15 @@
+# NUR SIMULATION. Diese Werte gelten für den SIMULIERTEN IMU-Sensor des
+# Prüfstands. Niemals am Roboter verwenden: Dort stehen Einbaulage und
+# Grenzwerte in homemy_state_estimation/config/hwt601.yaml und kommen aus
+# der Inbetriebnahme (Schritte I2 und I3).
+homemy_sim_base:
+  ros__parameters:
+    imu_interface: modbus
+    imu_bias_rps: 0.004
+    imu_noise_rps: 0.002
+
+yaw_rate:
+  ros__parameters:
+    # Der simulierte Sensor ist kopfüber eingebaut: Seine z-Achse zeigt nach unten.
+    yaw_axis: z
+    yaw_sign: -1.0

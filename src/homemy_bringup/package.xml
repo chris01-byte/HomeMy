@@ -24,6 +24,7 @@
   <exec_depend>homemy_drivebase</exec_depend>
   <exec_depend>homemy_description</exec_depend>
   <exec_depend>homemy_lidar_bringup</exec_depend>
+  <exec_depend>homemy_state_estimation</exec_depend>
   <exec_depend>homemy_motion_gate</exec_depend>
   <exec_depend>homemy_manual_drive</exec_depend>
   <exec_depend>homemy_navigation</exec_depend>

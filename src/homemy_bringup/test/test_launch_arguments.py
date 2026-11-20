@@ -16,6 +16,9 @@ SRC = pathlib.Path(__file__).resolve().parents[2]
 SHARED = {
     "bridge_address", "bridge_port", "storage_root", "auto_end_timeout_s",
     "use_sim_time", "oak_tilt_deg", "world_file", "sim_id",
+    # One decision for the whole composition: the drive driver and the IMU
+    # launch must agree on who owns /odom.
+    "use_imu_fusion",
 }
 
 

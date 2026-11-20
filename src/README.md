@@ -15,11 +15,12 @@ HomeMy-owned ROS 2 packages for ROS 2 Jazzy. Package names and boundaries follow
 | `homemy_lidar_bringup` | STL-27L: pinned vendor driver and its configuration, scan normalisation, blind-sector mask, check tool; the real scan is locked away from consumers by default | normalisation and vendor pin ported from Amadeus `amadeus_lidar_bringup` at `05439c7`; mask and check tool new |
 | `homemy_navigation` | slam_toolbox profile for the mapping run | settings from Amadeus at `05439c7` and `940a748` |
 | `homemy_drivebase` | driver of the two ESS23-RS drive motors over RS485; non-moving by default | ported from Amadeus `base_hardware` at `05439c7` |
+| `homemy_state_estimation` | HWT601 IMU: read-only reader and yaw-rate aid for the odometry; fusing it into the odometry is opt-in | reader ported from Amadeus `robot_state_estimation` at `08a4b9a`; yaw-rate aid new |
 | `homemy_boot_manager` | until the PMU exists: a bridge that reports a fixed lifecycle state and a fixed emergency-stop signal | new |
 | `homemy_simulation` | test stand (simulated drive, LiDAR, odometry, IMU), simulated controller and operator, synthetic map; simulation only | test stand ported from the Amadeus test stand at `940a748`; rest new |
 | `homemy_bringup` | launch profiles `app_backend`, `app_sim`, `drive_sim`; end-to-end tests | new |
 
-`homemy_drivebase` is the first hardware driver; as delivered it sends nothing to the motors. The only velocity publisher is the motion gate; in the `drive_sim` profile its commands reach the drive driver, which is unlocked there only against simulated motors. Contracts: `contracts/api/app-bridge.md`, `contracts/hardware/manual-drive.md`, `contracts/ros/motion-gate.md`.
+Three packages talk to hardware: `homemy_drivebase` (as delivered it sends nothing to the motors), `homemy_lidar_bringup` (as delivered the scan reaches no consumer), and `homemy_state_estimation` (read-only; as delivered the IMU influences nothing). The only velocity publisher is the motion gate; in the `drive_sim` profile its commands reach the drive driver, which is unlocked there only against simulated motors. Contracts: `contracts/api/app-bridge.md`, `contracts/hardware/manual-drive.md`, `contracts/ros/motion-gate.md`.
 
 ```bash
 colcon build --base-paths src

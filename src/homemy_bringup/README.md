@@ -8,6 +8,7 @@ Startprofile für HomeMy.
 | `app_sim.launch.py` | dasselbe plus Ersatz für SLAM und Controller aus `homemy_simulation` und die Überbrückung des Roboterzustands | die App ohne Hardware ausprobieren und testen (Stufe S1) |
 | `drivebase_sim.launch.py` | nur der Antriebstreiber an den simulierten Motoren | Verhalten des Treibers allein prüfen, auch Fehlerfälle |
 | `lidar_sim.launch.py` | nur die LiDAR-Kette, mit dem unveränderten Herstellertreiber an einem simulierten LiDAR | Treiber, Vereinheitlichung, Maske und Prüfwerkzeug ohne Hardware ausprobieren |
+| `imu_sim.launch.py` | IMU-Leser und Drehraten-Aufbereitung an einem simulierten Sensor, dazu der Antriebstreiber an simulierten Motoren | Vergleich Gyro gegen Räder; mit `use_imu_fusion:=true` die Odometrie mit Gyro |
 | `drive_sim.launch.py` | die Roboterseite der App plus Robotermodell, Antriebstreiber an simulierten Motoren, LiDAR-Vereinheitlichung und -Maske, Bewegungsfreigabe, Controller-Profil, slam_toolbox, Lokalisierungs-Manager mit AMCL, Nav2, Auftragssteuerung, und den Prüfstand mit simuliertem Bediener | Fahren, Kartieren und „Fahre zu Raum“ in der Simulation (Stufe S2) |
 
 Keines der Profile startet einen echten Treiber. Nur in `drive_sim` gibt es einen Fahrbefehl, und der geht an den simulierten Antrieb.
@@ -70,6 +71,11 @@ Weitere Argumente: `bridge_port`, `storage_root`, `auto_end_timeout_s`, `control
 1. Ausgeliefert, also gesperrt: Der Scan kommt nur zum Prüfen an, kein Verbraucher sieht ihn.
 2. Freigeschaltet gegen den simulierten LiDAR: wechselnde Strahlenzahl am Treiber, festes Raster danach, Richtung und Drehsinn stimmen an den Wänden der Testwohnung, die eigenen Streben liegen genau in der Maske.
 3. Kabel gezogen: Es kommen keine Scans mehr. Kabel wieder dran: Die Scans kommen von selbst zurück.
+
+`test/test_imu_sim.py` prüft den IMU-Leser an einem simulierten Sensor (etwa eine Minute):
+
+1. Ohne Fusion: Der Leser liest nur. Vor dem Lernen des Nullpunkts kommt keine Drehrate. Bei einer vollen Drehung liegt der Gyro bei der Wahrheit, die Räder liegen 11° daneben. Eine Verdrehung des Fahrgestells um 5° ohne Raddrehung sieht nur der Gyro. Kabel gezogen oder Daten gestört: Es kommt keine Drehrate mehr; danach erholt sich alles von selbst.
+2. Mit Fusion: Die Odometrie folgt dem Gyro. Fällt der Gyro aus, dreht sie mit den Rädern weiter.
 
 `test/test_drivebase_sim.py` prüft den Antriebstreiber allein an den simulierten Motoren (etwa 30 Sekunden):
 

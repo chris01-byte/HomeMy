@@ -24,8 +24,11 @@ sh_robustheit.py, roboter_ws 940a748), changed for HomeMy:
   vendor driver reads them and publishes ``/scan_raw`` itself;
 - ``/odom`` and TF odom -> base_link at 50 Hz, with optional scale drift
   (``cmd_vel`` form only);
-- ``/imu/data`` (sensor_msgs/Imu, frame ``imu_link``): yaw rate with bias and
-  noise, like the HWT601 yaw-rate input; no orientation;
+- the IMU, in one of two forms (parameter ``imu_interface``): ``topic``:
+  ``/imu/data`` (sensor_msgs/Imu, frame ``imu_link``): yaw rate with bias and
+  noise, no orientation; ``modbus``: a simulated HWT601 on its own simulated
+  RS485 line (hwt601_sim), mounted upside down, so that the real IMU reader
+  runs against it and the yaw-rate aid has to apply the mounting sign;
 - ``/joint_states`` for the two wheel joints;
 - for tests only: ``/homemy/sim/ground_truth`` (PoseStamped in frame
   ``world``) and ``/homemy/sim/status_json`` (collision, clearance, travel).
@@ -57,6 +60,7 @@ from std_msgs.msg import String
 from tf2_ros import TransformBroadcaster
 
 from homemy_simulation.ess23_sim import Ess23Bus, Ess23Motor, PtyBusServer
+from homemy_simulation.hwt601_sim import GRAVITY, Hwt601Bus
 from homemy_simulation.stl27l_sim import PtyStream, Stl27lDevice
 from homemy_simulation.world import FloorPlanWorld, RobotGeometry
 
@@ -92,6 +96,15 @@ class SimBase(Node):
         declare("odom_length_scale_error", -0.01)
         declare("imu_bias_rps", 0.001)
         declare("imu_noise_rps", 0.002)
+        # "topic": /imu/data directly. "modbus": a simulated HWT601 on a pseudo-terminal.
+        declare("imu_interface", "topic")
+        declare("imu_port_link", "")
+        # Faults for tests: the IMU's cable pulled; answers with a broken checksum.
+        declare("imu_silent", False)
+        declare("imu_corrupt", False)
+        # Fault for tests: turns the chassis by this many degrees without the
+        # wheels turning, like a tile joint or a push. Set again for the next kick.
+        declare("yaw_kick_deg", 0.0)
         declare("seed", 7)
         # Optional start pose [x, y, yaw] in the world, e.g. to restart where
         # the robot stood before; empty means the world file's start pose.
@@ -197,7 +210,25 @@ class SimBase(Node):
             )
         self.add_on_set_parameters_callback(self._on_fault_parameters)
         self.odom_pub = self.create_publisher(Odometry, "/odom", 10)
-        self.imu_pub = self.create_publisher(Imu, "/imu/data", qos_profile_sensor_data)
+        self.imu_interface = str(value("imu_interface"))
+        if self.imu_interface not in ("topic", "modbus"):
+            raise ValueError("imu_interface must be 'topic' or 'modbus'")
+        self.kick_remaining = 0.0
+        self.kick_rate = 0.0
+        self.imu_pub = None
+        self.imu_bus = None
+        self.imu_server = None
+        self.imu_rng = np.random.default_rng(int(value("seed")) + 3)
+        if self.imu_interface == "modbus":
+            link = str(value("imu_port_link"))
+            if not link:
+                raise ValueError("imu_interface modbus needs imu_port_link")
+            self.imu_bus = Hwt601Bus(self._sample_imu)
+            self.imu_bus.silent = bool(value("imu_silent"))
+            self.imu_bus.corrupt = bool(value("imu_corrupt"))
+            self.imu_server = PtyBusServer(self.imu_bus, link)
+        else:
+            self.imu_pub = self.create_publisher(Imu, "/imu/data", qos_profile_sensor_data)
         self.joint_pub = self.create_publisher(JointState, "/joint_states", 10)
         self.truth_pub = self.create_publisher(PoseStamped, "/homemy/sim/ground_truth", 10)
         self.status_pub = self.create_publisher(String, "/homemy/sim/status_json", 10)
@@ -221,6 +252,9 @@ class SimBase(Node):
             self.get_logger().warning(
                 f"SIMULATION: simulated STL-27L on {self.lidar_stream.link_path} -> "
                 f"{self.lidar_stream.device_path}.")
+        if self.imu_server is not None:
+            self.get_logger().warning(
+                f"SIMULATION: simulated HWT601 on {self.imu_server.link_path} -> {self.imu_server.device}.")
 
     def _on_cmd(self, message: Twist) -> None:
         command = (float(message.linear.x), float(message.angular.z))
@@ -252,6 +286,8 @@ class SimBase(Node):
             self.bus_server.close()
         if self.lidar_stream is not None:
             self.lidar_stream.close()
+        if self.imu_server is not None:
+            self.imu_server.close()
         return super().destroy_node()
 
     def _on_fault_parameters(self, parameters):
@@ -259,6 +295,16 @@ class SimBase(Node):
             if parameter.name == "lidar_silent" and self.lidar_stream is not None:
                 self.lidar_stream.silent = bool(parameter.value)
                 self.get_logger().warning(f"SIMULATION: LiDAR silent = {self.lidar_stream.silent}.")
+            elif parameter.name == "imu_silent" and self.imu_bus is not None:
+                self.imu_bus.silent = bool(parameter.value)
+                self.get_logger().warning(f"SIMULATION: IMU silent = {self.imu_bus.silent}.")
+            elif parameter.name == "imu_corrupt" and self.imu_bus is not None:
+                self.imu_bus.corrupt = bool(parameter.value)
+                self.get_logger().warning(f"SIMULATION: IMU corrupt = {self.imu_bus.corrupt}.")
+            elif parameter.name == "yaw_kick_deg" and float(parameter.value) != 0.0:
+                with self.lock:
+                    self.kick_remaining += math.radians(float(parameter.value))
+                self.get_logger().warning(f"SIMULATION: chassis kicked by {float(parameter.value)} degrees.")
             elif self.bus_server is None:
                 continue
             elif parameter.name == "bus_silent":
@@ -308,6 +354,15 @@ class SimBase(Node):
             before = self.world.pose.copy()
             self.world.integrate_span(command, min(span, 0.5))
             after = self.world.pose.copy()
+            # A kick turns the chassis without the wheels; after "after", so
+            # that neither the encoders nor the simple odometry see it.
+            self.kick_rate = 0.0
+            if self.kick_remaining != 0.0 and span > 0.0:
+                step = math.copysign(min(abs(self.kick_remaining), 0.35 * min(span, 0.5)), self.kick_remaining)
+                self.kick_remaining -= step
+                self.kick_rate = step / min(span, 0.5)
+                self.world.pose[2] = math.atan2(
+                    math.sin(self.world.pose[2] + step), math.cos(self.world.pose[2] + step))
             if self.motors is not None:
                 self._update_motor_feedback()
             # Odometry: the same motion seen through scale errors of the encoders.
@@ -349,14 +404,15 @@ class SimBase(Node):
             transform.transform.rotation.z, transform.transform.rotation.w = qz, qw
             self.tf.sendTransform(transform)
 
-        imu = Imu()
-        imu.header.stamp = stamp
-        imu.header.frame_id = "imu_link"
-        imu.orientation_covariance[0] = -1.0  # the HWT601 yaw input carries no absolute heading
-        imu.angular_velocity.z = float(w + self.imu_bias + self.rng.normal(0.0, self.imu_noise))
-        imu.angular_velocity_covariance[8] = self.imu_noise ** 2
-        imu.linear_acceleration.z = 9.81
-        self.imu_pub.publish(imu)
+        if self.imu_pub is not None:
+            imu = Imu()
+            imu.header.stamp = stamp
+            imu.header.frame_id = "imu_link"
+            imu.orientation_covariance[0] = -1.0  # the HWT601 yaw input carries no absolute heading
+            imu.angular_velocity.z = float(w + self.imu_bias + self.rng.normal(0.0, self.imu_noise))
+            imu.angular_velocity_covariance[8] = self.imu_noise ** 2
+            imu.linear_acceleration.z = 9.81
+            self.imu_pub.publish(imu)
 
         self.ticks += 1
         if self.ticks % 2:
@@ -395,6 +451,20 @@ class SimBase(Node):
         ranges = np.where(ranges >= self.range_max, np.inf, ranges)
         scan.ranges = ranges.astype(float).tolist()
         self.scan_pub.publish(scan)
+
+    def _sample_imu(self):
+        """What the simulated HWT601 measures, in its own axes.
+
+        It is mounted upside down (turned about its x axis): its z axis
+        points down, its y axis to the robot's right. A turn of the robot to
+        the left is therefore a negative rate on the sensor's z axis.
+        """
+
+        with self.lock:
+            yaw_rate = float(self.world.velocity[1]) + self.kick_rate
+        measured = yaw_rate + self.imu_bias + float(self.imu_rng.normal(0.0, self.imu_noise))
+        noise = self.imu_rng.normal(0.0, self.imu_noise, 2)
+        return (0.0, 0.0, -GRAVITY), (float(noise[0]), float(noise[1]), -measured)
 
     def _sample_lidar(self, device_angles: np.ndarray) -> np.ndarray:
         """Ranges for the simulated device: angles counter-clockwise in the device's frame."""
@@ -445,6 +515,8 @@ class SimBase(Node):
                 "drive_interface": self.drive_interface,
                 "bus_requests": None if self.motors is None else self.bus.requests,
                 "bus_crc_errors": None if self.motors is None else self.bus.crc_errors,
+                "imu_requests": None if self.imu_bus is None else self.imu_bus.requests,
+                "imu_non_read_requests": None if self.imu_bus is None else self.imu_bus.non_read_requests,
             }
         self.status_pub.publish(String(data=json.dumps(payload)))
 
