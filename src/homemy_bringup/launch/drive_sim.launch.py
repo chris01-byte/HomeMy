@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """Stage S2 in simulation: HomeMy drives in the test stand.
 
-The test stand replaces only the devices (drive, LiDAR, odometry, IMU) and
-the person with the controller. Everything else is the real HomeMy code:
-robot model, blind-sector mask, motion gate with obstacle protection, the
-controller profile (teleop_twist_joy), mapping mode, slam_toolbox, the map
-store, the room overlay, and the app bridge.
+The test stand replaces only the devices (drive motors, LiDAR, IMU) and the
+person with the controller. Everything else is the real HomeMy code: robot
+model, the drive driver (against simulated motors on a simulated RS485 bus),
+blind-sector mask, motion gate with obstacle protection, the controller
+profile (teleop_twist_joy), mapping mode, slam_toolbox, localization, Nav2,
+missions, the map store, the room overlay, and the app bridge.
 
     ros2 launch homemy_bringup drive_sim.launch.py
     ros2 launch homemy_bringup drive_sim.launch.py operator_route:=true
@@ -33,6 +34,9 @@ def share(package, *parts):
 def generate_launch_description():
     geometry = share("homemy_description", "config", "geometry.yaml")
     world = LaunchConfiguration("world_file")
+    # The pseudo-terminal of the simulated RS485 bus; unique per bridge port,
+    # so that several simulations can run side by side.
+    sim_drive_port = ["/tmp/homemy_sim_drive_", LaunchConfiguration("bridge_port")]
     return LaunchDescription(
         [
             DeclareLaunchArgument("bridge_address", default_value="127.0.0.1"),
@@ -99,7 +103,21 @@ def generate_launch_description():
                         "world_file": world,
                         "geometry_file": geometry,
                         "start_pose": ParameterValue(LaunchConfiguration("start_pose")),  # YAML list of floats
+                        "drive_interface": "modbus",
+                        "modbus_port_link": sim_drive_port,
                     }
+                ],
+            ),
+            # The real drive driver, unlocked only against the simulated motors.
+            Node(
+                package="homemy_drivebase",
+                executable="drivebase",
+                name="drivebase",
+                output="screen",
+                parameters=[
+                    share("homemy_drivebase", "config", "homemy_drivebase.yaml"),
+                    share("homemy_simulation", "config", "sim_drivebase.yaml"),
+                    {"rs485_port": sim_drive_port},
                 ],
             ),
             Node(

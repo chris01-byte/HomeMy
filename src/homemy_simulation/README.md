@@ -20,9 +20,10 @@ Er ersetzt nur die Geräte; alles dahinter ist der echte HomeMy-Code. Übernomme
 
 | Topic | Inhalt |
 | --- | --- |
-| `/cmd_vel` (Eingang) | Fahrbefehl; ohne frischen Befehl nach 0,25 s bremst er wie der echte Antrieb |
+| Antrieb, Form `cmd_vel` | `/cmd_vel` fährt den Roboter direkt; ohne frischen Befehl bremst er nach 0,25 s. Der Prüfstand liefert `/odom` und TF selbst. |
+| Antrieb, Form `modbus` | Zwei simulierte ESS23-RS-Motoren an einem simulierten RS485-Bus (`ess23_sim.py`). Ein Pseudo-Terminal steht für den USB-Adapter; darüber laufen echte Modbus-RTU-Telegramme. So fährt der **echte Antriebstreiber** die simulierten Motoren und rechnet `/odom` und TF aus deren Encoderzählern. Die Motoren haben wie die echten keine eigene Überwachung. |
 | `/scan` | 720 Strahlen, 10 Hz, `lidar_link`, ab −π gegen den Uhrzeiger, 1 cm Rauschen, kein Treffer als +inf |
-| `/odom`, TF `odom → base_link` | 50 Hz, mit Maßstabsfehlern von 2 % beim Drehen und −1 % bei der Strecke |
+| `/odom`, TF `odom → base_link` | nur in der Form `cmd_vel`: 50 Hz, mit Maßstabsfehlern von 2 % beim Drehen und −1 % bei der Strecke. In der Form `modbus` weicht stattdessen der simulierte Roboter leicht von den Nennmaßen ab (Radradius −1 %, Spurweite +2 %), sodass die Odometrie des Treibers ähnlich danebenliegt. |
 | `/imu/data` | Drehrate wie der HWT601, mit Nullpunktfehler und Rauschen, ohne Lage |
 | `/joint_states` | die beiden Radgelenke |
 | `/homemy/sim/ground_truth`, `/homemy/sim/status_json` | nur für Tests: wahre Lage, Berührung, Abstand, Fahrstrecke, Raum |
@@ -48,6 +49,8 @@ ros2 param set /homemy_sim_controller driving false
 ros2 param set /homemy_sim_controller connected false
 ros2 param set /lifecycle_bridge state FAULT
 ros2 param set /lifecycle_bridge estop_pressed true
+ros2 param set /homemy_sim_base bus_silent true
+ros2 param set /homemy_sim_base encoder_jump_counts 500000
 ```
 
 Gestartet werden die Knoten über `homemy_bringup/launch/app_sim.launch.py` (Stufe S1) und `drive_sim.launch.py` (Stufe S2).

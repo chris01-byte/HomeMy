@@ -14,11 +14,12 @@ HomeMy-owned ROS 2 packages for ROS 2 Jazzy. Package names and boundaries follow
 | `homemy_motion_gate` | the one place that lets drive commands through, with reactive obstacle protection | rewritten after Amadeus `cmd_vel_mission_gate` at `05439c7` |
 | `homemy_lidar_bringup` | blind-sector mask for the STL-27L scan | new |
 | `homemy_navigation` | slam_toolbox profile for the mapping run | settings from Amadeus at `05439c7` and `940a748` |
+| `homemy_drivebase` | driver of the two ESS23-RS drive motors over RS485; non-moving by default | ported from Amadeus `base_hardware` at `05439c7` |
 | `homemy_boot_manager` | until the PMU exists: a bridge that reports a fixed lifecycle state and a fixed emergency-stop signal | new |
 | `homemy_simulation` | test stand (simulated drive, LiDAR, odometry, IMU), simulated controller and operator, synthetic map; simulation only | test stand ported from the Amadeus test stand at `940a748`; rest new |
 | `homemy_bringup` | launch profiles `app_backend`, `app_sim`, `drive_sim`; end-to-end tests | new |
 
-No package contains a hardware driver. The only velocity publisher is the motion gate; in the `drive_sim` profile its commands reach the simulated drive. Contracts: `contracts/api/app-bridge.md`, `contracts/hardware/manual-drive.md`, `contracts/ros/motion-gate.md`.
+`homemy_drivebase` is the first hardware driver; as delivered it sends nothing to the motors. The only velocity publisher is the motion gate; in the `drive_sim` profile its commands reach the drive driver, which is unlocked there only against simulated motors. Contracts: `contracts/api/app-bridge.md`, `contracts/hardware/manual-drive.md`, `contracts/ros/motion-gate.md`.
 
 ```bash
 colcon build --base-paths src

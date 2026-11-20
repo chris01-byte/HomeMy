@@ -2,7 +2,7 @@
 
 ## Phase
 
-Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The onboard Linux lifecycle, one-button customer behavior, coarse LED status, battery monitor, electronic main power path, reverse-current blocking, and initial protection thresholds are recorded as accepted architecture. This central subsystem is named the HomeMy Power Management Unit (PMU). A consolidated GPT Astra handoff now authorizes a complete Revision-A engineering prototype and separates its design/order gates from the measurements that gate a later Revision-B production design. The KiCad design, exact Revision-A component selections, firmware, systemd units, and real-hardware validation remain pending. The robot side of the app runs in simulation under ROS 2 Jazzy (`src/`). Software stage S2 is done in simulation: in a test stand ported from Amadeus, HomeMy is driven with the simulated controller through the real teleop profile, motion gate, and blind-sector mask, maps a synthetic four-room apartment with slam_toolbox, switches to the saved map with AMCL, and drives to a room on command from the app. No hardware driver exists; nothing can move a real motor.
+Architecture, hardware-transfer, navigation, local obstacle-protection, semantic-perception, appliance-lifecycle, and battery/power foundation. The onboard Linux lifecycle, one-button customer behavior, coarse LED status, battery monitor, electronic main power path, reverse-current blocking, and initial protection thresholds are recorded as accepted architecture. This central subsystem is named the HomeMy Power Management Unit (PMU). A consolidated GPT Astra handoff now authorizes a complete Revision-A engineering prototype and separates its design/order gates from the measurements that gate a later Revision-B production design. The KiCad design, exact Revision-A component selections, firmware, systemd units, and real-hardware validation remain pending. The robot side of the app runs in simulation under ROS 2 Jazzy (`src/`). Software stage S2 is done in simulation: in a test stand ported from Amadeus, HomeMy is driven with the simulated controller through the real teleop profile, motion gate, and blind-sector mask, maps a synthetic four-room apartment with slam_toolbox, switches to the saved map with AMCL, and drives to a room on command from the app. The drive driver is ported from Amadeus (`src/homemy_drivebase`) and runs in the test stand against simulated motors; as delivered it sends nothing to the motors. Nothing has run on real hardware.
 
 ## Goal
 
@@ -40,7 +40,7 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 
 ## Active Transfer Scope
 
-- ESS23-RS drivebase behavior may be adapted from roboter_ws only through the non-moving HomeMy commissioning contract. All HomeMy vehicle measurements remain open.
+- ESS23-RS drivebase behavior is adapted from roboter_ws through the non-moving HomeMy commissioning contract (`src/homemy_drivebase`). All HomeMy vehicle measurements remain open.
 - STL-27L driver, scan normalization, and diagnostics may be adapted after new LiDAR frame and mount commissioning.
 - robot_navigation may be adapted only as a hardware-independent Nav2 and simulation candidate. Its real profile awaits HomeMy footprint, LiDAR, obstacle protection, movement gate, and safety commissioning.
 - Local OAK-D-S2 depth is a proposed complementary obstacle-protection candidate governed by `contracts/hardware/obstacle-protection.md`. It remains local; no camera bring-up or protection code has been copied.
@@ -56,21 +56,21 @@ Build HomeMy as a safe, modular ROS 2 platform for a household robot. It must su
 - The repository is public; it contains no secrets, home data, maps, camera data, or deployment configuration.
 - The default execution mode is simulation or motorless validation.
 - No systemd unit, actuator, sensor, PMU KiCad design, map, home data, or deployment configuration is tracked here.
-- Ported or written code: the iPhone app (`ios/HomeMy/`) and ten ROS 2 packages in `src/`. None contains a hardware driver. The motion gate is the only velocity publisher; in the `drive_sim` profile its commands reach the simulated drive. The app bridge refuses every topic outside the app contract.
+- Ported or written code: the iPhone app (`ios/HomeMy/`) and eleven ROS 2 packages in `src/`. `homemy_drivebase` is the only hardware driver; its delivered configuration is non-moving (dry run, RS485 writes off, encoder path locked). The motion gate is the only velocity publisher; in the `drive_sim` profile its commands reach the drive driver, which is unlocked there only against simulated motors. The app bridge refuses every topic outside the app contract.
 - The proposed transfer baseline is roboter_ws main commit `05439c7a13d7a92e69b9eb4663e3a2a1b44626a1`.
 - Customer mode is not enabled as the default boot target.
 - Battery/power values are architecture and initial commissioning thresholds only; no hardware protection validation has been performed.
 
 ## Next Safe Step
 
-Software stages S1 (robot side of the app) and S2 (driving in simulation: mapping with the controller, localization on the saved map, drive to a room from the app) are done in simulation. The robot finds itself on the saved map after it was moved, by a search over the whole map ported from Amadeus. Open in S2: repeatability over several starts and rooms on a real map. Next, by owner decision: the drivers for drive, LiDAR, and IMU. Stages S3 (arm in simulation) and S4 (fetch mission in simulation) also need no hardware; the PMU steps below need the hardware.
+Software stages S1 (robot side of the app) and S2 (driving in simulation: mapping with the controller, localization on the saved map, drive to a room from the app) are done in simulation. The robot finds itself on the saved map after it was moved, by a search over the whole map ported from Amadeus. Open in S2: repeatability over several starts and rooms on a real map. By owner decision the drivers follow: the drive driver is ported and tested against simulated motors (2026-11-20); LiDAR and IMU are next. The prototype is secured by an external hardware emergency-stop switch (owner decision 2026-11-20). Stages S3 (arm in simulation) and S4 (fetch mission in simulation) also need no hardware; the PMU steps below need the hardware.
 
 1. Start GPT Astra with `hardware/power-management-unit/ASTRA_START_PROMPT.md` and have it complete the Revision-A hierarchical KiCad schematic, exact prototype-part selection, routed PCB, BOM, calculations, assumptions record, and prototype fabrication package.
 2. Review Astra's schematic, BOM, layout, ERC/DRC, component data, current-path calculations, and conservative Revision-A assumptions before ordering the prototype. Missing post-build measurements do not block this step.
 3. Build and bring up Revision A first with a current-limited supply and no actuators; close all energization gates before applying the battery.
 4. Use Revision A to measure the MOSFET path, shunts, inrush without precharge, DC/DC converters, brake-chopper energy, thermal behavior, arm currents, and fuse/BMS coordination. Feed the evidence into a later Revision-B production layout.
 5. Define and simulate the ESP32 power/lifecycle state machine, button timing, heartbeat, hardware latches, event log, and LED behavior before connecting actuators.
-6. Design and test a hardware-independent HomeMy drivebase core using the commissioning contract and synthetic fixtures.
+6. Done in simulation 2026-11-20: the drive driver is ported and tested against simulated motors. Next on hardware: steps H1 and H2 of `contracts/hardware/drivebase-commissioning.md` (read-only identification and encoder check), with a person present.
 7. Design and test LiDAR scan normalization and health behavior with synthetic variable-beam inputs.
 8. Assess the smallest hardware-independent `robot_navigation` slice with synthetic maps and a non-moving drivebase profile.
 9. Measure the completed HomeMy chassis, drivebase, mounts, footprint, arm masses, joint speeds, power loads, and safety topology before accepting any real-motion configuration.
@@ -104,7 +104,7 @@ Software stages S1 (robot side of the app) and S2 (driving in simulation: mappin
 23. `docs/decisions/2026-11-17-oak-d-s2-camera.md` for the camera on top of the robot.
 24. `contracts/hardware/manual-drive.md` and `contracts/ros/motion-gate.md` for driving with the controller and the one place that lets drive commands through.
 25. `src/homemy_simulation/README.md` and `src/homemy_bringup/README.md` for the test stand and the `drive_sim` profile.
-26. `src/homemy_description/README.md` for the robot model and its frames.
+26. `src/homemy_description/README.md` for the robot model and its frames; `src/homemy_drivebase/README.md` for the drive driver, its three locks, and the steps to the first real drive.
 27. `src/homemy_mission/README.md` and `src/homemy_navigation/README.md` for driving to a room, localization on the saved map, and Nav2.
 
 ## Open Decisions

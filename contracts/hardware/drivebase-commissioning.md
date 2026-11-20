@@ -1,6 +1,6 @@
 # ESS23-RS Drivebase Commissioning Contract
 
-Status: proposed for HomeMy; no source code or real-motion profile copied.
+Status: proposed for HomeMy. The driver is ported as `src/homemy_drivebase` with a non-moving default and tested in simulation against simulated motors (2026-11-20). No real-motion profile exists; nothing has run on the HomeMy motors.
 Owner: HomeMy drivebase integration.
 Source reference: chris01-byte/Roboter_ws src/base_hardware/ at commit 05439c7a13d7a92e69b9eb4663e3a2a1b44626a1.
 
@@ -47,9 +47,30 @@ Do not reuse source values for wheel radius, effective track width, gear ratio, 
 
 Any failed stage keeps real motion disabled. A failed or ambiguous measurement is a result, not a parameter-change invitation.
 
+## Implementation Status (2026-11-20)
+
+- `src/homemy_drivebase` is the source driver with unchanged logic. Names, defaults, and texts are HomeMy's.
+- The delivered configuration is non-moving three times over: `dry_run: true`, `allow_rs485: false`, and encoder values of 0, which lock the real encoder path until H2.
+- Geometry in the configuration is from the CAD model. Registers and ramps are the source values of the same motor family, kept as candidates for H1 to H3. Wheel radius, track width, inversion, motor IDs, device path, and encoder values of the source are not taken over.
+- `ess23_readonly_check` is the read-only tool for H1 and H2. It sends only Modbus read requests.
+- The Modbus library is pymodbus 3.14.0 and pyserial 3.5, installed with pip (`requirements-modbus.txt`), the versions the source driver ran with.
+
+Validated in simulation only:
+
+- the 74 source tests of the node's safety wiring, the encoder odometry, and the read-only tool pass unchanged apart from names and HomeMy's locked configuration;
+- the driver runs against two simulated ESS23-RS motors on a simulated RS485 bus: a pseudo-terminal carries real Modbus RTU frames between pymodbus and the simulated motors (`src/homemy_simulation/homemy_simulation/ess23_sim.py`);
+- `src/homemy_bringup/test/test_drivebase_sim.py`: with the delivered configuration not one byte reaches the bus; unlocked against the simulated motors the driver drives at the commanded speed, turns in the right sense, stops 0.25 s after the last command, refuses non-finite commands, reports a cut bus and reconnects with a stop first, and rejects a jump of the encoder counters without a jump in the odometry;
+- in `test_drive_sim_e2e.py` the same driver carries the whole mapping run, the drives to rooms, and the restarts.
+
+The simulated motors follow the registers the source driver was proven with. They are no evidence about the HomeMy motors.
+
+### Known Gap: No Watchdog in the Motors
+
+As far as known, an ESS23-RS keeps its last commanded speed until it receives a stop. If the driver process dies or the USB adapter fails while the robot moves, software can no longer stop it. The simulation reproduces this: with the bus cut, the simulated motors keep turning. On the prototype the external hardware emergency-stop switch covers this case (owner decision 2026-11-20). H5 checks in the motor manual and on the motor whether a stop on communication loss can be configured.
+
 ## Validation
 
-Before hardware use, ported behavior must pass synthetic unit tests for normal commands, non-finite input, quantization, stale feedback, transport error, semantic encoder error, controller reset, and restart. Hardware results must be logged in a HomeMy-specific commissioning record; source test results are regression evidence, not HomeMy acceptance.
+Before hardware use, ported behavior must pass synthetic unit tests for normal commands, non-finite input, quantization, stale feedback, transport error, semantic encoder error, controller reset, and restart. These pass in simulation as listed above. Hardware results must be logged in a HomeMy-specific commissioning record; source test results are regression evidence, not HomeMy acceptance.
 
 ## Rollback
 

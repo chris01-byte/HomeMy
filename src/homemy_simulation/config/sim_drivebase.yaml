@@ -1,0 +1,17 @@
+# NUR SIMULATION. Diese Werte schalten den echten Antriebstreiber gegen die
+# SIMULIERTEN Motoren des Prüfstands frei. Niemals am Roboter verwenden:
+# Die Werte für den Roboter stehen in homemy_drivebase/config und bleiben
+# gesperrt, bis die Inbetriebnahme sie liefert.
+drivebase:
+  ros__parameters:
+    dry_run: false
+    allow_rs485: true
+    # Eigenschaften der simulierten Motoren (homemy_simulation/ess23_sim.py):
+    left_motor_id: 1
+    right_motor_id: 2
+    invert_left: false
+    invert_right: true            # rechter Motor ist im Prüfstand gespiegelt montiert
+    encoder_counts_per_motor_revolution: 1000.0
+    encoder_expected_segment: 1000
+    encoder_expected_resolution: 4000
+    publish_tf: true

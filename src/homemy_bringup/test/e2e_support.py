@@ -220,6 +220,40 @@ def launched(launch_file: str, arguments: list[str], ready_timeout: float = 40.0
             storage.cleanup()
 
 
+@contextmanager
+def launched_plain(launch_file: str, arguments: list[str]):
+    """Start a launch file without the app bridge, in its own ROS domain.
+
+    Yields a dict with a probe node, its context, and the log path.
+    """
+
+    domain = random.randint(101, 199)
+    env = dict(os.environ, ROS_DOMAIN_ID=str(domain), ROS_AUTOMATIC_DISCOVERY_RANGE="LOCALHOST")
+    env.pop("ROS_LOCALHOST_ONLY", None)
+    log = tempfile.NamedTemporaryFile(prefix="homemy-e2e-launch-", suffix=".log", delete=False)
+    process = subprocess.Popen(
+        ["ros2", "launch", "homemy_bringup", launch_file, *arguments],
+        env=env, stdout=log, stderr=subprocess.STDOUT, start_new_session=True,
+    )
+    time.sleep(1.0)
+    if process.poll() is not None:
+        raise AssertionError("launch ended early:\n" + open(log.name).read()[-4000:])
+    context = rclpy.Context()
+    rclpy.init(context=context, domain_id=domain)
+    node = Node("homemy_e2e_probe", context=context)
+    try:
+        yield {"node": node, "context": context, "log": log.name}
+    finally:
+        node.destroy_node()
+        rclpy.shutdown(context=context)
+        os.killpg(process.pid, signal.SIGINT)
+        try:
+            process.wait(timeout=20)
+        except subprocess.TimeoutExpired:
+            os.killpg(process.pid, signal.SIGKILL)
+            process.wait()
+
+
 def set_parameter(stack, node_name: str, name: str, value) -> None:
     """Set one parameter of a running node.
 
@@ -237,6 +271,9 @@ def set_parameter(stack, node_name: str, name: str, value) -> None:
         if isinstance(value, bool):
             parameter_value.type = ParameterType.PARAMETER_BOOL
             parameter_value.bool_value = value
+        elif isinstance(value, int):
+            parameter_value.type = ParameterType.PARAMETER_INTEGER
+            parameter_value.integer_value = value
         elif isinstance(value, float):
             parameter_value.type = ParameterType.PARAMETER_DOUBLE
             parameter_value.double_value = value

@@ -21,6 +21,7 @@
   <exec_depend>homemy_mapping_mode</exec_depend>
   <exec_depend>homemy_simulation</exec_depend>
   <exec_depend>homemy_boot_manager</exec_depend>
+  <exec_depend>homemy_drivebase</exec_depend>
   <exec_depend>homemy_description</exec_depend>
   <exec_depend>homemy_lidar_bringup</exec_depend>
   <exec_depend>homemy_motion_gate</exec_depend>

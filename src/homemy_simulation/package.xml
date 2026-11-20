@@ -17,6 +17,7 @@
   <depend>sensor_msgs</depend>
   <depend>nav_msgs</depend>
   <depend>geometry_msgs</depend>
+  <depend>rcl_interfaces</depend>
   <depend>tf2_ros</depend>
   <depend>python3-numpy</depend>
   <depend>python3-yaml</depend>

@@ -16,6 +16,7 @@ setup(
         ),
         ("share/" + package_name, ["package.xml", "README.md"]),
         ("share/" + package_name + "/worlds", glob("worlds/*.json")),
+        ("share/" + package_name + "/config", glob("config/*.yaml")),
     ],
     install_requires=["setuptools"],
     extras_require={"test": ["pytest"]},

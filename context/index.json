@@ -36,6 +36,7 @@
       "when": "ESS23-RS drivebase, Modbus, encoder odometry, chassis measurements, or drive commissioning",
       "files": [
         "contracts/hardware/drivebase-commissioning.md",
+        "src/homemy_drivebase/README.md",
         "integration/roboter_ws/TRANSFER_MANIFEST.md"
       ]
     },

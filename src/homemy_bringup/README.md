@@ -6,7 +6,8 @@ Startprofile für HomeMy.
 | --- | --- | --- |
 | `app_backend.launch.py` | Kartenspeicher, Raumverwaltung, Kartiermodus, App-Brücke | die Roboterseite der App |
 | `app_sim.launch.py` | dasselbe plus Ersatz für SLAM und Controller aus `homemy_simulation` und die Überbrückung des Roboterzustands | die App ohne Hardware ausprobieren und testen (Stufe S1) |
-| `drive_sim.launch.py` | die Roboterseite der App plus Robotermodell, LiDAR-Maske, Bewegungsfreigabe, Controller-Profil, slam_toolbox, Lokalisierungs-Manager mit AMCL, Nav2, Auftragssteuerung, und den Prüfstand mit simuliertem Bediener | Fahren, Kartieren und „Fahre zu Raum“ in der Simulation (Stufe S2) |
+| `drivebase_sim.launch.py` | nur der Antriebstreiber an den simulierten Motoren | Verhalten des Treibers allein prüfen, auch Fehlerfälle |
+| `drive_sim.launch.py` | die Roboterseite der App plus Robotermodell, Antriebstreiber an simulierten Motoren, LiDAR-Maske, Bewegungsfreigabe, Controller-Profil, slam_toolbox, Lokalisierungs-Manager mit AMCL, Nav2, Auftragssteuerung, und den Prüfstand mit simuliertem Bediener | Fahren, Kartieren und „Fahre zu Raum“ in der Simulation (Stufe S2) |
 
 Keines der Profile startet einen echten Treiber. Nur in `drive_sim` gibt es einen Fahrbefehl, und der geht an den simulierten Antrieb.
 
@@ -62,6 +63,13 @@ Weitere Argumente: `bridge_port`, `storage_root`, `auto_end_timeout_s`, `control
 10. Eine abgebrochene Fahrt hält den Roboter an; während des Kartiermodus wird eine Fahrt abgelehnt.
 11. Neustart dort, wo der Roboter stand: Er übernimmt die gesicherte Lage und fährt ins Schlafzimmer.
 12. Neustart, nachdem der Roboter heimlich in die Küche getragen wurde: Er traut der gesicherten Lage nicht und lehnt eine Fahrt zunächst ab („nicht lokalisiert“). Dann findet er sich im Stand über die Suche in der ganzen Karte wieder, auf höchstens 30 cm genau, und fährt ins Wohnzimmer.
+
+`test/test_drivebase_sim.py` prüft den Antriebstreiber allein an den simulierten Motoren (etwa 30 Sekunden):
+
+1. Mit der ausgelieferten Konfiguration geht kein einziges Byte auf den Bus, und nichts bewegt sich.
+2. Freigeschaltet gegen die simulierten Motoren: Sollgeschwindigkeit kommt an, Drehsinn stimmt, Stopp 0,25 s nach dem letzten Befehl, Befehle mit NaN werden verworfen.
+3. Bus getrennt: Der Treiber meldet es. Die Motoren drehen weiter, weil sie keine eigene Überwachung haben; das deckt am Prototyp der Not-Halt-Schalter ab. Kommt der Bus zurück, verbindet sich der Treiber neu und stoppt zuerst.
+4. Encoderzähler springen wie nach einem Reset der Motorsteuerung: Die Odometrie springt nicht mit.
 
 `test/test_app_bridge_e2e.py` startet `app_sim.launch.py` in einem eigenen Prozess und spricht über einen WebSocket mit genau den Nachrichten, die die App sendet. Geprüft werden:
 
