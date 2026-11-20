@@ -22,7 +22,9 @@ Er ersetzt nur die Geräte; alles dahinter ist der echte HomeMy-Code. Übernomme
 | --- | --- |
 | Antrieb, Form `cmd_vel` | `/cmd_vel` fährt den Roboter direkt; ohne frischen Befehl bremst er nach 0,25 s. Der Prüfstand liefert `/odom` und TF selbst. |
 | Antrieb, Form `modbus` | Zwei simulierte ESS23-RS-Motoren an einem simulierten RS485-Bus (`ess23_sim.py`). Ein Pseudo-Terminal steht für den USB-Adapter; darüber laufen echte Modbus-RTU-Telegramme. So fährt der **echte Antriebstreiber** die simulierten Motoren und rechnet `/odom` und TF aus deren Encoderzählern. Die Motoren haben wie die echten keine eigene Überwachung. |
-| `/scan` | 720 Strahlen, 10 Hz, `lidar_link`, ab −π gegen den Uhrzeiger, 1 cm Rauschen, kein Treffer als +inf |
+| LiDAR, Form `scan` | `/scan`: 720 Strahlen, 10 Hz, `lidar_link`, ab −π gegen den Uhrzeiger, 1 cm Rauschen, kein Treffer als +inf |
+| LiDAR, Form `raw` | `/scan_raw`, wie der Herstellertreiber des STL-27L ihn sendet: je Scan 2146 bis 2176 Strahlen, 0 bis 360°, Frame `lidar_raw`, Sensor schief eingebaut, NaN ohne Messung. Die **echte Vereinheitlichung** macht daraus `/scan`. |
+| LiDAR, Form `serial` | Ein simulierter STL-27L an einer nachgebildeten seriellen Leitung (`stl27l_sim.py`): Er sendet die Datenpakete des Geräts, 21 600 Messpunkte je Sekunde, mit leicht schwankender Drehzahl. So liest der **unveränderte Herstellertreiber** sie und sendet `/scan_raw` selbst. |
 | `/odom`, TF `odom → base_link` | nur in der Form `cmd_vel`: 50 Hz, mit Maßstabsfehlern von 2 % beim Drehen und −1 % bei der Strecke. In der Form `modbus` weicht stattdessen der simulierte Roboter leicht von den Nennmaßen ab (Radradius −1 %, Spurweite +2 %), sodass die Odometrie des Treibers ähnlich danebenliegt. |
 | `/imu/data` | Drehrate wie der HWT601, mit Nullpunktfehler und Rauschen, ohne Lage |
 | `/joint_states` | die beiden Radgelenke |
@@ -50,6 +52,7 @@ ros2 param set /homemy_sim_controller connected false
 ros2 param set /lifecycle_bridge state FAULT
 ros2 param set /lifecycle_bridge estop_pressed true
 ros2 param set /homemy_sim_base bus_silent true
+ros2 param set /homemy_sim_base lidar_silent true
 ros2 param set /homemy_sim_base encoder_jump_counts 500000
 ```
 

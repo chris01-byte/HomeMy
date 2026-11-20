@@ -15,7 +15,7 @@ from collections import defaultdict
 SRC = pathlib.Path(__file__).resolve().parents[2]
 SHARED = {
     "bridge_address", "bridge_port", "storage_root", "auto_end_timeout_s",
-    "use_sim_time", "oak_tilt_deg", "world_file",
+    "use_sim_time", "oak_tilt_deg", "world_file", "sim_id",
 }
 
 

@@ -11,9 +11,17 @@ sh_robustheit.py, roboter_ws 940a748), changed for HomeMy:
   itself; ``modbus``: two simulated ESS23-RS motors on a simulated RS485 bus
   (ess23_sim), so that the real drive driver runs against them and produces
   ``/odom`` and TF from their encoder counts;
-- ``/scan`` (sensor_msgs/LaserScan, frame ``lidar_link``) at 10 Hz, 360
-  degrees counter-clockwise from -pi, with self-returns from the struts and
-  slot webs, max range as +inf, and optional noise;
+- the LiDAR, in one of three forms (parameter ``lidar_interface``):
+  ``scan``: ``/scan`` (sensor_msgs/LaserScan, frame ``lidar_link``) at 10 Hz,
+  360 degrees counter-clockwise from -pi, with self-returns from the struts
+  and slot webs, max range as +inf, and optional noise; ``raw``: ``/scan_raw``
+  as the STL-27L vendor driver sends it: a beam count that changes with every
+  scan, angles from 0 to 360 degrees with the first direction repeated at the
+  end, frame ``lidar_raw``, the device's zero direction turned against the
+  robot, and NaN where nothing is measured. The real scan normalisation then
+  produces ``/scan``; ``serial``: a simulated STL-27L on a pseudo-terminal
+  (stl27l_sim), sending the device's own packets, so that the unchanged
+  vendor driver reads them and publishes ``/scan_raw`` itself;
 - ``/odom`` and TF odom -> base_link at 50 Hz, with optional scale drift
   (``cmd_vel`` form only);
 - ``/imu/data`` (sensor_msgs/Imu, frame ``imu_link``): yaw rate with bias and
@@ -49,6 +57,7 @@ from std_msgs.msg import String
 from tf2_ros import TransformBroadcaster
 
 from homemy_simulation.ess23_sim import Ess23Bus, Ess23Motor, PtyBusServer
+from homemy_simulation.stl27l_sim import PtyStream, Stl27lDevice
 from homemy_simulation.world import FloorPlanWorld, RobotGeometry
 
 
@@ -70,6 +79,15 @@ class SimBase(Node):
         declare("beams", 720)
         declare("range_max_m", 25.0)
         declare("lidar_noise_m", 0.01)
+        # "raw" mimics the STL-27L vendor driver, "serial" the device itself; see the module text.
+        declare("lidar_interface", "scan")
+        declare("lidar_port_link", "")
+        # Fault for tests: true = the LiDAR's cable is pulled.
+        declare("lidar_silent", False)
+        declare("raw_beams_min", 2146)
+        declare("raw_beams_max", 2176)
+        # Bearing of the simulated device's zero direction in lidar_link.
+        declare("lidar_device_yaw_deg", 0.0)
         declare("odom_yaw_scale_error", 0.02)
         declare("odom_length_scale_error", -0.01)
         declare("imu_bias_rps", 0.001)
@@ -128,7 +146,6 @@ class SimBase(Node):
             self.bus = Ess23Bus(list(self.motors))
             self.bus_server = PtyBusServer(self.bus, link)
             self.encoder_offset_counts = 0
-            self.add_on_set_parameters_callback(self._on_fault_parameters)
         self.world = FloorPlanWorld.from_file(world_file, self.geometry)
         start_pose = [float(v) for v in value("start_pose")]
         if len(start_pose) == 3:
@@ -145,6 +162,8 @@ class SimBase(Node):
         self.imu_noise = float(value("imu_noise_rps"))
         self.scan_period = 1.0 / float(value("scan_rate_hz"))
         self.rng = np.random.default_rng(int(value("seed")))
+        # The simulated serial LiDAR samples from its own thread.
+        self.lidar_rng = np.random.default_rng(int(value("seed")) + 2)
 
         self.lock = threading.Lock()
         self.command = (0.0, 0.0)
@@ -157,7 +176,26 @@ class SimBase(Node):
         self.ticks = 0
 
         self.create_subscription(Twist, str(value("cmd_topic")), self._on_cmd, 10)
-        self.scan_pub = self.create_publisher(LaserScan, "/scan", qos_profile_sensor_data)
+        self.lidar_interface = str(value("lidar_interface"))
+        if self.lidar_interface not in ("scan", "raw", "serial"):
+            raise ValueError("lidar_interface must be 'scan', 'raw', or 'serial'")
+        self.raw_beams = (int(value("raw_beams_min")), int(value("raw_beams_max")))
+        if not 2 <= self.raw_beams[0] <= self.raw_beams[1]:
+            raise ValueError("raw_beams_min and raw_beams_max must satisfy 2 <= min <= max")
+        self.lidar_device_yaw = math.radians(float(value("lidar_device_yaw_deg")))
+        self.scan_pub = None
+        self.lidar_stream = None
+        if self.lidar_interface == "serial":
+            link = str(value("lidar_port_link"))
+            if not link:
+                raise ValueError("lidar_interface serial needs lidar_port_link")
+            self.lidar_stream = PtyStream(Stl27lDevice(self._sample_lidar, seed=int(value("seed")) + 1), link)
+            self.lidar_stream.silent = bool(value("lidar_silent"))
+        else:
+            self.scan_pub = self.create_publisher(
+                LaserScan, "/scan" if self.lidar_interface == "scan" else "/scan_raw", qos_profile_sensor_data
+            )
+        self.add_on_set_parameters_callback(self._on_fault_parameters)
         self.odom_pub = self.create_publisher(Odometry, "/odom", 10)
         self.imu_pub = self.create_publisher(Imu, "/imu/data", qos_profile_sensor_data)
         self.joint_pub = self.create_publisher(JointState, "/joint_states", 10)
@@ -166,7 +204,8 @@ class SimBase(Node):
         self.tf = TransformBroadcaster(self)
 
         self.create_timer(1.0 / float(value("odom_rate_hz")), self._odometry)
-        self.create_timer(self.scan_period, self._scan)
+        if self.scan_pub is not None:
+            self.create_timer(self.scan_period, self._scan)
         self.create_timer(0.5, self._status)
         self.running = True
         self.physics_thread = threading.Thread(target=self._physics_loop, daemon=True)
@@ -178,6 +217,10 @@ class SimBase(Node):
         if self.bus_server is not None:
             self.get_logger().warning(
                 f"SIMULATION: simulated ESS23-RS motors on {self.bus_server.link_path} -> {self.bus_server.device}.")
+        if self.lidar_stream is not None:
+            self.get_logger().warning(
+                f"SIMULATION: simulated STL-27L on {self.lidar_stream.link_path} -> "
+                f"{self.lidar_stream.device_path}.")
 
     def _on_cmd(self, message: Twist) -> None:
         command = (float(message.linear.x), float(message.angular.z))
@@ -207,11 +250,18 @@ class SimBase(Node):
             self.physics_thread.join(timeout=1.0)
         if self.bus_server is not None:
             self.bus_server.close()
+        if self.lidar_stream is not None:
+            self.lidar_stream.close()
         return super().destroy_node()
 
     def _on_fault_parameters(self, parameters):
         for parameter in parameters:
-            if parameter.name == "bus_silent":
+            if parameter.name == "lidar_silent" and self.lidar_stream is not None:
+                self.lidar_stream.silent = bool(parameter.value)
+                self.get_logger().warning(f"SIMULATION: LiDAR silent = {self.lidar_stream.silent}.")
+            elif self.bus_server is None:
+                continue
+            elif parameter.name == "bus_silent":
                 self.bus.silent = bool(parameter.value)
                 self.get_logger().warning(f"SIMULATION: bus silent = {self.bus.silent}.")
             elif parameter.name == "encoder_jump_counts" and int(parameter.value) != 0:
@@ -327,6 +377,9 @@ class SimBase(Node):
         self.truth_pub.publish(pose)
 
     def _scan(self) -> None:
+        if self.lidar_interface == "raw":
+            self._scan_raw()
+            return
         with self.lock:
             angles, ranges = self.world.laser(self.beams, self.range_max, self.lidar_noise, self.rng)
         scan = LaserScan()
@@ -341,6 +394,42 @@ class SimBase(Node):
         scan.range_max = self.range_max
         ranges = np.where(ranges >= self.range_max, np.inf, ranges)
         scan.ranges = ranges.astype(float).tolist()
+        self.scan_pub.publish(scan)
+
+    def _sample_lidar(self, device_angles: np.ndarray) -> np.ndarray:
+        """Ranges for the simulated device: angles counter-clockwise in the device's frame."""
+
+        with self.lock:
+            _, ranges = self.world.laser(
+                maximum=self.range_max, noise_m=self.lidar_noise, rng=self.lidar_rng,
+                angles=np.asarray(device_angles) + self.lidar_device_yaw,
+            )
+        return np.where(ranges >= self.range_max, np.nan, ranges)
+
+    def _scan_raw(self) -> None:
+        """A scan as the STL-27L vendor driver publishes it (ldlidar_stl_ros2 demo.cpp)."""
+
+        beams = int(self.rng.integers(self.raw_beams[0], self.raw_beams[1] + 1))
+        increment = 2 * math.pi / (beams - 1)
+        device_angles = np.arange(beams) * increment
+        with self.lock:
+            _, ranges = self.world.laser(
+                maximum=self.range_max, noise_m=self.lidar_noise, rng=self.rng,
+                angles=device_angles + self.lidar_device_yaw,
+            )
+        scan = LaserScan()
+        scan.header.stamp = self.get_clock().now().to_msg()
+        scan.header.frame_id = "lidar_raw"
+        scan.angle_min = 0.0
+        scan.angle_max = float(2 * math.pi)
+        scan.angle_increment = float(increment)
+        scan.scan_time = self.scan_period
+        scan.time_increment = self.scan_period / (beams - 1)
+        scan.range_min = 0.02
+        scan.range_max = self.range_max
+        ranges = np.where(ranges >= self.range_max, np.nan, ranges)
+        scan.ranges = ranges.astype(float).tolist()
+        scan.intensities = np.where(np.isnan(ranges), np.nan, 200.0).tolist()
         self.scan_pub.publish(scan)
 
     def _status(self) -> None:

@@ -1,0 +1,15 @@
+# NUR SIMULATION. Diese Werte gelten für den SIMULIERTEN LiDAR des Prüfstands.
+# Niemals am Roboter verwenden: Dort stehen Nullrichtung und Bestätigung in
+# homemy_lidar_bringup/config/stl27l.yaml und kommen aus der Inbetriebnahme
+# (Schritte L3 und L4).
+homemy_sim_base:
+  ros__parameters:
+    lidar_interface: raw
+    # Der simulierte Sensor ist absichtlich schief eingebaut, damit die
+    # Vereinheitlichung ihre Drehung wirklich leisten muss.
+    lidar_device_yaw_deg: 37.04
+
+scan_normalize:
+  ros__parameters:
+    yaw_offset_deg: 37.04
+    alignment_confirmed: true

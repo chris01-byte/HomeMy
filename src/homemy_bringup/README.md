@@ -7,7 +7,8 @@ Startprofile für HomeMy.
 | `app_backend.launch.py` | Kartenspeicher, Raumverwaltung, Kartiermodus, App-Brücke | die Roboterseite der App |
 | `app_sim.launch.py` | dasselbe plus Ersatz für SLAM und Controller aus `homemy_simulation` und die Überbrückung des Roboterzustands | die App ohne Hardware ausprobieren und testen (Stufe S1) |
 | `drivebase_sim.launch.py` | nur der Antriebstreiber an den simulierten Motoren | Verhalten des Treibers allein prüfen, auch Fehlerfälle |
-| `drive_sim.launch.py` | die Roboterseite der App plus Robotermodell, Antriebstreiber an simulierten Motoren, LiDAR-Maske, Bewegungsfreigabe, Controller-Profil, slam_toolbox, Lokalisierungs-Manager mit AMCL, Nav2, Auftragssteuerung, und den Prüfstand mit simuliertem Bediener | Fahren, Kartieren und „Fahre zu Raum“ in der Simulation (Stufe S2) |
+| `lidar_sim.launch.py` | nur die LiDAR-Kette, mit dem unveränderten Herstellertreiber an einem simulierten LiDAR | Treiber, Vereinheitlichung, Maske und Prüfwerkzeug ohne Hardware ausprobieren |
+| `drive_sim.launch.py` | die Roboterseite der App plus Robotermodell, Antriebstreiber an simulierten Motoren, LiDAR-Vereinheitlichung und -Maske, Bewegungsfreigabe, Controller-Profil, slam_toolbox, Lokalisierungs-Manager mit AMCL, Nav2, Auftragssteuerung, und den Prüfstand mit simuliertem Bediener | Fahren, Kartieren und „Fahre zu Raum“ in der Simulation (Stufe S2) |
 
 Keines der Profile startet einen echten Treiber. Nur in `drive_sim` gibt es einen Fahrbefehl, und der geht an den simulierten Antrieb.
 
@@ -63,6 +64,12 @@ Weitere Argumente: `bridge_port`, `storage_root`, `auto_end_timeout_s`, `control
 10. Eine abgebrochene Fahrt hält den Roboter an; während des Kartiermodus wird eine Fahrt abgelehnt.
 11. Neustart dort, wo der Roboter stand: Er übernimmt die gesicherte Lage und fährt ins Schlafzimmer.
 12. Neustart, nachdem der Roboter heimlich in die Küche getragen wurde: Er traut der gesicherten Lage nicht und lehnt eine Fahrt zunächst ab („nicht lokalisiert“). Dann findet er sich im Stand über die Suche in der ganzen Karte wieder, auf höchstens 30 cm genau, und fährt ins Wohnzimmer.
+
+`test/test_lidar_sim.py` prüft die LiDAR-Kette mit dem unveränderten Herstellertreiber (etwa 25 Sekunden). Der Test braucht den gebauten Herstellertreiber (`homemy_lidar_bringup/vendor/build_vendor_driver.sh`); ohne ihn wird er übersprungen. Auf GitHub wird der Treiber dafür gebaut.
+
+1. Ausgeliefert, also gesperrt: Der Scan kommt nur zum Prüfen an, kein Verbraucher sieht ihn.
+2. Freigeschaltet gegen den simulierten LiDAR: wechselnde Strahlenzahl am Treiber, festes Raster danach, Richtung und Drehsinn stimmen an den Wänden der Testwohnung, die eigenen Streben liegen genau in der Maske.
+3. Kabel gezogen: Es kommen keine Scans mehr. Kabel wieder dran: Die Scans kommen von selbst zurück.
 
 `test/test_drivebase_sim.py` prüft den Antriebstreiber allein an den simulierten Motoren (etwa 30 Sekunden):
 

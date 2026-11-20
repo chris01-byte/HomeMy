@@ -8,6 +8,7 @@ on:
       - 'contracts/ros/motion-gate.md'
       - 'contracts/hardware/manual-drive.md'
       - 'contracts/hardware/drivebase-commissioning.md'
+      - 'contracts/hardware/lidar-commissioning.md'
       - '.github/workflows/ros-checks.yml'
   pull_request:
     paths:
@@ -16,6 +17,7 @@ on:
       - 'contracts/ros/motion-gate.md'
       - 'contracts/hardware/manual-drive.md'
       - 'contracts/hardware/drivebase-commissioning.md'
+      - 'contracts/hardware/lidar-commissioning.md'
       - '.github/workflows/ros-checks.yml'
 
 permissions:
@@ -39,12 +41,17 @@ jobs:
           # The drive driver uses the Modbus library versions it was proven with.
           apt-get install -y python3-pip
           python3 -m pip install --break-system-packages -r src/homemy_drivebase/requirements-modbus.txt
+      - name: Build the pinned vendor LiDAR driver (unchanged source, own workspace)
+        run: |
+          source /opt/ros/jazzy/setup.bash
+          src/homemy_lidar_bringup/vendor/build_vendor_driver.sh "$RUNNER_TEMP/homemy_lidar_ws"
       - name: Build
         run: |
           source /opt/ros/jazzy/setup.bash
           colcon build --base-paths src --event-handlers console_cohesion+
-      - name: Test, including the end-to-end tests in simulation (bridge, drive driver, mapping drive)
+      - name: Test, including the end-to-end tests in simulation (bridge, drive driver, LiDAR driver, mapping drive)
         run: |
           source /opt/ros/jazzy/setup.bash
+          source "$RUNNER_TEMP/homemy_lidar_ws/install/setup.bash"
           colcon test --base-paths src --event-handlers console_cohesion+
           colcon test-result --all --verbose

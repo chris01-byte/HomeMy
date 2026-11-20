@@ -4,7 +4,8 @@
 The test stand replaces only the devices (drive motors, LiDAR, IMU) and the
 person with the controller. Everything else is the real HomeMy code: robot
 model, the drive driver (against simulated motors on a simulated RS485 bus),
-blind-sector mask, motion gate with obstacle protection, the controller
+the scan normalisation (against a simulated LiDAR that behaves like the
+STL-27L driver), blind-sector mask, motion gate with obstacle protection, the controller
 profile (teleop_twist_joy), mapping mode, slam_toolbox, localization, Nav2,
 missions, the map store, the room overlay, and the app bridge.
 
@@ -68,6 +69,18 @@ def generate_launch_description():
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(share("homemy_description", "launch", "description.launch.py"))
             ),
+            # The real scan normalisation; only the vendor driver is replaced
+            # by the simulated LiDAR.
+            Node(
+                package="homemy_lidar_bringup",
+                executable="scan_normalize",
+                name="scan_normalize",
+                output="screen",
+                parameters=[
+                    share("homemy_lidar_bringup", "config", "stl27l.yaml"),
+                    share("homemy_simulation", "config", "sim_lidar.yaml"),
+                ],
+            ),
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(share("homemy_lidar_bringup", "launch", "scan_mask.launch.py"))
             ),
@@ -99,13 +112,14 @@ def generate_launch_description():
                 name="homemy_sim_base",
                 output="screen",
                 parameters=[
+                    share("homemy_simulation", "config", "sim_lidar.yaml"),
                     {
                         "world_file": world,
                         "geometry_file": geometry,
                         "start_pose": ParameterValue(LaunchConfiguration("start_pose")),  # YAML list of floats
                         "drive_interface": "modbus",
                         "modbus_port_link": sim_drive_port,
-                    }
+                    },
                 ],
             ),
             # The real drive driver, unlocked only against the simulated motors.

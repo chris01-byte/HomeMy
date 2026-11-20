@@ -329,14 +329,20 @@ class FloorPlanWorld:
         return raycast(boxes, self.geometry.lidar_xy, angles, maximum)
 
     def laser(self, beams: int = 720, maximum: float = 25.0, noise_m: float = 0.0,
-              rng: Optional[np.random.Generator] = None) -> Tuple[np.ndarray, np.ndarray]:
+              rng: Optional[np.random.Generator] = None,
+              angles: Optional[np.ndarray] = None) -> Tuple[np.ndarray, np.ndarray]:
         """One scan in the LiDAR frame: angles from -pi, counter-clockwise.
 
         Returns the angles and the ranges. Rays that hit nothing return
         ``maximum``; the robot's own struts and webs return short ranges.
+        ``angles`` replaces the even grid by given beam directions (robot-
+        aligned LiDAR frame).
         """
 
-        angles = -math.pi + np.arange(beams) * 2 * math.pi / beams
+        if angles is None:
+            angles = -math.pi + np.arange(beams) * 2 * math.pi / beams
+        else:
+            angles = np.asarray(angles, dtype=float)
         world = raycast(self.obstacles, self.lidar_origin(), angles + self.pose[2], maximum)
         own = self.self_returns(angles, maximum)
         ranges = np.minimum(world, own)

@@ -12,7 +12,7 @@ HomeMy-owned ROS 2 packages for ROS 2 Jazzy. Package names and boundaries follow
 | `homemy_description` | robot model (URDF) with CAD dimensions | new |
 | `homemy_manual_drive` | controller profile: pressed drives, released stops | ported from Amadeus `robot_bringup` at `05439c7` |
 | `homemy_motion_gate` | the one place that lets drive commands through, with reactive obstacle protection | rewritten after Amadeus `cmd_vel_mission_gate` at `05439c7` |
-| `homemy_lidar_bringup` | blind-sector mask for the STL-27L scan | new |
+| `homemy_lidar_bringup` | STL-27L: pinned vendor driver and its configuration, scan normalisation, blind-sector mask, check tool; the real scan is locked away from consumers by default | normalisation and vendor pin ported from Amadeus `amadeus_lidar_bringup` at `05439c7`; mask and check tool new |
 | `homemy_navigation` | slam_toolbox profile for the mapping run | settings from Amadeus at `05439c7` and `940a748` |
 | `homemy_drivebase` | driver of the two ESS23-RS drive motors over RS485; non-moving by default | ported from Amadeus `base_hardware` at `05439c7` |
 | `homemy_boot_manager` | until the PMU exists: a bridge that reports a fixed lifecycle state and a fixed emergency-stop signal | new |
