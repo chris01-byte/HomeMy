@@ -1,0 +1,407 @@
+{
+ "body": "freie Sicht für Lidar",
+ "model": "hardware/cad/homemy.step V2",
+ "ring": {
+  "aussen_x": 500.0,
+  "aussen_y": 400.0,
+  "eckradius_aussen": 100.0,
+  "dicke": 3.0,
+  "z_unten": 89.0,
+  "z_oben": 189.0
+ },
+ "schlitz": {
+  "z_unten": 102.0,
+  "z_oben": 142.0,
+  "z_scan": 122.0,
+  "eckradius": 3.0,
+  "ueber_boden": [
+   143.8,
+   183.8
+  ]
+ },
+ "stege_modellkoordinaten": [
+  {
+   "name": "Steg vorn links",
+   "x": [
+    -150,
+    -130
+   ],
+   "y": [
+    180,
+    220
+   ]
+  },
+  {
+   "name": "Steg vorn rechts",
+   "x": [
+    130,
+    150
+   ],
+   "y": [
+    180,
+    220
+   ]
+  },
+  {
+   "name": "Steg Seite links",
+   "x": [
+    -270,
+    -230
+   ],
+   "y": [
+    -110,
+    -30
+   ]
+  },
+  {
+   "name": "Steg Seite rechts",
+   "x": [
+    230,
+    270
+   ],
+   "y": [
+    -110,
+    -30
+   ]
+  },
+  {
+   "name": "Steg hinten links",
+   "x": [
+    -150,
+    -130
+   ],
+   "y": [
+    -220,
+    -180
+   ]
+  },
+  {
+   "name": "Steg hinten rechts",
+   "x": [
+    130,
+    150
+   ],
+   "y": [
+    -220,
+    -180
+   ]
+  }
+ ],
+ "volumen_mm3": {
+  "ring_ohne_schlitz": 485668,
+  "ring_mit_schlitz": 320345
+ },
+ "masse_g_pmma": 381,
+ "blinde_winkel_stege_scanebene": [
+  {
+   "von": -160.14,
+   "bis": -157.21,
+   "breite": 2.94,
+   "abstand_min": 380,
+   "abstand_max": 390
+  },
+  {
+   "von": -137.61,
+   "bis": -127.23,
+   "breite": 10.37,
+   "abstand_min": 312,
+   "abstand_max": 368
+  },
+  {
+   "von": -76.14,
+   "bis": -72.9,
+   "breite": 3.25,
+   "abstand_min": 135,
+   "abstand_max": 155
+  },
+  {
+   "von": 72.9,
+   "bis": 76.14,
+   "breite": 3.25,
+   "abstand_min": 135,
+   "abstand_max": 155
+  },
+  {
+   "von": 127.23,
+   "bis": 137.61,
+   "breite": 10.37,
+   "abstand_min": 312,
+   "abstand_max": 368
+  },
+  {
+   "von": 157.21,
+   "bis": 160.14,
+   "breite": 2.94,
+   "abstand_min": 380,
+   "abstand_max": 390
+  }
+ ],
+ "blinde_winkel_stege_schlitzrand": {
+  "102.5": [
+   {
+    "von": -160.33,
+    "bis": -157.03,
+    "breite": 3.31,
+    "abstand_min": 379,
+    "abstand_max": 391
+   },
+   {
+    "von": -137.77,
+    "bis": -127.04,
+    "breite": 10.73,
+    "abstand_min": 311,
+    "abstand_max": 369
+   },
+   {
+    "von": -76.27,
+    "bis": -72.73,
+    "breite": 3.54,
+    "abstand_min": 134,
+    "abstand_max": 157
+   },
+   {
+    "von": 72.73,
+    "bis": 76.27,
+    "breite": 3.54,
+    "abstand_min": 134,
+    "abstand_max": 157
+   },
+   {
+    "von": 127.04,
+    "bis": 137.77,
+    "breite": 10.73,
+    "abstand_min": 311,
+    "abstand_max": 369
+   },
+   {
+    "von": 157.03,
+    "bis": 160.33,
+    "breite": 3.31,
+    "abstand_min": 379,
+    "abstand_max": 391
+   }
+  ],
+  "141.5": [
+   {
+    "von": -160.33,
+    "bis": -157.03,
+    "breite": 3.31,
+    "abstand_min": 379,
+    "abstand_max": 391
+   },
+   {
+    "von": -137.77,
+    "bis": -127.04,
+    "breite": 10.73,
+    "abstand_min": 311,
+    "abstand_max": 369
+   },
+   {
+    "von": -76.27,
+    "bis": -72.73,
+    "breite": 3.54,
+    "abstand_min": 134,
+    "abstand_max": 157
+   },
+   {
+    "von": 72.73,
+    "bis": 76.27,
+    "breite": 3.54,
+    "abstand_min": 134,
+    "abstand_max": 157
+   },
+   {
+    "von": 127.04,
+    "bis": 137.77,
+    "breite": 10.73,
+    "abstand_min": 311,
+    "abstand_max": 369
+   },
+   {
+    "von": 157.03,
+    "bis": 160.33,
+    "breite": 3.31,
+    "abstand_min": 379,
+    "abstand_max": 391
+   }
+  ]
+ },
+ "blinde_winkel_streben": [
+  {
+   "von": -137.94,
+   "bis": -126.92,
+   "breite": 11.02,
+   "abstand_min": 249,
+   "abstand_max": 303
+  },
+  {
+   "von": 126.88,
+   "bis": 137.88,
+   "breite": 11.01,
+   "abstand_min": 250,
+   "abstand_max": 303
+  }
+ ],
+ "modellpruefung": {
+  "solids": 312,
+  "in_scanebene": [
+   "Robot/Waveshare_DTOF_LiDAR_STL27L_Fusion360:1/Head_upper_band_Z33.00_to_34.80:1",
+   "Robot/Aluminiumprofil_40x40_leicht_Nut8_I-Typ_2N90_L150mm v1(Spiegeln):1",
+   "Robot/Aluminiumprofil_40x40_leicht_Nut8_I-Typ_2N90_L150mm v1(Spiegeln):2"
+  ],
+  "ueberlappung_mit_ring_mm3": [
+   [
+    "Robot/=>[0:1:1:158]",
+    0.0
+   ],
+   [
+    "Robot/=>[0:1:1:158]",
+    0.0
+   ],
+   [
+    "Robot/=>[0:1:1:158]",
+    0.0
+   ],
+   [
+    "Robot/=>[0:1:1:158]",
+    0.0
+   ],
+   [
+    "Robot/=>[0:1:1:158]",
+    0.0
+   ]
+  ]
+ },
+ "abwicklung": {
+  "laenge": 1618.89,
+  "hoehe": 100.0,
+  "schlitz_unten": 13.0,
+  "schlitz_oben": 53.0,
+  "webs": [
+   {
+    "name": "Steg Seite links (Anfang)",
+    "von": 0.0,
+    "bis": 40.02,
+    "breite": 40.02
+   },
+   {
+    "name": "Steg hinten links",
+    "von": 184.72,
+    "bis": 204.72,
+    "breite": 20.0
+   },
+   {
+    "name": "Steg hinten rechts",
+    "von": 464.72,
+    "bis": 484.72,
+    "breite": 20.0
+   },
+   {
+    "name": "Steg Seite rechts",
+    "von": 629.43,
+    "bis": 709.45,
+    "breite": 80.02
+   },
+   {
+    "name": "Steg vorn rechts",
+    "von": 994.17,
+    "bis": 1014.17,
+    "breite": 20.0
+   },
+   {
+    "name": "Steg vorn links",
+    "von": 1274.17,
+    "bis": 1294.17,
+    "breite": 20.0
+   },
+   {
+    "name": "Steg Seite links (Ende)",
+    "von": 1578.89,
+    "bis": 1618.89,
+    "breite": 40.0
+   }
+  ],
+  "slots": [
+   {
+    "von": 40.02,
+    "bis": 184.72,
+    "laenge": 144.7,
+    "zwischen": [
+     "Steg Seite links (Anfang)",
+     "Steg hinten links"
+    ]
+   },
+   {
+    "von": 204.72,
+    "bis": 464.72,
+    "laenge": 260.0,
+    "zwischen": [
+     "Steg hinten links",
+     "Steg hinten rechts"
+    ]
+   },
+   {
+    "von": 484.72,
+    "bis": 629.43,
+    "laenge": 144.71,
+    "zwischen": [
+     "Steg hinten rechts",
+     "Steg Seite rechts"
+    ]
+   },
+   {
+    "von": 709.45,
+    "bis": 994.17,
+    "laenge": 284.72,
+    "zwischen": [
+     "Steg Seite rechts",
+     "Steg vorn rechts"
+    ]
+   },
+   {
+    "von": 1014.17,
+    "bis": 1274.17,
+    "laenge": 260.0,
+    "zwischen": [
+     "Steg vorn rechts",
+     "Steg vorn links"
+    ]
+   },
+   {
+    "von": 1294.17,
+    "bis": 1578.89,
+    "laenge": 284.72,
+    "zwischen": [
+     "Steg vorn links",
+     "Steg Seite links (Ende)"
+    ]
+   }
+  ],
+  "bends": [
+   {
+    "name": "Ecke hinten links",
+    "von": 30.0,
+    "bis": 184.72
+   },
+   {
+    "name": "Ecke hinten rechts",
+    "von": 484.72,
+    "bis": 639.45
+   },
+   {
+    "name": "Ecke vorn rechts",
+    "von": 839.45,
+    "bis": 994.17
+   },
+   {
+    "name": "Ecke vorn links",
+    "von": 1294.17,
+    "bis": 1448.89
+   }
+  ],
+  "marks": {
+   "vorn Mitte": 1144.17,
+   "hinten Mitte": 334.72
+  }
+ }
+}

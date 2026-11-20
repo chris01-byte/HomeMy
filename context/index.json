@@ -35,9 +35,10 @@
       ]
     },
     "lidar": {
-      "when": "STL-27L LiDAR, scan normalization, LiDAR frames, masks, or LiDAR commissioning",
+      "when": "STL-27L LiDAR, scan normalization, LiDAR frames, masks, LiDAR window slot and webs, or LiDAR commissioning",
       "files": [
         "contracts/hardware/lidar-commissioning.md",
+        "hardware/cad/lidar-window/README.md",
         "integration/roboter_ws/TRANSFER_MANIFEST.md"
       ]
     },

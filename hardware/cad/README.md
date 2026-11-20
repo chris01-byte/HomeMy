@@ -17,3 +17,10 @@ git lfs pull
 - SHA-256: `46d2ce68e5f2d179f7abac3a7a173e5e476d11da2bdcd0452cb6fbc11e6db7c6`.
 - Import checks: ZIP CRC and STEP opening/closing markers passed. CAD geometry
   validation was not performed.
+
+## Derived Parts
+
+- [`lidar-window/`](lidar-window/README.md): the slotted acrylic LiDAR window
+  ring "freie Sicht für Lidar" (STEP in the coordinates of `homemy.step`, flat
+  development as DXF, drawing, and checks). It is a separate file; `homemy.step`
+  is unchanged and does not contain this ring.
