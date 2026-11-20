@@ -4,9 +4,9 @@
   <name>homemy_lidar_bringup</name>
   <version>0.1.0</version>
   <description>
-    STL-27L scan handling for HomeMy: masks the six blind sectors behind the
-    struts and slot webs. The driver and scan normalisation follow after
-    LiDAR commissioning.
+    STL-27L on HomeMy: configuration of the pinned vendor driver, scan
+    normalisation to a fixed robot-aligned grid, the mask for the six blind
+    sectors behind the struts and slot webs, and a listening check tool.
   </description>
   <maintainer email="homemy@example.com">HomeMy</maintainer>
   <license>MIT</license>
@@ -16,9 +16,10 @@
   <depend>python3-numpy</depend>
   <exec_depend>launch</exec_depend>
   <exec_depend>launch_ros</exec_depend>
+  <exec_depend>python3-yaml</exec_depend>
+  <exec_depend>ament_index_python</exec_depend>
 
   <test_depend>python3-pytest</test_depend>
-  <test_depend>python3-yaml</test_depend>
 
   <export>
     <build_type>ament_python</build_type>

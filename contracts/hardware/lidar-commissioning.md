@@ -1,6 +1,6 @@
 # STL-27L LiDAR Commissioning Contract
 
-Status: proposed for HomeMy; no source code, navigation profile, or mounted-frame value copied.
+Status: proposed for HomeMy. The chain from the vendor driver to the masked scan is implemented in `src/homemy_lidar_bringup` and tested in simulation, including the unchanged vendor driver against a simulated device (2026-11-20). As delivered, the real scan reaches no consumer. No mounted-frame value is copied; nothing has run on the HomeMy LiDAR.
 Owner: HomeMy sensor integration.
 Source reference: chris01-byte/Roboter_ws src/amadeus_lidar_bringup/ and vendor_ldlidar_stl_ros2.repos at commit 05439c7a13d7a92e69b9eb4663e3a2a1b44626a1.
 
@@ -36,6 +36,26 @@ Record these values only after the LiDAR is installed on the finished HomeMy cha
 
 The source pairing laser_scan_dir=true and tf_yaw=+1.5708 is evidence about the source installation only. It must not be copied as a HomeMy calibration constant and may only be accepted or replaced as one coupled, measured result.
 
+## Implementation Status (2026-11-20)
+
+Chain: vendor driver `/scan_raw` (frame `lidar_raw`) → `scan_normalize` `/scan` (frame `lidar_link`) → `scan_mask` `/scan_masked` → mapping, localization, obstacle protection.
+
+- **Vendor driver.** `ldlidar_stl_ros2` is pinned to the source robot's commit in `src/homemy_lidar_bringup/vendor/ldlidar_stl_ros2.repos` and built unchanged by `build_vendor_driver.sh`. Under Ubuntu 24.04 (GCC 13) it builds only when the compiler is handed the pthread header the vendor's logger forgets to include; the script does that without touching the source. The driver's own angle crop is off; HomeMy masks in `scan_mask`.
+- **Normalisation.** Ported from the source with unchanged principle (nearest input beam, never interpolation), 2160 beams. HomeMy addition: the output grid is robot-aligned in `lidar_link`, and the device's zero direction is one parameter, `yaw_offset_deg`, in the same file as the driver's `laser_scan_dir`. The robot model therefore holds only the LiDAR's position; the raw frame `lidar_raw` is deliberately not in the model.
+- **Lock.** `alignment_confirmed` is false as delivered. The normalised scan then goes only to `/scan_unconfirmed`; nothing arrives on `/scan`, so mapping and localization get no scan and the motion gate stays closed for lack of one. The lock is opened only after L3 and L4 have passed on the robot.
+- **Check tool.** `lidar_check` only listens: `stats` (L1, L2), `target` (L3), `sectors` (L4, comparison with the mask).
+- `yaw_offset_deg` is 0.0 and not measured. The source value of +90 degrees is not taken over.
+
+Validated in simulation only:
+
+- unit tests of the grid, the normaliser node, the check evaluation, and the mask;
+- the test stand's simulated LiDAR behaves like the vendor driver (varying beam count, 0 to 360 degrees, device mounted askew, NaN where nothing is measured), and the whole drive simulation (`test_drive_sim_e2e.py`) runs through normalisation and mask;
+- `src/homemy_bringup/test/test_lidar_sim.py` runs the unchanged vendor driver: the test stand sends the device's own serial packets (format and checksum read from the vendor driver's source) through a pseudo-terminal. Observed: 18 different beam counts between 2147 and 2167 at about 10 Hz from the driver, a fixed 2160 after normalisation, direction and rotation sense correct against the walls of the test apartment, the robot's own struts and webs exactly inside the six mask sectors, the lock, and loss and return of the data stream (the driver keeps running, reports time-outs, and resumes by itself).
+
+The simulated device follows the packet format the vendor driver reads. It is no evidence about the HomeMy LiDAR's mounting, noise, or USB behaviour.
+
+Observed with the vendor driver: the beam at the device's zero direction stays NaN in most scans (one beam of 2160).
+
 ## Design Prediction for Masking
 
 HomeMy mounts the LiDAR inside the base behind an open slot. The CAD-derived blind sectors of the two struts and the slot webs are recorded in `docs/decisions/2026-11-16-lidar-slot-and-support-webs.md`. They are the expected starting point for L4, not accepted mask values. L4 passes only when live scans confirm each sector and its margin.
@@ -54,8 +74,8 @@ A missing, stale, ambiguous, or invalid scan prevents any dependent future capab
 
 ## Validation
 
-Ported software must pass source-derived and HomeMy-specific synthetic tests for variable beam count, interpolation, direction, invalid ranges, masked values, stale timestamps, and endpoint restart. Hardware acceptance requires measured HomeMy values; prior source results are only evidence for what to test.
+Ported software must pass source-derived and HomeMy-specific synthetic tests for variable beam count, interpolation, direction, invalid ranges, masked values, stale timestamps, and endpoint restart. These pass in simulation as listed above; stale scans are caught by the motion gate's freshness check (`contracts/ros/motion-gate.md`). Hardware acceptance requires measured HomeMy values; prior source results are only evidence for what to test.
 
 ## Rollback
 
-Disable the HomeMy LiDAR bring-up or retain its sensor-only profile. Do not restore source mount values, map configuration, or navigation settings as a shortcut. Any rollback keeps motion disabled unless its separate contracts remain satisfied.
+Set `alignment_confirmed` back to false, disable the HomeMy LiDAR bring-up, or retain its sensor-only profile. Do not restore source mount values, map configuration, or navigation settings as a shortcut. Any rollback keeps motion disabled unless its separate contracts remain satisfied.

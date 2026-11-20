@@ -1,0 +1,16 @@
+# Stable device name for the STL-27L on HomeMy.
+# Target: /etc/udev/rules.d/99-homemy-lidar.rules
+#
+# The LiDAR's USB adapter (CP2102) and the drive's RS485 adapter both appear
+# as /dev/ttyUSBx, numbered by plug order. Without a fixed name the LiDAR
+# driver could open the motor bus.
+#
+# 1. Find the serial number (replace ttyUSB0 by the LiDAR's current device):
+#      udevadm info -a -n /dev/ttyUSB0 | grep -E 'idVendor|idProduct|ATTRS{serial}'
+# 2. Enter it below, copy the file, and reload:
+#      sudo cp 99-homemy-lidar.rules.example /etc/udev/rules.d/99-homemy-lidar.rules
+#      sudo udevadm control --reload-rules && sudo udevadm trigger
+# 3. Unplug and plug the cable once, then: ls -l /dev/homemy_lidar
+#
+# Do not use the vendor's broad rule (MODE="0777", vendor and product only).
+SUBSYSTEM=="tty", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", ATTRS{serial}=="HIER_SERIENNUMMER", SYMLINK+="homemy_lidar", GROUP="dialout", MODE="0660"

@@ -1,0 +1,44 @@
+# STL-27L on HomeMy: vendor driver and scan normalisation.
+#
+# The vendor driver ldlidar_stl_ros2 stays unchanged and is pinned in
+# vendor/ldlidar_stl_ros2.repos. Everything robot-specific is here.
+#
+# Chain:  driver --/scan_raw--> scan_normalize --/scan--> scan_mask --/scan_masked-->
+homemy_stl27l:
+  ros__parameters:
+    product_name: LDLiDAR_STL27L
+    topic_name: scan_raw
+    # Deliberately a frame that is not in the robot model: the raw scan has a
+    # varying beam count and the device's own zero direction. Nothing may
+    # place it in space.
+    frame_id: lidar_raw
+    # Stable udev alias, see config/99-homemy-lidar.rules.example. Never
+    # /dev/ttyUSB0: the numbering depends on the plug order, and the drive's
+    # RS485 adapter is a USB serial device as well.
+    port_name: /dev/homemy_lidar
+    port_baudrate: 921600
+    # ROS wants counter-clockwise scans; the driver mirrors the device's
+    # clockwise bins only with true. Candidate from the source robot, where
+    # false made slam_toolbox see turns mirrored. Confirmed or replaced in
+    # step L3, together with yaw_offset_deg below.
+    laser_scan_dir: true
+    # HomeMy masks its struts and slot webs in scan_mask, not in the driver.
+    enable_angle_crop_func: false
+    angle_crop_min: 0.0
+    angle_crop_max: 0.0
+
+scan_normalize:
+  ros__parameters:
+    input_topic: /scan_raw
+    output_topic: /scan
+    output_frame: lidar_link
+    beams: 2160
+    # Bearing of the device's zero direction in lidar_link (0 = straight
+    # ahead, positive = towards the robot's left), in degrees.
+    # NOT MEASURED. Step L3 of contracts/hardware/lidar-commissioning.md.
+    yaw_offset_deg: 0.0
+    # Lock: while false, the normalised scan goes only to /scan_unconfirmed.
+    # Nothing arrives on /scan, so mapping, localization, and the motion gate
+    # do not use a scan whose direction nobody has checked. Set to true only
+    # after L3 and L4 have passed on the robot.
+    alignment_confirmed: false

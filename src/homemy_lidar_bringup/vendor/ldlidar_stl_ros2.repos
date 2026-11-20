@@ -1,0 +1,10 @@
+# Vendor driver for the STL-27L, pinned to the commit the source robot ran.
+# It is not copied into this repository and not changed.
+#
+# Build it in its own workspace with build_vendor_driver.sh next to this
+# file; the script reads url and version from here.
+repositories:
+  ldlidar_stl_ros2:
+    type: git
+    url: https://github.com/ldrobotSensorTeam/ldlidar_stl_ros2.git
+    version: bf668a89baf722a787dadc442860dcbf33a82f5a
