@@ -74,6 +74,8 @@
     "imu": {
       "when": "HWT601 IMU, yaw rate, gyro bias, tile joints, encoder and IMU fusion, EKF odometry, or IMU commissioning",
       "files": [
+        "contracts/hardware/imu-commissioning.md",
+        "src/homemy_state_estimation/README.md",
         "docs/transfers/roboter_ws/2026-11-16-hwt601-imu-state-estimation.md",
         "integration/roboter_ws/TRANSFER_MANIFEST.md"
       ]

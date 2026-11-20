@@ -1,0 +1,50 @@
+# HWT601-AGV-485 on HomeMy: reader and yaw-rate aid.
+# Contract: contracts/hardware/imu-commissioning.md
+#
+# The reader only reads (Modbus function 0x03). It cannot change the sensor's
+# settings or calibration, and it commands nothing.
+hwt601_imu:
+  ros__parameters:
+    # Stable udev alias, see config/99-homemy-imu.rules.example. The IMU has
+    # its own USB-RS485 adapter; the reader refuses the drive's and the
+    # LiDAR's device.
+    port: /dev/homemy_imu
+    baud: 115200
+    device_address: 80            # 0x50, the sensor's factory address
+    poll_rate_hz: 100.0
+    response_timeout_s: 0.03
+    reconnect_interval_s: 1.0
+    errors_before_reconnect: 3
+    sensor_timeout_s: 0.20
+    frame_id: imu_link
+    imu_topic: /imu/data_raw
+    status_topic: /homemy/imu/status_json
+    # Scales from the data sheet as the source robot used them. To be
+    # confirmed on the delivered sensor in step I3 (a full turn by hand must
+    # read 360 degrees).
+    acceleration_full_scale_g: 4.0
+    angular_velocity_full_scale_dps: 400.0
+
+yaw_rate:
+  ros__parameters:
+    imu_topic: /imu/data_raw
+    output_topic: /imu/yaw_rate
+    status_topic: /homemy/imu/yaw_rate_status_json
+    expected_imu_frame: imu_link
+    base_frame: base_link
+    # Which sensor axis is vertical, and whether it points up (+1) or down
+    # (-1). NOT MEASURED: the IMU's mounting place on HomeMy is still open.
+    # Step I3.
+    yaw_axis: z
+    yaw_sign: 1.0
+    # Proposals; bias and noise limits are results of step I2.
+    standstill_linear_mps: 0.005
+    standstill_angular_radps: 0.005
+    standstill_settle_s: 1.0
+    bias_window_s: 5.0
+    bias_time_constant_s: 30.0
+    bias_max_abs_radps: 0.05
+    bias_max_stddev_radps: 0.01
+    moved_by_hand_radps: 0.03
+    input_timeout_s: 0.3
+    yaw_rate_variance: 0.0004

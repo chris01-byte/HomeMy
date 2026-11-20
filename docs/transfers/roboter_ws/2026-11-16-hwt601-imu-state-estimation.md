@@ -1,6 +1,6 @@
 # HWT601 IMU and Yaw-Rate State Estimation Transfer Candidate
 
-Status: proposed for staged adaptation; no HomeMy code copied; no HomeMy IMU has been connected or measured.
+Status: adapting since 2026-11-20. The read-only reader is ported and a yaw-rate aid written in `src/homemy_state_estimation`, under `contracts/hardware/imu-commissioning.md`, and tested in simulation; no HomeMy IMU has been connected or measured. This record stays as the source review; the contract holds the current state.
 
 ## 1. Source
 
@@ -13,7 +13,7 @@ Status: proposed for staged adaptation; no HomeMy code copied; no HomeMy IMU has
 
 HomeMy uses the same HWT601-AGV-485 as the source robot. Its purpose is yaw-rate-aided planar odometry: wheel encoders supply forward speed, the gyro supplies yaw rate. The sensor has six axes and no absolute heading reference, so its orientation output is not a heading source.
 
-Planned destination: a future `src/homemy_state_estimation/` package. The drivebase encoder path stays in the separate drivebase candidate.
+Destination: `src/homemy_state_estimation/`. The drivebase encoder path stays in the separate drivebase candidate.
 
 ## 3. Interface and Incompatible Assumptions
 
@@ -69,7 +69,7 @@ Whether HomeMy needs it is a measurement, not an assumption. Two differences fro
 
 ## 4. Tests and Results Actually Run
 
-None for HomeMy. This record is a source review only.
+At the time of this review: none for HomeMy. Since 2026-11-20 see the validation section of `contracts/hardware/imu-commissioning.md`.
 
 The pinned source commit contains 96 HWT601 test functions in nine test files (counted, not executed here). The source documentation states that its historical acceptances are not current acceptances, and its latest real pre-runs on 2026-10-01 were still blocked, partly by IMU recovery budgets and encoder read timing. Source results are regression evidence, not HomeMy acceptance.
 
@@ -94,4 +94,4 @@ Rollback: remove the state-estimation service from composition and return to the
 
 ## Next Safe Step
 
-Write the HomeMy IMU commissioning contract in `contracts/hardware/` before porting code, then port only the read-only protocol decoder with synthetic tests (I1).
+Done 2026-11-20: contract written, reader ported, simulation tests run. Next: steps I0 to I3 on the HomeMy sensor, without motors.

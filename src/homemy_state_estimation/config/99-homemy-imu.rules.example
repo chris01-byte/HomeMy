@@ -1,0 +1,12 @@
+# Stable device name for the IMU's USB-RS485 adapter on HomeMy.
+# Target: /etc/udev/rules.d/99-homemy-imu.rules
+#
+# The IMU has its own adapter. It must never share the drive's RS485 bus.
+#
+# 1. Find the adapter's serial number (replace ttyUSB0 by its current device):
+#      udevadm info -a -n /dev/ttyUSB0 | grep -E 'idVendor|idProduct|ATTRS{serial}'
+# 2. Enter vendor, product, and serial number below, copy the file, and reload:
+#      sudo cp 99-homemy-imu.rules.example /etc/udev/rules.d/99-homemy-imu.rules
+#      sudo udevadm control --reload-rules && sudo udevadm trigger
+# 3. Unplug and plug the adapter once, then: ls -l /dev/homemy_imu
+SUBSYSTEM=="tty", ATTRS{idVendor}=="HIER_VENDOR", ATTRS{idProduct}=="HIER_PRODUKT", ATTRS{serial}=="HIER_SERIENNUMMER", SYMLINK+="homemy_imu", GROUP="dialout", MODE="0660"
