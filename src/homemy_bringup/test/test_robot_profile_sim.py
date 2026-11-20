@@ -71,6 +71,22 @@ def connect(stack):
     return control
 
 
+def enable_mapping(control):
+    """Switch mapping mode on as the app does: only once the robot offers it.
+
+    The app shows the switch only while the status carries no block reason
+    (controller connected, robot ready). Sending the command earlier would be
+    refused, and rightly so.
+    """
+
+    control.wait_status(
+        MODE_STATUS,
+        lambda s: s["mapping_mode"]["controller_connected"] and s["mapping_mode"]["enable_block_reason"] is None,
+        timeout=40,
+    )
+    return mode_command(control, "enable", "ios-mode-1")
+
+
 def sim_id():
     return f"sim_id:=test_{random.randint(0, 10**9)}"
 
@@ -95,9 +111,8 @@ def test_delivered_profile_moves_nothing_and_uses_no_scan():
         try:
             probe.spin_until(
                 lambda: None not in (probe.sim, probe.gate, probe.drive, probe.imu), 60, "robot profile running")
-            control.wait_status(MODE_STATUS, lambda s: s["mapping_mode"]["controller_connected"], timeout=30)
-            enabled = mode_command(control, "enable", "ios-mode-1")
-            assert enabled["ok"] and enabled["mapping_mode"]["state"] == "active"
+            enabled = enable_mapping(control)
+            assert enabled["ok"] and enabled["mapping_mode"]["state"] == "active", enabled["message"]
 
             # Mapping mode is on and the person holds the direction pad forward.
             probe.spin_until(lambda: probe.scans["/scan_unconfirmed"] >= 20, 40, "vendor driver delivers")
@@ -131,9 +146,8 @@ def test_commissioned_profile_drives_through_all_three_real_drivers():
             probe.spin_until(lambda: probe.yaw is not None and probe.yaw["ready"], 30, "gyro bias learned")
             assert probe.travel() == 0.0
 
-            control.wait_status(MODE_STATUS, lambda s: s["mapping_mode"]["controller_connected"], timeout=30)
-            enabled = mode_command(control, "enable", "ios-mode-1")
-            assert enabled["ok"] and enabled["mapping_mode"]["state"] == "active"
+            enabled = enable_mapping(control)
+            assert enabled["ok"] and enabled["mapping_mode"]["state"] == "active", enabled["message"]
             probe.spin(1.0)
             assert probe.travel() == 0.0  # mapping mode on, direction pad not pressed
 
