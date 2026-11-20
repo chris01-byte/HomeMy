@@ -20,7 +20,7 @@ HomeMy-owned ROS 2 packages for ROS 2 Jazzy. Package names and boundaries follow
 | `homemy_simulation` | test stand (simulated drive, LiDAR, odometry, IMU), simulated controller and operator, synthetic map; simulation only | test stand ported from the Amadeus test stand at `940a748`; rest new |
 | `homemy_bringup` | launch profiles `app_backend`, `app_sim`, `drive_sim`; end-to-end tests | new |
 
-Three packages talk to hardware: `homemy_drivebase` (as delivered it sends nothing to the motors), `homemy_lidar_bringup` (as delivered the scan reaches no consumer), and `homemy_state_estimation` (read-only; as delivered the IMU influences nothing). The only velocity publisher is the motion gate; in the `drive_sim` profile its commands reach the drive driver, which is unlocked there only against simulated motors. Contracts: `contracts/api/app-bridge.md`, `contracts/hardware/manual-drive.md`, `contracts/ros/motion-gate.md`.
+The robot is started with `homemy_bringup/launch/robot.launch.py` (`docs/runbooks/first-bring-up.md`). Three packages talk to hardware: `homemy_drivebase` (as delivered it sends nothing to the motors), `homemy_lidar_bringup` (as delivered the scan reaches no consumer), and `homemy_state_estimation` (read-only; as delivered the IMU influences nothing). The only velocity publisher is the motion gate; in the `drive_sim` profile its commands reach the drive driver, which is unlocked there only against simulated motors. Contracts: `contracts/api/app-bridge.md`, `contracts/hardware/manual-drive.md`, `contracts/ros/motion-gate.md`.
 
 ```bash
 colcon build --base-paths src

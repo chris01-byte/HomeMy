@@ -29,7 +29,7 @@ def generate_launch_description():
                 "imu_ekf_params_file", default_value=PathJoinSubstitution([share, "config", "ekf_yaw_rate.yaml"])),
             DeclareLaunchArgument(
                 "imu_overlay_params_file", default_value=PathJoinSubstitution([share, "config", "hwt601.yaml"]),
-                description="Optional second parameter file laid over the first one; the simulation uses it."),
+                description="Optional second parameter file laid over the first one: the robot's local values."),
             DeclareLaunchArgument(
                 "imu_port", default_value="/dev/homemy_imu",
                 description="Serial device of the IMU's own RS485 adapter; the stable udev alias."),
@@ -44,7 +44,11 @@ def generate_launch_description():
                 executable="hwt601_imu",
                 name="hwt601_imu",
                 output="screen",
-                parameters=[params_file, {"port": LaunchConfiguration("imu_port")}],
+                parameters=[
+                    params_file,
+                    LaunchConfiguration("imu_overlay_params_file"),
+                    {"port": LaunchConfiguration("imu_port")},
+                ],
                 condition=IfCondition(LaunchConfiguration("start_imu_reader")),
             ),
             Node(

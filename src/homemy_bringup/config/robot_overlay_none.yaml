@@ -1,0 +1,7 @@
+# The robot profile's default for robot_params_file: local values of this
+# robot. This file sets none, so every device keeps its delivered, locked
+# configuration. The entry below belongs to no node; it only keeps the file
+# a valid parameter file.
+homemy_robot_overlay_none:
+  ros__parameters:
+    note: "no local values"

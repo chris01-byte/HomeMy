@@ -4,6 +4,8 @@ Startprofile für HomeMy.
 
 | Profil | Startet | Wofür |
 | --- | --- | --- |
+| `robot.launch.py` | alles für den echten Roboter: App-Seite, Robotermodell, Antriebstreiber, LiDAR-Kette, IMU, Bewegungsfreigabe, Controller-Fahrt, Kartierung, Standort, Wegplanung, Aufträge | **der Start am Roboter.** Ausgeliefert gesperrt, siehe unten |
+| `robot_sim.launch.py` | `robot.launch.py` unverändert, dazu simulierte Motoren, simulierter LiDAR und simulierter IMU an nachgebildeten seriellen Leitungen | das Roboterprofil ohne Hardware prüfen |
 | `app_backend.launch.py` | Kartenspeicher, Raumverwaltung, Kartiermodus, App-Brücke | die Roboterseite der App |
 | `app_sim.launch.py` | dasselbe plus Ersatz für SLAM und Controller aus `homemy_simulation` und die Überbrückung des Roboterzustands | die App ohne Hardware ausprobieren und testen (Stufe S1) |
 | `drivebase_sim.launch.py` | nur der Antriebstreiber an den simulierten Motoren | Verhalten des Treibers allein prüfen, auch Fehlerfälle |
@@ -65,6 +67,29 @@ Weitere Argumente: `bridge_port`, `storage_root`, `auto_end_timeout_s`, `control
 10. Eine abgebrochene Fahrt hält den Roboter an; während des Kartiermodus wird eine Fahrt abgelehnt.
 11. Neustart dort, wo der Roboter stand: Er übernimmt die gesicherte Lage und fährt ins Schlafzimmer.
 12. Neustart, nachdem der Roboter heimlich in die Küche getragen wurde: Er traut der gesicherten Lage nicht und lehnt eine Fahrt zunächst ab („nicht lokalisiert“). Dann findet er sich im Stand über die Suche in der ganzen Karte wieder, auf höchstens 30 cm genau, und fährt ins Wohnzimmer.
+
+## Das Roboterprofil
+
+```bash
+ros2 launch homemy_bringup robot.launch.py
+```
+
+So gestartet kann der Roboter nichts bewegen und nutzt keinen echten Messwert: Der Antriebstreiber rechnet nur, der LiDAR-Scan erreicht keinen Verbraucher, der IMU wird nur gelesen.
+
+Was sich öffnet, steht in einer Datei, die nur auf dem Roboter liegt und bei der Inbetriebnahme Schritt für Schritt gefüllt wird:
+
+```bash
+ros2 launch homemy_bringup robot.launch.py robot_params_file:=$HOME/.config/homemy/robot_local.yaml
+```
+
+Die Vorlage dafür ist `config/robot_local.example.yaml`. Sie enthält nur Kommentare; wer sie kopiert, schaltet nichts frei. Der ganze Ablauf steht in `docs/runbooks/first-bring-up.md`.
+
+`test/test_robot_profile_sim.py` prüft dieses Profil an simulierten Geräten (etwa 35 Sekunden; braucht den gebauten Herstellertreiber des LiDAR):
+
+1. Mit der unveränderten Vorlage: Kartiermodus an, Steuerkreuz gedrückt. Es bewegt sich nichts, kein Byte geht an die Motoren, kein Scan erreicht Kartierung oder Freigabe, die Freigabe bleibt zu.
+2. Mit den Werten eines „in Betrieb genommenen“ simulierten Roboters: Der Roboter fährt über den echten Antriebstreiber, kartiert mit dem Scan aus dem echten Herstellertreiber, hält beim Loslassen an, und der IMU-Leser liefert.
+
+## Tests der einzelnen Ketten
 
 `test/test_lidar_sim.py` prüft die LiDAR-Kette mit dem unveränderten Herstellertreiber (etwa 25 Sekunden). Der Test braucht den gebauten Herstellertreiber (`homemy_lidar_bringup/vendor/build_vendor_driver.sh`); ohne ihn wird er übersprungen. Auf GitHub wird der Treiber dafür gebaut.
 

@@ -1,0 +1,78 @@
+# Vorlage: örtliche Werte EINES HomeMy-Roboters.
+#
+# Diese Werte entstehen bei der Inbetriebnahme am Roboter. Sie gehören nicht
+# ins Repository. Kopieren:
+#
+#   mkdir -p ~/.config/homemy
+#   cp robot_local.example.yaml ~/.config/homemy/robot_local.yaml
+#
+# Starten:
+#
+#   ros2 launch homemy_bringup robot.launch.py robot_params_file:=$HOME/.config/homemy/robot_local.yaml
+#
+# Jede Zeile erst eintragen (das # davor entfernen), wenn der genannte Schritt
+# am Roboter bestanden ist. Solange hier nichts eingetragen ist, bewegt sich
+# nichts, und kein echter Messwert wird verwendet.
+#
+# Rückweg: die Zeile wieder auskommentieren und neu starten.
+
+homemy_robot_local:
+  ros__parameters:
+    note: "örtliche Werte dieses Roboters"
+
+# ---------------------------------------------------------------- Fahrantrieb
+# Vertrag: contracts/hardware/drivebase-commissioning.md
+drivebase:
+  ros__parameters:
+    note: "siehe Kommentare"
+    # H1: Motor-IDs, wie mit ess23_readonly_check gefunden
+    # left_motor_id: 1
+    # right_motor_id: 2
+    # H2: Encoderwerte, wie mit ess23_readonly_check gemessen
+    # encoder_counts_per_motor_revolution: 0.0
+    # encoder_expected_segment: 0
+    # encoder_expected_resolution: 0
+    # H3: Drehrichtung, an aufgebockten Rädern geprüft
+    # invert_left: false
+    # invert_right: false
+    # H4: Maße, gegen das Maßband kalibriert
+    # wheel_radius_m: 0.0762
+    # wheel_separation_m: 0.3994
+    # H3: ERST mit einer Person am Not-Halt. Beide Zeilen zusammen schalten
+    # die Motoren frei.
+    # dry_run: false
+    # allow_rs485: true
+
+# ---------------------------------------------------------------------- LiDAR
+# Vertrag: contracts/hardware/lidar-commissioning.md
+homemy_stl27l:
+  ros__parameters:
+    note: "siehe Kommentare"
+    # L3: nur ändern, wenn der Winkel beim Tragen des Kartons nach links SINKT
+    # laser_scan_dir: true
+
+scan_normalize:
+  ros__parameters:
+    note: "siehe Kommentare"
+    # L3: Abweichung, die lidar_check target für den Karton vorn zeigt
+    # yaw_offset_deg: 0.0
+    # Nach L3 UND L4: gibt den Scan für Kartierung, Standort und Fahren frei
+    # alignment_confirmed: true
+
+scan_mask:
+  ros__parameters:
+    note: "siehe Kommentare"
+    # L4: nur ändern, wenn lidar_check sectors Abweichungen zeigt
+    # sector_start_deg: [72.9, 126.9, 157.2, -76.1, -137.9, -160.1]
+    # sector_end_deg: [76.1, 137.9, 160.1, -72.9, -126.9, -157.2]
+    # margin_deg: 1.5
+
+# ------------------------------------------------------------------------ IMU
+# Vertrag: contracts/hardware/imu-commissioning.md
+yaw_rate:
+  ros__parameters:
+    note: "siehe Kommentare"
+    # I3: welche Sensorachse senkrecht steht, und ob sie nach oben (+1) oder
+    # unten (-1) zeigt
+    # yaw_axis: z
+    # yaw_sign: 1.0

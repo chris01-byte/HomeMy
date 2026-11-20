@@ -12,11 +12,19 @@ def generate_launch_description():
     return LaunchDescription(
         [
             DeclareLaunchArgument("scan_mask_params_file", default_value=params),
+            DeclareLaunchArgument(
+                "scan_mask_overlay_params_file",
+                default_value=params,
+                description="Optional second parameter file laid over the first one: the robot's local values.",
+            ),
             Node(
                 package="homemy_lidar_bringup",
                 executable="scan_mask",
                 name="scan_mask",
-                parameters=[LaunchConfiguration("scan_mask_params_file")],
+                parameters=[
+                    LaunchConfiguration("scan_mask_params_file"),
+                    LaunchConfiguration("scan_mask_overlay_params_file"),
+                ],
             ),
         ]
     )

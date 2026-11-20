@@ -188,6 +188,16 @@
         "src/homemy_mission/README.md",
         "src/homemy_navigation/README.md"
       ]
+    },
+    "bring-up": {
+      "when": "first start on the real robot, the robot launch profile, local robot values, commissioning order of drive, LiDAR, and IMU",
+      "files": [
+        "docs/runbooks/first-bring-up.md",
+        "src/homemy_bringup/README.md",
+        "contracts/hardware/drivebase-commissioning.md",
+        "contracts/hardware/lidar-commissioning.md",
+        "contracts/hardware/imu-commissioning.md"
+      ]
     }
   }
 }

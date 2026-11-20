@@ -1,0 +1,28 @@
+# NUR SIMULATION. "Örtliche Werte" eines Roboters, dessen Geräte der Prüfstand
+# sind. Steht für die Datei, die bei der Inbetriebnahme am echten Roboter
+# entsteht (homemy_bringup/config/robot_local.example.yaml). Niemals am
+# Roboter verwenden.
+#
+# Die Werte müssen zu den simulierten Geräten passen (sim_drivebase.yaml,
+# sim_lidar.yaml, sim_imu.yaml); ein Test prüft das.
+drivebase:
+  ros__parameters:
+    dry_run: false
+    allow_rs485: true
+    left_motor_id: 1
+    right_motor_id: 2
+    invert_left: false
+    invert_right: true
+    encoder_counts_per_motor_revolution: 1000.0
+    encoder_expected_segment: 1000
+    encoder_expected_resolution: 4000
+
+scan_normalize:
+  ros__parameters:
+    yaw_offset_deg: 37.04
+    alignment_confirmed: true
+
+yaw_rate:
+  ros__parameters:
+    yaw_axis: z
+    yaw_sign: -1.0

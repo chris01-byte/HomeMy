@@ -15,9 +15,15 @@ from launch_ros.substitutions import FindPackageShare
 def generate_launch_description():
     params = PathJoinSubstitution([FindPackageShare("homemy_lidar_bringup"), "config", "stl27l.yaml"])
     params_file = LaunchConfiguration("lidar_params_file")
+    overlay = LaunchConfiguration("lidar_overlay_params_file")
     return LaunchDescription(
         [
             DeclareLaunchArgument("lidar_params_file", default_value=params),
+            DeclareLaunchArgument(
+                "lidar_overlay_params_file",
+                default_value=params,
+                description="Optional second parameter file laid over the first one: the robot's local values.",
+            ),
             DeclareLaunchArgument(
                 "lidar_port",
                 default_value="/dev/homemy_lidar",
@@ -33,7 +39,7 @@ def generate_launch_description():
                 executable="ldlidar_stl_ros2_node",
                 name="homemy_stl27l",
                 output="screen",
-                parameters=[params_file, {"port_name": LaunchConfiguration("lidar_port")}],
+                parameters=[params_file, overlay, {"port_name": LaunchConfiguration("lidar_port")}],
                 condition=IfCondition(LaunchConfiguration("start_lidar_driver")),
                 # The driver ends itself if the device is missing at start;
                 # start it again, so that a LiDAR plugged in late is found.
@@ -45,7 +51,7 @@ def generate_launch_description():
                 executable="scan_normalize",
                 name="scan_normalize",
                 output="screen",
-                parameters=[params_file],
+                parameters=[params_file, overlay],
             ),
         ]
     )

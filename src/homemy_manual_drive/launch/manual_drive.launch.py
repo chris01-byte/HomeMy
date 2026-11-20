@@ -7,6 +7,7 @@ In simulation the joystick driver is replaced (see homemy_simulation).
 
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
+from launch.conditions import IfCondition
 from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
@@ -18,7 +19,18 @@ def generate_launch_description():
     return LaunchDescription(
         [
             DeclareLaunchArgument("manual_drive_params_file", default_value=params),
-            Node(package="joy", executable="joy_node", name="joy_node", parameters=[params_file]),
+            DeclareLaunchArgument(
+                "start_joy_driver",
+                default_value="true",
+                description="false leaves out the joystick driver; the simulation replaces it.",
+            ),
+            Node(
+                package="joy",
+                executable="joy_node",
+                name="joy_node",
+                parameters=[params_file],
+                condition=IfCondition(LaunchConfiguration("start_joy_driver")),
+            ),
             Node(
                 package="teleop_twist_joy",
                 executable="teleop_node",
