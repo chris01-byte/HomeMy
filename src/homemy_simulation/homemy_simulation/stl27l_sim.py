@@ -166,29 +166,43 @@ class PtyStream:
         self._thread.start()
 
     def _run(self) -> None:
+        """Send what the device has measured since the last round.
+
+        The simulation runs on an ordinary computer, and this thread can be
+        held up for some tens of milliseconds. The device then delivers what
+        it measured in the meantime in one piece, as a USB adapter does after
+        a pause, instead of losing half a revolution. Only if the reader is
+        gone or more than a second behind is the backlog thrown away.
+        """
+
         packets_per_second = POINT_RATE_HZ / POINTS_PER_PACKET
+        most_at_once = int(packets_per_second)          # one second of measurements
+        backlog_limit = PACKET_SIZE * most_at_once
         start = time.monotonic()
         sent = 0
+        pending = bytearray()
         while not self._stop.wait(self.period):
-            due = int((time.monotonic() - start) * packets_per_second) - sent
-            if due <= 0:
-                continue
-            if due > 4 * packets_per_second * self.period + 20:
-                # After a stall, do not send a burst of old measurements.
-                sent += due
-                continue
-            sent += due
+            total = int((time.monotonic() - start) * packets_per_second)
+            due = min(total - sent, most_at_once)
+            sent = total
             if self.silent:
+                pending.clear()
                 continue
-            data = self.device.packets(due)
-            # Nobody reading: drop the data, as a cable without a listener would.
-            _, writable, _ = select.select([], [self.master_fd], [], 0.0)
-            if not writable:
-                continue
-            try:
-                self.bytes_sent += os.write(self.master_fd, data)
-            except (BlockingIOError, OSError):
-                pass
+            if due > 0:
+                pending += self.device.packets(due)
+            while pending:
+                _, writable, _ = select.select([], [self.master_fd], [], 0.0)
+                if not writable:
+                    break
+                try:
+                    written = os.write(self.master_fd, bytes(pending[:4096]))
+                except (BlockingIOError, OSError):
+                    break
+                self.bytes_sent += written
+                del pending[:written]
+            if len(pending) > backlog_limit:
+                # Nobody is reading, or far too slowly: like a cable without a listener.
+                pending.clear()
             # Whatever the reader sends (nothing, for this device) is thrown away.
             try:
                 while os.read(self.master_fd, 4096):
