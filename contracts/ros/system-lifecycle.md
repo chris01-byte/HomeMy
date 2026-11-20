@@ -66,7 +66,7 @@ What the bridge does not do:
 
 - It runs no self-test and checks no battery, drive, sensor, or temperature.
 - It exchanges no heartbeat, and the LED strip shows nothing, because both need the ESP32.
-- It reports no real emergency stop: without the PMU the software receives no such signal. The stop at the robot must therefore act on the drive without software.
+- It reports no real emergency stop: without the PMU the software receives no such signal. On the laboratory prototype an external emergency-stop switch built into the hardware secures the robot (owner decision 2026-11-20). It acts without software, and the software neither reads it nor relies on reading it.
 - It never reports OPERATING by itself; mapping mode, the motion gate, and missions accept READY.
 
 What still holds with the bridge:

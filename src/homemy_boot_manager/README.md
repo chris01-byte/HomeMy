@@ -13,7 +13,7 @@ Der Knoten meldet zwei feste Werte, auf die der Rest der Software wartet:
 | `/homemy/lifecycle/state` | `READY` | Kartiermodus, Bewegungsfreigabe, Auftragssteuerung |
 | `/homemy/safety/estop` | `false`, also „Not-Halt nicht gedrückt“ | Bewegungsfreigabe |
 
-Er prüft nichts: kein Selbsttest, keine Batterie, keine Hardware. Ohne PMU bekommt die Software auch kein Not-Halt-Signal. **Der Halt am Roboter muss deshalb ohne Software wirken**, also den Antrieb direkt stromlos machen oder sperren.
+Er prüft nichts: kein Selbsttest, keine Batterie, keine Hardware. Ohne PMU bekommt die Software auch kein Not-Halt-Signal. **Den Prototyp sichert ein externer, hardwareseitig eingebauter Not-Halt-Schalter** (Entscheidung des Projektinhabers vom 20.11.2026). Er wirkt ohne Software; die Software liest ihn nicht.
 
 Fällt die Überbrückung aus, schließt die Bewegungsfreigabe von selbst, weil beide Werte veralten.
 

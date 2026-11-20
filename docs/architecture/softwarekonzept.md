@@ -348,6 +348,12 @@ S0 bis S4 können sofort beginnen und brauchen weder Fahrgestell noch PMU. S1 is
 | E20 | Der Roboter muss sich in der Karte selbst wiederfinden, weil er jederzeit verschoben werden kann. Die Suche über die ganze Karte gehört damit zu S2. |
 | E21 | Reihenfolge: erst Selbstfinden in der Karte, danach die Treiber für Antrieb, LiDAR und IMU. |
 
+### Entschieden am 20.11.2026
+
+| Nr. | Entscheidung |
+| --- | --- |
+| E22 | Den Prototyp im Labor sichert ein externer, hardwareseitig eingebauter Not-Halt-Schalter. Er wirkt ohne Software. Die Überbrückung meldet der Software deshalb weiter fest „Not-Halt nicht gedrückt“. |
+
 ## 11. Risiken und offene Messungen
 
 - **Kippen beim Greifen nach vorn.** Die Antriebsachse liegt 108 mm hinter der Vorderkante, vorn gibt es keine Stützrolle. Die Grenzen des Arbeitsraums müssen aus Gewichten und Schwerpunkt berechnet werden.
