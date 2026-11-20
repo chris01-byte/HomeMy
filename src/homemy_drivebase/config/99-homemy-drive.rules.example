@@ -1,0 +1,12 @@
+# Beispiel einer udev-Regel: gibt dem USB-RS485-Adapter des Fahrantriebs den
+# festen Namen /dev/homemy_drive. Ohne feste Namen vertauscht Linux die
+# Adapter (Antrieb, Hub, IMU) je nach Einsteckreihenfolge.
+#
+# 1. Adapter des Fahrantriebs einstecken und Seriennummer auslesen:
+#      udevadm info -a -n /dev/ttyUSB0 | grep -E 'idVendor|idProduct|ATTRS{serial}'
+# 2. Werte unten eintragen, Datei kopieren nach
+#      /etc/udev/rules.d/99-homemy-drive.rules
+# 3. sudo udevadm control --reload-rules && sudo udevadm trigger
+#
+# Die Seriennummer ist ein Geraetewert und gehoert nicht ins Repository.
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="HIER_SERIENNUMMER", SYMLINK+="homemy_drive", GROUP="dialout", MODE="0660"

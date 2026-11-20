@@ -7,6 +7,7 @@ on:
       - 'contracts/api/app-bridge.md'
       - 'contracts/ros/motion-gate.md'
       - 'contracts/hardware/manual-drive.md'
+      - 'contracts/hardware/drivebase-commissioning.md'
       - '.github/workflows/ros-checks.yml'
   pull_request:
     paths:
@@ -14,6 +15,7 @@ on:
       - 'contracts/api/app-bridge.md'
       - 'contracts/ros/motion-gate.md'
       - 'contracts/hardware/manual-drive.md'
+      - 'contracts/hardware/drivebase-commissioning.md'
       - '.github/workflows/ros-checks.yml'
 
 permissions:
@@ -34,11 +36,14 @@ jobs:
           apt-get update
           rosdep update --rosdistro jazzy
           rosdep install --from-paths src --ignore-src -y --rosdistro jazzy
+          # The drive driver uses the Modbus library versions it was proven with.
+          apt-get install -y python3-pip
+          python3 -m pip install --break-system-packages -r src/homemy_drivebase/requirements-modbus.txt
       - name: Build
         run: |
           source /opt/ros/jazzy/setup.bash
           colcon build --base-paths src --event-handlers console_cohesion+
-      - name: Test, including the end-to-end tests in simulation (bridge, mapping drive)
+      - name: Test, including the end-to-end tests in simulation (bridge, drive driver, mapping drive)
         run: |
           source /opt/ros/jazzy/setup.bash
           colcon test --base-paths src --event-handlers console_cohesion+

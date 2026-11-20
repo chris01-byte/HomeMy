@@ -1,0 +1,92 @@
+# ============================================================================
+#  Antrieb von HomeMy: zwei ESS23-RS an einem RS485-Bus (Modbus RTU).
+#  Vertrag: contracts/hardware/drivebase-commissioning.md
+#
+#  SICHERE VOREINSTELLUNG: Der Knoten rechnet nur und sendet KEINE Befehle an
+#  die Motoren (dry_run: true, allow_rs485: false). Ein echter Motorlauf ist
+#  zusaetzlich gesperrt, solange die Encoderwerte unten auf 0 stehen.
+#
+#  Kein Wert in dieser Datei ist an HomeMy gemessen. Die Geometrie stammt aus
+#  dem CAD-Modell. Register und Rampen sind die an Amadeus bestaetigten Werte
+#  derselben Motorfamilie; sie sind Kandidaten und werden in H1 bis H3 an den
+#  HomeMy-Motoren geprueft. Werte aus Amadeus fuer Radradius, Spurweite,
+#  Drehrichtung, Motor-IDs, Geraetepfad und Encoder sind NICHT uebernommen.
+# ============================================================================
+drivebase:
+  ros__parameters:
+    cmd_vel_topic: "/cmd_vel"           # kommt nur von der Bewegungsfreigabe
+    odom_topic: "/odom"
+    state_topic: "/homemy/drivebase/state_json"
+
+    # --- Geometrie [CAD, in H4 kalibrieren] ---------------------------------
+    wheel_radius_m: 0.0762              # Raddurchmesser 152,4 mm laut CAD
+    wheel_separation_m: 0.3994          # Radmitten laut CAD
+    gear_ratio: 10.0                    # vom Projektinhaber geprueft: 10:1, selbsthemmend
+
+    # --- Grenzen [Vorschlag, H3/H4] -----------------------------------------
+    max_linear_speed_mps: 0.25          # -> Rad 31,3 rpm -> Motor 313 rpm
+    max_angular_speed_radps: 0.70       # -> zusaetzlich +/- 175 rpm Motor je Rad
+    max_motor_rpm: 500.0                # gegen das Motor-Datenblatt pruefen
+
+    cmd_timeout_s: 0.25                 # ohne neuen Befehl -> Stopp
+    update_rate_hz: 50.0
+
+    # --- Freigabe: NUR fuer einen genehmigten Test aendern -------------------
+    dry_run: true
+    allow_rs485: false
+
+    # --- RS485 [in H1 bestimmen] --------------------------------------------
+    rs485_port: "/dev/homemy_drive"     # fester Name per udev-Regel, siehe README
+    baudrate: 115200
+    left_motor_id: 1                    # [H1]
+    right_motor_id: 2                   # [H1]
+    invert_left: false                  # [H3] Drehrichtung am aufgebockten Rad bestimmen
+    invert_right: false                 # [H3]
+
+    # --- Register der ESS23-RS (Kandidaten aus Amadeus) ---------------------
+    rpm_register: 0x001D                # signed int16 Drehzahl; Vorzeichen = Richtung
+    direction_register: 0x001C          # ungenutzt
+    command_register: 0x0027
+    velocity_start_value: 0x0002
+    stop_value: 0x0100
+    accel_register: 0x001E
+    decel_register: 0x001F
+    start_speed_register: 0x0020
+    start_speed_rpm: 5
+    accel_ms: 2000                      # weich anfahren; bei Amadeus war 2500 abgelehnt worden
+    decel_ms: 400
+    rpm_scale: 1.0
+    modbus_timeout_s: 0.1
+    modbus_retries: 0                   # kein verstecktes Wiederholen im Stopp- und Fehlerpfad
+    modbus_write_period_s: 0.05
+
+    # --- Odometrie aus absoluten Encoderpositionen --------------------------
+    odometry_source: "encoder_position"
+    encoder_position_register: 0x000A
+    encoder_segment_register: 0x0011
+    encoder_word_order_register: 0x0019
+    encoder_resolution_register: 0x0101
+    # H2 an HomeMy noch nicht gefahren. 0 verriegelt den echten Encoderpfad.
+    # (Amadeus mass an derselben Motorfamilie 1000 / 1000 / 4000.)
+    encoder_counts_per_motor_revolution: 0.0
+    encoder_expected_segment: 0
+    encoder_expected_resolution: 0
+    encoder_feedback_period_s: 0.05
+    encoder_stale_timeout_s: 0.30
+    encoder_max_recovery_gap_s: 2.0
+    encoder_max_delta_factor: 1.5
+    encoder_failure_stop_count: 5
+
+    use_speed_feedback: true
+    speed_register: 0x000C
+    feedback_period_s: 0.1
+
+    odom_frame_id: "odom"
+    base_frame_id: "base_link"
+    # Solange keine IMU-Fusion laeuft, liefert der Antrieb odom -> base_link.
+    publish_tf: true
+    # Startwerte, keine gemessene Genauigkeit [H4].
+    odom_pose_xy_variance: 0.0025
+    odom_yaw_variance: 0.0076
+    odom_twist_linear_variance: 0.01
+    odom_twist_angular_variance: 0.03

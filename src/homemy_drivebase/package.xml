@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>homemy_drivebase</name>
+  <version>0.1.0</version>
+  <description>
+    Differential drive of HomeMy: two ESS23-RS closed-loop motors on one
+    RS485 bus (Modbus RTU). Ported from the Amadeus base_hardware package.
+    Non-moving by default: dry run, RS485 writes disabled, encoder path locked
+    until commissioning. The Modbus library is installed with pip, see
+    requirements-modbus.txt.
+  </description>
+  <maintainer email="homemy@example.com">HomeMy</maintainer>
+  <license>MIT</license>
+
+  <depend>rclpy</depend>
+  <depend>rcl_interfaces</depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>tf2_ros</depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
